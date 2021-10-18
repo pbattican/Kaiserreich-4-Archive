@@ -9,16 +9,11 @@ NIC_freeing_countryside_decisions = {
 			original_tag = NIC
 		}
 		available = {
-			owns_state = 1071
 			controls_state = 1071
-			1071 = { is_demilitarized_zone = yes }
 		}
 		visible = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			owns_state = 1071
+			1071 = { is_demilitarized_zone = yes }
 		}
 		highlight_state_targets = {
 			state = 1071
@@ -57,14 +52,7 @@ NIC_freeing_countryside_decisions = {
 		}
 		available = {
 			has_war = no
-			has_country_flag = NIC_east_liberated_flag
-		}
-		visible = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			1071 = { is_demilitarized_zone = no }
 		}
 		ai_will_do = {
 			factor = 20
@@ -79,7 +67,6 @@ NIC_freeing_countryside_decisions = {
 			add_stability = -0.05
 			hidden_effect = {
 				random_list = {
-					seed = random
 					15 = {
 						country_event = {
 							id = nicdec.2 days = 23
@@ -129,14 +116,7 @@ NIC_freeing_countryside_decisions = {
 		}
 		available = {
 			has_war = no
-			has_country_flag = NIC_east_liberated_flag
-		}
-		visible = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			1071 = { is_demilitarized_zone = no }
 		}
 		ai_will_do = {
 			factor = 20
@@ -153,7 +133,6 @@ NIC_freeing_countryside_decisions = {
 			}
 			hidden_effect = {
 				random_list = {
-					seed = random
 					15 = {
 						country_event = {
 							id = nicdec.2 days = 23
@@ -206,15 +185,10 @@ NIC_freeing_countryside_decisions = {
 		}
 		available = {
 			has_war = no
-			has_country_flag = NIC_east_liberated_flag
+			1071 = { is_demilitarized_zone = no }
 		}
 		visible = {
 			has_idea = NIC_remaining_UFC_influence_oof_2
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
 		}
 		ai_will_do = {
 			factor = 25
@@ -229,7 +203,6 @@ NIC_freeing_countryside_decisions = {
 			add_war_support = 0.05
 			hidden_effect = {
 				random_list = {
-					seed = random
 					15 = {
 						country_event = {
 							id = nicdec.2 days = 23
@@ -325,7 +298,7 @@ NIC_spreading_revolution_decisions = {
 				custom_trigger_tooltip = { #Be Socialist and Honduras is Socialist
 					tooltip = NIC_HON_revolutionary_tooltip
 					OR = {
-						has_government = social_democrat
+						has_government = syndicalist
 						has_government = radical_socialist
 					}
 					HON = {
@@ -340,10 +313,7 @@ NIC_spreading_revolution_decisions = {
 					has_government = social_liberal
 					HON = {
 						OR = {
-							has_government = social_democrat
-							has_government = social_liberal
-							has_government = market_liberal
-							has_government = social_conservative
+							has_elected_government = yes
 							is_subject_of = NIC
 						}
 					}
@@ -352,16 +322,17 @@ NIC_spreading_revolution_decisions = {
 		}
 
 		cancel_trigger = {
-			NOT = {
-				OR = {
+			OR = {
+				is_subject = yes
+				NOT = {
 					has_government = social_liberal
-					has_government = social_democrat
 					has_government = radical_socialist
+					has_government = syndicalist
 				}
 			}
 		}
 
-		highlight_state_targets = { state = 842 }
+		highlight_state_targets = { state = 312 }
 
 		fire_only_once = yes
 
@@ -406,10 +377,7 @@ NIC_spreading_revolution_decisions = {
 			custom_effect_tooltip = NIC_government_trusted
 			set_country_flag = NIC_government_trusted_flag
 			if = {
-				limit = {
-					owns_state = 312
-					owns_state = 842
-				}
+				limit = { owns_state = 312 }
 				country_event = nic.102
 			}
 		}
@@ -512,28 +480,20 @@ NIC_spreading_revolution_decisions = {
 			original_tag = NIC
 		}
 		visible = {
-			has_country_flag = NIC_east_liberated_flag
-			NOT = {
-				has_country_flag = NIC_east_no_conscription
-			}
+			1071 = { is_demilitarized_zone = no }
 		}
 		ai_will_do = {
 			factor = 30
 		}
 
-		cancel_trigger = {
-			has_country_flag = NIC_east_no_conscription
-		}
-
 		cost = 25
-		fire_only_once = yes
 		days_remove = 40
+		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision NIC_open_eastern_recruitment"
 			hidden_effect = {
 				random_list = {
-					seed = random
 					60 = {
 						country_event = {
 							id = nic.13 days = 21
@@ -543,10 +503,11 @@ NIC_spreading_revolution_decisions = {
 				}
 			}
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NIC_open_eastern_recruitment"
 			1071 = {
-				add_core_of = NIC
+				remove_dynamic_modifier = { modifier = conscription_exemptions_granted }
 			}
 		}
 	}
@@ -563,7 +524,7 @@ NIC_spreading_revolution_decisions = {
 					custom_trigger_tooltip = { #Be Socialist and Honduras is Socialist
 						tooltip = NIC_HON_revolutionary_tooltip
 						OR = {
-							has_government = social_democrat
+							has_government = syndicalist
 							has_government = radical_socialist
 						}
 						HON = {
@@ -621,7 +582,7 @@ NIC_spreading_revolution_decisions = {
 				}
 
 				defender = {
-					state = 842
+					state = 312
 					num_provinces = 2
 					on_win = nicdec.17
 					on_lose = nicdec.18
@@ -643,7 +604,7 @@ NIC_spreading_revolution_decisions = {
 					custom_trigger_tooltip = { #Be Socialist and Honduras is Socialist
 						tooltip = NIC_HON_revolutionary_tooltip
 						OR = {
-							has_government = social_democrat
+							has_government = syndicalist
 							has_government = radical_socialist
 						}
 						HON = {
@@ -708,44 +669,42 @@ NIC_spreading_revolution_decisions = {
 					custom_trigger_tooltip = { #Be Socialist and Honduras is Socialist
 						tooltip = NIC_HON_revolutionary_tooltip
 						OR = {
-							has_government = social_democrat
+							has_government = syndicalist
 							has_government = radical_socialist
 						}
-						HON = {
-							OR = {
-								has_socialist_government = yes
-								is_subject_of = NIC
-							}
-						}
+						HON = { has_socialist_government = yes }
 					}
 					custom_trigger_tooltip = { #Be Liberal and Honduras is Democratic
 						tooltip = NIC_HON_liberal_tooltip
 						has_government = social_liberal
-						HON = {
-							OR = {
-								has_government = social_democrat
-								has_government = social_liberal
-								has_government = market_liberal
-								is_subject_of = NIC
-							}
-						}
+						HON = { has_elected_government = yes }
 					}
 				}
 			}
 			1071 = { is_demilitarized_zone = no }
 		}
+
 		visible = {
 			has_active_mission = NIC_spread_revolution_mission
-			country_exists = HON
+			can_declare_war_on = HON
 		}
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 1.5
-				1071 = {
-					is_core_of = NIC
+
+		cancel_trigger = {
+			OR = {
+				NOT = { has_active_mission = NIC_spread_revolution_mission }
+				NOT = { can_declare_war_on = HON }
+				if = {
+					limit = { has_government = social_liberal }
+					HON = { has_elected_government = yes }
+				}
+				else = {
+					HON = { has_socialist_government = yes }
 				}
 			}
+		}
+
+		ai_will_do = {
+			factor = 20
 			modifier = {
 				factor = 1.5
 				NOT = {
@@ -799,7 +758,6 @@ NIC_spreading_revolution_decisions = {
 						has_country_flag = NIC_angery_east_flag
 					}
 					random_list = {
-						seed = random
 						90 = {
 							country_event = {
 								id = nicdec.21 days = 23

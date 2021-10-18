@@ -1,6 +1,6 @@
 ###########################
 # Qing - Zhili Focus Tree
-# NB - This is the Starting Tree 
+# NB - This is the Starting Tree
 # By MantisToboggan
 ###########################
 
@@ -100,7 +100,7 @@ focus_tree = {
 		}
 	}
 
-#pro-ANQ mini political tree 
+#pro-ANQ mini political tree
 	focus = {
 		id = QIE_capitalize_politics
 		icon = GFX_goal_DOM_Call_Special_Election
@@ -539,6 +539,7 @@ focus_tree = {
 						has_id = 1174
 						has_id = 1173
 						has_id = 1185
+						has_id = 14826
 					}
 				}
 				add_attack = 1
@@ -758,7 +759,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-#pro_LEP mini political tree 
+#pro_LEP mini political tree
 	focus = {
 		id = QIE_placateassembly
 		icon = GFX_goal_generic_parliament2
@@ -1921,7 +1922,7 @@ focus_tree = {
 		icon = GFX_goal_generic_coal_mining
 		cost = 8
 		available = {
-			owns_state = 615
+			615 = { is_owned_by_ROOT_or_ally = yes }
 		}
 		prerequisite = {
 			focus = QIE_liumenggengplan
@@ -1935,16 +1936,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus QIE_shanxicoal"
 			615 = {
-				if = {
-					limit = {
-						is_owned_by = QIE
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
 			hidden_effect = {
@@ -1959,7 +1955,6 @@ focus_tree = {
 						}
 					}
 					random_list = {
-						seed = random
 						25 = { }
 						75 = {
 							country_event = {

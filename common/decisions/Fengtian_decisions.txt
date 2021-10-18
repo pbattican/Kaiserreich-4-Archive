@@ -1984,6 +1984,10 @@ FNG_foreign_policy = { #The Road to Reclamation
 				}
 				FROM = { is_ruled_by_pro_fengtian = no }
 			}
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
 		}
 
 		cancel_trigger = {
@@ -2712,16 +2716,6 @@ FNG_foreign_policy = { #The Road to Reclamation
 							id = ROOT
 							value = 1000
 						}
-					}
-				}
-				ANQ = {
-					if = { #inform ANQ of start reclamation, allow to join war
-						limit = {
-							exists = yes
-							has_country_flag = ANQ_is_profengtian
-							has_country_flag = ANQ_commits_reclamation
-						}
-						set_country_flag = ANQ_start_reclamation_war
 					}
 				}
 				FROM = {

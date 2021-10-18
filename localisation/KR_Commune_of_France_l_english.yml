@@ -13,6 +13,35 @@
  POLITICS_DANIEL_GUERIN_DESC:0 "Daniel Guérin has now not only usurped from the charismatic Nestor Makhno leadership of the Anarchiste faction of the French Commune, but also won the chairmanship itself. Guérin is an academic, and a moderate in comparison to Makhno, who has proven to be a capable lawmaker."
  POLITICS_MARCEL_DEAT_DESC:0 "Marcel Déat has upended the Communard political system. A Leninist who has frequently made public his contempt for syndicalism, Déat stands in opposition to much of France's political establishment. His many enemies both within and outside France could lead to his, and perhaps also the Commune's, downfall."
 
+### Unit Leaders ###
+ FRA_ARMY_MAURICE_GAMELIN_DESC:0 ""
+ FRA_ARMY_GEORGES_CATROUX_DESC:0 ""
+ FRA_ARMY_GASTON_BILLOTTE_DESC:0 ""
+ FRA_ARMY_CHARLES_DELESTRAINT_DESC:0 ""
+ FRA_ARMY_MARIE_PIERRE_KOENIG_DESC:0 ""
+ FRA_ARMY_ERNEST_PETIT_DESC:0 ""
+ FRA_ARMY_HENRI_TANGUY_DESC:0 ""
+ FRA_ARMY_NESTOR_MAKHNO_DESC:0 ""
+ FRA_ARMY_RENE_OLRY_DESC:0 ""
+ FRA_ARMY_DIEGO_BROSSET_DESC:0 ""
+ FRA_ARMY_RAOUL_MAGRIN_VERNEREY_DESC:0 ""
+ FRA_ARMY_JOSEPH_PUTZ_DESC:0 ""
+ FRA_ARMY_ANDRE_MARTY_DESC:0 ""
+ FRA_ARMY_GEORGES_BLANCHARD_DESC:0 ""
+ FRA_ARMY_CLEMENT_BLANC_DESC:0 ""
+ FRA_ARMY_PAUL_LEGENTILHOMME_DESC:0 ""
+ FRA_ARMY_HENRI_FRENAY_DESC:0 ""
+ FRA_ARMY_LOUIS_BUISSON_DESC:0 ""
+ FRA_ARMY_JACQUES_SADOUL_DESC:0 ""
+
+ FRA_NAVY_FRANCOIS_DARLAN_DESC:0 "§YAdmiral Description\n§YBorn:§L\n7 August 1881 in Nérac, Lot-et-Garonne.\n§YNaval Career:§L\nJean Louis Xavier François Darlan was born to a family long connected to the navy. He would graduate from the École Navale in 1902, and during the Weltkrieg would notably serve in an artillery battery at the Battle of Verdun. Swept in the chaos of the Revolution and spurned by his patriotism and moderate left-wing convictions, Darlan would rejoin the Communard Navy and over the next several years would rise rapidly through the ranks. He is now one of the most respected men in the French Navy, proud of the institution he has helped to rebuild."
+ FRA_NAVY_RAOUL_CASTEX_DESC:0 ""
+ FRA_NAVY_ANDRE_GEORGES_LEMONNIER_DESC:0 ""
+ FRA_NAVY_GABRIEL_AUPHAN_DESC:0 ""
+ FRA_NAVY_PHILIPPE_AUBOYNEAU_DESC:0 ""
+ FRA_NAVY_MARCEL_GENSOUL_DESC:0 ""
+ FRA_NAVY_EDOUARD_PEISSON_DESC:0 ""
+
 ### Tooltips ###
  FRA_ongoing_phalanstere_development:0 "§YIs helping in developing another country.§!"
  CAF_redeagles_tt:0 "New volunteer aviators and aircraft will arrive."
@@ -44,8 +73,8 @@
 
  FRA_to_war_idea:0 "Revanchist Rearmament"
  FRA_to_war_idea_desc:0 "Our nation must rise again if we are to defeat the Imperialists!"
- 
- FRA_renseignements_generaux_lar:0 "Renseignements Generaux"
+
+ FRA_renseignements_generaux_lar:0 "Renseignements Généraux"
 
  FRA_economic_reforms_anar:0 "Economic Reforms"
  FRA_economic_reforms_anar_desc:0 "Wide-reaching economic reforms have been decided at the 1936 meeting of the Bourse Générale du Travail. These reforms have had noticeable effects on our economy already, helping making it more dynamic and solidifying it."
@@ -107,7 +136,7 @@
  FRA_fast_army_idea:0 "Speed Cult"
  FRA_fast_army_idea_desc:0 "Speed is more than a small advantage or a way to get to the next point faster. Speed is integral to warfare. Those who think that the next Weltkrieg will be fought in trenches are deluded at best, mobile warfare is the way of the future. We must capitalise on fast, motorised divisions, if not a motorised army."
 
- FRA_Red_Army:0 "Grande Armee Rouge"
+ FRA_Red_Army:0 "Grande Armée Rouge"
  FRA_Red_Army_desc:0 "Our army is in better shape than ever to face the evils of this capitalist world."
 
  Capital_Ship_Primacy:0 "Capital Ship Primacy"
@@ -149,7 +178,7 @@
  FRA_amateur_pilots_idea:0 "Amateur Pilots"
  FRA_amateur_pilots_idea_desc:0 "There are many in our country that have taken up flying as a hobby or a vocation, but not all of them pursue careers in the Air Force. They should preferably be drafted to our air force, where their skills will increase our chances of finding the new Aces of the Air."
 
- FRA_ecole_air_idea:0 "Ecole de l'Air"
+ FRA_ecole_air_idea:0 "École de l'Air"
  FRA_ecole_air_idea_desc:0 "Flying is a skill by itself, and flying well in combat conditions is something that you can't just learn overnight. We won't repeat the mistakes of the Weltkrieg and its butcher of novice pilots, we need a large roster of well trained air pilots, and competent officers to lead them."
 
  FRA_waves_of_syndicalism_idea:0 "Waves of Syndicalism"
@@ -369,7 +398,7 @@
  FRA_Demand_Alsace_Lorraine:0 "Demand Alsace-Lorraine"
  FRA_Demand_Alsace_Lorraine_desc:0 "The French people shall wait no longer! The time has finally come for Germany to return the whole of Alsace-Lorraine or face the ultimate consequences! And should they refuse, we will bring unto them a war of a brutality and fierceness that will send their pawns running straight back to Berlin! We will avenge our fallen brothers!"
  FRA_war_with_spain:0 "Liberate Iberia"
- FRA_war_with_spain_desc:0 "Right at our southern border, just across the Pyrenees, capitalism and imperialism still persists. With our efforts, we will achieve what no french imperialist could - total control of Iberia. But we are different. We do it for the common people, not imperial ambitions. Syndicalism will succeed in Iberia!"
+ FRA_war_with_spain_desc:0 "Right at our southern border, just across the Pyrenees, capitalism and imperialism still persists. With our efforts, we will achieve what no French imperialist could - total control of Iberia. But we are different. We do it for the common people, not imperial ambitions. Syndicalism will succeed in Iberia!"
  FRA_War_with_germany:0 "Take Down Germany"
  FRA_War_with_germany_desc:0 "Much to our surprise, the German reactionaries have ceded Alsace-Lorraine. But we never intended to just stop there! The Revolution shall prevail, our brothers will be avenged for what they have been put through in the Weltkrieg! They will just wish they had lost the first war, for we will stop at nothing until they are utterly destroyed!"
  FRA_War_with_austria:0 "Turn the Danube Red"
@@ -406,7 +435,7 @@
  FRA_amateur_pilots_desc:0 "No-one is born a pilot, and while some study to excel at air handling and combat and their efforts are admirable, we cannot expect every single pilot to be an ace. We must give civilian pilots and amateur pilots their chance to shine. This also includes women, who would normally not be conscripted."
  FRA_valin_doctrine:0 "Valin Doctrine"
  FRA_valin_doctrine_desc:0 "Martial Valin is a brilliant aviator, and he has much to teach us about this new, strange world of air warfare. While his words are no gospel, we heavily value his unique experience and aim to make his teachings the frame of future air doctrine. A start, certainly."
- FRA_ecole_air:0 "Ecole de l'Air"
+ FRA_ecole_air:0 "École de l'Air"
  FRA_ecole_air_desc:0 "As our air doctrine rapidly expands and air fights go from disorganised brawls to carefully crafted engagements, we desperately begin to need trained pilots and trained officers who can plan air campaigns as they plan land or naval campaigns. Only our wits will work in this brand new field of warfare, and luckily we have some."
  FRA_air_bases:0 "Establish More Air Bases"
  FRA_air_bases_desc:0 "Planes require air bases to land, refuel, rearm, repair and take off, much like navies. But unlike navies, they cannot stay airborne for months, only hours. As such, we must ensure our air base coverage is excellent, and we must make sure we are always under capacity so that our air force is never crippled by lacking infrastructure."
@@ -416,8 +445,8 @@
  FRA_bombers_desc:0 "The air is a new, vast angle of attack for us, and it is one our enemies might not defend adequately against yet. Bombs present a single yet elegant way of transporting ordnance from the hangar to the target. We must invest in bombers to ensure that our enemies are assaulted from all sides, an advantage we cannot ignore."
  FRA_strat_bombers:0 "Strategic Destruction Focus"
  FRA_strat_bombers_desc:0 "If one bomb works well against an enemy, then ten bombs must only work better. Further development in bomber models have unveiled new air frames capable of carrying massive amounts of bombs, or a few devastatingly big bombs. Whatever the case, we may soon flatten entire cities or armies with a few waves of air attacks."
- FRA_paratroopers:0 "Paratroopers Development"
- FRA_paratroopers_desc:0 "Until now, we have always considered that the only way to transport troops are trucks and landing craft. However, recent breakthroughs in aviation means we now have planes capable of carrying entire squads, and dropping them into battle in a safe manner. We must immediately train regiments capable of this vertical encirclement!"
+ FRA_paratrooper_focus:0 "Paratroopers Development"
+ FRA_paratrooper_focus_desc:0 "Until now, we have always considered that the only way to transport troops are trucks and landing craft. However, recent breakthroughs in aviation means we now have planes capable of carrying entire squads, and dropping them into battle in a safe manner. We must immediately train regiments capable of this vertical encirclement!"
  FRA_rocket_development:0 "Rocketry Effort"
  FRA_rocket_development_desc:0 "The rocket engine is the pinnacle of our research in new propulsion methods for aircraft. While the path to creating rocket craft might still be long and arduous, our scientists propose a simpler use for rockets. By strapping an explosive charge and flinging them at the enemy, we can bomb them from afar. Simple, devastating."
 
@@ -655,12 +684,12 @@
  comfrance.63.t:0 "The Rise of the Socialist Anti-Colonial Committee"
  comfrance.63.d.NFA:0 "Our counter-intelligence specialists have noted a recent surge of Syndicalist activity in our country. We know that the Commune of France, together with the Union of Britain, has established an Anti-Colonial Committee in the Internationale. This committee, with the help of Mohamed Saïl, a traitor of the Algerian people living in France, is coordinating the efforts made by the Syndicalists in supporting anti-colonial sentiments in our African holdings.\n\nThe Syndicalist powers have sent significant amounts of weapons and material to support the native rebels. They have also opened a few training camps in their southernmost parts of the country. While the more oblivious politicians in our country believe that nothing will come out of this, our generals warn us that we have to be wary."
  comfrance.63.d.GER:0 "The word has spread. The Commune of France, alongside other members of the Internationale, has established a Socialist Anti-Colonial Committee. The Committee aims to support the cause of Arabs and Africans in liberating their homelands from the hands of the colonial powers, particularly the remnants of the French state.\nThis body will coordinate the Syndicalist powers' actions in North and West Africa. Our intelligence reports show that a small influx of Egyptian left-wing radicals who want to fight for the revolutionary cause are also arriving on French territory. While we are not at war with the Commune of France or any Syndicalist country for now, we should be very cautious."
- comfrance.63.d.OTT:0 "The word has spread from German agents in France. The Commune of France, alongside other members of the Internationale, has etablished a Socialist Anti-Colonial Committee. The Committee aims to support the cause of Arabs and Africans in liberating their homelands from the hands of the colonial powers, particularly the remnants of the French state.\nThis body will coordinate the Syndicalist powers' actions in North and West Africa. As much as colonial domination over our former territories in North Africa isn't to please us, this initiative is worrisome. It is likely the Commune will fight to put forward revolutionaries and nationalists sympathetic to the syndicalist cause. The initiative also plays in with Egypt's attempt to foster Arab nationalism in the Middle East and North Africa, and might strengthen our rival. For these reasons, we have to be cautious, even if we won't be a main target."
+ comfrance.63.d.OTT:0 "The word has spread from German agents in France. The Commune of France, alongside other members of the Internationale, has established a Socialist Anti-Colonial Committee. The Committee aims to support the cause of Arabs and Africans in liberating their homelands from the hands of the colonial powers, particularly the remnants of the French state.\nThis body will coordinate the Syndicalist powers' actions in North and West Africa. As much as colonial domination over our former territories in North Africa isn't to please us, this initiative is worrisome. It is likely the Commune will fight to put forward revolutionaries and nationalists sympathetic to the syndicalist cause. The initiative also plays in with Egypt's attempt to foster Arab nationalism in the Middle East and North Africa, and might strengthen our rival. For these reasons, we have to be cautious, even if we won't be a main target."
  comfrance.63.d.SPA:0 "The word has spread to Spain. The Commune of France, alongside other members of the Internationale, has established a Socialist Anti-Colonial Committee. The Committee aims to support the cause of Arabs and Africans in liberating their homelands from the hands of the colonial powers, particularly the remnants of the French state.\nThis body will coordinate the Syndicalist powers' actions in North and West Africa. Let us hope we will not be one of its targets, for we have other, more important issues to deal with right now."
  comfrance.63.a:0 "A worrying development."
 
  comfrance.64.t:0 "The Creation of the Socialist Anti-Colonial Committee"
- comfrance.64.d:0 "Our comrades in France have recently started a Socialist Anti-Colonial Committee. Helped by Algerian Revolutionary Mohamed Saïl, the Committee aims to help nationalist and syndicalist revolutionaries in all of Africa and to destroy all colonial governments. However, even if nothing in that sense has been said officially, it is obvious the Committee is directly aimed towards the reactionary French government in Algiers which is having difficulties maning its colonial holdings.\n\nThe French have invited us to participate in the Committee and to help with sending equipment, arms and propaganda, to which we gladly agreed. Together we are stronger, and we will soon be able to liberate all of the African workers from the grasp of the imperialists!"
+ comfrance.64.d:0 "Our comrades in France have recently started a Socialist Anti-Colonial Committee. Helped by Algerian Revolutionary Mohamed Saïl, the Committee aims to help nationalist and syndicalist revolutionaries in all of Africa and to destroy all colonial governments. However, even if nothing in that sense has been said officially, it is obvious the Committee is directly aimed towards the reactionary French government in Algiers which is having difficulties handling its colonial holdings.\n\nThe French have invited us to participate in the Committee and to help with sending equipment, arms and propaganda, to which we gladly agreed. Together we are stronger, and we will soon be able to liberate all of the African workers from the grasp of the imperialists!"
  comfrance.64.a:0 "Solidarity Forever!"
 
  comfrance.65.t:0 "What should the Committee focus on?"
@@ -679,7 +708,7 @@
  comfrance.67.a:0 "Traitors everywhere!"
 
  comfrance.68.t:0 "Campaign of Dissent"
- comfrance.68.d:0 "In the last weeks, we have noticed an increased propaganda activity, coming from nationalist and syndicalist agitators. It looks like they were suddenly equipped with tens of thousands of leaflets and pre-prepared radio speeches, spreading their words about the wrongdoings of our regime everywhere in Africa. Propaganda, even more when supported by the Commune of France, is hard to stop, we can't possibly confiscate every leaflet spreadingi n our colonies. This isn't entirely a lost battle though, as we can try to focus on a specific region in which our agents will shut down the radios and confiscate every suspect document. By doing this, we will be at least able to reduce the effects of the campaign in one or two regions of our choice..."
+ comfrance.68.d:0 "In the last weeks, we have noticed an increased propaganda activity, coming from nationalist and syndicalist agitators. It looks like they were suddenly equipped with tens of thousands of leaflets and pre-prepared radio speeches, spreading their words about the wrongdoings of our regime everywhere in Africa. Propaganda, even more when supported by the Commune of France, is hard to stop, we can't possibly confiscate every leaflet spreading in our colonies. This isn't entirely a lost battle though, as we can try to focus on a specific region in which our agents will shut down the radios and confiscate every suspect document. By doing this, we will be at least able to reduce the effects of the campaign in one or two regions of our choice..."
  comfrance.68.a:0 "Focus on Tunisia"
  comfrance.68.b:0 "Focus on Mauritania and Southern Algeria"
  comfrance.68.c:0 "Focus on Senegal and Guinea"
@@ -955,15 +984,17 @@
  comfrance.167.a:0 "Have Berlin on the phone!"
  comfrance.167.b:0 "We'll fight alone!"
 
- comfrance.168.t:0 "An Invitation"
- comfrance.168.d:0 "Now that all bets are off regarding the so-called 'balance' in Italy, [From.GetNameDef] has extended a formal invitation for [SRI.GetNameDef] to join the ranks of the Third Internationale."
- comfrance.168.a:0 "At last!"
- comfrance.168.b:0 "On second thought, no..."
+ comfrance.170.t:0 "An Alliance with the Internationale?"
+ comfrance.170.d:0 "The Internationale, the military alliance of the world’s foremost socialist powers, has discreetly approached us with an offer to join its ranks, considering an alliance with our nation to be in the interest of all and a great step forward in the long struggle towards the liberation of the international proletariat. This offer comes with undeniable benefits, we could certainly expect a great amount of support: help against our enemies and towards the realisation of our military objectives, protection should it ever be needed, and just as importantly, support for the development of our armed forces and even our economy through the Phalanstère program. However, it comes with perhaps daunting obligations, setting us on a course of eventual but certain conflict with the Kaiser and his allies. How should we respond to their offer?"
+ comfrance.170.a:0 "Stronger together!"
+ comfrance.170.b:0 "On second thought, no..."
 
- comfrance.169.t:0 "The [From.GetAdjective] Request"
- comfrance.169.d:0 "Now that all bets are off regarding the so-called 'balance' in Italy, [From.GetNameDef] has made a formal request to join the ranks of the Third Internationale."
- comfrance.169.a:0 "At last!"
- comfrance.169.b:0 "On second thought, no..."
+ comfrance.171.t.accept:0 "[From.GetNameDefCap] Has Accepted!"
+ comfrance.171.t.refuse:0 "[From.GetNameDefCap] Has Refused!"
+ comfrance.171.d.accept:0 "Time to rejoice! [From.GetNameDefCap] has accepted our offer to join our military alliance, as we had dearly hoped they would. With this decision, they have been assured of our undying support as allies in the global struggle for the liberation of the working class, and we have gained a valuable ally against our undeniably mighty enemies. Soon, many others will follow them: “the Internationale shall be the human race”!"
+ comfrance.171.d.refuse:0 "To our chagrin, [From.GetNameDef] has refused our offer to join our military alliance. Perhaps too intimidated by the undeniable might of our enemies, or simply not committed enough to the fight for the liberation of the proletariat. In any case, though this is certainly a regrettable result of our diplomatic overture, many others will join us in this struggle: “the Internationale shall be the human race”!"
+ comfrance.171.a:0 "Excellent!"
+ comfrance.171.b:0 "Their loss."
 
  comfrance.1000.t:0 "Gamelin Marches on Paris"
  comfrance.1000.d:0 "A few days ago, General Maurice Gamelin, launched a successful coup against the Jacobin regime of Marcel Déat. While this seems like a staunch attack on the commune’s democratic system, many argue that the Jacobins would have destroyed the democratic system if not for Gamelin’s intervention. Gamelin has promised to restore France to traditional syndicalism, and the process of De-Jacobinisation is already taking place. It is still unknown how his plans will turn out. We can only wait..."
@@ -1018,6 +1049,8 @@
 
  FRA_invite_SRI_to_intl:0 "Invite [From.GetNameDef] into the Third Internationale"
  FRA_invite_SRI_to_intl_desc:0 "Both Germany and Austria are leery of a formal alliance being created between the Third Internationale and [From.GetNameDef], whereby our forces would be called in to help [From.GetNameDef] reunite Italy under syndicalist rule. Should any major power become involved in the region, however, or should we find ourselves at war with [GER.GetNameDef] once again, then all bets are off."
+
+ FRA_invite_serbia:0 "Offer [From.GetNameDef] an Alliance"
 
  FRA_Sabotage:0 "Initiate Anti-Colonial Action in [From.GetNameDef]"
  FRA_Sabotage_desc:0 "The French traitorous imperialists for far too long have been exploiting the native populace for the sake of their war machine and prestige. We won't let them continue. Using the Socialist Anti-Colonial Committee, we are able to set up operations of rebellion or sabotage in French colonial holdings."

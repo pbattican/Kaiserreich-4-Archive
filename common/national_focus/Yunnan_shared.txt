@@ -435,8 +435,8 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = YUN_go_after_Hunnan
-	icon = GFX_YUN_goal_attack_hunnan
+	id = YUN_go_after_Hunan
+	icon = GFX_YUN_goal_attack_hunan
 	cost = 5
 	prerequisite = {
 		focus = YUN_Federalism
@@ -462,7 +462,7 @@ shared_focus = {
 	relative_position_id = YUN_Federalism
 	will_lead_to_war_with = HNN
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus YUN_go_after_Hunnan"
+		log = "[GetDateText]: [Root.GetName]: Focus YUN_go_after_Hunan"
 		HNN = { country_event = yun.116 }
 		custom_effect_tooltip = if_they_accept_tt
 		effect_tooltip = {
@@ -626,7 +626,7 @@ shared_focus = {
 	icon = GFX_goal_beijing_begonia
 	cost = 5
 	prerequisite = {
-		focus = YUN_go_after_Hunnan
+		focus = YUN_go_after_Hunan
 	}
 	prerequisite = {
 		focus = YUN_go_after_Sichuan
@@ -986,7 +986,7 @@ shared_focus = {
 		}
 		var:YUN_federalist_target = {
 			annex_country = { target = ROOT transfer_troops = yes }
-			if = {	
+			if = {
 				limit = { ROOT = { is_ai = no } }
 				change_tag_from = ROOT
 			}
@@ -3451,7 +3451,7 @@ shared_focus = {
 shared_focus = {
 	id = YUN_NRA_prevailed
 	icon = GFX_focus_generic_china1
-	cost = 7
+	cost = 3
 	prerequisite = {
 		focus = YUN_initial_stabilization
 	}
@@ -3506,6 +3506,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus YUN_the_Society_of_Bamboo_King"
 		country_event = yun.45
 		set_country_flag = YUN_dian_identity
+		add_ideas = YUN_bamboo_king_society
 	}
 }
 shared_focus = {
@@ -3548,6 +3549,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus YUN_Sinitic_Dominance"
 		country_event = yun.46
+		add_ideas = YUN_continue_sinicization
 		set_country_flag = YUN_sinicization_for_yall
 	}
 }
@@ -3634,7 +3636,7 @@ shared_focus = {
 shared_focus = {
 	id = YUN_Revive_republican_ideals
 	icon = GFX_goal_Centralised_Government
-	cost = 7
+	cost = 3
 	prerequisite = {
 		focus = YUN_NRA_prevailed
 	}
@@ -3659,7 +3661,7 @@ shared_focus = {
 shared_focus = {
 	id = YUN_Reform_KMT_Organization
 	icon = GFX_focus_chi_cooperation_with_the_nationalists
-	cost = 7
+	cost = 3
 	prerequisite = {
 		focus = YUN_Revive_republican_ideals
 	}
@@ -3684,7 +3686,7 @@ shared_focus = {
 shared_focus = {
 	id = YUN_join_the_left_KMT_committee
 	icon = GFX_goal_tripartite_pact
-	cost = 7
+	cost = 3
 	prerequisite = {
 		focus = YUN_Reform_KMT_Organization
 	}
@@ -3720,7 +3722,7 @@ shared_focus = {
 shared_focus = {
 	id = YUN_join_the_right_KMT_committee
 	icon = GFX_goal_generic_intelligence_exchange
-	cost = 7
+	cost = 3
 	prerequisite = {
 		focus = YUN_Reform_KMT_Organization
 	}
@@ -3774,7 +3776,7 @@ shared_focus = {
 shared_focus = {
 	id = YUN_Kuomintang_government_Inititative
 	icon = GFX_Goal_Kuomintang_Government_Initiative
-	cost = 7
+	cost = 5
 	prerequisite = {
 		focus = YUN_join_the_right_KMT_committee
 		focus = YUN_join_the_left_KMT_committee
@@ -3834,7 +3836,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = YUN_Enter_Yangtze_River2
-	icon = GFX_YUN_goal_attack_hunnan
+	icon = GFX_YUN_goal_attack_hunan
 	cost = 4
 	prerequisite = {
 		focus = YUN_Kuomintang_government_Inititative
@@ -4053,8 +4055,8 @@ shared_focus = {
 		is_subject = no
 		can_declare_war_on = FNG
 		OR = {
-			is_neighbor_of = QIE
-			any_allied_country = { is_neighbor_of = QIE }
+			is_neighbor_of = FNG
+			any_allied_country = { is_neighbor_of = FNG }
 		}
 	}
 	bypass = {

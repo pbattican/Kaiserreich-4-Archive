@@ -16,7 +16,7 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 450 y = 950 }
 
-	### Political Section 
+	### Political Section
 	focus = {# Second Constitutional Convention
 		id = CSA_second_convention
 		icon = GFX_goal_CSA_victory
@@ -63,7 +63,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 	}
 
-	### American Commonwealth	
+	### American Commonwealth
 	focus = {# American Commonwealth
 		id = CSA_american_commonwealth
 		icon = GFX_goal_red_star_green_wreath
@@ -767,7 +767,7 @@ focus_tree = {
 	}
 
 
-	### United Socialist American States	
+	### United Socialist American States
 	focus = {# United Socialist American States
 		id = CSA_usas
 		icon = GFX_goal_red_star_gold_wreath
@@ -2403,6 +2403,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_red_angels"
+			custom_effect_tooltip = tech_better_paratroopers_effect
+			hidden_effect = {
+				set_technology = { tech_better_paratroopers = 1 popup = no }
+			}
 			if = {
 				limit = {
 					NOT = { has_tech = paratroopers }
@@ -3215,13 +3219,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_second_continental_navy"
-			country_event = csa.205
 			add_tech_bonus = {
 				name = CSA_second_continental_navy
 				bonus = 1
 				uses = 2
 				category = naval_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
+			country_event = csa.205
+			custom_effect_tooltip = CSA_second_continental_navy_effect_tooltip
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -3245,6 +3251,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CSA_revolutionary_naval_industry"
 			country_event = csa.206
+			custom_effect_tooltip = CSA_revolutionary_naval_industry_effect_tooltip
 			hidden_effect = {
 				country_event = { id = csa.207 days = 60 random_days = 60 }
 			}
@@ -3965,7 +3972,10 @@ focus_tree = {
 			country_exists = MEX
 			MEX = {
 				NOT = { has_war_with = ROOT }
-				has_socialist_government = yes
+				OR = {
+					has_socialist_government = yes
+					has_government = social_democrat
+				}
 			}
 		}
 		relative_position_id = CSA_free_the_west
@@ -4004,7 +4014,10 @@ focus_tree = {
 				is_faction_leader = yes
 			}
 			can_declare_war_on = MEX
-			MEX = { has_socialist_government = no }
+			MEX = {
+				has_socialist_government = no
+				NOT = { has_government = social_democrat }
+			}
 		}
 		bypass = {
 			NOT = { can_declare_war_on = MEX }

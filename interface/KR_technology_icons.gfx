@@ -287,7 +287,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_AST_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Australasia/AST_infantry_equipment_2.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_AST_infantry_weapons1_medium"
@@ -296,6 +296,26 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_AST_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_AST_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_AST_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_AST_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_AST_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_AST_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -2920,21 +2940,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Central_America/GUA_infantry_equipment_1.png"
 	}
 
-	### Borneo ###
-	### Land equipment
-	SpriteType = {
-		name = "GFX_BOR_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Netherlands/HOL_infantry_equipment_0.png"
-	}
-	SpriteType = {
-		name = "GFX_BOR_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/Netherlands/HOL_infantry_equipment_1.png"
-	}
-	SpriteType = {
-		name = "GFX_BOR_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Netherlands/HOL_infantry_equipment_2.png"
-	}
-
 	### Bosnia ###
 	### Infantry Equipment
 	SpriteType = {
@@ -3402,7 +3407,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_1.png"
 	}
 
-	### Carribean Federation ###
+	### Carribbean Federation ###
 	### Arms
 	SpriteType = {
 		name = "GFX_CAF_advanced_infantry_weapons_medium"
@@ -3414,11 +3419,31 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_CAF_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_CAF_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_CAF_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_CAF_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_CAF_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_CAF_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_CAF_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -4558,11 +4583,31 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_CAN_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_CAN_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_CAN_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_CAN_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_CAN_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_CAN_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_CAN_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -5106,11 +5151,31 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_ASY_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_ASY_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ASY_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_ASY_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_ASY_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ASY_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ASY_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -6844,13 +6909,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Dual_Monarchy/HUN_infantry_equipment_3_pineapple.png"
 	}
 
-	### Artillery 
+	### Artillery
 	SpriteType = {
 		name = "GFX_CUB_gw_artillery_medium"
 		texturefile = "gfx/interface/technologies/USA/USA_Art_1.png"
 	}
 
-	### Aircraft 
+	### Aircraft
 	SpriteType = {
 		name = "GFX_CUB_early_fighter_medium"
 		texturefile = "gfx/interface/technologies/USA_early_fighter.dds"
@@ -8033,6 +8098,26 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_RAJ_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -9847,7 +9932,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/EE/EE_armored_car_at_equipment.png"
 	}
 
-	### Artillery 
+	### Artillery
 	SpriteType = {
 		name = "GFX_EST_rocket_artillery_medium"
 		texturefile = "gfx/interface/technologies/EE/EE_Rocket_Art_1.png"
@@ -10208,7 +10293,7 @@ spriteTypes = {
 	### Transport Plane ###
 	SpriteType = {
 		name = "GFX_EST_transport_plane_equipment_medium"
-		texturefile = "gfx/interface/technologies/Estonia/EST_transport_plane_equipment.png"
+		texturefile = "gfx/interface/technologies/Latvia/LAT_transport_plane_equipment.png"
 	}
 
 	### ROCKET INTERCEPTOR
@@ -11126,10 +11211,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_FRA_modern_spaa_medium"
 		texturefile = "gfx/interface/technologies/CoF/FRA_main_battle_tank_aa.png"
-	}
-	SpriteType = {
-		name = "GFX_FRA_super_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/CoF/FRA_superheavy_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_FRA_super_heavy_tank_medium"
@@ -12565,11 +12646,31 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_GBR_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_GBR_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_0.png"
+		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_GBR_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_GBR_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_GBR_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GBR_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GBR_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -15119,29 +15220,297 @@ spriteTypes = {
 	### Infantry Equipment
 	SpriteType = {
 		name = "GFX_GRE_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_0.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_infantry_equipment_0.png"
 	}
 	SpriteType = {
 		name = "GFX_GRE_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/Serbia/SER_infantry_equipment_1_pineapple.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_GRE_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_improved_infantry_weapons_pineapple.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_infantry_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_GRE_advanced_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_infantry_equipment_3_pineapple.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_infantry_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_infantry_at_ALT.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_infantry_at2.png"
+	}
+
+	### Mech
+	SpriteType = {
+		name = "GFX_GRE_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_motorized_equipment.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_motorized_equipment_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_motorized_equipment.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_motorized_equipment.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_mechanized_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_motorized_rocket_unit_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_motorized_rocket_unit.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_mechanized_equipment_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_mechanized_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_amphibious_mech_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_amphibious_mech_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_armored_car1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_armored_car_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_armored_car2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_armored_car_equipment_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_armored_car3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_armored_car_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_armored_car_at_upgrade_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_armored_car_at_equipment.png"
+	}
+
+	### Artillery
+	SpriteType = {
+		name = "GFX_GRE_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_Art_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_artillery1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_Art_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_artillery4_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_Art_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AA_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_antiair2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AA_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_antiair5_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AA_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_interwar_antitank_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AT_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_antitank2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AT_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_antitank5_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AT_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_rocket_artillery4_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_2_comintern.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRE_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_1_comintern.dds"
+	}
+
+	### Tanks
+	SpriteType = {
+		name = "GFX_GRE_gwtank_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_gwtank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_basic_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_basic_main_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_main_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_main_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_main_battle_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_basic_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_amphibious_tank_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_amphibious_tank_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_amphibious_tank_2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_amphibious_tank_2.png"
 	}
 
 	### Aircraft
 	SpriteType = {
 		name = "GFX_GRE_early_fighter_medium"
-		texturefile = "gfx/interface/technologies/Poland/POL_early_fighter.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_early_fighter.png"
 	}
 	SpriteType = {
+		name = "GFX_GRE_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_early_bomber.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_fighter3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_fighter3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_jet_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_jet_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_naval_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_naval_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_naval_bomber3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_heavy_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_heavy_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_heavy_fighter3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_CAS1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_CAS1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_CAS2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_CAS2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_CAS3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_cas3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_tactical_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_tactical_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_tactical_bomber3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_jet_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_tactical_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_jet_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_tactical_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_strategic_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_strategic_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_strategic_bomber3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_jet_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_strategic_bomber1.png"
+	}
+
+	### Scout plane
+	SpriteType = {
 		name = "GFX_GRE_scout_plane1_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_scout_plane_1.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_scout_plane_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRE_scout_plane2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_scout_plane_2.png"
 	}
 
 	### Guararápes ###
@@ -15163,19 +15532,297 @@ spriteTypes = {
 	### Infantry Equipment
 	SpriteType = {
 		name = "GFX_GRR_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_0.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_infantry_equipment_0.png"
 	}
 	SpriteType = {
 		name = "GFX_GRR_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/Serbia/SER_infantry_equipment_1_pineapple.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_GRR_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_improved_infantry_weapons_pineapple.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_infantry_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_GRR_advanced_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_infantry_equipment_3_pineapple.png"
+		texturefile = "gfx/interface/technologies/Greece/GRE_infantry_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_infantry_at_ALT.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_infantry_at2.png"
+	}
+
+	### Mech
+	SpriteType = {
+		name = "GFX_GRR_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_motorized_equipment.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_motorized_equipment_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_motorized_equipment.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_motorized_equipment.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_mechanized_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_motorized_rocket_unit_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_motorized_rocket_unit.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_mechanized_equipment_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_mechanized_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_amphibious_mech_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_amphibious_mech_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_armored_car1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_armored_car_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_armored_car2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_armored_car_equipment_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_armored_car3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_armored_car_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_armored_car_at_upgrade_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_armored_car_at_equipment.png"
+	}
+
+	### Artillery
+	SpriteType = {
+		name = "GFX_GRR_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_Art_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_artillery1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_Art_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_artillery4_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_Art_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AA_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_antiair2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AA_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_antiair5_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AA_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_interwar_antitank_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AT_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_antitank2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AT_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_antitank5_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_AT_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_rocket_artillery4_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_2_comintern.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRR_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_1_comintern.dds"
+	}
+
+	### Tanks
+	SpriteType = {
+		name = "GFX_GRR_gwtank_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_gwtank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_basic_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_basic_main_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_main_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_main_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_main_battle_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_basic_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_amphibious_tank_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_amphibious_tank_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_amphibious_tank_2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_amphibious_tank_2.png"
+	}
+
+	### Aircraft
+	SpriteType = {
+		name = "GFX_GRR_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_early_fighter.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_early_bomber.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_fighter3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_fighter3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_jet_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_jet_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_naval_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_naval_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_naval_bomber3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_heavy_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_heavy_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_heavy_fighter3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_CAS1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_CAS1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_CAS2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_CAS2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_CAS3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_cas3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_tactical_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_tactical_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_tactical_bomber3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_jet_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_tactical_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_jet_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_tactical_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_strategic_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_strategic_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_strategic_bomber3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_jet_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_strategic_bomber1.png"
+	}
+
+	### Scout plane
+	SpriteType = {
+		name = "GFX_GRR_scout_plane1_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_scout_plane_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRR_scout_plane2_medium"
+		texturefile = "gfx/interface/technologies/Greece/GRE_scout_plane_2.png"
 	}
 
 	### German Union ###
@@ -15992,11 +16639,31 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_GYA_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_GYA_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_GYA_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_GYA_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_GYA_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GYA_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GYA_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -17384,7 +18051,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Baltic/BAT_adv_light_tank.png"
 	}
 
-	### Aircraft 
+	### Aircraft
 	SpriteType = {
 		name = "GFX_IRE_early_fighter_medium"
 		texturefile = "gfx/interface/technologies/USA_early_fighter.dds"
@@ -18076,11 +18743,31 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_JAM_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_JAM_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_JAM_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_JAM_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_JAM_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_JAM_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_JAM_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -19377,7 +20064,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/EE/EE_armored_car_at_equipment.png"
 	}
 
-	### Artillery 
+	### Artillery
 	SpriteType = {
 		name = "GFX_LAT_rocket_artillery_medium"
 		texturefile = "gfx/interface/technologies/EE/EE_Rocket_Art_1.png"
@@ -20087,7 +20774,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/EE/EE_armored_car_at_equipment.png"
 	}
 
-	### Artillery 
+	### Artillery
 	SpriteType = {
 		name = "GFX_LIT_rocket_artillery_medium"
 		texturefile = "gfx/interface/technologies/EE/EE_Rocket_Art_1.png"
@@ -22954,6 +23641,18 @@ spriteTypes = {
 		name = "GFX_NFA_advanced_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/NatFrance/NFA_infantry_equipment_3.png"
 	}
+	SpriteType = {
+		name = "GFX_NFA_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_NFA_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_NFA_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
+	}
 
 	###Motorised
 	SpriteType = {
@@ -24505,7 +25204,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_NZL_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Australasia/AST_infantry_equipment_2.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_NZL_infantry_weapons1_medium"
@@ -24515,7 +25214,26 @@ spriteTypes = {
 		name = "GFX_NZL_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
 	}
-
+	SpriteType = {
+		name = "GFX_NZL_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_NZL_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_NZL_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_NZL_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_NZL_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
+	}
 
 	### Vehicles
 	SpriteType = {
@@ -25042,599 +25760,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_OMA_infantry_weapons1_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_1_mills.png"
-	}
-
-	### TURKEY ###
-	### Artillery
-	SpriteType = {
-		name = "GFX_TUR_motorized_rocket_unit_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_motorized_rocket_unit.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_rocket_artillery4_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_Rocket_Art_2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_rocket_artillery_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_Rocket_Art_1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_artillery4_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_Art_3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_artillery1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_Art_2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_gw_artillery_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_Art_1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_antitank5_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_AT_3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_antitank2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_AT_2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_interwar_antitank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_AT_1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_antiair5_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_AA_3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_antiair2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_AA_2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_interwar_antiair_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_AA_1.png"
-	}
-
-	### Infantry Equipment
-	SpriteType = {
-		name = "GFX_TUR_motorized_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_motorized_equipment.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_motorised_infantry_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_motorized_equipment.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_motorized_rocket_unit_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_motorized_rocket_unit.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_mechanised_infantry3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_mechanized_equipment_3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_mechanised_infantry2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_mechanized_equipment_2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_mechanised_infantry_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_mechanized_equipment_1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_infantry_equipment_3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_infantry_equipment_2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_0.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_armored_car1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_armored_car_1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_armored_car2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_armored_car_2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_armored_car3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_armored_car_3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_armored_car_at_upgrade_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_armored_car_AT.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_amphibious_mechanized_infantry_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_amphibious_mech_1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_amphibious_mechanized_infantry_2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_amphibious_mech_2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_infantry_at_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_infantry_at.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_infantry_at2_medium"
-		texturefile = "gfx/interface/technologies/Germany/GER_infantry_at2.png"
-	}
-
-	### Tanks
-	SpriteType = {
-		name = "GFX_TUR_gwtank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_gwtank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_basic_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_basic_light_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_imp_light_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_adv_light_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_basic_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_basic_main_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_imp_main_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_adv_main_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_main_battle_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_main_battle_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_basic_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_basic_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_imp_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_adv_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_super_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_superheavy_tank.png"
-	}
-
-	### Aircraft
-	SpriteType = {
-		name = "GFX_TUR_early_bomber_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_early_bomber.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_tactical_bomber1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_tactical_bomber1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_tactical_bomber2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_tactical_bomber2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_tactical_bomber3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_tactical_bomber3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_strategic_bomber1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_strategic_bomber1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_strategic_bomber2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_strategic_bomber2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_strategic_bomber3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_strategic_bomber3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_CAS1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_CAS1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_CAS2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_CAS2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_CAS3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_CAS3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_heavy_fighter1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_fighter1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_heavy_fighter2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_fighter2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_heavy_fighter3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_fighter3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_naval_bomber1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_naval_bomber2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_naval_bomber3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_cv_naval_bomber1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber1_cv.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_cv_naval_bomber2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber2_cv.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_cv_naval_bomber3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber3_cv.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_early_fighter_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_early_fighter.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_fighter1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_fighter1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_fighter2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_fighter2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_fighter3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_fighter3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_jet_fighter1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_fighter1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_jet_fighter2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_fighter2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_jet_tactical_bomber1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_tactical_bomber1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_jet_tactical_bomber2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_tactical_bomber2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_jet_strategic_bomber1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_strategic_bomber1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_rocket_interceptor_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_rocket_interceptor_1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_rocket_interceptor_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_rocket_interceptor_2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_rocket_interceptor_equipment_3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_rocket_interceptor_3.png"
-	}
-	### SCOUT PLANE
-	SpriteType = {
-		name = "GFX_TUR_scout_plane1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_scout_plane_1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_scout_plane2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_scout_plane_2.png"
-	}
-
-	###Ottoman Navy###
-	SpriteType = {
-		name = "GFX_TUR_early_submarine_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_early_ship_hull_submarine_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine1.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_basic_submarine_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_basic_ship_hull_submarine_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine2.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_improved_submarine_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_ship_hull_submarine_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine3.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_advanced_submarine_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine4.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_ship_hull_submarine_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine4.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_early_destroyer_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_early_ship_hull_light_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer1.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_basic_destroyer_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_basic_ship_hull_light_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer2.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_improved_destroyer_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_ship_hull_light_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer3.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_advanced_destroyer_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer4.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_ship_hull_light_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer4.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_early_light_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_early_ship_hull_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_cruiser_1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser1.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_basic_light_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_cruiser_2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser2.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_improved_light_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_cruiser_3_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser3.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_advanced_light_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser4.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_cruiser_4_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser4.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_early_light_cruiser_capital_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_early_heavy_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_cruiser_1_capital_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser1.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_basic_light_cruiser_capital_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_basic_heavy_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_basic_ship_hull_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_cruiser_2_capital_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser2.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_improved_light_cruiser_capital_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_heavy_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_ship_hull_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_cruiser_3_capital_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser3.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_advanced_light_cruiser_capital_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser4.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_heavy_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser4.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_ship_hull_cruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser4.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_cruiser_4_capital_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser4.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_cruiser_coastal_defense_ship_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_cruiser_coastal_defense_ship.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_early_battlecruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battlecruiser1.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_basic_battlecruiser_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battlecruiser2.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_early_battleship_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_early_ship_hull_heavy_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship1.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_basic_battleship_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_basic_ship_hull_heavy_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship2.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_improved_battleship_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_ship_hull_heavy_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship3.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_advanced_battleship_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship4.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_ship_hull_heavy_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship4.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_heavy_battleship_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_battleship1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_super_heavy_1_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_battleship1.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_heavy_battleship2_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_battleship2.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_ship_hull_carrier_conversion_ca_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier_conversion_ca.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_early_carrier_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier1.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_early_ship_hull_carrier_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier1.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_basic_carrier_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier2.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_basic_ship_hull_carrier_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier2.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_improved_carrier_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier3.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_improved_ship_hull_carrier_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier3.png"
-	}
-
-	SpriteType = {
-		name = "GFX_TUR_advanced_carrier_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier4.png"
-	}
-	SpriteType = {
-		name = "GFX_TUR_advanced_ship_hull_carrier_medium"
-		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier4.png"
 	}
 
 
@@ -26856,16 +26981,40 @@ spriteTypes = {
 	### Quebec ###
 	### Arms
 	SpriteType = {
+		name = "GFX_QUE_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_3.png"
+	}
+	SpriteType = {
 		name = "GFX_QUE_improved_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_QUE_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_QUE_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_QUE_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_QUE_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_QUE_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_QUE_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_QUE_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vera Cruz (RJM) ###
@@ -26887,7 +27036,7 @@ spriteTypes = {
 	### Infantry Equipment
 	SpriteType = {
 		name = "GFX_ROM_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Dual_Monarchy/Shared_infantry_equipment_0.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_infantry_equipment_0.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_infantry_weapons1_medium"
@@ -26895,31 +27044,85 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_ROM_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_improved_infantry_weapons.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_infantry_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_advanced_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_advanced_infantry_weapons.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_infantry_equipment_3.png"
 	}
 	SpriteType = {
+		name = "GFX_ROM_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_infantry_weapons_1_alt.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_infantry_weapons_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_infantry_at.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_infantry_at2.png"
+	}
+
+	### Mech
+	SpriteType = {
 		name = "GFX_ROM_motorised_infantry_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_motorised_infantry.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_motorised_infantry.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_motorized_equipment_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_motorised_infantry.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_motorized_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_motorised_infantry.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_motorised_infantry.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_motorized_rocket_unit_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_motorized_rocket_unit.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_mechanised_infantry_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_mechanised_infantry.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_mechanised_infantry.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_mechanised_infantry2_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_mechanised_infantry2.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_mechanised_infantry2.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_mechanised_infantry3_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_mechanised_infantry3.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_mechanised_infantry3.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_amphibious_mech_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_amphibious_mech_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_armored_car1_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_armored_car_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_armored_car2_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_armored_car_equipment_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_armored_car3_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_armored_car_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_armored_car_at_upgrade_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_armored_car_at_equipment.png"
 	}
 
 	### Tanks
@@ -26945,7 +27148,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_ROM_advanced_light_tank_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_adv_light_tank.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_adv_light_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_advanced_light_td_medium"
@@ -26953,39 +27156,27 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_ROM_advanced_light_art_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_adv_light_tank_spa.png"
+		texturefile = "gfx/interface/technologies/Romania/ROM_adv_light_tank_spa.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_basic_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_basic_medium_tank.png"
+		texturefile = "gfx/interface/technologies/Romania/rom_basic_main_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_basic_medium_td_medium"
 		texturefile = "gfx/interface/technologies/Romania/rom_basic_medium_tank_td.png"
 	}
 	SpriteType = {
-		name = "GFX_ROM_basic_medium_art_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_basic_medium_tank_spa.png"
-	}
-	SpriteType = {
-		name = "GFX_ROM_basic_medium_spaa_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_basic_medium_tank_aa.png"
-	}
-	SpriteType = {
 		name = "GFX_ROM_improved_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_imp_medium_tank.png"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_main_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_improved_medium_td_medium"
 		texturefile = "gfx/interface/technologies/Romania/rom_imp_medium_tank_td.png"
 	}
 	SpriteType = {
-		name = "GFX_ROM_improved_medium_spaa_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_imp_medium_tank_aa.png"
-	}
-	SpriteType = {
 		name = "GFX_ROM_advanced_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_adv_medium_tank.png"
+		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_main_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_advanced_medium_td_medium"
@@ -26997,24 +27188,30 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_ROM_improved_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_imp_heavy_tank.png"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_heavy_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_advanced_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_adv_heavy_tank.png"
-	}
-	SpriteType = {
-		name = "GFX_ROM_advanced_heavy_spaa_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_adv_heavy_tank_aa.png"
+		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_heavy_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_super_heavy_tank_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_superheavy_tank.png"
+		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_ROM_main_battle_tank_medium"
-		texturefile = "gfx/interface/technologies/Romania/rom_main_battle_tank.png"
+		texturefile = "gfx/interface/technologies/Russia/RUS_main_battle_tank.png"
 	}
+	SpriteType = {
+		name = "GFX_ROM_amphibious_tank_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_amphibious_tank_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_amphibious_tank_2_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_amphibious_tank_2.png"
+	}
+
+
 	### Artillery
 	SpriteType = {
 		name = "GFX_ROM_gw_artillery_medium"
@@ -27047,6 +27244,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ROM_antitank5_medium"
 		texturefile = "gfx/interface/technologies/Romania/ROM_AT_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_rocket_artillery4_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_2_comintern.dds"
+	}
+	SpriteType = {
+		name = "GFX_ROM_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_1_comintern.dds"
 	}
 
 	### Aircraft
@@ -27129,6 +27334,38 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ROM_strategic_bomber3_medium"
 		texturefile = "gfx/interface/technologies/Romania/ROM_strategic_bomber3.png"
+	}
+
+	### JET AIRCRAFT
+	SpriteType = {
+		name = "GFX_ROM_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_jet_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_tactical_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_jet_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_tactical_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_jet_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_jet_strategic_bomber1.png"
+	}
+
+	### Scout plane
+	SpriteType = {
+		name = "GFX_ROM_scout_plane1_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_CAS1.png"
+	}
+	SpriteType = {
+		name = "GFX_ROM_scout_plane2_medium"
+		texturefile = "gfx/interface/technologies/Romania/ROM_cas3.png"
 	}
 
 	### Russia ###
@@ -27389,6 +27626,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_RUS_super_heavy_tank_medium"
 		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_RUS_amphibious_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_amphibious_tank_1.png"
+	}
+	SpriteType = {
+		name = "GFX_RUS_amphibious_tank_2_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_amphibious_tank_2.png"
 	}
 
 	### Artillery
@@ -27762,6 +28007,26 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_SAF_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_SAF_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_SAF_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_SAF_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_SAF_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_SAF_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -28976,61 +29241,85 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_SER_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Italy/ITA_infantry_equipment_2_m38.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_infantry_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_advanced_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_infantry_equipment_3_m38.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_infantry_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_infantry_at_ALT.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_infantry_weapons_3.png"
 	}
 
 	### Mech
 	SpriteType = {
 		name = "GFX_SER_motorised_infantry_medium"
-		texturefile = "gfx/interface/technologies/Serbia/yug_motorised_infantry.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_motorised_infantry.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_motorized_equipment_medium"
-		texturefile = "gfx/interface/technologies/Serbia/yug_motorised_infantry.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_motorised_infantry.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_motorised_infantry.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_mechanised_infantry_medium"
-		texturefile = "gfx/interface/technologies/Serbia/yug_mechanised_infantry.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_mechanized_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_motorized_rocket_unit_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_motorized_rocket_unit.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_motorized_rocket_unit.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_mechanised_infantry2_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_mechanized_equipment_2.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_mechanized_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_mechanised_infantry3_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_mechanized_equipment_3.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_mechanized_equipment_3.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_amphibious_mechanized_infantry_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_amphibious_mech_1.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_amphibious_mech_1.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_amphibious_mechanized_infantry_2_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_amphibious_mech_2.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_amphibious_mech_2.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_armored_car1_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_armored_car_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_armored_car_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_armored_car2_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_armored_car_equipment_2.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_armored_car_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_armored_car3_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_armored_car_equipment_3.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_armored_car_equipment_3.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_armored_car_at_upgrade_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_armored_car_at_equipment.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_armored_car_at_equipment.png"
 	}
 
 	### Artillery
@@ -29038,23 +29327,103 @@ spriteTypes = {
 		name = "GFX_SER_gw_artillery_medium"
 		texturefile = "gfx/interface/technologies/Serbia/SER_Art_1.png"
 	}
+	SpriteType = {
+		name = "GFX_SER_artillery1_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_Art_2.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_artillery4_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_Art_3.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_AA_1.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_antiair2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_AA_2.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_antiair5_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_AA_3.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_interwar_antitank_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_AT_1.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_antitank2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_AT_2.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_antitank5_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_AT_3.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_rocket_artillery4_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_2_comintern.dds"
+	}
+	SpriteType = {
+		name = "GFX_SER_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_1_comintern.dds"
+	}
 
-	###Tanks
+	### Tanks
 	SpriteType = {
 		name = "GFX_SER_gwtank_medium"
 		texturefile = "gfx/interface/technologies/Serbia/SER_gwtank.png"
 	}
 	SpriteType = {
+		name = "GFX_SER_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_basic_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_advanced_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/Russia/RUS_basic_main_tank.png"
+	}
+	SpriteType = {
 		name = "GFX_SER_improved_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Serbia/SER_imp_main_tank.png"
+		texturefile = "gfx/interface/technologies/Russia/RUS_improved_main_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_advanced_medium_tank_medium"
-		texturefile = "gfx/interface/technologies/Serbia/SER_adv_main_tank.png"
+		texturefile = "gfx/interface/technologies/CoF/FRA_adv_main_tank.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_main_battle_tank_medium"
 		texturefile = "gfx/interface/technologies/Serbia/SER_main_battle_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/CoF/FRA_basic_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/FRA_imp_heavy_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_SER_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/CoF/FRA_adv_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/CoF/FRA_superheavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_amphibious_tank_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_amphibious_tank_1.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_amphibious_tank_2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_amphibious_tank_2.png"
 	}
 
 	### Aircraft
@@ -29068,7 +29437,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_SER_fighter1_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_fighter1.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_fighter1.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_fighter2_medium"
@@ -29076,7 +29445,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_SER_fighter3_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_fighter3.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_fighter3.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_jet_fighter1_medium"
@@ -29084,15 +29453,23 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_SER_jet_fighter2_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_jet_fighter2.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_jet_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_naval_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_SER_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Serbia/SER_naval_bomber2.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_naval_bomber3_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_naval_bomber3.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_naval_bomber3.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_heavy_fighter1_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_heavy_fighter1.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_heavy_fighter1.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_heavy_fighter2_medium"
@@ -29112,11 +29489,11 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_SER_CAS3_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_CAS3.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_cas3.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_tactical_bomber1_medium"
-		texturefile = "gfx/interface/technologies/yug_tactical_bomber1.dds"
+		texturefile = "gfx/interface/technologies/Serbia/SER_tactical_bomber1.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_tactical_bomber2_medium"
@@ -29135,14 +29512,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Russia/RUS_jet_tactical_bomber2.png"
 	}
 	SpriteType = {
-		name = "GFX_SER_naval_bomber1_medium"
-		texturefile = "gfx/interface/technologies/Serbia/SER_naval_bomber1.png"
-	}
-	SpriteType = {
-		name = "GFX_SER_naval_bomber2_medium"
-		texturefile = "gfx/interface/technologies/Serbia/SER_naval_bomber2.png"
-	}
-	SpriteType = {
 		name = "GFX_SER_strategic_bomber1_medium"
 		texturefile = "gfx/interface/technologies/Serbia/SER_strategic_bomber1.png"
 	}
@@ -29152,7 +29521,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_SER_strategic_bomber3_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_strategic_bomber3.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_strategic_bomber3.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_jet_strategic_bomber1_medium"
@@ -29162,11 +29531,11 @@ spriteTypes = {
 	### Scout plane
 	SpriteType = {
 		name = "GFX_SER_scout_plane1_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_scout_plane_1.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_early_bomber.png"
 	}
 	SpriteType = {
 		name = "GFX_SER_scout_plane2_medium"
-		texturefile = "gfx/interface/technologies/Russia/RUS_scout_plane_2.png"
+		texturefile = "gfx/interface/technologies/Serbia/SER_cas2.png"
 	}
 
 	### South African Rebel Tag ###
@@ -31214,7 +31583,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_SRD_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_SRD_improved_infantry_weapons_medium"
@@ -31223,6 +31592,18 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_SRD_advanced_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/NatFrance/NFA_infantry_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_SRD_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_SRD_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_SRD_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	###Motorised
@@ -33979,7 +34360,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_1_mills.png"
 	}
 
-	### Tanganjika ###
+	### Ostafrika ###
 	### Infantry Equipment
 	SpriteType = {
 		name = "GFX_TZN_infantry_weapons1_medium"
@@ -34013,11 +34394,31 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_TRI_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_1.png"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_TRI_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_TRI_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_TRI_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_TRI_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_TRI_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_TRI_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
 	}
 
 	### Vehicles
@@ -34883,593 +35284,593 @@ spriteTypes = {
 	### TURKEY ###
 	### Artillery
 	SpriteType = {
-		name = "GFX_OTT_motorized_rocket_unit_medium"
+		name = "GFX_TUR_motorized_rocket_unit_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_motorized_rocket_unit.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_rocket_artillery4_medium"
+		name = "GFX_TUR_rocket_artillery4_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_Rocket_Art_2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_rocket_artillery_medium"
+		name = "GFX_TUR_rocket_artillery_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_Rocket_Art_1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_artillery4_medium"
+		name = "GFX_TUR_artillery4_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_Art_3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_artillery1_medium"
+		name = "GFX_TUR_artillery1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_Art_2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_gw_artillery_medium"
+		name = "GFX_TUR_gw_artillery_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_Art_1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_antitank5_medium"
+		name = "GFX_TUR_antitank5_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_AT_3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_antitank2_medium"
+		name = "GFX_TUR_antitank2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_AT_2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_interwar_antitank_medium"
+		name = "GFX_TUR_interwar_antitank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_AT_1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_antiair5_medium"
+		name = "GFX_TUR_antiair5_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_AA_3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_antiair2_medium"
+		name = "GFX_TUR_antiair2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_AA_2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_interwar_antiair_medium"
+		name = "GFX_TUR_interwar_antiair_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_AA_1.png"
 	}
 
 	### Infantry Equipment
 	SpriteType = {
-		name = "GFX_OTT_motorized_equipment_1_medium"
+		name = "GFX_TUR_motorized_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_motorized_equipment.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_motorised_infantry_medium"
+		name = "GFX_TUR_motorised_infantry_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_motorized_equipment.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_motorized_rocket_unit_medium"
+		name = "GFX_TUR_motorized_rocket_unit_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_motorized_rocket_unit.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_mechanised_infantry3_medium"
+		name = "GFX_TUR_mechanised_infantry3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_mechanized_equipment_3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_mechanised_infantry2_medium"
+		name = "GFX_TUR_mechanised_infantry2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_mechanized_equipment_2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_mechanised_infantry_medium"
+		name = "GFX_TUR_mechanised_infantry_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_mechanized_equipment_1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_infantry_weapons_medium"
+		name = "GFX_TUR_advanced_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_infantry_equipment_3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_infantry_weapons_medium"
+		name = "GFX_TUR_improved_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_infantry_equipment_2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_infantry_weapons1_medium"
+		name = "GFX_TUR_infantry_weapons1_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_infantry_weapons_medium"
+		name = "GFX_TUR_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_0.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_armored_car1_medium"
+		name = "GFX_TUR_armored_car1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_armored_car_1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_armored_car2_medium"
+		name = "GFX_TUR_armored_car2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_armored_car_2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_armored_car3_medium"
+		name = "GFX_TUR_armored_car3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_armored_car_3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_armored_car_at_upgrade_medium"
+		name = "GFX_TUR_armored_car_at_upgrade_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_armored_car_AT.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_amphibious_mechanized_infantry_medium"
+		name = "GFX_TUR_amphibious_mechanized_infantry_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_amphibious_mech_1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_amphibious_mechanized_infantry_2_medium"
+		name = "GFX_TUR_amphibious_mechanized_infantry_2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_amphibious_mech_2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_infantry_at_medium"
+		name = "GFX_TUR_infantry_at_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_infantry_at.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_infantry_at2_medium"
+		name = "GFX_TUR_infantry_at2_medium"
 		texturefile = "gfx/interface/technologies/Germany/GER_infantry_at2.png"
 	}
 
 	### Tanks
 	SpriteType = {
-		name = "GFX_OTT_gwtank_medium"
+		name = "GFX_TUR_gwtank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_gwtank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_basic_light_tank_medium"
+		name = "GFX_TUR_basic_light_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_basic_light_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_light_tank_medium"
+		name = "GFX_TUR_improved_light_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_imp_light_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_light_tank_medium"
+		name = "GFX_TUR_advanced_light_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_adv_light_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_basic_medium_tank_medium"
+		name = "GFX_TUR_basic_medium_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_basic_main_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_medium_tank_medium"
+		name = "GFX_TUR_improved_medium_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_imp_main_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_medium_tank_medium"
+		name = "GFX_TUR_advanced_medium_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_adv_main_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_main_battle_tank_medium"
+		name = "GFX_TUR_main_battle_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_main_battle_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_basic_heavy_tank_medium"
+		name = "GFX_TUR_basic_heavy_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_basic_heavy_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_heavy_tank_medium"
+		name = "GFX_TUR_improved_heavy_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_imp_heavy_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_heavy_tank_medium"
+		name = "GFX_TUR_advanced_heavy_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_adv_heavy_tank.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_super_heavy_tank_medium"
+		name = "GFX_TUR_super_heavy_tank_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_superheavy_tank.png"
 	}
 
 	### Aircraft
 	SpriteType = {
-		name = "GFX_OTT_early_bomber_medium"
+		name = "GFX_TUR_early_bomber_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_early_bomber.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_tactical_bomber1_medium"
+		name = "GFX_TUR_tactical_bomber1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_tactical_bomber1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_tactical_bomber2_medium"
+		name = "GFX_TUR_tactical_bomber2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_tactical_bomber2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_tactical_bomber3_medium"
+		name = "GFX_TUR_tactical_bomber3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_tactical_bomber3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_strategic_bomber1_medium"
+		name = "GFX_TUR_strategic_bomber1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_strategic_bomber1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_strategic_bomber2_medium"
+		name = "GFX_TUR_strategic_bomber2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_strategic_bomber2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_strategic_bomber3_medium"
+		name = "GFX_TUR_strategic_bomber3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_strategic_bomber3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_CAS1_medium"
+		name = "GFX_TUR_CAS1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_CAS1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_CAS2_medium"
+		name = "GFX_TUR_CAS2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_CAS2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_CAS3_medium"
+		name = "GFX_TUR_CAS3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_CAS3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_heavy_fighter1_medium"
+		name = "GFX_TUR_heavy_fighter1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_fighter1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_heavy_fighter2_medium"
+		name = "GFX_TUR_heavy_fighter2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_fighter2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_heavy_fighter3_medium"
+		name = "GFX_TUR_heavy_fighter3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_fighter3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_naval_bomber1_medium"
+		name = "GFX_TUR_naval_bomber1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_naval_bomber2_medium"
+		name = "GFX_TUR_naval_bomber2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_naval_bomber3_medium"
+		name = "GFX_TUR_naval_bomber3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_cv_naval_bomber1_medium"
+		name = "GFX_TUR_cv_naval_bomber1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber1_cv.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_cv_naval_bomber2_medium"
+		name = "GFX_TUR_cv_naval_bomber2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber2_cv.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_cv_naval_bomber3_medium"
+		name = "GFX_TUR_cv_naval_bomber3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_naval_bomber3_cv.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_early_fighter_medium"
+		name = "GFX_TUR_early_fighter_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_early_fighter.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_fighter1_medium"
+		name = "GFX_TUR_fighter1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_fighter1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_fighter2_medium"
+		name = "GFX_TUR_fighter2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_fighter2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_fighter3_medium"
+		name = "GFX_TUR_fighter3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_fighter3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_jet_fighter1_medium"
+		name = "GFX_TUR_jet_fighter1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_fighter1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_jet_fighter2_medium"
+		name = "GFX_TUR_jet_fighter2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_fighter2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_jet_tactical_bomber1_medium"
+		name = "GFX_TUR_jet_tactical_bomber1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_tactical_bomber1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_jet_tactical_bomber2_medium"
+		name = "GFX_TUR_jet_tactical_bomber2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_tactical_bomber2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_jet_strategic_bomber1_medium"
+		name = "GFX_TUR_jet_strategic_bomber1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_jet_strategic_bomber1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_rocket_interceptor_equipment_1_medium"
+		name = "GFX_TUR_rocket_interceptor_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_rocket_interceptor_1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_rocket_interceptor_equipment_2_medium"
+		name = "GFX_TUR_rocket_interceptor_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_rocket_interceptor_2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_rocket_interceptor_equipment_3_medium"
+		name = "GFX_TUR_rocket_interceptor_equipment_3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_rocket_interceptor_3.png"
 	}
 	### SCOUT PLANE
 	SpriteType = {
-		name = "GFX_OTT_scout_plane1_medium"
+		name = "GFX_TUR_scout_plane1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_scout_plane_1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_scout_plane2_medium"
+		name = "GFX_TUR_scout_plane2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_scout_plane_2.png"
 	}
 
 	###Ottoman Navy###
 	SpriteType = {
-		name = "GFX_OTT_early_submarine_medium"
+		name = "GFX_TUR_early_submarine_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_early_ship_hull_submarine_medium"
+		name = "GFX_TUR_early_ship_hull_submarine_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine1.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_basic_submarine_medium"
+		name = "GFX_TUR_basic_submarine_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_basic_ship_hull_submarine_medium"
+		name = "GFX_TUR_basic_ship_hull_submarine_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine2.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_improved_submarine_medium"
+		name = "GFX_TUR_improved_submarine_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_ship_hull_submarine_medium"
+		name = "GFX_TUR_improved_ship_hull_submarine_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine3.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_advanced_submarine_medium"
+		name = "GFX_TUR_advanced_submarine_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine4.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_ship_hull_submarine_medium"
+		name = "GFX_TUR_advanced_ship_hull_submarine_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_submarine4.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_early_destroyer_medium"
+		name = "GFX_TUR_early_destroyer_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_early_ship_hull_light_medium"
+		name = "GFX_TUR_early_ship_hull_light_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer1.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_basic_destroyer_medium"
+		name = "GFX_TUR_basic_destroyer_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_basic_ship_hull_light_medium"
+		name = "GFX_TUR_basic_ship_hull_light_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer2.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_improved_destroyer_medium"
+		name = "GFX_TUR_improved_destroyer_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_ship_hull_light_medium"
+		name = "GFX_TUR_improved_ship_hull_light_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer3.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_advanced_destroyer_medium"
+		name = "GFX_TUR_advanced_destroyer_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer4.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_ship_hull_light_medium"
+		name = "GFX_TUR_advanced_ship_hull_light_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_destroyer4.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_early_light_cruiser_medium"
+		name = "GFX_TUR_early_light_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_early_ship_hull_cruiser_medium"
+		name = "GFX_TUR_early_ship_hull_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_cruiser_1_medium"
+		name = "GFX_TUR_ship_hull_cruiser_1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser1.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_basic_light_cruiser_medium"
+		name = "GFX_TUR_basic_light_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_cruiser_2_medium"
+		name = "GFX_TUR_ship_hull_cruiser_2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser2.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_improved_light_cruiser_medium"
+		name = "GFX_TUR_improved_light_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_cruiser_3_medium"
+		name = "GFX_TUR_ship_hull_cruiser_3_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser3.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_advanced_light_cruiser_medium"
+		name = "GFX_TUR_advanced_light_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser4.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_cruiser_4_medium"
+		name = "GFX_TUR_ship_hull_cruiser_4_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_light_cruiser4.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_early_light_cruiser_capital_medium"
+		name = "GFX_TUR_early_light_cruiser_capital_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_early_heavy_cruiser_medium"
+		name = "GFX_TUR_early_heavy_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_cruiser_1_capital_medium"
+		name = "GFX_TUR_ship_hull_cruiser_1_capital_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser1.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_basic_light_cruiser_capital_medium"
+		name = "GFX_TUR_basic_light_cruiser_capital_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_basic_heavy_cruiser_medium"
+		name = "GFX_TUR_basic_heavy_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_basic_ship_hull_cruiser_medium"
+		name = "GFX_TUR_basic_ship_hull_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_cruiser_2_capital_medium"
+		name = "GFX_TUR_ship_hull_cruiser_2_capital_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser2.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_improved_light_cruiser_capital_medium"
+		name = "GFX_TUR_improved_light_cruiser_capital_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_heavy_cruiser_medium"
+		name = "GFX_TUR_improved_heavy_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_ship_hull_cruiser_medium"
+		name = "GFX_TUR_improved_ship_hull_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_cruiser_3_capital_medium"
+		name = "GFX_TUR_ship_hull_cruiser_3_capital_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser3.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_advanced_light_cruiser_capital_medium"
+		name = "GFX_TUR_advanced_light_cruiser_capital_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser4.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_heavy_cruiser_medium"
+		name = "GFX_TUR_advanced_heavy_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser4.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_ship_hull_cruiser_medium"
+		name = "GFX_TUR_advanced_ship_hull_cruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser4.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_cruiser_4_capital_medium"
+		name = "GFX_TUR_ship_hull_cruiser_4_capital_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_cruiser4.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_cruiser_coastal_defense_ship_medium"
+		name = "GFX_TUR_ship_hull_cruiser_coastal_defense_ship_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_cruiser_coastal_defense_ship.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_early_battlecruiser_medium"
+		name = "GFX_TUR_early_battlecruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battlecruiser1.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_basic_battlecruiser_medium"
+		name = "GFX_TUR_basic_battlecruiser_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battlecruiser2.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_early_battleship_medium"
+		name = "GFX_TUR_early_battleship_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_early_ship_hull_heavy_medium"
+		name = "GFX_TUR_early_ship_hull_heavy_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship1.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_basic_battleship_medium"
+		name = "GFX_TUR_basic_battleship_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_basic_ship_hull_heavy_medium"
+		name = "GFX_TUR_basic_ship_hull_heavy_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship2.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_improved_battleship_medium"
+		name = "GFX_TUR_improved_battleship_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_ship_hull_heavy_medium"
+		name = "GFX_TUR_improved_ship_hull_heavy_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship3.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_advanced_battleship_medium"
+		name = "GFX_TUR_advanced_battleship_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship4.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_ship_hull_heavy_medium"
+		name = "GFX_TUR_advanced_ship_hull_heavy_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_battleship4.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_heavy_battleship_medium"
+		name = "GFX_TUR_heavy_battleship_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_battleship1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_super_heavy_1_medium"
+		name = "GFX_TUR_ship_hull_super_heavy_1_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_battleship1.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_heavy_battleship2_medium"
+		name = "GFX_TUR_heavy_battleship2_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_heavy_battleship2.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_ship_hull_carrier_conversion_ca_medium"
+		name = "GFX_TUR_ship_hull_carrier_conversion_ca_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier_conversion_ca.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_early_carrier_medium"
+		name = "GFX_TUR_early_carrier_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier1.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_early_ship_hull_carrier_medium"
+		name = "GFX_TUR_early_ship_hull_carrier_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier1.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_basic_carrier_medium"
+		name = "GFX_TUR_basic_carrier_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier2.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_basic_ship_hull_carrier_medium"
+		name = "GFX_TUR_basic_ship_hull_carrier_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier2.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_improved_carrier_medium"
+		name = "GFX_TUR_improved_carrier_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier3.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_improved_ship_hull_carrier_medium"
+		name = "GFX_TUR_improved_ship_hull_carrier_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier3.png"
 	}
 
 	SpriteType = {
-		name = "GFX_OTT_advanced_carrier_medium"
+		name = "GFX_TUR_advanced_carrier_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier4.png"
 	}
 	SpriteType = {
-		name = "GFX_OTT_advanced_ship_hull_carrier_medium"
+		name = "GFX_TUR_advanced_ship_hull_carrier_medium"
 		texturefile = "gfx/interface/technologies/Ottomans/OTT_carrier4.png"
 	}
 
@@ -37955,7 +38356,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/EE/EE_armored_car_at_equipment.png"
 	}
 
-	### Artillery 
+	### Artillery
 	SpriteType = {
 		name = "GFX_WHR_rocket_artillery_medium"
 		texturefile = "gfx/interface/technologies/EE/EE_Rocket_Art_1.png"
@@ -38441,6 +38842,26 @@ spriteTypes = {
 		name = "GFX_ZIM_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
 	}
+	SpriteType = {
+		name = "GFX_ZIM_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at1.png"
+	}
+	SpriteType = {
+		name = "GFX_ZIM_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_at2.png"
+	}
+	SpriteType = {
+		name = "GFX_ZIM_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ZIM_improved_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ZIM_advanced_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/Canada/CAN_infantry_weapons_3.png"
+	}
 
 	## Vehicles
 	SpriteType = {
@@ -38673,3 +39094,4 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/UOB/ENG_infantry_equipment_0.png"
 	}
 }
+

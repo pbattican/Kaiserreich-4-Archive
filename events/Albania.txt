@@ -261,7 +261,7 @@ country_event = {
 		ai_chance = {
 			base = 50
 		}
-		FROM = { country_event = { id = albania.14 days = 5 } }
+		FROM = { country_event = albania.14 }
 	}
 
 	option = { #Nah m8
@@ -279,7 +279,7 @@ country_event = {
 				}
 			}
 		}
-		FROM = { country_event = { id = albania.15 days = 5 } }
+		FROM = { country_event = albania.15 }
 	}
 }
 
@@ -319,6 +319,20 @@ country_event = {
 		FROM = {
 			give_military_access = ROOT
 			give_guarantee = ROOT
+		}
+		if = {
+			limit = {
+				BUL = {
+					is_faction_leader = yes
+				}
+			}
+			BUL = {
+				add_to_faction = ALB
+			}
+		}
+		else = {
+			custom_effect_tooltip = ALB_will_join_BUL_factions
+			set_country_flag = ALB_will_join_BUL_factions_flag
 		}
 	}
 }
@@ -575,7 +589,6 @@ country_event = {
 	option = { #Verlaci dies or lives?
 		name = albania.27.a
 		random_list = {
-			seed = random
 			90 = { country_event = albania.41 }
 			10 = { country_event = albania.42 }
 		}
@@ -1323,7 +1336,6 @@ country_event = {
 		if = {
 			limit = { has_completed_focus = ALB_arm_of_gendarmerie }
 			random_list = {
-				seed = random
 				90 = { add_political_power = 50 }
 				10 = {
 					kill_country_leader = yes
@@ -1389,7 +1401,6 @@ country_event = {
 		}
 		else = {
 			random_list = {
-				seed = random
 				35 = { add_political_power = 50 }
 				65 = {
 					kill_country_leader = yes

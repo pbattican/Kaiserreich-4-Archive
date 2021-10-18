@@ -39,6 +39,7 @@ country_event = {	#Syrian Revolt
 				}
 				554 = {
 					force_disable_resistance = { clear = yes }
+					remove_dynamic_modifier = { modifier = OTT_nationalist_hotbed }
 				}
 				SYR = {
 					transfer_state = 554
@@ -78,7 +79,6 @@ country_event = {	#Syrian Revolt
 				}
 			}
 			random_list = {
-				seed = random
 				66 = {
 					EGY = {
 						country_event = {
@@ -186,11 +186,6 @@ country_event = {	#Halep joins the revolt
 					allow_spawning_on_enemy_provs = yes
 					owner = SYR
 				}
-				create_unit = {
-					division = "name = \"Syrian Rebels\" division_template = \"Militia Damascus\"  start_experience_factor = 0.0"
-					allow_spawning_on_enemy_provs = yes
-					owner = SYR
-				}
 			}
 			SYR = { transfer_state = 677 }
 		}
@@ -284,7 +279,7 @@ country_event = {	#Arab Revolt Crushed
 	fire_only_once = yes
 
 	trigger = {
-		tag = OTT
+		tag = TUR
 		has_global_flag = OTT_Syria_Revolt
 		OR = {
 			NOT = { country_exists = SYR }
@@ -340,7 +335,7 @@ country_event = {	#Invitation to the Arab League
 				factor = 0
 				tag = IRQ
 				has_country_leader = {
-					name = "Yusuf I"
+					name = "Ajami I"
 					ruling_only = yes
 				}
 			}
@@ -1376,29 +1371,12 @@ country_event = {	#Plebiscite in Cilicia
 
 	option = {
 		name = syrrep.28.a
-		if = {
-			limit = {
-				OTT = {
-					exists = yes
-				}
-			}
-			OTT = {
-				transfer_state = 344
-			}
-		}
-		else_if = {
-			limit = {
-				TUR = {
-					exists = yes
-				}
-			}
-			TUR = {
-				add_state_core = 344
-				transfer_state = 344
-			}
-		}
 		remove_state_core = 344
 		add_state_claim = 344
+		TUR = {
+			add_state_core = 344
+			transfer_state = 344
+		}
 	}
 }
 

@@ -6,16 +6,12 @@ country_event = { #Reichspakt is defeated in Asia
 	title = asiapeace.1.t
 	desc = asiapeace.1.d
 
-	is_triggered_only = yes
+	fire_only_once = yes
 
 	trigger = {
 		tag = GER
 		has_war = yes
 		is_faction_leader = yes
-		GEA = {
-			is_subject_of = ROOT
-			has_capitulated = yes
-		}
 		any_enemy_country = {
 			OR = {
 				is_in_asia = yes
@@ -45,44 +41,13 @@ country_event = { #Reichspakt is defeated in Asia
 		}
 		custom_effect_tooltip = asian_reichspakt_will_proceed_to_peacedeal_we_white_peace
 		hidden_effect = {
-			# release all occupied states in Asia
-			GER = {
-				every_enemy_country = {
-					limit = {
-						has_war_with = GER
-						OR = {
-							is_in_asia = yes
-							is_in_australia = yes
-						}
-					}
-					every_owned_state = {
-						limit = {
-							OR = {
-								is_controlled_by = GER
-								controller = { is_in_faction_with = GER }
-								controller = {
-									NOT = { has_war_with = PREV.PREV }
-								}
-							}
-						}
-						owner = { set_state_controller = PREV }
-					}
-				}
-			}
-			# remove Asian countries from the Reichspakt
+			# remove Asian/Oceanian countries from the Reichspakt
 			every_other_country = {
 				limit = {
 					is_ally_with = GER
 					OR = {
 						is_in_asia = yes
 						is_in_australia = yes
-						AND = {
-							tag = HAW
-							NOT = {
-								USA = { is_in_faction_with = GER }
-								TEX = { is_in_faction_with = GER }
-							}
-						}
 					}
 				}
 				if = {
@@ -96,84 +61,95 @@ country_event = { #Reichspakt is defeated in Asia
 				}
 				leave_faction = yes
 			}
-			# surrender Ceylon/Maldives
+
+			# Ceylon/Maldives order == India -> JAP -> occupier -> independent CEY
 			if = {
-				limit = {
-					has_war_with = JAP
-					OR = {
-						owns_state = 422 #Ceylon
-						owns_state = 281 #Maldives
-					}
-				}
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 422 #Ceylon
-							state = 281 #Maldives
+				limit = { owns_state = 422 } #Ceylon
+				if = {
+					limit = { NOT = { controls_state = 422 } }
+					var:422.controller = {
+						if = {
+							limit = { is_ally_with = PRF }
+							set_temp_variable = { ceylon_target = PRF }
+						}
+						else_if = {
+							limit = {
+								var:423.owner = {
+									is_ally_with = ROOT
+									is_indian_tag = yes
+								}
+							}
+							set_temp_variable = { ceylon_target = 423.owner }
+						}
+						else_if = {
+							limit = { is_ally_with = RAJ }
+							set_temp_variable = { ceylon_target = RAJ }
+						}
+						else_if = {
+							limit = { is_ally_with = HND }
+							set_temp_variable = { ceylon_target = HND }
+						}
+						else_if = {
+							limit = { is_ally_with = JAP }
+							set_temp_variable = { ceylon_target = JAP }
+						}
+						else = {
+							set_temp_variable = { ceylon_target = 422.controller }
 						}
 					}
-					JAP = { transfer_state = PREV }
 				}
-			}
-			else_if = {
-				limit = {
-					has_war_with = PRF
-					OR = {
-						owns_state = 422 #Ceylon
-						owns_state = 281 #Maldives
+				else = {
+					if = {
+						limit = { has_war_with = PRF }
+						set_temp_variable = { ceylon_target = PRF }
 					}
-				}
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 422 #Ceylon
-							state = 281 #Maldives
+					else_if = {
+						limit = {
+							var:423.owner = {
+								is_ally_with = ROOT
+								is_indian_tag = yes
+							}
 						}
+						set_temp_variable = { ceylon_target = 423.owner }
 					}
-					PRF = { transfer_state = PREV }
-				}
-			}
-			else_if = {
-				limit = {
-					has_war_with = HND
-					OR = {
-						owns_state = 422 #Ceylon
-						owns_state = 281 #Maldives
+					else_if = {
+						limit = { has_war_with = RAJ }
+						set_temp_variable = { ceylon_target = RAJ }
+					}
+					else_if = {
+						limit = { has_war_with = HND }
+						set_temp_variable = { ceylon_target = HND }
+					}
+					else_if = {
+						limit = { has_war_with = JAP }
+						set_temp_variable = { ceylon_target = JAP }
 					}
 				}
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 422 #Ceylon
-							state = 281 #Maldives
+				if = {
+					limit = { has_variable = ceylon_target }
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 281 #Maldives
+								state = 422 #Ceylon
+								state = 710 #Diego Garcia
+							}
 						}
+						var:ceylon_target = { transfer_state = PREV }
 					}
-					HND = { transfer_state = PREV }
+				}
+				else = {
+					281 = { add_core_of = CEY } #Maldives
+					710 = { add_core_of = CEY } #Diego Garcia
+					release = CEY
 				}
 			}
-			else_if = {
-				limit = {
-					has_war_with = RAJ
-					OR = {
-						owns_state = 422 #Ceylon
-						owns_state = 281 #Maldives
-					}
-				}
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 422 #Ceylon
-							state = 281 #Maldives
-						}
-					}
-					RAJ = { transfer_state = PREV }
-				}
-			}
-			# if ally HOL directly owns Indonesia and is at war with INS, give them all states in the region
+
+			# HOL-held Indonesia order == INS -> JAP -> occupier -> independent INS
 			HOL = {
 				if = {
 					limit = {
-						is_ally_with = GER
+						is_ally_with = ROOT
 						any_owned_state = { is_indonesia = yes }
 					}
 					if = {
@@ -204,29 +180,19 @@ country_event = { #Reichspakt is defeated in Asia
 					}
 				}
 			}
+
 			# then peace any Asian/Oceanian countries at war with the Reichspakt
-			GER = {
-				every_enemy_country = {
-					limit = {
-						is_valid_peace_target = yes
-						OR = {
-							is_in_asia = yes
-							is_in_australia = yes
-						}
-						NOT = {
-							any_owned_state = {
-								controller = { is_ally_with = GER }
-							}
-							any_allied_country = {
-								any_owned_state = {
-									controller = { is_ally_with = GER }
-								}
-							}
-						}
+			every_enemy_country = {
+				limit = {
+					is_valid_peace_target = yes
+					OR = {
+						is_in_asia = yes
+						is_in_australia = yes
 					}
-					country_event = asiapeace.2
 				}
+				country_event = asiapeace.2
 			}
+
 			#remove any remaining diplomatic relations
 			every_other_country = {
 				limit = {
@@ -234,21 +200,61 @@ country_event = { #Reichspakt is defeated in Asia
 						is_in_asia = yes
 						is_in_australia = yes
 					}
-					NOT = { is_ally_with = GER }
+					is_guaranteed_by = ROOT
 				}
-				GER = {
+				ROOT = {
 					diplomatic_relation = {
 						country = PREV
 						relation = guarantee
 						active = no
 					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_asia = yes
+						is_in_australia = yes
+					}
+					has_non_aggression_pact_with = ROOT
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = non_aggression_pact
+					active = no
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_asia = yes
+						is_in_australia = yes
+					}
+					has_military_access_to = ROOT
+				}
+				ROOT = {
 					diplomatic_relation = {
 						country = PREV
-						relation = non_aggression_pact
+						relation = military_access
 						active = no
 					}
 				}
 			}
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_asia = yes
+						is_in_australia = yes
+					}
+					gives_military_access_to = ROOT
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = no
+				}
+			}
+			LEC_remove_from_legation_council = yes
 		}
 	}
 
@@ -476,4 +482,3 @@ country_event = { #[From.GetNameDef] does not accept the peace in the east
 		add_war_support = 0.1
 	}
 }
-

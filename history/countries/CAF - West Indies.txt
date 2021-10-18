@@ -1,7 +1,7 @@
 ﻿capital = 689
-
 oob = "CAF"
-set_naval_oob= "CAF_naval"
+set_naval_oob = "CAF_naval"
+set_cosmetic_tag = CAF_entente
 
 CAF_start_naval_variant = yes
 
@@ -132,6 +132,7 @@ add_ideas = {
 }
 
 CAF_evaluate_anger = yes
+set_country_flag = WIF_can_revolt
 
 create_country_leader = {
 	name = "Eustace Fiennes"
@@ -316,3 +317,4 @@ create_navy_leader = {
 	maneuvering_skill = 3
 	coordination_skill = 3
 }
+

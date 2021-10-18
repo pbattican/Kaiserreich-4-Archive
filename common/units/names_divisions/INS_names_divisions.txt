@@ -35,10 +35,6 @@ INS_INF_01 = {
 
 	for_countries = { INS }
 
-	can_use = {
-		always = yes
-	}
-
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
@@ -106,11 +102,7 @@ INS_INF_01 = {
 INS_INF_02 = {
 	name = "Infantry Division"
 
-	for_countries = { BOR MAL }
-
-	can_use = {
-		always = yes
-	}
+	for_countries = { MAL }
 
 	division_types = { "infantry" }
 
@@ -179,11 +171,7 @@ INS_INF_02 = {
 INS_CAV_01 = {
 	name = "Cavalry Division"
 
-	for_countries = { INS MAL BOR }
-
-	can_use = {
-		always = yes
-	}
+	for_countries = { INS MAL }
 
 	division_types = { "cavalry" }
 
@@ -211,9 +199,7 @@ INS_CAV_01 = {
 INS_MOT_01 = {
 	name = "Motorized Division"
 
-	for_countries = { INS MAL BOR }
-
-	can_use = { always = yes }
+	for_countries = { INS MAL }
 
 	division_types = { "motorized" }
 
@@ -241,11 +227,7 @@ INS_MOT_01 = {
 INS_ARM_01 = {
 	name = "Armored Division"
 
-	for_countries = { INS MAL BOR }
-
-	can_use = {
-		always = yes
-	}
+	for_countries = { INS MAL }
 
 	division_types = { "mechanized" "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
 
@@ -273,9 +255,7 @@ INS_ARM_01 = {
 INS_PAR_01 = {
 	name = "Paratrooper Division"
 
-	for_countries = { INS MAL BOR }
-
-	can_use = { always = yes }
+	for_countries = { INS MAL }
 
 	division_types = { "paratrooper" }
 
@@ -303,9 +283,7 @@ INS_PAR_01 = {
 INS_MAR_01 = {
 	name = "Marine Division"
 
-	for_countries = { INS MAL BOR }
-
-	can_use = { always = yes }
+	for_countries = { INS MAL }
 
 	division_types = { "marine" }
 
@@ -333,9 +311,7 @@ INS_MAR_01 = {
 INS_MTN_01 = {
 	name = "Mountain Division"
 
-	for_countries = { INS MAL BOR }
-
-	can_use = { always = yes }
+	for_countries = { INS MAL }
 
 	division_types = { "mountaineers" }
 
@@ -363,9 +339,7 @@ INS_MTN_01 = {
 INS_GAR_01 = {
 	name = "Garrison Division"
 
-	for_countries = { INS MAL BOR }
-
-	can_use = { always = yes }
+	for_countries = { INS MAL }
 
 	division_types = { "infantry" }
 
@@ -398,8 +372,6 @@ INS_MILINF_01 = {
 	name = "Militia Divisions"
 
 	for_countries = { INS }
-
-	can_use = { always = yes }
 
 	division_types = { "infantry" }
 
@@ -468,9 +440,7 @@ INS_MILINF_01 = {
 INS_MILINF_02 = {
 	name = "Militia Divisions"
 
-	for_countries = { BOR MAL }
-
-	can_use = { always = yes }
+	for_countries = { MAL }
 
 	division_types = { "infantry" }
 

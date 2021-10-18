@@ -44,9 +44,19 @@ country_event = { #Labour Strikes in Guadeloupe
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = WIF_ELECTIONSANDCOUPS
-					option = WIF_ELECTION_SYND
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
 				}
 			}
 		}
@@ -100,9 +110,19 @@ country_event = { #Meeting
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = WIF_ELECTIONSANDCOUPS
-					option = WIF_ELECTION_SYND
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
 				}
 			}
 		}
@@ -157,14 +177,13 @@ country_event = { #Great Depression
 
 	option = {
 		name = wifpol.4.a
+		add_popularity = { ideology = market_liberal popularity = -0.02 }
+		CAF_socialist_add_two = yes
 		swap_ideas = {
 			remove_idea = CAF_economic_downfall
 			add_idea = CAF_great_depression_1
 		}
-		add_popularity = {
-			ideology = market_liberal popularity = -0.02
-		}
-		CAF_socialist_add_two = yes
+		unlock_national_focus = CAF_depression_woes
 	}
 }
 
@@ -369,13 +388,9 @@ country_event = { #Summary of what to do
 	option = {
 		name = wifpol.15.a
 		add_political_power = 5
-		set_country_flag = CAF_moyne_commission_tree_unlocked
-		custom_effect_tooltip = CAF_get_to_work_tooltip
+		unlock_national_focus = CAF_moyne_report
 		activate_mission = CAF_moyne_report_timer
-		hidden_effect = {
-			complete_national_focus = CAF_depression_woes
-			complete_national_focus = CAF_moyne_report
-		}
+		custom_effect_tooltip = CAF_get_to_work_tooltip
 	}
 }
 
@@ -412,7 +427,15 @@ country_event = { #Allocate budget to the West Indies?
 				OR = {
 					has_game_rule = {
 						rule = WIF_ELECTIONSANDCOUPS
-						option = WIF_ELECTION_SYND
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
 					}
 					has_game_rule = {
 						rule = WIF_ELECTIONSANDCOUPS
@@ -515,9 +538,19 @@ country_event = { #Popularization of Calypso
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = WIF_ELECTIONSANDCOUPS
-					option = WIF_ELECTION_SYND
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
 				}
 			}
 		}
@@ -868,7 +901,7 @@ country_event = { #WIF elections
 				has_country_flag = WIF_some_moyne_reforms
 				has_game_rule = {
 					rule = WIF_ELECTIONSANDCOUPS
-					option = WIF_ELECTION_PA
+					option = WIF_ELECTION_PA_SOCDEM
 				}
 			}
 		}
@@ -887,14 +920,39 @@ country_event = { #WIF elections
 					}
 					has_game_rule = {
 						rule = WIF_ELECTIONSANDCOUPS
-						option = WIF_ELECTION_SYND
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_PA_SOCLIB
 					}
 				}
 			}
 		}
-		set_politics = {
-			ruling_party = social_democrat
-			elections_allowed = yes
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = social_democrat
+				elections_allowed = yes
+			}
+		}
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = social_democrat
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
 		}
 		add_popularity = {
 			ideology = social_democrat
@@ -904,39 +962,32 @@ country_event = { #WIF elections
 		CAF_socialist_sub_five = yes
 		if = {
 			limit = {
-				has_country_flag = CAF_syndie_revolution
+				OR = {
+					has_country_flag = CAF_emergency_elections
+					date < 1938.1.1
+				}
 			}
-			clr_country_flag = CAF_syndie_revolution
-		}
-		hidden_effect = {
 			complete_national_focus = CAF_pa_victory
 			complete_national_focus = CAF_pa_pnp_coalition
+			clr_country_flag = CAF_emergency_elections
 		}
-		set_country_flag = CAF_pa_pnp_coalition_flag
-		set_country_flag = WIF_SECOND_ELECTIONS
 		remove_all_ministers = yes
 		add_ideas = {
-			CAF_hegesippe_jean_legitimus_hog_sde
-			CAF_norman_manley_for_sde
-			CAF_joseph_lagrosilliere_eco_sde
-			CAF_osmond_theodore_fairclough_sec_sde
+			CAF_hegesippe_jean_legitimus_hog_rso
+			CAF_norman_manley_for_rso
+			CAF_joseph_lagrosilliere_eco_rso
+			CAF_osmond_theodore_fairclough_sec_rso
 		}
 	}
 
 	option = { #soclibs
 		name = wifpol.30.b
-		if = {
-			limit = {
-				has_country_flag = CAF_syndie_revolution
-			}
-			clr_country_flag = CAF_syndie_revolution
-		}
 		trigger = {
 			OR = {
 				has_country_flag = WIF_enough_moyne_reforms
 				has_game_rule = {
 					rule = WIF_ELECTIONSANDCOUPS
-					option = WIF_ELECTION_PA
+					option = WIF_ELECTION_PA_SOCLIB
 				}
 			}
 		}
@@ -959,14 +1010,39 @@ country_event = { #WIF elections
 					}
 					has_game_rule = {
 						rule = WIF_ELECTIONSANDCOUPS
-						option = WIF_ELECTION_SYND
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_PA_SOCDEM
 					}
 				}
 			}
 		}
-		set_politics = {
-			ruling_party = social_liberal
-			elections_allowed = yes
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = yes
+			}
+		}
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = social_liberal
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
 		}
 		add_popularity = {
 			ideology = social_liberal
@@ -976,17 +1052,14 @@ country_event = { #WIF elections
 		CAF_socialist_sub_three = yes
 		if = {
 			limit = {
-				NOT = {
-					has_country_flag = WIF_SECOND_ELECTIONS
+				OR = {
+					has_country_flag = CAF_emergency_elections
+					date < 1938.1.1
 				}
 			}
-			hidden_effect = {
-				complete_national_focus = CAF_pa_victory
-				complete_national_focus = CAF_pa_lp_coalition
-			}
-			set_country_flag = CAF_pa_pl_coalition_flag
-			set_country_flag = WIF_SECOND_ELECTIONS
-
+			complete_national_focus = CAF_pa_victory
+			complete_national_focus = CAF_pa_lp_coalition
+			clr_country_flag = CAF_emergency_elections
 		}
 		remove_all_ministers = yes
 		add_ideas = {
@@ -1012,7 +1085,11 @@ country_event = { #WIF elections
 				OR = {
 					has_game_rule = {
 						rule = WIF_ELECTIONSANDCOUPS
-						option = WIF_ELECTION_PA
+						option = WIF_ELECTION_PA_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_PA_SOCLIB
 					}
 					has_game_rule = {
 						rule = WIF_ELECTIONSANDCOUPS
@@ -1025,15 +1102,22 @@ country_event = { #WIF elections
 				}
 			}
 		}
-		if = {
-			limit = {
-				has_country_flag = CAF_syndie_revolution
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = social_conservative
+				elections_allowed = yes
 			}
-			clr_country_flag = CAF_syndie_revolution
 		}
-		set_politics = {
-			ruling_party = social_conservative
-			elections_allowed = yes
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = social_conservative
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
 		}
 		add_popularity = {
 			ideology = social_conservative
@@ -1041,46 +1125,40 @@ country_event = { #WIF elections
 		}
 		CAF_empire_sub_ten = yes
 		CAF_socialist_add_ten = yes
-
-		remove_all_ministers = yes
-		add_ideas = {
-			CAF_edward_brandis_denham_hog_sco
-			CAF_douglas_james_jardine_for_sco
-			CAF_robert_arundell_sec_sco
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = CAF_emergency_elections
+					date < 1938.1.1
+				}
+			}
+			complete_national_focus = CAF_ncp_victory
+			clr_country_flag = CAF_emergency_elections
 		}
+		remove_all_ministers = yes
 		if = {
 			limit = {
 				NOT = { has_country_flag = young_in_china }
 			}
-			add_ideas = CAF_mark_aitchison_young_eco_sco
+			add_ideas = {
+				CAF_edward_brandis_denham_hog_sco
+				CAF_douglas_james_jardine_for_sco
+				CAF_mark_aitchison_young_eco_sco
+				CAF_robert_arundell_sec_sco
+			}
 		}
 		else = {
-			add_ideas = CAF_Felix_Eboue_eco_ade
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = WIF_SECOND_ELECTIONS
-				}
+			add_ideas = {
+				CAF_edward_brandis_denham_hog_sco
+				CAF_douglas_james_jardine_for_sco
+				CAF_Felix_Eboue_eco_ade
+				CAF_robert_arundell_sec_sco
 			}
-			hidden_effect = {
-				complete_national_focus = CAF_ncp_victory
-			}
-			set_country_flag = CAF_ncp_party_victory_flag
-			set_country_flag = WIF_SECOND_ELECTIONS
 		}
-
-
 	}
 
 	option = { #marlibs
 		name = wifpol.30.e
-		if = {
-			limit = {
-				has_country_flag = CAF_syndie_revolution
-			}
-			clr_country_flag = CAF_syndie_revolution
-		}
 		trigger = {
 			OR = {
 				has_country_flag = WIF_enough_moyne_reforms
@@ -1098,7 +1176,11 @@ country_event = { #WIF elections
 				OR = {
 					has_game_rule = {
 						rule = WIF_ELECTIONSANDCOUPS
-						option = WIF_ELECTION_PA
+						option = WIF_ELECTION_PA_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_PA_SOCLIB
 					}
 					has_game_rule = {
 						rule = WIF_ELECTIONSANDCOUPS
@@ -1110,14 +1192,35 @@ country_event = { #WIF elections
 					}
 					has_game_rule = {
 						rule = WIF_ELECTIONSANDCOUPS
-						option = WIF_ELECTION_SYND
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
 					}
 				}
 			}
 		}
-		set_politics = {
-			ruling_party = market_liberal
-			elections_allowed = yes
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = market_liberal
+				elections_allowed = yes
+			}
+		}
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = market_liberal
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
 		}
 		add_popularity = {
 			ideology = market_liberal
@@ -1127,18 +1230,14 @@ country_event = { #WIF elections
 		CAF_socialist_add_four = yes
 		if = {
 			limit = {
-				NOT = {
-					has_country_flag = WIF_SECOND_ELECTIONS
+				OR = {
+					has_country_flag = CAF_emergency_elections
+					date < 1938.1.1
 				}
 			}
-			hidden_effect = {
-				complete_national_focus = CAF_unity_victory
-			}
-			set_country_flag = CAF_unity_party_victory_flag
-			set_country_flag = WIF_SECOND_ELECTIONS
-
+			complete_national_focus = CAF_unity_victory
+			clr_country_flag = CAF_emergency_elections
 		}
-
 	}
 }
 
@@ -1153,18 +1252,51 @@ country_event = { #red revolt
 	trigger = {
 		tag = CAF
 		check_variable = { CAF_socialist_anger > 80 }
+		has_country_flag = WIF_can_revolt
 		has_socialist_government = no
-		controls_all_owned_states = yes
-		WIF_instarevolt_allowed = yes
 		OR = {
 			is_ai = no
 			has_game_rule = {
 				rule = WIF_ELECTIONSANDCOUPS
-				option = WIF_ELECTION_SYND
+				option = WIF_ELECTION_SYND_SOCDEM
+			}
+			has_game_rule = {
+				rule = WIF_ELECTIONSANDCOUPS
+				option = WIF_ELECTION_SYND_RADSOC
+			}
+			has_game_rule = {
+				rule = WIF_ELECTIONSANDCOUPS
+				option = WIF_ELECTION_SYND_SYNDIE
 			}
 			has_game_rule = {
 				rule = WIF_ELECTIONSANDCOUPS
 				option = DEFAULT
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = WIF_ELECTIONSANDCOUPS
+				option = WIF_ELECTION_PA_SOCDEM
+			}
+			has_game_rule = {
+				rule = WIF_ELECTIONSANDCOUPS
+				option = WIF_ELECTION_PA_SOCLIB
+			}
+			has_game_rule = {
+				rule = WIF_ELECTIONSANDCOUPS
+				option = WIF_ELECTION_SYND_SYNDIE
+			}
+			has_game_rule = {
+				rule = WIF_ELECTIONSANDCOUPS
+				option = WIF_ELECTION_UNITY
+			}
+			has_game_rule = {
+				rule = WIF_ELECTIONSANDCOUPS
+				option = WIF_ELECTION_NCP
+			}
+			has_game_rule = {
+				rule = WIF_ELECTIONSANDCOUPS
+				option = WIF_ELECTION_COUP
 			}
 		}
 	}
@@ -1229,10 +1361,11 @@ country_event = { #red revolt
 		set_politics = {
 			ruling_party = syndicalist
 		}
-		set_country_flag = CAF_syndie_revolution
 
 		hidden_effect = {
-			set_cosmetic_tag = CAF_union
+			remove_opinion_modifier = { target = CAN modifier = CAN_imperial_pride }
+			remove_opinion_modifier = { target = ENT modifier = CAN_imperial_pride }
+			drop_cosmetic_tag = yes
 			add_popularity = {
 				ideology = syndicalist
 				popularity = 0.31
@@ -1240,10 +1373,6 @@ country_event = { #red revolt
 			add_popularity = {
 				ideology = radical_socialist
 				popularity = 0.22
-			}
-			add_popularity = {
-				ideology = social_democrat
-				popularity = 0.26
 			}
 			add_popularity = {
 				ideology = totalist
@@ -1291,8 +1420,6 @@ country_event = { #red revolt
 			CAF_hubert_nathaniel_critchlow_eco_syn
 			CAF_gerty_archimede_sec_syn
 		}
-
-		clr_country_flag = CAF_governors_coup
 	}
 }
 
@@ -1358,12 +1485,9 @@ country_event = { #governor revolt
 	trigger = {
 		tag = CAF
 		check_variable = { CAF_british_anger > 80 }
-		OR = {
-			is_subject = no
-			is_subject_of = ENT
-		}
+		has_country_flag = WIF_can_revolt
+		is_in_faction_with = ENT
 		controls_all_owned_states = yes
-		WIF_instarevolt_allowed = yes
 		OR = {
 			is_ai = no
 			has_game_rule = {
@@ -1373,6 +1497,42 @@ country_event = { #governor revolt
 			has_game_rule = {
 				rule = WIF_ELECTIONSANDCOUPS
 				option = DEFAULT
+			}
+		}
+		NOT = {
+			OR = {
+				has_game_rule = {
+					rule = WIF_ELECTIONSANDCOUPS
+					option = WIF_ELECTION_PA_SOCDEM
+				}
+				has_game_rule = {
+					rule = WIF_ELECTIONSANDCOUPS
+					option = WIF_ELECTION_PA_SOCLIB
+				}
+				has_game_rule = {
+					rule = WIF_ELECTIONSANDCOUPS
+					option = WIF_ELECTION_SYND_SYNDIE
+				}
+				has_game_rule = {
+					rule = WIF_ELECTIONSANDCOUPS
+					option = WIF_ELECTION_UNITY
+				}
+				has_game_rule = {
+					rule = WIF_ELECTIONSANDCOUPS
+					option = WIF_ELECTION_NCP
+				}
+				has_game_rule = {
+					rule = WIF_ELECTIONSANDCOUPS
+					option = WIF_ELECTION_SYND_SOCDEM
+				}
+				has_game_rule = {
+					rule = WIF_ELECTIONSANDCOUPS
+					option = WIF_ELECTION_SYND_RADSOC
+				}
+				has_game_rule = {
+					rule = WIF_ELECTIONSANDCOUPS
+					option = WIF_ELECTION_SYND_SYNDIE
+				}
 			}
 		}
 	}
@@ -1391,20 +1551,11 @@ country_event = { #governor revolt
 	}
 
 	option = { #woohoo
-		clr_country_flag = CAF_syndie_revolution
 		name = wifpol.32.a
 		set_politics = {
 			ruling_party = authoritarian_democrat
+			elections_allowed = no
 		}
-		if = {
-			limit = {
-				is_in_faction = yes
-				NOT = { is_in_faction_with = ENT }
-			}
-			leave_faction = yes
-		}
-		separate_peace_all_wars = yes
-		set_country_flag = CAF_governors_coup
 		complete_national_focus = CAF_governor_push
 		add_stability = -0.3
 		hidden_effect = {
@@ -1447,19 +1598,15 @@ country_event = { #governor revolt
 
 		if = {
 			limit = {
-				NOT = {
-					has_autonomy_state = kr_initial_wif_puppet
-				}
+				NOT = { has_autonomy_state = kr_initial_wif_puppet }
 			}
 			get_current_government_type = yes
-
-			CAN = {
+			ENT = {
 				set_autonomy = {
 					target = CAF
 					autonomy_state = kr_initial_wif_puppet
 				}
 			}
-
 			restore_previous_government_type = yes
 		}
 
@@ -1493,9 +1640,19 @@ country_event = { #governor power in the unity reforms
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = WIF_ELECTIONSANDCOUPS
-					option = WIF_ELECTION_SYND
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
 				}
 			}
 		}
@@ -1878,9 +2035,19 @@ country_event = { #Working with plantation conditions
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = WIF_ELECTIONSANDCOUPS
-					option = WIF_ELECTION_SYND
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
 				}
 			}
 		}
@@ -2163,13 +2330,14 @@ country_event = { #Naval situation
 	option = { #Drax doctrine, small boats
 		name = wifarmy.9.a
 		custom_effect_tooltip = CAF_drax_doctrine_description
+		complete_national_focus = CAF_navy_defend_our_seas
 		set_country_flag = CAF_drax_doctrine
 	}
 
 	option = { #Leatham doctrine, big boats
 		name = wifarmy.9.b
 		custom_effect_tooltip = CAF_leatham_doctrine_description
-		set_country_flag = CAF_leatham_doctrine
+		complete_national_focus = CAF_navy_defend_empire
 	}
 }
 
@@ -2188,9 +2356,7 @@ country_event = { #Requesting Canadian ships
 			base = 90
 		}
 		CAF = {
-			country_event = {
-				id = wifarmy.11 days = 1
-			}
+			country_event = wifarmy.11
 			set_country_flag = CAF_boat_sent
 		}
 	}
@@ -2201,9 +2367,7 @@ country_event = { #Requesting Canadian ships
 			base = 10
 		}
 		CAF = {
-			country_event = {
-				id = wifarmy.12 days = 1
-			}
+			country_event = wifarmy.12
 			set_country_flag = CAF_not_boat_sent
 		}
 	}
@@ -2221,22 +2385,13 @@ country_event = { #Sent
 	option = {
 		name = wifarmy.11.a
 		if = {
-			limit = {
-				has_country_flag = CAF_leatham_doctrine
-			}
-			hidden_effect = {
-				load_oob = CAF_CAN_purchase
-			}
+			limit = { has_completed_focus = CAF_navy_defend_empire }
 			custom_effect_tooltip = CAF_CAN_purchase_tooltip
+			hidden_effect = { load_oob = CAF_CAN_purchase }
 		}
-		else_if = {
-			limit = {
-				has_country_flag = CAF_drax_doctrine
-			}
-			hidden_effect = {
-				load_oob = CAF_CAN_purchase_small
-			}
+		else = {
 			custom_effect_tooltip = CAF_CAN_purchase_small_tooltip
+			hidden_effect = { load_oob = CAF_CAN_purchase_small }
 		}
 	}
 }
@@ -2248,13 +2403,13 @@ country_event = { #Not sent
 	desc = {
 		text = wifarmy.12.big
 		trigger = {
-			has_country_flag = CAF_leatham_doctrine
+			has_completed_focus = CAF_navy_defend_empire
 		}
 	}
 	desc = {
 		text = wifarmy.12.small
 		trigger = {
-			has_country_flag = CAF_drax_doctrine
+			NOT = { has_completed_focus = CAF_navy_defend_empire }
 		}
 	}
 
@@ -2264,10 +2419,9 @@ country_event = { #Not sent
 	option = {
 		name = wifarmy.12.a
 		if = {
-			limit = {
-				has_country_flag = CAF_leatham_doctrine
-			}
+			limit = { has_completed_focus = CAF_navy_defend_empire }
 			custom_effect_tooltip = CAF_forced_smol_navy
+			complete_national_focus = CAF_navy_defend_our_seas
 		}
 		add_political_power = -25
 	}
@@ -2305,14 +2459,22 @@ country_event = {# Puerto Rico Riots
 
 	option = {#Keep it annexed
 		name = wiffor.1.a
-		ai_chance = { base = 10 }
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				NOT = { has_game_rule = { rule = PUE_election option = DEFAULT } }
+			}
+		}
 		add_political_power = -25
 		custom_effect_tooltip = PR_Revolt_TT
 		set_country_flag = PR_REVOLT_READY
 	}
 	option = {#Tell the Governor to handle it
 		name = wiffor.1.b
-		ai_chance = { base = 10 }
+		ai_chance = {
+			base = 10
+		}
 		add_political_power = 25
 		PUE = {
 			transfer_state = 686
@@ -2691,9 +2853,19 @@ country_event = { #Ottawa pledge
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = WIF_ELECTIONSANDCOUPS
-					option = WIF_ELECTION_SYND
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
 				}
 			}
 		}
@@ -3102,13 +3274,13 @@ country_event = { #Get your cores and remove consolidation nasty effects
 	option = { #
 		name = wifpol.513.a
 		if = {
-			limit = {has_idea = CAF_consolidation_effect1 }
+			limit = { has_idea = CAF_consolidation_effect1 }
 			remove_ideas = {
 				CAF_consolidation_effect1
 			}
 		}
 		if = {
-			limit = {has_idea = CAF_consolidation_effect2 }
+			limit = { has_idea = CAF_consolidation_effect2 }
 			remove_ideas = {
 				CAF_consolidation_effect2
 			}
@@ -3116,7 +3288,7 @@ country_event = { #Get your cores and remove consolidation nasty effects
 		if = {
 			limit = {
 				NOT = {
-					310 = {is_core_of = ROOT}
+					310 = { is_core_of = ROOT }
 				}
 			}
 			add_state_core = 310
@@ -3124,7 +3296,7 @@ country_event = { #Get your cores and remove consolidation nasty effects
 		if = {
 			limit = {
 				NOT = {
-					1037 = {is_core_of = ROOT}
+					1037 = { is_core_of = ROOT }
 				}
 			}
 			add_state_core = 1037
@@ -3132,7 +3304,7 @@ country_event = { #Get your cores and remove consolidation nasty effects
 		if = {
 			limit = {
 				NOT = {
-					694 = {is_core_of = ROOT}
+					694 = { is_core_of = ROOT }
 				}
 			}
 			add_state_core = 694
@@ -3155,7 +3327,6 @@ country_event = { #School strike
 	option = { #Keep it this way
 		name = wifpol.514.a
 		random_list = {
-			seed = random
 			20 = {}
 			40 = {
 				add_stability = -0.05
@@ -3173,7 +3344,6 @@ country_event = { #School strike
 			days = 60
 		}
 		random_list = {
-			seed = random
 			20 = {}
 			40 = {
 				add_stability = 0.05
@@ -3197,7 +3367,6 @@ country_event = { #New education system*
 	option = { #
 		name = wifpol.515.a
 		random_list = {
-			seed = random
 			50 = {
 				add_stability = 0.05
 			}
@@ -3522,7 +3691,6 @@ country_event = { #Results
 
 		add_political_power = var:CAF.french_flyer_cost
 		random_list = {
-			seed = random
 			1 = {
 				add_stability = 0.05
 				modifier = {
@@ -3547,7 +3715,6 @@ country_event = { #Results
 		}
 		add_political_power = var:CAF.french_flyer_cost
 		random_list = {
-			seed = random
 			1 = {
 				add_stability = 0.1
 				modifier = {
@@ -3573,7 +3740,6 @@ country_event = { #Results
 				has_country_flag = CAF_integration_process_NCP_flyer3recenta
 			}
 			random_list = {
-				seed = random
 				1 = {
 					694 = {
 						add_extra_state_shared_building_slots = 1
@@ -3619,7 +3785,6 @@ country_event = { #Results
 				has_country_flag = CAF_integration_process_NCP_flyer3recentb
 			}
 			random_list = {
-				seed = random
 				1 = {
 					random_owned_state = {
 						limit = {
@@ -3656,7 +3821,6 @@ country_event = { #Results
 				has_country_flag = CAF_integration_process_NCP_flyer3recentc
 			}
 			random_list = {
-				seed = random
 				1 = {
 					689 = {
 						add_extra_state_shared_building_slots = 2
@@ -3697,12 +3861,10 @@ country_event = { #French-Caribbean Exchange Program
 
 	trigger = {
 		tag = CAF
-		NOT = {
-			has_war_with = FRA
-		}
+		has_completed_focus = CAF_ncp_victory
 		has_government = social_conservative
 		date > 1937.09.01
-		has_country_flag = CAF_ncp_party_victory_flag
+		NOT = { has_war_with = FRA }
 		country_exists = FRA
 	}
 
@@ -4271,7 +4433,6 @@ country_event = { #2nd balancing event- constitution
 	option = { #make promises to them
 		name = wifpol.531.b
 		random_list = {
-			seed = random
 			25 = {
 				add_to_variable = {
 					var = caf_const_against
@@ -4291,7 +4452,6 @@ country_event = { #2nd balancing event- constitution
 	option = { #try corruption
 		name = wifpol.531.c
 		random_list = {
-			seed = random
 			50 = {
 				add_to_variable = {
 					var = caf_const_against
@@ -4324,9 +4484,18 @@ country_event = { #NCP
 
 	option = { #Accept
 		name = wifpol.612.a
-		add_timed_idea = {
-			idea = CAF_NCP_concessions_2nd_Cayenne
-			days = 180
+		if = {
+			limit = { has_idea = CAF_NCP_concessions_2nd_Cayenne }
+			modify_timed_idea = {
+				idea = CAF_NCP_concessions_2nd_Cayenne
+				days = 180
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = CAF_NCP_concessions_2nd_Cayenne
+				days = 180
+			}
 		}
 		add_to_variable = {
 			var = CAF_2nd_cayenne_meeting_for
@@ -4633,9 +4802,18 @@ country_event = { #Form majority coalition
 			var = palpcoaltion_coalition_path
 			value = 1
 		}
-		add_timed_idea = {
-			idea = CAF_NCP_concessions_2nd_Cayenne
-			days = 360
+		if = {
+			limit = { has_idea = CAF_NCP_concessions_2nd_Cayenne }
+			modify_timed_idea = {
+				idea = CAF_NCP_concessions_2nd_Cayenne
+				days = 360
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = CAF_NCP_concessions_2nd_Cayenne
+				days = 360
+			}
 		}
 		ai_chance = {
 			base = 1
@@ -4746,8 +4924,23 @@ country_event = { #syndie democracy and the elections
 	is_triggered_only = yes
 
 	option = { #labor party (socdem)
-		clr_country_flag = CAF_pa_pnp_coalition_flag
 		name = wifpol.801.a
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
+				}
+			}
+		}
 		set_politics = {
 			ruling_party = radical_socialist
 		}
@@ -4765,7 +4958,7 @@ country_event = { #syndie democracy and the elections
 			desc = "POLITICS_JOSEPH_LAGROSILLIERE_DESC"
 			picture = "Portrait_CAF_Joseph_Lagrosilliere.png"
 			expire = "1965.1.1"
-			ideology = social_democrat_subtype
+			ideology = radical_socialist_subtype
 		}
 		complete_national_focus = CAF_soc_dem_syndies
 		hidden_effect = {
@@ -4773,15 +4966,31 @@ country_event = { #syndie democracy and the elections
 		}
 		remove_all_ministers = yes
 		add_ideas = {
-			CAF_hegesippe_jean_legitimus_hog_sde
-			CAF_norman_manley_for_sde
-			CAF_joseph_lagrosilliere_eco_sde
-			CAF_osmond_theodore_fairclough_sec_sde
+			CAF_hegesippe_jean_legitimus_hog_rso
+			CAF_norman_manley_for_rso
+			CAF_joseph_lagrosilliere_eco_rso
+			CAF_osmond_theodore_fairclough_sec_rso
 		}
 	}
 
 	option = { #the people's party (radsoc)
 		name = wifpol.801.b
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
+				}
+			}
+		}
 		set_politics = {
 			ruling_party = radical_socialist
 		}
@@ -4805,6 +5014,22 @@ country_event = { #syndie democracy and the elections
 
 	option = { #the butler party (syndie)
 		name = wifpol.801.c
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+				}
+			}
+		}
 		set_politics = {
 			ruling_party = syndicalist
 		}
@@ -5423,17 +5648,16 @@ country_event = { #WIF is talking with the TI (CAN)
 	is_triggered_only = yes
 
 	trigger = {
+		has_war_with = CAF
+		is_faction_leader = yes
+		NOT = {
+			has_war_with = ENG
+			has_war_with = FRA
+			has_war_with = SRI
+		}
 		CAF = {
-			exists = yes
 			is_subject = no
 			has_socialist_government = yes
-		}
-		CAN = {
-			NOT = {
-				has_war_with = ENG
-				has_war_with = FRA
-				has_war_with = SRI
-			}
 		}
 	}
 
@@ -5448,31 +5672,20 @@ country_event = { #WIF is talking with the TI (CAN)
 		}
 		CAF = {
 			white_peace_with_ROOT = yes
-			country_event = {
-				id = wifpol.832
-				days = 2
-			}
+			country_event = { id = wifpol.832 days = 2 }
 		}
 		if = {
-			limit = {
-				owns_state = 690
-			}
-			CAF = {
-				transfer_state = 690
-			}
+			limit = { owns_state = 690 }
+			CAF = { transfer_state = 690 }
 		}
 		if = {
-			limit = {
-				owns_state = 696
-			}
-			CAF = {
-				transfer_state = 696
-			}
+			limit = { owns_state = 696 }
+			CAF = { transfer_state = 696 }
 		}
 	}
 
 	option = {
-		name = wifpol.831.a #Withdraw, but retain control of Bermuda/Bahamas
+		name = wifpol.831.b #Withdraw, but retain control of Bermuda/Bahamas
 		trigger = {
 			OR = {
 				owns_state = 690
@@ -5480,25 +5693,22 @@ country_event = { #WIF is talking with the TI (CAN)
 			}
 		}
 		ai_chance = {
-			base = 95
+			base = 100
 			modifier = {
 				factor = 0
 				NOT = { country_exists = CSA }
 			}
 		}
 		CAF = {
-			country_event = {
-				id = wifpol.833
-				days = 2
-			}
+			country_event = { id = wifpol.833 days = 2 }
 		}
 		custom_effect_tooltip = CAF_event_islands_kept
 	}
 
 	option = {
-		name = wifpol.831.b #Continue the war
+		name = wifpol.831.c #Continue the war
 		ai_chance = {
-			base = 5
+			base = 0
 		}
 		custom_effect_tooltip = CAF_revolution_internationale
 	}
@@ -5513,12 +5723,11 @@ country_event = { #Canada withdraws from the Caribbean (CAF)
 	is_triggered_only = yes
 
 	trigger = {
-		CAF = {
-			exists = yes
-			is_subject = no
-			has_socialist_government = yes
-		}
-		CAN = {
+		has_war_with = ENT
+		is_subject = no
+		has_socialist_government = yes
+		ENT = {
+			is_faction_leader = yes
 			NOT = {
 				has_war_with = ENG
 				has_war_with = FRA
@@ -5542,38 +5751,30 @@ country_event = { #Canada retains Bermuda/Bahamas (CAF)
 	is_triggered_only = yes
 
 	trigger = {
+		has_war_with = CAF
+		is_faction_leader = yes
+		NOT = {
+			has_war_with = ENG
+			has_war_with = FRA
+			has_war_with = SRI
+		}
 		CAF = {
-			exists = yes
 			is_subject = no
 			has_socialist_government = yes
 		}
-		CAN = {
-			NOT = {
-				has_war_with = ENG
-				has_war_with = FRA
-				has_war_with = SRI
-			}
-		}
 	}
 
 	option = {
-		name = wifpol.832.a #Nothing we can do.
-		CAN = {
-			white_peace_with_ROOT = yes
-		}
+		name = wifpol.833.a #Nothing we can do.
 		add_stability = 0.05
+		ENT = { white_peace_with_ROOT = yes }
 	}
 
 	option = {
-		name = wifpol.832.a #Unacceptable, they must return the islands.
-		trigger = {
-			is_ai = no
-		}
+		name = wifpol.833.b #Unacceptable, they must return the islands.
+		ai_chance = { base = 0 }
 		CAN = {
-			country_event = {
-				id = wifpol.834
-				days = 2
-			}
+			country_event = { id = wifpol.834 days = 2 }
 		}
 	}
 }
@@ -5587,24 +5788,23 @@ country_event = { #CAF refuses peace (CAN)
 	is_triggered_only = yes
 
 	trigger = {
+		has_war_with = CAF
+		is_faction_leader = yes
+		NOT = {
+			has_war_with = ENG
+			has_war_with = FRA
+			has_war_with = SRI
+		}
 		CAF = {
-			exists = yes
 			is_subject = no
 			has_socialist_government = yes
-		}
-		CAN = {
-			NOT = {
-				has_war_with = ENG
-				has_war_with = FRA
-				has_war_with = SRI
-			}
 		}
 	}
 
 	option = {
 		name = wifpol.834.a #This is not worth the trouble.
 		ai_chance = {
-			base = 95
+			base = 100
 		}
 		CAF = {
 			white_peace_with_ROOT = yes
@@ -5614,27 +5814,19 @@ country_event = { #CAF refuses peace (CAN)
 			}
 		}
 		if = {
-			limit = {
-				owns_state = 690
-			}
-			CAF = {
-				transfer_state = 690
-			}
+			limit = { owns_state = 690 }
+			CAF = { transfer_state = 690 }
 		}
 		if = {
-			limit = {
-				owns_state = 696
-			}
-			CAF = {
-				transfer_state = 696
-			}
+			limit = { owns_state = 696 }
+			CAF = { transfer_state = 696 }
 		}
 	}
 
 	option = {
 		name = wifpol.834.b #Punish this insolence!
 		ai_chance = {
-			base = 5
+			base = 0
 		}
 		custom_effect_tooltip = CAF_revolution_internationale
 	}
@@ -5717,6 +5909,47 @@ country_event = { #CAF - we don't own the French territories anymore, we are sud
 				ideology = social_liberal
 				popularity = -0.025
 			}
+		}
+	}
+}
+
+country_event = {	#Coups cheat
+	id = wifpol.9999
+	immediate = { log = "[GetDateText]: [Root.GetName]: event wifpol.9999 FROM = [From.GetName]" }
+
+	hidden = yes
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SOCDEM
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_RADSOC
+					}
+					has_game_rule = {
+						rule = WIF_ELECTIONSANDCOUPS
+						option = WIF_ELECTION_SYND_SYNDIE
+					}
+				}
+			}
+			set_variable = { var = CAF_socialist_anger value = 85 }
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = WIF_ELECTIONSANDCOUPS
+					option = WIF_ELECTION_COUP
+				}
+			}
+			set_variable = { var = CAF_british_anger value = 85 }
 		}
 	}
 }

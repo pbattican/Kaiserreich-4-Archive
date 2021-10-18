@@ -1189,8 +1189,9 @@ country_event = { #MAF peace deal
 	}
 }
 
-Country_event = { #MAF gets option to send peace deal forwards to Germany, or sign peace on its own
+country_event = { #MAF gets option to send peace deal forwards to Germany, or sign peace on its own
 	id = mittel.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mittel.40 FROM = [From.GetName]" }
 	title = mittel.40.t
 	desc = mittel.40.d
 	picture = GFX_report_event_MAF_mahiwa
@@ -1221,14 +1222,15 @@ Country_event = { #MAF gets option to send peace deal forwards to Germany, or si
 		country_event = mittel.403
 		hidden_effect = {
 			GER = {
-				country_event = { id = mittel.404 days = 15}
+				country_event = { id = mittel.404 days = 15 }
 			}
 		}
 	}
 }
 
-Country_event = { #Germany gets the peace deal offer
+country_event = { #Germany gets the peace deal offer
 	id = mittel.401
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mittel.401 FROM = [From.GetName]" }
 	title = mittel.401.t
 	desc = mittel.401.d
 	picture = GFX_report_event_MAF_askari
@@ -1324,20 +1326,10 @@ Country_event = { #Germany gets the peace deal offer
 		ai_chance = {
 			base = 0
 			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = MAF_BUSH_WAR_OUTCOME
-						option = MAF_BUSH_WAR_OUTCOME_N_MOZAMBIQUE
-					}
-					has_game_rule = {
-						rule = MAF_BUSH_WAR_OUTCOME
-						option = MAF_BUSH_WAR_OUTCOME_MOZAMBIQUE
-					}
-					has_game_rule = {
-						rule = MAF_BUSH_WAR_OUTCOME
-						option = MAF_BUSH_WAR_OUTCOME_SAFETY_ZONES
-					}
+				add = 100
+				has_game_rule = {
+					rule = MAF_BUSH_WAR_OUTCOME
+					option = MAF_BUSH_WAR_OUTCOME_ALL
 				}
 			}
 		}
@@ -1349,8 +1341,9 @@ Country_event = { #Germany gets the peace deal offer
 	}
 }
 
-Country_event = { #Mittelafrika gets the terms Germany sets
+country_event = { #Mittelafrika gets the terms Germany sets
 	id = mittel.402
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mittel.402 FROM = [From.GetName]" }
 	title = mittel.402.t
 	desc = mittel.402.d
 	picture = GFX_report_event_GER_reichstag2
@@ -1384,11 +1377,11 @@ Country_event = { #Mittelafrika gets the terms Germany sets
 				ideology = national_populist
 				popularity = 0.10
 			}
-			else = {
-				add_popularity = {
-					ideology = authoritarian_democrat
-					popularity = 0.05
-				}
+		}
+		else = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
 			}
 		}
 		POR = {
@@ -1410,14 +1403,15 @@ Country_event = { #Mittelafrika gets the terms Germany sets
 		}
 		hidden_effect = {
 			GER = {
-				country_event = { id = mittel.404 days = 15}
+				country_event = { id = mittel.404 days = 15 }
 			}
 		}
 	}
 }
 
-Country_event = { #Mittelafrika sets the terms on its own- pretty much same terms as Germany ones, but with bigger stability losses
+country_event = { #Mittelafrika sets the terms on its own- pretty much same terms as Germany ones, but with bigger stability losses
 	id = mittel.403
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mittel.403 FROM = [From.GetName]" }
 	title = mittel.403.t
 	desc = mittel.403.d
 	picture = GFX_report_event_MAF_officers
@@ -1513,8 +1507,9 @@ Country_event = { #Mittelafrika sets the terms on its own- pretty much same term
 	}
 }
 
-Country_event = { #Germany gets to know that Mittelafrika ignored it
+country_event = { #Germany gets to know that Mittelafrika ignored it
 	id = mittel.404
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mittel.404 FROM = [From.GetName]" }
 	title = mittel.404.t
 	desc = mittel.404.d
 	picture = GFX_report_event_MAF_goering
@@ -1547,8 +1542,9 @@ Country_event = { #Germany gets to know that Mittelafrika ignored it
 	}
 }
 
-Country_event = { #Mittelafrika gets punished after acting on their own
+country_event = { #Mittelafrika gets punished after acting on their own
 	id = mittel.4041
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mittel.4041 FROM = [From.GetName]" }
 	title = mittel.4041.t
 	desc = mittel.4041.d
 	picture = GFX_report_event_MAF_officers
@@ -1572,8 +1568,9 @@ Country_event = { #Mittelafrika gets punished after acting on their own
 	}
 }
 
-Country_event = { #Portugal gets the peace offer
+country_event = { #Portugal gets the peace offer
 	id = mittel.405
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mittel.405 FROM = [From.GetName]" }
 	title = mittel.405.t
 	desc = mittel.405.d
 	picture = GFX_report_event_MAF_officers
@@ -1702,8 +1699,9 @@ Country_event = { #Portugal gets the peace offer
 	}
 }
 
-Country_event = { #Triumph, Mittelafrika is informed that Portugal agrees to the terms
+country_event = { #Triumph, Mittelafrika is informed that Portugal agrees to the terms
 	id = mittel.4051
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mittel.4051 FROM = [From.GetName]" }
 	title = mittel.4051.t
 	desc = mittel.4051.d
 	picture = GFX_report_event_POR_demand_accept
@@ -1724,8 +1722,9 @@ Country_event = { #Triumph, Mittelafrika is informed that Portugal agrees to the
 	}
 }
 
-Country_event = { #Portugal rejects terms- Mittelafrika is informed
+country_event = { #Portugal rejects terms- Mittelafrika is informed
 	id = mittel.4052
+	immediate = { log = "[GetDateText]: [Root.GetName]: event mittel.4052 FROM = [From.GetName]" }
 	title = mittel.4052.t
 	desc = mittel.4052.d
 	picture = GFX_report_event_MAF_askari
@@ -1868,10 +1867,10 @@ country_event = { #Portugal gets the offer and can either accept it, or continue
 				}
 				OR = {
 					state = 958 #Barotseland
-					state = 956 #Nordvorbecksland
-					state = 955 #Ostvorbecksland
+					state = 956 #Nordzambesia
+					state = 955 #Ostluangwa
 					state = 871 #Njassaland
-					state = 813 #Südvorbecksland
+					state = 813 #Südzambesia
 				}
 			}
 			POR = {
@@ -3860,7 +3859,7 @@ country_event = { # Railway event for Khartoum owner, normally EGY
 	option = {
 		name = mittel.106.a
 		add_ideas = MAF_CtC_Rail
-		549 = { #Sudan
+		549 = { #Southern Sudan
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = infrastructure
@@ -3924,7 +3923,7 @@ country_event = { # Railway event for Sennar owner, normally EGY
 
 	option = {
 		name = mittel.10701.a
-		1011 = { #Sennar
+		551 = { #Kassala-Sennar
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = infrastructure
@@ -4096,7 +4095,7 @@ country_event = { ###Reformgruppe Split
 		}
 		create_country_leader = {
 			name = "Julian Scherner"
-			picture = "Portrait_Mittelafrika_Julian_Scherner.png"
+			picture = "gfx/leaders/Generic/Portrait_Germany_Generic_land_3.png"
 			expire = "1965.1.1"
 			ideology = social_conservative_subtype
 		}
@@ -6624,7 +6623,7 @@ country_event = { #Flandro-Wallonian Condominium
 		NOT = {
 			has_idea = MAF_Flandro_Wallonian_Condominium
 		}
-		market_liberal > 0.45
+		social_liberal > 0.45
 	}
 
 	mean_time_to_happen = {

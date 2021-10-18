@@ -656,6 +656,18 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRD_kingdom_of_italy"
 			set_cosmetic_tag = SRD_ITA
+			if = {
+				limit = {
+					2 = {
+						is_core_of = ROOT
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				set_capital = 2
+			}
+			else = {
+				set_capital = 158
+			}
 			every_country = {
 				limit = {
 					is_italian_tag = yes
@@ -674,10 +686,7 @@ focus_tree = {
 				add_claim_by = SRD
 			}
 			hidden_effect = {
-				country_event = {
-					id = srd.37
-					days = 30
-				}
+				country_event = { id = srd.37 days = 30 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -884,6 +893,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRD_sardinia_piedmont"
 			custom_effect_tooltip = SRD_proclaim_sardinia_piedmont
 			set_cosmetic_tag = SRD_piedmont
+			set_capital = 158
 			if = {
 				limit = { 762 = { is_not_claim_or_core_of_ROOT = yes } }
 				add_state_claim = 762
@@ -2561,7 +2571,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {# Marines
-		id = SRD_marines
+		id = SRD_marine_focus
 		icon = GFX_goal_generic_amphibious_assault
 		cost = 6
 		prerequisite = {
@@ -2578,9 +2588,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SRD_marines"
+			log = "[GetDateText]: [Root.GetName]: Focus SRD_marine_focus"
 			add_tech_bonus = {
-				name = SRD_marines
+				name = SRD_marine_focus
 				bonus = 1
 				uses = 1
 				category = marine_tech
@@ -2626,7 +2636,7 @@ focus_tree = {
 			focus = SRD_naval_aviation
 		}
 		prerequisite = {
-			focus = SRD_marines
+			focus = SRD_marine_focus
 		}
 		prerequisite = {
 			focus = SRD_sardinian_merchant_navy

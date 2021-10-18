@@ -34,9 +34,7 @@
 OTT_INF_01 = {
 	name = "Infantry Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "infantry" }
 
@@ -107,9 +105,7 @@ OTT_INF_01 = {
 OTT_CAV_01 = {
 	name = "Cavalry Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "cavalry" }
 
@@ -157,9 +153,7 @@ OTT_CAV_01 = {
 OTT_CAV_02 = {
 	name = "Cavalry Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "cavalry" }
 
@@ -187,9 +181,7 @@ OTT_CAV_02 = {
 OTT_MOT_01 = {
 	name = "Motorised Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "motorized" }
 
@@ -217,9 +209,7 @@ OTT_MOT_01 = {
 OTT_ARM_01 = {
 	name = "Armoured Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
 
@@ -247,9 +237,7 @@ OTT_ARM_01 = {
 OTT_MEC_01 = {
 	name = "Mechanised Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "mechanized"  }
 
@@ -277,9 +265,7 @@ OTT_MEC_01 = {
 OTT_GAR_01 = {
 	name = "Garrison Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "infantry" }
 
@@ -350,9 +336,7 @@ OTT_GAR_01 = {
 OTT_MAR_01 = {
 	name = "Marine Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "marine" }
 
@@ -380,9 +364,7 @@ OTT_MAR_01 = {
 OTT_MTN_01 = {
 	name = "Mountain Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "mountaineers" }
 
@@ -439,9 +421,7 @@ OTT_MTN_01 = {
 OTT_PAR_01 = {
 	name = "Paratrooper Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "paratrooper" }
 
@@ -468,9 +448,7 @@ OTT_PAR_01 = {
 OTT_MIL_01 = {
 	name = "Militia Divisions"
 
-	for_countries = { OTT }
-
-	can_use = { always = yes }
+	for_countries = { TUR }
 
 	division_types = { "infantry" }
 

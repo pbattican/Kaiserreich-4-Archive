@@ -381,8 +381,23 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 	if = {
 		limit = {
-			is_ai = yes
+			FROM = {
+				OR = {
+					tag = MAC # IMRO
+					AND = {
+						tag = SER
+						has_war_with = MAC
+					}
+				}
+			}
 		}
+		custom_trigger_tooltip = {
+			tooltip = cannot_send_volunteers_to_target
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_ai = yes }
 		has_country_flag = can_send_volunteers
 	}
 	else_if = {
@@ -436,22 +451,29 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
 	}
 	else_if = {
 		limit = {
-			FROM = {
-				tag = SAF
+			OR = {
 				has_idea = SAF_wavering_dominion
+				has_idea = SER_IMRO_rebellion
+				has_idea = SYR_lebanon_war_dont_call_allies
 			}
 		}
 		custom_trigger_tooltip = {
-			tooltip = SAF_wavering_dominion_no_call
+			tooltip = cannot_call_allies_or_join_wars_warning
 			always = no
 		}
 	}
 	else_if = {
 		limit = {
-			has_idea = SYR_lebanon_war_dont_call_allies
+			FROM = {
+				OR = {
+					has_idea = SAF_wavering_dominion
+					has_idea = SER_IMRO_rebellion
+					has_idea = SYR_lebanon_war_dont_call_allies
+				}
+			}
 		}
 		custom_trigger_tooltip = {
-			tooltip = SYR_cant_call_allies_into_lebanon_war
+			tooltip = cannot_call_allies_or_join_wars_warning_FROM
 			always = no
 		}
 	}
@@ -516,20 +538,29 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 	}
 	else_if = {
 		limit = {
-			tag = SAF
-			has_idea = SAF_wavering_dominion
+			OR = {
+				has_idea = SAF_wavering_dominion
+				has_idea = SER_IMRO_rebellion
+				has_idea = SYR_lebanon_war_dont_call_allies
+			}
 		}
 		custom_trigger_tooltip = {
-			tooltip = SAF_wavering_dominion_no_call
+			tooltip = cannot_call_allies_or_join_wars_warning
 			always = no
 		}
 	}
 	else_if = {
 		limit = {
-			FROM = { has_idea = SYR_lebanon_war_dont_call_allies }
+			FROM = {
+				OR = {
+					has_idea = SAF_wavering_dominion
+					has_idea = SER_IMRO_rebellion
+					has_idea = SYR_lebanon_war_dont_call_allies
+				}
+			}
 		}
 		custom_trigger_tooltip = {
-			tooltip = SYR_cant_call_allies_into_lebanon_war
+			tooltip = cannot_call_allies_or_join_wars_warning_FROM
 			always = no
 		}
 	}

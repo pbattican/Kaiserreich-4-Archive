@@ -141,7 +141,6 @@
  SPA_workers_rise:0 "Mine and road workers rise up to support the cause!\n"
  SPA_foreign_unit_arrives:0 "Foreign-trained unit arrives in Barcelona\n"
  SPA_supplied_unit_arrives:0 "Supplied militia unit arrives in Burgos\n"
- SPA_become_republic:0 "Name changed to §YThe Spanish Republic§!\n"
  SPA_no_civil_war_tt:0 "The Spanish Civil War has not begun\n"
  SPA_civil_war_happened:0 "The Spanish Civil War has begun\n"
  SPA_civil_war_over:0 "The Spanish Civil War is over\n"
@@ -277,7 +276,7 @@
  sprd.1.a:0 "Let us prevail."
 
  sprd.2.t:0 "Black Monday hits Spain"
- sprd.2.d:0 "The Spanish economy has been tied to Germany since the end of the Weltkrieg. Since France and England's defeat, a good portion of our economy has been centred around exporting materials and goods to the German markets. As such, we can expect a flood of layoffs and closings. Our political foes will undoubtedly use this to their advantage."
+ sprd.2.d:0 "The Spanish economy has been tied to Germany since the end of the Weltkrieg. Since France and Britain's defeat, a good portion of our economy has been centred around exporting materials and goods to the German markets. As such, we can expect a flood of layoffs and closings. Our political foes will undoubtedly use this to their advantage."
  sprd.2.a:0 "We did not need this!"
 
  sprd.3.t:0 "Breakdown of our Society"
@@ -407,11 +406,14 @@
  sprd.30.d:0 "[From.GetNameDefCap] has announced recently that it wishes to join the Reichspakt. How shall we respond?"
  sprd.30.a:0 "Absolutely, they are welcome."
  sprd.30.b:0 "It's not a good idea."
+
  sprd.31.t:0 "[From.GetNameDefCap] wants to join the Entente"
  sprd.31.d:0 "[From.GetNameDefCap] has announced recently that it wishes to join the Entente. How shall we respond?"
+
  sprd.32.t:0 "[From.GetName] Agrees"
  sprd.32.d:0 "[From.GetNameDefCap] has agreed that [Root.GetNameDef] will be a useful addition to their faction. An alliance between the two nations has now been created."
  sprd.32.a:0 "We have thrown our lot in with theirs..."
+
  sprd.33.t:0 "[From.GetName] Refuses"
  sprd.33.d:0 "Diplomats from [From.GetNameDef] have refused any offers of alliance or requests for the protection of [Root.GetAdjective] independence. We are on our own."
  sprd.33.a:0 "So be it."
@@ -587,6 +589,7 @@
  sprc.304.t:0 "Portuguese Supplies and Arms"
  sprc.304.d:0 "With our trade deal with Portugal, we have been able to stockpile some arms and supplies to outfit a well-equipped militia unit."
  sprc.304.a:0 "For Xavier and the Pope!"
+
  sprc.305.t:0 "Italian Supplies and Arms"
  sprc.305.d:0 "With our trade deal with [ITA.GetNameDef], we have been able to stockpile some arms and supplies to outfit a well-equipped militia unit."
 
@@ -597,6 +600,7 @@
  sprc.307.t:0 "The Assassination Plot Fails!"
  sprc.307.d:0 "Our plot to assassinate the royal heir has failed. It seems Infante Juan was injured by our bomb, but is expected to fully recover from his injuries."
  sprc.307.a:0 "Foiled!"
+
  sprc.308.t:0 "Assassination Plot Fails!"
  sprc.308.d:0 "A Carlist plot to assassinate Infante Juan, the royal heir, only barely failed this morning. A bomb went off when the prince was reviewing troops, but he was only wounded and is expected to pull through."
  sprc.308.a:0 "That's a relief!"

@@ -2865,7 +2865,6 @@ QIE_anqing_diplomacy_decisions_category = {
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout QIE_anq_counter_message"
 			add_political_power = -20
-			clr_country_flag = ANQ_can_counter_message_to_anqing
 			ANQ = {
 				custom_effect_tooltip = anq_decrease_qie_1
 				hidden_effect = {
@@ -3202,7 +3201,7 @@ QIE_anqing_diplomacy_decisions_category = {
 			custom_effect_tooltip = QIE_anqing_ask_integration_warning_tt
 			ANQ = {
 				country_event = {
-					id = qiefor.68
+					id = qiefor.80
 					days = 2
 				}
 			}
@@ -3329,7 +3328,7 @@ QIE_zhili_manchu_war_decisions_category = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_push_to_yellow_river"
+			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_push_to_yellow_river target: [From.GetName]"
 			1063 = { set_demilitarized_zone = no }
 			1061 = { set_demilitarized_zone = no }
 			615 = { set_demilitarized_zone = no }
@@ -3412,7 +3411,7 @@ QIE_zhili_manchu_war_decisions_category = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_mop_up_south"
+			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_mop_up_south target: [From.GetName]"
 			799 = { set_demilitarized_zone = no }
 			620 = { set_demilitarized_zone = no }
 			1058 = { set_demilitarized_zone = no }
@@ -3873,11 +3872,27 @@ QIE_manchu_reunite_china_decisions_category = {
 				is_neighbor_of = FROM
 				any_allied_country = { is_neighbor_of = FROM }
 			}
+			if = {
+				limit = {
+					FROM = { is_guaranteed_by = FNG }
+				}
+				NOT = { can_declare_war_on = FNG }
+			}
 		}
 
 		visible = {
 			can_declare_war_on = FROM
 			FROM = { is_ruled_by_pro_manchu = no }
+		}
+
+		cancel_trigger = {
+			OR = {
+				NOT = { can_declare_war_on = FROM }
+				AND = {
+					FROM = { is_guaranteed_by = FNG }
+					can_declare_war_on = FNG
+				}
+			}
 		}
 
 		targets = { SHX XSM SIK KUM }
@@ -3927,6 +3942,8 @@ QIE_manchu_reunite_china_decisions_category = {
 						is_subject = no
 						is_in_faction = no
 					}
+					country_exists = FNG
+					FNG = { is_subject = no }
 				}
 				FROM = {
 					country_event = {
@@ -5260,7 +5277,7 @@ QIE_endgame_FP_decisions_category = {
 			}
 		}
 	}
-	QIE_sieze_macau = {
+	QIE_seize_macau = {
 		icon = generic_prepare_civil_war
 
 		available = {
@@ -5301,12 +5318,12 @@ QIE_endgame_FP_decisions_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision QIE_sieze_macau target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision QIE_seize_macau target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 15 value = 1 }
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_sieze_macau target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_seize_macau target: [From.GetName]"
 			FROM = {
 				country_event = {
 					id = qiefor.50
@@ -6051,7 +6068,7 @@ QIE_defensive_preparations_category = {
 						value = 0
 					}
 				}
-				custom_effect_tooltip = QIE_move_factory_level_1
+				custom_effect_tooltip = QIE_move_factory_1
 			}
 			else_if = {
 				limit = {
@@ -6060,10 +6077,10 @@ QIE_defensive_preparations_category = {
 						value = 1
 					}
 				}
-				custom_effect_tooltip = QIE_move_factory_level_2
+				custom_effect_tooltip = QIE_move_factory_2
 			}
 			else = {
-				custom_effect_tooltip = QIE_move_factory_level_3
+				custom_effect_tooltip = QIE_move_factory_3
 			}
 			if = {
 				limit = { NOT = { has_country_flag = QIE_move_industrial_complex } }
@@ -6161,7 +6178,7 @@ QIE_defensive_preparations_category = {
 						value = 0
 					}
 				}
-				custom_effect_tooltip = QIE_move_factory_level_1
+				custom_effect_tooltip = QIE_move_factory_1
 			}
 			else_if = {
 				limit = {
@@ -6170,10 +6187,10 @@ QIE_defensive_preparations_category = {
 						value = 1
 					}
 				}
-				custom_effect_tooltip = QIE_move_factory_level_2
+				custom_effect_tooltip = QIE_move_factory_2
 			}
 			else = {
-				custom_effect_tooltip = QIE_move_factory_level_3
+				custom_effect_tooltip = QIE_move_factory_3
 			}
 			if = {
 				limit = { NOT = { has_country_flag = QIE_move_arms_factory } }

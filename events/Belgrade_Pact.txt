@@ -20,7 +20,7 @@ country_event = {
 
 	option = {
 		name = pact.1.a # Open the Congress
-		add_political_power = 50
+		add_war_support = 0.05
 		set_country_flag = SER_founded_belgradepact
 		create_faction = Belgrade_Pact
 
@@ -35,7 +35,6 @@ country_event = {
 						tag = AUS
 						is_subject_of = AUS
 						is_subject_of = GER
-						tag = OTT
 						tag = ALB
 					}
 				}
@@ -45,7 +44,7 @@ country_event = {
 			AUS = {
 				country_event = { id = pact.6 days = 14 }
 			}
-			OTT = { country_event = ottfor.5 }
+			TUR = { country_event = ottfor.5 }
 		}
 	}
 }
@@ -106,7 +105,6 @@ country_event = {
 						tag = AUS
 						is_subject_of = AUS
 						is_subject_of = GER
-						tag = OTT
 						tag = ALB
 					}
 				}
@@ -160,7 +158,6 @@ country_event = {
 						tag = AUS
 						is_subject_of = GER
 						is_subject_of = AUS
-						tag = OTT
 						tag = ALB
 					}
 				}
@@ -282,9 +279,7 @@ country_event = {
 	title = pact.6.t
 	desc = pact.6.d
 	picture = GFX_report_event_soviet_finnish_pact
-
 	is_triggered_only = yes
-
 	option = {
 		name = pact.6.a # Support Bulgaria
 		ai_chance = {
@@ -319,7 +314,6 @@ country_event = {
 		add_political_power = -5
 	}
 }
-
 # Arms embargo!
 country_event = {
 	id = pact.7
@@ -398,10 +392,6 @@ country_event = {
 						rule = BUL_fourth_balkan_war
 						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_OTT
 					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_SUBMIT_TO_OTT
-					}
 				}
 			}
 		}
@@ -426,426 +416,15 @@ country_event = {
 
 	option = {
 		name = pact.17.a # Then it is war
-		ai_chance = {
-			base = 99
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = BUL_fourth_balkan_war
-					option = BUL_FOURTH_BALKAN_WAR_SUBMIT
-				}
-			}
+		swap_ideas = {
+			remove_idea = BUL_waning_hegemony
+			add_idea = BUL_waning_hegemony_2
 		}
-		add_war_support = 0.1
-		SER = {
-			country_event = pact.18
-		}
-	}
-	option = {
-		name = pact.17.b # Give in to their demands
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT_SUBMIT_TO_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_SUBMIT_TO_OTT
-					}
-				}
-			}
-			modifier = {
-				factor = 5
-				NOT = {
-					GER = {
-						has_country_flag = SER_supported_bulgaria
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					NOT = {
-						GRE = { is_in_faction_with = SER }
-					}
-					NOT = {
-						ROM = { is_in_faction_with = SER }
-					}
-				}
-				NOT = {
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_SUBMIT
-					}
-				}
-			}
-		}
-		set_country_flag = BUL_surrender_no_war
-		add_stability = -0.2
-
-		belgrade_pact_gain_land_from_bulgaria = yes
-
-		hidden_effect = {
-			every_country = {
-				limit = {
-					OR = {
-						tag = SER
-						tag = OTT
-						is_in_faction_with = SER
-						has_country_flag = SER_supported_bulgaria
-					}
-				}
-				country_event = pact.19
-			}
-		}
-	}
-}
-
-# Serbia: Ultimatum refused, war starts
-country_event = {
-	id = pact.18
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.18 FROM = [From.GetName]" }
-	title = pact.18.t
-	desc = pact.18.d
-	picture = GFX_report_event_GRE_army
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.18.a # They had their chance!
-		set_global_flag = balkan_war_started
-		add_political_power = 100
-		add_manpower = 5000
-		declare_war_on = {
-			target = BUL
-			type = annex_everything
-		}
-
-		# Notify all Pact members
-		every_other_country = {
-			limit = {
-				is_in_faction_with = SER
-			}
-			country_event = pact.20 # Pact members: the war has started
-		}
-
-		hidden_effect = {
-			add_ideas = has_scripted_peace
-			BUL = { add_ideas = has_scripted_peace }
-			news_event = { id = worldnews.37 days = 1 }
-			country_event = worldtension.5
-		}
-	}
-}
-
-# The Bulgarians fold
-country_event = {
-	id = pact.19
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.19 FROM = [From.GetName]" }
-	title = pact.19.t
-	desc = pact.19.d
-	picture = GFX_report_event_generic_sign_treaty2
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.19.a # They had no choice.
-		trigger = {
-			NOT = { has_country_flag = SER_supported_bulgaria }
-		}
-		if = {
-			limit = { has_idea = belgrade_part_arms_embargo }
-			remove_ideas = belgrade_part_arms_embargo
-		}
-		add_stability = 0.1
-		if = {
-			limit = { tag = GRE }
-			set_country_flag = balkan_war_victory
-		}
-	}
-	option = {
-		name = pact.19.b # Peace in our time.
-		trigger = {
-			has_country_flag = SER_supported_bulgaria
-			NOT = { tag = OTT }
-		}
-	}
-	option = {
-		name = pact.19.c # Damn, we could have used that
-		trigger = { tag = OTT }
-	}
-}
-
-# Pact members: the war has started
-country_event = {
-	id = pact.20
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.20 FROM = [From.GetName]" }
-	title = pact.20.t
-	desc = pact.20.d
-	picture = GFX_report_event_GRE_army
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.20.a # Onwards to victory
-		add_political_power = 100
-		add_manpower = 5000
-	}
-}
-
-# Ottomans: do we demand Western Thrace?
-country_event = {
-	id = pact.21
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.21 FROM = [From.GetName]" }
-	title = pact.21.t
-	desc = pact.21.d
-	picture = GFX_report_event_GRE_army
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = pact.21.a #Make the demand
-		ai_chance = {
-			base = 75
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
-		}
-		BUL = {
-			add_opinion_modifier = { target = OTT modifier = KR_outraged }
-			country_event = { id = pact.22 hours = 8 }
-		}
-	}
-	option = {
-		name = pact.21.b #We'd rather not
-		ai_chance = {
-			base = 25
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT_SUBMIT_TO_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_SUBMIT_TO_OTT
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				SER = {
-					is_in_faction_with = GRE
-					is_in_faction_with = ROM
-				}
-			}
-		}
-		add_political_power = -50
-	}
-}
-
-# Bulgaria: receives the Ottoman demands
-country_event = {
-	id = pact.22
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.22 FROM = [From.GetName]" }
-	title = pact.22.t
-	desc = pact.22.d
-	picture = GFX_report_event_GRE_army
-
-	is_triggered_only = yes
-
-	trigger = {
-		has_war_with = SER
-		OR = {
-			owns_state = 184 #Western Thrace
-			owns_state = 1089 #Momchilgrad
-		}
-	}
-
-	option = {
-		name = pact.22.a #Give them what they want
-		ai_chance = {
-			base = 50
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_OTT
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				SER = {
-					is_in_faction_with = GRE
-					is_in_faction_with = ROM
-				}
-			}
-		}
-		add_stability = -0.15
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 184 #Western Thrace
-					state = 1089 #Momchilgrad
-				}
-			}
-			teleport_armies = {
-				limit = { is_ally_with = ROOT }
-				to_state_array = owned_controlled_states
-			}
-			OTT = { transfer_state = PREV }
-			if = {
-				limit = { 341 = { OTT_is_autonomous_region = yes } } #Adrianople
-				ott_set_authority_vilayet_low = yes
-			}
-			else_if = {
-				limit = { 341 = { OTT_is_vilayet = yes } } #Adrianople
-				ott_set_authority_vilayet_medium = yes
-			}
-			else = {
-				ott_set_authority_vilayet_high = yes
-			}
-		}
-		OTT = {
-			country_event = pact.23
-			diplomatic_relation = {
-				country = ROOT
-				relation = non_aggression_pact
-			}
-		}
-	}
-	option = {
-		name = pact.22.b #Never! We'll defeat them as well!
-		ai_chance = {
-			base = 50
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT_SUBMIT_TO_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_SUBMIT_TO_OTT
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				surrender_progress > 0.20
-			}
-		}
-		add_war_support = 0.10
-		add_manpower = 5000
-		OTT = {
-			country_event = pact.24
-		}
-	}
-}
-
-# Ottomans: Bulgaria agrees
-country_event = {
-	id = pact.23
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.23 FROM = [From.GetName]" }
-	title = pact.23.t
-	desc = pact.23.d
-	picture = GFX_report_event_generic_sign_treaty2
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.23.a
-		set_country_flag = SER_supported_bulgaria
-		add_political_power = 100
-		country_event = {
-			id = ottkem.63
-			days = 1
-		}
-		country_event = {
-			id = ottkem.64
-			days = 60
-		}
-	}
-}
-
-# Ottomans: Bulgaria refuses
-country_event = {
-	id = pact.24
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.24 FROM = [From.GetName]" }
-	title = pact.24.t
-	desc = pact.24.d
-	picture = GFX_report_event_GRE_army
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.24.a
-		set_country_flag = OTT_war_for_thrace
-		declare_war_on = {
-			target = BUL
-			type = annex_everything
-		}
-		OTT = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_government = authoritarian_democrat
-					}
-					country_event = {
-						id = ottkem.60
-						days = 3
-					}
+		effect_tooltip = {
+			SER = {
+				declare_war_on = {
+					target = BUL
+					type = annex_everything
 				}
 			}
 		}
@@ -864,73 +443,10 @@ country_event = {
 
 	option = {
 		name = pact.25.a
-		add_opinion_modifier = { target = OTT modifier = KR_disapproves_of_govt }
+		add_opinion_modifier = { target = TUR modifier = KR_disapproves_of_govt }
 	}
 }
 
-# Bulgaria: aid from Germany arrives
-country_event = {
-	id = pact.26
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.26 FROM = [From.GetName]" }
-	title = pact.26.t
-	desc = pact.26.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.26.a # Great
-		custom_effect_tooltip = pact.26.tt
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = { has_template = "Ekspeditsionno Otdelenie" }
-				}
-				division_template = {
-					name = "Ekspeditsionno Otdelenie"
-					is_locked = yes
-					division_names_group = BUL_INF_01
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 2 y = 0 }
-						artillery_brigade = { x = 2 y = 1 }
-						artillery_brigade = { x = 2 y = 2 }
-					}
-					support = {
-						artillery = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = {
-					48
-				}
-				create_unit = {
-					division = "name = \"1-va Vŭnshni Ekspeditsionni Sili\" division_template = \"Ekspeditsionno Otdelenie\"  start_experience_factor = 0.2"
-					owner = BUL
-				}
-				create_unit = {
-					division = "name = \"2-ra Vŭnshni Ekspeditsionni Sili\" division_template = \"Ekspeditsionno Otdelenie\"  start_experience_factor = 0.2"
-					owner = BUL
-				}
-			}
-		}
-
-		set_country_flag = BUL_received_aid
-
-		hidden_effect = {
-			add_opinion_modifier = {
-				target = FROM
-				modifier = Belgrade_Pact_sent_promised_aid
-			}
-		}
-	}
-}
 # Romania/Greece - Should we accept the deal
 country_event = {
 	id = pact.27
@@ -981,35 +497,84 @@ country_event = {
 
 	option = {
 		name = pact.28.a # We are triumphant!
+		add_stability = 0.1
 		set_global_flag = balkan_war_ended
-		add_stability = 0.15
+
 		if = {
-			limit = { has_idea = belgrade_part_arms_embargo }
-			remove_ideas = belgrade_part_arms_embargo
+			limit = {
+				SER_has_scarred_nation = yes
+			}
+			SER_reduce_scars = yes
 		}
-		BUL = { white_peace_with_ROOT = yes }
+		if = {
+			limit = {
+				has_active_mission = SER_prove_to_the_people
+			}
+			add_days_mission_timeout = {
+				mission = SER_prove_to_the_people
+				days = 90
+			}
+		}
+		if = {
+			limit = {
+				has_active_mission = SER_defang_the_army
+			}
+			add_days_mission_timeout = {
+				mission = SER_defang_the_army
+				days = 90
+			}
+		}
+		if = {
+			limit = {
+				has_active_mission = SER_merge_the_coalition_parties
+			}
+			add_days_mission_timeout = {
+				mission = SER_merge_the_coalition_parties
+				days = 90
+			}
+		}
+
+		BUL = {
+			white_peace_with_ROOT = yes
+			remove_ideas = has_scripted_peace
+		}
 
 		# separate peace for Ottomans if they joined the war
 		hidden_effect = {
-			every_state = {
-				limit = {
-					is_owned_by = BUL
-					OR = {
-						is_controlled_by = OTT
-						AND = {
-							is_controlled_by = BUL
-							OTT = { is_ai = no }
+			184 = {
+				if = {
+					limit = {
+						is_owned_by = BUL
+						is_core_of = TUR
+						OR = {
+							is_controlled_by = TUR
+							AND = {
+								is_controlled_by = BUL
+								TUR = {
+									is_ai = no
+									has_war_with = BUL
+								}
+							}
 						}
 					}
-					is_core_of = OTT
+					set_state_flag = SER_transfer_to_OTT
 				}
-				set_state_flag = SER_transfer_to_OTT
+			}
+			1089 = {
+				if = {
+					limit = {
+						is_owned_by = BUL
+						is_core_of = TUR
+						184 = { has_state_flag = SER_transfer_to_OTT }
+					}
+					set_state_flag = SER_transfer_to_OTT
+				}
 			}
 			if = {
 				limit = {
-					OTT = { has_country_flag = OTT_war_for_thrace }
+					TUR = { has_country_flag = OTT_war_for_thrace }
 				}
-				OTT = {
+				TUR = {
 					country_event = { id = pact.39 hours = 8 }
 				}
 			}
@@ -1044,11 +609,11 @@ country_event = {
 				ALB = {
 					is_subject = no
 					is_in_faction = no
-					has_war_with = OTT
+					has_war_with = TUR
 				}
 			}
 			hidden_effect = {
-				ALB = { white_peace = OTT }
+				ALB = { white_peace = TUR }
 			}
 		}
 
@@ -1128,51 +693,6 @@ country_event = {
 	}
 }
 
-
-###########################
-# End of the war, lessons learned
-###########################
-
-# End of the war: lessons learned for Germany, if it sent aid
-country_event = {
-	id = pact.34
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.34 FROM = [From.GetName]" }
-	title = pact.34.t
-	desc = pact.34.d
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	trigger = {
-		has_country_flag = SER_supported_bulgaria
-		BUL = { has_country_flag = BUL_received_aid }
-	}
-
-	option = {
-		name = pact.34.a # Great!
-
-		army_experience = 10
-		navy_experience = 10
-		air_experience = 10
-
-		add_manpower = 2500
-
-		add_political_power = 25
-
-		clr_country_flag = SER_supported_bulgaria
-
-		hidden_effect = {
-			BUL = {
-				if = {
-					limit = { has_template = "Ekspeditsionno Otdelenie" }
-					delete_unit_template_and_units = { division_template = "Ekspeditsionno Otdelenie" }
-				}
-			}
-		}
-	}
-}
-
-
 ###########################
 # Peace events
 ###########################
@@ -1189,12 +709,10 @@ country_event = {
 
 	trigger = {
 		tag = BUL
-		has_war_with = SER
+		has_war_with = BPL
+		is_valid_peace_target = yes
 		surrender_progress > 0.6
-		SER = {
-			is_in_faction = yes
-			has_country_flag = SER_founded_belgradepact
-		}
+		SER = { has_country_flag = SER_founded_belgradepact }
 		NOT = { has_global_flag = balkan_war_ended }
 	}
 
@@ -1202,16 +720,21 @@ country_event = {
 		days = 3
 	}
 
+	immediate = {
+		hidden_effect = { add_ideas = has_scripted_peace }
+	}
+
 	option = {
 		name = pact.35.a # Sue for peace.
 		add_stability = -0.1
-		SER = { country_event = pact.36 } # Send the peace offer to Serbia
+		BPL = { country_event = pact.36 } # Send the peace offer to Serbia
 		custom_effect_tooltip = BUL_other_states_may_continue_war_tt
 	}
 	option = {
 		name = pact.35.b # We can still win this!
 		trigger = { is_ai = no }
 		add_war_support = -0.2
+		remove_ideas = has_scripted_peace
 	}
 }
 
@@ -1271,6 +794,8 @@ country_event = {
 			limit = { has_idea = GER_mil_support_idea }
 			remove_ideas = GER_mil_support_idea
 		}
+		mark_focus_tree_layout_dirty = yes
+		unlock_national_focus = BUL_balkan_war_defeat
 		if = {
 			limit = {
 				OR = {
@@ -1313,16 +838,18 @@ country_event = {
 
 	option = {
 		name = pact.38.a # The Belgrade Pact stands triumphant!
-		add_stability = 0.15
-		if = {
-			limit = { has_idea = belgrade_part_arms_embargo }
-			remove_ideas = belgrade_part_arms_embargo
-		}
+		add_stability = 0.1
+
 		if = {
 			limit = { tag = GRE }
 			set_country_flag = balkan_war_victory
 		}
-		effect_tooltip = { BUL = { white_peace_with_ROOT = yes } }
+
+		effect_tooltip = {
+			SER = {
+				white_peace = BUL
+			}
+		}
 	}
 }
 
@@ -1336,19 +863,13 @@ country_event = {
 	desc = {
 		text = pact.39.d.gained
 		trigger = {
-			OR = {
-				184 = { has_state_flag = SER_transfer_to_OTT }
-				1089 = { has_state_flag = SER_transfer_to_OTT }
-			}
+			184 = { has_state_flag = SER_transfer_to_OTT }
 		}
 	}
 	desc = {
 		text = pact.39.d.nogain
 		trigger = {
-			NOT = {
-				184 = { has_state_flag = SER_transfer_to_OTT }
-				1089 = { has_state_flag = SER_transfer_to_OTT }
-			}
+			NOT = { 184 = { has_state_flag = SER_transfer_to_OTT } }
 		}
 	}
 
@@ -1361,12 +882,22 @@ country_event = {
 
 	option = {
 		name = pact.39.a #End the war
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				184 = {
+					is_owned_by = BUL
+					NOT = { has_state_flag = SER_transfer_to_OTT }
+				}
+			}
+		}
 		clr_country_flag = OTT_war_for_thrace
 		BUL = { white_peace_with_ROOT = yes }
 		if = {
 			limit = {
 				ALB = {
-					has_war_with = OTT
+					has_war_with = TUR
 					is_valid_peace_target = yes
 					OR = {
 						has_country_flag = ALB_joined_BUL_war
@@ -1385,13 +916,9 @@ country_event = {
 	option = {
 		name = pact.39.b #Continue the war
 		trigger = {
-			NOT = {
-				184 = { has_state_flag = SER_transfer_to_OTT }
-				1089 = { has_state_flag = SER_transfer_to_OTT }
-			}
-			OR = {
-				184 = { is_owned_by = BUL }
-				1089 = { is_owned_by = BUL }
+			184 = {
+				is_owned_by = BUL
+				NOT = { has_state_flag = SER_transfer_to_OTT }
 			}
 		}
 		add_political_power = -50
@@ -1413,22 +940,24 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = OTT
+		tag = TUR
 		has_war_with = BUL
 		has_country_flag = OTT_war_for_thrace
+		is_valid_peace_target = yes
+		BUL = { is_valid_peace_target = yes }
 		OR = {
 			184 = { is_owned_by = BUL }
 			1089 = { is_owned_by = BUL }
 		}
 		184 = {
 			OR = {
-				is_controlled_by = OTT
+				is_controlled_by = TUR
 				NOT = { is_owned_by = BUL }
 			}
 		}
 		1089 = {
 			OR = {
-				is_controlled_by = OTT
+				is_controlled_by = TUR
 				NOT = { is_owned_by = BUL }
 			}
 		}
@@ -1443,7 +972,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 15
+		days = 3
 	}
 
 	option = {
@@ -1470,7 +999,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		OTT = {
+		TUR = {
 			save_event_target_as = white_peace_receiver
 		}
 	}
@@ -1479,13 +1008,13 @@ country_event = {
 		add_political_power = -50
 		every_owned_state = {
 			limit = {
-				is_core_of = OTT
+				is_core_of = TUR
 				OR = {
-					is_controlled_by = OTT
+					is_controlled_by = TUR
 					is_controlled_by = BUL
 				}
 			}
-			OTT = { transfer_state = PREV }
+			TUR = { transfer_state = PREV }
 			if = {
 				limit = { 341 = { OTT_is_autonomous_region = yes } } #Adrianople
 				ott_set_authority_vilayet_low = yes
@@ -1498,7 +1027,7 @@ country_event = {
 				ott_set_authority_vilayet_high = yes
 			}
 		}
-		OTT = {
+		TUR = {
 			clr_country_flag = OTT_war_for_thrace
 			white_peace_with_ROOT = yes
 		}
@@ -1508,7 +1037,7 @@ country_event = {
 			limit = {
 				ALB = {
 					has_country_flag = ALB_joined_BUL_war
-					has_war_with = OTT
+					has_war_with = TUR
 				}
 			}
 			ALB = {
@@ -1520,7 +1049,7 @@ country_event = {
 		name = pact.41.b #No peace
 		trigger = { is_ai = no }
 		add_war_support = -0.10
-		OTT = {
+		TUR = {
 			clr_country_flag = OTT_war_for_thrace
 			country_event = pact.46
 		}
@@ -1538,9 +1067,11 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = OTT
+		tag = TUR
 		has_war_with = BUL
 		has_country_flag = OTT_war_for_thrace
+		is_valid_peace_target = yes
+		BUL = { is_valid_peace_target = yes }
 		OR = {
 			184 = { is_owned_by = BUL }
 			1089 = { is_owned_by = BUL }
@@ -1580,16 +1111,23 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		OTT = {
+		TUR = {
 			save_event_target_as = white_peace_receiver
 		}
 	}
 	option = {
 		name = pact.43.a #Make peace
-		add_political_power = 200
-		184 = { remove_core_of = OTT }
-		1089 = { remove_core_of = OTT }
-		OTT = {
+		184 = { remove_core_of = TUR }
+		1089 = { remove_core_of = TUR }
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = BUL_balkan_peace_loss
+				}
+			}
+			add_state_claim = 341
+		}
+		TUR = {
 			every_owned_state = {
 				limit = { is_claim_or_core_of_ROOT = yes }
 				BUL = { transfer_state = PREV }
@@ -1603,7 +1141,7 @@ country_event = {
 			limit = {
 				ALB = {
 					has_country_flag = ALB_joined_BUL_war
-					has_war_with = OTT
+					has_war_with = TUR
 				}
 			}
 			ALB = {
@@ -1615,7 +1153,7 @@ country_event = {
 		name = pact.43.b #Refuse
 		trigger = { is_ai = no }
 		add_war_support = -0.10
-		OTT = {
+		TUR = {
 			country_event = pact.46
 		}
 	}
@@ -1633,6 +1171,7 @@ country_event = {
 	option = {
 		name = pact.46.a # We need to turn the tide
 		add_war_support = 0.10
+		remove_ideas = has_scripted_peace
 	}
 }
 
@@ -1654,6 +1193,7 @@ country_event = {
 		has_global_flag = balkan_war_started
 		NOT = { has_global_flag = balkan_war_ended }
 		BUL = {
+			is_valid_peace_target = yes
 			NOT = { surrender_progress > 0.7 }
 		}
 
@@ -1756,11 +1296,10 @@ country_event = {
 				owner = { has_country_flag = SER_joined_balkan_war }
 				OR = {
 					state = 767 #Nis
-					state = 841 #Pirot
 					state = 106 #Macedonia
 					state = 772 #Dobrogea
 					state = 77 #Silistria
-					state = 1076 #Southern Macedonia
+					#state = 1076 #Southern Macedonia
 					state = 989 #Salonika
 					state = 731 #Central Macedonia
 					state = 769 #Western Thrace
@@ -1786,6 +1325,21 @@ country_event = {
 			}
 			BUL = { transfer_state = PREV }
 		}
+		if = {
+			limit = {
+				SER = {
+					owns_state = 105
+				}
+			}
+			MNT = {
+				transfer_state = 105 #Montenegro
+			}
+			SER = {
+				remove_state_core = 105
+				add_state_claim = 105
+				remove_ideas = SER_konspiracija_idea
+			}
+		}
 
 		if = {
 			limit = {
@@ -1795,15 +1349,16 @@ country_event = {
 				}
 			}
 			81 = { set_demilitarized_zone = yes } # Oltenia
+			ROM = { country_event = romania.240 } #Fall of Carol-Legionary government
 		}
 		if = {
 			limit = {
 				GRE = {
 					has_country_flag = SER_joined_balkan_war
-					owns_state = 768
+					owns_state = 1076
 				}
 			}
-			768 = { set_demilitarized_zone = yes } # Thessalia
+			1076 = { set_demilitarized_zone = yes } # Thessalia
 		}
 		if = {
 			limit = {
@@ -1844,6 +1399,7 @@ country_event = {
 
 		hidden_effect = {
 			# Notify all Pact members of peace
+			country_event = { id = bulgaria.54 days = 60 random_days = 7 }
 			SER = {
 				country_event = { id = pact.49 hours = 4 }
 			}
@@ -1862,10 +1418,6 @@ country_event = {
 				GRE = {
 					country_event = { id = pact.51 hours = 4 }
 				}
-			}
-			if = {
-				limit = { has_idea = GER_mil_support_idea }
-				remove_ideas = civilian_economy
 			}
 		}
 	}
@@ -1891,10 +1443,6 @@ country_event = {
 		name = pact.49.a # At least we exist
 		clr_country_flag = SER_joined_balkan_war
 		dismantle_faction = yes
-		if = {
-			limit = { has_idea = belgrade_part_arms_embargo }
-			remove_ideas = belgrade_part_arms_embargo
-		}
 		add_timed_idea = {
 			idea = SER_reparation_payments
 			days = 1460
@@ -1916,10 +1464,6 @@ country_event = {
 		name = pact.50.a # At least we exist
 		set_country_flag = SER_lost_balkan_war
 		clr_country_flag = SER_joined_balkan_war
-		if = {
-			limit = { has_idea = belgrade_part_arms_embargo }
-			remove_ideas = belgrade_part_arms_embargo
-		}
 		effect_tooltip = {
 			SER = { dismantle_faction = yes }
 		}
@@ -1940,13 +1484,10 @@ country_event = {
 		name = pact.51.a # At least we exist
 		set_country_flag = SER_lost_balkan_war
 		clr_country_flag = SER_joined_balkan_war
-		if = {
-			limit = { has_idea = belgrade_part_arms_embargo }
-			remove_ideas = belgrade_part_arms_embargo
-		}
 		effect_tooltip = {
 			SER = { dismantle_faction = yes }
 		}
+
 		hidden_effect = {
 			country_event = { id = gre.17 days = 5 } # Massive demonstrations after Balkan War loss
 		}
@@ -1987,24 +1528,6 @@ country_event = {
 	option = {
 		name = pact.52.a
 		set_global_flag = balkan_war_ended
-		SER = {
-			if = {
-				limit = { has_idea = belgrade_part_arms_embargo }
-				remove_ideas = belgrade_part_arms_embargo
-			}
-		}
-		ROM = {
-			if = {
-				limit = { has_idea = belgrade_part_arms_embargo }
-				remove_ideas = belgrade_part_arms_embargo
-			}
-		}
-		GRE = {
-			if = {
-				limit = { has_idea = belgrade_part_arms_embargo }
-				remove_ideas = belgrade_part_arms_embargo
-			}
-		}
 	}
 }
 
@@ -2019,7 +1542,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = OTT
+		tag = TUR
 		has_country_flag = OTT_war_for_thrace
 		NOT = { has_war_with = BUL }
 	}
@@ -2033,331 +1556,6 @@ country_event = {
 		clr_country_flag = OTT_war_for_thrace
 	}
 }
-
-
-###########################
-# Post-war Belgrade Pact occupation of Bulgaria
-###########################
-
-# Set up occupation zones
-country_event = {
-	id = pact.64
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.64 FROM = [From.GetName]" }
-	title = pact.64.t
-	desc = pact.64.d
-	picture = GFX_report_event_generic_diplomacy2
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = SER
-		is_faction_leader = yes
-		has_country_flag = SER_founded_belgradepact
-		has_war = no
-
-		# When the war has started and Bulgaria doesn't exist, it probably is annexed by Serbia
-		has_global_flag = balkan_war_started
-		NOT = {
-			country_exists = BUL
-			has_global_flag = balkan_war_ended
-		}
-
-		# Serbia or another Pact ally controls a Bulgarian core state that is not their core
-		owns_state = 48 #Sofia
-		212 = { is_owned_by_ROOT_or_ally = yes } #Plovdiv
-		771 = { is_owned_by_ROOT_or_ally = yes } #Varna
-	}
-
-	mean_time_to_happen = {
-		days = 3
-	}
-
-	option = {
-		name = pact.64.a # Occupy Bulgaria
-		set_country_flag = SER_occupation_of_bulgaria
-		add_ideas = SER_occupation_of_bulgaria_idea
-
-		belgrade_pact_occupies_bulgaria = yes
-
-		every_other_country = {
-			limit = {
-				is_in_faction_with = SER
-				any_owned_state = {
-					is_claim_or_core_of_PREV = no
-					is_core_of = BUL
-				}
-			}
-			country_event = { id = pact.65 hours = 6 }
-		}
-	}
-	option = {
-		name = pact.64.b # Let them have their independence
-		trigger = { is_ai = no }
-
-		add_political_power = -100
-
-		# Transfer all Bulgarian states to Bulgaria
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 48 #Sofia
-					state = 1090 #Vidin
-					state = 770 #Pleven
-					state = 212 #Plovdiv
-					state = 1089 #Momchilgrad
-					state = 771 #Varna
-					state = 211 #Burgas
-				}
-				is_core_of = BUL
-			}
-			BUL = {
-				transfer_state = PREV
-			}
-		}
-
-		# Pact members asked to give up land
-		every_other_country = {
-			limit = {
-				is_in_faction_with = SER
-			}
-			country_event = pact.68
-		}
-	}
-}
-
-# Pact members: Serbia asks to set up occupation zones
-country_event = {
-	id = pact.65
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.65 FROM = [From.GetName]" }
-	title = pact.65.t
-	desc = pact.65.d
-	picture = GFX_report_event_generic_diplomacy2
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.65.a # Very well
-		set_country_flag = SER_occupation_of_bulgaria
-
-		belgrade_pact_occupies_bulgaria = yes
-	}
-
-	option = {
-		name = pact.65.b # No
-		trigger = { is_ai = no }
-		add_political_power = -200
-
-		effect_tooltip = {
-			SER = { remove_from_faction = ROOT }
-		}
-
-		SER = {
-			country_event = { id = pact.66 hours = 6 }
-		}
-	}
-}
-
-# Serbia: [Country] refuses to set up occupation zone
-country_event = {
-	id = pact.66
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.66 FROM = [From.GetName]" }
-	title = pact.66.t
-	desc = pact.66.d
-	picture = GFX_report_event_generic_diplomacy2
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.66.a # This is outrageous!
-		remove_from_faction = FROM
-
-		reverse_add_opinion_modifier = {
-			target = SER
-			modifier = Belgrade_Pact_refused_occupation_zone
-		}
-	}
-}
-
-# End of the occupation of Bulgaria (Triggered by Serbian focus)
-country_event = {
-	id = pact.67
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.67 FROM = [From.GetName]" }
-	title = pact.67.t
-	desc = pact.67.d
-	picture = GFX_report_event_generic_diplomacy2
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.67.a # End the occupation
-		clr_country_flag = SER_occupation_of_bulgaria
-
-		# Transfer all Bulgarian states to Bulgaria
-		every_owned_state = {
-			limit = {
-				is_claim_or_core_of_ROOT = no
-				OR = {
-					state = 48 #Sofia
-					state = 1090 #Vidin
-					state = 770 #Pleven
-					state = 212 #Plovdiv
-					state = 1089 #Momchilgrad
-					state = 771 #Varna
-					state = 211 #Burgas
-				}
-			}
-			BUL = { transfer_state = PREV }
-		}
-		set_temp_variable = { tag_to_release = BUL }
-		puppet_released_tag = yes
-		BUL = {
-			set_politics = {
-				ruling_party = social_conservative
-				elections_allowed = no
-			}
-			set_political_party = {
-				ideology = social_conservative
-				popularity = 60
-			}
-			country_event = { id = pact.69 days = 3 }
-		}
-
-		# Bulgaria transfer some factories
-		belgrade_pact_loot_factory_from_bulgaria = yes
-
-		# Ask Pact members to cede their occupied lands to Bulgaria
-		every_other_country = {
-			limit = { is_in_faction_with = SER }
-			country_event = pact.68
-		}
-	}
-}
-
-# Pact members: end of the occupation, cede land to Bulgaria?
-country_event = {
-	id = pact.68
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.68 FROM = [From.GetName]" }
-	title = pact.68.t
-	desc = pact.68.d
-
-	is_triggered_only = yes
-
-	trigger = {
-		OR = {
-			owns_state = 48 #Sofia
-			owns_state = 1090 #Vidin
-			owns_state = 770 #Pleven
-			owns_state = 212 #Plovdiv
-			owns_state = 1089 #Momchilgrad
-			owns_state = 771 #Varna
-			owns_state = 211 #Burgas
-		}
-	}
-
-	option = {
-		name = pact.68.a # Agree
-		clr_country_flag = SER_occupation_of_bulgaria
-
-		# Transfer all Bulgarian states to Bulgaria
-		every_owned_state = {
-			limit = {
-				is_not_claim_or_core_of_ROOT = yes
-				OR = {
-					state = 48 #Sofia
-					state = 1090 #Vidin
-					state = 770 #Pleven
-					state = 212 #Plovdiv
-					state = 1089 #Momchilgrad
-					state = 771 #Varna
-					state = 211 #Burgas
-				}
-			}
-			BUL = {
-				transfer_state = PREV
-			}
-		}
-
-		# Bulgaria transfers some factories to this country
-		belgrade_pact_loot_factory_from_bulgaria = yes
-	}
-
-	option = {
-		name = pact.68.b # No, we keep what we have
-		trigger = { is_ai = no }
-		clr_country_flag = SER_occupation_of_bulgaria
-
-		add_political_power = -50
-		SER = { remove_from_faction = ROOT }
-
-		reverse_add_opinion_modifier = {
-			target = SER
-			modifier = Belgrade_Pact_refused_to_end_occupation
-		}
-	}
-}
-
-# Bulgaria renounces its claims
-country_event = {
-	id = pact.69
-	immediate = { log = "[GetDateText]: [Root.GetName]: event pact.69 FROM = [From.GetName]" }
-	title = pact.69.t
-	desc = pact.69.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = pact.69.a # We have no choice
-		add_political_power = -100
-		every_state = {
-			limit = {
-				OR = {
-					is_core_of = BUL
-					is_claimed_by = BUL
-				}
-				NOT = {
-					is_owned_by = BUL
-					state = 48 #Sofia
-					state = 1090 #Vidin
-					state = 770 #Pleven
-					state = 212 #Plovdiv
-					state = 1089 #Momchilgrad
-					state = 771 #Varna
-					state = 211 #Burgas
-				}
-			}
-			if = {
-				limit = { is_claimed_by = BUL }
-				remove_claim_by = BUL
-			}
-			if = {
-				limit = { is_core_of = BUL }
-				remove_core_of = BUL
-				add_claim_by = BUL
-			}
-		}
-
-		hidden_effect = {
-			# Remove all negative opinion modifiers
-			every_country = {
-				limit = {
-					OR = {
-						tag = SER
-						tag = GRE
-						tag = ROM
-						tag = MNT
-					}
-				}
-				remove_opinion_modifier = { target = BUL modifier = embargo }
-				remove_opinion_modifier = { target = BUL modifier = Balkans_hates_bulgaria }
-			}
-
-			remove_opinion_modifier = { target = SER modifier = Balkans_hates_neighbours }
-			remove_opinion_modifier = { target = GRE modifier = Balkans_hates_neighbours }
-			remove_opinion_modifier = { target = ROM modifier = Balkans_hates_neighbours }
-		}
-	}
-}
-
 
 ###########################
 # Albania vs. the Belgrade Pact
@@ -2411,10 +1609,6 @@ country_event = {
 						rule = BUL_fourth_balkan_war
 						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_OTT
 					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_SUBMIT_TO_OTT
-					}
 				}
 			}
 		}
@@ -2445,10 +1639,6 @@ country_event = {
 						rule = BUL_fourth_balkan_war
 						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT_OTT
 					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_VS_PACT_SUBMIT_TO_OTT
-					}
 				}
 			}
 		}
@@ -2471,10 +1661,6 @@ country_event = {
 					has_game_rule = {
 						rule = BUL_fourth_balkan_war
 						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_SUBMIT_TO_OTT
 					}
 				}
 			}
@@ -2535,10 +1721,6 @@ country_event = {
 					has_game_rule = {
 						rule = BUL_fourth_balkan_war
 						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_OTT
-					}
-					has_game_rule = {
-						rule = BUL_fourth_balkan_war
-						option = BUL_FOURTH_BALKAN_WAR_BUL_ALB_VS_PACT_SUBMIT_TO_OTT
 					}
 				}
 			}
@@ -2848,9 +2030,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_in_faction_with = SER
-		SER = { is_faction_leader = yes }
-		is_major = no
+		is_in_faction_with = BPL
 		NOT = { has_country_flag = belgrade_pact_major }
 	}
 
@@ -2870,10 +2050,9 @@ country_event = {
 
 	trigger = {
 		has_country_flag = belgrade_pact_major
-		is_major = yes
 		OR = {
 			has_war = no
-			NOT = { is_in_faction_with = SER }
+			NOT = { is_in_faction_with = BPL }
 		}
 	}
 
@@ -2941,7 +2120,7 @@ country_event = {
 		}
 		set_temp_variable = { tag_to_release = BUL }
 		77 = { add_core_of_target_and_transfer_if_owned = yes }
-		772 = { add_core_of_target_and_transfer_if_owned = yes }
+		772 = { add_claim_of_target_and_transfer_if_owned = yes }
 	}
 	option = { #Divide it up
 		name = pact.111.c
@@ -3096,25 +2275,9 @@ country_event = {
 				}
 			}
 		}
-		every_owned_state = {
-			limit = {
-				is_not_claim_or_core_of_ROOT = yes
-				OR = {
-					state = 731
-					state = 769
-				}
-			}
-			if = {
-				limit = { is_claimed_by = BUL }
-				remove_claim_by = BUL
-			}
-			if = {
-				limit = { NOT = { is_core_of = BUL } }
-				add_core_of = BUL
-			}
-			BUL = { transfer_state = PREV }
-		}
-		recheck_annexations = yes
+		set_temp_variable = { tag_to_release = BUL }
+		731 = { add_claim_of_target_and_transfer_if_owned = yes }
+		769 = { add_claim_of_target_and_transfer_if_owned = yes }
 	}
 	option = { #Divide it up
 		name = pact.111.c
@@ -3339,14 +2502,14 @@ country_event = {
 			GRE = {
 				ROOT_can_grant_land = yes
 				OR = {
-					owns_state = 769
-					owns_state = 184
+					owns_state = 769 #Eastern Macedonia
+					owns_state = 184 #Western Thrace
+					184 = { is_valid_annexation_state = yes } #Western Thrace
 				}
 			}
 			NOT = {
 				tag = GRE
 				tag = BUL
-				tag = OTT
 				tag = TUR
 			}
 		}
@@ -3386,11 +2549,17 @@ country_event = {
 	option = { #Give to Bulgaria
 		name = pact.111.b
 		trigger = {
-			BUL = { ROOT_can_grant_land = yes }
+			BUL = {
+				ROOT_can_grant_land = yes
+				OR = {
+					owns_state = 769 #Eastern Macedonia
+					owns_state = 1089 #Kardzhali
+					1089 = { is_valid_annexation_state = yes } #Kardzhali
+				}
+			}
 			NOT = {
 				tag = GRE
 				tag = BUL
-				tag = OTT
 				tag = TUR
 			}
 		}
@@ -3428,11 +2597,16 @@ country_event = {
 		name = pact.111.f
 		trigger = {
 			SER = { is_ally_of_ROOT = yes }
-			1089 = { is_claimed_by = SER }
+			1089 = {
+				is_claimed_by = SER
+				OR = {
+					is_valid_annexation_state = yes
+					is_owned_by = SER
+				}
+			}
 			NOT = {
 				tag = GRE
 				tag = BUL
-				tag = OTT
 				tag = TUR
 				tag = SER
 			}
@@ -3459,20 +2633,20 @@ country_event = {
 		}
 		recheck_annexations = yes
 	}
+
 	option = { #Give to Turks
 		name = pact.113.a
 		trigger = {
-			var:341.owner = {
-				OR = {
-					tag = TUR
-					tag = OTT
-				}
+			TUR = {
 				ROOT_can_grant_land = yes
+				OR = {
+					owns_state = 184
+					184 = { is_valid_annexation_state = yes } #Western Thrace
+				}
 			}
 			NOT = {
 				tag = GRE
 				tag = BUL
-				tag = OTT
 				tag = TUR
 			}
 		}
@@ -3499,6 +2673,7 @@ country_event = {
 		}
 		recheck_annexations = yes
 	}
+
 	option = { #Divide it up
 		name = pact.111.c
 		trigger = {
@@ -3518,7 +2693,6 @@ country_event = {
 			NOT = {
 				tag = BUL
 				tag = GRE
-				tag = OTT
 				tag = TUR
 			}
 		}
@@ -3573,7 +2747,6 @@ country_event = {
 			NOT = {
 				tag = BUL
 				tag = GRE
-				tag = OTT
 				tag = TUR
 				tag = SER
 			}
@@ -3631,7 +2804,6 @@ country_event = {
 			OR = {
 				tag = BUL
 				tag = TUR
-				tag = OTT
 			}
 		}
 		ai_chance = {
@@ -3658,14 +2830,13 @@ country_event = {
 	option = { #occupy
 		name = annex.occupation
 		trigger = {
-			is_ai = no
 			NOT = {
 				tag = GRE
 				tag = BUL
 				tag = TUR
-				tag = OTT
 			}
 		}
+		ai_chance = { base = 0 }
 		set_country_flag = THRACE_CONQ
 		occupy_small_country = yes
 	}
@@ -4223,6 +3394,7 @@ country_event = {
 		add_state_claim = 163 #Dalmatia
 		add_state_claim = 736 #Istria
 		add_state_claim = 794 #Syrmia
+		add_state_claim = 841 #Kotor
 		add_state_claim = 875 #West Banat
 		hidden_effect = {
 			if = {
@@ -4732,7 +3904,16 @@ country_event = { #Do you want to keep BP?
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = { SER = { owns_state = 875 } } #recouncilation not possible if Romania has taken West Banat
+	trigger = {
+		is_faction_leader = yes
+		SER = {
+			owns_state = 875
+			NOT = { #recouncilation not possible if Romania has taken West Banat
+				has_completed_focus = SER_YUG_anti_imperialist_vanguard
+				has_completed_focus = SER_YUG_balkan_socialist_federation
+			}
+		}
+	}
 
 	option = {
 		name = pact.307.a #Definitely

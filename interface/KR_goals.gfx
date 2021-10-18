@@ -30,6 +30,10 @@ spriteTypes = {
 		name = "GFX_goal_generic_coal_mining"
 		texturefile = "gfx/interface/goals/generic_coal_mining.png"
 	}
+	SpriteType = {
+		name = "GFX_goal_generic_pipeline"
+		texturefile = "gfx/interface/goals/generic_pipeline.png"
+	}
 
 	### Ideology ###
 	SpriteType = {
@@ -1570,6 +1574,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/generic_heavy_armour_canadian.png"
 	}
 	SpriteType = {
+		name = "GFX_goal_generic_heavy_armour_french"
+		texturefile = "gfx/interface/goals/generic_heavy_armour_french.png"
+	}
+	SpriteType = {
 		name = "GFX_goal_generic_council"
 		texturefile = "gfx/interface/goals/generic_council.png"
 	}
@@ -1676,6 +1684,22 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_generic_automobile"
 		texturefile = "gfx/interface/goals/generic_automobile.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_police_state"
+		texturefile = "gfx/interface/goals/generic_police_state.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_food_processing"
+		texturefile = "gfx/interface/goals/generic_food_processing.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_arctic_warfare"
+		texturefile = "gfx/interface/goals/generic_arctic_warfare.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_cold_training"
+		texturefile = "gfx/interface/goals/generic_cold_training.png"
 	}
 
 	### Albania ###
@@ -2012,7 +2036,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/AST_new_markets.png"
 	}
 
-	### Austrian Sphere ###	
+	### Austrian Sphere ###
 	SpriteType = {
 		name = "GFX_goal_AUS_step_on_skull"
 		texturefile = "gfx/interface/goals/AUS_step_on_skull.png"
@@ -2540,6 +2564,14 @@ spriteTypes = {
 		name = "GFX_BUL_ITRO"
 		texturefile = "gfx/interface/goals/BUL_ITRO.png"
 	}
+	SpriteType = {
+		name = "GFX_BUL_Front"
+		texturefile = "gfx/interface/goals/BUL_Front.png"
+	}
+	SpriteType = {
+		name = "GFX_BUL_Orange_Guard"
+		texturefile = "gfx/interface/goals/BUL_Orange_Guard.png"
+	}
 
 	### Canada ###
 	SpriteType = {
@@ -2691,6 +2723,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_CHL_create_corfo"
 		texturefile = "gfx/interface/goals/CHL_create_corfo.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CHL_Provisional_Junta"
+		texturefile = "gfx/interface/goals/CHL_Provisional_Junta.png"
 	}
 
 	### China in general ###
@@ -2852,6 +2888,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_FRA_phalanstere"
 		texturefile = "gfx/interface/goals/FRA_phalanstere.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FRA_paris"
+		texturefile = "gfx/interface/goals/FRA_paris.png"
 	}
 
 	### Costa Rica ###
@@ -3070,6 +3110,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/DEI_focus_ban_rice_import.png"
 	}
 	SpriteType = {
+		name = "GFX_goal_INS_army"
+		texturefile = "gfx/interface/goals/INS_army.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_INS_navy"
+		texturefile = "gfx/interface/goals/INS_navy.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_INS_airforce"
+		texturefile = "gfx/interface/goals/INS_airforce.png"
+	}
+	SpriteType = {
 		name = "GFX_goal_INS_focus_abandon_ethical_policy"
 		texturefile = "gfx/interface/goals/INS_focus_abandon_ethical_policy.png"
 	}
@@ -3234,6 +3286,29 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/EGY_navy.png"
 	}
 
+
+	SpriteType = {
+		name = "GFX_goal_EGY_euro_egyptian_joint_ventures"
+		texturefile = "gfx/interface/goals/EGY_euro_egyptian_joint_ventures.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_economic_independence"
+		texturefile = "gfx/interface/goals/EGY_economic_independence.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_credit_agreement"
+		texturefile = "gfx/interface/goals/EGY_credit_agreement.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_wafd"
+		texturefile = "gfx/interface/goals/EGY_wafd.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Father_of_the_Nation"
+		texturefile = "gfx/interface/goals/EGY_Father_of_the_Nation.png"
+	}
+
+
 	### Estonia ###
 	SpriteType = {
 		name = "GFX_goal_EST_Estonian_Eagle_Focus"
@@ -3382,6 +3457,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_FNG_fengtian_army"
 		texturefile = "gfx/interface/goals/FNG_fengtian_army.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FNG_shenyang_academy"
+		texturefile = "gfx/interface/goals/FNG_shenyang_academy.png"
 	}
 
 	### Finland ###
@@ -3537,10 +3616,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_no_compromises"
 		texturefile = "gfx/interface/goals/GER_no_compromises.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_kill_syndies"
-		texturefile = "gfx/interface/goals/GER_kill_syndies.png"
 	}
 	SpriteType = {
 		name = "GFX_goal_our_continent"
@@ -4393,14 +4468,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/JAP_industry.png"
 	}
 	SpriteType = {
-		name = "GFX_goal_Human_tsunam_2"
-		texturefile = "gfx/interface/goals/Human_tsunam_2.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_Human_tsunam_1"
-		texturefile = "gfx/interface/goals/Human_tsunam_1.png"
-	}
-	SpriteType = {
 		name = "GFX_goal_Japanese_Glory"
 		texturefile = "gfx/interface/goals/Japanese_Glory.png"
 	}
@@ -4497,6 +4564,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/LAT_Special_Forces.png"
 	}
 
+	### Lebanon ###
+	SpriteType = {# Lebanese Army
+		name = "GFX_goal_LEB_Army"
+		texturefile = "gfx/interface/goals/LEB_Army.png"
+	}
+
+
 	### Legation Cities ###
 	SpriteType = {# Enlist the Police
 		name = "GFX_goal_enlist_the_police"
@@ -4517,10 +4591,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_LEC_zhang"
 		texturefile = "gfx/interface/goals/LEC_zhang.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_LEC_police3"
-		texturefile = "gfx/interface/goals/LEC_police3.png"
 	}
 	SpriteType = {
 		name = "GFX_goal_LEC_shanghai_yuan"
@@ -4585,18 +4655,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/LIT_ANBOVIII_1.png"
 	}
 	SpriteType = {
-		name = "GFX_goal_LIT_Army_Reform_Broken"
-		texturefile = "gfx/interface/goals/LIT_Army_Reform_Broken.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_LIT_Army_Reform_Fixed"
-		texturefile = "gfx/interface/goals/LIT_Army_Reform_Fixed.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_LIT_BELLIT"
-		texturefile = "gfx/interface/goals/LIT_BELLIT.png"
-	}
-	SpriteType = {
 		name = "GFX_goal_LIT_Bund"
 		texturefile = "gfx/interface/goals/LIT_Bund.png"
 	}
@@ -4611,14 +4669,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_LIT_King"
 		texturefile = "gfx/interface/goals/LIT_King.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_LIT_Litvak"
-		texturefile = "gfx/interface/goals/LIT_Litvak.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_LIT_Litvin"
-		texturefile = "gfx/interface/goals/LIT_Litvin.png"
 	}
 	SpriteType = {
 		name = "GFX_goal_LIT_LSS"
@@ -4649,10 +4699,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/LIT_Naval.png"
 	}
 	SpriteType = {
-		name = "GFX_goal_LIT_PruLit"
-		texturefile = "gfx/interface/goals/LIT_PruLit.png"
-	}
-	SpriteType = {
 		name = "GFX_goal_LIT_Rastikis_Reforms"
 		texturefile = "gfx/interface/goals/LIT_Rastikis_Reforms.png"
 	}
@@ -4675,6 +4721,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_LIT_March"
 		texturefile = "gfx/interface/goals/LIT_March.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_LIT_New_Republic"
+		texturefile = "gfx/interface/goals/LIT_New_Republic.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_LIT_Military_Regime"
+		texturefile = "gfx/interface/goals/LIT_Military_Regime.png"
 	}
 	### League of Eight Provinces ###
 	SpriteType = {
@@ -4963,6 +5017,18 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_MNT_SR"
 		texturefile = "gfx/interface/goals/MNT_SR.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_MNT_Army"
+		texturefile = "gfx/interface/goals/MNT_Army.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_MNT_Air_Force"
+		texturefile = "gfx/interface/goals/MNT_Air_Force.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_MNT_Navy"
+		texturefile = "gfx/interface/goals/MNT_Navy.png"
 	}
 
 	### Mongolia ###
@@ -5387,6 +5453,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/HOL_dutch_army.png"
 	}
 	SpriteType = {
+		name = "GFX_goal_HOL_Reijnders_Putsch"
+		texturefile = "gfx/interface/goals/HOL_Reijnders_Putsch.png"
+	}
+	SpriteType = {
 		name = "GFX_goal_HOL_friendship_with_the_boers"
 		texturefile = "gfx/interface/goals/HOL_friendship_with_the_boers.png"
 	}
@@ -5592,7 +5662,7 @@ spriteTypes = {
 		name = "GFX_goal_NOR_coat_of_arms"
 		texturefile = "gfx/interface/goals/NOR_coat_of_arms.png"
 	}
-	
+
 	### Oman ###
 	SpriteType = {
 		name = "GFX_goal_OMA_Army"
@@ -5799,6 +5869,20 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_OTT_Tarikats"
 		texturefile = "gfx/interface/goals/OTT_tarikats.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_OTT_Fevzi_Pasha"
+		texturefile = "gfx/interface/goals/OTT_Fevzi_Pasha.png"
+	}
+
+	### Turkey ###
+	SpriteType = {
+		name = "GFX_goal_TUR_navy"
+		texturefile = "gfx/interface/goals/TUR_navy.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_TUR_military_regime"
+		texturefile = "gfx/interface/goals/TUR_military_regime.png"
 	}
 
 	### Palestine ###
@@ -6140,8 +6224,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/POR_matters_of_realm.png"
 	}
 	SpriteType = {
-		name = "GFX_goal_POR_portugese_youth"
-		texturefile = "gfx/interface/goals/POR_portugese_youth.png"
+		name = "GFX_goal_POR_portuguese_youth"
+		texturefile = "gfx/interface/goals/POR_portuguese_youth.png"
 	}
 	SpriteType = {
 		name = "GFX_goal_POR_the_moderating_power"
@@ -6566,8 +6650,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SIA_buddhisttraditions.png"
 	}
 	SpriteType = {
-		name = "GFX_SIA_parliment"
-		texturefile = "gfx/interface/goals/SIA_parliment.png"
+		name = "GFX_SIA_parliament"
+		texturefile = "gfx/interface/goals/SIA_parliament.png"
 	}
 	SpriteType = {
 		name = "GFX_SIA_siamese_rifles"
@@ -6938,14 +7022,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SWE_focus_gyllenkrok.png"
 	}
 	SpriteType = {
-		name = "GFX_goal_SWE_focus_bagge"
-		texturefile = "gfx/interface/goals/SWE_focus_bagge.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_SWE_focus_hansson"
-		texturefile = "gfx/interface/goals/SWE_focus_hansson.png"
-	}
-	SpriteType = {
 		name = "GFX_goal_SWE_medal_rifles"
 		texturefile = "gfx/interface/goals/SWE_medal_rifles.png"
 	}
@@ -6968,6 +7044,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_SWE_sap"
 		texturefile = "gfx/interface/goals/SWE_sap.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_SWE_Military_Coup"
+		texturefile = "gfx/interface/goals/SWE_Military_Coup.png"
 	}
 
 	### Switzerland ###
@@ -7175,6 +7255,10 @@ spriteTypes = {
 		name = "GFX_goal_ENG_pluralistic_nationalism"
 		texturefile = "gfx/interface/goals/ENG_pluralistic_nationalism.png"
 	}
+	SpriteType = {
+		name = "GFX_goal_ENG_Highland_Research_Towns"
+		texturefile = "gfx/interface/goals/ENG_Highland_Research_Towns.png"
+	}
 
 	### United Kingdom ###
 	SpriteType = {
@@ -7204,10 +7288,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_GBR_royal_air_force"
 		texturefile = "gfx/interface/goals/GBR_royal_air_force.png"
-	}
-	SpriteType = {
-		name = "GFX_GBR_restoration"
-		texturefile = "gfx/interface/goals/GBR_restoration.png"
 	}
 	SpriteType = {
 		name = "GFX_GBR_british_money"
@@ -7523,7 +7603,7 @@ spriteTypes = {
 		name = "GFX_TIB_army_focus"
 		texturefile = "gfx/interface/goals/TIB_army_focus.png"
 	}
-	
+
 	### Yemen ###
 	SpriteType = {
 		name = "GFX_goal_YEM_Army"
@@ -7544,8 +7624,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/YUN_goal_attack_Sichuan.png"
 	}
 	SpriteType = {
-		name = "GFX_YUN_goal_attack_hunnan"
-		texturefile = "gfx/interface/goals/YUN_goal_attack_hunnan.png"
+		name = "GFX_YUN_goal_attack_hunan"
+		texturefile = "gfx/interface/goals/YUN_goal_attack_hunan.png"
 	}
 	SpriteType = {
 		name = "YUN_GFX_Goal_Exploit_Burma"
@@ -7937,6 +8017,10 @@ spriteTypes = {
 		name = "GFX_goal_MEX_flag"
 		texturefile = "gfx/interface/goals/MEX_flag.png"
 	}
+	SpriteType = {
+		name = "GFX_goal_MEX_Military_Junta"
+		texturefile = "gfx/interface/goals/MEX_Military_Junta.png"
+	}
 	###PANAMA###
 	SpriteType = {
 		name = "GFX_goal_PAN_COA"
@@ -8135,3 +8219,4 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/ZIM_staff.png"
 	}
 }
+

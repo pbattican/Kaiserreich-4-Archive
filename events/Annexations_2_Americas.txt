@@ -58,7 +58,7 @@
 #	Paraguay
 #		Northern Chaco
 #		Southern Chaco
-#		Corrientes
+#		Misiones
 #	Uruguay
 #	Argentina
 #	Chile
@@ -90,6 +90,19 @@ country_event = { #Fate of America
 				limit = { is_russian_tag = yes }
 				add_state_claim = 463
 			}
+			every_state = {
+				limit = {
+					OR = {
+						is_mainland_america = yes
+						state = 463 #Alaska
+					}
+				}
+				add_core_of = USA
+			}
+			every_state = {
+				limit = { is_american_pacific_islands = yes }
+				add_core_of = HAW
+			}
 			USA = {
 				if = {
 					limit = { has_country_leader = { name = "Douglas MacArthur" } }
@@ -119,63 +132,19 @@ country_event = { #Fate of America
 	}
 
 	option = { #Liberate USA
+		name = annex.2000.a
 		trigger = {
 			has_socialist_government = no
 		}
-		name = annex.2000.a
 		ai_chance = {
 			base = 60
 		}
 		set_temp_variable = { tag_to_release = USA }
-		every_state = {
-			limit = {
-				OR = {
-					is_mainland_america = yes
-					is_core_of = HAW
-				}
-			}
-			add_core_of = var:tag_to_release
-		}
-		release_targeted_tag = yes
-	}
-
-	option = { #USA & Hawaii
-		name = annex.2000.b
-		ai_chance = {
-			base = 40
-		}
-		trigger = {
-			has_socialist_government = no
-			NOT = { country_exists = HAW }
-			owns_state = 629
-		}
-		set_temp_variable = { tag_to_release = HAW }
-		every_state = {
-			limit = {
-				OR = {
-					state = 629 #Hawaii
-					state = 631 #Midway Island
-					state = 632 #Wake Island
-					state = 630 #Johnston Atoll
-					state = 727 #Line Islands
-					state = 642 #Phoenix Island
-					state = 726 #Samoa
-				}
-			}
-			add_core_of = var:tag_to_release
-		}
-		release_targeted_tag = yes
-
-		set_temp_variable = { tag_to_release = USA }
-		every_state = {
-			limit = { is_mainland_america = yes }
-			add_core_of = var:tag_to_release
-		}
 		release_targeted_tag = yes
 	}
 
 	option = { #Liberate CSA
-		name = annex.2000.c
+		name = annex.2000.b
 		trigger = {
 			has_socialist_government = yes
 		}
@@ -183,67 +152,19 @@ country_event = { #Fate of America
 			base = 60
 		}
 		set_temp_variable = { tag_to_release = CSA }
-		hidden_effect = {
-			every_state = {
-				limit = {
-					OR = {
-						is_mainland_america = yes
-						is_core_of = HAW
-					}
-				}
-				add_core_of = var:tag_to_release
-			}
-		}
-		release_targeted_tag = yes
-		var:tag_to_release = {
-			unlock_national_focus = CSA_second_convention
-			if = {
-				limit = { has_government = totalist }
-				complete_national_focus = CSA_usas
-			}
-			else = {
-				complete_national_focus = CSA_american_commonwealth
-			}
-		}
-	}
-
-	option = { #CSA + Hawaii
-		name = annex.2000.d
-		trigger = {
-			has_socialist_government = yes
-			NOT = { country_exists = HAW }
-			owns_state = 629
-		}
-		ai_chance = {
-			base = 60
-		}
-		set_temp_variable = { tag_to_release = HAW }
 		every_state = {
 			limit = {
 				OR = {
-					state = 629 #Hawaii
-					state = 631 #Midway Island
-					state = 632 #Wake Island
-					state = 630 #Johnston Atoll
-					state = 727 #Line Islands
-					state = 642 #Phoenix Island
-					state = 726 #Samoa
+					is_mainland_america = yes
+					state = 463 #Alaska
 				}
 			}
-			add_core_of = var:tag_to_release
-		}
-		release_targeted_tag = yes
-
-		set_temp_variable = { tag_to_release = CSA }
-		hidden_effect = {
-			every_state = {
-				limit = { is_mainland_america = yes }
-				add_core_of = var:tag_to_release
-			}
+			remove_core_of = USA
+			add_core_of = CSA
 		}
 		release_targeted_tag = yes
 		var:tag_to_release = {
-
+			unlock_national_focus = CSA_second_convention
 			if = {
 				limit = { has_government = totalist }
 				complete_national_focus = CSA_usas
@@ -251,7 +172,6 @@ country_event = { #Fate of America
 			else = {
 				complete_national_focus = CSA_american_commonwealth
 			}
-			unlock_national_focus = CSA_second_convention
 		}
 	}
 
@@ -646,7 +566,7 @@ country_event = { #Fate of Mexico
 		hidden_effect = {
 			MEX = {
 				if = {
-					limit = { has_cosmetic_tag = MEE }
+					limit = { has_cosmetic_tag = MEX_empire }
 					drop_cosmetic_tag = yes
 					kill_ideology_leader = social_democrat
 					kill_ideology_leader = social_liberal
@@ -655,10 +575,6 @@ country_event = { #Fate of Mexico
 					kill_ideology_leader = authoritarian_democrat
 					kill_ideology_leader = paternal_autocrat
 					kill_ideology_leader = national_populist
-				}
-				set_politics = {
-					ruling_party = var:current_party_ideology_group
-					elections_allowed = no
 				}
 			}
 		}
@@ -706,7 +622,7 @@ country_event = { #Fate of Mexico
 				AND = {
 					tag = NFA
 					has_country_leader = {
-						name = "Louis Napoleon IV"
+						name = "Napoléon VI"
 						ruling_only = yes
 					}
 				}
@@ -721,9 +637,9 @@ country_event = { #Fate of Mexico
 		var:tag_to_release = {
 			if = {
 				limit = {
-					NOT = { has_cosmetic_tag = MEE }
+					NOT = { has_cosmetic_tag = MEX_empire }
 				}
-				set_cosmetic_tag = MEE
+				set_cosmetic_tag = MEX_empire
 				hidden_effect = {
 					create_country_leader = {
 						name = "María Josepha Sophia"
@@ -827,6 +743,163 @@ country_event = { # The fate of an unified central America
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			CEN = {
+				load_focus_tree = generic_focus
+				if = {
+					limit = { has_authoritarian_government = yes }
+					remove_ideas = {
+						CENmil_political_instability_idea
+						CENmil_economic_instability_idea
+						CENmil_economic_instability_idea_2
+						CENmil_economic_instability_idea_3
+						CENmil_chaotic_army_idea
+						CENmil_nsa_idea1
+						CENmil_nsa_idea2
+						CENmil_check_opposition_idea
+						CENmil_economic_control_idea
+						CENmil_education_effort_idea
+						CENmil_chain_command_idea
+						CENmil_professional_army_idea
+						CENmil_autonomous_officers_idea
+						CENmil_small_units_idea
+						CENmil_guerilla_tactics_idea
+						CENmil_military_awesome_idea
+						CENmil_world_exports_idea
+						CENmil_large_investments
+						CENmil_medium_investments
+						CENmil_small_investments
+						CENmil_made_in_ca_idea
+						CENmil_cheap_labour_idea
+						CENmil_cash_crops
+						CENmil_agri_boom_idea
+						CENmil_agri_money_idea
+						CENmil_united_fruit
+						CENmil_trans_ca_rail_1
+						CENmil_trans_ca_rail_2
+						CENmil_trans_ca_rail_3
+						CENmil_trans_ca_rail_4
+						CENmil_trans_ca_rail_5
+						CENmil_major_strike
+						CENmil_major_strike2
+						CENmil_major_port_strike
+						CENmil_major_port_strike2
+						CENmil_major_rail_strike
+						CENmil_major_rail_strike2
+					}
+				}
+				else_if = {
+					limit = { has_elected_government = yes }
+					remove_ideas = {
+						CENdem_New_Union
+						CENdem_New_Union2
+						CENdem_New_Union3
+						CENdem_Soccon_identity
+						CENdem_Soccon_identity2
+						CENdem_Soccon_identity3
+						CENdem_Soccon_identity4
+						CENdem_Soccon_UFC_Purged
+						CENdem_Soccon_american_research_dream
+						CENdem_spirit_of_reunification
+						CENdem_Incompetent_Army
+						CENdem_trade_naval_thingy
+						CENdem_ace_generate_thingy
+						CENdem_ace_generate_thingy_but_more_things
+						CENdem_more_centralisation
+						CENdem_industrialisation_desperation_1
+						CENdem_industrialisation_desperation_2
+						CENdem_industrialisation_desperation_3
+						CENdem_industrialisation_desperation_fixed
+						CENdem_tax_cash_crop
+						CENdem_marlib_trade_freaks
+						CENdem_marlib_army_defanged
+						CENdem_marlib_infra_bonus
+						CENdem_federation_principles
+						CENdem_federation_principles_2
+						CENdem_ancapistan_idea
+						CENdem_self_employment
+						CENdem_progressive_taxation
+						CENdem_socdem_army_nerf
+						CENdem_socdem_army_buff
+						CENdem_socdem_army_buff_2
+						CENdem_decentralised_economy
+						CENdem_the_workers_plight
+						CENdem_the_workers_plight_2
+						CENdem_the_workers_plight_3
+						CENdem_the_workers_plight_4
+						CENdem_the_workers_plight_5
+						CENdem_peacefull_radsocs
+						CENdem_equal_races
+						CENdem_splendid_isolation
+						CENdem_land_reform
+						CENdem_nationalised_railroads
+						CENdem_good_taxation
+						CENdem_integrating_army
+						CENdem_integrating_army_further
+						CENdem_completed_integration
+						CENdem_more_integrated_manpower
+						CENdem_faster_plans
+						CENdem_faster_plans_with_entrenchment
+						CENdem_prolonged_conscription
+						CENdem_preparing_a_task_force
+						CENdem_task_force_finished
+						CENdem_running_in_the_40s
+						CENdem_republican_armies
+						CENdem_republican_armies_2
+						CENdem_republican_armies_3
+						CENdem_republican_armies_4
+						CENdem_republican_armies_suck
+					}
+				}
+				else = {
+					remove_ideas = {
+						CEN_native_rights
+						CEN_export_profits
+						CEN_trade_unions
+						CEN_chairman_idea
+						CEN_army_idea
+						CEN_militias_idea
+						CEN_breadbasket_idea
+						CEN_industrial_idea
+						CEN_people_elections_idea
+						CEN_rel_soc_idea
+						CEN_spread_light_idea
+						CEN_small_man_idea
+						CEN_edu_reform_idea
+						CEN_agri_reform_idea
+						CEN_trade_idea
+						CEN_cash_crop_idea
+						CEN_self_suff_idea
+						CEN_pop_defense_idea
+						CEN_agri_reform_idea2
+						CEN_agri_reform_idea3
+						CEN_cash_crop_idea2
+						CEN_budget_idea
+						CEN_farm_to_fact_idea
+						CEN_statewide_idea
+						CEN_statewide_idea2
+						CEN_normalize_idea
+						CEN_spread_revo_idea
+						CEN_moving_jungle_idea
+						CEN_new_generals_idea
+						CEN_conscription_idea
+						CEN_attrition_idea
+						CEN_training_idea
+						CEN_core_defense_idea
+						CEN_dig_in_idea
+						CEN_supply_idea
+						CEN_soc_fund_idea
+						CEN_airbase_construction
+						CEN_socialist_airforce
+						CEN_heavy_prod_idea
+						CEN_light_prod_idea
+					}
+				}
+			}
+		}
+	}
+
 	option = { # Release a loyal unified central America
 		name = annex.2005.a
 		trigger = {
@@ -842,7 +915,6 @@ country_event = { # The fate of an unified central America
 					NOT = { is_core_of = CEN }
 					OR = {
 						state = 311
-						state = 1071
 						is_core_of = GUA
 						is_core_of = ELS
 						is_core_of = HON
@@ -875,38 +947,36 @@ country_event = { # The fate of an unified central America
 			set_temp_variable = { tag_to_release = CEN }
 			puppet_released_tag = yes
 			CEN = {
-				clr_country_flag = CEN_centro_released
 				if = {
-					limit = {
-						ROOT = {
-							has_socialist_government = yes
-						}
-					}
-					load_focus_tree = Centroamerica_focus #Loads the Commie tree
-					set_country_flag = CEN_centro_released
-				}
-				else_if = {
-					limit = {
-						ROOT = {
-							has_elected_government = yes
-						}
-					}
+					limit = { has_elected_government = yes }
 					load_focus_tree = CA_DEM_focus
 					set_cosmetic_tag = CEN_CON
 					set_party_name = {
 						ideology = social_democrat
 						name = CEN_social_democrat_liberal
-						long_name = CEN_social_democrat_liberal
+						long_name = CEN_social_democrat_liberal_long
+					}
+					hidden_effect = {
+						add_ideas = {
+							CENdem_New_Union
+							CENdem_Incompetent_Army
+						}
 					}
 				}
 				else_if = {
-					limit = {
-						ROOT = {
-							has_authoritarian_government = yes
-						}
-					}
+					limit = { has_authoritarian_government = yes }
 					set_cosmetic_tag = CEN_REP
 					load_focus_tree = CA_military_focus
+					hidden_effect = {
+						add_ideas = {
+							CENmil_political_instability_idea
+							CENmil_economic_instability_idea
+							CENmil_chaotic_army_idea
+						}
+					}
+				}
+				else = {
+					load_focus_tree = Centroamerica_focus
 				}
 
 				if = {
@@ -982,7 +1052,7 @@ country_event = { # The fate of an unified central America
 		ai_chance = {
 			base = 0
 		}
-		custom_effect_tooltip = release_cen_seperate
+		custom_effect_tooltip = release_cen_separate
 		hidden_effect = {
 			if = {
 				limit = {
@@ -1014,18 +1084,6 @@ country_event = { # The fate of an unified central America
 
 			set_temp_variable = { tag_to_release = NIC }
 			release_targeted_tag = yes
-
-			if = {
-				limit = {
-					1071 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				NIC = {
-					transfer_state = 1071
-					add_state_claim = 1071
-				}
-			}
 			NIC_setleaders = yes
 
 			set_temp_variable = { tag_to_release = HON }
@@ -1196,11 +1254,7 @@ country_event = { #The Fate of Guatemala
 			}
 		}
 		if = {
-			limit = {
-				OR = {
-					has_socialist_government = yes
-				}
-			}
+			limit = { has_socialist_government = yes }
 			GUA = {
 				set_politics = {
 					ruling_party = radical_socialist
@@ -1212,39 +1266,8 @@ country_event = { #The Fate of Guatemala
 				}
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					AND = {
-						NOT = {
-							tag = NIC
-						}
-						has_government = social_democrat
-					}
-				}
-			}
-			GUA = {
-				set_politics = {
-					ruling_party = social_conservative
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_conservative
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
+		else_if = {
+			limit = { has_authoritarian_government = yes }
 			GUA = {
 				set_politics = {
 					ruling_party = paternal_autocrat
@@ -1252,6 +1275,18 @@ country_event = { #The Fate of Guatemala
 				}
 				add_popularity = {
 					ideology = paternal_autocrat
+					popularity = 0.40
+				}
+			}
+		}
+		else = {
+			GUA = {
+				set_politics = {
+					ruling_party = social_conservative
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = social_conservative
 					popularity = 0.40
 				}
 			}
@@ -1281,9 +1316,7 @@ country_event = { #The Fate of Guatemala
 		release_targeted_tag = yes
 
 		if = {
-			limit = {
-				has_socialist_government = yes
-			}
+			limit = { has_socialist_government = yes }
 			GUA = {
 				set_politics = {
 					ruling_party = radical_socialist
@@ -1295,39 +1328,8 @@ country_event = { #The Fate of Guatemala
 				}
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					AND = {
-						NOT = {
-							tag = NIC
-						}
-						has_government = social_democrat
-					}
-				}
-			}
-			GUA = {
-				set_politics = {
-					ruling_party = social_conservative
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_conservative
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
+		else_if = {
+			limit = { has_authoritarian_government = yes }
 			GUA = {
 				set_politics = {
 					ruling_party = paternal_autocrat
@@ -1335,6 +1337,18 @@ country_event = { #The Fate of Guatemala
 				}
 				add_popularity = {
 					ideology = paternal_autocrat
+					popularity = 0.40
+				}
+			}
+		}
+		else = {
+			GUA = {
+				set_politics = {
+					ruling_party = social_conservative
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = social_conservative
 					popularity = 0.40
 				}
 			}
@@ -1372,9 +1386,7 @@ country_event = { #The Fate of El Salvador
 		release_targeted_tag = yes
 
 		if = {
-			limit = {
-				has_socialist_government = yes
-			}
+			limit = { has_socialist_government = yes }
 			ELS = {
 				set_politics = {
 					ruling_party = syndicalist
@@ -1386,39 +1398,8 @@ country_event = { #The Fate of El Salvador
 				}
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					AND = {
-						NOT = {
-							tag = NIC
-						}
-						has_government = social_democrat
-					}
-				}
-			}
-			ELS = {
-				set_politics = {
-					ruling_party = social_democrat
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_democrat
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
+		else_if = {
+			limit = { has_authoritarian_government = yes }
 			ELS = {
 				set_politics = {
 					ruling_party = paternal_autocrat
@@ -1426,6 +1407,18 @@ country_event = { #The Fate of El Salvador
 				}
 				add_popularity = {
 					ideology = paternal_autocrat
+					popularity = 0.40
+				}
+			}
+		}
+		else = {
+			ELS = {
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = social_democrat
 					popularity = 0.40
 				}
 			}
@@ -1463,53 +1456,31 @@ country_event = { #The Fate of Honduras
 		release_targeted_tag = yes
 
 		if = {
-			limit = {
-				has_socialist_government = yes
-			}
+			limit = { has_socialist_government = yes }
 			HON = {
 				set_politics = {
 					ruling_party = totalist
 					elections_allowed = no
 				}
-				add_popularity = {
-					ideology = totalist
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					AND = {
-						NOT = {
-							tag = NIC
-						}
-						has_government = social_democrat
+				hidden_effect = {
+					set_popularities = {
+						totalist = 63
+						radical_socialist = 6
+						syndicalist = 11
+						social_democrat = 4
+						social_liberal = 4
+						market_liberal = 2
+						authoritarian_democrat = 1
+						social_conservative = 2
+						paternal_autocrat = 2
+						national_populist = 5
 					}
-				}
-			}
-			HON = {
-				set_politics = {
-					ruling_party = social_liberal
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_liberal
-					popularity = 0.40
+					set_country_flag = HON_the_revolution
 				}
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
+		else_if = {
+			limit = { has_authoritarian_government = yes }
 			HON = {
 				set_politics = {
 					ruling_party = paternal_autocrat
@@ -1549,75 +1520,80 @@ country_event = { #The Fate of Nicaragua
 		ai_chance = {
 			base = 99
 		}
-
 		set_temp_variable = { tag_to_release = NIC }
 		release_targeted_tag = yes
-
-		hidden_effect = {
-			if = {
-				limit = {
-					1071 = {
-						is_owned_and_controlled_by = ROOT
+		if = {
+			limit = { has_socialist_government = yes }
+			NIC = {
+				set_politics = {
+					ruling_party = syndicalist
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 1
+						syndicalist = 36
+						radical_socialist = 32
+						social_democrat = 4
+						social_liberal = 11
+						market_liberal = 3
+						authoritarian_democrat = 10
+						paternal_autocrat = 3
 					}
 				}
-				NIC = {
-					transfer_state = 1071
-				}
+				set_country_flag = NIC_socialist_revolution_flag
+				set_country_flag = NIC_moreno_sandino_together_flag
+				set_country_flag = NIC_socialist_betrayal
 			}
 		}
-
-		if = {
-			limit = {
-				has_socialist_government = yes
-			}
-			NIC = {
-				set_politics = {
-					ruling_party = radical_socialist
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = radical_socialist
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					has_government = social_democrat
-				}
-			}
-			NIC = {
-				set_politics = {
-					ruling_party = social_liberal
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_liberal
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
+		else_if = {
+			limit = { has_authoritarian_government = yes }
 			NIC = {
 				set_politics = {
 					ruling_party = paternal_autocrat
 					elections_allowed = no
 				}
-				add_popularity = {
-					ideology = paternal_autocrat
-					popularity = 0.40
+				hidden_effect = {
+					set_popularities = {
+						syndicalist = 27
+						radical_socialist = 3
+						social_democrat = 6
+						social_liberal = 9
+						authoritarian_democrat = 11
+						paternal_autocrat = 21
+						paternal_autocrat = 17
+						national_populist = 6
+					}
 				}
+				if = {
+					limit = { NOT = { has_country_flag = NIC_sandino_bacc } }
+					add_ideas = NIC_sandino_resistance_base
+					set_country_flag = NIC_sandino_attack_flag
+				}
+				set_country_flag = NIC_national_guard_flag
+			}
+		}
+		else = {
+			NIC = {
+				set_politics = {
+					ruling_party = social_liberal
+					elections_allowed = no
+				}
+				hidden_effect = {
+					set_popularities = {
+						totalist = 3
+						syndicalist = 22
+						radical_socialist = 11
+						social_democrat = 3
+						social_liberal = 35
+						market_liberal = 6
+						authoritarian_democrat = 10
+						paternal_autocrat = 9
+						national_populist = 1
+					}
+				}
+				set_country_flag = NIC_liberal_revolution_flag
+				set_country_flag = NIC_liberal_betrayal
 			}
 		}
 		NIC_setleaders = yes
@@ -1818,6 +1794,7 @@ country_event = { #Fate of Haiti
 					tag = PSA
 					tag = TEX
 					has_government = paternal_autocrat
+					has_country_leader = { name = "Franck Lavaud" ruling_only = yes }
 				}
 				HAI = {
 					has_country_leader = { name = "John Russell" ruling_only = yes }
@@ -1857,8 +1834,30 @@ country_event = { #Fate of Haiti
 			}
 		}
 		else_if = {
+			limit = {
+				has_country_leader = { name = "Franck Lavaud" ruling_only = yes }
+			}
+			create_country_leader = {
+				name = "Alfred Auguste Nemours"
+				picture = "Portrait_Haiti_Alfred_Auguste_Nemours.png"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+			}
+		}
+		else_if = {
 			limit = { tag = DOM }
 			hidden_effect = { country_event = { id = domrep.89 days = 2 } }
+			if = {
+				limit = {
+					has_country_leader = { name = "Franck Lavaud" ruling_only = yes }
+				}
+				create_country_leader = {
+					name = "Alfred Auguste Nemours"
+					picture = "Portrait_Haiti_Alfred_Auguste_Nemours.png"
+					expire = "1965.1.1"
+					ideology = paternal_autocrat_subtype
+				}
+			}
 		}
 	}
 	option = {
@@ -1913,8 +1912,30 @@ country_event = { #Fate of Haiti
 			}
 		}
 		else_if = {
+			limit = {
+				has_country_leader = { name = "Franck Lavaud" ruling_only = yes }
+			}
+			create_country_leader = {
+				name = "Alfred Auguste Nemours"
+				picture = "Portrait_Haiti_Alfred_Auguste_Nemours.png"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+			}
+		}
+		else_if = {
 			limit = { tag = DOM }
 			hidden_effect = { country_event = { id = domrep.89 days = 2 } }
+			if = {
+				limit = {
+					has_country_leader = { name = "Franck Lavaud" ruling_only = yes }
+				}
+				create_country_leader = {
+					name = "Alfred Auguste Nemours"
+					picture = "Portrait_Haiti_Alfred_Auguste_Nemours.png"
+					expire = "1965.1.1"
+					ideology = paternal_autocrat_subtype
+				}
+			}
 		}
 		MSN_transfer_lease = yes
 	}
@@ -1925,7 +1946,12 @@ country_event = { #Fate of Haiti
 		occupy_small_country = yes
 		hidden_effect = {
 			if = {
-				limit = { tag = DOM }
+				limit = {
+					tag = DOM
+					NOT = {
+						has_global_flag = DOMHAI_hairebel
+					}
+				}
 				HAI = { country_event = { id = domrep.86 days = 105 } }
 			}
 		}
@@ -1968,8 +1994,13 @@ country_event = { #Fate of the Dominican Republic
 		occupy_small_country = yes
 		hidden_effect = {
 			if = {
-				limit = { tag = HAI }
-				DOM = { country_event = { id = domrep.82 days = 105 } }
+				limit = {
+					tag = HAI
+					NOT = {
+						has_global_flag = DOMHAI_domrebel
+					}
+				}
+				DOM = { country_event = { id = domrep.80 days = 105 } }
 			}
 		}
 	}
@@ -2145,342 +2176,52 @@ country_event = { #Fate of the West Indies Federation
 	desc = annexation_CAF_CONQ_desc
 	picture = GFX_report_event_generic_conference2
 
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = HOL
+					has_socialist_government = no
+				}
+				add_state_claim = 695 #Curacao
+				add_state_claim = 1038 #Suriname Jungle
+				add_state_claim = 1077 #Saint Martin
+				add_state_claim = 309 #Suriname
+			}
+			else_if = {
+				limit = { tag = NFA }
+				add_state_claim = 694 #French Caribbean
+				add_state_claim = 310 #East Guyana
+				add_state_claim = 1037 #East Guyana Jungle
+			}
+			CAF = {
+				add_state_core = 310 #East Guyana
+				add_state_core = 694 #French Caribbean
+				add_state_core = 1037 #Inini Territory
+				clr_country_flag = WIF_can_revolt
+			}
+		}
+	}
+
 	is_triggered_only = yes
 
 	option = {
 		name = annex.2016.a #Liberate the West Indies Federation
-		trigger = {
-			NOT = { tag = CAN }
-			count_triggers = {
-				amount = 3
-				309 = { is_valid_annexation_state = yes } #Suriname
-				686 = { is_valid_annexation_state = yes } #Puerto Rico
-				687 = { is_valid_annexation_state = yes } #Guyana
-				689 = { is_valid_annexation_state = yes } #Jamaica
-				691 = { is_valid_annexation_state = yes } #Trinidad
-			}
-		}
 		ai_chance = {
 			base = 100
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-					309 = {
-						NOT = {
-							is_core_of = CAF
-						}
-					}
-				}
-				every_state = {
-					limit = {
-						is_caribbean_fed = yes
-						is_owned_by = ROOT
-						is_not_claim_or_core_of_ROOT = yes
-						NOT = {
-							state = 309
-							state = 1038
-						}
-					}
-					if = {
-						limit = { is_claimed_by = CAF }
-						remove_claim_by = CAF
-					}
-					add_core_of = CAF
-				}
-				every_state = {
-					limit = {
-						is_caribbean_fed = yes
-						OR = {
-							NOT = {
-								is_owned_by = ROOT
-								state = 309
-								state = 1038
-							}
-							is_claim_or_core_of_ROOT = yes
-						}
-					}
-					if = {
-						limit = { is_core_of = CAF }
-						remove_core_of = CAF
-						add_claim_by = CAF
-					}
-				}
-			}
-			else = {
-				every_state = {
-					limit = {
-						is_caribbean_fed = yes
-						is_owned_by = ROOT
-						is_not_claim_or_core_of_ROOT = yes
-					}
-					if = {
-						limit = { is_claimed_by = CAF }
-						remove_claim_by = CAF
-					}
-					add_core_of = CAF
-				}
-				every_state = {
-					limit = {
-						is_caribbean_fed = yes
-						OR = {
-							NOT = { is_owned_by = ROOT }
-							is_claim_or_core_of_ROOT = yes
-						}
-					}
-					if = {
-						limit = { is_core_of = CAF }
-						remove_core_of = CAF
-						add_claim_by = CAF
-					}
-				}
-			}
-			if = {
-				limit = { tag = HOL }
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 695 #Curacao
-							state = 1038 #Suriname Jungle
-							state = 1077 #Saint Martin
-							state = 309 #Suriname
-						}
-					}
-					remove_core_of = CAF
-					remove_claim_by = CAF
-				}
-			}
-			if = {
-				limit = { tag = NFA }
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 694 #French Caribbean
-							state = 310 #East Guyana
-							state = 1037 #East Guyana Jungle
-						}
-					}
-					remove_core_of = CAF
-					remove_claim_by = CAF
-				}
-			}
-		}
-
 		set_temp_variable = { tag_to_release = CAF }
-		release_targeted_tag = yes
-		if = {
-			limit = { has_socialist_government = yes }
-			var:tag_to_release = {
-				hidden_effect = {
-					set_politics = {
-						ruling_party = syndicalist
-					}
-					set_country_flag = CAF_syndie_revolution
-					set_cosmetic_tag = CAF_union
-					create_country_leader = {
-						name = "Joseph Lagrosillière"
-						desc = "POLITICS_JOSEPH_LAGROSILLIERE_DESC"
-						picture = "Portrait_CAF_Joseph_Lagrosilliere.png"
-						expire = "1965.1.1"
-						ideology = social_democrat_subtype
-					}
-					set_popularities = {
-						totalist = 4
-						syndicalist = 33
-						radical_socialist = 24
-						social_democrat = 27
-						social_liberal = 0
-						market_liberal = 5
-						social_conservative = 4
-						authoritarian_democrat = 0
-						paternal_autocrat = 3
-						national_populist = 0
-					}
-					remove_ideas = {
-						CAF_french_conscription_ncp
-						CAF_consolidation_effect1
-						CAF_consolidation_effect2
-						CAF_consolidation_effect3
-						CAF_consolidation_effect4
-					}
-					add_state_core = 310
-					add_state_core = 694
-					add_state_core = 1037
-					add_stability = -0.4
-					complete_national_focus = CAF_syndicalist_revolution
-					set_party_name = {
-						ideology = social_democrat
-						long_name = CAF_social_democrat_party_syndie_long
-						name = CAF_social_democrat_party_syndie
-					}
-					set_party_name = {
-						ideology = syndicalist
-						long_name = CAF_syndicalist_party_after_revolt_long
-						name = CAF_syndicalist_party_after_revolt
-					}
-					set_party_name = {
-						ideology = radical_socialist
-						long_name = CAF_radical_socialist_party_after_revolt_long
-						name = CAF_radical_socialist_party_after_revolt
-					}
-					set_variable = { var = CAF_british_anger value = 55 }
-					set_variable = { var = CAF_socialist_anger value = 0 }
-
-					custom_effect_tooltip = CAF_add_rev_empire
-					custom_effect_tooltip = CAF_add_rev_socialist
-
-					remove_all_ministers = yes
-					add_ideas = {
-						CAF_elie_bloncourt_hog_syn
-						CAF_albert_gomes_for_syn
-						CAF_hubert_nathaniel_critchlow_eco_syn
-						CAF_gerty_archimede_sec_syn
-					}
-
-					clr_country_flag = CAF_governors_coup
-				}
-			}
-		}
-		else = {
-			var:tag_to_release = {
-				clr_country_flag = CAF_syndie_revolution
-				set_party_name = {
-					ideology = social_democrat
-					long_name = CAF_social_democrat_party_long
-					name = CAF_social_democrat_party
-				}
-				set_party_name = {
-					ideology = syndicalist
-					long_name = CAF_syndicalist_party_long
-					name = CAF_syndicalist_party
-				}
-				set_party_name = {
-					ideology = radical_socialist
-					long_name = CAF_radical_socialist_party_long
-					name = CAF_radical_socialist_party
-				}
-			}
-		}
-
-		if = {
+		every_owned_state = {
 			limit = {
-				has_socialist_government = no
-				NOT = {
-					is_in_faction_with = ENT
-				}
+				is_caribbean_fed = yes
+				is_claim_or_core_of_ROOT = no
 			}
-			hidden_effect = {
-				var:tag_to_release = { set_cosmetic_tag = CAF_variantflag }
-			}
+			transfer_state_without_overriding_occupation = yes
 		}
+		puppet_released_tag = yes
+		CAF_puppet_setup = yes
 	}
-	option = { #Canada option 1, puppeting them back
-		name = annex.2016.c
-		ai_chance = {
-			base = 50
-		}
-		trigger = {
-			tag = CAN
-			count_triggers = {
-				amount = 3
-				309 = { is_valid_annexation_state = yes } #Suriname
-				686 = { is_valid_annexation_state = yes } #Puerto Rico
-				687 = { is_valid_annexation_state = yes } #Guyana
-				689 = { is_valid_annexation_state = yes } #Jamaica
-				691 = { is_valid_annexation_state = yes } #Trinidad
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					309 = {
-						NOT = {
-							is_core_of = CAF
-						}
-					}
-				}
-				every_state = {
-					limit = {
-						is_caribbean_fed = yes
-						is_owned_by = ROOT
-						is_not_claim_or_core_of_ROOT = yes
-						NOT = {
-							state = 309
-							state = 1038
-						}
-					}
-					if = {
-						limit = { is_claimed_by = CAF }
-						remove_claim_by = CAF
-					}
-					add_core_of = CAF
-				}
-				every_state = {
-					limit = {
-						is_caribbean_fed = yes
-						OR = {
-							NOT = {
-								is_owned_by = ROOT
-								state = 309
-								state = 1038
-							}
-							is_claim_or_core_of_ROOT = yes
-						}
-					}
-					if = {
-						limit = { is_core_of = CAF }
-						remove_core_of = CAF
-						add_claim_by = CAF
-					}
-				}
-			}
-			else = {
-				every_state = {
-					limit = {
-						is_caribbean_fed = yes
-						is_owned_by = ROOT
-						is_not_claim_or_core_of_ROOT = yes
-					}
-					if = {
-						limit = { is_claimed_by = CAF }
-						remove_claim_by = CAF
-					}
-					add_core_of = CAF
-				}
-				every_state = {
-					limit = {
-						is_caribbean_fed = yes
-						OR = {
-							NOT = { is_owned_by = ROOT }
-							is_claim_or_core_of_ROOT = yes
-						}
-					}
-					if = {
-						limit = { is_core_of = CAF }
-						remove_core_of = CAF
-						add_claim_by = CAF
-					}
-				}
-			}
-		}
-		set_temp_variable = { tag_to_release = CAF }
-		release_targeted_tag = yes
 
-		hidden_effect = {
-			set_autonomy = {
-				target = CAF
-				autonomy_state = kr_initial_wif_puppet
-			}
-			CAF = {
-				clr_country_flag = CAF_syndie_revolution
-				set_politics = { ruling_party = authoritarian_democrat }
-				add_popularity = {
-					ideology = authoritarian_democrat
-					popularity = 0.25
-				}
-			}
-		}
-	}
 	option = { #Decide what to do with each region
 		name = annex.2016.b
 		ai_chance = {
@@ -2489,6 +2230,7 @@ country_event = { #Fate of the West Indies Federation
 		set_country_flag = CAF_CONQ
 		recheck_annexations_immediate = yes
 	}
+
 	option = { #Occupy
 		name = annex.occupation
 		ai_chance = {
@@ -2511,10 +2253,6 @@ country_event = { #The Annexation of Jamaica
 
 	is_triggered_only = yes
 
-	trigger = {
-		owns_state = 689
-	}
-
 	option = { #puppet
 		name = annex.2017.a
 		ai_chance = {
@@ -2523,29 +2261,19 @@ country_event = { #The Annexation of Jamaica
 		set_temp_variable = { tag_to_release = JAM }
 		release_targeted_tag = yes
 	}
+
 	option = {
 		name = annex.2017.b #give it to CAF
 		trigger = {
-			CAF = {
-				exists = yes
-				is_ally_of_ROOT = yes
-			}
+			CAF = { is_ally_with = ROOT }
 		}
 		ai_chance = {
 			base = 300
 		}
-		689 = {
-			if = {
-				limit = { is_claimed_by = CAF }
-				remove_claim_by = CAF
-			}
-			if = {
-				limit = { NOT = { is_core_of = CAF } }
-				add_core_of = CAF
-			}
-			CAF = { transfer_state = PREV }
-		}
+		set_temp_variable = { tag_to_release = CAF }
+		689 = { transfer_state_and_add_core = yes }
 	}
+
 	option = { #occupy
 		name = annex.occupation
 		ai_chance = {
@@ -2567,11 +2295,7 @@ country_event = { #Fate of the Caribbean Islands
 
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = { NOT = { country_exists = CAF } }
-				add_to_temp_array = { core_removal_array = CAF }
-				remove_all_cores_and_claims_of_tags = yes
-			}
+			CAF = { clr_country_flag = WIF_can_revolt }
 		}
 	}
 
@@ -2593,32 +2317,16 @@ country_event = { #Fate of the Caribbean Islands
 						state = 690 #Bahamas
 						state = 692 #Windward Islands
 						state = 694 #French Caribbean
+						state = 695 #Curaçao
 						state = 696 #Bermuda
-						AND = {
-							OR = {
-								state = 695 #Curaçao
-								state = 1077 #Saint Martin
-							}
-							ROOT = {
-								NOT = { tag = HOL }
-							}
-						}
+						state = 1077 #Saint Martin
 					}
 				}
-				var:tag_to_release = {
-					add_state_core = PREV
-					transfer_state = PREV
-				}
+				transfer_state_without_overriding_occupation = yes
 			}
 		}
 		puppet_released_tag = yes
-		if = {
-			limit = { has_socialist_government = yes }
-			var:tag_to_release = { complete_national_focus = CAF_syndicalist_revolution }
-		}
-		else = {
-			var:tag_to_release = { clr_country_flag = CAF_syndie_revolution }
-		}
+		CAF_puppet_setup = yes
 	}
 
 	option = {
@@ -2638,54 +2346,20 @@ country_event = { #Fate of the Caribbean Islands
 					state = 690 #Bahamas
 					state = 692 #Windward Islands
 					state = 694 #French Caribbean
+					state = 695 #Curaçao
 					state = 696 #Bermuda
-					AND = {
-						OR = {
-							state = 695 #Curaçao
-							state = 1077 #Saint Martin
-						}
-						ROOT = {
-							NOT = { tag = HOL }
-						}
-					}
+					state = 1077 #Saint Martin
 				}
 			}
-			var:tag_to_release = {
-				add_state_core = PREV
-				transfer_state = PREV
-			}
+			transfer_state_without_overriding_occupation = yes
 		}
 	}
 
 	option = { #Occupy
 		name = annex.occupation
-		trigger = { is_ai = no }
+		ai_chance = { base = 0 }
 		set_country_flag = CARIBBEAN_CONQ
 		occupy_small_country = yes
-		hidden_effect = {
-			every_owned_state = {
-				limit = {
-					is_claim_or_core_of_ROOT = no
-					OR = {
-						state = 308 #Leeward Islands
-						state = 690 #Bahamas
-						state = 692 #Windward Islands
-						state = 694 #French Caribbean
-						state = 696 #Bermuda
-						AND = {
-							OR = {
-								state = 695 #Curaçao
-								state = 1077 #Saint Martin
-							}
-							ROOT = {
-								NOT = { tag = HOL }
-							}
-						}
-					}
-				}
-				add_core_of = CAF
-			}
-		}
 	}
 }
 
@@ -2698,10 +2372,6 @@ country_event = { #The Annexation of Trinidad
 
 	is_triggered_only = yes
 
-	trigger = {
-		owns_state = 691
-	}
-
 	option = { #puppet
 		name = annex.2019.a
 		ai_chance = {
@@ -2710,6 +2380,7 @@ country_event = { #The Annexation of Trinidad
 		set_temp_variable = { tag_to_release = TRI }
 		release_targeted_tag = yes
 	}
+
 	option = {
 		name = annex.2019.b #give it to CAF
 		trigger = {
@@ -2721,18 +2392,10 @@ country_event = { #The Annexation of Trinidad
 		ai_chance = {
 			base = 300
 		}
-		691 = {
-			if = {
-				limit = { is_claimed_by = CAF }
-				remove_claim_by = CAF
-			}
-			if = {
-				limit = { NOT = { is_core_of = CAF } }
-				add_core_of = CAF
-			}
-			CAF = { transfer_state = PREV }
-		}
+		set_temp_variable = { tag_to_release = CAF }
+		691 = { transfer_state_and_add_core = yes }
 	}
+
 	option = { #occupy
 		name = annex.occupation
 		ai_chance = {
@@ -2793,14 +2456,6 @@ country_event = { #Fate of Bolivia
 			var:tag_to_release = { transfer_state = PREV }
 		}
 		puppet_released_tag = yes
-
-		var:tag_to_release = {
-			set_politics = {
-				ruling_party = var:ROOT.current_party_ideology_group
-				elections_allowed = no
-			}
-		}
-
 		if = {
 			limit = {
 				OR = {
@@ -3000,6 +2655,25 @@ country_event = { #Fate of Peru
 			var:tag_to_release = { transfer_state = PREV }
 		}
 		puppet_released_tag = yes
+		hidden_effect = {
+			if = {
+				limit = { has_socialist_government = yes }
+				PRU = {
+					every_unit_leader = {
+						limit = { has_unit_leader_flag = PRU_leader }
+						set_nationality = XXA
+					}
+				}
+			}
+			else = {
+				XXA = {
+					every_unit_leader = {
+						limit = { has_unit_leader_flag = PRU_leader }
+						set_nationality = PRU
+					}
+				}
+			}
+		}
 	}
 
 	option = {
@@ -3170,7 +2844,7 @@ country_event = { #Fate of Pastaza
 				NOT = { is_ally_with = PRU }
 			}
 		}
-		set_temp_variable = { tag_to_release = ECU }
+		set_temp_variable = { tag_to_release = PRU }
 		490 = { transfer_state_and_add_core = yes }
 	}
 
@@ -3195,8 +2869,8 @@ country_event = { #Fate of Pastaza
 
 	option = { #occupy
 		name = annex.occupation
+		ai_chance = { base = 0 }
 		trigger = {
-			is_ai = no
 			NOT = {
 				tag = ECU
 				tag = PRU
@@ -5593,11 +5267,11 @@ country_event = { #Fate of Southern Chaco
 	}
 }
 
-country_event = { #Fate of Corrientes
+country_event = { #Fate of Misiones
 	id = annex.2043
 	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.2043 FROM = [From.GetName]" }
-	title = annexation_ARG_CORRIENTES_CONQ
-	desc = annexation_ARG_CORRIENTES_CONQ_desc
+	title = annexation_MISIONES_CONQ
+	desc = annexation_MISIONES_CONQ_desc
 	picture = GFX_report_event_generic_conference2
 
 	is_triggered_only = yes
@@ -5623,18 +5297,8 @@ country_event = { #Fate of Corrientes
 				}
 			}
 		}
-		1074 = {
-			if = {
-				limit = {
-					NOT = {
-						is_claimed_by = PAR
-						is_core_of = PAR
-					}
-				}
-				add_claim_by = PAR
-			}
-			PAR = { transfer_state = PREV }
-		}
+		set_temp_variable = { tag_to_release = PAR }
+		1074 = { transfer_state_and_add_claim = yes }
 	}
 	option = {
 		name = annex.2043.b #Give it to ARG
@@ -5647,17 +5311,8 @@ country_event = { #Fate of Corrientes
 		ai_chance = {
 			base = 10
 		}
-		1074 = {
-			if = {
-				limit = { is_claimed_by = ARG }
-				remove_claim_by = ARG
-			}
-			if = {
-				limit = { NOT = { is_core_of = ARG } }
-				add_core_of = ARG
-			}
-			ARG = { transfer_state = PREV }
-		}
+		set_temp_variable = { tag_to_release = ARG }
+		1074 = { transfer_state_and_add_core = yes }
 	}
 	option = {
 		name = annex.2043.b #Give it to FOP
@@ -5670,22 +5325,13 @@ country_event = { #Fate of Corrientes
 		ai_chance = {
 			base = 10
 		}
-		1074 = {
-			if = {
-				limit = { is_claimed_by = FOP }
-				remove_claim_by = FOP
-			}
-			if = {
-				limit = { NOT = { is_core_of = FOP } }
-				add_core_of = FOP
-			}
-			FOP = { transfer_state = PREV }
-		}
+		set_temp_variable = { tag_to_release = FOP }
+		1074 = { transfer_state_and_add_claim = yes }
 	}
 	option = { #occupy
 		name = annex.occupation
-		trigger = { is_ai = no }
-		set_country_flag = ARG_CORRIENTES_CONQ
+		ai_chance = { base = 0 }
+		set_country_flag = MISIONES_CONQ
 		occupy_small_country = yes
 	}
 }
@@ -5719,7 +5365,6 @@ country_event = { #annexation of Uruguay
 				limit = { has_elected_government = yes }
 				URG = {
 					random_list = {
-						seed = random
 						50 = { create_rightist_democratic_uruguayan_government = yes }
 						50 = { create_leftist_democratic_uruguayan_government = yes }
 					}
@@ -5784,7 +5429,7 @@ country_event = { #Fate of Argentina
 						is_not_claim_or_core_of_ROOT = yes
 						OR = {
 							state = 901 #Chaco Austral
-							state = 1074 #Corrientes
+							state = 1074 #Misiones
 						}
 					}
 					add_claim_by = ROOT
@@ -5817,15 +5462,6 @@ country_event = { #Fate of Argentina
 						}
 					}
 					add_claim_by = ROOT
-				}
-			}
-			if = {
-				limit = { has_democratic_government = no }
-				ARG = {
-					set_politics = {
-						ruling_party = var:current_party_ideology_group
-						elections_allowed = no
-					}
 				}
 			}
 			901 = {
@@ -5878,18 +5514,17 @@ country_event = { #Fate of Argentina
 					expire = "1965.1.1"
 					ideology = national_populist_subtype
 				}
-				remove_ideas = ARG_CHILE_STOP_BEING_A_TWAT
 			}
 		}
 		hidden_effect = {
 			if = {
-				limit = { ARG = { owns_state = 278 } }
-				901 = { add_core_of = ARG }
-				1074 = { add_core_of = ARG }
-			}
-			else = {
+				limit = { FOP = { owns_state = 278 } }
 				901 = { add_core_of = FOP }
 				1074 = { add_core_of = FOP }
+			}
+			else = {
+				901 = { add_core_of = ARG }
+				1074 = { add_core_of = ARG }
 			}
 			FOP_clear_araucania = yes
 		}
@@ -5930,7 +5565,6 @@ country_event = { #Fate of Argentina
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
 			}
-			remove_ideas = ARG_CHILE_STOP_BEING_A_TWAT
 		}
 		hidden_effect = {
 			901 = { add_core_of = ARG }
@@ -5949,11 +5583,7 @@ country_event = { #Fate of Argentina
 		add_to_temp_array = { target_cores_to_release = ARG }
 		add_to_temp_array = { target_cores_to_release = FOP }
 		set_temp_variable = { tag_to_release = FOP }
-		transfer_territory_from_core_regions = yes
-		hidden_effect = {
-			901 = { add_core_of = FOP }
-			1074 = { add_core_of = FOP }
-		}
+		transfer_territory_from_core_regions_and_add_cores = yes
 	}
 
 	option = { #occupy

@@ -540,71 +540,27 @@ country_event = {
 
 	desc = {
 		text = amcivwar.24.d.CSA
-		trigger = {
-			tag = CSA
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.CSA_ceasefire
-		trigger = {
-			tag = CSA
-			has_global_flag = PSA_rockies_ceasefire
-		}
+		trigger = { tag = CSA }
 	}
 	desc = {
 		text = amcivwar.24.d.TEX
-		trigger = {
-			tag = TEX
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.TEX_ceasefire
-		trigger = {
-			tag = TEX
-			has_global_flag = PSA_rockies_ceasefire
-		}
+		trigger = { tag = TEX }
 	}
 	desc = {
 		text = amcivwar.24.d.USA
-		trigger = {
-			tag = USA
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.USA_ceasefire
-		trigger = {
-			tag = USA
-			has_global_flag = PSA_rockies_ceasefire
-		}
+		trigger = { tag = USA }
 	}
 	desc = {
 		text = amcivwar.24.d.PSA
-		trigger = {
-			tag = PSA
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.PSA_ceasefire
-		trigger = {
-			tag = PSA
-			has_global_flag = PSA_rockies_ceasefire
-		}
+		trigger = { tag = PSA }
 	}
 	desc = {
 		text = amcivwar.24.d.NEE
-		trigger = {
-			tag = NEE
-		}
+		trigger = { tag = NEE }
 	}
 	desc = {
 		text = amcivwar.24.d.other
-		trigger = {
-			is_american_tag = no
-		}
+		trigger = { is_american_tag = no }
 	}
 
 	fire_only_once = yes
@@ -633,28 +589,12 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { tag = PSA } }
-			OR = {
-				NOT = { country_exists = PSA }
-				has_global_flag = PSA_rockies_ceasefire
-			}
+			NOT = { country_exists = PSA }
 		}
 	}
 
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = { has_global_flag = PSA_rockies_ceasefire }
-				random_other_country = {
-					limit = {
-						OR = {
-							tag = CSA
-							tag = USA
-							tag = TEX
-						}
-					}
-					save_event_target_as = ACW_survivor
-				}
-			}
 			USA_civil_war_ends = yes
 			USA_demobilize_forces = yes
 			remove_ACW_claims = yes
@@ -676,19 +616,7 @@ country_event = {
 			### Events for other tags
 			BRA = { country_event = { id = bra.110 days = 15 random_days = 20 } }
 			LEC = { country_event = { id = lec.150 days = 5 random_days = 10 } }
-
-			# Ceasefire version of the event
-			every_other_country = {
-				limit = {
-					OR = {
-						tag = CSA
-						tag = USA
-						tag = TEX
-						tag = PSA
-					}
-				}
-				country_event = amcivwar.240
-			}
+			HAI = { country_event = { id = hai.21 days = 5 random_days = 5 } }
 		}
 	}
 
@@ -699,14 +627,9 @@ country_event = {
 		add_ideas = USA_civil_war_depression_idea
 		add_ideas = USA_federalist_resistance1
 		add_ideas = USA_longist_resistance1
+		add_ideas = civilian_economy
+		add_ideas = volunteer_only
 		hidden_effect = {
-			if = {
-				limit = { is_ai = no }
-				add_ideas = {
-					civilian_economy
-					volunteer_only
-				}
-			}
 			news_event = ustates.1008
 
 			#Post-war events
@@ -724,19 +647,14 @@ country_event = {
 		add_ideas = USA_civil_war_depression_idea
 		add_ideas = USA_federalist_resistance1
 		add_ideas = USA_socialist_resistance1
+		add_ideas = civilian_economy
+		add_ideas = volunteer_only
+		if = {
+			limit = { has_country_flag = TEX_war_committee_factories }
+			clr_country_flag = TEX_war_committee_factories
+			add_offsite_building = { type = arms_factory level = -5 }
+		}
 		hidden_effect = {
-			if = {
-				limit = { is_ai = no }
-				add_ideas = {
-					civilian_economy
-					volunteer_only
-				}
-			}
-			if = {
-				limit = { has_country_flag = TEX_war_committee_factories }
-				clr_country_flag = TEX_war_committee_factories
-				add_offsite_building = { type = arms_factory level = -8 }
-			}
 			news_event = ustates.1006
 
 			#Post-war events
@@ -774,14 +692,9 @@ country_event = {
 			}
 			add_ideas = USA_longist_resistance1
 		}
+		add_ideas = civilian_economy
+		add_ideas = volunteer_only
 		hidden_effect = {
-			if = {
-				limit = { is_ai = no }
-				add_ideas = {
-					civilian_economy
-					volunteer_only
-				}
-			}
 			if = {
 				limit = { has_government = paternal_autocrat }
 				news_event = ustates.1005
@@ -809,14 +722,9 @@ country_event = {
 		add_ideas = USA_civil_war_depression_idea
 		add_ideas = USA_longist_resistance1
 		add_ideas = USA_socialist_resistance1
+		add_ideas = civilian_economy
+		add_ideas = volunteer_only
 		hidden_effect = {
-			if = {
-				limit = { is_ai = no }
-				add_ideas = {
-					civilian_economy
-					volunteer_only
-				}
-			}
 			news_event = ustates.1007
 
 			#Post-war events
@@ -861,222 +769,6 @@ country_event = {
 				country_event = { id = ustates.154 days = 725 random_days = 100 }
 				country_event = { id = ustates.155 days = 725 random_days = 100 }
 			}
-		}
-	}
-}
-country_event = {
-	id = amcivwar.240
-	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.240 FROM = [From.GetName]" }
-	title = amcivwar.24.t
-	picture = GFX_report_event_USA_victory_celebration
-
-	desc = {
-		text = amcivwar.24.d.CSA
-		trigger = {
-			tag = CSA
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.CSA_ceasefire
-		trigger = {
-			tag = CSA
-			has_global_flag = PSA_rockies_ceasefire
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.TEX
-		trigger = {
-			tag = TEX
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.TEX_ceasefire
-		trigger = {
-			tag = TEX
-			has_global_flag = PSA_rockies_ceasefire
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.USA
-		trigger = {
-			tag = USA
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.USA_ceasefire
-		trigger = {
-			tag = USA
-			has_global_flag = PSA_rockies_ceasefire
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.PSA
-		trigger = {
-			tag = PSA
-			NOT = { has_global_flag = PSA_rockies_ceasefire }
-		}
-	}
-	desc = {
-		text = amcivwar.24.d.PSA_ceasefire
-		trigger = {
-			tag = PSA
-			has_global_flag = PSA_rockies_ceasefire
-		}
-	}
-
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			every_owned_state = {
-				limit = { is_mainland_america = yes }
-				if = {
-					limit = { is_in_array = { ROOT.USA_restoring_order_array = THIS } }
-					if = {
-						limit = { is_core_of = ROOT }
-						remove_from_array = { ROOT.USA_restoring_order_array = THIS }
-					}
-				}
-				else = {
-					add_to_array = { ROOT.USA_restoring_order_array = THIS }
-				}
-			}
-		}
-	}
-
-	option = {
-		name = amcivwar.24.a
-		trigger = { tag = CSA }
-		add_ideas = USA_civil_war_aftermath_idea
-		add_ideas = USA_civil_war_depression_idea
-		add_ideas = USA_federalist_resistance1
-		add_ideas = USA_longist_resistance1
-		hidden_effect = {
-			if = {
-				limit = { is_ai = no }
-				add_ideas = {
-					civilian_economy
-					volunteer_only
-				}
-			}
-			#Post-war events
-			country_event = { id = csa.215 days = 180 }
-			country_event = { id = csa.207 days = 60 random_days = 60 }
-			country_event = { id = csa.97 days = 115 random = 480 }
-		}
-	}
-
-	option = {
-		name = amcivwar.24.b
-		trigger = { tag = TEX }
-		complete_national_focus = TEX_new_washington
-		add_ideas = USA_civil_war_aftermath_idea
-		add_ideas = USA_civil_war_depression_idea
-		add_ideas = USA_federalist_resistance1
-		add_ideas = USA_socialist_resistance1
-		hidden_effect = {
-			if = {
-				limit = { is_ai = no }
-				add_ideas = {
-					civilian_economy
-					volunteer_only
-				}
-			}
-			if = {
-				limit = { has_country_flag = TEX_war_committee_factories }
-				clr_country_flag = TEX_war_committee_factories
-				add_offsite_building = { type = arms_factory level = -8 }
-			}
-			#Post-war events
-			country_event = { id = unionstate.1 days = 10 }
-			country_event = { id = par.12 days = 10 random_days = 10 }
-			country_event = { id = unionstate.7 days = 25 random_days = 10 }
-			country_event = { id = unionstate.8 days = 25 random_days = 10 }
-			country_event = { id = unionstate.31 days = 175 random_days = 10 }
-		}
-	}
-
-	option = {
-		name = amcivwar.24.c
-		trigger = { tag = USA }
-		add_ideas = USA_civil_war_aftermath_idea
-		add_ideas = USA_civil_war_depression_idea
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = USA_assassinated_reed
-					has_country_flag = USA_ACW_compromise_rejected
-				}
-			}
-			add_ideas = USA_socialist_resistance1
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = USA_assassinated_long
-					has_country_flag = USA_ACW_austerity_rejected
-				}
-			}
-			add_ideas = USA_longist_resistance1
-		}
-		hidden_effect = {
-			if = {
-				limit = { is_ai = no }
-				add_ideas = {
-					civilian_economy
-					volunteer_only
-				}
-			}
-			#Post-war events
-			country_event = { id = ustates.168 days = 15 }
-			country_event = { id = ustates.152 days = 360 random_days = 10 }
-			country_event = { id = ustates.153 days = 725 random_days = 100 }
-			country_event = { id = ustates.154 days = 725 random_days = 100 }
-			country_event = { id = ustates.155 days = 725 random_days = 100 }
-			country_event = { id = ustates.156 days = 420 random_days = 10 }
-			country_event = { id = ustates.161 days = 205 random_days = 10 }
-		}
-	}
-
-	option = {
-		name = amcivwar.24.d
-		trigger = { tag = PSA }
-		add_ideas = USA_civil_war_aftermath_idea
-		add_ideas = USA_civil_war_depression_idea
-		add_ideas = USA_longist_resistance1
-		add_ideas = USA_socialist_resistance1
-		hidden_effect = {
-			if = {
-				limit = { is_ai = no }
-				add_ideas = {
-					civilian_economy
-					volunteer_only
-				}
-			}
-			#Post-war events
-			country_event = { id = pacificstates.56 days = 50 random_days = 10 }
-			country_event = { id = pacificstates.54 days = 90 random_days = 10 }
-			country_event = { id = pacificstates.53 days = 120 random_days = 20 }
-			country_event = { id = pacificstates.52 days = 150 random_days = 20 }
-			country_event = { id = pacificstates.55 days = 180 random_days = 30 }
-			country_event = { id = pacificstates.57 days = 210 random_days = 30 }
-			country_event = { id = pacificstates.61 days = 240 random_days = 40 }
-			country_event = { id = pacificstates.101 days = 400 random_days = 60 }
-			country_event = { id = pacificstates.102 days = 270 random_days = 40 }
-			country_event = { id = pacificstates.105 days = 330 random_days = 50 }
-			country_event = { id = pacificstates.106 days = 360 random_days = 50 }
-			country_event = { id = pacificstates.107 days = 390 random_days = 60 }
-			country_event = { id = pacificstates.110 days = 420 random_days = 60 }
-			country_event = { id = pacificstates.108 days = 490 random_days = 70 }
-			country_event = { id = pacificstates.72 days = 85 random_days = 240 }
-			country_event = { id = pacificstates.73 days = 85 random_days = 10 }
-			country_event = { id = pacificstates.109 days = 360 random_days = 10 }
-			country_event = { id = ustates.153 days = 725 random_days = 100 }
-			country_event = { id = ustates.154 days = 725 random_days = 100 }
-			country_event = { id = ustates.155 days = 725 random_days = 100 }
 		}
 	}
 }
@@ -1401,7 +1093,7 @@ country_event = { # Revolutionary Staff Leader
 	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.43 FROM = [From.GetName]" }
 	title = amcivwar.43.t
 	desc = amcivwar.43.d
-	picture = GFX_report_event_CSA_child_soldiers
+	picture = GFX_report_event_USA_soldiers_watching
 
 	is_triggered_only = yes
 
@@ -1638,11 +1330,6 @@ country_event = { # The Silver Legion
 				}
 			}
 			load_oob = "USA_civil_war_silver_legion"
-		}
-		custom_effect_tooltip = tooltip_white_line
-		unlock_decision_tooltip = {
-			decision = TEX_silver_legion_support
-			show_modifiers = yes
 		}
 	}
 }
@@ -2231,7 +1918,7 @@ country_event = { # Chief of Air Force
 		add_ideas = USA_Nathan_Bedford_Forrest_III_cair
 	}
 	option = { # Henry Harley 'Hap' Arnold
-		name = amcivwar.71.e
+		name = amcivwar.74.e
 		trigger = {
 			NOT = { country_exists = PSA }
 		}
@@ -5113,6 +4800,7 @@ country_event = {
 				set_country_flag = PSA_rocky_ceasefire_name
 			}
 		}
+		set_global_flag = { flag = USA_ai_do_not_break_ceasefire days = 30 value = 1 }
 	}
 
 	option = {
@@ -12581,6 +12269,19 @@ country_event = {
 		name = amcivwar.764.a
 		ai_chance = {
 			base = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = CAN_acw_new_england
+						option = CAN_ACW_NEW_ENGLAND_FORM
+					}
+					has_game_rule = {
+						rule = CAN_acw_new_england
+						option = CAN_ACW_NEW_ENGLAND_NOT_FORM
+					}
+				}
+			}
 		}
 		set_country_flag = CAN_not_seized_new_england
 		hidden_effect = {
@@ -12606,15 +12307,9 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = CAN_acw_new_england
-						option = CAN_ACW_NEW_ENGLAND_FORM
-					}
-					has_game_rule = {
-						rule = CAN_acw_new_england
-						option = CAN_ACW_NEW_ENGLAND_NOT_FORM
-					}
+				has_game_rule = {
+					rule = CAN_acw_new_england
+					option = CAN_ACW_NEW_ENGLAND_NOT_TAKE
 				}
 			}
 		}
@@ -12891,6 +12586,15 @@ country_event = {
 	picture = GFX_report_event_USA_military_trial
 	title = amcivwar.768.t
 	desc = amcivwar.768.d
+
+	trigger = {
+		NEE = {
+			OR = {
+				has_unit_leader = 947
+				has_unit_leader = 948
+			}
+		}
+	}
 
 	is_triggered_only = yes
 	fire_only_once = yes

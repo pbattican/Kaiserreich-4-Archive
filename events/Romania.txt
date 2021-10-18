@@ -171,12 +171,12 @@ country_event = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_FUTURE
+						rule = ROM_future
 						option = ROM_FUTURE_CAROL
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_CAROL
+						rule = ROM_path
+						option = ROM_PATH_CAROL
 					}
 				}
 			}
@@ -197,12 +197,12 @@ country_event = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_FUTURE
+						rule = ROM_future
 						option = ROM_FUTURE_IRON_GUARD
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_IRON_GUARD
+						rule = ROM_path
+						option = ROM_PATH_IRON_GUARD
 					}
 				}
 			}
@@ -1405,380 +1405,6 @@ country_event = {
 
 ##Road to war
 
-# Bulgaria: Romania demands a plebiscite in Dobrudzha
-country_event = {
-	id = romania.36
-	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.36 FROM = [From.GetName]" }
-	title = romania.36.t
-	desc = romania.36.d
-	picture = GFX_report_event_generic_read_write
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { has_war_with = FROM }
-		owns_state = 772
-	}
-
-	option = {
-		name = romania.36.a # No way
-
-		ai_chance = {
-			base = 90
-		}
-
-		add_political_power = 50
-
-		hidden_effect = {
-			ROM = {
-				country_event = {
-					id = romania.37
-					days = 2
-				}
-			}
-		}
-	}
-	option = {
-		name = romania.36.b # Allow it, but rig the results
-
-		ai_chance = {
-			base = 10
-		}
-
-		hidden_effect = {
-			ROM = {
-				country_event = {
-					id = romania.38
-					days = 2
-				}
-			}
-		}
-	}
-	option = {
-		name = romania.36.c # Allow it
-
-		ai_chance = {
-			base = 1
-		}
-
-		random_list = {
-			seed = random
-			50 = {
-				hidden_effect = {
-					ROM = {
-						country_event = {
-							id = romania.39
-							days = 7
-						}
-					}
-					} # People choose Romania
-				custom_effect_tooltip = romania.36.tt1
-			}
-			50 = {
-				hidden_effect = {
-					ROM = {
-						country_event = {
-							id = romania.40
-							days = 7
-						}
-					}
-					} # People choose Bulgaria
-				custom_effect_tooltip = romania.36.tt2
-			}
-		}
-	}
-	option = {
-		name = romania.36.e # Cede it
-		ai_chance = {
-			base = 0
-		}
-		hidden_effect = {
-			ROM = {
-				country_event = {
-					id = romania.41
-					days = 7
-				}
-			}
-		}
-	}
-}
-
-# Bulgaria refused the plebiscite
-country_event = {
-	id = romania.37
-	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.37 FROM = [From.GetName]" }
-	title = romania.37.t
-	desc = romania.37.d
-	picture = GFX_report_event_romanian_soldiers
-
-	is_triggered_only = yes
-
-	option = {
-		name = romania.37.a # Send the army
-
-		ai_chance = {
-			base = 80
-		}
-		declare_war_on = {
-			target = 772.owner
-			type = take_state_focus
-			generator = { 772 77 }
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					is_in_faction_with = SER
-				}
-				set_global_flag = balkan_war_started
-			}
-		}
-	}
-	option = {
-		name = romania.37.b # We can't do anything
-
-		ai_chance = {
-			base = 10
-		}
-		set_temp_variable = { ideology_change_var = -10 }
-		change_ruling_party_popularity = yes
-	}
-}
-
-# Bulgaria rigs the results of the plebiscite
-country_event = {
-	id = romania.38
-	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.38 FROM = [From.GetName]" }
-	title = romania.38.t
-	desc = romania.38.d
-	picture = GFX_report_event_romanian_soldiers
-
-	is_triggered_only = yes
-
-	option = {
-		name = romania.38.a # Never mind
-
-		ai_chance = {
-			base = 10
-		}
-
-		hidden_effect = {
-			random_list = {
-				seed = random
-				10 = {
-					country_event = {
-						id = romania.39
-						days = 7
-					}
-					} # Go with Romania
-				90 = {
-					country_event = {
-						id = romania.40
-						days = 7
-					}
-					} # Stay with Bulgaria
-			}
-		}
-	}
-	option = {
-		name = romania.38.b # How dare they, send the army
-
-		ai_chance = {
-			base = 90
-		}
-
-		add_political_power = 50
-
-		declare_war_on = {
-			target = 772.owner
-			type = take_state_focus
-			generator = { 772 77 }
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					is_in_faction_with = SER
-				}
-				set_global_flag = balkan_war_started
-			}
-		}
-	}
-}
-
-# People choose unification with Romania
-country_event = {
-	id = romania.39
-	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.39 FROM = [From.GetName]" }
-	title = romania.39.t
-	desc = romania.39.d
-	picture = GFX_report_event_generic_rally2
-
-	is_triggered_only = yes
-
-	option = {
-		name = romania.39.a # Great
-
-		add_political_power = 100
-
-		BUL = {
-			country_event = {
-				id = romania.41
-				days = 1
-			}
-			} # Bulgaria chooses: hand over or not
-	}
-}
-
-# People choose to remain in Bulgaria
-country_event = {
-	id = romania.40
-	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.40 FROM = [From.GetName]" }
-	title = romania.40.t
-	desc = romania.40.d
-	picture = GFX_report_event_generic_rally2
-
-	is_triggered_only = yes
-
-	option = {
-		name = romania.40.a # Awful
-
-		add_political_power = -40
-
-		hidden_effect = {
-			BUL = {
-				country_event = {
-					id = romania.44
-					days = 1
-				}
-			}
-			} # Bulgaria: Dobrudzha stays
-	}
-}
-
-# Bulgaria: The result of the plebiscite: People choose Romania
-country_event = {
-	id = romania.41
-	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.41 FROM = [From.GetName]" }
-	title = romania.41.t
-	desc = romania.41.d
-	picture = GFX_report_event_generic_rally2
-
-	is_triggered_only = yes
-
-	option = {
-		name = romania.41.a # Democracy has minuses
-
-		ai_chance = {
-			base = 1
-		}
-
-		add_political_power = -20
-
-		ROM = {
-			transfer_state = 772
-		}
-
-		ROM = {
-			country_event = {
-				id = romania.42
-				hours = 2
-			}
-			} # Dobrudzha joins Romania.
-	}
-	option = {
-		name = romania.41.b # Refuse to transfer
-
-		ai_chance = {
-			base = 99
-		}
-
-		add_political_power = 20
-
-		ROM = {
-			country_event = {
-				id = romania.43
-				days = 1
-			}
-			} # Bulgaria ignores the results
-	}
-}
-
-# Dobrudzha joins Romania
-country_event = {
-	id = romania.42
-	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.42 FROM = [From.GetName]" }
-	title = romania.42.t
-	desc = romania.42.d
-	picture = GFX_report_event_generic_peaceful_annexation
-
-	is_triggered_only = yes
-
-	option = {
-		name = romania.42.a # Great.
-
-		effect_tooltip = {
-			transfer_state = 772
-		}
-	}
-}
-
-# Bulgaria refuses to cede Dobrudzha
-country_event = {
-	id = romania.43
-	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.43 FROM = [From.GetName]" }
-	title = romania.43.t
-	desc = romania.43.d
-	picture = GFX_report_event_romanian_soldiers
-
-	is_triggered_only = yes
-
-	option = {
-		name = romania.43.a # There's nothing we can do
-
-		ai_chance = {
-			base = 15
-		}
-
-		add_political_power = -60
-	}
-	option = {
-		name = romania.43.b # How dare they
-
-		ai_chance = {
-			base = 85
-		}
-
-		add_political_power = 50
-
-		declare_war_on = {
-			target = 772.owner
-			type = take_state_focus
-			generator = { 772 77 }
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					is_in_faction_with = SER
-				}
-				set_global_flag = balkan_war_started
-			}
-		}
-	}
-}
-
-# Dobrudzha stays in Bulgaria
-country_event = {
-	id = romania.44
-	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.44 FROM = [From.GetName]" }
-	title = romania.44.t
-	desc = romania.44.d
-	picture = GFX_report_event_generic_peaceful_annexation
-
-	is_triggered_only = yes
-
-	option = {
-		name = romania.44.a # Great.
-	}
-}
 
 #Romania demands Transylvania
 country_event = {
@@ -2545,7 +2171,6 @@ country_event = {
 		add_political_power = -20
 		hidden_effect = {
 			random_list = {
-				seed = random
 				10 = { #CZC gives in
 					country_event = {
 						id = romania.64
@@ -3042,12 +2667,32 @@ country_event = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_MICHAEL
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_GREEN
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_MARLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_NATPOP
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_GREEN
 					}
 				}
 			}
@@ -3236,8 +2881,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_CAROL
+					rule = ROM_path
+					option = ROM_PATH_CAROL
 				}
 			}
 		}
@@ -3247,7 +2892,6 @@ country_event = {
 
 		hidden_effect = {
 			random_list = {
-				seed = random
 				10 = {
 					modifier = {
 						factor = 2
@@ -3352,7 +2996,6 @@ country_event = {
 			}
 			else = {
 				random_list = {
-					seed = random
 					10 = { #stabilisation of the current regime
 						modifier = {
 							factor = 0
@@ -3420,8 +3063,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_IRON_GUARD
+					rule = ROM_path
+					option = ROM_PATH_IRON_GUARD
 				}
 			}
 		}
@@ -3504,8 +3147,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_CAROL
+					rule = ROM_path
+					option = ROM_PATH_CAROL
 				}
 			}
 		}
@@ -3570,8 +3213,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_CAROL
+					rule = ROM_path
+					option = ROM_PATH_CAROL
 				}
 			}
 		}
@@ -3736,8 +3379,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_IRON_GUARD
+					rule = ROM_path
+					option = ROM_PATH_IRON_GUARD
 				}
 			}
 		}
@@ -3972,16 +3615,36 @@ country_event = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_MICHAEL
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_IRON_GUARD
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_GREEN
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_MARLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_NATPOP
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_IRON_GUARD
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_GREEN
 					}
 				}
 			}
@@ -4009,8 +3672,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_CAROL
+					rule = ROM_path
+					option = ROM_PATH_CAROL
 				}
 			}
 		}
@@ -4037,12 +3700,32 @@ country_event = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_MICHAEL
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_GREEN
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_MARLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_NATPOP
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_GREEN
 					}
 				}
 			}
@@ -4087,7 +3770,7 @@ country_event = {
 		}
 	}
 }
-#LEGION ATTACK ON BUCHAREST romania.90 
+#LEGION ATTACK ON BUCHAREST romania.90
 country_event = {
 	id = romania.90
 	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.90 FROM = [From.GetName]" }
@@ -4104,15 +3787,14 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_CAROL
+					rule = ROM_path
+					option = ROM_PATH_CAROL
 				}
 			}
 		}
 
 		hidden_effect = {
 			random_list = {
-				seed = random
 				50 = {#shooting starts
 					country_event = {
 						id = romania.91
@@ -4195,7 +3877,6 @@ country_event = {
 		}
 		hidden_effect = {
 			random_list = {
-				seed = random
 				20 = { #stabilisation
 					modifier = {
 						factor = 2
@@ -4445,9 +4126,31 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_MICHAEL
+				OR = {
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_MARLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_NATPOP
+					}
 				}
 			}
 		}
@@ -4493,12 +4196,12 @@ country_event = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_IRON_GUARD
+						rule = ROM_path
+						option = ROM_PATH_IRON_GUARD
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_GREEN
+						rule = ROM_path
+						option = ROM_PATH_GREEN
 					}
 				}
 			}
@@ -4531,7 +4234,6 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_list = {
-				seed = random
 				20 = { #stabilisation
 					modifier = {
 						factor = 2
@@ -4604,7 +4306,6 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_list = {
-				seed = random
 				20 = { #stabilisation
 					modifier = {
 						factor = 2
@@ -4648,8 +4349,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_GREEN
+					rule = ROM_path
+					option = ROM_PATH_GREEN
 				}
 			}
 		}
@@ -4667,8 +4368,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_GREEN
+					rule = ROM_path
+					option = ROM_PATH_GREEN
 				}
 			}
 		}
@@ -4687,8 +4388,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_IRON_GUARD
+					rule = ROM_path
+					option = ROM_PATH_IRON_GUARD
 				}
 			}
 		}
@@ -4764,9 +4465,6 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			clr_country_flag = ROM_carol_in_palace
-			clr_country_flag = ROM_calinescu_target
-			clr_country_flag = ROM_increased_guard
 			default_party_popularity_PP_gain = yes
 			clr_country_flag = ROM_crisis
 			set_country_flag = ROM_crisis_happened
@@ -4787,7 +4485,7 @@ country_event = {
 				remove_ideas = ROM_camarilla2
 				remove_ideas = ROM_sentinels
 			}
-			else_if = {
+			if = {
 				limit = {
 					NOT = { has_government = national_populist }
 				}
@@ -4806,10 +4504,6 @@ country_event = {
 	option = {
 		name = romania.103.a #
 		add_stability = 0.1
-		set_politics = {
-			ruling_party = var:current_party_ideology_group
-			elections_allowed = no
-		}
 		if = {
 			limit = {
 				NOT = {
@@ -4874,12 +4568,12 @@ country_event = {#Formation of the PNT
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCLIB
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCCON
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
 					}
 				}
 			}
@@ -4890,10 +4584,6 @@ country_event = {#Formation of the PNT
 			ideology = social_democrat
 			popularity = 0.05
 		}
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		add_to_coalition = yes
 	}
 	option = {
 		name = romania.104.b #Maniu
@@ -4903,12 +4593,12 @@ country_event = {#Formation of the PNT
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCCON
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCDEM
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
 					}
 				}
 			}
@@ -4919,10 +4609,6 @@ country_event = {#Formation of the PNT
 			ideology = social_liberal
 			popularity = 0.05
 		}
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		add_to_coalition = yes
 	}
 	option = {
 		name = romania.104.c #Vaida-Voevod
@@ -4932,12 +4618,12 @@ country_event = {#Formation of the PNT
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCLIB
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCDEM
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
 					}
 				}
 			}
@@ -4948,10 +4634,6 @@ country_event = {#Formation of the PNT
 			ideology = social_conservative
 			popularity = 0.05
 		}
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		add_to_coalition = yes
 	}
 }
 country_event = {#first election
@@ -4976,20 +4658,20 @@ country_event = {#first election
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCLIB
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCCON
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCDEM
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_LEGION
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_NATPOP
 					}
 				}
 			}
@@ -5026,20 +4708,20 @@ country_event = {#first election
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCLIB
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCCON
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_SOCDEM
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_MARLIB
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_MARLIB
 					}
 				}
 			}
@@ -5067,12 +4749,12 @@ country_event = {#first election
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_LEGION
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_NATPOP
 					}
 					has_game_rule = {
-						rule = ROM_election
-						option = ROM_ELECTION_MARLIB
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_MARLIB
 					}
 				}
 			}
@@ -7327,16 +7009,14 @@ country_event = {
 	title = romania.195.t
 	desc = romania.195.d
 
+	trigger = {
+		has_government = national_populist
+	}
+
 	is_triggered_only = yes
 
 	option = {
 		name = romania.195.a
-		if = { limit = { has_government = national_populist }
-			add_popularity = {
-				ideology = national_populist
-				popularity = 0.01
-			}
-		}
 		add_stability = 0.01
 		hidden_effect = { country_event = { id = romania.195 days = 356 } }
 	}
@@ -7490,20 +7170,42 @@ country_event = { #question of the monarch
 				factor = 5
 				OR = {
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_IRON_GUARD
+						rule = ROM_path
+						option = ROM_PATH_IRON_GUARD
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_GREEN
+						rule = ROM_path
+						option = ROM_PATH_GREEN
 					}
 				}
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_MICHAEL
+				OR = {
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_MARLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_NATPOP
+					}
 				}
 			}
 		}
@@ -7521,10 +7223,11 @@ country_event = {
 	title = romania.202.t
 	desc = romania.202.d
 
-	is_triggered_only = yes
 	trigger = {
 		ROM = { is_subject = no }
 	}
+
+	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
@@ -7552,7 +7255,7 @@ country_event = {
 	}
 	option = {
 		name = romania.202.b
-		trigger = { tag = OTT }
+		trigger = { NOT = { tag = ROM } }
 		add_political_power = -5
 	}
 }
@@ -7782,8 +7485,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_IRON_GUARD
+					rule = ROM_path
+					option = ROM_PATH_IRON_GUARD
 				}
 			}
 		}
@@ -7799,8 +7502,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_GREEN
+					rule = ROM_path
+					option = ROM_PATH_GREEN
 				}
 			}
 		}
@@ -7824,8 +7527,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_IRON_GUARD
+					rule = ROM_path
+					option = ROM_PATH_IRON_GUARD
 				}
 			}
 		}
@@ -7841,8 +7544,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_GREEN
+					rule = ROM_path
+					option = ROM_PATH_GREEN
 				}
 			}
 		}
@@ -7974,17 +7677,13 @@ country_event = {
 		text = romania.215.d.legion
 		trigger = {
 			has_government = national_populist
+			NOT = { has_country_flag = ROM_czc_dead }
 		}
 	}
 	desc = {
 		text = romania.215.d.michael
 		trigger = {
-			NOT = {
-				OR = {
-					has_government = paternal_autocrat
-					has_government = national_populist
-				}
-			}
+			NOT = { has_government = paternal_autocrat }
 		}
 	}
 
@@ -8030,12 +7729,32 @@ country_event = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_MICHAEL
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_GREEN
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_MARLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_NATPOP
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_GREEN
 					}
 				}
 			}
@@ -8060,12 +7779,32 @@ country_event = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_MICHAEL
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL
 					}
 					has_game_rule = {
-						rule = ROM_PATHS
-						option = ROM_PATHS_GREEN
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCDEM
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_SOCCON
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_MARLIB
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_MICHAEL_NATPOP
+					}
+					has_game_rule = {
+						rule = ROM_path
+						option = ROM_PATH_GREEN
 					}
 				}
 			}
@@ -8077,7 +7816,6 @@ country_event = {
 		}
 		hidden_effect = {
 			random_list = {
-				seed = random
 				10 = { set_country_flag = ROM_calinescu_attack }
 				10 = { set_country_flag = ROM_calinescu_armoured_car }
 			}
@@ -8094,12 +7832,12 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ROM_FUTURE
+					rule = ROM_future
 					option = ROM_FUTURE_CAROL
 				}
 				has_game_rule = {
-					rule = ROM_PATHS
-					option = ROM_PATHS_CAROL
+					rule = ROM_path
+					option = ROM_PATH_CAROL
 				}
 			}
 		}
@@ -8394,7 +8132,7 @@ country_event = {
 
 	is_triggered_only = yes
 	trigger = {
-		controls_state = 154
+		owns_state = 154
 		has_authoritarian_government = yes
 	}
 	immediate = {
@@ -8417,7 +8155,7 @@ country_event = {
 		154 = {
 			add_resistance = 15
 			add_resistance_target = {
-				amount = 35
+				amount = 25
 				tooltip = ROM_alfold_unrest
 				days = 90
 			}
@@ -8429,7 +8167,7 @@ country_event = {
 			add_compliance = -5
 			add_resistance = 25
 			add_resistance_target = {
-				amount = 45
+				amount = 35
 				tooltip = ROM_alfold_unrest
 				days = 180
 			}
@@ -8445,7 +8183,7 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
-		controls_state = 154
+		owns_state = 154
 		has_authoritarian_government = yes
 	}
 	immediate = {
@@ -8469,7 +8207,7 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
-		controls_state = 154
+		owns_state = 154
 		has_authoritarian_government = yes
 	}
 	immediate = {
@@ -8501,7 +8239,7 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
-		controls_state = 154
+		owns_state = 154
 		has_authoritarian_government = yes
 	}
 	immediate = {
@@ -8541,6 +8279,111 @@ country_event = {
 				tooltip = ROM_alfold_unrest
 				days = 120
 			}
+		}
+	}
+}
+# Collapse of Carol-Legionary government
+country_event = {
+	id = romania.240
+	immediate = { log = "[GetDateText]: [Root.GetName]: event romania.240 FROM = [From.GetName]" }
+	title = romania.240.t
+	desc = romania.240.d
+
+	trigger = {
+		ROM_great_game_active = yes
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			default_party_popularity_PP_gain = yes
+			clr_country_flag = ROM_crisis
+			set_country_flag = ROM_crisis_happened
+			remove_ideas = {
+				ROM_great_game
+				ROM_great_game_czc
+				ROM_great_game_carol
+				ROM_camarilla1
+				ROM_camarilla2
+				ROM_sentinels
+				ROM_legionary_worker_corps1
+				ROM_legionary_worker_corps2
+				ROM_cross_brotherhoods_idea
+			}
+			kill_ideology_leader = national_populist
+			kill_ideology_leader = paternal_autocrat
+			kill_ideology_leader = authoritarian_democrat
+			create_country_leader = {
+				name = "Mihai I"
+				desc = "POLITICS_MICHAEL_I_DESC"
+				picture = "Portrait_ROM_Michael_I.png"
+				expire = "1965.1.1"
+				ideology = national_populist_subtype
+			}
+			create_country_leader = {
+				name = "Mihai I"
+				desc = "POLITICS_MICHAEL_I_DESC"
+				picture = "Portrait_ROM_Michael_I.png"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+			}
+			create_country_leader = {
+				name = "Mihai I"
+				desc = "POLITICS_MICHAEL_I_DESC"
+				picture = "Portrait_ROM_Michael_I.png"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+			}
+			set_country_flag = ROM_Michael_I
+			set_country_flag = ROM_carol_exile
+			set_country_flag = ROM_gg_over
+			add_to_variable = { var = ROM.king_influence value = 50 }
+			country_event = {
+				id = romania.172
+				days = 65
+			}
+			country_event = {
+				id = romania.173
+				days = 126
+			}
+		}
+	}
+	option = {
+		name = romania.240.a
+		add_political_power = -150
+		add_war_support = -0.5
+		if = {
+			limit = {
+				is_subject = yes
+				has_authoritarian_government = yes
+			}
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.15
+			}
+			ROM_set_military_ministers = yes
+			add_ideas = ROM_rebuilding_the_democracy
+		}
+		else_if = {
+			limit = { has_socialist_government = no }
+			set_politics = {
+				ruling_party = market_liberal
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.15
+			}
+			ROM_set_PNL_ministers = yes
+			add_ideas = ROM_rebuilding_the_democracy
 		}
 	}
 }

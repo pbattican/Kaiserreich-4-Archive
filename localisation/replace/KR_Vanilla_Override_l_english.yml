@@ -9,6 +9,9 @@
 ### Part One - Significantly Changed From Vanilla ###
 #####################################################
 
+### bftb_decisions_l_english
+ conscription_exemptions_granted:0 "Exempt from Conscription"
+
 ### core_l_english
  MENU_BAR_GAME_WIKI:0 "Kaiserreich Wiki"
  MENU_HOMEPAGE:0 "Kaiserreich Discord"
@@ -96,6 +99,7 @@
  custom_diff_strong_ita:0 "£KR_game_rule_flag_ITA   Strengthen the Republic of Italy"
  custom_diff_strong_jap:0 "£KR_game_rule_flag_JAP   Strengthen the Empire of Japan"
  custom_diff_strong_usa:0 "£KR_game_rule_flag_USA   Strengthen the United States of America"
+ custom_diff_strong_sov:0 "£KR_game_rule_flag_SOV   Strengthen the Russian Socialist Republic"
 
 ### ideas_l_english
  government:0 "Laws"
@@ -105,7 +109,7 @@
  person_of_influence:0 "Person of Influence"
  aircraft_manufacturer:0 "Aircraft Designer"
  materiel_manufacturer:0 "Materiel Designer"
- industry_concern:0 "Industry Concern"
+ industry_concern:0 "Industrial Concern"
  chief_of_staff:0 "Chief of Staff"
  chief_of_army:0 "Chief of Army"
  chief_of_navy:0 "Chief of Navy"
@@ -134,6 +138,7 @@
 ### research_l_english
  BLITZKRIEG_LABEL:0 "BATTLE OF ENCIRCLEMENT"
  MODERN_BLITZKRIEG_LABEL:0 "BATTLE OF ANNIHILATION"
+ jungle_warfare:0 "Jungle Combat Training"
  schwerpunk:0 "Defeat in Detail"
  schwerpunk_desc:0 "A front of uniform strength is a front of uniform weakness. In any operation a focal point must be identified, and maximum force must be concentrated to win at that point."
  blitzkrieg:0 "Battle of Encirclement"
@@ -146,14 +151,17 @@
  volkssturm_desc:0 "With manpower remaining high in demand, some propose the establishment of a "People's Militia" that is to consist of men who are too old, too young, or otherwise unfit for regular military service.\n\n "
  werwolf_guerillas:0 "Resistance Guerrillas"
  werwolf_guerillas_desc:0 "Planned resistance groups are our last hope in the fight against the occupying powers. Our nation might have been beaten on the battlefield, but it will live on in the hearts of our people."
- basic_heavy_armor_scheme:0 "Inclined Belt Armor Scheme"
- basic_heavy_armor_scheme_desc:1 "By placing the belt armor at an angle, the same weight and thickness of armor are much harder to pierce.\n\nMounting this module on §YHeavy Ships§! improves their ability to §Ywithstand enemy damage§!. §YBattleships§! and §YBattlecruisers§! are defined by their different §YArmor Schemes§!."
- improved_heavy_armor_scheme:0 "All-or-Nothing Armor Scheme"
- improved_heavy_armor_scheme_desc:1 "This scheme focuses on only protecting the most vital areas of the ship, while ignoring the unimportant parts.\n\nMounting this module on §YHeavy Ships§! improves their ability to §Ywithstand enemy damage§!. §YBattleships§! and §YBattlecruisers§! are defined by their different §YArmor Schemes§!."
- heavy_armor_advice_tt:0 "\nMounting a better §YArmor§! module on §YHeavy Ships§! improves their ability to withstand damage. §YBattleships§! and §YBattlecruisers§! are defined by their different §YArmor Schemes§!, with Battlecruisers generally having worse armor."
+ basic_heavy_armor_scheme:0 "Inclined Belt Armour Scheme"
+ basic_heavy_armor_scheme_desc:1 "By placing the belt armour at an angle, the same weight and thickness of armour are much harder to pierce.\n\nMounting this module on §YHeavy Ships§! improves their ability to §Ywithstand enemy damage§!. §YBattleships§! and §YBattlecruisers§! are defined by their different §YArmour Schemes§!."
+ improved_heavy_armor_scheme:0 "All-or-Nothing Armour Scheme"
+ improved_heavy_armor_scheme_desc:1 "This scheme focuses on only protecting the most vital areas of the ship, while ignoring the unimportant parts.\n\nMounting this module on §YHeavy Ships§! improves their ability to §Ywithstand enemy damage§!. §YBattleships§! and §YBattlecruisers§! are defined by their different §YArmour Schemes§!."
+ heavy_armor_advice_tt:0 "\nMounting a better §YArmour§! module on §YHeavy Ships§! improves their ability to withstand damage. §YBattleships§! and §YBattlecruisers§! are defined by their different §YArmour Schemes§!, with Battlecruisers generally having worse armour."
 
 ### rules_l_english
  CAN_JOIN_FACTIONS:0 "Can not join factions"
+
+### operatives_l_english
+ CANNOT_RECRUITE_OPERATIVE_NO_SLOT_DESC:5 "You can get the first slot by building the intelligence agency. Other slots will be available after the 5th upgrade or after recruiting a §HHead of Intelligence§! (available via decision).\nAs a spymaster, more operative slots are unlocked by having more countries in your faction. Puppets or countries with very low factory counts do not contribute to more operative slots."
 
 ### state_l_english
  twelve:0 "Megalopolis"
@@ -178,6 +186,7 @@
  improved_worker_conditions_desc:0 "Factory work is hard and fraught with many hazards. Improving the conditions for our factory workers will reduce output in the short term, but the long term benefits are worth it."
  foreign_politics:0 "Foreign Policy"
  foreign_politics_desc:0 "Good foreign policy is vital to the survival of a nation, no matter its size. While some nations prefer to focus on building alliances, other, more aggressive, powers opt to challenge their opponents head-on in open conflict. Whatever we choose, we must not be foolhardy, for only through tactful foreign policy can we build friendships and destroy our enemies."
+ war_propaganda_against_warmonger_desc:0 "The nation calls for every man, woman and child to contribute to the fight against [From.GetNameDef]!"
 
 #########################################################
 ### Part Two - Only Minor Changes Compared to Vanilla ###
@@ -347,11 +356,25 @@
  EFFECT_UNLOCK_DECISION:0 "Unlocks Decision: £decision_icon_small $NAME|H$$EFFECT$"
  EFFECT_UNLOCK_DECISION_CATEGORY:0 "Unlocks £decision_icon_small $NAME|H$ Decisions."
  EFFECT_SET_STATE_CATEGORY:0 "becomes a $CATEGORY|Y$."
+ EFFECT_ACTIVATE_TARGETED_DECISION:0 "Enables Decision: £decision_icon_small $NAME|H$"
+ EFFECT_REMOVE_TARGETED_DECISION:0 "Disables Decision: £decision_icon_small $NAME|H$"
 
 # missing line breaks
  EFFECT_ADD_VP:0 "Add $VALUE|H$£victory_points£ to $PROVINCE|H$.\n"
  EFFECT_SUBTRACT_VP:0 "Subtract $VALUE|H$£victory_points£ from $PROVINCE|H$.\n"
  EFFECT_SET_VP:0 "Set victory points of $PROVINCE|H$ to $VALUE|H$£victory_points.\n"
+
+### focus_l_english
+ available_chief_of_staff:0 "§GAvailable§! as §Y$chief_of_staff$§!:"
+ available_chief_of_army:0 "§GAvailable§! as §Y$chief_of_army$§!:"
+ available_chief_of_navy:0 "§GAvailable§! as §Y$chief_of_navy$§!:"
+ available_chief_of_airforce:0 "§GAvailable§! as §Y$chief_of_air_force$§!:"
+ available_designer:0 "§GAvailable§! as §YDesign Company§!:"
+ available_industrial_concern:0 "§GAvailable§! as §Y$industry_concern$§!:"
+ remove_chief_of_staff:0 "§RRemove§! as §Y$chief_of_staff$§!:"
+ remove_chief_of_army:0 "§RRemove§! as §Y$chief_of_army$§!:"
+ remove_chief_of_navy:0 "§RRemove§! as §Y$chief_of_navy$§!:"
+ remove_chief_of_airforce:0 "§RRemove§! as §Y$chief_of_air_force$§!:"
 
 ### frontend_l_english
  FE_COOP_LABEL:0 "Co-operative"
@@ -473,6 +496,7 @@
  MODIFIER_PARADROP_ORGANIZATION_FACTOR:0 "Paratrooper Organisation Factor"
  MODIFIER_PARATROOPER_DEFENSE:0 "Paratrooper Anti Air Defence"
  MODIFIER_TRADE_TO_TARGET_FACTOR_DESC:0 "Extra produced resources available for trade to target country"
+ MODIFIER_BREAKTHROUGH_BONUS_AGAINST_A_COUNTRY:0 " Breakthrough bonus against country"
 
 ### multiplayer_l_english
  HOST_LOADING_SAVEGAME:0 "Host started loading save game: $NAME|Y$."
@@ -644,6 +668,7 @@
  synth_resources_research:0 "Synthetic Resources Research Time"
  motorized_rocket_unit:0 "Motorised Rocket Artillery"
  mot_rockets_research:0 "Motorised Rocket Artillery Research Time"
+ bc_tech:0 "Battlecruiser models"
 
 ### missing in vanilla, delete if added
  armored_car1:0 "Interwar Armoured Car"
@@ -653,7 +678,7 @@
  armored_car3:0 "Improved Armoured Car"
  armored_car3_desc:0 "Changes on the battlefield require a much heavier armament and thicker armour to defeat enemy light units and survive to report back."
  armored_car_at_upgrade:0 "Anti-Tank Armoured Car"
- armored_car_at_upgrade_desc:0 "Our light mechanized units will come into contact with enemy tank forces at some point. Developing a special anti-tank variant would give them a fighting chance."
+ armored_car_at_upgrade_desc:0 "Our light mechanised units will come into contact with enemy tank forces at some point. Developing a special anti-tank variant would give them a fighting chance."
 
 ### rules_l_english
  CAN_DECLARE_WAR_WITHOUT_WARGOAL_WHEN_IN_WAR:0 "Can declare war on a neighbour without a wargoal when at war with a major."

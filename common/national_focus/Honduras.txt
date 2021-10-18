@@ -16,9 +16,8 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 2800 y = 1200 }
 
-    ### Honduras Politics ###
-
-    ### National populist ###
+	### Honduras Politics ###
+	### National populist ###
 
 	focus = { #Chairman Monzada
 		id = HON_monzada
@@ -106,7 +105,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_border_patrol"
-			842 = {
+			312 = {
 				add_building_construction = {
 					type = bunker
 					level = 3
@@ -119,8 +118,6 @@ focus_tree = {
 					province = 13690
 					instant_build = yes
 				}
-			}
-			312 = {
 				add_building_construction = {
 					type = bunker
 					level = 3
@@ -264,7 +261,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
 
-    ### National Populist Economy ###
+	### National Populist Economy ###
 
 	focus = {# MONCOM1
 		id = HON_corporate_economics
@@ -395,13 +392,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_roads"
-			842 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			312 = {
 				add_building_construction = {
 					type = infrastructure
@@ -433,10 +423,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_i_love_the_ufc"
 			add_political_power = -50
 			312 = {
-				add_extra_state_shared_building_slots = 1
-			}
-			842 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
@@ -466,19 +453,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_economic_prosperity"
-			842 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
 			312 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -486,7 +465,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
-    ### Conservatives ###
+	### Conservatives ###
 
 	focus = {# Chairman Galvez (conseravtive) #
 		id = HON_galvez
@@ -549,13 +528,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_bigger_roads"
-			842 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			312 = {
 				add_building_construction = {
 					type = infrastructure
@@ -893,7 +865,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
-    ### Liberals ###
+	### Liberals ###
 
 	focus = {# Chairman Morales #
 		id = HON_morales
@@ -956,17 +928,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_industrial_developement"
-			842 = {
-				if = {
-					limit = {
-						is_owned_by = HON
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+			312 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -1633,7 +1600,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_repatriate_americans"
-			842 = {
+			312 = {
 				add_manpower = -500
 			}
 			366 = {
@@ -1688,16 +1655,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_collective_farms"
-			842 = {
-				add_extra_state_shared_building_slots = 1
+			312 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
-			}
-			312 = {
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -1803,13 +1767,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_transoceanic_railway"
-			842 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			312 = {
 				add_building_construction = {
 					type = infrastructure
@@ -1844,7 +1801,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
-    ### ARMY ###             
+	### ARMY ###
 
 	focus = {
 		id = HON_state_army
@@ -1869,13 +1826,6 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_military_roads"
-			842 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			312 = {
 				add_building_construction = {
 					type = infrastructure
@@ -1897,15 +1847,12 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_mil_ind_complex"
-			842 = {
-				if = {
-					limit = { is_owned_by = HON	}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+			312 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -2336,14 +2283,11 @@ focus_tree = {
 				}
 				set_technology = { interwar_antiair = 1 }
 			}
-			if = {
-				limit = { owns_state = 842 }
-				842 = {
-					add_building_construction = {
-						type = anti_air_building
-						level = 2
-						instant_build = yes
-					}
+			312 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -2360,16 +2304,13 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_airfield"
-			if = {
-				limit = { owns_state = 842 }
-				842 = {
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
+			312 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
 				}
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2377,7 +2318,7 @@ focus_tree = {
 
 	# Airplanes #
 	focus = {
-		id = HON_fighter
+		id = HON_fighters
 		icon = GFX_goal_generic_air_fighter_new
 		cost = 7
 		prerequisite = {
@@ -2386,12 +2327,12 @@ focus_tree = {
 		x = 38
 		y = 3
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HON_fighter"
+			log = "[GetDateText]: [Root.GetName]: Focus HON_fighters"
 			country_event = honduras.210	# buying 25 fighters from abroad, unlock tech '36 fighter if chooses that option
 		}
 	}
 	focus = {
-		id = HON_cas
+		id = HON_cas_focus
 		icon = GFX_goal_generic_air_CAS_new
 		cost = 7
 		prerequisite = {
@@ -2400,7 +2341,7 @@ focus_tree = {
 		x = 40
 		y = 3
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HON_cas"
+			log = "[GetDateText]: [Root.GetName]: Focus HON_cas_focus"
 			country_event = honduras.211	# buying 20 CAS from abroad, unlock tech CAS 1
 		}
 	}
@@ -2409,10 +2350,10 @@ focus_tree = {
 		icon = GFX_goal_generic_air_bomber_new
 		cost = 7
 		prerequisite = {
-			focus = HON_fighter
+			focus = HON_fighters
 		}
 		prerequisite = {
-			focus = HON_cas
+			focus = HON_cas_focus
 		}
 		x = 39
 		y = 4
@@ -2508,28 +2449,25 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HON_port"
-			if = {
-				limit = { owns_state = 842 }
-				842 = {
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 13690
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+			312 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 13690
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
-		id = HON_destroyer
+		id = HON_destroyers
 		icon = GFX_focus_generic_destroyer
 		cost = 7
 		prerequisite = {
@@ -2538,12 +2476,12 @@ focus_tree = {
 		x = 42
 		y = 3
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HON_destroyer"
+			log = "[GetDateText]: [Root.GetName]: Focus HON_destroyers"
 			country_event = honduras.220	# buying or building 2 destroyers, adds required techs
 		}
 	}
 	focus = {
-		id = HON_submarine
+		id = HON_submarines
 		icon = GFX_goal_generic_navy_submarine
 		cost = 7
 		prerequisite = {
@@ -2552,7 +2490,7 @@ focus_tree = {
 		x = 44
 		y = 3
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HON_submarine"
+			log = "[GetDateText]: [Root.GetName]: Focus HON_submarines"
 			country_event = honduras.221	# buying or building 2 submarines, adds tech ss 1
 		}
 	}
@@ -2561,10 +2499,10 @@ focus_tree = {
 		icon = GFX_goal_generic_naval_cruiser2
 		cost = 7
 		prerequisite = {
-			focus = HON_destroyer
+			focus = HON_destroyers
 		}
 		prerequisite = {
-			focus = HON_submarine
+			focus = HON_submarines
 		}
 		x = 43
 		y = 4

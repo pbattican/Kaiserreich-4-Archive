@@ -42,12 +42,9 @@ focus_tree = {
 		relative_position_id = CEN_DEM_Council_CON
 		x = -11
 		y = 1
-		cost = 1
+		cost = 0
 		available = {
-			always = no
-		}
-		bypass = {
-			has_country_flag = CEN_social_conservative_country_flag
+			hidden_trigger = { always = no }
 		}
 		prerequisite = { focus = CEN_DEM_Council_CON }
 		ai_will_do = {
@@ -528,7 +525,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			842 = {
+			312 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -780,12 +777,9 @@ focus_tree = {
 		relative_position_id = CEN_DEM_Council_CON
 		x = -7
 		y = 1
-		cost = 1
+		cost = 0
 		available = {
-			always = no
-		}
-		bypass = {
-			has_country_flag = CEN_social_liberal_country_flag
+			hidden_trigger = { always = no }
 		}
 		prerequisite = { focus = CEN_DEM_Council_CON }
 		ai_will_do = {
@@ -1645,12 +1639,9 @@ focus_tree = {
 		relative_position_id = CEN_DEM_Council_CON
 		x = 7
 		y = 1
-		cost = 1
+		cost = 0
 		available = {
-			always = no
-		}
-		bypass = {
-			has_country_flag = CEN_social_democrat_country_flag
+			hidden_trigger = { always = no }
 		}
 		prerequisite = { focus = CEN_DEM_Council_CON }
 		ai_will_do = {
@@ -1780,53 +1771,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEN_DEM_federalism_is_socialism"
-			if = {
-				limit = {
-					controls_state = 313
-				}
-				313 = {
-					add_extra_state_shared_building_slots = 1
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 314
-				}
-				314 = {
-					add_extra_state_shared_building_slots = 1
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 842
-				}
-				842 = {
-					add_extra_state_shared_building_slots = 1
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 317
-				}
-				317 = {
-					add_extra_state_shared_building_slots = 1
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 316
-				}
-				316 = {
-					add_extra_state_shared_building_slots = 1
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 854
-				}
-				854 = {
-					add_extra_state_shared_building_slots = 1
-				}
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
 			}
 			custom_effect_tooltip = CENdem_centralisation_idea
 			hidden_effect = {
@@ -2085,10 +2032,7 @@ focus_tree = {
 		y = 2
 		cost = 7
 		available = {
-			OR = {
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			has_government = social_democrat
 		}
 		prerequisite = {
 			focus = CEN_DEM_Soc_Dem
@@ -2134,10 +2078,7 @@ focus_tree = {
 		y = 3
 		cost = 7
 		available = {
-			OR = {
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_workers_plight }
 		ai_will_do = {
@@ -2173,10 +2114,7 @@ focus_tree = {
 		y = 3
 		cost = 7
 		available = {
-			OR = {
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_workers_plight }
 		ai_will_do = {
@@ -2196,10 +2134,7 @@ focus_tree = {
 		y = 4
 		cost = 7
 		available = {
-			OR = {
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			has_government = social_democrat
 		}
 		prerequisite = {
 			focus = CEN_DEM_no_more_evasion
@@ -2238,10 +2173,7 @@ focus_tree = {
 		y = 5
 		cost = 7
 		available = {
-			OR = {
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			has_government = social_democrat
 		}
 		prerequisite = {
 			focus = CEN_DEM_minimum_wage
@@ -2266,10 +2198,7 @@ focus_tree = {
 		y = 5
 		cost = 7
 		available = {
-			OR = {
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			has_government = social_democrat
 		}
 		prerequisite = {
 			focus = CEN_DEM_minimum_wage
@@ -2295,10 +2224,7 @@ focus_tree = {
 		y = 6
 		cost = 7
 		available = {
-			OR = {
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
+			has_government = social_democrat
 		}
 		prerequisite = {
 			focus = CEN_DEM_military_is_not_politics
@@ -2329,7 +2255,7 @@ focus_tree = {
 		y = 5
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_more_schools }
 		prerequisite = { focus = CEN_DEM_no_big_guys_radsoc_edition }
@@ -2353,7 +2279,7 @@ focus_tree = {
 		y = 6
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_money_for_old_people }
 		prerequisite = { focus = CEN_DEM_oh_no_the_socialists }
@@ -2377,7 +2303,7 @@ focus_tree = {
 		y = 7
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_telephone_for_everyone }
 		ai_will_do = {
@@ -2397,16 +2323,13 @@ focus_tree = {
 
 	focus = {
 		id = CEN_DEM_Rad_Soc
-		icon = GFX_goal_ideology_radical_socialist
+		icon = GFX_goal_red_star_green_wreath
 		relative_position_id = CEN_DEM_Council_CON
 		x = 11
 		y = 1
-		cost = 1
+		cost = 0
 		available = {
-			always = no
-		}
-		bypass = {
-			has_country_flag = CEN_radical_socialist_country_flag
+			hidden_trigger = { always = no }
 		}
 		prerequisite = { focus = CEN_DEM_Council_CON }
 		ai_will_do = {
@@ -2426,7 +2349,7 @@ focus_tree = {
 		y = 2
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_Rad_Soc }
 		ai_will_do = {
@@ -2447,7 +2370,7 @@ focus_tree = {
 		y = 3
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_lol_i_won }
 		ai_will_do = {
@@ -2469,7 +2392,7 @@ focus_tree = {
 		y = 3
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_lol_i_won }
 		ai_will_do = {
@@ -2492,7 +2415,7 @@ focus_tree = {
 		y = 4
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_were_all_equal }
 		prerequisite = { focus = CEN_DEM_forget_about_it }
@@ -2525,7 +2448,7 @@ focus_tree = {
 		y = 4
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_were_all_equal }
 		prerequisite = { focus = CEN_DEM_forget_about_it }
@@ -2549,7 +2472,7 @@ focus_tree = {
 		y = 4
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_were_all_equal }
 		prerequisite = { focus = CEN_DEM_forget_about_it }
@@ -2577,7 +2500,7 @@ focus_tree = {
 		y = 5
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_no_big_guys_radsoc_edition }
 		prerequisite = { focus = CEN_DEM_ze_land_reform }
@@ -2599,7 +2522,7 @@ focus_tree = {
 		y = 6
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = { focus = CEN_DEM_lost_brothers_radsoc_edition }
 
@@ -2623,7 +2546,7 @@ focus_tree = {
 		y = 7
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = {
 			focus = CEN_DEM_i_love_mexico
@@ -2648,7 +2571,7 @@ focus_tree = {
 		y = 6
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = {
 			focus = CEN_DEM_lost_brothers_radsoc_edition
@@ -2697,7 +2620,7 @@ focus_tree = {
 		y = 7
 		cost = 7
 		available = {
-			has_government = radical_socialist
+			has_government = social_democrat
 		}
 		prerequisite = {
 			focus = CEN_DEM_southern_republics
@@ -3482,6 +3405,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5
+		available = {
+			controls_state = 312
+			controls_state = 313
+		}
 
 		prerequisite = { focus = CEN_DEM_Propose_Naval_Ventures }
 		ai_will_do = {
@@ -3489,7 +3416,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CEN_DEM_New_Drydocks"
-			313 = {
+			312 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -3497,7 +3424,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			842 = {
+			313 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard

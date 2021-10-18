@@ -446,8 +446,8 @@
  SRI_carriers_desc:0 "We should favour carriers as the key centrepiece of the Navy."
  SRI_naval_aircraft:0 "Naval Aircraft"
  SRI_naval_aircraft_desc:0 "As part of our plan to focus on Aircraft Carriers, we should focus on the development of naval aircraft."
- SRI_marines:0 "Red Marines"
- SRI_marines_desc:0 "Regardless of our policy in the nature and focus of the Navy, we should support the Marines and make sure that our Marines are given the support needed."
+ SRI_marines_focus:0 "Red Marines"
+ SRI_marines_focus_desc:0 "Regardless of our policy in the nature and focus of the Navy, we should support the Marines and make sure that our Marines are given the support needed."
  SRI_destroyers:0 "Favour Destroyers"
  SRI_destroyers_desc:0 "We should favour Destroyers as the key centrepiece of the Navy"
  SRI_heavy_cruisers:0 "Support Armoured Cruisers"
@@ -466,8 +466,8 @@
  SRI_bomber_efforts_desc:0 "As part of our campaign to support the army from the air, we should invest resources in our bombers."
  SRI_cas_efforts:0 "CAS Efforts"
  SRI_cas_efforts_desc:0 "As part of our campaign to support the army from the air, we should invest resources in CAS aircraft capable of actively performing ground support."
- SRI_paratroopers:0 "Red Paratroopers"
- SRI_paratroopers_desc:0 "As part of our campaign to support the army from the air, we should invest resources in training paratroopers as a culmination of our combined forces doctrine..."
+ SRI_paratroopers_focus:0 "Red Paratroopers"
+ SRI_paratroopers_focus_desc:0 "As part of our campaign to support the army from the air, we should invest resources in training paratroopers as a culmination of our combined forces doctrine..."
  SRI_air_supremecy:0 "Air Supremacy"
  SRI_air_supremecy_desc:0 "The air-force should primarily focus on dominating the skies."
  SRI_female_pilots:0 "Female Pilots"
@@ -489,7 +489,7 @@
  socitaly.1.a:0 "Forward!"
 
  socitaly.200.t:0 "Uniting Italy"
- socitaly.200.d:0 "Italian nationalists have already begun the call for a Second Risorgimento, to unify Italy once more. Spreading the revolution will not be a simple matter, however. The peninsula exists in an uneasy balance: Germany and Austria are wary of any formal alliance between the SRI and the Third Internationale. They know an alliance is inevitable, but any attempt on our part to bring the French and English into a war to reunite Italy under syndicalist rule would draw intervention and start a new Weltkrieg. The Republic of Italy to the east is protected by Austria, but under a similar prohibition against starting a war against us. So long as the prospect of German and Austrian interference remains, we must be aware that any war to reunite Italy can only be done with limited Third Internationale support. We have not made a move yet, but we cannot sit idly for much longer - Italy must be reunited!"
+ socitaly.200.d:0 "Italian nationalists have already begun the call for a Second Risorgimento, to unify Italy once more. Spreading the revolution will not be a simple matter, however. The peninsula exists in an uneasy balance: Germany and Austria are wary of any formal alliance between the SRI and the Third Internationale. They know an alliance is inevitable, but any attempt on our part to bring the French and British into a war to reunite Italy under syndicalist rule would draw intervention and start a new Weltkrieg. The Republic of Italy to the east is protected by Austria, but under a similar prohibition against starting a war against us. So long as the prospect of German and Austrian interference remains, we must be aware that any war to reunite Italy can only be done with limited Third Internationale support. We have not made a move yet, but we cannot sit idly for much longer - Italy must be reunited!"
  socitaly.200.a:0 "Viva l'Italia!"
 
 ### Fourth Congress ###
@@ -955,3 +955,14 @@
  socitaly.127.a:0 "We can call for aid!"
  socitaly.127.b:0 "This means trouble..."
  socitaly.127.c:0 "I see"
+
+ socitaly.128.t:0 "An Invitation"
+ socitaly.128.d:0 "Now that all bets are off regarding the so-called 'balance' in Italy, [From.GetNameDef] has extended a formal invitation for [SRI.GetNameDef] to join the ranks of the Third Internationale."
+ socitaly.128.a:0 "At last!"
+ socitaly.128.b:0 "On second thought, no..."
+
+ socitaly.129.t:0 "The [From.GetAdjective] Request"
+ socitaly.129.d:0 "Now that all bets are off regarding the so-called 'balance' in Italy, [From.GetNameDef] has made a formal request to join the ranks of the Third Internationale."
+ socitaly.129.a:0 "At last!"
+ socitaly.129.b:0 "On second thought, no..."
+ 

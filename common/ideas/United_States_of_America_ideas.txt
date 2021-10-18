@@ -122,13 +122,23 @@ ideas = {
 			picture = ENG_the_war_to_end_all_wars
 		}
 
-		USA_civil_war_depression_idea = { #Civil War Depression
+		USA_civil_war_depression_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_civil_war_depression_idea" }
 			picture = SPA_recovering_from_the_civil_war
 			modifier = {
 				production_factory_max_efficiency_factor = -0.15
 				industrial_capacity_factory = -0.15
 				production_speed_buildings_factor = -0.15
+			}
+		}
+		USA_civil_war_depression_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_civil_war_depression_idea_2" }
+			name = USA_civil_war_depression_idea
+			picture = SPA_recovering_from_the_civil_war
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
 			}
 		}
 
@@ -231,15 +241,6 @@ ideas = {
 				training_time_factor = -0.1
 			}
 		}
-		USA_economic_recovery_idea = { #Civil War Recovery
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_economic_recovery_idea" }
-			picture = SPA_recovering_from_the_civil_war
-			modifier = {
-				production_factory_max_efficiency_factor = -0.05
-				industrial_capacity_factory = -0.05
-				production_speed_buildings_factor = -0.05
-			}
-		}
 		amcviwar_ready_to_surrender = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea amcviwar_ready_to_surrender" }
 			available = {
@@ -254,7 +255,7 @@ ideas = {
 			}
 			picture = generic_morale_bonus
 		}
-		### Fair Deal Ideas ###	
+		### Fair Deal Ideas ###
 		USA_recovering_economy_idea = { #Recovering Economy
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_recovering_economy_idea" }
 			picture = can_wartime_prices_and_trade_board
@@ -998,16 +999,20 @@ ideas = {
 		USA_league_head_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_league_head_1" }
 			on_remove = {
-				every_country = {
-					limit = {
-						OR = {
-							has_idea = USA_league_of_america_1
-							has_idea = USA_league_of_america_2
+				log = "[GetDateText]: [Root.GetName]: remove idea USA_league_head_1"
+				if = {
+					limit = { is_valid_peace_target = no }
+					every_country = {
+						limit = {
+							OR = {
+								has_idea = USA_league_of_america_1
+								has_idea = USA_league_of_america_2
+							}
 						}
-					}
-					remove_ideas = {
-						USA_league_of_america_1
-						USA_league_of_america_2
+						remove_ideas = {
+							USA_league_of_america_1
+							USA_league_of_america_2
+						}
 					}
 				}
 			}
@@ -1022,16 +1027,20 @@ ideas = {
 		USA_league_head_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_league_head_2" }
 			on_remove = {
-				every_country = {
-					limit = {
-						OR = {
-							has_idea = USA_league_of_america_1
-							has_idea = USA_league_of_america_2
+				log = "[GetDateText]: [Root.GetName]: remove idea USA_league_head_2"
+				if = {
+					limit = { is_valid_peace_target = no }
+					every_country = {
+						limit = {
+							OR = {
+								has_idea = USA_league_of_america_1
+								has_idea = USA_league_of_america_2
+							}
 						}
-					}
-					remove_ideas = {
-						USA_league_of_america_1
-						USA_league_of_america_2
+						remove_ideas = {
+							USA_league_of_america_1
+							USA_league_of_america_2
+						}
 					}
 				}
 			}
@@ -1046,16 +1055,20 @@ ideas = {
 		USA_league_head_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_league_head_3" }
 			on_remove = {
-				every_country = {
-					limit = {
-						OR = {
-							has_idea = USA_league_of_america_1
-							has_idea = USA_league_of_america_2
+				log = "[GetDateText]: [Root.GetName]: remove idea USA_league_head_3"
+				if = {
+					limit = { is_valid_peace_target = no }
+					every_country = {
+						limit = {
+							OR = {
+								has_idea = USA_league_of_america_1
+								has_idea = USA_league_of_america_2
+							}
 						}
-					}
-					remove_ideas = {
-						USA_league_of_america_1
-						USA_league_of_america_2
+						remove_ideas = {
+							USA_league_of_america_1
+							USA_league_of_america_2
+						}
 					}
 				}
 			}
@@ -1445,6 +1458,32 @@ ideas = {
 				electronics = 0.1
 				nuclear = 0.1
 			}
+			equipment_bonus = {
+				destroyer = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				light_cruiser = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				heavy_cruiser = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				battleship = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				carrier = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				submarine = {
+					naval_speed = 0.1
+					instant = yes
+				}
+			}
 		}
 		kr_ibm = { #IBM
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_ibm" }
@@ -1477,6 +1516,7 @@ ideas = {
 				}
 			}
 			traits = { electronics_manufacturer }
+			modifier = { production_speed_radar_station_factor = 0.2 }
 			research_bonus = { electronics = 0.15 }
 		}
 		kr_westinghouse = { #Westinghouse

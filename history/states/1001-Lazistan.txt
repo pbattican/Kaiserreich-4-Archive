@@ -5,22 +5,13 @@ state = {
 	state_category = one
 
 	history = {
-		owner = OTT
-		add_core_of = OTT
-		victory_points = {
-			13671 2
-		}
+		owner = TUR
+		add_core_of = TUR
 		victory_points = {
 			11753 1
 		}
 		buildings = {
 			infrastructure = 2
-			789 = {
-				bunker = 1
-			}
-			13671 = {
-				bunker = 2
-			}
 			11753 = {
 				bunker = 1
 			}
@@ -28,6 +19,7 @@ state = {
 	}
 
 	provinces = {
-		789 3714 6976 11753 13671
+		3714 11753
 	}
 }
+

@@ -40,10 +40,10 @@ country_event = { # The American Legion Appointment
 			popularity = 0.1
 		}
 		hidden_effect = {
-			country_event = {
+			country_event = {	# The Business Plot
 				id = unionstate.2
 				days = 7
-			} # The Business Plot
+			}
 
 			# AuthDem Events
 			country_event = {
@@ -122,10 +122,10 @@ country_event = { # The American Legion Appointment
 			popularity = 0.1
 		}
 		hidden_effect = {
-			country_event = {
+			country_event = {	# A special Session of Congress
 				id = unionstate.3
 				days = 10
-			} # A special Session of Congress
+			}
 		}
 	}
 	option = { # William Pelley
@@ -156,14 +156,14 @@ country_event = { # The American Legion Appointment
 			popularity = 0.1
 		}
 		hidden_effect = {
-			country_event = {
+			country_event = {	# The Business Plot
 				id = unionstate.2
 				days = 7
-			} # The Business Plot
-			country_event = {
+			}
+			country_event = {	# A special Session of Congress
 				id = unionstate.3
 				days = 14
-			} # A special Session of Congress
+			}
 		}
 	}
 }
@@ -3070,7 +3070,6 @@ country_event = { # Socialist terrorism - factory sabotaged
 			if = {
 				limit = { arms_factory > 0 }
 				random_list = {
-					seed = random
 					50 = {
 						event_target:attack_state = {
 							damage_building = {
@@ -3085,7 +3084,6 @@ country_event = { # Socialist terrorism - factory sabotaged
 			if = {
 				limit = { infrastructure > 3 }
 				random_list = {
-					seed = random
 					25 = {
 						event_target:attack_state = {
 							damage_building = {
@@ -3106,7 +3104,6 @@ country_event = { # Socialist terrorism - factory sabotaged
 				}
 			}
 			random_list = {
-				seed = random
 				25 = {
 					ROOT = {
 						add_manpower = -3000
@@ -3199,7 +3196,6 @@ country_event = { # Federalist terrorism - factory sabotaged
 			if = {
 				limit = { arms_factory > 0 }
 				random_list = {
-					seed = random
 					50 = {
 						event_target:attack_state = {
 							damage_building = {
@@ -3214,7 +3210,6 @@ country_event = { # Federalist terrorism - factory sabotaged
 			if = {
 				limit = { infrastructure > 3 }
 				random_list = {
-					seed = random
 					25 = {
 						event_target:attack_state = {
 							damage_building = {
@@ -3235,7 +3230,6 @@ country_event = { # Federalist terrorism - factory sabotaged
 				}
 			}
 			random_list = {
-				seed = random
 				25 = {
 					ROOT = {
 						add_manpower = -3000
@@ -3298,7 +3292,7 @@ country_event = { # Airborne Experiments Begin
 	}
 }
 
-country_event = { # Airborne Experiments Succesful
+country_event = { # Airborne Experiments Successful
 	id = unionstate.502
 	immediate = { log = "[GetDateText]: [Root.GetName]: event unionstate.502 FROM = [From.GetName]" }
 	title = unionstate.502.t

@@ -150,24 +150,24 @@ country_event = { # Black Monday - a week after
 		add_stability = -0.1
 		add_ideas = GEA_colonial_disaster_idea
 		hidden_effect = {
-			set_country_flag = {
+			set_country_flag = { # set the flag
 				flag = GEA_Indochinese_Anger
 				value = 0
-			} # set the flag
+			}
 		}
 
 		hidden_effect = {
-			country_event = {
+			country_event = { # Colonial Events
 				id = Ostasien.30
 				days = 5
 			}
-		} # Colonial Events
+		}
 		hidden_effect = {
-			country_event = {
+			country_event = { # Instability in Indochina
 				id = Ostasien.4
 				days = 17
 			}
-		} # Instability in Indochina
+		}
 	}
 }
 
@@ -189,11 +189,11 @@ country_event = { # Instability in Indochina
 			value = 1
 		}
 		hidden_effect = {
-			country_event = {
+			country_event = { # Nationalist Agitation
 				id = Ostasien.5
 				days = 20
 			}
-		} # Nationalist Agitaion
+		}
 	}
 }
 country_event = { # Nationalist Agitation in Tonkin
@@ -542,7 +542,6 @@ country_event = { # Binh Dinh Commune movement
 					}
 				}
 				random_list = {
-					seed = random
 					50 = {
 						country_event = {
 							id = Ostasien.33
@@ -608,37 +607,41 @@ country_event = { # Saigon Uprising
 				has_global_flag = GEA_Bao_Dai_Reform_Success
 			}
 			hidden_effect = {
-				country_event = {
+				country_event = { # Unfortunately Vietnam is not finished in 0.6
 					id = Ostasien.25
 					days = 3
 				}
-			} # Unfortunately Vietnam is not finished in 0.6
+			}
 		}
 		hidden_effect = {
 			add_to_variable = {
 				var = INC.guerilla_activity
 				value = 20
 			}
-			remove_state_core = 856
-			add_state_claim = 856
-			remove_state_core = 286
-			add_state_claim = 286
+			every_owned_state = {
+				limit = { region = 196 } #Indochina
+				remove_core_of = ROOT
+				add_claim_by = ROOT
+				start_resistance = yes
+			}
 			delete_unit_template_and_units = {
 				division_template = "Indochinesische Schützendivision"
 			}
 			INC = {
-				add_state_core = 827
-				add_state_core = 286
-				add_state_core = 856
-				add_state_core = 671
-				add_state_core = 857
-				add_state_core = 750
-				add_state_core = 826
-				add_state_core = 825
-				add_state_core = 670
-				add_state_core = 882
-				transfer_state = 286 # Saigon
-				transfer_state = 856 # Mekong Delta
+				add_state_core = 827 #Annam
+				add_state_core = 286 #Cochinchina
+				add_state_core = 856 #Mekong Delta
+				add_state_core = 671 #Tonkin
+				add_state_core = 857 #Dong Bac
+				add_state_core = 882 #Samaburi
+				add_state_core = 670 #Laos
+				add_state_core = 826 #Stung Treng
+				add_state_core = 750 #Phnom Penh
+				add_state_core = 825 #Battambang
+
+				transfer_state = 286 #Cochinchina
+				transfer_state = 856 #Mekong Delta
+
 				set_politics = {
 					ruling_party = radical_socialist
 					last_election = "1885.6.9"
@@ -733,14 +736,6 @@ country_event = { # Saigon Uprising
 				division_template = "Indochinesische Schützendivision"
 			}
 		}
-		hidden_effect = {
-			INC = {
-				country_event = {
-					id = viet.0
-					days = 1
-				}
-			}
-		}
 		INC = {
 			change_tag_from = GEA
 		}
@@ -753,13 +748,6 @@ country_event = { # Saigon Uprising
 			}
 		}
 		hidden_effect = {
-			delete_unit = { id = 100 }
-			INC = {
-				country_event = {
-					id = viet.0
-					days = 1
-				}
-			}
 			LEP = {
 				country_event = {
 					id = lepaog.51
@@ -1077,44 +1065,45 @@ country_event = { # Victory
 			}
 		}
 		hidden_effect = {
+			remove_state_core = 882 #Samaburi
+			remove_state_core = 670 #Laos
+			remove_state_core = 826 #Stung Treng
+			remove_state_core = 750 #Phnom Penh
+			remove_state_core = 825 #Battambang
+			add_state_claim = 882 #Samaburi
+			add_state_claim = 670 #Laos
+			add_state_claim = 826 #Stung Treng
+			add_state_claim = 750 #Phnom Penh
+			add_state_claim = 825 #Battambang
+			every_owned_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					check_variable = { core_countries^num > 0 }
+					has_resistance = no
+				}
+				start_resistance = yes
+			}
 			if = {
 				limit = { has_idea = INC_vietminh }
 				remove_ideas = INC_vietminh
 			}
-			country_event = {
+			country_event = { # Liberation day, triggers every year
 				id = viet.82
 				days = 365
-			} # Liberation day, triggers every year
+			}
 			news_event = {
 				id = worldnews.92
 				days = 2
 			}
-			INC = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					add_ai_strategy = {
-						type = spare_unit_factor
-						value = -60
-					}
-				}
-			}
 			GEA = {
 				if = {
-					limit = {
-						is_ai = yes
-					}
-					add_ai_strategy = {
-						type = spare_unit_factor
-						value = -80
-					}
+					limit = { is_ai = yes }
+					add_manpower = 250000
 					add_equipment_to_stockpile = {
-						type = infantry_equipment_1
+						type = infantry_equipment
 						amount = 6500
 						producer = GER
 					}
-					add_manpower = 250000
 				}
 			}
 		}
@@ -1712,11 +1701,7 @@ country_event = { # A New Admiralty
 	title = Ostasien.51.t
 	desc = {
 		text = Ostasien.51.d.a
-		trigger = {
-			NOT = {
-				has_completed_focus = GEA_internal1
-			}
-		} # East Asian Colonization
+		trigger = { NOT = { has_completed_focus = GEA_internal1 } } # East Asian Colonization
 	}
 	desc = {
 		text = Ostasien.51.d.b

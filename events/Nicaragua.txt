@@ -13,19 +13,18 @@ country_event = { #Intro event
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.1 FROM = [From.GetName]" }
 	title = nic.1.t
 	desc = nic.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
 	immediate = {
 		hidden_effect = {
 			country_event = {
 				id = nic.2
 				days = 21
 			}
-			1071 = {
-				remove_core_of = NIC
-			}
 		}
 	}
-	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {
 		name = nic.1.a
@@ -52,8 +51,8 @@ country_event = { #Anniversary of the revolution
 	is_triggered_only = yes
 	trigger = {
 		OR = {
+			has_government = syndicalist
 			has_government = radical_socialist
-			has_government = social_democrat
 			has_government = social_liberal
 		}
 		NOT = {
@@ -65,7 +64,7 @@ country_event = { #Anniversary of the revolution
 	option = {
 		name = nic.2.a
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.01
 		}
 		add_war_support = 0.02
@@ -141,7 +140,7 @@ country_event = { #Sandino supporters ENRAGED
 	option = {
 		name = nic.5.a
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = -0.04
 		}
 	}
@@ -158,7 +157,7 @@ country_event = { #Sandino speaks against enraged supporters
 	option = {
 		name = nic.6.a
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.01
 		}
 	}
@@ -183,7 +182,7 @@ country_event = { #Peasantry complains
 	option = {
 		name = nic.7.a
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.02
 		}
 	}
@@ -208,7 +207,7 @@ country_event = { #Suc Dem takes tour to villages
 	option = {
 		name = nic.8.a
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.03
 		}
 	}
@@ -225,7 +224,7 @@ country_event = { #Elections!
 	title = nic.9.t
 	desc = nic.9.d
 	trigger = {
-		has_government = radical_socialist
+		has_government = syndicalist
 		date < 1937.1.1
 		is_subject = no
 	}
@@ -257,11 +256,11 @@ country_event = { #Elections!
 			}
 		}
 		set_politics = {
-			ruling_party = radical_socialist
+			ruling_party = syndicalist
 			elections_allowed = yes
 		}
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.03
 		}
 		set_country_flag = NIC_36_election_flag
@@ -296,11 +295,11 @@ country_event = { #Elections!
 			}
 		}
 		set_politics = {
-			ruling_party = social_democrat
+			ruling_party = radical_socialist
 			elections_allowed = yes
 		}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.05
 		}
 		set_country_flag = NIC_36_election_flag
@@ -377,7 +376,7 @@ country_event = { #Sandinistas acting against Sacasa
 	option = {
 		name = nic.10.a
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.02
 		}
 	}
@@ -445,7 +444,7 @@ country_event = { #Peasantry complain about Sacasa
 			popularity = 0.02
 		}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.02
 		}
 	}
@@ -485,7 +484,7 @@ country_event = { #People lack confidence
 			popularity = -0.02
 		}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.01
 		}
 	}
@@ -506,7 +505,7 @@ country_event = { #peasants slowly recover
 		name = nic.14.a
 		add_stability = -0.02
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.04
 		}
 	}
@@ -528,7 +527,7 @@ country_event = { #Sandino hates Liberalism!(Triggered from focus file)
 		add_stability = -0.02
 		add_war_support = -0.05
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.01
 		}
 	}
@@ -697,7 +696,7 @@ country_event = { #Sandino is organizing the Sandinistas(Triggered from focus "R
 			base = 20
 		}
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.02
 		}
 		custom_effect_tooltip = NIC_sandinistas_bad_one_month
@@ -761,7 +760,7 @@ country_event = { #Moreno inagurated
 	}
 	is_triggered_only = yes
 	trigger = {
-		has_government = social_democrat
+		has_government = radical_socialist
 	}
 	fire_only_once = yes
 
@@ -769,7 +768,7 @@ country_event = { #Moreno inagurated
 		name = nic.23.a
 		add_stability = 0.06
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.04
 		}
 	}
@@ -790,7 +789,7 @@ country_event = { #Sandino and Sacasa congragulate Moreno
 	}
 	is_triggered_only = yes
 	trigger = {
-		has_government = social_democrat
+		has_government = radical_socialist
 	}
 	fire_only_once = yes
 
@@ -798,11 +797,11 @@ country_event = { #Sandino and Sacasa congragulate Moreno
 		name = nic.30.a
 		add_political_power = 25
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.01
 		}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.01
 		}
 		add_popularity = {
@@ -819,7 +818,7 @@ country_event = { #Peasant celebration
 	desc = nic.24.d
 	is_triggered_only = yes
 	trigger = {
-		has_government = social_democrat
+		has_government = radical_socialist
 	}
 	fire_only_once = yes
 
@@ -827,7 +826,7 @@ country_event = { #Peasant celebration
 		name = nic.24.a
 		add_political_power = 25
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.02
 		}
 	}
@@ -840,7 +839,7 @@ country_event = { #School constructed(Triggered from focus)
 	desc = nic.28.d
 	is_triggered_only = yes
 	trigger = {
-		has_government = social_democrat
+		has_government = radical_socialist
 	}
 	fire_only_once = yes
 
@@ -848,7 +847,7 @@ country_event = { #School constructed(Triggered from focus)
 		name = nic.28.a
 		add_political_power = 25
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.02
 		}
 	}
@@ -869,7 +868,7 @@ country_event = { #higher class complain about distribution of wealth(Triggered 
 	}
 	is_triggered_only = yes
 	trigger = {
-		has_government = social_democrat
+		has_government = radical_socialist
 	}
 	fire_only_once = yes
 
@@ -892,7 +891,7 @@ country_event = { #higher class complain about distribution of wealth(Triggered 
 		name = nic.25.b
 		add_political_power = -40
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = -0.02
 		}
 		hidden_effect = {
@@ -911,7 +910,7 @@ country_event = { #Liberal protests
 	desc = nic.26.d
 	is_triggered_only = yes
 	trigger = {
-		has_government = social_democrat
+		has_government = radical_socialist
 	}
 	fire_only_once = yes
 
@@ -923,7 +922,7 @@ country_event = { #Liberal protests
 			popularity = 0.01
 		}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = -0.01
 		}
 	}
@@ -936,7 +935,7 @@ country_event = { #People are sad
 	desc = nic.27.d
 	is_triggered_only = yes
 	trigger = {
-		has_government = social_democrat
+		has_government = radical_socialist
 	}
 	fire_only_once = yes
 
@@ -948,7 +947,7 @@ country_event = { #People are sad
 			popularity = -0.01
 		}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = -0.03
 		}
 	}
@@ -969,14 +968,14 @@ country_event = { #Moreno and Sandino meet
 	}
 	is_triggered_only = yes
 	trigger = {
-		has_government = social_democrat
+		has_government = radical_socialist
 	}
 	fire_only_once = yes
 
 	option = { #Dumb Liberals!
 		name = nic.29.a
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.01
 		}
 	}
@@ -989,7 +988,7 @@ country_event = { #Moreno drunk AF
 	desc = nic.31.d
 	is_triggered_only = yes
 	trigger = {
-		has_government = social_democrat
+		has_government = radical_socialist
 	}
 	fire_only_once = yes
 
@@ -997,7 +996,7 @@ country_event = { #Moreno drunk AF
 		name = nic.31.a
 		add_political_power = -40
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = -0.03
 		}
 	}
@@ -1020,7 +1019,7 @@ country_event = { #Sandinistas celebrate
 	}
 	is_triggered_only = yes
 	trigger = {
-		has_government = radical_socialist
+		has_government = syndicalist
 	}
 	fire_only_once = yes
 
@@ -1028,7 +1027,7 @@ country_event = { #Sandinistas celebrate
 		name = nic.32.a
 		add_stability = -0.02
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.01
 		}
 	}
@@ -1041,7 +1040,7 @@ country_event = { #Sandino inagurated
 	desc = nic.33.d
 	is_triggered_only = yes
 	trigger = {
-		has_government = radical_socialist
+		has_government = syndicalist
 	}
 	fire_only_once = yes
 
@@ -1049,7 +1048,7 @@ country_event = { #Sandino inagurated
 		name = nic.33.a
 		add_political_power = 25
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.02
 		}
 	}
@@ -1070,7 +1069,7 @@ country_event = { #Sandino meets with Sandinistas
 	}
 	is_triggered_only = yes
 	trigger = {
-		has_government = radical_socialist
+		has_government = syndicalist
 	}
 	fire_only_once = yes
 
@@ -1078,7 +1077,7 @@ country_event = { #Sandino meets with Sandinistas
 		name = nic.34.a
 		add_political_power = -20
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = -0.02
 		}
 	}
@@ -1099,7 +1098,7 @@ country_event = { #Liberal protest
 	}
 	is_triggered_only = yes
 	trigger = {
-		has_government = radical_socialist
+		has_government = syndicalist
 	}
 	fire_only_once = yes
 
@@ -1132,18 +1131,18 @@ country_event = { #Sandino and Moreno dicuss Liberalism
 	}
 	is_triggered_only = yes
 	trigger = {
-		has_government = radical_socialist
+		has_government = syndicalist
 	}
 	fire_only_once = yes
 
 	option = {
 		name = nic.36.a
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.01
 		}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.02
 		}
 	}
@@ -1156,7 +1155,7 @@ country_event = { #The Liberal split, Sandino edition
 	desc = nic.37.d
 	is_triggered_only = yes
 	trigger = {
-		has_government = radical_socialist
+		has_government = syndicalist
 	}
 	fire_only_once = yes
 
@@ -1185,7 +1184,7 @@ country_event = { #Sandinistas tamed
 	}
 	is_triggered_only = yes
 	trigger = {
-		has_government = radical_socialist
+		has_government = syndicalist
 	}
 	fire_only_once = yes
 
@@ -1210,7 +1209,7 @@ country_event = { #Sandinistas tamed
 		custom_effect_tooltip = NIC_good_sandinistas_deploy
 		set_country_flag = NIC_sandinistas_employed_flag
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.01
 		}
 	}
@@ -1223,7 +1222,7 @@ country_event = { #Sandinistas almost move into DMZ
 	desc = nic.39.d
 	is_triggered_only = yes
 	trigger = {
-		has_government = radical_socialist
+		has_government = syndicalist
 		USA = {
 			NOT = {
 				has_global_flag = USA_civil_war_begun_flag
@@ -1236,7 +1235,7 @@ country_event = { #Sandinistas almost move into DMZ
 		name = nic.39.a
 		add_political_power = -20
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = -0.02
 		}
 	}
@@ -1317,11 +1316,11 @@ country_event = { #Sandino protests the invasion of Socialist Honduras
 		add_war_support = -0.05
 		add_stability = -0.05
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.02
 		}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.01
 		}
 	}
@@ -1421,7 +1420,7 @@ country_event = { #Socialist protest to "Guardia cooperation"
 				}
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = 0.01
 			}
 		}
@@ -1438,7 +1437,7 @@ country_event = { #Socialist protest to "Guardia cooperation"
 			add_stability = -0.05
 			add_war_support = -0.05
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = 0.02
 			}
 		}
@@ -1491,7 +1490,7 @@ country_event = { #Event for Socialist people joining
 				}
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = 0.02
 			}
 		}
@@ -1506,11 +1505,11 @@ country_event = { #Event for Socialist people joining
 				}
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = 0.02
 			}
 			add_popularity = {
-				ideology = social_democrat
+				ideology = radical_socialist
 				popularity = 0.02
 			}
 		}
@@ -1531,11 +1530,11 @@ country_event = { #Moreno is indecisive
 	option = {
 		name = nic.47.a
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = -0.04
 		}
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = -0.01
 		}
 		hidden_effect = {
@@ -1561,11 +1560,11 @@ country_event = { #Protests grow into revolt
 	option = {
 		name = nic.48.a
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.01
 		}
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.01
 		}
 		add_popularity = {
@@ -1624,7 +1623,7 @@ country_event = { #Demanded to step down
 				has_country_flag = NIC_government_trusted_flag
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = 0.01
 			}
 			add_popularity = {
@@ -1640,11 +1639,11 @@ country_event = { #Demanded to step down
 				has_country_flag = NIC_government_distrusted_flag
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = 0.03
 			}
 			add_popularity = {
-				ideology = social_democrat
+				ideology = radical_socialist
 				popularity = 0.02
 			}
 			add_popularity = {
@@ -1657,7 +1656,7 @@ country_event = { #Demanded to step down
 		set_country_flag = NIC_moreno_sandino_together_flag
 		set_country_flag = NIC_socialist_betrayal
 		set_politics = {
-			ruling_party = radical_socialist
+			ruling_party = syndicalist
 		}
 		hidden_effect = {
 			remove_all_ministers = yes
@@ -1715,11 +1714,11 @@ country_event = { #Demanded to step down
 				has_country_flag = NIC_government_distrusted_flag
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = 0.02
 			}
 			add_popularity = {
-				ideology = social_democrat
+				ideology = radical_socialist
 				popularity = 0.01
 			}
 			add_popularity = {
@@ -1793,7 +1792,7 @@ country_event = { #Clash at the capital
 				has_country_flag = NIC_government_trusted_flag
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = -0.02
 			}
 			add_popularity = {
@@ -1806,11 +1805,11 @@ country_event = { #Clash at the capital
 				has_country_flag = NIC_government_distrusted_flag
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = -0.02
 			}
 			add_popularity = {
-				ideology = social_democrat
+				ideology = radical_socialist
 				popularity = -0.02
 			}
 			add_stability = -0.2
@@ -1863,11 +1862,11 @@ country_event = { #Clash at the capital
 				has_country_flag = NIC_government_distrusted_flag
 			}
 			add_popularity = {
-				ideology = radical_socialist
+				ideology = syndicalist
 				popularity = 0.03
 			}
 			add_popularity = {
-				ideology = social_democrat
+				ideology = radical_socialist
 				popularity = 0.02
 			}
 			add_popularity = {
@@ -1880,7 +1879,7 @@ country_event = { #Clash at the capital
 		set_country_flag = NIC_moreno_sandino_together_flag
 		set_country_flag = NIC_socialist_betrayal
 		set_politics = {
-			ruling_party = radical_socialist
+			ruling_party = syndicalist
 		}
 		if = {
 			limit = { has_subject = HON }
@@ -2005,7 +2004,6 @@ country_event = { #Conservative and liberal campaigning
 	option = {
 		name = nic.56.a
 		random_list = {
-			seed = random
 			65 = {
 				add_popularity = {
 					ideology = social_conservative
@@ -2231,7 +2229,7 @@ country_event = { #What to do with Moreno?
 		name = nic.63.a
 		add_political_power = -100
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = -0.05
 		}
 	}
@@ -2240,7 +2238,7 @@ country_event = { #What to do with Moreno?
 		name = nic.63.b
 		add_stability = -0.1
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = -0.1
 		}
 	}
@@ -2257,7 +2255,7 @@ country_event = { #Sacasa splits from government, Moreno
 	trigger = {
 		tag = NIC
 		has_war = no
-		has_government = social_democrat
+		has_government = radical_socialist
 		NOT = {
 			has_active_mission = NIC_spread_revolution_mission
 		}
@@ -2295,7 +2293,7 @@ country_event = { #Suspicous movements from Sacasa, Sandino
 	trigger = {
 		tag = NIC
 		has_war = no
-		has_government = radical_socialist
+		has_government = syndicalist
 		NOT = {
 			has_active_mission = NIC_spread_revolution_mission
 		}
@@ -2330,8 +2328,8 @@ country_event = { #Abelardo Cuadra is hired by Sacasa
 	desc = nic.66.d
 	trigger = {
 		OR = {
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 	is_triggered_only = yes
@@ -2356,8 +2354,8 @@ country_event = { #Sacasa does a big
 	desc = nic.67.d
 	trigger = {
 		OR = {
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 	is_triggered_only = yes
@@ -2381,7 +2379,6 @@ country_event = { #Sacasa does a big
 					has_country_flag = NIC_government_trusted_flag
 				}
 				random_list = {
-					seed = random
 					80 = { #Mercanary army organizes successfully
 						country_event = {
 							id = nic.69
@@ -2413,8 +2410,8 @@ country_event = { #Movement ends up dying out
 	desc = nic.68.d
 	trigger = {
 		OR = {
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 	is_triggered_only = yes
@@ -2459,8 +2456,8 @@ country_event = { #Mercenary conscription, where do they go?
 			has_country_flag = NIC_sacasa_has_started_gathering_mercs
 		}
 		OR = {
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 	is_triggered_only = yes
@@ -2521,8 +2518,8 @@ country_event = { #Movement ends up dying out
 	desc = nic.70.d
 	trigger = {
 		OR = {
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 	is_triggered_only = yes
@@ -2553,8 +2550,8 @@ country_event = { #Stalemate
 	desc = nic.71.d
 	trigger = {
 		OR = {
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 	is_triggered_only = yes
@@ -2656,8 +2653,8 @@ country_event = { #Clash at the capital
 	}
 	trigger = {
 		OR = {
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 	is_triggered_only = yes
@@ -2787,7 +2784,7 @@ country_event = { #Some liberals move to Moreno
 	option = {
 		name = nic.74.a
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.03
 		}
 		hidden_effect = {
@@ -2810,7 +2807,7 @@ country_event = { #Huge Sandinistas rally
 	option = {
 		name = nic.75.a
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.02
 		}
 		hidden_effect = {
@@ -2835,8 +2832,8 @@ country_event = { #Elections for socialists
 	trigger = {
 		date > 1937.1.1
 		OR = {
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 		has_country_flag = NIC_socialist_revolution_flag
 		is_subject = no
@@ -2853,11 +2850,11 @@ country_event = { #Elections for socialists
 			}
 		}
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.05
 		}
 		set_politics = {
-			ruling_party = radical_socialist
+			ruling_party = syndicalist
 			elections_allowed = yes
 		}
 		add_ideas = NIC_Pedro_Altamirano_hog_rso
@@ -2876,11 +2873,11 @@ country_event = { #Elections for socialists
 			}
 		}
 		add_popularity = {
-			ideology = social_democrat
+			ideology = radical_socialist
 			popularity = 0.05
 		}
 		set_politics = {
-			ruling_party = social_democrat
+			ruling_party = radical_socialist
 			elections_allowed = yes
 		}
 		add_ideas = NIC_Porfirio_Sanchez_hog_sde
@@ -2901,7 +2898,7 @@ country_event = { #Rigged Sandino elections
 	option = { #Big oof
 		name = nic.77.a
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = -0.05
 		}
 		add_political_power = -100
@@ -3009,7 +3006,6 @@ country_event = { #Hidden event to trigger next attack, trigged from the event t
 
 	option = {
 		random_list = {
-			seed = random
 			20 = { #Raid a patrol
 				country_event = {
 					id = nic.108
@@ -3063,7 +3059,6 @@ country_event = { #Patrol Relations_no_dependence
 	option = {
 		name = nic.108.a
 		random_list = {
-			seed = random
 			40 = {
 				add_manpower = -100
 				add_political_power = -10
@@ -3103,7 +3098,6 @@ country_event = { #Industry hurt
 	option = {
 		name = nic.109.a
 		random_list = {
-			seed = random
 			50 = {
 				random_owned_state = {
 					limit = {
@@ -3268,7 +3262,6 @@ country_event = { #Guns raided
 	option = {
 		name = nic.112.a
 		random_list = {
-			seed = random
 			60 = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
@@ -3534,7 +3527,6 @@ country_event = { #Sandino's moves on the capital
 	option = {
 		name = nic.121.a
 		random_list = {
-			seed = random
 			30 = {}
 			35 = {
 				country_event = {
@@ -3612,11 +3604,11 @@ country_event = { #Clash at the capital! Sandino completely destroys the opposit
 	option = {
 		name = nic.123.a
 		set_politics = {
-			ruling_party = radical_socialist
+			ruling_party = syndicalist
 			elections_allowed = no
 		}
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.05
 		}
 		set_country_flag = NIC_socialist_revolution_flag
@@ -3735,7 +3727,7 @@ country_event = { #Clash at the capital! Sandino completely destroyed
 		name = nic.124.a
 		clr_country_flag = NIC_sandino_attack_flag
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = -0.05
 		}
 
@@ -3798,7 +3790,7 @@ country_event = { #Clash at the capital! Contested
 		}
 		clr_country_flag = NIC_sandino_attack_flag
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = -0.05
 		}
 		if = { #Deciding how much to hurt
@@ -3903,11 +3895,11 @@ country_event = { #Clash at the capital! Contested
 			}
 		}
 		set_politics = {
-			ruling_party = radical_socialist
+			ruling_party = syndicalist
 			elections_allowed = no
 		}
 		add_popularity = {
-			ideology = radical_socialist
+			ideology = syndicalist
 			popularity = 0.05
 		}
 		set_country_flag = NIC_socialist_revolution_flag
@@ -4123,1031 +4115,6 @@ country_event = { #Nicaragua asserts independence
 	}
 }
 
-
-### ANNEXATION EVENTS ###
-
-country_event = { #First Honduran event for surrendering, only happens if you lose the capital but control San Pedro Sula
-	id = nic.100
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.100 FROM = [From.GetName]" }
-	title = nic.100.t
-	desc = nic.100.d
-	trigger = {
-		tag = HON
-		has_war_with = NIC
-		NIC = {
-			has_active_mission = NIC_spread_revolution_mission
-			NOT = {
-				has_country_flag = NIC_sandino_bacc
-			}
-		}
-		NOT = {
-			controls_state = 842
-		}
-		date < 1939.01.01
-		controls_state = 312
-	}
-	mean_time_to_happen = {
-		days = 5
-	}
-	fire_only_once = yes
-
-	option = { #Government abandons the country
-		ai_chance = {
-			base = 70
-		}
-		name = nic.100.a
-		add_stability = -0.15
-		add_war_support = -0.10
-		NIC = { #Informing Nicaragua of the government running
-			white_peace_with_ROOT = yes
-			country_event = {
-				id = nic.103
-				days = 1
-			}
-		}
-		hidden_effect = {
-			random_unit_leader = {
-				limit = {
-					has_id = 16210
-				}
-				set_nationality = XXA
-			}
-		}
-		#Debuffing
-		add_stability = -0.15
-		add_war_support = -0.10
-
-		if = { #Deciding the government, totalist or social liberal
-			limit = {
-				NIC = { has_socialist_government = yes }
-			}
-			custom_effect_tooltip = NIC_HON_totalist_control
-			hidden_effect = {
-				HON = { set_country_flag = HON_the_revolution }
-			}
-		}
-		else = {
-			custom_effect_tooltip = NIC_HON_soclib_control
-			hidden_effect = {
-				HON = { set_country_flag = HON_soclib }
-			}
-		}
-	}
-
-	option = { #Retreat to San Pedro Sula
-		name = nic.100.b
-		ai_chance = {
-			base = 30
-		}
-		add_stability = -0.05
-		add_war_support = -0.10
-	}
-}
-
-country_event = { #Honduras forced to surrender
-	id = nic.101
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.101 FROM = [From.GetName]" }
-	title = nic.101.t
-	desc = nic.101.d
-	trigger = {
-		tag = HON
-		has_war_with = NIC
-		NIC = {
-			has_active_mission = NIC_spread_revolution_mission
-			NOT = {
-				has_country_flag = NIC_sandino_bacc
-			}
-		}
-		date < 1939.01.01
-		surrender_progress > 0.75
-	}
-	mean_time_to_happen = {
-		days = 3
-	}
-	fire_only_once = yes
-
-	option = { #Government abandons the country
-		name = nic.101.a
-		add_stability = -0.15
-		add_war_support = -0.10
-		NIC = { #Nicaragua knowing of the puppeting
-			white_peace_with_ROOT = yes
-			country_event = {
-				id = nic.103
-				days = 1
-			}
-		}
-		hidden_effect = {
-			random_unit_leader = {
-				limit = {
-					has_id = 16210
-				}
-				set_nationality = XXA
-			}
-		}
-		#Debuffing
-		add_stability = -0.15
-		add_war_support = -0.10
-		if = { #Deciding ideology
-			limit = {
-				NIC = { has_socialist_government = yes }
-			}
-			custom_effect_tooltip = NIC_HON_totalist_control
-			hidden_effect = {
-				HON = {
-					set_politics = {
-						ruling_party = totalist
-						elections_allowed = no
-					}
-					set_popularities = {
-						totalist = 63
-						radical_socialist = 6
-						syndicalist = 11
-						social_democrat = 4
-						social_liberal = 4
-						market_liberal = 2
-						authoritarian_democrat = 1
-						paternal_autocrat = 2
-						paternal_autocrat = 2
-						national_populist = 5
-					}
-					set_country_flag = HON_the_revolution
-				}
-			}
-		}
-		else = {
-			custom_effect_tooltip = NIC_HON_soclib_control
-			hidden_effect = {
-				HON = {
-					set_politics = {
-						ruling_party = social_conservative
-						elections_allowed = no
-					}
-					set_popularities = {
-						totalist = 8
-						radical_socialist = 2
-						syndicalist = 6
-						social_democrat = 21
-						social_liberal = 4
-						market_liberal = 4
-						social_conservative = 41
-						authoritarian_democrat = 2
-						paternal_autocrat = 3
-						national_populist = 9
-					}
-					set_country_flag = HON_soclib
-				}
-			}
-		}
-	}
-}
-
-country_event = { #Honduras occupied, time to release
-	id = nic.102
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.102 FROM = [From.GetName]" }
-	title = nic.102.t
-	desc = nic.102.d
-	trigger = {
-		tag = NIC
-		owns_state = 312
-		owns_state = 842
-		date < 1939.01.01
-		NOT = {
-			has_country_flag = NIC_sandino_bacc
-		}
-	}
-	fire_only_once = yes
-
-	option = {
-		name = nic.102.a
-		HON = { #State transfer and debuffing
-			transfer_state = 312
-			transfer_state = 842
-			add_stability = -0.15
-			add_war_support = -0.10
-			hidden_effect = {
-				random_unit_leader = {
-					limit = {
-						has_id = 16210
-					}
-					set_nationality = XXA
-				}
-			}
-		}
-		puppet = HON
-		if = { #Deciding ideology
-			limit = {
-				NIC = {
-					OR = {
-						has_government = radical_socialist
-						has_government = social_democrat
-					}
-				}
-			}
-			custom_effect_tooltip = NIC_HON_totalist_control
-			hidden_effect = {
-				HON = {
-					set_politics = {
-						ruling_party = totalist
-						elections_allowed = no                }
-
-					set_popularities = {
-						totalist = 63
-						radical_socialist = 6
-						syndicalist = 11
-						social_democrat = 4
-						social_liberal = 4
-						market_liberal = 2
-						authoritarian_democrat = 1
-						paternal_autocrat = 2
-						paternal_autocrat = 2
-						national_populist = 5
-					}
-					set_country_flag = HON_the_revolution
-				}
-			}
-		}
-
-		if = {
-			limit = {
-				NIC = {
-					has_government = social_liberal
-				}
-			}
-			custom_effect_tooltip = NIC_HON_soclib_control
-			hidden_effect = {
-				HON = {
-					set_politics = {
-						ruling_party = social_conservative
-						elections_allowed = no                }
-
-					set_popularities = {
-						totalist = 8
-						radical_socialist = 2
-						syndicalist = 6
-						social_democrat = 21
-						social_liberal = 4
-						market_liberal = 4
-						social_conservative = 41
-						authoritarian_democrat = 2
-						paternal_autocrat = 3
-						national_populist = 9
-					}
-					set_country_flag = HON_soclib
-				}
-			}
-		}
-	}
-}
-
-country_event = { #Nicaragua informed of Honduran government escaping
-	id = nic.103
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.103 FROM = [From.GetName]" }
-	title = nic.103.t
-	desc = nic.103.d
-	is_triggered_only = yes
-
-	option = {
-		name = nic.103.a
-		add_political_power = 50
-		if = {
-			limit = {
-				HON = {
-					has_country_flag = HON_soclib
-				}
-			}
-			puppet = HON
-			HON = {
-				set_politics = {
-					ruling_party = social_conservative
-					elections_allowed = no
-				}
-
-				set_popularities = {
-					totalist = 4
-					radical_socialist = 2
-					syndicalist = 3
-					social_democrat = 5
-					social_liberal = 4
-					market_liberal = 12
-					social_conservative = 54
-					authoritarian_democrat = 7
-					paternal_autocrat = 3
-					national_populist = 6
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				HON = {
-					has_country_flag = HON_the_revolution
-				}
-			}
-			puppet = HON
-			HON = {
-				set_politics = {
-					ruling_party = totalist
-					elections_allowed = no
-				}
-
-				set_popularities = {
-					totalist = 31
-					radical_socialist = 13
-					syndicalist = 12
-					social_democrat = 9
-					social_liberal = 7
-					market_liberal = 2
-					social_conservative = 8
-					authoritarian_democrat = 10
-					paternal_autocrat = 1
-					paternal_autocrat = 2
-					national_populist = 5
-				}
-			}
-		}
-	}
-}
-
-country_event = { #rip Nicaragua, if Honduras is Soc Con or further right
-	id = nic.104
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.104 FROM = [From.GetName]" }
-	title = nic.104.t
-	desc = nic.104.d
-	trigger = {
-		tag = NIC
-		has_war_with = HON
-		HON = {
-			has_authoritarian_government = yes
-		}
-		NIC = {
-			has_active_mission = NIC_spread_revolution_mission
-			NOT = {
-				has_country_flag = NIC_sandino_bacc
-			}
-		}
-		date < 1939.01.01
-		surrender_progress > 0.5
-	}
-	mean_time_to_happen = {
-		days = 3
-	}
-	fire_only_once = yes
-
-	option = { #Hurah, military junta! :tfwno:
-		name = nic.104.a
-		add_stability = -0.25
-		add_war_support = -0.2
-		HON = {
-			white_peace_with_ROOT = yes
-			country_event = {
-				id = nic.105
-				days = 1
-			}
-			every_unit_leader = {
-				limit = {
-					has_id = 16210
-				}
-				set_nationality = NIC
-			}
-			every_unit_leader = {
-				limit = {
-					has_id = 1606
-				}
-				set_nationality = NIC
-			}
-		}
-		NIC = {
-			add_ideas = NIC_sandino_resistance_base
-			set_country_flag = NIC_national_guard_flag
-			set_country_flag = NIC_sandino_attack_flag
-			add_stability = -0.25
-			add_war_support = -0.2
-			if = {
-				limit = {
-					has_template = "Sandinistas"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Sandinistas"
-				}
-			}
-			hidden_effect = {
-				country_event = nic.107
-				remove_all_ministers = yes
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_id = 1600
-							has_id = 1601
-							has_id = 1602
-						}
-					}
-					set_nationality = XXA
-				}
-			}
-			add_ideas = NIC_Federico_Davidson_Blanco_hog_pau
-			add_ideas = NIC_Jose_Antonio_Lopez_for_pau
-			add_ideas = NIC_Gustavo_Abaunza_eco_pau
-			add_ideas = NIC_Francisco_Mendieta_sec_pau
-		}
-	}
-}
-
-country_event = { #Honduras knows it puppeted Nicaragua
-	id = nic.105
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.105 FROM = [From.GetName]" }
-	title = nic.105.t
-	desc = nic.105.d
-	is_triggered_only = yes
-
-	option = {
-		name = nic.105.a
-		add_political_power = 50
-		puppet = NIC
-		NIC = {
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no
-			}
-
-			set_popularities = {
-				syndicalist = 3
-				radical_socialist = 27
-				social_democrat = 6
-				social_liberal = 9
-				authoritarian_democrat = 11
-				paternal_autocrat = 21
-				paternal_autocrat = 17
-				national_populist = 6
-			}
-		}
-		hidden_effect = {
-			country_event = { id = honduras.113 days = 3 }
-		}
-	}
-}
-
-country_event = { #Release Nicaragua
-	id = nic.106
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.106 FROM = [From.GetName]" }
-	title = nic.106.t
-	desc = nic.106.d
-	trigger = {
-		tag = HON
-		owns_state = 317
-		owns_state = 1071
-		HON = {
-			has_authoritarian_government = yes
-		}
-		date < 1939.01.01
-		NOT = {
-			NIC = {
-				has_country_flag = NIC_sandino_bacc
-			}
-		}
-	}
-	mean_time_to_happen = {
-		days = 3
-	}
-	fire_only_once = yes
-
-	option = { #Hurah, military junta! :tfwno:
-		name = nic.106.a
-		NIC = {
-			transfer_state = 317
-			transfer_state = 1071
-			add_stability = -0.25
-			add_war_support = -0.2
-			hidden_effect = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_id = 1600
-							has_id = 1601
-							has_id = 1602
-						}
-					}
-					set_nationality = XXA
-				}
-			}
-		}
-		every_unit_leader = {
-			limit = {
-				has_id = 16210
-			}
-			set_nationality = NIC
-		}
-		every_unit_leader = {
-			limit = {
-				has_id = 1606
-			}
-			set_nationality = NIC
-		}
-
-		puppet = NIC
-		NIC = {
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no        }
-
-			set_popularities = {
-				syndicalist = 3
-				radical_socialist = 27
-				social_democrat = 6
-				social_liberal = 9
-				authoritarian_democrat = 11
-				paternal_autocrat = 21
-				paternal_autocrat = 17
-				national_populist = 6
-			}
-			add_ideas = NIC_sandino_resistance_base
-			set_country_flag = NIC_national_guard_flag
-			set_country_flag = NIC_sandino_attack_flag
-			if = {
-				limit = {
-					has_template = "Sandinistas"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Sandinistas"
-				}
-			}
-			hidden_effect = {
-				country_event = nic.107
-				remove_all_ministers = yes
-			}
-
-			add_ideas = NIC_Federico_Davidson_Blanco_hog_pau
-			add_ideas = NIC_Jose_Antonio_Lopez_for_pau
-			add_ideas = NIC_Gustavo_Abaunza_eco_pau
-			add_ideas = NIC_Francisco_Mendieta_sec_pau
-		}
-	}
-}
-
-country_event = { #Release Nicaragua 2: Electric Boogaloo
-	id = nic.130
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.130 FROM = [From.GetName]" }
-	title = nic.130.t
-	desc = nic.130.d
-	trigger = {
-		tag = HON
-		owns_state = 317
-		owns_state = 1071
-		date < 1939.01.01
-		HON = {
-			has_authoritarian_government = yes
-		}
-		NIC = {
-			has_country_flag = NIC_sandino_bacc
-		}
-	}
-	mean_time_to_happen = {
-		days = 10
-	}
-	fire_only_once = yes
-
-	option = { #Hurah, military junta again! :tfwno:
-		name = nic.130.a
-		NIC = {
-			transfer_state = 317
-			transfer_state = 1071
-			add_stability = -0.25
-			add_war_support = -0.2
-			hidden_effect = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_id = 1600
-							has_id = 1601
-							has_id = 1602
-						}
-					}
-					set_nationality = XXA
-				}
-			}
-		}
-		every_unit_leader = {
-			limit = {
-				has_id = 16210
-			}
-			set_nationality = NIC
-		}
-		every_unit_leader = {
-			limit = {
-				has_id = 1606
-			}
-			set_nationality = NIC
-		}
-		puppet = NIC
-		NIC = {
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no        }
-
-			set_popularities = {
-				syndicalist = 5
-				radical_socialist = 10
-				social_democrat = 7
-				social_liberal = 10
-				social_conservative = 17
-				authoritarian_democrat = 13
-				paternal_autocrat = 31
-				national_populist = 7
-			}
-			set_country_flag = NIC_national_guard_flag
-			if = {
-				limit = {
-					has_template = "Sandinistas"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Sandinistas"
-				}
-			}
-
-			hidden_effect = {
-				remove_all_ministers = yes
-			}
-			add_ideas = NIC_Federico_Davidson_Blanco_hog_pau
-			add_ideas = NIC_Jose_Antonio_Lopez_for_pau
-			add_ideas = NIC_Gustavo_Abaunza_eco_pau
-			add_ideas = NIC_Francisco_Mendieta_sec_pau
-		}
-	}
-}
-
-country_event = { #Honduras occupied after Sandino came back
-	id = nic.131
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.131 FROM = [From.GetName]" }
-	title = nic.131.t
-	desc = nic.131.d
-	trigger = {
-		tag = NIC
-		owns_state = 312
-		owns_state = 842
-		date < 1939.01.01
-		has_country_flag = NIC_sandino_bacc
-	}
-	mean_time_to_happen = {
-		days = 10
-	}
-	fire_only_once = yes
-
-	option = {
-		name = nic.131.a
-		HON = {
-			transfer_state = 312
-			transfer_state = 842
-			add_stability = -0.25
-			add_war_support = -0.2
-			hidden_effect = {
-				random_unit_leader = {
-					limit = {
-						has_id = 16210
-					}
-					set_nationality = XXA
-				}
-			}
-		}
-		puppet = HON
-		set_country_flag = NIC_HON_puppet
-		hidden_effect = {
-			HON = {
-				set_politics = {
-					ruling_party = totalist
-					elections_allowed = no
-				}
-
-				set_popularities = {
-					totalist = 63
-					radical_socialist = 6
-					syndicalist = 11
-					social_democrat = 4
-					social_liberal = 4
-					market_liberal = 2
-					authoritarian_democrat = 1
-					paternal_autocrat = 2
-					paternal_autocrat = 2
-					national_populist = 5
-				}
-				set_country_flag = HON_totalist
-			}
-		}
-	}
-}
-
-country_event = { #Nicaragua falling if Socialist invaded Liberals in Honduras
-	id = nic.132
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.132 FROM = [From.GetName]" }
-	title = nic.132.t
-	desc = nic.132.d
-	trigger = {
-		tag = NIC
-		has_war_with = HON
-		HON = {
-			has_democratic_government = yes
-		}
-		NIC = {
-			has_active_mission = NIC_spread_revolution_mission
-			NOT = {
-				has_country_flag = NIC_sandino_bacc
-			}
-			OR = {
-				has_government = social_democrat
-				has_government = radical_socialist
-			}
-		}
-		date < 1939.01.01
-		surrender_progress > 0.5
-	}
-	mean_time_to_happen = {
-		days = 5
-	}
-	fire_only_once = yes
-
-	option = { #Sacasa takes control
-		name = nic.132.a
-		add_stability = -0.2
-		add_war_support = -0.1
-		HON = {
-			white_peace_with_ROOT = yes
-			country_event = {
-				id = nic.134
-				days = 1
-			}
-		}
-		NIC = {
-			set_politics = {
-				ruling_party = social_liberal
-				elections_allowed = no
-			}
-			set_popularities = {
-				totalist = 3
-				syndicalist = 3
-				radical_socialist = 22
-				social_democrat = 11
-				social_liberal = 35
-				market_liberal = 6
-				authoritarian_democrat = 10
-				paternal_autocrat = 9
-				national_populist = 1
-			}
-			set_country_flag = NIC_liberal_revolution_flag
-			set_country_flag = NIC_liberal_betrayal
-			if = {
-				limit = {
-					has_template = "Sandinistas"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Sandinistas"
-				}
-			}
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 1600
-						has_id = 1601
-						has_id = 1602
-					}
-				}
-				set_nationality = XXA
-			}
-			remove_all_ministers = yes
-			add_ideas = NIC_Carlos_Wassmer_hog_sli
-			add_ideas = NIC_Jose_Roman_Orozco_for_sli
-			add_ideas = NIC_Edwin_Castro_Rivera_eco_sli
-			add_ideas = NIC_Juan_Escamilla_sec_sli
-		}
-	}
-}
-
-country_event = { #Release Nicaragua as Liberal Honduras
-	id = nic.133
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.133 FROM = [From.GetName]" }
-	title = nic.133.t
-	desc = nic.133.d
-	trigger = {
-		tag = HON
-		owns_state = 317
-		owns_state = 1071
-		has_democratic_government = yes
-		date < 1939.01.01
-		NOT = {
-			country_exists = NIC
-			NIC = { has_country_flag = NIC_sandino_bacc }
-		}
-	}
-	mean_time_to_happen = {
-		days = 5
-	}
-	fire_only_once = yes
-
-	option = { #Sacasa is put in charge
-		name = nic.133.a
-		NIC = {
-			transfer_state = 317
-			transfer_state = 1071
-			add_stability = -0.2
-			add_war_support = -0.1
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 1600
-						has_id = 1601
-						has_id = 1602
-					}
-				}
-				set_nationality = XXA
-			}
-		}
-
-		puppet = NIC
-		NIC = {
-			set_politics = {
-				ruling_party = social_liberal
-				elections_allowed = no
-			}
-			set_popularities = {
-				totalist = 3
-				syndicalist = 3
-				radical_socialist = 22
-				social_democrat = 11
-				social_liberal = 35
-				market_liberal = 6
-				authoritarian_democrat = 10
-				paternal_autocrat = 9
-				national_populist = 1
-			}
-			set_country_flag = NIC_liberal_revolution_flag
-			set_country_flag = NIC_liberal_betrayal
-			if = {
-				limit = {
-					has_template = "Sandinistas"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Sandinistas"
-				}
-			}
-
-			hidden_effect = {
-				remove_all_ministers = yes
-			}
-			add_ideas = NIC_Carlos_Wassmer_hog_sli
-			add_ideas = NIC_Jose_Roman_Orozco_for_sli
-			add_ideas = NIC_Edwin_Castro_Rivera_eco_sli
-			add_ideas = NIC_Juan_Escamilla_sec_sli
-		}
-	}
-}
-
-country_event = { #Honduras knows it puppeted Nicaragua, Liberals
-	id = nic.134
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.134 FROM = [From.GetName]" }
-	title = nic.134.t
-	desc = nic.134.d
-	is_triggered_only = yes
-
-	option = {
-		name = nic.134.a
-		add_political_power = 50
-	}
-}
-
-country_event = { #Nicaragua falling if Liberals invaded Socialist Honduras
-	id = nic.135
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.135 FROM = [From.GetName]" }
-	title = nic.135.t
-	desc = nic.135.d
-	trigger = {
-		tag = NIC
-		has_war_with = HON
-		HON = {
-			has_socialist_government = yes
-		}
-		NIC = {
-			has_active_mission = NIC_spread_revolution_mission
-			NOT = {
-				has_country_flag = NIC_sandino_bacc
-			}
-			has_government = social_liberal
-		}
-		date < 1939.01.01
-		surrender_progress > 0.5
-	}
-	mean_time_to_happen = {
-		days = 5
-	}
-	fire_only_once = yes
-
-	option = { #Sandino and Moreno takes control
-		name = nic.135.a
-		add_stability = -0.2
-		add_war_support = -0.1
-		HON = {
-			white_peace_with_ROOT = yes
-			country_event = {
-				id = nic.137
-				days = 1
-			}
-		}
-		NIC = {
-			set_politics = {
-				ruling_party = radical_socialist
-				elections_allowed = no
-			}
-			set_popularities = {
-				totalist = 1
-				syndicalist = 4
-				radical_socialist = 36
-				social_democrat = 32
-				social_liberal = 11
-				market_liberal = 3
-				authoritarian_democrat = 10
-				paternal_autocrat = 3
-			}
-			set_country_flag = NIC_socialist_revolution_flag
-			set_country_flag = NIC_moreno_sandino_together_flag
-			set_country_flag = NIC_socialist_betrayal
-			remove_all_ministers = yes
-			add_ideas = NIC_Pedro_Altamirano_hog_rso
-			add_ideas = NIC_Ismael_Peralta_for_sde
-			add_ideas = NIC_Jose_Maria_Jiron_Ruano_Marin_eco_sde
-			add_ideas = NIC_Carmen_Torres_sec_rso
-		}
-	}
-}
-
-country_event = { #Release Nicaragua as Socialist Honduras
-	id = nic.136
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.136 FROM = [From.GetName]" }
-	title = nic.136.t
-	desc = nic.136.d
-	trigger = {
-		tag = HON
-		owns_state = 317
-		owns_state = 1071
-		has_socialist_government = yes
-		date < 1939.01.01
-		NOT = {
-			NIC = {
-				has_country_flag = NIC_sandino_bacc
-			}
-		}
-	}
-	mean_time_to_happen = {
-		days = 5
-	}
-	fire_only_once = yes
-
-	option = { #Sandino and Moreno is put in charge
-		name = nic.136.a
-		NIC = {
-			transfer_state = 317
-			transfer_state = 1071
-			add_stability = -0.2
-			add_war_support = -0.1
-		}
-		puppet = NIC
-		NIC = {
-			set_politics = {
-				ruling_party = radical_socialist
-				elections_allowed = no        }
-
-			set_popularities = {
-				totalist = 1
-				syndicalist = 4
-				radical_socialist = 36
-				social_democrat = 32
-				social_liberal = 11
-				market_liberal = 3
-				authoritarian_democrat = 10
-				paternal_autocrat = 3
-			}
-			set_country_flag = NIC_socialist_revolution_flag
-			set_country_flag = NIC_moreno_sandino_together_flag
-
-			hidden_effect = {
-				remove_all_ministers = yes
-			}
-			add_ideas = NIC_Pedro_Altamirano_hog_rso
-			add_ideas = NIC_Ismael_Peralta_for_sde
-			add_ideas = NIC_Jose_Maria_Jiron_Ruano_Marin_eco_sde
-			add_ideas = NIC_Carmen_Torres_sec_rso
-		}
-	}
-}
-
-country_event = { #Honduras knows it puppeted Nicaragua, Liberals
-	id = nic.137
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nic.137 FROM = [From.GetName]" }
-	title = nic.137.t
-	desc = nic.137.d
-	is_triggered_only = yes
-
-	option = {
-		name = nic.137.a
-		add_political_power = 50
-	}
-}
-
 ### Events from the decisions ###
 country_event = { #People celebrate moving into DMZ
 	id = nicdec.1
@@ -5158,8 +4125,8 @@ country_event = { #People celebrate moving into DMZ
 	trigger = {
 		OR = {
 			has_government = social_liberal
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 
@@ -5179,8 +4146,8 @@ country_event = { #UFC funds mercanaries
 	trigger = {
 		OR = {
 			has_government = social_liberal
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 
@@ -5189,7 +4156,6 @@ country_event = { #UFC funds mercanaries
 		add_stability = -0.05
 		add_war_support = -0.05
 		random_list = {
-			seed = random
 			60 = {
 				country_event = {
 					id = nicdec.3
@@ -5208,7 +4174,6 @@ country_event = { #UFC funds mercanaries
 	option = { #Counter-bride them
 		name = nicdec.2.b
 		random_list = {
-			seed = random
 			75 = {
 				country_event = {
 					id = nicdec.4
@@ -5234,7 +4199,6 @@ country_event = { #UFC funds mercanaries
 		}
 		set_country_flag = NIC_people_armed
 		random_list = {
-			seed = random
 			90 = {
 				country_event = {
 					id = nicdec.5
@@ -5261,8 +4225,8 @@ country_event = { #Successfully crushed
 	trigger = {
 		OR = {
 			has_government = social_liberal
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 
@@ -5310,8 +4274,8 @@ country_event = { #People defend themselves
 	trigger = {
 		OR = {
 			has_government = social_liberal
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 
@@ -5332,8 +4296,8 @@ country_event = { #Mercanaries rampant
 	trigger = {
 		OR = {
 			has_government = social_liberal
-			has_government = social_democrat
 			has_government = radical_socialist
+			has_government = syndicalist
 		}
 	}
 
@@ -5372,8 +4336,8 @@ country_event = { #Failed to take Honduras from decision
 		name = nicdec.8.a
 		trigger = {
 			OR = {
+				has_government = syndicalist
 				has_government = radical_socialist
-				has_government = social_democrat
 			}
 		}
 		decrease_ruling_party_popularity_by_5 = yes
@@ -5490,7 +4454,7 @@ country_event = { #Resistance against recruitment
 		ai_chance = {
 			base = 20
 		}
-		set_country_flag = NIC_east_no_conscription
+		remove_decision = NIC_open_eastern_recruitment
 	}
 
 	option = {

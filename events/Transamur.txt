@@ -1315,7 +1315,6 @@ country_event = {
 		custom_effect_tooltip = TRM_agitation_tooltip
 		hidden_effect = {
 			random_list = {
-				seed = random
 				15 = {
 					set_country_flag = TRM_good_agitation
 					clr_country_flag = TRM_agitation
@@ -1566,17 +1565,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = tram.128.trm
-		trigger = {
-			tag = TRM
-		}
-	}
-
-	option = {
-		name = tram.128.jap
-		trigger = {
-			tag = JAP
-		}
+		name = tram.128.a
 	}
 }
 

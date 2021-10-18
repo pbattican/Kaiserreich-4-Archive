@@ -3128,7 +3128,10 @@ country_event = {
 			}
 			restore_previous_government_type = yes
 		}
-		FROM = { get_current_government_type = yes }
+		FROM = {
+			get_current_government_type = yes
+			set_cosmetic_tag = HNN_KMT
+		}
 		set_autonomy = {
 			target = FROM
 			autonomy_state = kr_autonomous_puppet
@@ -3181,7 +3184,16 @@ country_event = {
 			}
 			restore_previous_government_type = yes
 		}
-		FROM = { get_current_government_type = yes }
+		FROM = {
+			get_current_government_type = yes
+			if = {
+				limit = { has_cosmetic_tag = GXC_Guangxi }
+				set_cosmetic_tag = GXC_KMT_guangxi
+			}
+			else = {
+				set_cosmetic_tag = GXC_KMT
+			}
+		}
 		set_autonomy = {
 			target = FROM
 			autonomy_state = kr_autonomous_puppet
@@ -5318,7 +5330,6 @@ country_event = { #CHI - Land Transfer
 			has_war_with = FNG
 		}
 		OR = {
-			owns_state = 1060
 			owns_state = 1061
 			owns_state = 615
 			owns_state = 1063
@@ -5348,7 +5359,6 @@ country_event = { #CHI - Land Transfer
 			every_owned_state = {
 				limit = {
 					OR = {
-						state = 1060
 
 						state = 1061
 
@@ -5465,6 +5475,7 @@ country_event = { #FNG - Land Transfer
 			owns_state = 1058
 			owns_state = 620
 			owns_state = 1048
+			owns_state = 1060
 		}
 	}
 
@@ -5492,6 +5503,8 @@ country_event = { #FNG - Land Transfer
 						state = 607
 
 						state = 1059
+
+						state = 1060
 
 						state = 1058
 
@@ -5868,6 +5881,7 @@ country_event = {
 				picture = "Portrait_FNG_Zhang_Xueliang.png"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
+				traits = { warrior_prince }
 			}
 		}
 

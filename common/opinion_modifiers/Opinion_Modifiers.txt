@@ -120,7 +120,7 @@ opinion_modifiers = {
 		value = 35
 	}
 
-	### Austria 
+	### Austria
 	AUS_italy_bond = {
 		value = 100
 		days = 400
@@ -196,10 +196,6 @@ opinion_modifiers = {
 
 	ACW_entente_helping = {
 		value = 50
-	}
-
-	CUB_not_seize_guan = {
-		value = 100
 	}
 
 	CUB_not_seize_guan = {
@@ -327,10 +323,6 @@ opinion_modifiers = {
 
 	FRA_LIB_POSTGER = {
 		value = -50
-	}
-
-	LIB_WAR_FRA = {
-		value = -200
 	}
 
 	LIB_WAR_MFA = {
@@ -1502,7 +1494,9 @@ opinion_modifiers = {
 		value = 20
 	}
 
-	TRM_FNG_DIP = {value = 20}
+	TRM_FNG_DIP = {
+		value = 20
+	}
 
 	### Cuba
 
@@ -1596,18 +1590,6 @@ opinion_modifiers = {
 		value = 30
 	}
 
-	CUB_puppetloyal = {
-		value = 20
-	}
-
-	CUB_givenguan = {
-		value = 30
-	}
-
-	CUB_puppetbrokefree = {
-		value = -20
-	}
-
 	CUB_milint_opinion = {
 		value = 15
 	}
@@ -1683,6 +1665,14 @@ opinion_modifiers = {
 
 	HAI_sanctions = {
 		value = -50
+	}
+
+	HAI_raid = {
+		value = -50
+	}
+
+	HAI_french_ties = {
+		value = 50
 	}
 
 	### Dominican Republic
@@ -1771,102 +1761,6 @@ opinion_modifiers = {
 
 	HOL_german_trade_blocked = {
 		value = -20
-	}
-
-	HOL_dislikes_govt = {
-		value = -20
-	}
-
-	HOL_trademission = {
-		trade = yes
-		value = 40
-	}
-
-	HOL_syndicalist_diplo_mission = {
-		value = 10
-	}
-
-	HOL_not_recognizing_country = {
-		trade = yes
-		value = -400
-	}
-
-	HOL_diplomatic_row = {
-		value = -40
-	}
-
-	HOL_nationalised_our_property = {
-		value = -20
-	}
-
-	HOL_raided_embassy = {
-		value = -20
-	}
-
-	HOL_belgodutch_friendship = {
-		value = 20
-	}
-
-	hol_stab_in_the_back = {
-		value = -40
-	}
-
-	# Holland
-
-	HOL_german_trade_tolerated = {
-		value = 10
-	}
-
-	HOL_german_trade_blocked = {
-		value = 10
-	}
-
-	HOL_dislikes_govt = {
-		value = -20
-	}
-
-	HOL_trademission = {
-		trade = yes
-		value = 40
-	}
-
-	HOL_syndicalist_diplo_mission = {
-		value = 10
-	}
-
-	HOL_not_recognizing_country = {
-		trade = yes
-		value = -400
-	}
-
-	HOL_diplomatic_row = {
-		value = -40
-	}
-
-	HOL_nationalised_our_property = {
-		value = -20
-	}
-
-	HOL_raided_embassy = {
-		value = -20
-	}
-
-	HOL_belgodutch_friendship = {
-		value = 20
-	}
-
-	hol_stab_in_the_back = {
-		value = -40
-	}
-
-	# Holland
-
-	HOL_german_trade_tolerated = {
-		value = 10
-	}
-
-	HOL_german_trade_blocked = {
-		value = 10
 	}
 
 	HOL_dislikes_govt = {

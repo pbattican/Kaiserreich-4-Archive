@@ -47,9 +47,11 @@ political_actions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SAF_core_south_west"
-			add_state_core = 541
-			add_state_core = 964
-			hidden_effect = { country_event = { id = saf.314 days = 90 random = 30 } }
+			541 = { remove_claim_and_add_core_of_ROOT = yes }
+			964 = { remove_claim_and_add_core_of_ROOT = yes }
+			hidden_effect = {
+				country_event = { id = saf.314 days = 90 random = 30 }
+			}
 		}
 	}
 
@@ -1339,7 +1341,6 @@ SAF_Decision_Group_Nuweveld = {
 					542 = { resistance < 60 }
 				}
 				random_list = {
-					seed = random
 					4 = {
 						custom_effect_tooltip = SAF_tt_tswana_insurgents_kill_settlers
 						subtract_from_variable = { var = SAF_whites_in_botswana value = 30 }
@@ -1370,7 +1371,6 @@ SAF_Decision_Group_Nuweveld = {
 					}
 				}
 				random_list = {
-					seed = random
 					6 = {
 						custom_effect_tooltip = SAF_tt_tswana_insurgents_kill_settlers
 						subtract_from_variable = { var = SAF_whites_in_botswana value = 30 }
@@ -1562,7 +1562,6 @@ SAF_internal_resistance = {
 					check_variable = { saf_ob_strength > 0 }
 				}
 				random_list = {
-					seed = random
 					20 = {
 						custom_effect_tooltip = SAF_tt_ossewa_nerds_harass_servicemen
 						add_timed_idea = {
@@ -1623,7 +1622,6 @@ SAF_internal_resistance = {
 					check_variable = { saf_ob_strength > 0 }
 				}
 				random_list = {
-					seed = random
 					20 = {
 						custom_effect_tooltip = SAF_tt_ossewa_nerds_attack_icu
 						subtract_from_variable = { var = saf_icu_strength value = -0.1 }
@@ -1671,7 +1669,6 @@ SAF_internal_resistance = {
 			}
 			hidden_effect = {
 				random_list = {
-					seed = random
 					45 = {
 						add_to_variable = { var = saf_ob_strength value = 0.05 }
 						if = {
@@ -1717,7 +1714,6 @@ SAF_internal_resistance = {
 					check_variable = { saf_icu_strength > 0 }
 				}
 				random_list = {
-					seed = random
 					10 = {
 						custom_effect_tooltip = SAF_tt_icu_organises_strikes
 						add_timed_idea = {
@@ -1797,7 +1793,6 @@ SAF_internal_resistance = {
 					check_variable = { saf_icu_strength > 0 }
 				}
 				random_list = {
-					seed = random
 					20 = {
 						custom_effect_tooltip = SAF_tt_icu_report_weapon_hideout
 						add_to_variable = {
@@ -1842,7 +1837,6 @@ SAF_internal_resistance = {
 			}
 			hidden_effect = {
 				random_list = {
-					seed = random
 					45 = {
 						add_to_variable = { var = saf_icu_strength value = 0.05 }
 						if = {

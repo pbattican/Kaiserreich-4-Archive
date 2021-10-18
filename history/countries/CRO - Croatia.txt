@@ -83,7 +83,6 @@ if = {
 		basic_submarine = 1
 		early_heavy_cruiser = 1
 		basic_heavy_cruiser = 1
-		basic_heavy_cruiser = 1
 		early_battlecruiser = 1
 		early_battleship = 1
 		basic_battleship = 1
@@ -103,7 +102,6 @@ add_ideas = {
 }
 
 country_event = { id = illyria.1 days = 1 }
-country_event = { id = illyria.2 days = 6 }
 country_event = { id = illyria.3 days = 135 }
 country_event = { id = illyria.4 days = 220 }
 country_event = { id = illyria.5 days = 330 }
@@ -116,16 +114,16 @@ set_politics = {
 }
 
 set_popularities = {
-    totalist = 1
-    radical_socialist = 4
-    syndicalist = 2
-    social_democrat = 8
-    social_liberal = 34
-    market_liberal = 23
-    social_conservative = 2
-    authoritarian_democrat = 7
-    paternal_autocrat = 16
-    national_populist = 3
+	totalist = 1
+	radical_socialist = 4
+	syndicalist = 2
+	social_democrat = 8
+	social_liberal = 34
+	market_liberal = 23
+	social_conservative = 2
+	authoritarian_democrat = 7
+	paternal_autocrat = 16
+	national_populist = 3
 }
 
 create_country_leader = {
@@ -305,3 +303,4 @@ create_navy_leader = {
 	maneuvering_skill = 1
 	coordination_skill = 1
 }
+

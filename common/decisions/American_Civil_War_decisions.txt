@@ -10,6 +10,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				tag = PSA
 				tag = TEX
 				tag = NEE
+				tag = BRA #has unique event bra.108
 			}
 		}
 		visible = {
@@ -62,6 +63,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				tag = PSA
 				tag = TEX
 				tag = NEE
+				tag = BRA #has unique event bra.108
 			}
 		}
 		visible = {
@@ -133,6 +135,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				tag = PSA
 				tag = TEX
 				tag = NEE
+				tag = BRA #has unique event bra.108
 			}
 		}
 		visible = {
@@ -199,6 +202,7 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 				tag = PSA
 				tag = TEX
 				tag = NEE
+				tag = BRA #has unique event bra.108
 			}
 		}
 		visible = {
@@ -649,47 +653,6 @@ ACW_civil_war_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_relocate_capital_civil_war"
 			set_country_flag = USA_relocate_capital_flag
 			USA = {	country_event = amcivwar.76 }
-		}
-	}
-
-	TEX_silver_legion_support = {
-		icon = generic_political_discourse
-
-		allowed = { tag = TEX }
-
-		available = {
-			has_war = yes
-		}
-
-		visible = {
-			has_country_flag = TEX_silver_legion_supported
-			NOT = { has_global_flag = USA_civil_war_over_flag }
-		}
-
-		cancel_trigger = {
-			has_global_flag = USA_civil_war_over_flag
-		}
-
-		modifier = {
-			training_time_factor = -0.25
-			army_morale_factor = 0.20
-		}
-
-		cost = 50
-		days_remove = 90
-		days_re_enable = 180
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove TEX_silver_legion_support"
-			add_manpower = 50000
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1500
-			}
 		}
 	}
 
@@ -1712,6 +1675,8 @@ ACW_rocky_mountain_ceasefire_decisions = {
 					has_global_flag = { flag = PSA_rockies_ceasefire days > 180 }
 				}
 				FROM = { surrender_progress > 0.2 }
+				is_in_faction = yes
+				FROM = { is_in_faction = yes }
 			}
 		}
 
@@ -1739,8 +1704,12 @@ ACW_rocky_mountain_ceasefire_decisions = {
 			}
 			modifier = {
 				factor = 0
+				has_global_flag = USA_ai_do_not_break_ceasefire
+			}
+			modifier = {
+				factor = 0
 				FROM = { alliance_strength_ratio > 1 }
-				strength_ratio = { tag = FROM ratio < 1.25 }
+				strength_ratio = { tag = FROM ratio < 1 }
 			}
 			modifier = {
 				factor = 0
@@ -1748,7 +1717,7 @@ ACW_rocky_mountain_ceasefire_decisions = {
 					is_in_faction = yes
 					alliance_strength_ratio > 1
 					any_allied_country = {
-						strength_ratio = { tag = ROOT ratio > 1.5 }
+						strength_ratio = { tag = ROOT ratio > 0.9 }
 					}
 				}
 			}

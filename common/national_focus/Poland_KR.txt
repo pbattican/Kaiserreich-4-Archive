@@ -198,18 +198,14 @@ focus_tree = {
 				popularity = 0.05
 			}
 			reverse_add_opinion_modifier = {
-				target = AUS
-				modifier = KR_close_allies
-			}
-			reverse_add_opinion_modifier = {
-				target = GAL
-				modifier = KR_approves_of_govt
-			}
-			reverse_add_opinion_modifier = {
 				target = GER
 				modifier = KR_disapproves_of_govt
 			}
-			AUS = { country_event = poland.235 }
+			custom_effect_tooltip = tooltip_white_line
+			AUS = {
+				effect_tooltip = { add_to_faction = ROOT }
+				country_event = poland.235
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -240,21 +236,17 @@ focus_tree = {
 		available = {
 			has_war = no
 			is_subject = no
-			AUS = { has_war = no }
-			if = {
-				limit = {
-					91 = {
-						owner = { tag = GAL }
-					}
-				}
-				GAL = { is_subject_of = AUS }
+			AUS = {
+				is_subject = no
+				has_war = no
 			}
-			else = {
-				91 = { is_owned_and_controlled_by = AUS }
+			OR = {
+				AUS = { has_subject = GAL }
+				88 = { is_owned_and_controlled_by = AUS }
 			}
 		}
 		bypass = {
-			91 = { is_owned_and_controlled_by = ROOT }
+			owns_state = 88
 		}
 		prerequisite = {
 			focus = POL_lessons_of_the_empire
@@ -268,9 +260,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_return_galicia"
-			add_state_core = 88
-			add_state_core = 89
-			add_state_core = 91
+			add_state_claim = 88
+			add_state_claim = 89
+			add_state_claim = 91
 			AUS = { country_event = poland.131 }
 		}
 	}
@@ -471,7 +463,7 @@ focus_tree = {
 			focus = POL_mendog_iii
 		}
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus POL_a_new_constitution"
+			log = "[GetDateText]: [Root.GetName]: Select Focus POL_line_of_succession"
 			country_event = {
 				id = poland.209
 				days = 80
@@ -631,7 +623,7 @@ focus_tree = {
 			focus = POL_von_hohenzollern
 		}
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus POL_line_of_succession"
+			log = "[GetDateText]: [Root.GetName]: Select Focus POL_a_new_constitution"
 			country_event = {
 				id = poland.209
 				days = 80

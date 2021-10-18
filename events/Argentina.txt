@@ -873,14 +873,14 @@ country_event = { #Coup to depose the hesitant player
 		#Depose Ramirez
 		if = {
 			limit = {
-				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
 			}
 			create_country_leader = {
 				name = "Edelmiro Farrell"
 				desc = "POLITICS_EDELMIRO_FARRELL_DESC"
 				picture = "Portrait_Argentine_Edelmiro_Farrell.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = paternal_autocrat_subtype
 			}
 			remove_all_ministers = yes
 			add_ideas = {
@@ -904,7 +904,7 @@ country_event = { #Coup to depose the hesitant player
 			}
 			set_country_flag = GOU_Control
 			set_politics = {
-				ruling_party = authoritarian_democrat
+				ruling_party = paternal_autocrat
 				elections_allowed = yes
 				last_election = "1935.9.13"
 				election_frequency = 72
@@ -969,7 +969,7 @@ country_event = { #Coup to depose the hesitant player
 			complete_national_focus = ARG_Rigged_Elections
 			set_country_flag = GOU_Control
 			set_politics = {
-				ruling_party = authoritarian_democrat
+				ruling_party = paternal_autocrat
 				elections_allowed = yes
 				last_election = "1935.9.13"
 				election_frequency = 72
@@ -2170,6 +2170,19 @@ country_event = { #Argentina trade proposal
 	option = { #Accept the deal
 		ai_chance = {
 			base = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_foreign_policy
+						option = ARG_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = ARG_foreign_policy
+						option = ARG_FOREIGN_POLICY_ENTENTE_FALKLAND
+					}
+				}
+			}
 		}
 		name = argbla.7.a
 		ARG = {
@@ -2184,6 +2197,13 @@ country_event = { #Argentina trade proposal
 	option = { #Force them to lower import rates on German products
 		ai_chance = {
 			base = 70
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_foreign_policy
+					option = ARG_FOREIGN_POLICY_REICHSPAKT
+				}
+			}
 		}
 		name = argbla.7.b
 		ARG = {
@@ -2226,6 +2246,19 @@ country_event = { #Germany forces us to lower import rates
 	option = { #We have no choice but to accept
 		ai_chance = {
 			base = 90
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_foreign_policy
+						option = ARG_FOREIGN_POLICY_ENTENTE
+					}
+					has_game_rule = {
+						rule = ARG_foreign_policy
+						option = ARG_FOREIGN_POLICY_ENTENTE_FALKLAND
+					}
+				}
+			}
 		}
 		name = argbla.72.a
 		GER = {
@@ -2264,6 +2297,13 @@ country_event = { #Argentina approaches the Entente
 	option = { #We could use another ally
 		ai_chance = {
 			base = 70
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_foreign_policy
+					option = ARG_FOREIGN_POLICY_ENTENTE_FALKLAND
+				}
+			}
 		}
 		name = argbla.73.a
 		ARG = {
@@ -2277,6 +2317,13 @@ country_event = { #Argentina approaches the Entente
 	option = { #Press for the return of the Falklands
 		ai_chance = {
 			base = 30
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_foreign_policy
+					option = ARG_FOREIGN_POLICY_ENTENTE
+				}
+			}
 		}
 		name = argbla.73.b
 		ARG = {
@@ -2320,6 +2367,13 @@ country_event = { #Choice between Mitteleuropa or the Entente
 	option = { #German ties are more important
 		ai_chance = {
 			base = 90
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_foreign_policy
+					option = ARG_FOREIGN_POLICY_ENTENTE_FALKLAND
+				}
+			}
 		}
 		name = argbla.75.a
 		GER = {
@@ -2659,11 +2713,47 @@ country_event = { #Struggle for the Railroads
 				OR = {
 					has_game_rule = {
 						rule = ARG_christmas_coup
-						option = ARG_CHRISTMAS_COUP_AUTHORITARIAN_DEMOCRAT_RAMIREZ_DEMOCRACY
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM
 					}
 					has_game_rule = {
 						rule = ARG_christmas_coup
-						option = ARG_CHRISTMAS_COUP_AUTHORITARIAN_DEMOCRAT_RAMIREZ_JUNTA
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_JUNTA
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
 					}
 				}
 			}
@@ -2679,7 +2769,7 @@ country_event = { #Struggle for the Railroads
 				factor = 0
 				has_game_rule = {
 					rule = ARG_christmas_coup
-					option = ARG_CHRISTMAS_COUP_NATIONAL_POPULIST_CARLES
+					option = ARG_CHRISTMAS_COUP_CARLES_NATPOP
 				}
 			}
 		}
@@ -2965,11 +3055,47 @@ country_event = { #Insurgents sabotage the Buenos Aires-Rosario connection
 				OR = {
 					has_game_rule = {
 						rule = ARG_christmas_coup
-						option = ARG_CHRISTMAS_COUP_AUTHORITARIAN_DEMOCRAT_RAMIREZ_DEMOCRACY
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM
 					}
 					has_game_rule = {
 						rule = ARG_christmas_coup
-						option = ARG_CHRISTMAS_COUP_AUTHORITARIAN_DEMOCRAT_RAMIREZ_JUNTA
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_JUNTA
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
 					}
 				}
 			}
@@ -3087,7 +3213,7 @@ country_event = { #Navy surrenders
 	option = {
 		name = argcar.96.a
 		set_politics = {
-			ruling_party = authoritarian_democrat
+			ruling_party = paternal_autocrat
 			elections_allowed = yes
 			last_election = "1930.12.13"
 			election_frequency = 72
@@ -3316,7 +3442,7 @@ country_event = { #Coup of [GetDate]
 		complete_national_focus = ARG_Rigged_Elections
 		set_country_flag = GOU_Control
 		set_politics = {
-			ruling_party = authoritarian_democrat
+			ruling_party = paternal_autocrat
 			elections_allowed = yes
 			last_election = "1936.9.13"
 			election_frequency = 72
@@ -3328,7 +3454,7 @@ country_event = { #Coup of [GetDate]
 			ARG_Enrique_Mosconi_eco_ade
 			ARG_J_Honorio_Silveiro_sec_pau
 		}
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
 		hidden_effect = {
 			country_event = {
 				id = argcar.23
@@ -3419,7 +3545,7 @@ country_event = { #Peru extradites Carles
 	option = {
 		name = argcar.25.a
 		add_popularity = {
-			ideology = authoritarian_democrat
+			ideology = paternal_autocrat
 			popularity = 0.10
 		}
 	}
@@ -3676,6 +3802,35 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
+					}
+				}
+			}
 		}
 		name = argcar.39.b
 		add_stability = 0.05
@@ -3697,6 +3852,13 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_christmas_coup
+					option = ARG_CHRISTMAS_COUP_RAMIREZ_JUNTA
+				}
+			}
 		}
 		name = argcar.40.a
 		hidden_effect = {
@@ -3709,6 +3871,35 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 80
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
+					}
+				}
+			}
 		}
 		name = argcar.40.b
 		hidden_effect = {
@@ -3739,7 +3930,7 @@ country_event = {
 			desc = "POLITICS_EDELMIRO_FARRELL_DESC"
 			picture = "Portrait_Argentine_Edelmiro_Farrell.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = paternal_autocrat_subtype
 		}
 		hidden_effect = { remove_ideas_with_trait = security_minister }
 		add_ideas = {
@@ -3747,7 +3938,7 @@ country_event = {
 			ARG_Juan_Domingo_Peron_sec_pau
 		}
 		add_popularity = {
-			ideology = authoritarian_democrat
+			ideology = paternal_autocrat
 			popularity = 0.08
 		}
 		add_stability = -0.05
@@ -3785,6 +3976,13 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_christmas_coup
+					option = ARG_CHRISTMAS_COUP_RAMIREZ_JUNTA
+				}
+			}
 		}
 		name = argcar.41.b
 		create_country_leader = {
@@ -3792,7 +3990,7 @@ country_event = {
 			desc = "POLITICS_EDELMIRO_FARRELL_DESC"
 			picture = "Portrait_Argentine_Edelmiro_Farrell.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = paternal_autocrat_subtype
 		}
 		hidden_effect = { remove_ideas_with_trait = security_minister }
 		add_ideas = {
@@ -3800,7 +3998,7 @@ country_event = {
 			ARG_Juan_Domingo_Peron_sec_pau
 		}
 		add_popularity = {
-			ideology = authoritarian_democrat
+			ideology = paternal_autocrat
 			popularity = 0.08
 		}
 		add_stability = -0.05
@@ -3872,6 +4070,35 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
+					}
+				}
+			}
 		}
 		name = argcar.43.b
 		hidden_effect = {
@@ -3918,15 +4145,43 @@ country_event = {
 
 	option = {
 		ai_chance = {
-			base = 80
+			base = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_christmas_coup
+					option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
+				}
+				NOT = {
+					is_in_faction_with = GER
+					is_in_faction_with = ENT
+				}
+			}
 		}
 		name = argcar.45.a
 		add_stability = 0.35
 		set_politics = {
-			ruling_party = paternal_autocrat
+			ruling_party = authoritarian_democrat
 		}
 		add_popularity = {
-			ideology = paternal_autocrat
+			ideology = authoritarian_democrat
 			popularity = 0.40
 		}
 		remove_all_ministers = yes
@@ -3942,6 +4197,34 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_christmas_coup
+					option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
+				}
+				NOT = {
+					is_in_faction_with = GER
+					is_in_faction_with = ENT
+				}
+			}
 		}
 		name = argcar.45.b
 		complete_national_focus = ARG_Free_Elections_of_the_Republic
@@ -3972,6 +4255,34 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_christmas_coup
+					option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
+				}
+				NOT = {
+					is_in_faction_with = GER
+					is_in_faction_with = ENT
+				}
+			}
 		}
 		name = argcar.45.c
 		complete_national_focus = ARG_Free_Elections_of_the_Republic
@@ -4003,6 +4314,34 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_christmas_coup
+					option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
+				}
+				NOT = {
+					is_in_faction_with = GER
+					is_in_faction_with = ENT
+				}
+			}
 		}
 		name = argcar.45.e
 		complete_national_focus = ARG_Free_Elections_of_the_Republic
@@ -4039,6 +4378,22 @@ country_event = {
 				OR = {
 					is_in_faction_with = GER
 					is_in_faction_with = ENT
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
 				}
 			}
 		}
@@ -4383,9 +4738,35 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ARG_christmas_coup
-					option = ARG_CHRISTMAS_COUP_AUTHORITARIAN_DEMOCRAT_RAMIREZ_JUNTA
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_JUNTA
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_AUTDEM
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_FARRELL_RADSOC
+					}
 				}
 			}
 		}
@@ -4397,9 +4778,23 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ARG_christmas_coup
-					option = ARG_CHRISTMAS_COUP_AUTHORITARIAN_DEMOCRAT_RAMIREZ_DEMOCRACY
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCLIB
+					}
 				}
 			}
 		}
@@ -4427,7 +4822,7 @@ country_event = {
 		add_stability = 0.35
 		add_political_power = -150
 		add_popularity = {
-			ideology = authoritarian_democrat
+			ideology = paternal_autocrat
 			popularity = 0.25
 		}
 		country_event = {
@@ -4461,6 +4856,19 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 34
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_MARLIB
+					}
+				}
+			}
 		}
 		name = argdem.6.a
 		add_stability = 0.35
@@ -4491,6 +4899,19 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 33
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_MARLIB
+					}
+				}
+			}
 		}
 		name = argdem.6.b
 		add_stability = 0.35
@@ -4514,6 +4935,19 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 33
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCLIB
+					}
+				}
+			}
 		}
 		name = argdem.6.c
 		add_stability = 0.35
@@ -4564,10 +4998,10 @@ country_event = {
 		}
 		name = argdem.7.a
 		set_politics = {
-			ruling_party = paternal_autocrat
+			ruling_party = authoritarian_democrat
 		}
 		add_popularity = {
-			ideology = paternal_autocrat
+			ideology = authoritarian_democrat
 			popularity = 0.40
 		}
 		remove_all_ministers = yes
@@ -4709,10 +5143,10 @@ country_event = {
 		}
 		name = argdem.71.a
 		set_politics = {
-			ruling_party = paternal_autocrat
+			ruling_party = authoritarian_democrat
 		}
 		add_popularity = {
-			ideology = paternal_autocrat
+			ideology = authoritarian_democrat
 			popularity = 0.40
 		}
 		remove_all_ministers = yes
@@ -4873,6 +5307,13 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 60
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_peaceful_unification
+					option = ARG_PEACEFUL_UNIFICATION_FAILURE
+				}
+			}
 		}
 		name = argdem.9.a
 		add_stability = 0.05
@@ -4884,6 +5325,13 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 40
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_peaceful_unification
+					option = ARG_PEACEFUL_UNIFICATION_SUCCESS
+				}
+			}
 		}
 		name = argdem.9.b
 		add_stability = -0.05
@@ -5000,7 +5448,7 @@ country_event = {
 			name = "Argentine Parliament"
 			picture = "Portrait_ARG_Parliament.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = paternal_autocrat_subtype
 		}
 	}
 	option = {
@@ -5008,9 +5456,23 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ARG_christmas_coup
-					option = ARG_CHRISTMAS_COUP_AUTHORITARIAN_DEMOCRAT_RAMIREZ_DEMOCRACY
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCLIB
+					}
 				}
 			}
 		}
@@ -5050,7 +5512,7 @@ country_event = {
 			desc = "POLITICS_PABLO_RAMIREZ_DESC"
 			picture = "Portrait_Argentine_Pablo_Ramirez.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = paternal_autocrat_subtype
 		}
 		remove_all_ministers = yes
 		add_ideas = {
@@ -5060,7 +5522,7 @@ country_event = {
 			ARG_J_Honorio_Silveiro_sec_pau
 		}
 		set_politics = {
-			ruling_party = authoritarian_democrat
+			ruling_party = paternal_autocrat
 			elections_allowed = yes
 			last_election = "1936.1.1"
 			election_frequency = 72
@@ -5103,9 +5565,23 @@ country_event = {
 			base = 90
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ARG_christmas_coup
-					option = ARG_CHRISTMAS_COUP_AUTHORITARIAN_DEMOCRAT_RAMIREZ_DEMOCRACY
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_MARLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCLIB
+					}
 				}
 			}
 		}
@@ -5137,7 +5613,7 @@ country_event = {
 		add_stability = 0.35
 		add_political_power = -150
 		add_popularity = {
-			ideology = authoritarian_democrat
+			ideology = paternal_autocrat
 			popularity = 0.25
 		}
 		create_country_leader = {
@@ -5145,7 +5621,7 @@ country_event = {
 			desc = "POLITICS_PABLO_RAMIREZ_DESC"
 			picture = "Portrait_Argentine_Pablo_Ramirez.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = paternal_autocrat_subtype
 		}
 		remove_all_ministers = yes
 		add_ideas = {
@@ -5155,7 +5631,7 @@ country_event = {
 			ARG_J_Honorio_Silveiro_sec_pau
 		}
 		set_politics = {
-			ruling_party = authoritarian_democrat
+			ruling_party = paternal_autocrat
 		}
 		country_event = {
 			id = argcar.30
@@ -5185,6 +5661,19 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_MARLIB
+					}
+				}
+			}
 		}
 		name = argdem.17.a
 		add_stability = 0.35
@@ -5206,6 +5695,19 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCLIB
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_MARLIB
+					}
+				}
+			}
 		}
 		name = argdem.17.b
 		add_stability = 0.35
@@ -5227,6 +5729,19 @@ country_event = {
 	option = {
 		ai_chance = {
 			base = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCCON
+					}
+					has_game_rule = {
+						rule = ARG_christmas_coup
+						option = ARG_CHRISTMAS_COUP_RAMIREZ_DEM_SOCLIB
+					}
+				}
+			}
 		}
 		name = argdem.17.c
 		add_stability = 0.35

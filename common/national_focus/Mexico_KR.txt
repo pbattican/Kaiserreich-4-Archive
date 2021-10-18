@@ -439,7 +439,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 	}
-	### Republic Path - Syndicalism ###	
+	### Republic Path - Syndicalism ###
 	focus = {# Partido Mexicano de los Trabajadores
 		id = MEX_syndicalist1
 		icon = GFX_goal_ideology_syndicalist
@@ -1639,7 +1639,7 @@ focus_tree = {
 	}
 	focus = {# Military Junta
 		id = MEX_military_junta
-		icon = GFX_goal_conscription
+		icon = GFX_goal_MEX_Military_Junta
 		cost = 8
 		available = {
 			OR = {
@@ -3368,7 +3368,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {# Fuerza de Infantería de Marina
-		id = MEX_marines
+		id = MEX_marine_focus
 		icon = GFX_goal_generic_amphibious_assault
 		cost = 8
 		prerequisite = {
@@ -3383,9 +3383,9 @@ focus_tree = {
 			modifier = { factor = 1.5 has_war = yes }
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MEX_marines"
+			log = "[GetDateText]: [Root.GetName]: Focus MEX_marine_focus"
 			add_tech_bonus = {
-				name = MEX_marines
+				name = MEX_marine_focus
 				bonus = 1
 				uses = 1
 				category = marine_tech
