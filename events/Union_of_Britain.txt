@@ -113,7 +113,11 @@ country_event = { # Economic policy
 					}
 					has_game_rule = {
 						rule = ENG_start_election
-						option = ENG_START_TOTALIST
+						option = ENG_START_TOTALIST_SUCCESS
+					}
+					has_game_rule = {
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_FAILURE
 					}
 				}
 			}
@@ -147,7 +151,11 @@ country_event = { # Economic policy
 					}
 					has_game_rule = {
 						rule = ENG_start_election
-						option = ENG_START_TOTALIST
+						option = ENG_START_TOTALIST_SUCCESS
+					}
+					has_game_rule = {
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_FAILURE
 					}
 				}
 			}
@@ -225,7 +233,11 @@ country_event = { # Internal policy
 					}
 					has_game_rule = {
 						rule = ENG_start_election
-						option = ENG_START_TOTALIST
+						option = ENG_START_TOTALIST_SUCCESS
+					}
+					has_game_rule = {
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_FAILURE
 					}
 				}
 			}
@@ -258,7 +270,11 @@ country_event = { # Internal policy
 					}
 					has_game_rule = {
 						rule = ENG_start_election
-						option = ENG_START_TOTALIST
+						option = ENG_START_TOTALIST_SUCCESS
+					}
+					has_game_rule = {
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_FAILURE
 					}
 				}
 			}
@@ -335,7 +351,11 @@ country_event = { # Military policy
 					}
 					has_game_rule = {
 						rule = ENG_start_election
-						option = ENG_START_TOTALIST
+						option = ENG_START_TOTALIST_SUCCESS
+					}
+					has_game_rule = {
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_FAILURE
 					}
 				}
 			}
@@ -369,7 +389,11 @@ country_event = { # Military policy
 					}
 					has_game_rule = {
 						rule = ENG_start_election
-						option = ENG_START_TOTALIST
+						option = ENG_START_TOTALIST_SUCCESS
+					}
+					has_game_rule = {
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_FAILURE
 					}
 				}
 			}
@@ -3586,7 +3610,7 @@ country_event = {
 			113 = { is_owned_and_controlled_by = ROOT }
 			119 = { is_owned_and_controlled_by = ROOT }
 			134 = { is_owned_and_controlled_by = ROOT }
-			134 = { is_owned_and_controlled_by = ROOT }
+			135 = { is_owned_and_controlled_by = ROOT }
 		}
 	}
 	is_triggered_only = yes
@@ -3626,7 +3650,7 @@ country_event = {
 			113 = { is_owned_and_controlled_by = ROOT }
 			119 = { is_owned_and_controlled_by = ROOT }
 			134 = { is_owned_and_controlled_by = ROOT }
-			134 = { is_owned_and_controlled_by = ROOT }
+			135 = { is_owned_and_controlled_by = ROOT }
 		}
 	}
 
@@ -3669,7 +3693,7 @@ country_event = {
 			113 = { is_owned_and_controlled_by = ROOT }
 			119 = { is_owned_and_controlled_by = ROOT }
 			134 = { is_owned_and_controlled_by = ROOT }
-			134 = { is_owned_and_controlled_by = ROOT }
+			135 = { is_owned_and_controlled_by = ROOT }
 		}
 	}
 
@@ -3716,7 +3740,7 @@ country_event = {
 			113 = { is_owned_and_controlled_by = ROOT }
 			119 = { is_owned_and_controlled_by = ROOT }
 			134 = { is_owned_and_controlled_by = ROOT }
-			134 = { is_owned_and_controlled_by = ROOT }
+			135 = { is_owned_and_controlled_by = ROOT }
 		}
 	}
 
@@ -3886,7 +3910,6 @@ country_event = {
 			}
 		}
 		random_list = {
-			seed = random
 			30 = {
 				modifier = {
 					factor = 0
@@ -4232,8 +4255,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ENG_revolution
-					option = ENG_REVOLUTION_FAILURE
+					rule = ENG_start_election
+					option = ENG_START_TOTALIST_FAILURE
 				}
 			}
 		}
@@ -4241,8 +4264,8 @@ country_event = {
 			if = {
 				limit = {
 					has_game_rule = {
-						rule = ENG_revolution
-						option = ENG_REVOLUTION_SUCCESS
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_SUCCESS
 					}
 				}
 				country_event = uob.204
@@ -4253,7 +4276,6 @@ country_event = {
 						has_country_flag = positions_merged
 					}
 					random_list = {
-						seed = random
 						70 = { country_event = uob.204 } # Yay
 						30 = { country_event = uob.205 } # Yay...?
 					}
@@ -4272,8 +4294,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = ENG_revolution
-					option = ENG_REVOLUTION_FAILURE
+					rule = ENG_start_election
+					option = ENG_START_TOTALIST_FAILURE
 				}
 			}
 		}
@@ -4281,8 +4303,8 @@ country_event = {
 			if = {
 				limit = {
 					has_game_rule = {
-						rule = ENG_revolution
-						option = ENG_REVOLUTION_SUCCESS
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_SUCCESS
 					}
 				}
 				country_event = uob.207
@@ -4302,8 +4324,8 @@ country_event = {
 			if = {
 				limit = {
 					has_game_rule = {
-						rule = ENG_revolution
-						option = ENG_REVOLUTION_SUCCESS
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_SUCCESS
 					}
 				}
 				country_event = uob.210
@@ -4311,15 +4333,14 @@ country_event = {
 			else_if = {
 				limit = {
 					has_game_rule = {
-						rule = ENG_revolution
-						option = ENG_REVOLUTION_FAILURE
+						rule = ENG_start_election
+						option = ENG_START_TOTALIST_FAILURE
 					}
 				}
 				country_event = uob.212
 			}
 			else = {
 				random_list = {
-					seed = random
 					50 = { country_event = uob.211 } # Yay...?
 					50 = { country_event = uob.212 } # Nay
 				}
@@ -4386,7 +4407,6 @@ country_event = {
 		name = uob.205.b
 		hidden_effect = {
 			random_list = {
-				seed = random
 				50 = { country_event = uob.204 } # Yay
 				50 = { # Nay
 					country_event = {
@@ -4473,7 +4493,6 @@ country_event = {
 		name = uob.208.b
 		hidden_effect = {
 			random_list = {
-				seed = random
 				50 = { country_event = uob.207 } # Yay
 				50 = { country_event = uob.209 } # Nay
 			}
@@ -4546,7 +4565,6 @@ country_event = {
 		name = uob.211.b
 		hidden_effect = {
 			random_list = {
-				seed = random
 				50 = { # Yay
 					country_event = uob.210
 					news_event = {
@@ -4997,7 +5015,6 @@ news_event = {
 #					}
 #				}
 #				random_list = {
-#					seed = random
 #					70 = {
 #						country_event = uob.225
 #					} # Yay
@@ -5007,7 +5024,6 @@ news_event = {
 #				}
 #				else = {
 #					random_list = {
-#						seed = random
 #						30 = {
 #							country_event = uob.226
 #						} # Yay...?
@@ -5030,7 +5046,6 @@ news_event = {
 #					}
 #				}
 #				random_list = {
-#					seed = random
 #					70 = {
 #						country_event = uob.228
 #					} # Yay
@@ -5040,7 +5055,6 @@ news_event = {
 #				}
 #				else = {
 #					random_list = {
-#						seed = random
 #						30 = {
 #							country_event = uob.229
 #						} # Yay...?
@@ -5103,7 +5117,6 @@ news_event = {
 #		name = uob.226.b
 #		hidden_effect = {
 #			random_list = {
-#				seed = random
 #				50 = {
 #					country_event = uob.225
 #				} # Yay
@@ -5185,7 +5198,6 @@ news_event = {
 #		name = uob.229.b
 #		hidden_effect = {
 #			random_list = {
-#				seed = random
 #				50 = {
 #					country_event = uob.228
 #				} # Yay
@@ -5660,7 +5672,6 @@ country_event = {
 				}
 			}
 			random_list = {
-				seed = random
 				50 = {
 					country_event = {
 						id = uob.361
@@ -6217,7 +6228,6 @@ country_event = {
 		name = uob.1000.a
 		hidden_effect = {
 			random_list = {
-				seed = random
 				75 = {
 					country_event = {
 						id = uob.1001

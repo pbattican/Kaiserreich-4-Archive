@@ -62,12 +62,101 @@ PAR_foreign_policy = {
 			FROM = { owns_state = 901 }
 		}
 
-		cost = 0
+		cost = 20
 		days_remove = 20
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
 		targets = { 901.OWNER }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = { tag = ARG }
+					OR = {
+						is_stronger_than_ROOT_and_not_vulnerable = yes
+						overlord_is_stronger_than_ROOT_and_not_vulnerable = yes
+						faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancelled PAR_reclaim_misiones target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			clr_country_flag = imminent_war
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision PAR_reclaim_misiones target: [From.GetName]"
+			setup_decision_attack_AI = yes
+			set_country_flag = { flag = imminent_war days = 25 value = 1 }
+			FROM = { country_event = kr.political.30 } #warning event
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_reclaim_misiones target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			add_state_claim = 1074
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						BOL = { can_declare_war_on = ROOT }
+					}
+					BOL = {
+						country_event = {
+							id = par.31
+							days = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						PRU = {
+							has_cosmetic_tag = PBC
+							can_declare_war_on = ROOT
+						}
+					}
+					PRU = {
+						country_event = {
+							id = par.31
+							days = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	PAR_reclaim_bolivian_chaco = {
+		icon = GFX_decision_generic_civil_support
+
+		visible = {
+			is_subject = no
+			can_declare_war_on = FROM
+			ROOT = { owns_state = 901 }
+			FROM = { owns_state = 1027 }
+		}
+
+		cost = 20
+		days_remove = 45
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		targets = { 1027.OWNER }
 		target_trigger = {
 			can_declare_war_on = FROM
 		}
@@ -93,52 +182,24 @@ PAR_foreign_policy = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled PAR_reclaim_misiones"
+			log = "[GetDateText]: [Root.GetName]: Decision cancelled PAR_reclaim_bolivian_chaco target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			clr_country_flag = imminent_war
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_reclaim_misiones"
+			log = "[GetDateText]: [Root.GetName]: Decision PAR_reclaim_bolivian_chaco target: [From.GetName]"
 			setup_decision_attack_AI = yes
 			set_country_flag = { flag = imminent_war days = 25 value = 1 }
 			FROM = { country_event = kr.political.30 } #warning event
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_reclaim_misiones"
+			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_reclaim_bolivian_chaco target: [From.GetName]"
 			clear_decision_attack_AI = yes
-			add_state_claim = 1074
 			declare_war_on = {
 				target = FROM
 				type = annex_everything
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						BOL = { can_declare_war_on = ROOT }
-					}
-					BOL = {
-						country_event = {
-							id = southern.6
-							days = 2
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						PRU = {
-							has_cosmetic_tag = PBC
-							can_declare_war_on = ROOT
-						}
-					}
-					PRU = {
-						country_event = {
-							id = southern.6
-							days = 2
-						}
-					}
-				}
 			}
 		}
 	}
@@ -162,7 +223,8 @@ PAR_foreign_policy = {
 		visible = {
 			is_subject = no
 			can_declare_war_on = FROM
-			FROM = { owns_state = 901 }
+			ROOT = { owns_state = 901 }
+			ROOT = { owns_state = 1027 }
 		}
 
 		cost = 50
@@ -196,20 +258,20 @@ PAR_foreign_policy = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled PAR_reclaim_misiones"
+			log = "[GetDateText]: [Root.GetName]: Decision cancelled PAR_reclaim_igassu target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			clr_country_flag = imminent_war
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_reclaim_misiones"
+			log = "[GetDateText]: [Root.GetName]: Decision PAR_reclaim_igassu target: [From.GetName]"
 			setup_decision_attack_AI = yes
 			set_country_flag = { flag = imminent_war days = 35 value = 1 }
 			FROM = { country_event = kr.political.30 } #warning event
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_reclaim_igassu"
+			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_reclaim_igassu target: [From.GetName]"
 			add_manpower = 2000
 			add_war_support = 0.1
 			add_state_claim = 1041
@@ -291,7 +353,7 @@ PAR_economic_development = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_urbanize_asuncion target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_urbanize_asuncion"
 			301 = {
 				increase_state_category_by_one_level = yes
 			}
@@ -329,7 +391,7 @@ PAR_economic_development = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_chaco_boreal_state_cat_up target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_chaco_boreal_state_cat_up"
 			688 = {
 				increase_state_category_by_one_level = yes
 			}
@@ -373,7 +435,7 @@ PAR_economic_development = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_chaco_austral_state_cat_up target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_chaco_austral_state_cat_up"
 			901 = {
 				increase_state_category_by_one_level = yes
 			}
@@ -414,7 +476,7 @@ PAR_economic_development = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_chaco_austral_state_cat_up target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_misiones_state_cat_up"
 			1074 = {
 				increase_state_category_by_one_level = yes
 			}
@@ -460,7 +522,7 @@ PAR_economic_development = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_chaco_boreal_industrialization target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_chaco_boreal_industrialization"
 			688 = {
 				add_resource = {
 					type = steel
@@ -525,7 +587,7 @@ PAR_economic_development = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_chaco_refineries target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove PAR_chaco_refineries"
 			if = {
 				limit = { NOT = { has_tech = synth_oil_experiments } }
 				set_technology = { synth_oil_experiments = 1 }

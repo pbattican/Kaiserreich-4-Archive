@@ -389,7 +389,6 @@ country_event = {
 			}
 		}
 		random_list = {
-			seed = random
 			40 = { country_event = canada.10 }
 			60 = { country_event = canada.11 }
 		}
@@ -522,7 +521,7 @@ country_event = {
 	}
 }
 
-# Picking Head of the Army {fired by focus}
+# Picking Head of the Army (fired by focus)
 country_event = {
 	id = canada.13
 	immediate = { log = "[GetDateText]: [Root.GetName]: event canada.13 FROM = [From.GetName]" }
@@ -677,7 +676,6 @@ country_event = {
 		trigger = { tag = CAN }
 		hidden_effect = {
 			random_list = {
-				seed = random
 				55 = {
 					country_event = { id = canada.21 days = 2 } #Detroit wins
 				}
@@ -1512,14 +1510,12 @@ country_event = {
 		}
 		effect_tooltip = {
 			random_list = {
-				seed = random
 				60 = { country_event = canada.41 }
 				40 = { country_event = canada.42 }
 			}
 		}
 		hidden_effect = {
 			random_list = {
-				seed = random
 				60 = {
 					country_event = { id = canada.41 days = 3 }
 					CAN = { country_event = { id = canada.42 days = 3 } }
@@ -4893,6 +4889,10 @@ country_event = {
 				factor = 2
 				has_idea = ICE_danish_bailout
 			}
+		}
+		FROM = {
+			country_event = canada.172
+			add_opinion_modifier = { target = ROOT modifier = KR_disapproves_of_govt }
 		}
 	}
 }

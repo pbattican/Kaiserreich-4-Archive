@@ -229,10 +229,6 @@ set_autonomy = {
 	autonomy_state = kr_ottoman_emirate
 }
 set_autonomy = {
-	target = ARM
-	autonomy_state = kr_ottoman_vilayet
-}
-set_autonomy = {
 	target = LBA
 	autonomy_state = kr_ottoman_emirate
 }
@@ -250,6 +246,8 @@ add_ai_strategy = {
 	id = "AZR"
 	value = 1
 }
+
+554 = { add_dynamic_modifier = { modifier = OTT_nationalist_hotbed } } #Damascus
 
 create_country_leader = {
 	name = "Reşad Fuad Bey"

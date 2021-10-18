@@ -126,8 +126,8 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_KR_game_rule_flag_HUN_paternal_autocrat"
-		texturefile = "gfx/flags/small/HUN_paternal_autocrat.tga"
+		name = "GFX_KR_game_rule_flag_HUN_monarchy"
+		texturefile = "gfx/flags/small/HUN_monarchy.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -457,6 +457,11 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_KR_game_rule_flag_BUL"
+		texturefile = "gfx/flags/small/BUL.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_BUL_rep"
 		texturefile = "gfx/flags/small/BUL_rep.tga"
 		legacy_lazy_load = no
 	}
@@ -466,12 +471,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_KR_game_rule_flag_BUL_paternal_autocrat"
-		texturefile = "gfx/flags/small/BUL.tga"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_KR_game_rule_flag_BUL_national_populist"
+		name = "GFX_KR_game_rule_flag_BUL_rep_national_populist"
 		texturefile = "gfx/flags/small/BUL_rep_national_populist.tga"
 		legacy_lazy_load = no
 	}
@@ -609,7 +609,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_KR_game_rule_flag_CAF"
-		texturefile = "gfx/flags/small/CAF.tga"
+		texturefile = "gfx/flags/small/CAF_entente.tga"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -1249,3 +1249,4 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 }
+

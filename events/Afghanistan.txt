@@ -383,7 +383,7 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = AFG_king option = AFG_KING_NADIR }
+				has_game_rule = { rule = AFG_anglo_afghan_war option = AFG_ANGLO_AFGHAN_WAR_KING_NADIR }
 			}
 		}
 		name = afg.8.a
@@ -391,7 +391,6 @@ country_event = {
 		custom_effect_tooltip = AFG_chaos_tooltip
 		hidden_effect = {
 			random_list = {
-				seed = random
 				40 = {
 					country_event = { #Order Restored
 						id = afg.9
@@ -405,7 +404,7 @@ country_event = {
 					}
 					modifier = {
 						factor = 0
-						has_game_rule = { rule = AFG_king option = AFG_KING_AMMANULAH }
+						has_game_rule = { rule = AFG_anglo_afghan_war option = AFG_ANGLO_AFGHAN_WAR_KING_AMANULLAH }
 					}
 				}
 			}
@@ -417,7 +416,7 @@ country_event = {
 			base = 35
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = AFG_king option = AFG_KING_AMMANULAH }
+				has_game_rule = { rule = AFG_anglo_afghan_war option = AFG_ANGLO_AFGHAN_WAR_KING_AMANULLAH }
 			}
 		}
 		name = afg.8.c

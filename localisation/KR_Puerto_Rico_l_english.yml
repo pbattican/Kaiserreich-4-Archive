@@ -41,6 +41,7 @@
  PUE_paternal_autocrat_party_long:0 "Gobernación Americana (American Governorship)"
  PUE_national_populist_party:0 "Partido Nacionalista"
  PUE_national_populist_party_long:0 "Partido Nacionalista de Puerto Rico (Nationalist Party of Puerto Rico)"
+
 #Formables#
  PUE_social_liberal_party_PPD:0 "Partido Popular Democratico"
  PUE_social_liberal_party_PPD_long:0 "Partido Popular Democratico (Popular Democratic Party)"
@@ -67,6 +68,7 @@
  PUE_CAN_ships:0 "Canadian Ships for Puerto Rico"
  PUE_USA_ships:0 "American Ships for Puerto Rico"
  PUE_Build_Own_Ship:0 "PRA Libertad"
+
 ###Focuses###
  PUE_Protests_Begin:0 "Protests Succeed"
  PUE_Protests_Begin_desc:0 "After weeks of unrest, the Americans have finally decided to take action. It is now up to the Governor and the political forces behind Puerto Rico to either reach an agreement or pave the way for a much longed independence..."
@@ -136,8 +138,8 @@
  PUE_foreign_ship_designs_desc:0 "With our newly made ships and foreign-supported staff, we could start importing foreign ship designs so that our destroyer force may evolve. While our navy may still be in its infancy, our trade will still need protection and importing the latest technology in escort ships may prove vital in the years to come."
  PUE_dockyard_investments:0 "Dockyard Investments"
  PUE_dockyard_investments_desc:0 "In order to sustain a navy we will need dockyards. A loan request to our protector could prove beneficial both for our protection as well as our employment sector by opening new job opportunities."
- PUE_fighter:0 "Fighter Investments"
- PUE_fighter_desc:0 "Any form of Puerto Rican Air Force would be in dire need of Fighters! As such, it is our duty to supply our pilots with the equipment necessary to achieve air superiority."
+ PUE_fighters:0 "Fighter Investments"
+ PUE_fighters_desc:0 "Any form of Puerto Rican Air Force would be in dire need of Fighters! As such, it is our duty to supply our pilots with the equipment necessary to achieve air superiority."
  PUE_med_bomber:0 "Medium Bomber Investments"
  PUE_med_bomber_desc:0 "While small and nimble naval bombers can certainly pack quite a punch against enemy ships, there are also times where the enemy will land, and we will need something to harass their troops on land, as well as planes that can withstand heavier damage in order to reach more valuable naval targets. As such, we should invest in Medium Bombers"
  PUE_CAS:0 "Close Air Support Effort"

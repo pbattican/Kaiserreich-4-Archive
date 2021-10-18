@@ -12,7 +12,7 @@ add_namespace = bulgaria
 
 country_event = { #Introduction/Overview of Bulgaria
 	id = bulgaria.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.1" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.1 FROM = [From.GetName]" }
 	title = bulgaria.1.t
 	desc = bulgaria.1.d
 	picture = GFX_report_event_BUL_starter
@@ -25,11 +25,12 @@ country_event = { #Introduction/Overview of Bulgaria
 		731 = { set_state_flag = bulgarian_macedonia } #Stops Greece stealing Central Macedonia if choosing to liberate them, see KR_annexations.txt
 		set_temp_variable = { coalition_partner_var = token:social_conservative }
 		add_to_coalition = yes
+		set_country_flag = BUL_AI_wait_until_mission_start #there to prevent
 	}
 }
 country_event = { # Operation Nishava
 	id = bulgaria.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.2" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.2 FROM = [From.GetName]" }
 	title = bulgaria.2.t
 	desc = bulgaria.2.d
 	picture = GFX_report_event_BUL_Operation_Nishava
@@ -48,7 +49,7 @@ country_event = { # Operation Nishava
 }
 country_event = { # Fate of the State Protection Act
 	id = bulgaria.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.3" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.3 FROM = [From.GetName]" }
 	title = bulgaria.3.t
 	desc = bulgaria.3.d
 	picture = GFX_report_event_BUL_assembly
@@ -71,7 +72,7 @@ country_event = { # Fate of the State Protection Act
 }
 country_event = { # Will you support the abolition?
 	id = bulgaria.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.4" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.4 FROM = [From.GetName]" }
 	title = bulgaria.4.t
 	desc = bulgaria.4.d
 	picture = GFX_report_event_BUL_assembly
@@ -81,11 +82,37 @@ country_event = { # Will you support the abolition?
 
 	option = {
 		name = bulgaria.4.a
+		ai_chance = {
+			base = 55
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ROYAL_DICTATORSHIP
+					}
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ZVENO_COUP
+					}
+				}
+			}
+		}
 		set_country_flag = BUL_stands_with_opposition
 		custom_effect_tooltip = BUL_change_allegiance_opposition_tt
 	}
 	option = {
 		name = bulgaria.4.b
+		ai_chance = {
+			base = 45
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_DEMOCRACY_RESTORED
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = { id = bulgaria.5 days = 7 }
 		}
@@ -93,7 +120,7 @@ country_event = { # Will you support the abolition?
 }
 country_event = { # Will you support the coup?
 	id = bulgaria.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.5" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.5 FROM = [From.GetName]" }
 	title = bulgaria.5.t
 	desc = bulgaria.5.d
 	picture = GFX_report_event_soldiers_marching
@@ -103,11 +130,31 @@ country_event = { # Will you support the coup?
 
 	option = {
 		name = bulgaria.5.a
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_ROYAL_DICTATORSHIP
+				}
+			}
+		}
 		set_country_flag = BUL_stands_with_zveno
 		custom_effect_tooltip = BUL_change_allegiance_zveno_tt
 	}
 	option = {
 		name = bulgaria.5.b
+		ai_chance = {
+			base = 66
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_ZVENO_COUP
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = { id = bulgaria.6 days = 7 }
 		}
@@ -115,7 +162,7 @@ country_event = { # Will you support the coup?
 }
 country_event = { # Neither, huh...
 	id = bulgaria.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.6" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.6 FROM = [From.GetName]" }
 	title = bulgaria.6.t
 	desc = bulgaria.6.d
 	picture = GFX_report_event_BUL_boris
@@ -133,7 +180,7 @@ country_event = { # Neither, huh...
 ### Various events to fire during the fallout, with a 60 day pulse
 country_event = { # UPPP wants to switch sides
 	id = bulgaria.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.7" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.7 FROM = [From.GetName]" }
 	title = bulgaria.7.t
 	desc = bulgaria.7.d
 	picture = GFX_report_event_BUL_assembly
@@ -149,6 +196,16 @@ country_event = { # UPPP wants to switch sides
 
 	option = {
 		name = bulgaria.7.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_DEMOCRACY_RESTORED
+				}
+			}
+		}
 		end_coalition = yes
 		add_popularity = {
 			ideology = social_conservative
@@ -178,6 +235,22 @@ country_event = { # UPPP wants to switch sides
 	}
 	option = {
 		name = bulgaria.7.b
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ROYAL_DICTATORSHIP
+					}
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ZVENO_COUP
+					}
+				}
+			}
+		}
 		clr_country_flag = BUL_stands_with_prince
 		clr_country_flag = BUL_stands_with_zveno
 		set_country_flag = BUL_stands_with_opposition
@@ -186,7 +259,7 @@ country_event = { # UPPP wants to switch sides
 }
 country_event = { # Zlatev offers agreement
 	id = bulgaria.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.8" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.8 FROM = [From.GetName]" }
 	title = bulgaria.8.t
 	desc = bulgaria.8.d
 	picture = GFX_report_event_soldiers_marching
@@ -202,6 +275,16 @@ country_event = { # Zlatev offers agreement
 
 	option = {
 		name = bulgaria.8.a
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_ZVENO_COUP
+				}
+			}
+		}
 		add_to_variable = { BUL_coup_success_chance = 20 }
 		clamp_variable = { var = BUL_coup_success_chance max = 100 min = 0 }
 		custom_effect_tooltip = BUL_increase_coup_chance_tt
@@ -212,6 +295,22 @@ country_event = { # Zlatev offers agreement
 	}
 	option = {
 		name = bulgaria.8.b
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ROYAL_DICTATORSHIP
+					}
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_DEMOCRACY_RESTORED
+					}
+				}
+			}
+		}
 		clr_country_flag = BUL_stands_with_prince
 		set_country_flag = BUL_stands_with_zveno
 		clr_country_flag = BUL_stands_with_opposition
@@ -222,7 +321,7 @@ country_event = { # Zlatev offers agreement
 # We interrupt your current programming to bring you worldwide economic devastation
 country_event = {
 	id = bulgaria.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.9" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.9 FROM = [From.GetName]" }
 	title = bulgaria.9.t
 	desc = bulgaria.9.d
 	picture = GFX_report_event_BUL_crowd
@@ -245,7 +344,7 @@ country_event = {
 }
 country_event = {
 	id = bulgaria.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.10" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.10 FROM = [From.GetName]" }
 	title = bulgaria.10.t
 	desc = bulgaria.10.d
 	picture = GFX_report_event_BUL_crowd
@@ -263,13 +362,14 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = bulgaria.21 days = 21 }
 		}
+		clr_country_flag = BUL_AI_wait_until_mission_start
 	}
 }
 #We return to your scheduled programming (various events to fire during the fallout)
 
 country_event = {
 	id = bulgaria.11
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.11" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.11 FROM = [From.GetName]" }
 	title = bulgaria.11.t
 	desc = bulgaria.11.d
 	picture = GFX_report_event_BUL_assembly
@@ -290,7 +390,7 @@ country_event = {
 }
 country_event = { # National Legions
 	id = bulgaria.12
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.12" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.12 FROM = [From.GetName]" }
 	title = bulgaria.12.t
 	desc = bulgaria.12.d
 	picture = GFX_report_event_BUL_National_Legions
@@ -317,7 +417,7 @@ country_event = { # National Legions
 }
 country_event = { # Lukov and Zhekov endorse SBNL
 	id = bulgaria.13
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.13" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.13 FROM = [From.GetName]" }
 	title = bulgaria.13.t
 	desc = bulgaria.13.d
 	picture = GFX_report_event_soldiers_marching
@@ -333,6 +433,16 @@ country_event = { # Lukov and Zhekov endorse SBNL
 
 	option = {
 		name = bulgaria.13.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_ZVENO_COUP
+				}
+			}
+		}
 		add_to_variable = { BUL_coup_success_chance = 20 }
 		clamp_variable = { var = BUL_coup_success_chance max = 100 min = 0 }
 		custom_effect_tooltip = BUL_increase_coup_chance_tt
@@ -344,6 +454,22 @@ country_event = { # Lukov and Zhekov endorse SBNL
 	}
 	option = {
 		name = bulgaria.13.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ROYAL_DICTATORSHIP
+					}
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_DEMOCRACY_RESTORED
+					}
+				}
+			}
+		}
 		clr_country_flag = BUL_stands_with_prince
 		clr_country_flag = BUL_stands_with_opposition
 		set_country_flag = BUL_stands_with_zveno
@@ -352,7 +478,7 @@ country_event = { # Lukov and Zhekov endorse SBNL
 }
 country_event = { # Stamboliyski in cahoots with Petorka
 	id = bulgaria.14
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.14" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.14 FROM = [From.GetName]" }
 	title = bulgaria.14.t
 	desc = bulgaria.14.d
 	picture = GFX_report_event_BUL_Stamboliyski
@@ -382,6 +508,9 @@ country_event = { # Stamboliyski in cahoots with Petorka
 
 	option = {
 		name = bulgaria.14.a
+		ai_chance = {
+			base = 10
+		}
 		add_popularity = {
 			ideology = social_liberal
 			popularity = -0.06
@@ -394,11 +523,14 @@ country_event = { # Stamboliyski in cahoots with Petorka
 	}
 	option = {
 		name = bulgaria.14.b
+		ai_chance = {
+			base = 90
+		}
 	}
 }
 country_event = { # Serbian collusion
 	id = bulgaria.15
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.15" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.15 FROM = [From.GetName]" }
 	title = bulgaria.15.t
 	desc = bulgaria.15.d
 	picture = GFX_report_event_BUL_Stamboliyski
@@ -425,7 +557,7 @@ country_event = { # Serbian collusion
 }
 country_event = { # Zveno coup - You are allied with Zveno
 	id = bulgaria.16
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.16" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.16 FROM = [From.GetName]" }
 	title = bulgaria.16.t
 	picture = GFX_report_event_BUL_Zveno_Coup
 	desc = {
@@ -646,7 +778,7 @@ country_event = { # Zveno coup - You are allied with Zveno
 }
 country_event = { # Zveno coup - You are not allied with Zveno
 	id = bulgaria.17
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.17" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.17 FROM = [From.GetName]" }
 	title = bulgaria.17.t
 	picture = GFX_report_event_BUL_Zveno_Coup
 	desc = {
@@ -780,7 +912,7 @@ country_event = { # Zveno coup - You are not allied with Zveno
 }
 country_event = { # The Non-Partisan Regime
 	id = bulgaria.18
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.18" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.18 FROM = [From.GetName]" }
 	title = bulgaria.18.t
 	picture = GFX_report_event_BUL_boris
 	desc = {
@@ -844,7 +976,7 @@ country_event = { # The Non-Partisan Regime
 }
 country_event = { # Democracy back on track
 	id = bulgaria.19
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.19" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.19 FROM = [From.GetName]" }
 	title = bulgaria.19.t
 	picture = GFX_report_event_BUL_assembly
 	desc = {
@@ -966,7 +1098,7 @@ country_event = { # Democracy back on track
 }
 country_event = { # Vidovdan Speech event
 	id = bulgaria.20
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.20" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.20 FROM = [From.GetName]" }
 	title = bulgaria.20.t
 	desc = bulgaria.20.d
 	picture = GFX_report_event_BUL_oldguard
@@ -987,7 +1119,7 @@ country_event = { # Vidovdan Speech event
 }
 country_event = { # Quick resolution to your troubles
 	id = bulgaria.21
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.21" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.21 FROM = [From.GetName]" }
 	title = bulgaria.21.t
 	desc = bulgaria.21.d
 	picture = GFX_report_event_BUL_oldguard
@@ -1004,6 +1136,22 @@ country_event = { # Quick resolution to your troubles
 
 	option = {
 		name = bulgaria.21.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ROYAL_DICTATORSHIP
+					}
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ZVENO_COUP
+					}
+				}
+			}
+		}
 		unlock_national_focus = BUL_bank_consolidation
 		remove_mission = BUL_buklovi_bankruptcy_fallout
 		set_temp_variable = { BUL_deputies = 20 }
@@ -1014,6 +1162,16 @@ country_event = { # Quick resolution to your troubles
 	}
 	option = {
 		name = bulgaria.21.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_DEMOCRACY_RESTORED
+				}
+			}
+		}
 		add_popularity = {
 			ideology = market_liberal
 			popularity = 0.03
@@ -1026,12 +1184,26 @@ country_event = { # Quick resolution to your troubles
 }
 country_event = { # Initiate fighting sequence
 	id = bulgaria.22
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.22" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.22 FROM = [From.GetName]" }
 	title = bulgaria.22.t
 	desc = bulgaria.22.d
 	picture = GFX_report_event_BUL_assembly
 
 	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			OR = {
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_ROYAL_DICTATORSHIP
+				}
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_ZVENO_COUP
+				}
+			}
+		}
+	}
 
 	option = {
 		name = bulgaria.22.a
@@ -1043,7 +1215,7 @@ country_event = { # Initiate fighting sequence
 
 country_event = { # Questioning patriotism
 	id = bulgaria.23
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.23" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.23 FROM = [From.GetName]" }
 	title = bulgaria.23.t
 	desc = bulgaria.23.d
 	picture = GFX_report_event_BUL_assembly2
@@ -1055,6 +1227,9 @@ country_event = { # Questioning patriotism
 
 	option = {
 		name = bulgaria.23.a
+		ai_chance = {
+			base = 95
+		}
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = -0.1
@@ -1063,6 +1238,9 @@ country_event = { # Questioning patriotism
 	}
 	option = {
 		name = bulgaria.23.b
+		ai_chance = {
+			base = 5
+		}
 		set_temp_variable = { BUL_deputies = 40 }
 		custom_effect_tooltip = BUL_reduce_deputy_support_tt
 		subtract_from_variable = { BUL_parliamentary_support = BUL_deputies }
@@ -1079,7 +1257,7 @@ country_event = { # Questioning patriotism
 }
 country_event = { # Georgiev's ultimatum
 	id = bulgaria.24
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.24" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.24 FROM = [From.GetName]" }
 	title = bulgaria.24.t
 	desc = bulgaria.24.d
 	picture = GFX_report_event_BUL_Zveno_Announcement
@@ -1096,6 +1274,9 @@ country_event = { # Georgiev's ultimatum
 				has_country_flag = BUL_stands_with_zveno
 			}
 		}
+		ai_chance = {
+			base = 25
+		}
 		hidden_effect = {
 			set_variable = { BUL_coup_success_chance = 10 }
 			clamp_variable = { var = BUL_coup_success_chance max = 100 min = 0 }
@@ -1108,6 +1289,9 @@ country_event = { # Georgiev's ultimatum
 		trigger = {
 			has_country_flag = BUL_stands_with_zveno
 		}
+		ai_chance = {
+			base = 50
+		}
 		hidden_effect = {
 			set_variable = { BUL_coup_success_chance = 20 }
 			clamp_variable = { var = BUL_coup_success_chance max = 100 min = 0 }
@@ -1117,6 +1301,9 @@ country_event = { # Georgiev's ultimatum
 	}
 	option = {
 		name = bulgaria.24.b
+		ai_chance = {
+			base = 50
+		}
 		set_temp_variable = { BUL_deputies = 30 }
 		custom_effect_tooltip = BUL_reduce_deputy_support_tt
 		subtract_from_variable = { BUL_parliamentary_support = BUL_deputies }
@@ -1127,7 +1314,7 @@ country_event = { # Georgiev's ultimatum
 }
 country_event = { # Protest from the bureaucracy
 	id = bulgaria.25
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.25" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.25 FROM = [From.GetName]" }
 	title = bulgaria.25.t
 	desc = bulgaria.25.d
 	picture = GFX_report_event_BUL_assembly2
@@ -1139,11 +1326,17 @@ country_event = { # Protest from the bureaucracy
 
 	option = {
 		name = bulgaria.25.a
+		ai_chance = {
+			base = 80
+		}
 		custom_effect_tooltip = BUL_several_focuses_will_be_disabled_tt
 		set_country_flag = BUL_angry_bureaucracy_flag
 	}
 	option = {
 		name = bulgaria.25.b
+		ai_chance = {
+			base = 20
+		}
 		set_temp_variable = { BUL_deputies = 40 }
 		custom_effect_tooltip = BUL_reduce_deputy_support_tt
 		subtract_from_variable = { BUL_parliamentary_support = BUL_deputies }
@@ -1160,7 +1353,7 @@ country_event = { # Protest from the bureaucracy
 }
 country_event = { # The Crown Prince wishes to speak
 	id = bulgaria.26
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.26" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.26 FROM = [From.GetName]" }
 	title = bulgaria.26.t
 	desc = bulgaria.26.d
 	picture = GFX_report_event_bul_boris_death
@@ -1172,6 +1365,9 @@ country_event = { # The Crown Prince wishes to speak
 
 	option = {
 		name = bulgaria.26.a
+		ai_chance = {
+			base = 90
+		}
 		swap_ideas = {
 			remove_idea = BUL_boris_crown_prince
 			add_idea = BUL_boris_crown_prince_bad
@@ -1180,6 +1376,9 @@ country_event = { # The Crown Prince wishes to speak
 	}
 	option = {
 		name = bulgaria.26.b
+		ai_chance = {
+			base = 10
+		}
 		set_temp_variable = { BUL_deputies = 40 }
 		custom_effect_tooltip = BUL_reduce_deputy_support_tt
 		subtract_from_variable = { BUL_parliamentary_support = BUL_deputies }
@@ -1189,7 +1388,7 @@ country_event = { # The Crown Prince wishes to speak
 }
 country_event = { # Agrarian Strike
 	id = bulgaria.27
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.27" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.27 FROM = [From.GetName]" }
 	title = bulgaria.27.t
 	desc = bulgaria.27.d
 	picture = GFX_report_event_BUL_peasant_strike
@@ -1205,6 +1404,22 @@ country_event = { # Agrarian Strike
 
 	option = {
 		name = bulgaria.27.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ROYAL_DICTATORSHIP
+					}
+					has_game_rule = {
+						rule = BUL_PRE_WAR_PATH
+						option = BUL_PRE_WAR_PATH_ZVENO_COUP
+					}
+				}
+			}
+		}
 		add_stability = -0.15
 		add_timed_idea = {
 			idea = BUL_agrarian_strike
@@ -1218,6 +1433,16 @@ country_event = { # Agrarian Strike
 	}
 	option = {
 		name = bulgaria.27.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_PRE_WAR_PATH
+					option = BUL_PRE_WAR_PATH_DEMOCRACY_RESTORED
+				}
+			}
+		}
 		add_stability = -0.15
 		set_temp_variable = { BUL_deputies = 30 }
 		custom_effect_tooltip = BUL_increase_deputy_support_tt
@@ -1242,7 +1467,7 @@ country_event = { # Agrarian Strike
 
 country_event = { # Elections
 	id = bulgaria.28
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.28" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.28 FROM = [From.GetName]" }
 	title = bulgaria.28.t
 	desc = bulgaria.28.d
 	picture = GFX_report_event_SWE_Elections
@@ -1369,10 +1594,15 @@ country_event = { # Elections
 }
 country_event = { # Abdication of Ferdinand
 	id = bulgaria.29
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.29" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.29 FROM = [From.GetName]" }
 	title = bulgaria.29.t
 	desc = bulgaria.29.d
 	picture = GFX_report_event_BUL_boris
+
+	trigger = {
+		is_subject = no
+		has_country_leader = { name = "Ferdinand I" }
+	}
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1494,7 +1724,7 @@ country_event = { # Abdication of Ferdinand
 }
 country_event = { # Zveno removes the Tsar
 	id = bulgaria.30
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.30" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.30 FROM = [From.GetName]" }
 	title = bulgaria.30.t
 	desc = bulgaria.30.d
 	picture = GFX_report_event_BUL_Zveno_Announcement
@@ -1556,7 +1786,7 @@ country_event = { # Zveno removes the Tsar
 }
 country_event = { # National Legionaries
 	id = bulgaria.31
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.31" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.31 FROM = [From.GetName]" }
 	title = bulgaria.31.t
 	desc = bulgaria.31.d
 	picture = GFX_report_event_BUL_National_Legions
@@ -1566,6 +1796,16 @@ country_event = { # National Legionaries
 
 	option = {
 		name = bulgaria.31.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_POST_DEFEAT_PATH
+					option = BUL_POST_DEFEAT_PATH_ROYAL
+				}
+			}
+		}
 		end_coalition = yes
 		hidden_effect = {
 			country_event = { id = bulgaria.32 days = 2 }
@@ -1573,6 +1813,16 @@ country_event = { # National Legionaries
 	}
 	option = {
 		name = bulgaria.31.b
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_POST_DEFEAT_PATH
+					option = BUL_POST_DEFEAT_PATH_LEGION
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = { id = bulgaria.33 days = 2 }
 		}
@@ -1580,7 +1830,7 @@ country_event = { # National Legionaries
 }
 country_event = { # National Legionaries Coup
 	id = bulgaria.32
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.32" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.32 FROM = [From.GetName]" }
 	title = bulgaria.32.t
 	desc = bulgaria.32.d
 	picture = GFX_report_event_BUL_National_Legions
@@ -1640,7 +1890,7 @@ country_event = { # National Legionaries Coup
 }
 country_event = { # Zlatev's Coup
 	id = bulgaria.33
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.33" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.33 FROM = [From.GetName]" }
 	title = bulgaria.33.t
 	desc = bulgaria.33.d
 	picture = GFX_report_event_BUL_boris2
@@ -1686,7 +1936,7 @@ country_event = { # Zlatev's Coup
 }
 country_event = { # Zveno - economic policy
 	id = bulgaria.34
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.34" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.34 FROM = [From.GetName]" }
 	title = bulgaria.34.t
 	desc = bulgaria.34.d
 	picture = GFX_report_event_BUL_oldguard
@@ -1750,7 +2000,7 @@ country_event = { # Zveno - economic policy
 }
 country_event = { # Zveno - cultural policy
 	id = bulgaria.35
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.35" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.35 FROM = [From.GetName]" }
 	title = bulgaria.35.t
 	desc = bulgaria.35.d
 	picture = GFX_report_event_BUL_oldguard
@@ -1819,7 +2069,7 @@ country_event = { # Zveno - cultural policy
 }
 country_event = { # Zveno - administrative policy
 	id = bulgaria.36
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.36" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.36 FROM = [From.GetName]" }
 	title = bulgaria.36.t
 	desc = bulgaria.36.d
 	picture = GFX_report_event_BUL_oldguard
@@ -1862,7 +2112,7 @@ country_event = { # Zveno - administrative policy
 }
 country_event = { # Zveno - political policy
 	id = bulgaria.37
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.37" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.37 FROM = [From.GetName]" }
 	title = bulgaria.37.t
 	desc = bulgaria.37.d
 	picture = GFX_report_event_BUL_oldguard
@@ -1943,7 +2193,7 @@ country_event = { # Zveno - political policy
 }
 country_event = { # Legionaries decision
 	id = bulgaria.38
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.38" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.38 FROM = [From.GetName]" }
 	title = bulgaria.38.t
 	desc = bulgaria.38.d
 	picture = GFX_report_event_BUL_National_Legions
@@ -1972,7 +2222,7 @@ country_event = { # Legionaries decision
 }
 country_event = { # Zveno removes the Tsar
 	id = bulgaria.39
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.39" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.39 FROM = [From.GetName]" }
 	title = bulgaria.39.t
 	desc = bulgaria.39.d
 	picture = GFX_report_BUL_republic_declared
@@ -2046,7 +2296,7 @@ country_event = { # Zveno removes the Tsar
 }
 country_event = { # Zveno monarchy
 	id = bulgaria.40
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.40" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.40 FROM = [From.GetName]" }
 	title = bulgaria.40.t
 	desc = bulgaria.40.d
 	picture = GFX_report_event_BUL_palace
@@ -2079,7 +2329,7 @@ country_event = { # Zveno monarchy
 
 country_event = { # Realm Duress
 	id = bulgaria.41
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.41" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.41 FROM = [From.GetName]" }
 	title = bulgaria.41.t
 	desc = bulgaria.41.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2105,7 +2355,7 @@ country_event = { # Realm Duress
 }
 country_event = { # Nighttime Meeting
 	id = bulgaria.42
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.42" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.42 FROM = [From.GetName]" }
 	title = bulgaria.42.t
 	desc = bulgaria.42.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2115,12 +2365,32 @@ country_event = { # Nighttime Meeting
 
 	option = {
 		name = bulgaria.42.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_POST_DEFEAT_PATH
+					option = BUL_POST_DEFEAT_PATH_ZVENO
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = { id = bulgaria.43 days = 2 }
 		}
 	}
 	option = {
 		name = bulgaria.42.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_POST_DEFEAT_PATH
+					option = BUL_POST_DEFEAT_PATH_DEMOCRACY
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = { id = bulgaria.44 days = 2 }
 		}
@@ -2128,7 +2398,7 @@ country_event = { # Nighttime Meeting
 }
 country_event = { # Restored Tarnovo Constitution
 	id = bulgaria.43
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.43" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.43 FROM = [From.GetName]" }
 	title = bulgaria.43.t
 	desc = bulgaria.43.d
 	picture = GFX_report_event_BUL_assembly
@@ -2186,7 +2456,7 @@ country_event = { # Restored Tarnovo Constitution
 }
 country_event = { # Fall of the Monarchy
 	id = bulgaria.44
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.44" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.44 FROM = [From.GetName]" }
 	title = bulgaria.44.t
 	desc = bulgaria.44.d
 	picture = GFX_report_event_BUL_Zveno_Coup
@@ -2287,7 +2557,7 @@ country_event = { # Fall of the Monarchy
 }
 country_event = { # Formation of the Fatherland Front
 	id = bulgaria.45
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.45" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.45 FROM = [From.GetName]" }
 	title = bulgaria.45.t
 	desc = bulgaria.45.d
 	picture = GFX_report_event_BUL_fatherland_front
@@ -2314,7 +2584,7 @@ country_event = { # Formation of the Fatherland Front
 }
 country_event = { # Church Attack
 	id = bulgaria.46
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.46" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.46 FROM = [From.GetName]" }
 	title = bulgaria.46.t
 	desc = bulgaria.46.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2324,6 +2594,16 @@ country_event = { # Church Attack
 
 	option = {
 		name = bulgaria.46.a
+		ai_chance = {
+			base = 75
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_POST_DEFEAT_PATH
+					option = BUL_POST_DEFEAT_PATH_ROYAL
+				}
+			}
+		}
 		add_stability = -0.25
 		hidden_effect = {
 			kill_ideology_leader = social_democrat
@@ -2389,6 +2669,26 @@ country_event = { # Church Attack
 	}
 	option = {
 		name = bulgaria.46.b
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BUL_POST_DEFEAT_PATH
+						option = BUL_POST_DEFEAT_PATH_AGRARIAN
+					}
+					has_game_rule = {
+						rule = BUL_POST_DEFEAT_PATH
+						option = BUL_POST_DEFEAT_PATH_COMMUNIST
+					}
+					has_game_rule = {
+						rule = BUL_POST_DEFEAT_PATH
+						option = BUL_POST_DEFEAT_PATH_VLASOVDEN
+					}
+				}
+			}
+		}
 		add_stability = -0.25
 		hidden_effect = {
 			country_event = { id = bulgaria.48 days = 2 }
@@ -2397,7 +2697,7 @@ country_event = { # Church Attack
 }
 country_event = { # The Republic
 	id = bulgaria.47
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.47" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.47 FROM = [From.GetName]" }
 	title = bulgaria.47.t
 	desc = bulgaria.47.d
 	picture = GFX_report_event_BUL_fatherland_front2
@@ -2478,7 +2778,7 @@ country_event = { # The Republic
 }
 country_event = { # Zlatev's Coup
 	id = bulgaria.48
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.48" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.48 FROM = [From.GetName]" }
 	title = bulgaria.48.t
 	desc = bulgaria.48.d
 	picture = GFX_report_event_BUL_boris2
@@ -2544,7 +2844,7 @@ country_event = { # Zlatev's Coup
 }
 country_event = { # National Autonomy
 	id = bulgaria.49
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.49" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.49 FROM = [From.GetName]" }
 	title = bulgaria.49.t
 	desc = bulgaria.49.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2573,7 +2873,7 @@ country_event = { # National Autonomy
 }
 country_event = { # Legionaries Fall
 	id = bulgaria.50
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.50" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.50 FROM = [From.GetName]" }
 	title = bulgaria.50.t
 	desc = bulgaria.50.d
 	picture = GFX_report_event_BUL_boris2
@@ -2628,11 +2928,12 @@ country_event = { # Legionaries Fall
 			}
 		}
 		mark_focus_tree_layout_dirty = yes
+		clear_variable = BUL_Legion_AI_attack_Var
 	}
 }
 country_event = { # Expulsion of the Royal Family
 	id = bulgaria.51
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.51" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.51 FROM = [From.GetName]" }
 	title = bulgaria.51.t
 	desc = bulgaria.51.d
 	picture = GFX_report_event_BUL_National_Legions
@@ -2650,7 +2951,7 @@ country_event = { # Expulsion of the Royal Family
 }
 country_event = { # Tsar Kyril
 	id = bulgaria.52
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.52" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.52 FROM = [From.GetName]" }
 	title = bulgaria.52.t
 	desc = bulgaria.52.d
 	picture = GFX_report_event_BUL_National_Legions
@@ -2672,7 +2973,7 @@ country_event = { # Tsar Kyril
 }
 country_event = { # To arms!
 	id = bulgaria.53
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.53" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.53 FROM = [From.GetName]" }
 	title = bulgaria.53.t
 	desc = bulgaria.53.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2692,7 +2993,7 @@ country_event = { # To arms!
 }
 country_event = { # Chetniks getting ready
 	id = bulgaria.54
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.54" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.54 FROM = [From.GetName]" }
 	title = bulgaria.54.t
 	desc = bulgaria.54.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2714,9 +3015,9 @@ country_event = { # Chetniks getting ready
 country_event = { #hidden event to check whether to bypass the mechanic due to BUL being at war (donotlog)
 	id = bulgaria.5400
 	hidden = yes
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		is_subject = no
 		OR = {
@@ -2724,7 +3025,7 @@ country_event = { #hidden event to check whether to bypass the mechanic due to B
 			has_subject = SER
 		}
 	}
-	
+
 	option = {
 		if = {
 			limit = { has_war = yes }
@@ -2739,6 +3040,7 @@ country_event = { #hidden event to check whether to bypass the mechanic due to B
 				save_global_event_target_as = BUL_chetnik_headquarters
 				add_dynamic_modifier = { modifier = BUL_chetnik_base_modifier }
 			}
+			set_country_flag = BUL_chetnik_uprising
 			country_event = bulgaria.57
 		}
 		else = {
@@ -2749,7 +3051,7 @@ country_event = { #hidden event to check whether to bypass the mechanic due to B
 
 country_event = { # First Uprising
 	id = bulgaria.55
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.55" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.55 FROM = [From.GetName]" }
 	title = bulgaria.55.t
 	desc = bulgaria.55.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2771,7 +3073,7 @@ country_event = { # First Uprising
 }
 country_event = { # Chetnik Relocation
 	id = bulgaria.56
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.56" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.56 FROM = [From.GetName]" }
 	title = bulgaria.56.t
 	desc = {
 		text = bulgaria.56.d1
@@ -2806,7 +3108,7 @@ country_event = { # Chetnik Relocation
 }
 country_event = { # Chetnik Rebellion: Defeat
 	id = bulgaria.57
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.57" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.57 FROM = [From.GetName]" }
 	title = bulgaria.57.t
 	desc = bulgaria.57.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2841,7 +3143,7 @@ country_event = { # Chetnik Rebellion: Defeat
 }
 country_event = { # Chetnik Rebellion: Victory
 	id = bulgaria.58
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.58" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.58 FROM = [From.GetName]" }
 	title = bulgaria.58.t
 	desc = bulgaria.58.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2867,7 +3169,7 @@ country_event = { # Chetnik Rebellion: Victory
 
 country_event = { # Fatherland Front - Resistance
 	id = bulgaria.59
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.59" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.59 FROM = [From.GetName]" }
 	title = bulgaria.59.t
 	desc = bulgaria.59.d
 	picture = GFX_report_event_BUL_oldguard
@@ -2885,7 +3187,7 @@ country_event = { # Fatherland Front - Resistance
 }
 country_event = { # What do we dooo
 	id = bulgaria.60
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.60" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.60 FROM = [From.GetName]" }
 	title = bulgaria.60.t
 	desc = bulgaria.60.d
 	picture = GFX_report_event_BUL_fatherland_front
@@ -2895,12 +3197,38 @@ country_event = { # What do we dooo
 
 	option = {
 		name = bulgaria.60.a
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = BUL_POST_DEFEAT_PATH
+						option = BUL_POST_DEFEAT_PATH_COMMUNIST
+					}
+					has_game_rule = {
+						rule = BUL_POST_DEFEAT_PATH
+						option = BUL_POST_DEFEAT_PATH_VLASOVDEN
+					}
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = { id = bulgaria.61 days = 7 }
 		}
 	}
 	option = {
 		name = bulgaria.60.b
+		ai_chance = {
+			base = 65
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_POST_DEFEAT_PATH
+					option = BUL_POST_DEFEAT_PATH_AGRARIAN
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = { id = bulgaria.62 days = 7 }
 		}
@@ -2908,7 +3236,7 @@ country_event = { # What do we dooo
 }
 country_event = { # Oh no Stamboliyski don't do it!
 	id = bulgaria.61
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.61" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.61 FROM = [From.GetName]" }
 	title = bulgaria.61.t
 	desc = bulgaria.61.d
 	picture = GFX_report_event_BUL_Stamboliyski
@@ -2955,7 +3283,7 @@ country_event = { # Oh no Stamboliyski don't do it!
 }
 country_event = { # RIP Stambo
 	id = bulgaria.62
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.62" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.62 FROM = [From.GetName]" }
 	title = bulgaria.62.t
 	desc = bulgaria.62.d
 	picture = GFX_report_event_BUL_fatherland_front2
@@ -2994,7 +3322,7 @@ country_event = { # RIP Stambo
 }
 country_event = { # What socialist ideology we doin
 	id = bulgaria.63
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.63" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.63 FROM = [From.GetName]" }
 	title = bulgaria.63.t
 	desc = bulgaria.63.d
 	picture = GFX_report_event_BUL_fatherland_front2
@@ -3004,6 +3332,16 @@ country_event = { # What socialist ideology we doin
 
 	option = {
 		name = bulgaria.63.a
+		ai_chance = {
+			base = 55
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_POST_DEFEAT_PATH
+					option = BUL_POST_DEFEAT_PATH_VLASOVDEN
+				}
+			}
+		}
 		add_popularity = {
 			ideology = radical_socialist
 			popularity = 0.05
@@ -3011,6 +3349,16 @@ country_event = { # What socialist ideology we doin
 	}
 	option = {
 		name = bulgaria.63.b
+		ai_chance = {
+			base = 45
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = BUL_POST_DEFEAT_PATH
+					option = BUL_POST_DEFEAT_PATH_COMMUNIST
+				}
+			}
+		}
 		add_popularity = {
 			ideology = syndicalist
 			popularity = 0.1
@@ -3027,7 +3375,7 @@ country_event = { # What socialist ideology we doin
 }
 country_event = { # Success of Building for Fatherland program
 	id = bulgaria.64
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.64" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.64 FROM = [From.GetName]" }
 	title = bulgaria.64.t
 	desc = bulgaria.64.d
 	picture = GFX_report_event_BUL_fatherland_front
@@ -3045,7 +3393,7 @@ country_event = { # Success of Building for Fatherland program
 }
 country_event = { # FF Falls
 	id = bulgaria.65
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.65" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.65 FROM = [From.GetName]" }
 	title = bulgaria.65.t
 	desc = bulgaria.65.d
 	picture = GFX_report_event_BUL_boris2
@@ -3152,7 +3500,7 @@ country_event = { # FF Falls
 }
 country_event = { # Royalist resistance is defeated, now get some stability
 	id = bulgaria.66
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.66" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.66 FROM = [From.GetName]" }
 	title = bulgaria.66.t
 	desc = bulgaria.66.d
 	picture = GFX_report_event_BUL_oldguard
@@ -3170,7 +3518,7 @@ country_event = { # Royalist resistance is defeated, now get some stability
 }
 country_event = { # Bulgarian intelligence has some suspicions about clandestine activity of Serbian underground
 	id = bulgaria.67
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.67" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.67 FROM = [From.GetName]" }
 	title = bulgaria.67.t
 	desc = bulgaria.67.d
 	picture = GFX_report_event_BUL_soldier
@@ -3180,12 +3528,12 @@ country_event = { # Bulgarian intelligence has some suspicions about clandestine
 	option = {
 		name = bulgaria.67.a
 		add_stability = -0.02
-		
+
 	}
 }
 country_event = { # Serbs are rising up
 	id = bulgaria.68
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.68" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgaria.68 FROM = [From.GetName]" }
 	title = bulgaria.68.t
 	desc = bulgaria.68.d
 	picture = GFX_report_event_BUL_soldier
@@ -3195,7 +3543,13 @@ country_event = { # Serbs are rising up
 	option = {
 		name = bulgaria.68.a
 		add_war_support = 0.05
-		
+		effect_tooltip = {
+			end_puppet = SER
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SER
+			}
+		}
 	}
 }
 
@@ -3209,7 +3563,7 @@ add_namespace = bulgariaflavour
 
 country_event = {
 	id = bulfor.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.1" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.1 FROM = [From.GetName]" }
 	title = bulfor.1.t
 	desc = bulfor.1.d
 	picture = GFX_report_event_BUL_crowd
@@ -3252,7 +3606,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.2" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.2 FROM = [From.GetName]" }
 	title = bulfor.2.t
 	desc = bulfor.2.d
 	picture = GFX_report_event_BUL_crowd
@@ -3275,7 +3629,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.3" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.3 FROM = [From.GetName]" }
 	title = bulfor.3.t
 	desc = bulfor.3.d
 	picture = GFX_report_event_BUL_crowd
@@ -3295,7 +3649,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.4" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.4 FROM = [From.GetName]" }
 	title = bulfor.4.t
 	desc = bulfor.4.d
 	picture = GFX_report_event_BUL_crowd
@@ -3345,7 +3699,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.5" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.5 FROM = [From.GetName]" }
 	title = bulfor.5.t
 	desc = bulfor.5.d
 	picture = GFX_report_event_BUL_crowd
@@ -3377,7 +3731,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.6" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.6 FROM = [From.GetName]" }
 	title = bulfor.6.t
 	desc = bulfor.6.d
 	picture = GFX_report_event_BUL_crowd
@@ -3434,7 +3788,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.7" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.7 FROM = [From.GetName]" }
 	title = bulfor.7.t
 	desc = bulfor.7.d
 	picture = GFX_report_event_BUL_crowd
@@ -3468,7 +3822,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.8" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.8 FROM = [From.GetName]" }
 	title = bulfor.8.t
 	desc = bulfor.8.d
 	picture = GFX_report_event_BUL_crowd
@@ -3498,7 +3852,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.9" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.9 FROM = [From.GetName]" }
 	title = bulfor.9.t
 	desc = bulfor.9.d
 	picture = GFX_report_event_BUL_crowd
@@ -3536,7 +3890,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.10" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.10 FROM = [From.GetName]" }
 	title = bulfor.10.t
 	desc = bulfor.10.d
 	picture = GFX_report_event_BUL_crowd
@@ -3584,7 +3938,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.11
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.11" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.11 FROM = [From.GetName]" }
 	title = bulfor.11.t
 	desc = bulfor.11.d
 	picture = GFX_report_event_BUL_crowd
@@ -3598,7 +3952,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.12
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.12" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.12 FROM = [From.GetName]" }
 	title = bulfor.12.t
 	desc = bulfor.12.d
 	picture = GFX_report_event_BUL_crowd
@@ -3612,7 +3966,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.13
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.13" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.13 FROM = [From.GetName]" }
 	title = bulfor.13.t
 	desc = bulfor.13.d
 	picture = GFX_report_event_BUL_crowd
@@ -3626,7 +3980,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.14
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.14" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.14 FROM = [From.GetName]" }
 	title = bulfor.14.t
 	desc = bulfor.14.d
 	picture = GFX_report_event_BUL_crowd
@@ -3649,7 +4003,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.15
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.15" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.15 FROM = [From.GetName]" }
 	title = bulfor.15.t
 	desc = bulfor.15.d
 	picture = GFX_report_event_BUL_crowd
@@ -3710,7 +4064,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.16
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.16" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.16 FROM = [From.GetName]" }
 	title = bulfor.16.t
 	desc = bulfor.16.d
 	picture = GFX_report_event_BUL_crowd
@@ -3728,7 +4082,7 @@ country_event = {
 }
 country_event = {
 	id = bulfor.17
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.17" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.17 FROM = [From.GetName]" }
 	title = bulfor.17.t
 	desc = bulfor.17.d
 	picture = GFX_report_event_BUL_crowd
@@ -3737,7 +4091,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = bulfor.16.a
+		name = bulfor.17.a
 		BUL = {
 			country_event = bulfor.2
 		}
@@ -3745,7 +4099,7 @@ country_event = {
 }
 country_event = { #Germany proposes deal with Bulgaria
 	id = bulfor.18
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.18" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.18 FROM = [From.GetName]" }
 	title = bulfor.18.t
 	desc = bulfor.18.d
 
@@ -3810,7 +4164,7 @@ country_event = { #Germany proposes deal with Bulgaria
 
 country_event = { #Germany say yes
 	id = bulfor.19
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.19" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.19 FROM = [From.GetName]" }
 	title = bulfor.19.t
 	desc = bulfor.19.d
 
@@ -3837,7 +4191,7 @@ country_event = { #Germany say yes
 }
 country_event = { #Germany say no
 	id = bulfor.20
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.20" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.20 FROM = [From.GetName]" }
 	title = bulfor.20.t
 	desc = bulfor.20.d
 
@@ -3891,16 +4245,16 @@ country_event = { #FROM has accepted
 		country_exists = FROM
 	}
 
-	option = { #A toast to our German friends
+	option = { #A toast to our new-faction-leader friends
 		name = bulfor.22.a
 		add_war_support = 0.05
-		set_country_flag = AUS_former_faction_member
 		FROM = {
 			if = {
 				limit = {
 					is_in_faction = yes
-					is_faction_leader = no
+					is_faction_leader = no #To allow for DAB merged w/ RP
 				}
+				set_country_flag = AUS_former_faction_member
 				faction_leader = { add_to_faction = ROOT }
 			}
 			else = {
@@ -4079,6 +4433,16 @@ country_event = { #Renew the 1904 treaties
 			country = SER
 			relation = non_aggression_pact
 		}
+		SER = {
+			if = {
+				limit = { has_opinion_modifier = Belgrade_Pact_anti_bulgaria }
+				remove_opinion_modifier = { target = BUL modifier = Belgrade_Pact_anti_bulgaria }
+			}
+		}
+		if = {
+			limit = { has_opinion_modifier = Belgrade_Pact_joined_against_us }
+			remove_opinion_modifier = { target = SER modifier = Belgrade_Pact_joined_against_us }
+		}
 		add_opinion_modifier = { target = SER modifier = KR_approves_of_govt }
 		reverse_add_opinion_modifier = { target = SER modifier = KR_approves_of_govt }
 	}
@@ -4123,7 +4487,15 @@ country_event = { #Join the Balkan Customs Union?
 	option = { #Accept
 		name = bulfor.31.a
 		add_dynamic_modifier = { modifier = BUL_balkan_union }
+		if = {
+			limit = { has_opinion_modifier = Belgrade_Pact_anti_bulgaria }
+			remove_opinion_modifier = { target = BUL modifier = Belgrade_Pact_anti_bulgaria }
+		}
 		BUL = {
+			if = {
+				limit = { has_opinion_modifier = Belgrade_Pact_joined_against_us }
+				remove_opinion_modifier = { target = ROOT modifier = Belgrade_Pact_joined_against_us }
+			}
 			country_event = bulfor.32
 		}
 	}
@@ -4203,7 +4575,7 @@ country_event = { #White peace for Bulgaria vs. Ottomans
 	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.35 FROM = [From.GetName]" }
 	title = bulfor.35.t
 	picture = GFX_report_event_BUL_army
-	
+
 	desc = {
 		text = bulfor.35.d.cairo_pact
 		trigger = { has_idea = OTT_Ottoman_Stand }
@@ -4248,7 +4620,7 @@ country_event = { #White peace for Bulgaria vs. Ottomans
 	mean_time_to_happen = {
 		days = 10
 	}
-	
+
 	fire_only_once = yes
 
 	option = {
@@ -4268,7 +4640,7 @@ country_event = { #Bulgaria decides on the peace offer
 	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.36 FROM = [From.GetName]" }
 	title = bulfor.36.t
 	picture = GFX_report_event_BUL_army
-	
+
 	desc = {
 		text = bulfor.36.d.cairo_pact
 		trigger = {
@@ -4333,13 +4705,37 @@ country_event = { #Bulgaria refuses the peace offer
 	}
 }
 
+country_event = { # Bulgaria gets to declare war on GRR if it spawns
+	id = bulfor.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulfor.38 FROM = [From.GetName]" }
+	title = bulfor.38.t
+	desc = bulfor.38.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bulfor.38.a
+		ai_chance = { base = 100 }
+		declare_war_on = {
+			target = GRR
+			type = annex_everything
+		}
+	}
+
+	option = {
+		name = bulfor.38.b
+		ai_chance = { base = 0 }
+		add_war_support = -0.10
+	}
+}
+
 ####################################
 ### Flavor
 ####################################
 
 country_event = {
 	id = bulgariaflavour.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.1" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.1 FROM = [From.GetName]" }
 	title = bulgariaflavour.1.t
 	desc = bulgariaflavour.1.d
 	picture = GFX_report_event_BUL_boris
@@ -4381,7 +4777,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.2" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.2 FROM = [From.GetName]" }
 	title = bulgariaflavour.2.t
 	desc = bulgariaflavour.2.d
 	picture = GFX_report_event_ser_election
@@ -4446,7 +4842,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.3" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.3 FROM = [From.GetName]" }
 	title = bulgariaflavour.3.t
 	desc = bulgariaflavour.3.d
 	picture = GFX_report_event_ROM_legion_salute
@@ -4493,7 +4889,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.4" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.4 FROM = [From.GetName]" }
 	title = bulgariaflavour.4.t
 	desc = bulgariaflavour.4.d
 	picture = GFX_report_event_generic_economic_policy
@@ -4514,7 +4910,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.5" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.5 FROM = [From.GetName]" }
 	title = bulgariaflavour.5.t
 	desc = bulgariaflavour.5.d
 	picture = GFX_report_event_BUL_crowd
@@ -4529,7 +4925,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.6" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.6 FROM = [From.GetName]" }
 	title = bulgariaflavour.6.t
 	desc = bulgariaflavour.6.d
 	picture = GFX_report_event_yugoslavian_cavalry
@@ -4550,7 +4946,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.7" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.7 FROM = [From.GetName]" }
 	title = bulgariaflavour.7.t
 	desc = bulgariaflavour.7.d
 	picture = GFX_report_event_soldiers_marching
@@ -4579,7 +4975,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.8" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.8 FROM = [From.GetName]" }
 	title = bulgariaflavour.8.t
 	desc = bulgariaflavour.8.d
 	picture = GFX_report_event_soldiers_marching
@@ -4594,7 +4990,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.9" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.9 FROM = [From.GetName]" }
 	title = bulgariaflavour.9.t
 	desc = bulgariaflavour.9.d
 	picture = GFX_report_event_soldiers_marching
@@ -4627,7 +5023,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.10" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.10 FROM = [From.GetName]" }
 	title = bulgariaflavour.10.t
 	desc = bulgariaflavour.10.d
 	picture = GFX_report_event_soldiers_marching
@@ -4674,7 +5070,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.11
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.11" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.11 FROM = [From.GetName]" }
 	title = bulgariaflavour.11.t
 	desc = bulgariaflavour.11.d
 	picture = GFX_report_event_SWE_Elections
@@ -4695,7 +5091,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.12
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.12" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.12 FROM = [From.GetName]" }
 	title = bulgariaflavour.12.t
 	desc = bulgariaflavour.12.d
 	picture = GFX_report_event_bul_boris_death
@@ -4713,7 +5109,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.13
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.13" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.13 FROM = [From.GetName]" }
 	title = bulgariaflavour.13.t
 	desc = bulgariaflavour.13.d
 	picture = GFX_report_event_soldiers_marching
@@ -4741,7 +5137,7 @@ country_event = {
 }
 country_event = { # Death of Ferdinand
 	id = bulgariaflavour.14
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.14" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.14 FROM = [From.GetName]" }
 	title = bulgariaflavour.14.t
 	desc = bulgariaflavour.14.d
 	picture = GFX_report_event_BUL_boris
@@ -4814,7 +5210,7 @@ country_event = { # Death of Ferdinand
 }
 country_event = {
 	id = bulgariaflavour.15
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.15" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.15 FROM = [From.GetName]" }
 	title = bulgariaflavour.15.t
 	desc = bulgariaflavour.15.d
 	picture = GFX_report_event_bul_officers_burgas
@@ -4832,7 +5228,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.16
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.16" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.16 FROM = [From.GetName]" }
 	title = bulgariaflavour.16.t
 	desc = {
 		text = bulgariaflavour.16.d1
@@ -4892,7 +5288,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.17
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.17" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.17 FROM = [From.GetName]" }
 	title = bulgariaflavour.17.t
 	desc = bulgariaflavour.17.d
 	picture = GFX_report_event_BUL_Zveno_Announcement
@@ -4991,7 +5387,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.18
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.18" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.18 FROM = [From.GetName]" }
 	title = bulgariaflavour.18.t
 	desc = bulgariaflavour.18.d
 	picture = GFX_report_event_BUL_crowd
@@ -5006,7 +5402,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.19
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.19" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.19 FROM = [From.GetName]" }
 	title = bulgariaflavour.19.t
 	desc = bulgariaflavour.19.d
 	picture = GFX_report_event_generic_books
@@ -5031,7 +5427,7 @@ country_event = {
 }
 country_event = {
 	id = bulgariaflavour.27
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.27" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.27 FROM = [From.GetName]" }
 	title = bulgariaflavour.27.t
 	desc = bulgariaflavour.27.d
 	picture = GFX_report_event_BUL_oldguard
@@ -5084,7 +5480,7 @@ country_event = {
 
 country_event = {
 	id = bulgariaflavour.28
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.28" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.28 FROM = [From.GetName]" }
 	title = bulgariaflavour.28.t
 	desc = bulgariaflavour.28.d
 	picture = GFX_report_event_BUL_oldguard
@@ -5113,7 +5509,7 @@ country_event = {
 
 news_event = { #Zveno clique coups Bulgaria
 	id = bulgariaflavour.29
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.29" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.29 FROM = [From.GetName]" }
 	title = bulgariaflavour.29.t
 	desc = bulgariaflavour.29.d
 	picture = GFX_news_event_bulgarian_soldiers
@@ -5137,7 +5533,7 @@ news_event = { #Zveno clique coups Bulgaria
 
 news_event = { #Tsar Ferdinand establishes a Royal Dictatorship
 	id = bulgariaflavour.30
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.30" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.30 FROM = [From.GetName]" }
 	title = bulgariaflavour.30.t
 	desc = bulgariaflavour.30.d
 	picture = GFX_news_event_tsar_ferdinand_of_bulgaria
@@ -5161,7 +5557,7 @@ news_event = { #Tsar Ferdinand establishes a Royal Dictatorship
 
 news_event = { #Constitutionalists win in Bulgaria and abolish the State Protection Act
 	id = bulgariaflavour.31
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.31" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.31 FROM = [From.GetName]" }
 	title = bulgariaflavour.31.t
 	desc = bulgariaflavour.31.d
 	picture = GFX_news_event_GRE_celebrate
@@ -5185,7 +5581,7 @@ news_event = { #Constitutionalists win in Bulgaria and abolish the State Protect
 
 news_event = { #The Union of National Legions takes over Bulgaria
 	id = bulgariaflavour.32
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.32" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.32 FROM = [From.GetName]" }
 	title = bulgariaflavour.32.t
 	desc = bulgariaflavour.32.d
 	picture = GFX_news_event_BUL_legionaries
@@ -5209,7 +5605,7 @@ news_event = { #The Union of National Legions takes over Bulgaria
 
 news_event = { #The Fatherland Front overthrows the monarchy
 	id = bulgariaflavour.33
-	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.33" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.33 FROM = [From.GetName]" }
 	title = bulgariaflavour.33.t
 	desc = bulgariaflavour.33.d
 	picture = GFX_news_event_bulgarian_ff_troops

@@ -254,7 +254,7 @@
  amcivwar.30.b:0 "We may need these moderates in the future"
 
  amcivwar.31.t:0 "Bourgeoisie Flee to Canada"
- amcivwar.31.d:0 "The bourgeoisie have decided that they will flee the CSA. Thousands have sought refuge within enemy territory, Especially within the illegitimate Canadian government. The thieving scum have taken whatever of their stolen wealth they could carry with them as they have escaped the revolution."
+ amcivwar.31.d:0 "The bourgeois have decided that they will flee the CSA. Thousands have sought refuge within enemy territory, Especially within the illegitimate Canadian government. The thieving scum have taken whatever of their stolen wealth they could carry with them as they have escaped the revolution."
  amcivwar.31.a:0 "The revolution will come for them, in time"
 
  amcivwar.32.t:0 "The Life of William Crawley Released in Theatres"
@@ -815,6 +815,7 @@
 
 ### Deal with the Devil ###
  ACW_deal_with_devil_effect:0 "All occupied states of their territory will be transferred to us, and ours to them. The truce will continue for 90 days, after which each of us will have the option to extend it for another 90 days.\n"
+
  amcivwar.520.t:0 "Deal with the Devil?"
  amcivwar.520.d:0 "The [From.GetAdjective] government has approached us with a proposal: a truce of at least 90 days between [Root.GetNameDef] and [From.GetNameDef], so that both of us can turn our efforts against the [enemy_country.GetAdjective] forces, which are currently defeating us both. In 90 days time, we can re-assess... and, if [enemy_country.GetNameDef] is defeated the truce will be off."
  amcivwar.520.a:0 "We agree to this arrangement... for now"

@@ -1775,7 +1775,7 @@ focus_tree = {
 				name = "Harry W. Hill"
 				desc = "PSA_HARRY_HILL_NAVY_DESC"
 				portrait_path = "gfx/leaders/PSA/Portrait_PSA_harry_hill.png"
-				traits = {ironside chief_engineer}
+				traits = { ironside chief_engineer }
 				skill = 2
 				attack_skill = 1
 				defense_skill = 1
@@ -2199,6 +2199,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_The_Screaming_Eagles"
+			custom_effect_tooltip = tech_better_paratroopers_effect
+			hidden_effect = {
+				set_technology = { tech_better_paratroopers = 1 popup = no }
+			}
 			if = {
 				limit = { NOT = { has_tech = paratroopers } }
 				set_technology = { paratroopers = 1 }
@@ -2490,14 +2494,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_last_bastion"
-			if = {
-				limit = { NOT = { country_exists = USA } }
-				country_event = pacificstates.205
-				custom_effect_tooltip = tooltip_white_line
-			}
-			else = {
-				set_country_flag = PSA_vs_USA
-			}
+			remove_ideas = PSA_last_bastion_of_american_democracy
+			country_event = pacificstates.205
+			custom_effect_tooltip = tooltip_white_line
 			set_country_flag = USA_can_purge_syndicalists
 			set_country_flag = USA_can_purge_longists
 			unlock_decision_tooltip = USA_fight_socialist_terrorists
@@ -2654,7 +2653,7 @@ focus_tree = {
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
 			USA_increase_recovery = yes
 			hidden_effect = {
-				country_event = {id = pacificstates.51 days = 85 random = 240}
+				country_event = { id = pacificstates.51 days = 85 random = 240 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS }
@@ -2771,7 +2770,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_immigration_act"
 			add_ideas = PSA_immigration_act_idea
 			hidden_effect = {
-				country_event = {id = pacificstates.62 days = 85 random = 240}
+				country_event = { id = pacificstates.62 days = 85 random = 240 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -3239,7 +3238,7 @@ focus_tree = {
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
 			USA_increase_recovery = yes
 			hidden_effect = {
-				country_event = {id = pacificstates.63 days = 85 random = 240}
+				country_event = { id = pacificstates.63 days = 85 random = 240 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS }

@@ -211,22 +211,18 @@ SER_imro_decisions = {
 	SER_IMRO_reb_lull_phase = {
 		icon = generic_prepare_civil_war
 
-		activation = {
-			always = no
-		}
+		allowed = { always = no } #activated by effect
+
 		available = {
-			hidden_trigger = { always = no }
-		}
-		cancel_trigger = {
 			NOT = { has_war_with = MAC }
 		}
 
+		is_good = no
 		selectable_mission = no
-		is_good = yes
 		days_mission_timeout = 90
 
 		timeout_effect = {
-			log = "[GetDateText] [Root.GetName]: decision SER_IMRO_reb_lull_phase"
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SER_IMRO_reb_lull_phase"
 			activate_mission = SER_IMRO_reb_action_phase
 			hidden_effect = {
 				country_event = { id = serbia.27 days = 2 }
@@ -252,22 +248,18 @@ SER_imro_decisions = {
 	SER_IMRO_reb_action_phase = {
 		icon = generic_prepare_civil_war
 
-		activation = {
-			always = no
-		}
+		allowed = { always = no } #activated by effect
+
 		available = {
-			hidden_trigger = { always = no }
-		}
-		cancel_trigger = {
 			NOT = { has_war_with = MAC }
 		}
 
+		is_good = no
 		selectable_mission = no
-		is_good = yes
 		days_mission_timeout = 90
 
 		timeout_effect = {
-			log = "[GetDateText] [Root.GetName]: decision SER_IMRO_reb_action_phase"
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SER_IMRO_reb_action_phase"
 			activate_mission = SER_IMRO_reb_lull_phase
 			activate_mission = SER_IMRO_lull_phase_rounds
 			hidden_effect = {
@@ -327,22 +319,18 @@ SER_imro_decisions = {
 	SER_IMRO_lull_phase_rounds = {
 		icon = generic_prepare_civil_war
 
-		activation = {
-			always = no
-		}
+		allowed = { always = no } #activated by effect
+
 		available = {
-			hidden_trigger = { always = no }
-		}
-		cancel_trigger = {
 			NOT = { has_war_with = MAC }
 		}
 
+		is_good = no
 		selectable_mission = no
-		is_good = yes
 		days_mission_timeout = 29
 
 		timeout_effect = {
-			log = "[GetDateText] [Root.GetName]: decision SER_IMRO_lull_phase_rounds"
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SER_IMRO_lull_phase_rounds"
 			custom_effect_tooltip = SER_lull_phase_result_tt
 			hidden_effect = {
 				if = {
@@ -424,7 +412,7 @@ SER_imro_decisions = {
 		cost = 0
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_IMRO_launch_offensive"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_IMRO_launch_offensive"
 			clr_global_flag = SER_imro_dont_attack
 			106 = {
 				custom_effect_tooltip = SER_IMRO_launch_offensive_tt
@@ -476,7 +464,7 @@ SER_imro_decisions = {
 		cost = 0
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_IMRO_lure_north"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_IMRO_lure_north"
 			custom_effect_tooltip = SER_IMRO_lure_north_tt
 			set_global_flag = { flag = IMRO_lured_north days = 180 value = 1 }
 		}
@@ -512,7 +500,7 @@ SER_imro_decisions = {
 		cost = 0
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_IMRO_lure_south"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_IMRO_lure_south"
 			custom_effect_tooltip = SER_IMRO_lure_south_tt
 			set_global_flag = { flag = IMRO_lured_south days = 180 value = 1 }
 		}
@@ -543,7 +531,7 @@ SER_imro_decisions = {
 		cost = 0
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_IMRO_spend_double_agent"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_IMRO_spend_double_agent"
 			set_country_flag = { flag = SER_ai_limit_double_agents days = 90 value = 1 }
 			add_to_variable = { SER_spent_double_agents = 1 }
 			custom_effect_tooltip = SER_IMRO_spend_double_agent_tt
@@ -556,170 +544,7 @@ SER_imro_decisions = {
 		}
 	}
 }
-SER_imro_decisions_for_imro = {
-	SER_IMRO_victory = {
-		icon = GFX_decision_eng_blackshirt_march
 
-		fire_only_once = yes
-
-		visible = {
-			has_war_with = SER
-		}
-		available = {
-			OR = {
-				AND = {
-					SER = { has_idea = SER_IMRO_rebellion }
-					106 = {
-						resistance > 99
-					}
-				}
-				AND = {
-					SER = { has_idea = SER_IMRO_rebellion }
-					controls_state = 106
-				}
-				AND = {
-					NOT = {
-						SER = { has_idea = SER_IMRO_rebellion }
-						has_war_with = SER
-					}
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		cost = 0
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_IMRO_victory"
-			SER_IMRO_disable_rebellion = yes
-			if = {
-				limit = {
-					SER = {
-						is_ai = no
-					}
-					BUL = {
-						is_ai = yes
-					}
-				}
-				SER = {
-					white_peace_with_ROOT = yes
-					country_event = serbia.31
-				}
-			}
-			else = {
-				set_cosmetic_tag = IMRO_state
-				SER = { country_event = serbia.310 }
-			}
-		}
-	}
-	SER_IMRO_open_conflict = {
-		icon = GFX_decision_eng_blackshirt_march
-
-
-		available = {
-			SER = {
-				any_enemy_country = { NOT = { tag = ROOT } }
-			}
-		}
-
-		visible = {
-			has_war_with = SER
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		cost = 0
-		fire_only_once = yes
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_IMRO_open_conflict"
-			SER_IMRO_disable_rebellion = yes
-			set_cosmetic_tag = IMRO_state
-			SER = { country_event = serbia.310 }
-		}
-	}
-	SER_IMRO_return_to_bulgaria = {
-		icon = GFX_decision_eng_blackshirt_march
-
-		fire_only_once = yes
-
-		visible = {
-			has_war = no
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		cost = 0
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_IMRO_return_to_bulgaria"
-			BUL = {
-				annex_country = { target = MAC transfer_troops = yes }
-			}
-		}
-	}
-	SER_IMRO_weapons_from_bulgaria = {
-		icon = generic_prepare_civil_war
-
-		activation = {
-			always = no
-		}
-		available = {
-			hidden_trigger = { always = no }
-		}
-		cancel_trigger = {
-			OR = {
-				NOT = { has_war_with = SER }
-				212 = {
-					NOT = {
-						has_dynamic_modifier = {
-							modifier = SER_IMRO_occupation_of_pirin
-						}
-					}
-				}
-			}
-		}
-
-		selectable_mission = no
-		is_good = yes
-		days_mission_timeout = 14
-
-		timeout_effect = {
-			log = "[GetDateText] [Root.GetName]: decision SER_IMRO_weapons_from_bulgaria"
-			BUL = {
-				send_equipment = {
-					equipment = infantry_equipment
-					amount = 50
-					target = MAC
-				}
-			}
-			if = {
-				limit = {
-					has_completed_focus = IMRO_appeal_for_aid
-				}
-				add_manpower = 200
-			}
-			if = {
-				limit = {
-					has_completed_focus = IMRO_establish_legal_system
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 25
-					producer = SER
-				}
-			}
-			activate_mission = SER_IMRO_weapons_from_bulgaria
-		}
-	}
-}
 SER_konspiracija_decisions = {
 	SER_swap_form_of_payment = {
 		icon = GFX_decision_generic_break_treaty
@@ -754,7 +579,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText] [Root.GetName]: decision SER_swap_form_of_payment"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_swap_form_of_payment"
 			set_country_flag = { flag = SER_ai_limit_payment_swaps days = 90 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -777,7 +602,7 @@ SER_konspiracija_decisions = {
 		days_re_enable = 30
 
 		available = {
-			national_populist < 1
+			national_populist < 0.95
 			custom_trigger_tooltip = {
 				tooltip = SER_does_not_go_over_kons_maximum_tt
 				OR = {
@@ -814,24 +639,12 @@ SER_konspiracija_decisions = {
 					national_populist > 0.1
 				}
 			}
+			#this flag does three things- it first prevents AI from spamming decisions one after another
+			##and it also prevents them from taking decisions while taking either focus SER_smoke_filled_room
+			###or having SER_prodanovic_assassination_fallout mission active, and the time in between the focus and mission
 			modifier = {
 				factor = 0
 				has_country_flag = SER_ai_insanity_check
-			}
-			# Some smarts
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_np
-					focus_progress = {
-						focus = SER_smoke_filled_room
-						progress > 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = SER_prodanovic_assassination_fallout
 			}
 		}
 
@@ -844,7 +657,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_support_resistance_in_nis"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_support_resistance_in_nis"
 			set_country_flag = { flag = SER_ai_insanity_check days = 20 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -890,7 +703,7 @@ SER_konspiracija_decisions = {
 		days_re_enable = 30
 
 		available = {
-			national_populist < 1
+			national_populist < 0.95
 			custom_trigger_tooltip = {
 				tooltip = SER_does_not_go_over_kons_maximum_tt
 				OR = {
@@ -920,6 +733,9 @@ SER_konspiracija_decisions = {
 					national_populist > 0.1
 				}
 			}
+			#this flag does three things- it first prevents AI from spamming decisions one after another
+			##and it also prevents them from taking decisions while taking either focus SER_smoke_filled_room
+			###or having SER_prodanovic_assassination_fallout mission active, and the time in between the focus and mission
 			modifier = {
 				factor = 0
 				has_country_flag = SER_ai_insanity_check
@@ -928,23 +744,8 @@ SER_konspiracija_decisions = {
 				factor = 0
 				AND = {
 					has_country_flag = SER_paying_with_pp
-					has_political_power > 100
+					has_political_power < 100
 				}
-			}
-			# Some smarts
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_np
-					focus_progress = {
-						focus = SER_smoke_filled_room
-						progress > 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = SER_prodanovic_assassination_fallout
 			}
 		}
 
@@ -957,7 +758,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_tap_chetnik_associations"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_tap_chetnik_associations"
 			set_country_flag = { flag = SER_ai_insanity_check days = 30 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -989,7 +790,7 @@ SER_konspiracija_decisions = {
 		days_re_enable = 30
 
 		available = {
-			national_populist < 1
+			national_populist < 0.95
 			custom_trigger_tooltip = {
 				tooltip = SER_does_not_go_over_kons_maximum_tt
 				OR = {
@@ -1019,6 +820,9 @@ SER_konspiracija_decisions = {
 					national_populist > 0.1
 				}
 			}
+			#this flag does three things- it first prevents AI from spamming decisions one after another
+			##and it also prevents them from taking decisions while taking either focus SER_smoke_filled_room
+			###or having SER_prodanovic_assassination_fallout mission active, and the time in between the focus and mission
 			modifier = {
 				factor = 0
 				has_country_flag = SER_ai_insanity_check
@@ -1027,23 +831,8 @@ SER_konspiracija_decisions = {
 				factor = 0
 				AND = {
 					has_country_flag = SER_paying_with_pp
-					has_political_power > 100
+					has_political_power < 100
 				}
-			}
-			# Some smarts
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_np
-					focus_progress = {
-						focus = SER_smoke_filled_room
-						progress > 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = SER_prodanovic_assassination_fallout
 			}
 		}
 
@@ -1056,7 +845,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_acquire_firearms"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_acquire_firearms"
 			set_country_flag = { flag = SER_ai_insanity_check days = 30 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -1092,7 +881,7 @@ SER_konspiracija_decisions = {
 		days_re_enable = 60
 
 		available = {
-			national_populist < 1
+			national_populist < 0.95
 			custom_trigger_tooltip = {
 				tooltip = SER_does_not_go_over_kons_maximum_tt
 				OR = {
@@ -1123,6 +912,9 @@ SER_konspiracija_decisions = {
 					national_populist > 0.1
 				}
 			}
+			#this flag does three things- it first prevents AI from spamming decisions one after another
+			##and it also prevents them from taking decisions while taking either focus SER_smoke_filled_room
+			###or having SER_prodanovic_assassination_fallout mission active, and the time in between the focus and mission
 			modifier = {
 				factor = 0
 				has_country_flag = SER_ai_insanity_check
@@ -1131,23 +923,8 @@ SER_konspiracija_decisions = {
 				factor = 0
 				AND = {
 					has_country_flag = SER_paying_with_pp
-					has_political_power > 100
+					has_political_power < 100
 				}
-			}
-			# Some smarts
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_np
-					focus_progress = {
-						focus = SER_smoke_filled_room
-						progress > 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = SER_prodanovic_assassination_fallout
 			}
 		}
 
@@ -1160,7 +937,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_reduce_war_scars"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_reduce_war_scars"
 			set_country_flag = { flag = SER_ai_insanity_check days = 30 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -1192,7 +969,7 @@ SER_konspiracija_decisions = {
 		days_re_enable = 60
 
 		available = {
-			national_populist < 1
+			national_populist < 0.95
 			custom_trigger_tooltip = {
 				tooltip = SER_does_not_go_over_kons_maximum_tt
 				OR = {
@@ -1223,6 +1000,9 @@ SER_konspiracija_decisions = {
 					national_populist > 0.1
 				}
 			}
+			#this flag does three things- it first prevents AI from spamming decisions one after another
+			##and it also prevents them from taking decisions while taking either focus SER_smoke_filled_room
+			###or having SER_prodanovic_assassination_fallout mission active, and the time in between the focus and mission
 			modifier = {
 				factor = 0
 				has_country_flag = SER_ai_insanity_check
@@ -1231,23 +1011,8 @@ SER_konspiracija_decisions = {
 				factor = 0
 				AND = {
 					has_country_flag = SER_paying_with_pp
-					has_political_power > 100
+					has_political_power < 100
 				}
-			}
-			# Some smarts
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_np
-					focus_progress = {
-						focus = SER_smoke_filled_room
-						progress > 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = SER_prodanovic_assassination_fallout
 			}
 		}
 
@@ -1260,7 +1025,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_acquire_artillery"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_acquire_artillery"
 			set_country_flag = { flag = SER_ai_insanity_check days = 30 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -1296,7 +1061,7 @@ SER_konspiracija_decisions = {
 		days_re_enable = 60
 
 		available = {
-			national_populist < 1
+			national_populist < 0.95
 			custom_trigger_tooltip = {
 				tooltip = SER_does_not_go_over_kons_maximum_tt
 				OR = {
@@ -1326,6 +1091,9 @@ SER_konspiracija_decisions = {
 					national_populist > 0.1
 				}
 			}
+			#this flag does three things- it first prevents AI from spamming decisions one after another
+			##and it also prevents them from taking decisions while taking either focus SER_smoke_filled_room
+			###or having SER_prodanovic_assassination_fallout mission active, and the time in between the focus and mission
 			modifier = {
 				factor = 0
 				has_country_flag = SER_ai_insanity_check
@@ -1334,23 +1102,8 @@ SER_konspiracija_decisions = {
 				factor = 0
 				AND = {
 					has_country_flag = SER_paying_with_pp
-					has_political_power > 100
+					has_political_power < 100
 				}
-			}
-			# Some smarts
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_np
-					focus_progress = {
-						focus = SER_smoke_filled_room
-						progress > 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = SER_prodanovic_assassination_fallout
 			}
 		}
 
@@ -1363,7 +1116,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_acquire_support_eq"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_acquire_support_eq"
 			set_country_flag = { flag = SER_ai_insanity_check days = 30 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -1405,7 +1158,7 @@ SER_konspiracija_decisions = {
 			NOT = {
 				has_idea = SER_treaty_of_wartholz
 			}
-			national_populist < 1
+			national_populist < 0.95
 			custom_trigger_tooltip = {
 				tooltip = SER_does_not_go_over_kons_maximum_tt
 				OR = {
@@ -1432,31 +1185,12 @@ SER_konspiracija_decisions = {
 					national_populist > 0.1
 				}
 			}
+			#this flag does three things- it first prevents AI from spamming decisions one after another
+			##and it also prevents them from taking decisions while taking either focus SER_smoke_filled_room
+			###or having SER_prodanovic_assassination_fallout mission active, and the time in between the focus and mission
 			modifier = {
 				factor = 0
 				has_country_flag = SER_ai_insanity_check
-			}
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_pp
-					has_political_power > 100
-				}
-			}
-			# Some smarts
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_np
-					focus_progress = {
-						focus = SER_smoke_filled_room
-						progress > 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = SER_prodanovic_assassination_fallout
 			}
 		}
 
@@ -1469,7 +1203,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_acquire_tanks"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_acquire_tanks"
 			set_country_flag = { flag = SER_ai_insanity_check days = 60 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -1511,7 +1245,7 @@ SER_konspiracija_decisions = {
 			NOT = {
 				has_idea = SER_treaty_of_wartholz
 			}
-			national_populist < 1
+			national_populist < 0.95
 			custom_trigger_tooltip = {
 				tooltip = SER_does_not_go_over_kons_maximum_tt
 				OR = {
@@ -1538,31 +1272,12 @@ SER_konspiracija_decisions = {
 					national_populist > 0.1
 				}
 			}
+			#this flag does three things- it first prevents AI from spamming decisions one after another
+			##and it also prevents them from taking decisions while taking either focus SER_smoke_filled_room
+			###or having SER_prodanovic_assassination_fallout mission active, and the time in between the focus and mission
 			modifier = {
 				factor = 0
 				has_country_flag = SER_ai_insanity_check
-			}
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_pp
-					has_political_power > 100
-				}
-			}
-			# Some smarts
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_np
-					focus_progress = {
-						focus = SER_smoke_filled_room
-						progress > 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = SER_prodanovic_assassination_fallout
 			}
 		}
 
@@ -1575,7 +1290,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_acquire_aircraft"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_acquire_aircraft"
 			set_country_flag = { flag = SER_ai_insanity_check days = 60 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -1618,7 +1333,7 @@ SER_konspiracija_decisions = {
 			NOT = {
 				has_idea = SER_treaty_of_wartholz
 			}
-			national_populist < 1
+			national_populist < 0.95
 			custom_trigger_tooltip = {
 				tooltip = SER_does_not_go_over_kons_maximum_tt
 				OR = {
@@ -1644,31 +1359,12 @@ SER_konspiracija_decisions = {
 					national_populist > 0.1
 				}
 			}
+			#this flag does three things- it first prevents AI from spamming decisions one after another
+			##and it also prevents them from taking decisions while taking either focus SER_smoke_filled_room
+			###or having SER_prodanovic_assassination_fallout mission active, and the time in between the focus and mission
 			modifier = {
 				factor = 0
 				has_country_flag = SER_ai_insanity_check
-			}
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_pp
-					has_political_power > 100
-				}
-			}
-			# Some smarts
-			modifier = {
-				factor = 0
-				AND = {
-					has_country_flag = SER_paying_with_np
-					focus_progress = {
-						focus = SER_smoke_filled_room
-						progress > 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = SER_prodanovic_assassination_fallout
 			}
 		}
 
@@ -1681,7 +1377,7 @@ SER_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_new_arsenals"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_new_arsenals"
 			set_country_flag = { flag = SER_ai_insanity_check days = 90 value = 1 }
 			if = {
 				limit = { has_country_flag = SER_paying_with_pp }
@@ -1828,6 +1524,164 @@ political_actions = {
 			log = "[GetDateText]: [Root.GetName]: Decision SER_ready_for_war target: [From.GetName]"
 			custom_effect_tooltip = SER_ready_for_war_tooltip
 			set_country_flag = SER_ready_to_attack
+		}
+	}
+	SER_IMRO_victory = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			OR = {
+				AND = {
+					SER = { has_idea = SER_IMRO_rebellion }
+					106 = {
+						resistance > 99
+					}
+				}
+				AND = {
+					SER = { has_idea = SER_IMRO_rebellion }
+					controls_state = 106
+				}
+				AND = {
+					NOT = {
+						SER = { has_idea = SER_IMRO_rebellion }
+						has_war_with = SER
+					}
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SER_IMRO_victory"
+			SER_IMRO_disable_rebellion = yes
+			if = {
+				limit = {
+					SER = {
+						is_ai = no
+					}
+					BUL = {
+						is_ai = yes
+					}
+				}
+				SER = {
+					white_peace_with_ROOT = yes
+					country_event = serbia.31
+				}
+			}
+			else = {
+				set_cosmetic_tag = IMRO_state
+				SER = { country_event = serbia.310 }
+			}
+		}
+	}
+
+	### IMRO decisions ###
+	SER_IMRO_open_conflict = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			check_variable = { SER.enemies^num > 1 }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SER_IMRO_open_conflict"
+			SER_IMRO_disable_rebellion = yes
+			set_cosmetic_tag = IMRO_state
+			SER = { country_event = serbia.310 }
+		}
+	}
+	SER_IMRO_return_to_bulgaria = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = { always = no } #activated by effect
+
+		visible = {
+			has_war = no
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SER_IMRO_return_to_bulgaria"
+			BUL = {
+				annex_country = { target = MAC transfer_troops = yes }
+			}
+		}
+	}
+	SER_IMRO_weapons_from_bulgaria = {
+		icon = generic_prepare_civil_war
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		cancel_trigger = {
+			OR = {
+				NOT = { has_war_with = SER }
+				212 = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = SER_IMRO_occupation_of_pirin
+						}
+					}
+				}
+			}
+		}
+
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 14
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SER_IMRO_weapons_from_bulgaria"
+			BUL = {
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 50
+					target = MAC
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = IMRO_appeal_for_aid
+				}
+				add_manpower = 200
+			}
+			if = {
+				limit = {
+					has_completed_focus = IMRO_establish_legal_system
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 25
+					producer = SER
+				}
+			}
+			activate_mission = SER_IMRO_weapons_from_bulgaria
 		}
 	}
 }
@@ -2362,14 +2216,14 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SER_YUG_Topple_Tyrants target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_YUG_Topple_Tyrants_2 target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SER_YUG_Topple_Tyrants target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SER_YUG_Topple_Tyrants_2 target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			declare_war_on = {
 				target = FROM
@@ -2432,14 +2286,14 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SER_YUG_Topple_Tyrants target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_YUG_Spread_Socialism target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SER_YUG_Topple_Tyrants target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SER_YUG_Spread_Socialism target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			declare_war_on = {
 				target = FROM
@@ -2521,19 +2375,19 @@ foreign_politics = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled SER_Southern_Expansion target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancelled SER_YUG_Southern_Expansion target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SER_Southern_Expansion target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_YUG_Southern_Expansion target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SER_Southern_Expansion target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SER_YUG_Southern_Expansion target: [From.GetName]"
 			declare_war_on = {
 				target = FROM
 				type = annex_everything
@@ -3276,6 +3130,14 @@ SER_The_Road_To_Unification_decisions = {
 					is_core_of = ROOT
 				}
 			}
+			if = {
+				limit = {
+					FROM = {
+						state = 488
+					}
+				}
+				has_left_democratic_government = yes
+			}
 			SER_has_founded_yugoslavia = yes
 		}
 
@@ -3293,7 +3155,7 @@ SER_The_Road_To_Unification_decisions = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 45 102 103 736 875 }
+		targets = { 45 102 103 736 875 488 }
 		target_root_trigger = { has_completed_focus = SER_Together_Against_Austria }
 		target_trigger = {
 			FROM = {
@@ -3722,7 +3584,15 @@ SER_The_Road_To_Unification_decisions = {
 					}
 					has_dictatorship_government = yes
 				}
-				set_cosmetic_tag = YUG_mon
+				if = {
+					limit = {
+						has_country_leader = { ruling_only = yes name = "Milan Stojadinović" }
+					}
+					set_cosmetic_tag = YUG_rep
+				}
+				else = {
+					set_cosmetic_tag = YUG_mon
+				}
 				set_country_flag = YUG_integral_yugoslavia_formed
 				complete_national_focus = SER_YUG_integral_yugoslavia
 				set_party_name = {
@@ -3787,6 +3657,15 @@ SER_The_Road_To_Unification_decisions = {
 				complete_national_focus = SER_YUG_balkan_federalism
 			}
 			else = {
+				if = { #telling republican path players that they will get this YUG if they have over 15% national_populist popularity
+					limit = {
+						OR = {
+							has_government = social_democrat
+							has_government = social_liberal
+						}
+					}
+					custom_effect_tooltip = SER_YUG_republican_gets_three_named_nation
+				}
 				set_cosmetic_tag = YUG_rep
 				set_country_flag = YUG_three_named_nation_formed
 				complete_national_focus = SER_YUG_three_named_nation
@@ -3922,7 +3801,7 @@ SER_contain_konspiracija_decisions = {
 		days_mission_timeout = 120
 
 		timeout_effect = {
-			log = "[GetDateText] [Root.GetName]: decision SER_prodanovic_assassination_fallout"
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SER_prodanovic_assassination_fallout"
 			set_country_flag = SER_enshrined_konspiracija_control_flag # cannot take anti Konspiracija foci, minimum 11% natpop
 			if = {
 				limit = { has_idea = SER_ideologically_charged_army }
@@ -3958,7 +3837,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_prodanovic_blame_konspiracija"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_prodanovic_blame_konspiracija"
 			effect_tooltip = {
 				add_popularity = {
 					ideology = national_populist
@@ -3999,7 +3878,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_prodanovic_other_clue_1"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SER_prodanovic_other_clue_1"
 			subtract_from_variable = { SER_prodanovic_natpop_loss = 0.02 }
 			custom_effect_tooltip = SER_prodanovic_assassination_gain_clue_tt
 		}
@@ -4020,7 +3899,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_prodanovic_other_clue_2"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SER_prodanovic_other_clue_2"
 			subtract_from_variable = { SER_prodanovic_natpop_loss = 0.02 }
 			custom_effect_tooltip = SER_prodanovic_assassination_gain_clue_tt
 		}
@@ -4044,7 +3923,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_prodanovic_clue_1"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SER_prodanovic_clue_1"
 			random_list = {
 				90 = {
 					subtract_from_variable = { SER_prodanovic_natpop_loss = 0.02 }
@@ -4077,7 +3956,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_prodanovic_clue_2"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SER_prodanovic_clue_2"
 			random_list = {
 				75 = {
 					subtract_from_variable = { SER_prodanovic_natpop_loss = 0.02 }
@@ -4110,7 +3989,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_prodanovic_clue_3"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SER_prodanovic_clue_3"
 			random_list = {
 				65 = {
 					subtract_from_variable = { SER_prodanovic_natpop_loss = 0.03 }
@@ -4143,7 +4022,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_prodanovic_clue_4"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SER_prodanovic_clue_4"
 			random_list = {
 				50 = {
 					subtract_from_variable = { SER_prodanovic_natpop_loss = 0.03 }
@@ -4182,7 +4061,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_remove_nedic"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_remove_nedic"
 			hidden_effect = {
 				random_unit_leader = {
 					limit = {
@@ -4237,7 +4116,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_remove_ilic"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_remove_ilic"
 			hidden_effect = {
 				random_unit_leader = {
 					limit = {
@@ -4292,7 +4171,7 @@ SER_contain_konspiracija_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision SER_remove_vukcevic"
+			log = "[GetDateText]: [Root.GetName]: Decision SER_remove_vukcevic"
 			hidden_effect = {
 				random_unit_leader = {
 					limit = {
@@ -4499,7 +4378,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		days_mission_timeout = 90
 
 		timeout_effect = {
-			log = "[GetDateText] [Root.GetName]: decision YUG_rounds_system_mission"
+			log = "[GetDateText]: [Root.GetName]: Decision timeout YUG_rounds_system_mission"
 			YUG_refresh_yugoslavia_minigame = yes
 		}
 	}
@@ -4531,7 +4410,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_serbia_expenditure_0"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_serbia_expenditure_0"
 			custom_effect_tooltip = YUG_patronage_spending_SER
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
@@ -4569,7 +4448,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_serbia_expenditure_1"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_serbia_expenditure_1"
 			custom_effect_tooltip = YUG_patronage_spending_SER
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
@@ -4607,7 +4486,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_serbia_expenditure_2"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_serbia_expenditure_2"
 			custom_effect_tooltip = YUG_patronage_spending_SER
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
@@ -4645,7 +4524,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_serbia_expenditure_3"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_serbia_expenditure_3"
 			custom_effect_tooltip = YUG_patronage_spending_SER
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
@@ -4683,7 +4562,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_serbia_expenditure_4"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_serbia_expenditure_4"
 			custom_effect_tooltip = YUG_patronage_spending_SER
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
@@ -4737,7 +4616,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_croatia_expenditure_0"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_croatia_expenditure_0"
 			custom_effect_tooltip = YUG_patronage_spending_CRO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
@@ -4775,7 +4654,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_croatia_expenditure_1"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_croatia_expenditure_1"
 			custom_effect_tooltip = YUG_patronage_spending_CRO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
@@ -4813,7 +4692,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_croatia_expenditure_2"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_croatia_expenditure_2"
 			custom_effect_tooltip = YUG_patronage_spending_CRO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
@@ -4851,7 +4730,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_croatia_expenditure_3"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_croatia_expenditure_3"
 			custom_effect_tooltip = YUG_patronage_spending_CRO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
@@ -4889,7 +4768,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_croatia_expenditure_4"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_croatia_expenditure_4"
 			custom_effect_tooltip = YUG_patronage_spending_CRO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
@@ -4943,7 +4822,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_bosnia_expenditure_0"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_bosnia_expenditure_0"
 			custom_effect_tooltip = YUG_patronage_spending_BOS
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
@@ -4981,7 +4860,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_bosnia_expenditure_1"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_bosnia_expenditure_1"
 			custom_effect_tooltip = YUG_patronage_spending_BOS
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
@@ -5019,7 +4898,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_bosnia_expenditure_2"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_bosnia_expenditure_2"
 			custom_effect_tooltip = YUG_patronage_spending_BOS
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
@@ -5057,7 +4936,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_bosnia_expenditure_3"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_bosnia_expenditure_3"
 			custom_effect_tooltip = YUG_patronage_spending_BOS
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
@@ -5095,7 +4974,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_bosnia_expenditure_4"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_bosnia_expenditure_4"
 			custom_effect_tooltip = YUG_patronage_spending_BOS
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
@@ -5149,7 +5028,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_slovenia_expenditure_0"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_slovenia_expenditure_0"
 			custom_effect_tooltip = YUG_patronage_spending_SLO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
@@ -5187,7 +5066,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_slovenia_expenditure_1"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_slovenia_expenditure_1"
 			custom_effect_tooltip = YUG_patronage_spending_SLO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
@@ -5225,7 +5104,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_slovenia_expenditure_2"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_slovenia_expenditure_2"
 			custom_effect_tooltip = YUG_patronage_spending_SLO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
@@ -5263,7 +5142,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_slovenia_expenditure_3"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_slovenia_expenditure_3"
 			custom_effect_tooltip = YUG_patronage_spending_SLO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
@@ -5301,7 +5180,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_slovenia_expenditure_4"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_slovenia_expenditure_4"
 			custom_effect_tooltip = YUG_patronage_spending_SLO
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
@@ -5355,7 +5234,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_other_expenditure_0"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_other_expenditure_0"
 			custom_effect_tooltip = YUG_patronage_spending_OTH
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_other = 1 }
@@ -5393,7 +5272,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_other_expenditure_1"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_other_expenditure_1"
 			custom_effect_tooltip = YUG_patronage_spending_OTH
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_other = 1 }
@@ -5431,7 +5310,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_other_expenditure_2"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_other_expenditure_2"
 			custom_effect_tooltip = YUG_patronage_spending_OTH
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_other = 1 }
@@ -5469,7 +5348,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_other_expenditure_3"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_other_expenditure_3"
 			custom_effect_tooltip = YUG_patronage_spending_OTH
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_other = 1 }
@@ -5507,7 +5386,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: decision YUG_other_expenditure_4"
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_other_expenditure_4"
 			custom_effect_tooltip = YUG_patronage_spending_OTH
 			subtract_from_variable = { YUG_political_capital = 1 }
 			add_to_variable = { YUG_pc_expenditure_other = 1 }

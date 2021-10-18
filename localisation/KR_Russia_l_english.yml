@@ -666,7 +666,7 @@
  russia.3.t:0 "Payment of the Brest-Litovsk Reparations"
  russia.3.d:0 "During the Berlin Conference in November 1935, the Germans forced us to repay the remaining part of the Weltkrieg war indemnities (agreed upon in the Brest-Litovsk treaty in 1918) one year earlier than expected, which has put the government in a delicate position. The current budget for 1936 is already stretched to a bare minimum, and if we are to pay the accursed Teutons, the cabinet sees no other alternative than to impose harsh austerity measures. The cuts in government spending will be most harshly felt in the social services sector and in the many homes of invalided war veterans depending on the state's support. Our citizens were already disgruntled and dissatisfied with the incumbent coalition of Kadets and Socialist Revolutionaries united under the even more unpopular presidency of Aleksandr Kerenskiy, and it is feared that these austerity measures will bring still more extreme political groupings unto the political scene."
  russia.3.a:0 "We must increase austerity measures."
- russia.3.d.socdem:0 "During the Berlin Conference in November 1935, the Germans forced us to repay the remaining part of the Weltkrieg war indemnities (agreed upon in the Brest-Litovsk treaty in 1918) one year earlier than expected, which has put the government in a delicate position. The current budget for 1936 is already stretched to a bare minimum, and if we are to pay the accursed Teutons, the cabinet sees no other alternative than increasing property taxes. Even if the increase in taxes will primarily anger the bourgeoisie, the other cuts in government spending will be most harshly felt in the social services sector and in the many homes of invalided war veterans depending on the state's support. Our citizens were already disgruntled and dissatisfied with the incumbent coalition of Kadets, the Socialist Revolutionaries united under the even more unpopular presidency of Aleksandr Kerenskiy, and it is feared that these measures will bring still more extreme political groupings unto the political scene."
+ russia.3.d.socdem:0 "During the Berlin Conference in November 1935, the Germans forced us to repay the remaining part of the Weltkrieg war indemnities (agreed upon in the Brest-Litovsk treaty in 1918) one year earlier than expected, which has put the government in a delicate position. The current budget for 1936 is already stretched to a bare minimum, and if we are to pay the accursed Teutons, the cabinet sees no other alternative than increasing property taxes. Even if the increase in taxes will primarily anger the bourgeois, the other cuts in government spending will be most harshly felt in the social services sector and in the many homes of invalided war veterans depending on the state's support. Our citizens were already disgruntled and dissatisfied with the incumbent coalition of Kadets, the Socialist Revolutionaries united under the even more unpopular presidency of Aleksandr Kerenskiy, and it is feared that these measures will bring still more extreme political groupings unto the political scene."
  russia.3.b:0 "The rich will pay!"
 
  russia.4.t:0 "Payment of the Brest-Litovsk Reparations"
@@ -779,7 +779,7 @@
  russia.183.d:0 "The Military led by the Field marshals Vrangel and Denikin has now firmly established its rule in Russia, the legacy of the Whites live on and once again they rise to protect the Motherland from internal and external threats. With them Russia has nothing to fear."
  russia.183.a:0 "Hurrah!"
 
- russia.19.t:0 "[GetLeader] Appoints a Prime Minister"
+ russia.19.t:0 "[ROOT.GetLeader] Appoints a Prime Minister"
  russia.19.d:0 "With the restoration of the Russian Tsardom, it is now time for the new tsar to set out his political agenda and appoint a prime minister."
  russia.19.a:0 "Vladimir Purishkevich and the Union of the Russian People."
  russia.19.b:0 "Anton Denikin, from the army corps."
@@ -1165,7 +1165,7 @@
  rusd.121.a:0 "Excellent!"
 
  rusd.122.t:0 "The Kurchatov Petition"
- rusd.122.d:0 "Particle physicists have achieved many breakthroughs in Russia in the 1930s. Spearheaded by scientists such as Igor Kurchatov, Abram Alikhanov, Georgiy Flyorov and others, our experimental research institutes have formed a sound theory on the potential held by nuclear fission. They were not the only ones, however. It is no mystery that nuclear physicists in Germany and the Third Internationale have been delving into the potential of nuclear power as well, and all of them have come to the same conclusion - that it can be weaponised.\n\nIgor Kurchatov and several other Russian nuclear physicists have collectively signed a petition and presented it to [Root.GetLeader], where they have rung alarm bells. Kurchatov informs that foreign scientific journals have ceased any and all publications about nuclear research, even the most mundane reports, which can only mean that it has become confidential information and Russia's enemies must be actively developing nuclear armament. The only answer is to create a dedicated Russian nuclear weapons program - a request which Kurchatov and his peers have been granted. Under [Root.GetLeader]'s personal orders, new facilities have been opened deep in Central Siberia for the RDS-1 project - "Reaktivny Spetsialny Dvigatel" (Reactive Special Engine), which shall recruit Russia's brightest to develop a weapon with the power to manifest Apocalypse on Earth."
+ rusd.122.d:0 "Particle physicists have achieved many breakthroughs in Russia in the 1930s. Spearheaded by scientists such as Igor Kurchatov, Abram Alikhanov, Georgiy Flyorov and others, our experimental research institutes have formed a sound theory on the potential held by nuclear fission. They were not the only ones, however. It is no secret that nuclear physicists in Germany and the Third Internationale have been delving into the potential of nuclear power as well, and all of them have come to the same conclusion - that it can be weaponised.\n\nIgor Kurchatov and several other Russian nuclear physicists have collectively signed a petition and presented it to [Root.GetLeader], where they have rung alarm bells. Kurchatov informs that foreign scientific journals have ceased any and all publications about nuclear research, even the most mundane reports, which can only mean that it has become confidential information and Russia's enemies must be actively developing nuclear armament. The only answer is to create a dedicated Russian nuclear weapons program - a request which Kurchatov and his peers have been granted. Under [Root.GetLeader]'s personal orders, new facilities have been opened deep in Central Siberia for the RDS-1 project - "Reaktivny Spetsialny Dvigatel" (Reactive Special Engine), which shall recruit Russia's brightest to develop a weapon with the power to manifest Apocalypse on Earth."
  rusd.122.a:0 "Russia shall wield this superweapon."
 
  rusd.123.t:0 "NRPR and the Civil War"
@@ -1451,14 +1451,29 @@
  rusfor.52.t:0 "Russia Offers Us an Alliance"
  rusfor.52.d:0 "We've received a request today from [From.Capital.GetName] itself, they wish to invite us into a mutually beneficial military alliance. While [From.GetNameDef] certainly needs all the help it can get in these uncertain times we should also contemplate the risk of being brought into unwanted entanglements with other nations. How should we respond?"
  rusfor.52.a:0 "We accept."
- rusfor.52.b:0 "Russia is not to be trusted."
+ rusfor.52.b:0 "We want the return of our claims in exchange."
+ rusfor.52.c:0 "Russia should not be trusted."
 
- rusfor.53.t.accept:0 "[From.GetNameDefCap] Has Accepted!"
- rusfor.53.t.refuse:0 "[From.GetNameDefCap] Has Refused!"
- rusfor.53.d.accept:0 "[From.GetNameDefCap] has rightfully agreed to join our alliance and has pledged to help us in our wars in exchange for protection. This should show the world that not all are unwilling too work with the Russian Bear!"
- rusfor.53.d.refuse:0 "[From.GetNameDefCap] has outrageously refused our request to form an alliance, if they will not come to the discussion table then war seems like the only solution to this problem. For now we will wait but mark our words, Russia will return!"
+ rusfor.53.t:0 "[From.GetNameDefCap] Has Accepted!"
+ rusfor.53.d:0 "[From.GetNameDefCap] has rightfully agreed to join our alliance and has pledged to help us in our wars in exchange for protection. This should show the world that not all are unwilling too work with the Russian Bear!"
  rusfor.53.a:0 "Excellent!"
- rusfor.53.b:0 "Their loss."
+
+ rusfor.54.t:0 "[From.GetNameDefCap] Desires the Return of their Lands"
+ rusfor.54.d:0 "[From.GetNameDefCap] has requested the transfer of any of their core lands currently held by Russia in exchange for their entry into the Moscow Accord. While accepting their request could strengthen our international position, the steep cost of giving away Russian land has caused opposition within our government who want to reject [From.GetNameDefCap]'s request for Russian land."
+ rusfor.54.a:0 "It's a worthy price."
+ rusfor.54.b:0 "These are rightful Russian lands!"
+
+ rusfor.55.t:0 "[From.GetNameDefCap] Accepts"
+ rusfor.55.d:0 "[Root.GetAdjective] diplomacy has proven to be successful today as [From.GetNameDefCap] has agreed to return our core lands in exchange for our entry into the Moscow Accord. [From.GetNameDefCap] has shown that it is a true friend of [Root.GetName] and we look forward to further cooperation in the years to come."
+ rusfor.55.a:0 "Magnificent!"
+
+ rusfor.56.t:0 "[From.GetNameDefCap] Refuses"
+ rusfor.56.d:0 "[From.GetNameDefCap] has shown its true colours as an enemy of [Root.GetName] and has refused to return our rightful land. There is no doubt now that diplomacy is impossible with the Russian bear and only war will be able to solve our issues."
+ rusfor.56.a:0 "As expected."
+
+ rusfor.57.t:0 "[From.GetNameDefCap] Has Refused!"
+ rusfor.57.d:0 "[From.GetNameDefCap] has outrageously refused our request to form an alliance, if they will not come to the discussion table then war seems like the only solution to this problem. For now we will wait but mark our words, Russia will return!"
+ rusfor.57.b:0 "Their loss."
 
  rusfor.1066.t:0 "Russia Demands Azerbaijan"
  rusfor.1066.d:0 "The bold Russians are trying to expand their influence in the Caucasus and it seems we are their new target. They have sent a demand - we must return them Azerbaijan, as well as any other controlled parts of the Caucasus, or face war with [FROM.GetNameDef]. How should we respond to this grave insult?"
@@ -1655,7 +1670,7 @@
  russianews.0.t:0 "Assassination of President Kerenskiy"
  russianews.0.d:0 "Kerenskiy has just been shot and killed while on the way to the Senate! The assailant was taken down by the police, but the goals and intentions of the attacker are unknown. Despite his massive unpopularity among the Russian people due to botched land reform and ineffective rule, Kerenskiy was nevertheless able to hold the country together for years, and his death has thrown Russia into chaos. The Senators are already discussing a possible replacement to Kerenskiy, new coalitions are being formed, both between the left and the right, while military men like Vrangel and Kornilov are just one step away from intervening to dissolve democracy and 'save Mother Russia'..."
  russianews.0.a:0 "How barbaric!"
- 
+
  russianews.1.t:0 "Rise of the Vozhd"
  russianews.1.d:0 "A few days ago, Lavr Kornilov, Supreme Commander-in-chief and President of Russia, passed away in his sleep. With Kornilov’s death, Prime Minister Boris Savinkov, appointed by Kornilov, used his power in the government to merge the post of Prime Minister and President, becoming the first Vozhd of Russia. Savinkov and his ‘National Republican Party of Russia’ (NRPR) had been growing in influence in Russia long before Kerenskiy’s death. The NRPR and Savinkov have promised to free Russia from the chains of the Treaty of Brest-Litovsk and bring the Russian people to their former glory. It is unclear how his plans will unfold, however, one thing is clear - Boris Savinkov is now the undisputed leader of the new Russian State."
  russianews.1.a:0 "Disturbing news."

@@ -2854,7 +2854,7 @@ country_event = { # Pacific Movement of the Eastern World Uncovered
 	}
 
 	immediate = {
-		country_event = {id = pacificstates.65 days = 25 random = 240}
+		country_event = { id = pacificstates.65 days = 25 random = 240 }
 	}
 
 	option = { # Flavor
@@ -3951,6 +3951,7 @@ country_event = { #PSA becomes the USA
 
 country_event = { #Chien-Shiung Wu hidden event
 	id = pacificstates.20600
+	immediate = { log = "[GetDateText]: [Root.GetName]: event pacificstates.20600 FROM = [From.GetName]" }
 
 	hidden = yes
 	fire_only_once = yes

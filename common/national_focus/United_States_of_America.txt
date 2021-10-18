@@ -49,13 +49,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_reintroduce_gwbill"
-			custom_effect_tooltip = USA_gwbill_vote_occurs
-			hidden_effect = {
-				random_other_country = {
-					limit = { is_ai = yes }
-					country_event = ustates.506
-				}
-			}
+			country_event = ustates.506
 		}
 	}
 
@@ -3126,6 +3120,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus USA_screaming_eagles"
+			custom_effect_tooltip = tech_better_paratroopers_effect
+			hidden_effect = {
+				set_technology = { tech_better_paratroopers = 1 popup = no }
+			}
 			if = {
 				limit = { NOT = { has_tech = paratroopers } }
 				set_technology = { paratroopers = 1 }
@@ -4800,7 +4798,7 @@ focus_tree = {
 				name = "Alfred M. Pride"
 				desc = "USA_ALFRED_PRIDE_NAVY_DESC"
 				portrait_path = "gfx/leaders/USA/Portrait_USA_alfred_pride.png"
-				traits = {air_controller}
+				traits = { air_controller }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1
@@ -4812,7 +4810,7 @@ focus_tree = {
 				name = "Daniel E. Barbey"
 				desc = "USA_DANIEL_BARBEY_NAVY_DESC"
 				portrait_path = "gfx/leaders/PSA/Portrait_PSA_daniel_barbey.png"
-				traits = {fleet_protector navy_career_officer}
+				traits = { fleet_protector navy_career_officer }
 				skill = 2
 				attack_skill = 2
 				defense_skill = 1

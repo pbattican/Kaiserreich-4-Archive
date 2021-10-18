@@ -1832,8 +1832,8 @@
 
 ### Head of Government ###
  CAF_Elie_Bloncourt_hog_syn:0 "Élie Bloncourt"
+ CAF_Hegesippe_Jean_Legitimus_hog_rso:0 "Hégésippe Jean Légitimus"
  CAF_Yva_Lero_hog_rso:0 "Yva Léro"
- CAF_Hegesippe_Jean_Legitimus_hog_sde:0 "Hégésippe Jean Légitimus"
  CAF_Henry_Lemery_hog_sli:0 "Henry Lémery"
  CAF_Gordon_James_Lethem_hog_mli:0 "Gordon James Lethem"
  CAF_Edward_Brandis_Denham_hog_sco:0 "Edward Brandis Denham"
@@ -1842,8 +1842,8 @@
 ### Person of Influence ###
 ## Foreign Minister
  CAF_Albert_Gomes_for_syn:0 "Albert Gomes"
+ CAF_Norman_Manley_for_rso:0 "Norman Manley"
  CAF_Rene_Menil_for_rso:0 "René Ménil"
- CAF_Norman_Manley_for_sde:0 "Norman Manley"
  CAF_Alexander_Bustamante_for_sli:0 "Alexander Bustamante"
  CAF_Bede_Clifford_for_mli:0 "Bede Clifford"
  CAF_Douglas_James_Jardine_for_sco:0 "Douglas James Jardine"
@@ -1851,7 +1851,7 @@
 ## Economy Minister
  CAF_Hubert_Nathaniel_Critchlow_eco_syn:0 "Hubert Nathaniel Critchlow"
  CAF_Amedee_Fengarol_eco_rso:0 "Amédée Fengarol"
- CAF_Joseph_Lagrosilliere_eco_sde:0 "Joseph Lagrosillière"
+ CAF_Joseph_Lagrosilliere_eco_rso:0 "Joseph Lagrosillière"
  CAF_Donald_Sangster_eco_sli:0 "Donald Sangster"
  CAF_Charles_Dundas_eco_mli:0 "Charles Dundas"
  CAF_Mark_Aitchison_Young_eco_sco:0 "Mark Aitchison Young"
@@ -1859,7 +1859,7 @@
 ## Security Minister
  CAF_Gerty_Archimede_sec_syn:0 "Gerty Archimede"
  CAF_Arthur_Andrew_Cipriani_sec_rso:0 "Arthur Andrew Cipriani"
- CAF_Osmond_Theodore_Fairclough_sec_sde:0 "Osmond Theodore Fairclough"
+ CAF_Osmond_Theodore_Fairclough_sec_rso:0 "Osmond Theodore Fairclough"
  CAF_Gaston_Monnerville_sec_sli:0 "Gaston Monnerville"
  CAF_Abraham_Elias_Issa_sec_mli:0 "Abraham Elias Issa"
  CAF_Robert_Arundell_sec_sco:0 "Robert Arundell"
@@ -7879,76 +7879,6 @@
  LOM_Franco_Lanfredi_cair:0 "Franco Lanfredi"
 
  ####################################################################################################
- ### LUX
- ####################################################################################################
-
-### Head of Government ###
- LUX_Paul_Medinger_hog_syn:0 "Paul Medinger"
- LUX_Martin_Karp_hog_rso:0 "Martin Karp"
- LUX_Rene_Blum_hog_sde:0 "René Blum"
- LUX_Joseph_Bech_hog_sco:0 "Joseph Bech"
- LUX_Pierre_Dupong_hog_sco:0 "Pierre Dupong"
- LUX_Guillaume_Soisson_hog_ade:0 "Guillaume Soisson"
- LUX_Damian_Kratzenberg_hog_pau:0 "Damian Kratzenberg"
-
-### Person of Influence ###
-## Foreign Minister
- LUX_Paul_Medinger_for_syn:0 "Paul Medinger"
- LUX_Francois_Schammel_for_rso:0 "Francois Schammel"
- LUX_Pierre_Krier_for_sde:0 "Pierre Krier"
- LUX_Rene_Blum_for_sde:0 "René Blum"
- LUX_Joseph_Bech_for_sco:0 "Joseph Bech"
- LUX_Henri_Ahnen_for_ade:0 "Henri Ahnen"
- LUX_Damian_Kratzenberg_for_pau:0 "Damian Kratzenberg"
-## Economy Minister
- LUX_Martin_Karp_eco_syn:0 "Martin Karp"
- LUX_Jean_Pierre_Kauder_eco_rso:0 "Jean Pierre Kauder"
- LUX_Alex_Federspiel_eco_sde:0 "Alex Federspiel"
- LUX_Pierre_Krier_eco_sde:0 "Pierre Krier"
- LUX_Auguste_Oster_eco_sco:0 "Auguste Oster"
- LUX_Jules_Keiffer_eco_sco:0 "Jules Keiffer"
- LUX_Pierre_Dupong_eco_sco:0 "Pierre Dupong"
- LUX_Philip_Hoffmann_eco_ade:0 "Philip Hoffmann"
- LUX_Gustave_Farver_eco_pau:0 "Gustave Farver"
-## Security Minister
- LUX_Jean_Pierre_Kauder_sec_syn:0 "Jean Pierre Kauder"
- LUX_Michel_Hansen_sec_rso:0 "Michel Hansen"
- LUX_Joseph_Goedert_sec_sde:0 "Joseph Goedert"
- LUX_Rene_Blum_sec_sde:0 "René Blum"
- LUX_Eugene_Schaus_sec_sli:0 "Eugene Schaus"
- LUX_Etienne_Schmit_sec_sco:0 "Etienne Schmit"
- LUX_Joseph_Bech_sec_sco:0 "Joseph Bech"
- LUX_Nicolas_Braunshausen_sec_sco:0 "Nicolas Braunshausen"
- LUX_Norbert_Dumont_sec_sco:0 "Norbert Dumont"
- LUX_Robert_Als_sec_sco:0 "Robert Als"
- LUX_Victor_Bodson_sec_sco:0 "Victor Bodson"
- LUX_Max_Simon_sec_pau:0 "Max Simon"
-
-### Chief of Staff ###
- LUX_Martin_Karp_cos_syn:0 "Martin Karp"
- LUX_Alex_Federspiel_cos_sde:0 "Alex Federspiel"
- LUX_Francois_Schammel_cos_sde:0 "Francois Schammel"
- LUX_Jean_Seurlis_cos_sco:0 "Jean Seurlis"
- LUX_Pierre_Dupong_cos_sco:0 "Pierre Dupong"
- LUX_Aloyse_Glodt_cos_pau:0 "Aloyse Glodt"
-
-### Chief of Army ###
- LUX_Martin_Karp_carm_syn:0 "Martin Karp"
- LUX_Emile_Speller_carm_sco:0 "Emile Speller"
- LUX_Felix_Bourbon_Parma_carm_sco:0 "Felix Bourbon-Parma"
- LUX_Aloyse_Glodt_carm_pau:0 "Aloyse Glodt"
-
-### Chief of Navy ###
- LUX_Paul_Medinger_cnav_syn:0 "Paul Medinger"
- LUX_Emile_Speller_cnav_sco:0 "Emile Speller"
- LUX_Pierre_Fischbach_cnav_sco:0 "Pierre Fischbach"
-
-### Chief of Air Force ###
- LUX_Jean_Marc_Steffen_cair_rso:0 "Jean Marc Steffen"
- LUX_Nicholas_Diedrich_cair_sco:0 "Nicholas Diedrich"
- LUX_Guillaume_Soisson_cair_pau:0 "Guillaume Soisson"
-
- ####################################################################################################
  ### MAF
  ####################################################################################################
 
@@ -8845,7 +8775,6 @@
  NFA_Bernard_Serrigny_cos_ade:0 "Bernard Serrigny"
  NFA_Charles_Huntzinger_cos_ade:0 "Charles Huntzinger"
  NFA_Eugene_Bridoux_cos_ade:0 "Eugène Bridoux"
- NFA_Francois_Darlan_cos_ade:0 "François Darlan"
  NFA_Henri_Albert_Niessel_cos_ade:0 "Henri Albert Niessel"
  NFA_Henri_Dentz_cos_ade:0 "Henri Dentz"
  NFA_Jean_de_Lattre_de_Tassigny_cos_ade:0 "Jean de Lattre de Tassigny"
@@ -8867,7 +8796,6 @@
 ### Chief of Navy ###
  NFA_Francois_Carre_de_Lusancay_cnav_sli:0 "François Carré de Lusançay"
  NFA_Louis_Finet_cnav_sli:0 "Louis Finet"
- NFA_Francois_Darlan_cnav_ade:0 "François Darlan"
  NFA_Georges_Thierry_d'Argenlieu_cnav_ade:0 "Georges Thierry d'Argenlieu"
  NFA_Jean_Esteva_cnav_ade:0 "Jean Esteva"
  NFA_Jean_Marie_Abrial_cnav_ade:0 "Jean Marie Abrial"
