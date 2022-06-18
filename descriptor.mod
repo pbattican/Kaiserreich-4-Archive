@@ -53,6 +53,7 @@ replace_path="history/units"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
 replace_path="portraits"
+replace_path="tests"
 tags={
 	"Alternative History"
 	"Events"
@@ -60,7 +61,7 @@ tags={
 	"Gameplay"
 }
 picture="KR.jpg"
-version="0.20.1"
+version="0.21"
 supported_version="1.11.*"
-path="G:/Games/Hearts of Iron IV/mod/Kaiserreich"
+path="D:/Documents/Paradox Interactive/Hearts of Iron IV/mod/Kaiserreich"
 remote_file_id="1521695605"
