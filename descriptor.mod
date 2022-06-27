@@ -61,7 +61,7 @@ tags={
 	"Gameplay"
 }
 picture="KR.jpg"
-version="0.21.1"
+version="0.21"
 supported_version="1.11.*"
-path="D:/Documents/Paradox Interactive/Hearts of Iron IV/mod/Kaiserreich"
+path="D:/Documents/Paradox Interactive/Hearts of Iron IV/mod/Kaiserreich Dev Build"
 remote_file_id="1521695605"
