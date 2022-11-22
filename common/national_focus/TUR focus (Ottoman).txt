@@ -303,20 +303,12 @@ shared_focus = {
 	icon = GFX_focus_SAF_colonialist_crusade2
 
 	available = {
-		754 = {
-			is_fully_controlled_by = OTT
-		}
-		679 = {
-			is_fully_controlled_by = OTT
-		}
-		183 = {
-			is_fully_controlled_by = OTT
-		}
-		812 = {
-			is_fully_controlled_by = OTT
-		}
-		448 = {
-			is_fully_controlled_by = OTT
+		OR = {
+			controls_state = 183 #Cyprus
+			controls_state = 448 #Tripoli
+			controls_state = 679 #Hejaz
+			controls_state = 754 #Medina
+			controls_state = 812 #Basra
 		}
 	}
 
@@ -341,34 +333,34 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus OTT_Status_of_the_Autonomous_Regions"
-		754 = {
-			ott_increase_revolt_risk = yes
-		}
-		679 = {
-			ott_increase_revolt_risk = yes
-		}
-		183 = {
-			ott_increase_revolt_risk = yes
-		}
-		if = {
+		every_owned_state = {
 			limit = {
-				NOT = {
-					has_country_flag = ASY_got_an_ass_whooping
+				is_core_of = ROOT
+				OR = {
+					state = 183 #Cyprus
+					state = 448 #Tripoli
+					state = 679 #Hejaz
+					state = 754 #Medina
+					state = 812 #Basra
 				}
 			}
-			812 = {
-				ott_increase_revolt_risk = yes
-			}
-		}
-		448 = {
 			ott_increase_revolt_risk = yes
 		}
 		custom_effect_tooltip = tooltip_white_line
 		unlock_decision_tooltip = OTT_SYR_Abolish_Lebanon
-		unlock_decision_tooltip = OTT_ARA_Abolish_Sharif
-		unlock_decision_tooltip = OTT_ARA_Centralise_Tax_Collection
-		unlock_decision_tooltip = OTT_GRE_Abolish_Mutasarrifate
-		unlock_decision_tooltip = OTT_IRQ_Abolish_Assyrian_Autonomous_Zone
+		if = {
+			limit = { owns_state = 679 }
+			unlock_decision_tooltip = OTT_ARA_Abolish_Sharif
+			unlock_decision_tooltip = OTT_ARA_Centralise_Tax_Collection
+		}
+		if = {
+			limit = { owns_state = 183 }
+			unlock_decision_tooltip = OTT_GRE_Abolish_Mutasarrifate
+		}
+		if = {
+			limit = { owns_state = 812 }
+			unlock_decision_tooltip = OTT_IRQ_Abolish_Assyrian_Autonomous_Zone
+		}
 	}
 }
 
@@ -2666,14 +2658,8 @@ shared_focus = {
 		add_ideas = ott_renaissance
 		add_research_slot_until_five = yes
 		hidden_effect = {
-			country_event = {
-				id = ottkem.51
-				days = 60
-			}
-			country_event = {
-				id = ottfla.22
-				days = 42
-			}
+			country_event = { id = ottkem.51 days = 60 }
+			country_event = { id = ottfla.22 days = 42 }
 		}
 	}
 }
@@ -4807,7 +4793,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_ISTANBUL_PACT }
+				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_OTT }
 			}
 		}
 
@@ -4873,10 +4859,7 @@ focus_tree = {
 		select_effect = {
 			log = "[GetDateText]: [Root.GetName]: Select Focus OTT_Gamble_in_the_Caucasus"
 			GER = {
-				country_event = {
-					id = ottfor.31
-					days = 10
-				}
+				country_event = { id = ottfor.31 days = 10 }
 			}
 		}
 
@@ -5027,10 +5010,7 @@ focus_tree = {
 
 		select_effect = {
 			log = "[GetDateText]: [Root.GetName]: Select Focus OTT_Alliance_of_Convenience"
-			country_event = {
-				id = ottfor.20
-				days = 5
-			}
+			country_event = { id = ottfor.20 days = 5 }
 		}
 
 		completion_reward = {
@@ -5391,7 +5371,7 @@ shared_focus = {
 			OR = {
 				has_game_rule = { rule = OTT_path option = OTT_PATH_ENDEAVOUR_MARLIB }
 				has_game_rule = { rule = OTT_path option = OTT_PATH_ENDEAVOUR_AUTDEM }
-				has_game_rule = { rule = OTT_path option = OTT_PATH_ENDEAVOUR_NATPOP }
+				has_game_rule = { rule = OTT_path option = OTT_PATH_NATPOP }
 			}
 		}
 	}
@@ -5601,10 +5581,7 @@ shared_focus = {
 			modifier = ott_german_fren
 		}
 		GER = {
-			country_event = {
-				id = ottfor.31
-				days = 10
-			}
+			country_event = { id = ottfor.31 days = 10 }
 		}
 	}
 }
@@ -5904,7 +5881,7 @@ shared_focus = {
 		factor = 100
 		modifier = {
 			factor = 0
-			has_game_rule = { rule = OTT_path option = OTT_PATH_ENDEAVOUR_NATPOP }
+			has_game_rule = { rule = OTT_path option = OTT_PATH_NATPOP }
 		}
 	}
 
@@ -6662,7 +6639,6 @@ shared_focus = {
 			if = {
 				limit = { country_exists = KDR }
 				KDR = {
-					load_oob = KDR
 					add_ideas = KDR_Religious_Fevour
 					add_ideas = KDR_Irregular_Army
 					declare_war_on = {
@@ -7068,10 +7044,7 @@ shared_focus = {
 						}
 					}
 				}
-				country_event = {
-					id = ottfor.93
-					days = 5
-				}
+				country_event = { id = ottfor.93 days = 5 }
 			}
 		}
 	}
@@ -7110,7 +7083,7 @@ shared_focus = {
 			factor = 0
 			OR = {
 				has_game_rule = { rule = OTT_path option = OTT_PATH_ENDEAVOUR_AUTDEM }
-				has_game_rule = { rule = OTT_path option = OTT_PATH_ENDEAVOUR_NATPOP }
+				has_game_rule = { rule = OTT_path option = OTT_PATH_NATPOP }
 			}
 		}
 	}
@@ -7269,14 +7242,8 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus OTT_Imperial_Literacy_FEV"
 		remove_ideas = ott_widespread_illiteracy_fevzi
 		hidden_effect = {
-			country_event = {
-				id = ottsab.34
-				days = 70
-			}
-			country_event = {
-				id = ottfla.9
-				days = 45
-			}
+			country_event = { id = ottsab.34 days = 70 }
+			country_event = { id = ottfla.9 days = 45 }
 		}
 	}
 }
@@ -7938,10 +7905,7 @@ shared_focus = {
 			hidden_effect = { ott_set_authority_vilayet_medium = yes }
 		}
 		hidden_effect = {
-			country_event = {
-				id = ottsab.32
-				days = 60
-			}
+			country_event = { id = ottsab.32 days = 60 }
 		}
 		custom_effect_tooltip = tooltip_white_line
 		every_owned_state = {
@@ -8191,10 +8155,7 @@ shared_focus = {
 			OTT_calc_coalition_strength = yes
 		}
 		hidden_effect = {
-			country_event = {
-				id = ottsab.33
-				days = 200
-			}
+			country_event = { id = ottsab.33 days = 200 }
 		}
 	}
 }
@@ -8405,18 +8366,9 @@ shared_focus = {
 			add_idea = ott_widespread_illiteracy_liberal
 		}
 		hidden_effect = {
-			country_event = {
-				id = ottsab.34
-				days = 70
-			}
-			country_event = {
-				id = ottsab.35
-				days = 300
-			}
-			country_event = {
-				id = ottfla.9
-				days = 45
-			}
+			country_event = { id = ottsab.34 days = 70 }
+			country_event = { id = ottsab.35 days = 300 }
+			country_event = { id = ottfla.9 days = 45 }
 		}
 	}
 }
@@ -8535,10 +8487,7 @@ shared_focus = {
 		custom_effect_tooltip = tooltip_white_line
 		set_cosmetic_tag = TUR_ottoman_federation
 		hidden_effect = {
-			country_event = {
-				id = ottsab.31
-				days = 150
-			}
+			country_event = { id = ottsab.31 days = 150 }
 			news_event = worldnews.437
 		}
 	}
@@ -8668,7 +8617,7 @@ shared_focus = {
 			}
 			NOT = {
 				OR = {
-					has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_ISTANBUL_PACT }
+					has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_OTT }
 					has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_ENT }
 				}
 			}
@@ -8743,7 +8692,7 @@ shared_focus = {
 			factor = 0
 			OR = {
 				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_GER }
-				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_ISTANBUL_PACT }
+				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_OTT }
 			}
 		}
 	}
@@ -8810,7 +8759,7 @@ shared_focus = {
 			factor = 0
 			OR = {
 				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_GER }
-				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_ISTANBUL_PACT }
+				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_OTT }
 			}
 		}
 	}
@@ -9164,16 +9113,12 @@ shared_focus = {
 	available = {
 		OR = {
 			owns_state = 656
-			656 = {
-				owner = { is_subject_of = ROOT }
-			}
+			656 = { owner = { is_subject_of = ROOT } }
 		}
 	}
 
 	prerequisite = {
 		focus = OTT_Secure_Persian_Gulf
-	}
-	prerequisite = {
 		focus = OTT_Intervene_Arab_Unification_War
 	}
 
@@ -11271,10 +11216,7 @@ shared_focus = {
 			elections_allowed = no
 		}
 		hidden_effect = {
-			country_event = {
-				id = ottars.11
-				days = 50
-			}
+			country_event = { id = ottars.11 days = 50 }
 		}
 		remove_ideas = ott_bloated_administration
 	}
@@ -11606,7 +11548,7 @@ shared_focus = {
 		factor = 100
 		modifier = {
 			factor = 0
-			has_game_rule = { rule = OTT_path option = OTT_PATH_ENDEAVOUR_NATPOP }
+			has_game_rule = { rule = OTT_path option = OTT_PATH_NATPOP }
 		}
 	}
 
@@ -11647,7 +11589,7 @@ shared_focus = {
 		factor = 100
 		modifier = {
 			factor = 0
-			has_game_rule = { rule = OTT_path option = OTT_PATH_ENDEAVOUR_NATPOP }
+			has_game_rule = { rule = OTT_path option = OTT_PATH_NATPOP }
 		}
 	}
 
@@ -11679,7 +11621,7 @@ shared_focus = {
 		factor = 100
 		modifier = {
 			factor = 0
-			has_game_rule = { rule = OTT_path option = OTT_PATH_ENDEAVOUR_NATPOP }
+			has_game_rule = { rule = OTT_path option = OTT_PATH_NATPOP }
 		}
 	}
 
@@ -12498,10 +12440,7 @@ shared_focus = {
 			}
 		}
 		hidden_effect = {
-			country_event = {
-				id = ottlib.15
-				days = 200
-			}
+			country_event = { id = ottlib.15 days = 200 }
 		}
 
 		if = {

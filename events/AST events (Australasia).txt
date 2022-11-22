@@ -217,26 +217,13 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_MON_36
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_SYNDIE_36
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCDEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCCON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_TOTALIST_36
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_NATPOP }
+					has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
+					has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
+					has_game_rule = { rule = AST_path option = AST_PATH_RADSOC }
 				}
 			}
 		}
@@ -270,14 +257,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_MARLIB
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCCON
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
 				}
 			}
 		}
@@ -303,30 +284,14 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_SYNDIE_36
-				}
-			}
-			modifier = {
-				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_MON_36
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_MARLIB
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCDEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_TOTALIST_36
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_NATPOP }
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
+					has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
+					has_game_rule = { rule = AST_path option = AST_PATH_RADSOC }
 				}
 			}
 		}
@@ -480,18 +445,10 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_SYNDIE_36
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_TOTALIST_36
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_MON_36
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
+					has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
+					has_game_rule = { rule = AST_path option = AST_PATH_RADSOC }
+					has_game_rule = { rule = AST_path option = AST_PATH_NATPOP }
 				}
 			}
 		}
@@ -523,26 +480,13 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCDEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_nationalist
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_MON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_AUTDEM
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_DEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_AUTDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_NATPOP }
+					has_game_rule = { rule = AST_path option = AST_PATH_PATAUT }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_AUTDEM }
 				}
 			}
 		}
@@ -569,8 +513,9 @@ country_event = {
 				remove_from_array = { global.CAN_imperial_conference = ROOT }
 			}
 			news_event = { id = worldnews.123 days = 1 }
+			GEA = { country_event = { id = austral.371 days = 2 random_days = 7 } }
 			add_named_threat = {
-				threat = 1
+				threat = 2
 				name = AST_revolution_threat
 			}
 		}
@@ -1691,26 +1636,12 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_MON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_nationalist
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_MARLIB
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCDEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_AUTDEM
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_AUTDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_NATPOP }
+					has_game_rule = { rule = AST_path option = AST_PATH_PATAUT }
 				}
 			}
 		}
@@ -1749,26 +1680,12 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_MON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_nationalist
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCDEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCCON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_AUTDEM
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_AUTDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_NATPOP }
+					has_game_rule = { rule = AST_path option = AST_PATH_PATAUT }
 				}
 			}
 		}
@@ -1800,26 +1717,11 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_MON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_nationalist
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_MARLIB
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCCON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_AUTDEM
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					has_game_rule = { rule = AST_path option = AST_PATH_AUTDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_NATPOP }
+					has_game_rule = { rule = AST_path option = AST_PATH_PATAUT }
 				}
 			}
 		}
@@ -1853,26 +1755,13 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_MARLIB
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCDEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCCON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_nationalist
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_DEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_PATAUT }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_AUTDEM }
 				}
 			}
 		}
@@ -1908,30 +1797,14 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_MON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_MARLIB
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCDEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCCON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_AUTDEM
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_DEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_AUTDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_NATPOP }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_AUTDEM }
 				}
 			}
 		}
@@ -1980,14 +1853,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_MON
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_AUTDEM
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_NATPOP }
+					has_game_rule = { rule = AST_path option = AST_PATH_AUTDEM }
 				}
 			}
 		}
@@ -2009,22 +1876,12 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_MARLIB
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCDEM
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_DEM_SOCCON
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_DEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_AUTDEM }
 				}
 			}
 		}
@@ -2044,6 +1901,7 @@ country_event = {
 		set_country_flag = { flag = AST_delay_entente_bypass days = 30 value = 1 }
 		hidden_effect = {
 			news_event = { id = worldnews.126 days = 1 }
+			GEA = { country_event = { id = austral.373 days = 2 random_days = 7 } }
 		}
 	}
 }
@@ -2102,6 +1960,15 @@ country_event = {
 				factor = 1.5
 				has_government = social_conservative
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_AUTDEM }
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = social_conservative
@@ -2130,6 +1997,15 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				date > 1942.1.1
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_AUTDEM }
+				}
 			}
 		}
 		set_politics = {
@@ -2160,6 +2036,18 @@ country_event = {
 				factor = 1.5
 				date > 1945.1.1
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					AND = {
+						has_country_flag = AST_lang_election
+						has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+					}
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_AUTDEM }
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = social_democrat
@@ -2188,6 +2076,16 @@ country_event = {
 				factor = 1.5
 				date > 1945.1.1
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_DEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -2214,6 +2112,15 @@ country_event = {
 			modifier = {
 				factor = 4
 				has_government = social_democrat
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_MARLIB }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCDEM }
+					has_game_rule = { rule = AST_path option = AST_PATH_SOCCON }
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_AUTDEM }
+				}
 			}
 		}
 		set_politics = {
@@ -2331,10 +2238,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_republic
-					option = AST_REPUBLIC_YES_WAR
-				}
+				has_game_rule = { rule = AST_republic option = AST_REPUBLIC_YES_WAR }
 			}
 		}
 		add_political_power = -50
@@ -2359,10 +2263,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_republic
-					option = AST_REPUBLIC_YES_WAR
-				}
+				has_game_rule = { rule = AST_republic option = AST_REPUBLIC_YES_WAR }
 			}
 			modifier = {
 				factor = 0
@@ -2404,10 +2305,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_republic
-					option = AST_REPUBLIC_YES
-				}
+				has_game_rule = { rule = AST_republic option = AST_REPUBLIC_YES }
 			}
 		}
 		add_political_power = 100
@@ -2488,10 +2386,7 @@ country_event = {
 			base = 80
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_republic
-					option = AST_REPUBLIC_YES_WAR
-				}
+				has_game_rule = { rule = AST_republic option = AST_REPUBLIC_YES_WAR }
 			}
 		}
 		add_political_power = -200
@@ -2544,10 +2439,7 @@ country_event = {
 			base = 20
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_republic
-					option = AST_REPUBLIC_YES_WAR
-				}
+				has_game_rule = { rule = AST_republic option = AST_REPUBLIC_YES_WAR }
 			}
 		}
 		add_political_power = -200
@@ -2882,10 +2774,7 @@ country_event = {
 			base = 45
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_AUTDEM
-				}
+				has_game_rule = { rule = AST_path option = AST_PATH_AUTDEM }
 			}
 		}
 		set_country_flag = AST_uprising_crushed
@@ -2916,16 +2805,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_MON
-				}
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_AUTDEM
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_NATPOP }
+					has_game_rule = { rule = AST_path option = AST_PATH_AUTDEM }
 				}
 			}
 		}
@@ -2949,6 +2831,11 @@ country_event = {
 				promote_leader = yes
 			}
 			news_event = { id = worldnews.128 days = 1 }
+			GEA = { country_event = { id = austral.371 days = 2 random_days = 7 } }
+			add_named_threat = {
+				threat = 2
+				name = AST_revolution_threat
+			}
 		}
 	}
 	option = {
@@ -2972,6 +2859,10 @@ country_event = {
 					is_faction_leader = yes
 					is_in_faction_with = AST
 				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_NATPOP }
 			}
 		}
 		ENT = {
@@ -3030,10 +2921,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_AUTDEM
-				}
+				has_game_rule = { rule = AST_path option = AST_PATH_AUTDEM }
 			}
 		}
 		add_political_power = -50
@@ -3087,7 +2975,7 @@ country_event = {
 	option = {
 		name = austral.85.a #Crush the uprising - there will be no mercy!
 		ai_chance = {
-			base = 60
+			base = 40
 		}
 		set_country_flag = AST_uprising_crushed
 		add_political_power = -500
@@ -3099,7 +2987,7 @@ country_event = {
 	option = {
 		name = austral.85.b #The uprising succeeds - we have utterly failed...
 		ai_chance = {
-			base = 40
+			base = 60
 			modifier = {
 				factor = 2
 				OR = {
@@ -3117,10 +3005,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_MON
-				}
+				has_game_rule = { rule = AST_path option = AST_PATH_ELECTED_NATPOP }
 			}
 		}
 		set_country_flag = AST_uprising_succeeded
@@ -3143,6 +3028,11 @@ country_event = {
 				promote_leader = yes
 			}
 			news_event = { id = worldnews.128 days = 1 }
+			GEA = { country_event = { id = austral.371 days = 2 random_days = 7 } }
+			add_named_threat = {
+				threat = 2
+				name = AST_revolution_threat
+			}
 		}
 	}
 }
@@ -3317,10 +3207,7 @@ country_event = {
 			base = 70
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_TOTALIST_36
-				}
+				has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
 			}
 		}
 		set_country_flag = AST_had_first_congress
@@ -3336,10 +3223,7 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_SYNDIE_36
-				}
+				has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
 			}
 		}
 		set_country_flag = AST_had_first_congress
@@ -3395,6 +3279,13 @@ country_event = {
 				factor = 0.5
 				has_government = totalist
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
+					has_game_rule = { rule = AST_path option = AST_PATH_RADSOC }
+				}
+			}
 		}
 		set_country_flag = AST_had_second_congress
 		add_popularity = {
@@ -3414,6 +3305,13 @@ country_event = {
 				factor = 2
 				has_government = totalist
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
+					has_game_rule = { rule = AST_path option = AST_PATH_RADSOC }
+				}
+			}
 		}
 		set_country_flag = AST_had_second_congress
 		add_popularity = {
@@ -3429,6 +3327,13 @@ country_event = {
 		name = austral.102.c #The socialists surprise with a slim majority
 		ai_chance = {
 			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
+					has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
+				}
+			}
 		}
 		set_country_flag = AST_had_second_congress
 		add_popularity = {
@@ -3482,6 +3387,13 @@ country_event = {
 					has_government = radical_socialist
 				}
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
+					has_game_rule = { rule = AST_path option = AST_PATH_RADSOC }
+				}
+			}
 		}
 		set_country_flag = AST_had_third_congress
 		add_popularity = {
@@ -3501,6 +3413,13 @@ country_event = {
 				factor = 2
 				has_government = totalist
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
+					has_game_rule = { rule = AST_path option = AST_PATH_RADSOC }
+				}
+			}
 		}
 		set_country_flag = AST_had_third_congress
 		add_popularity = {
@@ -3519,6 +3438,13 @@ country_event = {
 			modifier = {
 				factor = 3
 				has_government = radical_socialist
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
+					has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
+				}
 			}
 		}
 		set_country_flag = AST_had_third_congress
@@ -4123,18 +4049,9 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_SYNDIE_36
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_nationalist
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_TOTALIST_36
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
+					has_game_rule = { rule = AST_path option = AST_PATH_PATAUT }
+					has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
 				}
 			}
 		}
@@ -4162,6 +4079,7 @@ country_event = {
 			set_country_flag = AST_nzl_new_guard_coup
 			country_event = { id = austral.175 days = 1 }
 			news_event = { id = worldnews.126 days = 1 }
+			GEA = { country_event = { id = austral.373 days = 2 random_days = 7 } }
 		}
 	}
 	option = {
@@ -4170,10 +4088,7 @@ country_event = {
 			base = 60
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_MON_36
-				}
+				has_game_rule = { rule = AST_path option = AST_PATH_NATPOP }
 			}
 		}
 		add_political_power = -100
@@ -4794,18 +4709,9 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_SYNDIE_36
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_nationalist
-					}
-					has_game_rule = {
-						rule = AST_PATH
-						option = AST_PATH_TOTALIST_36
-					}
+					has_game_rule = { rule = AST_path option = AST_PATH_SYNDIE }
+					has_game_rule = { rule = AST_path option = AST_PATH_PATAUT }
+					has_game_rule = { rule = AST_path option = AST_PATH_TOTALIST }
 				}
 			}
 		}
@@ -4849,10 +4755,7 @@ country_event = {
 			base = 80
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = AST_PATH
-					option = AST_PATH_MON_36
-				}
+				has_game_rule = { rule = AST_path option = AST_PATH_NATPOP }
 			}
 		}
 		set_country_flag = AST_nzl_will_rebel
@@ -6918,6 +6821,10 @@ country_event = {
 		name = austral.258.b #No, they can remain where they are
 		ai_chance = {
 			base = 25
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+			}
 		}
 		add_political_power = 50
 	}
@@ -6973,6 +6880,10 @@ country_event = {
 		name = austral.260.a #We must make the attempt
 		ai_chance = {
 			base = 80
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_path option = AST_PATH_SOCLIB }
+			}
 		}
 		random_list = {
 			25 = {
@@ -7236,10 +7147,7 @@ country_event = {
 		date > 1942.8.15
 		has_country_leader = { character = GBR_george_windsor }
 		NOT = {
-			has_game_rule = {
-				rule = CAN_british_king
-				option = CAN_BRITISH_KING_GEORGE
-			}
+			has_game_rule = { rule = CAN_king option = CAN_KING_GEORGE }
 		}
 	}
 
@@ -8621,5 +8529,190 @@ country_event = {
 			modifier = KR_approves_of_govt
 		}
 		add_political_power = 100
+	}
+}
+
+# GEA: Seize Papua?
+country_event = {
+	id = austral.371
+	immediate = { log = "[GetDateText]: [Root.GetName]: event austral.371 FROM = [From.GetName]" }
+	title = austral.371.t
+	desc = austral.371.d
+	picture = GFX_report_event_AST_army1
+
+	trigger = {
+		523 = { is_owned_and_controlled_by = FROM } #SE. New Guinea
+		757 = { is_owned_and_controlled_by = ROOT } #NE. New Guinea
+		FROM = { has_socialist_government = yes }
+		surrender_progress < 0.2
+		NOT = { has_war_with = FROM }
+		NOT = { FROM = { any_allied_country = { has_war_with = ROOT } } }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = austral.371.a
+		add_state_claim = 523
+		transfer_state = 523
+		FROM = { country_event = austral.372 }
+	}
+	option = {
+		name = austral.371.b
+		ai_chance = { base = 0 }
+		add_political_power = -10
+	}
+}
+
+# AST: GEA has seized Papua
+country_event = {
+	id = austral.372
+	immediate = { log = "[GetDateText]: [Root.GetName]: event austral.372 FROM = [From.GetName]" }
+	title = austral.372.t
+	desc = austral.372.d
+	picture = GFX_report_event_AST_army1
+
+	is_triggered_only = yes
+
+	option = {
+		name = austral.372.a #Let them take it
+		remove_state_claim = 523
+		add_opinion_modifier = { target = FROM modifier = KR_hates_govt }
+	}
+
+	option = {
+		name = austral.372.b #This means war!
+		ai_chance = { base = 0 }
+		add_political_power = -200
+		create_wargoal = { target = FROM type = annex_everything }
+	}
+}
+
+# GEA: AST is no longer socialist, return Papua?
+country_event = {
+	id = austral.373
+	immediate = { log = "[GetDateText]: [Root.GetName]: event austral.373 FROM = [From.GetName]" }
+
+	title = {
+		text = austral.373.t.new_guard_coup
+		trigger = {
+			FROM = { original_tag = AST }
+		}
+	}
+	title = {
+		text = austral.373.t.invaded
+		trigger = {
+			NOT = { FROM = { original_tag = AST } }
+		}
+	}
+
+	desc = {
+		text = austral.373.d.new_guard_coup
+		trigger = {
+			FROM = { original_tag = AST }
+		}
+	}
+	desc = {
+		text = austral.373.d.invaded
+		trigger = {
+			NOT = { FROM = { original_tag = AST } }
+		}
+	}
+
+	picture = GFX_report_event_AST_army1
+
+	trigger = {
+		523 = { is_owned_and_controlled_by = ROOT } #SE. New Guinea
+		757 = { is_owned_and_controlled_by = ROOT } #NE. New Guinea
+		FROM = { has_socialist_government = no }
+		surrender_progress < 0.2
+		NOT = { has_war_with = FROM }
+		NOT = { FROM = { any_allied_country = { has_war_with = ROOT } } }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = austral.373.a #Yes, it shall be returned
+		ai_chance = { base = 70 }
+		remove_state_claim = 523
+		effect_tooltip = {
+			if = {
+				limit = { AST = { is_in_faction_with = FROM } }
+				523 = { transfer_state_to = AST }
+			}
+			else = {
+				523 = { transfer_state_to = FROM }
+			}
+			reverse_add_opinion_modifier = { target = FROM modifier = KR_pleased }
+		}
+		FROM = { country_event = austral.374 }
+	}
+
+	option = {
+		name = austral.373.b #Finders, keepers
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_global_flag = GER_stay_out_france_uk
+					has_non_aggression_pact_with = FROM
+					is_in_faction_with = FROM
+				}
+			}
+		}
+		effect_tooltip = { reverse_add_opinion_modifier = { target = FROM modifier = KR_outraged } }
+		FROM = { country_event = austral.375 }
+	}
+}
+
+# AST/ENT: GEA has returned Papua
+country_event = {
+	id = austral.374
+	immediate = { log = "[GetDateText]: [Root.GetName]: event austral.374 FROM = [From.GetName]" }
+	title = austral.374.t
+	desc = austral.374.d
+	picture = GFX_report_event_AST_army1
+
+	is_triggered_only = yes
+
+	option = {
+		name = austral.374.a #Excellent
+		if = {
+			limit = { has_subject = AST }
+			523 = {
+				add_claim_by = AST
+				transfer_state_to = AST
+			}
+		}
+		else = {
+			add_state_claim = 523
+			transfer_state = 523
+		}
+		add_opinion_modifier = { target = FROM modifier = KR_pleased }
+	}
+}
+
+# AST/ENT: GEA has retained Papua
+country_event = {
+	id = austral.375
+	immediate = { log = "[GetDateText]: [Root.GetName]: event austral.375 FROM = [From.GetName]" }
+	title = austral.375.t
+	desc = austral.375.d
+	picture = GFX_report_event_AST_army1
+
+	is_triggered_only = yes
+
+	option = {
+		name = austral.375.a #We will remember this!
+		if = {
+			limit = { has_subject = AST }
+			523 = { add_claim_by = AST }
+		}
+		else = {
+			add_state_claim = 523
+		}
+		add_opinion_modifier = { target = FROM modifier = KR_outraged }
 	}
 }

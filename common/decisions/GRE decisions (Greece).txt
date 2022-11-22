@@ -50,8 +50,6 @@ GRE_join_faction_decisions = {
 
 		available = {
 			OR = {
-				has_completed_focus = GRE_diplomacy_focus
-				has_completed_focus = GRE_new_expansionism
 				has_war = yes
 				threat > 0.6
 			}
@@ -118,6 +116,12 @@ GRE_join_faction_decisions = {
 			}
 			modifier = {
 				factor = 0
+				has_completed_focus = GRE_diplomacy_focus
+				FROM = { same_government_type_as_ROOT_authoritarian = yes }
+				NOT = { has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_ENT } }
+			}
+			modifier = {
+				factor = 0
 				OR = {
 					has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_GER }
 					has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_AUS }
@@ -150,6 +154,7 @@ GRE_join_faction_decisions = {
 			}
 			modifier = {
 				add = 50
+				has_completed_focus = GRE_new_expansionism
 				TUR = {
 					is_in_faction = yes
 					NOT = { is_in_faction_with = FROM }
@@ -184,8 +189,6 @@ GRE_join_faction_decisions = {
 				}
 			}
 			OR = {
-				has_completed_focus = GRE_diplomacy_focus
-				has_completed_focus = GRE_new_expansionism
 				has_war = yes
 				threat > 0.6
 			}
@@ -248,6 +251,12 @@ GRE_join_faction_decisions = {
 			}
 			modifier = {
 				factor = 0
+				has_completed_focus = GRE_diplomacy_focus
+				FROM = { same_government_type_as_ROOT_authoritarian = no }
+				NOT = { has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_GER } }
+			}
+			modifier = {
+				factor = 0
 				OR = {
 					has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_ENT }
 					has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_AUS }
@@ -260,7 +269,7 @@ GRE_join_faction_decisions = {
 				has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_GER }
 				NOT = {
 					TUR = { is_in_faction = no }
-					TUR = { is_puppet = no }
+					TUR = { is_subject = no }
 				}
 			}
 			modifier = {
@@ -292,6 +301,7 @@ GRE_join_faction_decisions = {
 			}
 			modifier = {
 				add = 50
+				has_completed_focus = GRE_new_expansionism
 				TUR = {
 					is_in_faction = yes
 					NOT = { is_in_faction_with = FROM }
@@ -326,8 +336,6 @@ GRE_join_faction_decisions = {
 				}
 			}
 			OR = {
-				has_completed_focus = GRE_diplomacy_focus
-				has_completed_focus = GRE_new_expansionism
 				has_war = yes
 				threat > 0.6
 			}
@@ -396,6 +404,12 @@ GRE_join_faction_decisions = {
 			}
 			modifier = {
 				factor = 0
+				has_completed_focus = GRE_diplomacy_focus
+				FROM = { same_government_type_as_ROOT_authoritarian = no }
+				NOT = { has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_AUS } }
+			}
+			modifier = {
+				factor = 0
 				OR = {
 					has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_ENT }
 					has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_GER }
@@ -428,6 +442,7 @@ GRE_join_faction_decisions = {
 			}
 			modifier = {
 				add = 50
+				has_completed_focus = GRE_new_expansionism
 				TUR = {
 					is_in_faction = yes
 					NOT = { is_in_faction_with = FROM }
@@ -459,8 +474,6 @@ GRE_join_faction_decisions = {
 				NOT = { TUR = { has_non_aggression_pact_with = FROM } }
 			}
 			OR = {
-				has_completed_focus = GRE_diplomacy_focus
-				has_completed_focus = GRE_new_expansionism
 				has_war = yes
 				threat > 0.6
 			}
@@ -494,6 +507,12 @@ GRE_join_faction_decisions = {
 			}
 			modifier = {
 				factor = 0
+				has_completed_focus = GRE_diplomacy_focus
+				FROM = { same_government_type_as_ROOT_authoritarian = yes }
+				NOT = { has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_RUS } }
+			}
+			modifier = {
+				factor = 0
 				OR = {
 					has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_ENT }
 					has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_GER }
@@ -516,6 +535,7 @@ GRE_join_faction_decisions = {
 			}
 			modifier = {
 				add = 50
+				has_completed_focus = GRE_new_expansionism
 				TUR = {
 					is_in_faction = yes
 					NOT = { is_in_faction_with = FROM }
@@ -574,8 +594,8 @@ political_actions = {
 				factor = 0
 				has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_GER }
 				NOT = {
-					has_game_rule = { rule = GRE_referendum option = GRE_REFERENDUM_METAXAS }
-					has_game_rule = { rule = GRE_referendum option = GRE_REFERENDUM_PAUL }
+					has_game_rule = { rule = GRE_referendum option = GRE_REFERENDUM_METAXAS_PATAUT }
+					has_game_rule = { rule = GRE_referendum option = GRE_REFERENDUM_PAUL_PATAUT }
 				}
 			}
 		}
@@ -797,6 +817,32 @@ GRE_regaining_greece = {
 			modifier = {
 				factor = 0
 				FROM = { dont_start_major_faction_wars = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = BUL }
+				OR = {
+					AND = {
+						has_game_rule = { rule = BUL_forpol option = BUL_FORPOL_GER }
+						has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_GER }
+					}
+					AND = {
+						has_game_rule = { rule = BUL_forpol option = BUL_FORPOL_AUS }
+						has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_AUS }
+					}
+					AND = {
+						has_game_rule = { rule = BUL_forpol option = BUL_FORPOL_RUS }
+						has_game_rule = { rule = GRE_forpol option = GRE_FORPOL_RUS }
+					}
+					AND = {
+						has_game_rule = { rule = BUL_forpol option = BUL_FORPOL_INT }
+						OR = {
+							has_game_rule = { rule = GRE_referendum option = GRE_REFERENDUM_SYNDIE }
+							has_game_rule = { rule = GRE_referendum option = GRE_REFERENDUM_TOTALIST }
+							has_game_rule = { rule = GRE_election option = GRE_ELECTION_RADSOC_SYNDIE }
+						}
+					}
+				}
 			}
 		}
 	}

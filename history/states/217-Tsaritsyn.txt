@@ -11,21 +11,17 @@ state = {
 		add_claim_by = TRM
 		add_to_array = { state_victory_points = 3529 }
 
-		victory_points = { 3529 25 }
+		victory_points = { 3529 30 }
 
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
 			arms_factory = 1
-			air_base = 6
-			3529 = {
-				bunker = 1
-			}
+			air_base = 1
 		}
 	}
 
 	provinces = {
-		520 3503 3517 3529 3555 6479 6541 6575 9504 9530 11395 11474 11484
+		498 520 3503 3517 3529 3555 6479 6503 6527 6541 6575 9459 9474 9504 9530 11395 11447 11474 11484
 	}
 }
-

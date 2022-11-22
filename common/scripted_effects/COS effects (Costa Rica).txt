@@ -19,163 +19,67 @@ increase_UFC_profit = {
 			UFC_Profit_16
 		}
 		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 1
-					compare = equals
-				}
-			}
+			limit = { check_variable = { cos_profit_factor = 1 }}
 			add_ideas = UFC_Profit_1_idea
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 2
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 2 }}
 			add_ideas = UFC_Profit_2_idea
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 3
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 3 }}
 			add_ideas = UFC_Profit_3
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 4
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 4 }}
 			add_ideas = UFC_Profit_4
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 5
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 5 }}
 			add_ideas = UFC_Profit_5
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 6
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 6 }}
 			add_ideas = UFC_Profit_6
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 7
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 7 }}
 			add_ideas = UFC_Profit_7
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 8
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 8 }}
 			add_ideas = UFC_Profit_8
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 9
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 9 }}
 			add_ideas = UFC_Profit_9
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 10
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 10 }}
 			add_ideas = UFC_Profit_10
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 11
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 11 }}
 			add_ideas = UFC_Profit_11
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 12
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 12 }}
 			add_ideas = UFC_Profit_12
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 13
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 13 }}
 			add_ideas = UFC_Profit_13
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 14
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 14 }}
 			add_ideas = UFC_Profit_14
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 15
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 15 }}
 			add_ideas = UFC_Profit_15
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = cos_profit_factor
-					value = 16
-					compare = equals
-				}
-			}
+		else_if = {
+			limit = { check_variable = { cos_profit_factor = 16 }}
 			add_ideas = UFC_Profit_16
 		}
 	}
@@ -221,5 +125,103 @@ COS_clear_legion_del_caribe_rebel_decisions = {
 			PREV = { remove_targeted_decision = { decision = COS_Supply_Rebels target = PREV } }
 		}
 		clear_array = COS.COS_supply_rebels_array
+	}
+}
+
+COS_create_democratic_rebels_divisions = {
+	log = "[GetDateText]: [Root.GetName]: Create divisions COS_create_democratic_rebels_divisions"
+	### Delete templates - no cheating
+	if = {
+		limit = { has_template = "Brigada de Milicia" }
+		delete_unit_template_and_units = { division_template = "Brigada de Milicia" disband = yes }
+	}
+	### Create templates
+	division_template = {
+		name = "Brigada de Milicia"
+		division_names_group = SPAN_INF_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+		}
+		template_counter = 68
+	}
+	### Create divisions
+	319 = {
+		create_unit = {
+			division = "division_template = \"Brigada de Milicia\" start_experience_factor = 0.05"
+			owner = ROOT
+			prioritize_location = 4598
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+}
+
+COS_create_volunteer_divisions_against_CEN = {
+	log = "[GetDateText]: [Root.GetName]: Create divisions COS_create_volunteer_divisions_against_CEN"
+	### Delete templates - no cheating
+	if = {
+		limit = { has_template = "Brigada de Voluntarios" }
+		delete_unit_template_and_units = { division_template = "Brigada de Voluntarios" disband = yes }
+	}
+	### Create templates
+	division_template = {
+		name = "Brigada de Voluntarios"
+		division_names_group = SPAN_INF_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+		}
+	}
+
+	### Create divisions
+	random_owned_controlled_state = {
+		limit = { valid_state_for_spawning_friendly_unit = yes }
+		create_unit = {
+			division = "division_template = \"Brigada de Voluntarios\" start_experience_factor = 0.05"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "division_template = \"Brigada de Voluntarios\" start_experience_factor = 0.05"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "division_template = \"Brigada de Voluntarios\" start_experience_factor = 0.05"
+			owner = ROOT
+		}
+	}
+}
+
+COS_create_GER_garrison_divisions = {
+	log = "[GetDateText]: [Root.GetName]: Create divisions COS_create_GER_garrison_divisions"
+	### Delete templates - no cheating
+	if = {
+		limit = { has_template = "Costa Rica Marine-Division" }
+		delete_unit_template_and_units = { division_template = "Costa Rica Marine-Division" disband = yes }
+	}
+	### Create templates
+	division_template = {
+		name = "Costa Rica Marine-Division"
+		division_names_group = SPAN_MAR_01
+		regiments = {
+			marine = { x = 0 y = 0 }
+			marine = { x = 0 y = 1 }
+			marine = { x = 0 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 0 }
+		}
+		priority = 2
+	}
+	### Create divisions
+	random_owned_controlled_state = {
+		limit = { valid_state_for_spawning_friendly_unit = yes }
+		prioritize = { 316 }
+		create_unit = {
+			division = "division_template = \"Costa Rica Marine-Division\" start_experience_factor = 0.5"
+			owner = ROOT
+			prioritize_location = 12878
+		}
 	}
 }

@@ -2,49 +2,25 @@ RUS_setup_civil_war = {
 	log = "KR_Event_Logging;RCW STARTS;[GetDateText];[ROOT.GetName];[FROM.GetName]"
 	set_capital = { state = 653 }
 	add_named_threat = {
-		threat = 10
+		threat = 6
 		name = RUS_civil_war_threat
 	}
 	hidden_effect = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 195 #Petrograd
-					state = 205 #Kaluga
-					state = 208 #Luga
-					state = 209 #Pskov
-					state = 210 #Velikiye Luki
-					state = 217 #Tsaritsyn
-					state = 219 #Moscow
-					state = 220 #Kursk
-					state = 222 #Orel
-					state = 223 #Tula
-					state = 224 #Bryansk
-					state = 236 #Astrakhan
-					state = 239 #Saratov
-					state = 240 #Belgorod
-					state = 242 #Smolensk
-					state = 243 #Roslavl
-					state = 244 #Volkhov
-					state = 246 #Rzhev
-					state = 247 #Tver
-					state = 248 #Yaroslavl
-					state = 250 #Simbisrk
-					state = 252 #Nizhny Novgorod
-					state = 253 #Vladimir
-					state = 254 #Ryazan
-					state = 255 #Penza
+					region = 132 #Western Russia
+					region = 133 #Central Russia
+					region = 135 #Kuban
+					region = 137 #Caspian Lowlands
+					state = 250 #Simbirsk
 					state = 256 #Cheboksary
-					state = 257 #Tambov
-					state = 258 #Lipetsk
-					state = 260 #Voronezh
-					state = 263 #Novgorod
-					state = 265 #Kamyshin
-					state = 401 #Pokrovsk
-					state = 581 #Uralsk
-					state = 755 #Vitebsk
 					state = 880 #Dvinsk
 				}
+				NOT = { state = 216 } #Petrozavodsk
+				NOT = { state = 251 } #Samara
+				NOT = { state = 264 } #Tikhvin
+				NOT = { state = 652 } #Orenburg
 			}
 			add_core_of = SOV
 			save_current_factory_count = yes
@@ -65,7 +41,7 @@ RUS_setup_civil_war = {
 			transfer_technology_without_doctrines = yes
 			transfer_navy = { target = RUS }
 			add_ideas = SOV_chaotic_revolution
-			country_lock_all_division_template = yes
+			calculate_maximum_divisions = yes
 			add_state_claim = 329 #Tuva
 			every_owned_state = {
 				remove_core_of = RUS
@@ -102,15 +78,12 @@ RUS_setup_civil_war = {
 		every_core_state = { add_core_of = SOV }
 		set_major = yes
 
-		country_event = { id = rusd.123 days = 60 random = 720 }
-		country_event = { id = russia.1924 days = 200 }
+		country_event = { id = rusd.123 days = 60 random_days = 30 }
 		news_event = { id = russianews.7 days = 1 }
-		DKB = { country_event = { id = russia.1922 days = 3 } }
-		SOV = { country_event = { id = russia.1919 days = 7 } }
 		TRM = { country_event = { id = tram.80 days = 2 random_days = 6 } }
 		INT = { country_event = { id = fopcoup.44 days = 3 random_days = 3 } }
 		FOP = { country_event = { id = fopcoup.44 days = 3 random_days = 3 } }
-		ENG = { country_event = { id = russia.1920 days = 2 random_days = 1 } }
+		ENG = { country_event = { id = russia.1920 days = 2 random_hours = 24 } }
 		country_lock_all_division_template = no
 	}
 	declare_war_on = {
@@ -796,11 +769,7 @@ RUS_reduce_black_monday = {
 	if = {
 		limit = { has_idea = RUS_economic_depression_1 }
 		hidden_effect = {
-			country_event = {
-				id = rusd.121
-				days = 25
-				random_days = 25
-			}
+			country_event = { id = rusd.121 days = 25 random_days = 25 }
 		}
 	}
 	else_if = {
@@ -1062,7 +1031,7 @@ RUS_puppet_setup = {
 			}
 			INT = { country_event = { id = fopcoup.44 days = 3 random_days = 3 } }
 			FOP = { country_event = { id = fopcoup.44 days = 3 random_days = 3 } }
-			ENG = { country_event = { id = russia.1920 days = 2 random_days = 1 } }
+			ENG = { country_event = { id = russia.1920 days = 2 random_hours = 24 } }
 		}
 		else_if = {
 			limit = { tag = TRM }
@@ -1176,8 +1145,6 @@ RUS_cossack_ataman_effect = {
 			slot = political_advisor
 			idea_token = RUS_gerasim_vdovenko
 			traits = { RUS_cossack_ataman_spawned }
-			on_add = { political_advisor_on_add = yes }
-			on_remove = { political_advisor_on_remove = yes }
 		}
 		activate = yes
 	}
@@ -1521,6 +1488,67 @@ SOV_move_exiled_leaders = {
 			if = {
 				limit = { is_dead = no }
 				set_nationality = PREV.PREV
+			}
+		}
+	}
+}
+
+RUS_moscow_accord_threat = {
+	add_named_threat = {
+		threat = 10
+		name = RUS_moscow_accord_threat
+	}
+}
+
+RUS_create_puppet_boris_romanov = {
+	effect_tooltip = {
+		meta_effect = {
+			text = {
+				create_country_leader = {
+					name = "[NAME]"
+					picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Romanov.png"
+					ideology = [IDEOLOGY]
+				}
+			}
+			NAME = "[RUS.RUS_boris_romanov.GetName]"
+			IDEOLOGY = "[ROOT.GetRulingIdeologySubtype]"
+		}
+	}
+	hidden_effect = {
+		RUS = { RUS_boris_romanov = { set_nationality = PREV.PREV } }
+		if = {
+			limit = { has_character = RUS_boris_romanov }
+			RUS_boris_romanov = {
+				set_character_name = RUS_boris_romanov_regnal
+				remove_all_country_leader_roles = yes
+				add_country_leader_role = {
+					country_leader = { ideology = social_democrat_subtype }
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = { ideology = social_liberal_subtype }
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = { ideology = market_liberal_subtype }
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = { ideology = social_conservative_subtype }
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = { ideology = authoritarian_democrat_subtype }
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = { ideology = paternal_autocrat_subtype }
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = { ideology = national_populist_subtype }
+					promote_leader = yes
+				}
 			}
 		}
 	}

@@ -13,13 +13,13 @@ ideologies = {
 		}
 		color = { 127 0 0 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 10.0
@@ -46,13 +46,13 @@ ideologies = {
 		}
 		color = { 255 0 0 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 15.0
@@ -79,13 +79,13 @@ ideologies = {
 		}
 		color = { 233 58 58 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 20.0
@@ -112,13 +112,13 @@ ideologies = {
 		}
 		color = { 194 30 86 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 20.0
@@ -145,13 +145,13 @@ ideologies = {
 		}
 		color = { 246 139 31 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 20.0
@@ -178,13 +178,13 @@ ideologies = {
 		}
 		color = { 245 217 0 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 20.0
@@ -211,13 +211,13 @@ ideologies = {
 		}
 		color = { 0 0 255 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 20.0
@@ -244,13 +244,13 @@ ideologies = {
 		}
 		color = { 110 110 110 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 15.0
@@ -277,13 +277,13 @@ ideologies = {
 		}
 		color = { 45 45 45 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 15.0
@@ -310,13 +310,13 @@ ideologies = {
 		}
 		color = { 142 57 0 }
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
 			can_send_volunteers = yes
 		}
-		can_host_government_in_exile = yes
+		can_host_government_in_exile = no
 		can_collaborate = yes
 		modifiers = {
 			civilian_intel_to_others = 10.0

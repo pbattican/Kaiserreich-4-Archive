@@ -7,7 +7,12 @@ starting_train_buffer = 1
 set_technology = {
 	### Infantry ###
 	infantry_weapons = 1
+	tech_irregulars = 1
+
+	### Support ###
 	tech_support = 1
+
+	### Artillery ###
 	gw_artillery = 1
 }
 
@@ -91,8 +96,6 @@ add_ideas = {
 }
 
 country_event = { id = shandong.1 days = 1 }
-
-set_country_flag = SQI_needed
 
 ### Country Leaders ###
 recruit_character = SQI_fu_sinian
