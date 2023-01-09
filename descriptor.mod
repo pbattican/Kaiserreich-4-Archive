@@ -64,7 +64,7 @@ tags={
 	"Gameplay"
 }
 picture="KR.jpg"
-version="0.23.2"
+version="0.23.3"
 supported_version="1.12.7"
 path="C:/Users/guilh/OneDrive/Documentos/Paradox Interactive/Hearts of Iron IV/mod/Kaiserreich"
 remote_file_id="1521695605"
