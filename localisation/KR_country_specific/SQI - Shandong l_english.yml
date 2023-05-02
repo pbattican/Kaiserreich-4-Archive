@@ -7,11 +7,11 @@
  SQI_sun_suzhen: "Sun Suzhen"
 
  SQI_qu_yingguang: "Qu Yingguang"
- SQI_qu_yingguang_leader_desc: "Qu Yingguang was born March 14th, 1883, in Zhejiang. He was inspired by Qiu Jin to become a revolutionary, but later aligned himself with the cliques of the Beiyang Army. In 1919 Qu was appointed Governor of Shandong, which became an adoptive home province for him. He distinguished himself as a good leader, improving management of the Yellow River and making efforts to protect the province’s religious and cultural legacy, in part by fostering ties with the Duke Yansheng. Years later, he joined the Beiyang Government and grew close to Duan Qirui. Both men were followers of Buddhism, a belief Qu learned from the maternal side of his family. He spent time working with religious societies and charitable organisations, earning the Buddhist name “Faxian” and the nickname of “Qu Bodhisattva”. He then moved to Shanghai shortly before Duan’s overthrow in 1926, dissatisfied with authoritarianism and corruption in Beijing.\n\nThe Shanghai Uprising of 1932 devastated his charity, the “Benevolence Alliance”, as it was feared to be infiltrated by Syndicalist agents. He fled the city like many of his peers, choosing to return to Shandong, but there witnessed the horror that China’s “Basest Warlord”, Zhang Zongchang, had wreaked upon it with opium and debauchery. Through ties to members of the Anti-Drug Association in Shandong, as well as friends like the Duke Yansheng and allies in Beijing, his Benevolence Alliance was reformed in Qufu as the “Society for Restoring Benevolence”. Though rarely publicly opposing Governor Zhang, Qu opened secret talks with the Zhili and the Imperial Court, working to find a way to pull the corruption in Shandong up by the root. Qu believes China must defeat corruption and sin, which a religio-political order upheld by an Emperor can best achieve. He’s cautious of the Manchu princes but supports Emperor Puyi, with whom he was granted an audience once. He is greatly interested in Puyi’s Buddhist sympathies, having come to believe that the Emperor is the best candidate to impose a harmonious, dharmic political order in China."
+ SQI_qu_yingguang_leader_desc: "Qu Yingguang was born March 14th, 1883, in Zhejiang. He was inspired by Qiu Jin to become a revolutionary, but later aligned himself with the cliques of the Beiyang Army. In 1919 Qu was appointed Governor of Shandong, which became an adoptive home province for him. He distinguished himself as a good leader, improving management of the Yellow River and making efforts to protect the province’s religious and cultural legacy, in part by fostering ties with the Duke Yansheng. Years later, he joined the Beiyang Government and grew close to Duan Qirui. Both men were followers of Buddhism, a belief Qu learned from the maternal side of his family. He spent time working with religious societies and charitable organisations, earning the Buddhist name “Faxian” and the nickname of “Qu Bodhisattva”. He then moved to Shanghai shortly before Duan’s overthrow in 1926, dissatisfied with authoritarianism and corruption in Beijing.\n\nThe Shanghai Uprising of 1932 devastated his charity, the “Benevolence Alliance”, as it was feared to be infiltrated by Syndicalist agents. He fled the city like many of his peers, choosing to return to Shandong, but there witnessed the horror that China’s “Basest Warlord”, Zhang Zongchang, had wreaked upon it with opium and debauchery. Through ties to members of the Anti-Drug Association in Shandong, as well as friends like the Duke Yansheng and allies in Beijing, his Benevolence Alliance was reformed in Qufu as the “Society for Restoring Benevolence”. Though rarely publicly opposing Governor Zhang, Qu opened secret talks with the Zhili and the Imperial Court, working to find a way to pull the corruption in Shandong up by the root. Qu believes China must defeat corruption and sin, which a religious-political order upheld by an Emperor can best achieve. He’s cautious of the Manchu princes but supports Emperor Puyi, with whom he was granted an audience once. He is greatly interested in Puyi’s Buddhist sympathies, having come to believe that the Emperor is the best candidate to impose a harmonious, dharmic political order in China."
 
  SQI_zhang_zongchang: "Zhang Zongchang"
  SQI_zhang_zongchang_leader_desc: "Zongchang himself felt no great national pride for Qingdao when it was lost in 1897 to Germany, but the 1911 revolution did bring him to action. Arriving in Shanghai to pledge allegiance to the Republic, he fell in with Feng Guozhang and joined the Zhili Clique when they emerged in 1917. But when Feng died in 1919, Zongchang returned to Manchuria and joined the Fengtian Clique just in time to participate in the First Zhili-Fengtian War in 1922. Fengtian's defeat in that war didn't dissuade him, and he went on to play a prominent role in the second war in 1924, capturing the crucial Lengkouguan Pass. With the near-total collapse of the Northern Zhili Clique following the Beijing Coup, Zongchang went on to conquer Shandong, and pushed as far south as Nanjing and Shanghai. An ability to utilise railroads effectively as well as the unusual charisma of a man referred to as \"filthy\", even by his allies, carried him through to victory after victory. Following a period of debauched rule in China's most international city, Zongchang thoroughly entrenched himself in Shandong, and through back-and-forth wars over Jiangsu eventually found himself trapped in the province during the Fourth Zhili-Fengtian War in 1928. In the years since, Shandong has become both a refuge and a prison, where his illegal but tolerated presence remains under the shadow of the Qing government in Beijing. More recently, a bout of seemingly incurable sickness drew him up the 6,600 steps to a Yiguandao doctor. Zongchang eventually met the Yiguandao’s Honoured Teacher, Zhang Tianran himself. Whether it was his sickness or the lack of anything else to do up on Mount Tai, Zongchang promised Tianran that he would follow the esoteric lifestyle espoused by the cult for his health."
- SQI_zhang_zongchang_commander_desc: "§YGeneral Description\n§YBorn:§L\nFebruary 13th, 1881\nYixian, Shandong, Qing Empire\n§YMilitary Career:§L\nZongchang himself felt no great national pride for Qingdao when it was lost in 1897 to Germany, but the 1911 revolution did bring him to action. Arriving in Shanghai to pledge allegiance to the Republic, he fell in with Feng Guozhang and joined the Zhili Clique when they emerged in 1917. But when Feng died in 1919, Zongchang returned to Manchuria and joined the Fengtian Clique just in time to participate in the First Zhili-Fengtian War in 1922. Fengtian's defeat in that war didn't dissuade him, and he went on to play a prominent role in the second war in 1924, capturing the crucial Lengkouguan Pass. With the near-total collapse of the Northern Zhili Clique following the Beijing Coup, Zongchang went on to conquer Shandong, and pushed as far south as Nanjing and Shanghai. An ability to utilise railroads effectively as well as the unusual charisma of a man referred to as \"filthy\", even by his allies, carried him through to victory after victory. Following a period of debauched rule in China's most international city, Zongchang thoroughly entrenched himself in Shandong, and through back-and-forth wars over Jiangsu eventually found himself trapped in the province during the Fourth Zhili-Fengtian War in 1928. In the years since, Shandong has become both a refuge and a prison, where his illegal but tolerated presence remains under the shadow of the Qing government in Beijing. More recently, a bout of seemingly incurable sickness drew him up the 6,600 steps to a Yiguandao doctor. Zongchang eventually met the Yiguandao’s Honoured Teacher, Zhang Tianran himself. Whether it was his sickness or the lack of anything else to do up on Mount Tai, Zongchang promised Tianran that he would follow the esoteric lifestyle espoused by the cult for his health."
+ SQI_zhang_zongchang_commander_desc: "§YGeneral Description\nBorn:§! §gFebruary 13th, 1881, in Yixian, Shandong, Qing Empire§!\n§YMilitary Career:§! §gZongchang himself felt no great national pride for Qingdao when it was lost in 1897 to Germany, but the 1911 revolution did bring him to action. Arriving in Shanghai to pledge allegiance to the Republic, he fell in with Feng Guozhang and joined the Zhili Clique when they emerged in 1917. But when Feng died in 1919, Zongchang returned to Manchuria and joined the Fengtian Clique just in time to participate in the First Zhili-Fengtian War in 1922. Fengtian's defeat in that war didn't dissuade him, and he went on to play a prominent role in the second war in 1924, capturing the crucial Lengkouguan Pass. With the near-total collapse of the Northern Zhili Clique following the Beijing Coup, Zongchang went on to conquer Shandong, and pushed as far south as Nanjing and Shanghai. An ability to utilise railroads effectively as well as the unusual charisma of a man referred to as \"filthy\", even by his allies, carried him through to victory after victory. Following a period of debauched rule in China's most international city, Zongchang thoroughly entrenched himself in Shandong, and through back-and-forth wars over Jiangsu eventually found himself trapped in the province during the Fourth Zhili-Fengtian War in 1928. In the years since, Shandong has become both a refuge and a prison, where his illegal but tolerated presence remains under the shadow of the Qing government in Beijing. More recently, a bout of seemingly incurable sickness drew him up the 6,600 steps to a Yiguandao doctor. Zongchang eventually met the Yiguandao’s Honoured Teacher, Zhang Tianran himself. Whether it was his sickness or the lack of anything else to do up on Mount Tai, Zongchang promised Tianran that he would follow the esoteric lifestyle espoused by the cult for his health."
 
  SQI_zhang_tianran: "Zhang Tianran"
  SQI_zhang_tianran_leader_desc: "Tianran aspired to nothing in his life until he was introduced into the cult of Lu Zhongyi. Lu Zhongyi was the leader of a small group of religious syncretists called the Yiguandao in 1918. Lu Zhongyi had always planned for his sister Lu Zhongjie to succeed him to lead the Yiguandao, and had even recognised her supposed divinity as the reincarnation of the Buddhist God Guan Yin. A theological schism occurred after the passing of Lu Zhongyi in 1930, wherein Lu Zhongjie took followers loyal to her out of the Yiguandao and relocated to Henan, where they remain to this day. Tianran, having the full trust of his members as well as a newly divined wife Sun Suzhen, began to tell startling revelations. In 1922, Tianran had built a shrine on Mount Tai, which grew until it encompassed the other monasteries on the mountain. By 1924 Mount Tai had become the year-round home for Zhang Tianran and his inner circle. A spirit writing session that same year foretold Emperor Puyi was in danger of being poisoned, and a trip to Beijing was planned. Tianran amused and flattered Emperor Puyi with promises that the Yiguandao would reinforce loyalty to the Qing through charity and warfare if need be. The first Red Spears and Big Swords arrived to Mount Tai in 1925. The greatest catch was Tianran’s supposed conversion of Zhang Zongchang in 1935."
@@ -25,51 +25,51 @@
  SQI_han_enrong: "Han Enrong"
  SQI_lu_zhongjie: "Lu Zhongjie"
  SQI_kong_dechong: "Kong Dechong"
+ SQI_ma_liang: "Ma Liang"
 
  SQI_li_jinglin: "Li Jinglin"
- SQI_li_jinglin_commander_desc: "§YGeneral Description\n§YBorn:§L\n1885\nZaoqiang, Zhili, Qing Empire\n§YMilitary Career:§L\nFirst appearing onto the public scene as a graduate of Baoding Beiyang Army School in 1907, Li Jinglin was one of hundreds of young officers caught up in the swell of partisan military activity. Li's first major decoration was in fighting the Wuchang Uprising of 1911. An association with Anhui general Qu Tongfeng guided Li towards clique politics during the republican years. Like Qu Tongfeng, who was cast out of the Anhui Clique for corruption, Li was set adrift and found his way into the Fengtian clique in 1924. Grand Marshal Zhang Zuolin reassigned Li that year to Zhang Zongchang, who was fighting in Zhili. Li was initially impressed with Zhang Zongchang's ability in spite of his lack of manners, but this appraisal turned sour by 1928, when Zongchang became entrenched in Shandong. Li, despite his history of corruption, could not properly pay his division on taxes collected honestly in Shandong. Li, having taken inspiration from the declaration of Xue Dian as the Yiguandao's minor Emperor in Shandong, decided to present himself as spiritually enlightened. Li publicly began training in Wudang swordsmanship, and named himself 'the Magic Sword' to provide an air of mystery. This ultimately caught the attention of Zhang Tianran who has given Li several offers to train with Big Sword militias at Taishan."
-
- SQI_feng_anbang: "Feng Anbang"
- SQI_feng_anbang_commander_desc: "§YGeneral Description\n§YBorn:§L\n1884\nWudi, Shandong, Qing Empire\n§YMilitary Career:§L\nKnown from a young age for his bravery, Feng's military career began in the warlord Feng Yuxiang's 16th Mixed Brigade during the late 19th century. This service continued when Feng Yuxiang joined Yuan Shikai, and ended in Feng Anbang's desertion of Feng Yuxiang following Zhang Xun's failure in 1917. This betrayal led Feng Anbang into the Anhui Clique, and served as an infantry commander for them until 1924. This relationship ended when Feng Anbang was accused of taking bribes, leading to a forced retirement to Shandong. Feng's experience commanding infantry was not forgotten, and he was hired by the incoming Zhang Zongchang to train his army in 1931. In exchange, Zongchang forwarded a pardon for Feng's crimes from Zhang Zuolin, which enables Feng to move freely once more. Feng commanded some of Zongchang's soldiers throughout the early 1930s to assault bandit holdings in central Shandong, becoming recognised for his discipline above most commanders in Shandong."
+ SQI_li_jinglin_commander_desc: "§YGeneral Description\nBorn:§! §g1885, in Zaoqiang, Zhili, Qing Empire§!\n§YMilitary Career:§! §gFirst appearing onto the public scene as a graduate of Baoding Beiyang Army School in 1907, Li Jinglin was one of hundreds of young officers caught up in the swell of partisan military activity. Li's first major decoration was in fighting the Wuchang Uprising of 1911. An association with Anhui general Qu Tongfeng guided Li towards clique politics during the republican years. Like Qu Tongfeng, who was cast out of the Anhui Clique for corruption, Li was set adrift and found his way into the Fengtian clique in 1924. Grand Marshal Zhang Zuolin reassigned Li that year to Zhang Zongchang, who was fighting in Zhili. Li was initially impressed with Zhang Zongchang's ability in spite of his lack of manners, but this appraisal turned sour by 1928, when Zongchang became entrenched in Shandong. Li, despite his history of corruption, could not properly pay his division on taxes collected honestly in Shandong. Li, having taken inspiration from the declaration of Xue Dian as the Yiguandao's minor Emperor in Shandong, decided to present himself as spiritually enlightened. Li publicly began training in Wudang swordsmanship, and named himself 'the Magic Sword' to provide an air of mystery. This ultimately caught the attention of Zhang Tianran who has given Li several offers to train with Big Sword militias at Taishan."
 
  SQI_zhang_huaizhi: "Zhang Huaizhi"
- SQI_zhang_huaizhi_commander_desc: "§YGeneral Description\n§YBorn:§L\n1862\nDong'e, Shandong, Qing Empire\n§YMilitary Career:§L\nBorn into poverty in the era of humiliation, Zhang Huaizhi began life as a farmer in between bouts of poverty. The Zhang family, seeing the future in western businesses up north, moved Huizhi to Tianjin at a young age. As a student at the Tianjing military equipment school, Zhang Huaizhi join in the Boxer rebellion with his regiment, and was commended for bombarding the Legation quarter. The guilt of losing to the westerners drove the disgraced Zhang into the army of Yuan Shikai, whose ambitious goal of becoming an Emperor felt like more of a natural evolution for Zhang than republicanism. After Yuan died, Zhang fell in with the Anhui clique, and briefly served under Zhang Shuyuan as an administrator in Shandong in 1918. Zhang eventually failed his leader again after his regiment fell fighting in Hunan. This left Zhang Huaizhi destitute again, and the only people who would take him was the Yiguandao. Citing his age, experience, and service against western imperialism, Zhang Tianran appointed Zhang Huaizhi a commander of the Red Spears of Shandong."
+ SQI_zhang_huaizhi_commander_desc: "§YGeneral Description\nBorn:§! §g1862, in Dong'e, Shandong, Qing Empire§!\n§YMilitary Career:§! §gBorn into poverty in the era of humiliation, Zhang Huaizhi began life as a farmer in between bouts of poverty. The Zhang family, seeing the future in western businesses up north, moved Huizhi to Tianjin at a young age. As a student at the Tianjing military equipment school, Zhang Huaizhi join in the Boxer rebellion with his regiment, and was commended for bombarding the Legation quarter. The guilt of losing to the westerners drove the disgraced Zhang into the army of Yuan Shikai, whose ambitious goal of becoming an Emperor felt like more of a natural evolution for Zhang than republicanism. After Yuan died, Zhang fell in with the Anhui clique, and briefly served under Zhang Shuyuan as an administrator in Shandong in 1918. Zhang eventually failed his leader again after his regiment fell fighting in Hunan. This left Zhang Huaizhi destitute again, and the only people who would take him was the Yiguandao. Citing his age, experience, and service against western imperialism, Zhang Tianran appointed Zhang Huaizhi a commander of the Red Spears of Shandong."
 
  SQI_xu_yuanquan: "Xu Yuanquan"
- SQI_xu_yuanquan_commander_desc: "§YGeneral Description\n§YBorn:§L\n1886\nHuangzhou, Hubei, Qing Empire\n§YMilitary Career:§L\nXu began his military career in the Hubei Military Equipment Academy, excelling in his studies. By the 1910s he had graduated to the Nanjing IVth Army School, where he became politically active. In 1912, Xu cooperated with the Nanjing Interim Government, rallying students in favour of revolution against the Qing. Xu used this political position to lead the Guangfu Cavalry regiment in 1913, briefly spending time in Xinjiang as well. Xu was send with the 6th Mixed Brigade Battalion into Shandong for the KMT to secure the province. Xu was unable to secure the province upon Zhang Zongchang's arrival in 1926. Xu choose to betray the KMT and surrender his brigade to Zongchang, while remaining untrustworthy to Zongchang. Xu was instrumental in riling Zongchang into feeling insecure, ultimately causing him to remain in Shandong during the 1928 offensive. Xu developed an addiction to opium during this time, and became complicit in the drug trade in Shandong, leading to a reduced discipline in his ranks."
+ SQI_xu_yuanquan_commander_desc: "§YGeneral Description\nBorn:§! §g1886, in Huangzhou, Hubei, Qing Empire§!\n§YMilitary Career:§! §gXu began his military career in the Hubei Military Equipment Academy, excelling in his studies. By the 1910s he had graduated to the Nanjing IVth Army School, where he became politically active. In 1912, Xu cooperated with the Nanjing Interim Government, rallying students in favour of revolution against the Qing. Xu used this political position to lead the Guangfu Cavalry regiment in 1913, briefly spending time in Xinjiang as well. Xu was send with the 6th Mixed Brigade Battalion into Shandong for the KMT to secure the province. Xu was unable to secure the province upon Zhang Zongchang's arrival in 1926. Xu choose to betray the KMT and surrender his brigade to Zongchang, while remaining untrustworthy to Zongchang. Xu was instrumental in riling Zongchang into feeling insecure, ultimately causing him to remain in Shandong during the 1928 offensive. Xu developed an addiction to opium during this time, and became complicit in the drug trade in Shandong, leading to a reduced discipline in his ranks."
 
  SQI_hakuro_kohinata: "Hakurō Kohinata"
- SQI_hakuro_kohinata_commander_desc: "§YGeneral Description\n§YBorn:§L\n1900\nSanjo-shi, Niigata, Japanese Empire\n§YMilitary Career:§L\nFrom a young age Kohinata was interested in the reports of far-off Tibet, China and Germany as reported by Fukushima Yasumasa. Kohinata took this interest into a career first by joining the Japanese Kwantung Army, serving as a colonel under Sakamoto Rihachiro in Manchuria. Kohinata deserted the Kwantung military in 1920 to visit the mysterious Urga in Mongolia, being captured by bandits on his journey. The bandits took a liking to Kohinata, and allowed him to join their gang of horse thieves. These horse thieves taught Kohinata Daoism, martial arts, and gave him the name 'Asahi-Higashi' - 'Gun of the Devil'. When the Qing were restored, Kohinata began going by the pseudonym Shao, hiding his Japanese ancestry. Kohinata was captured by Zhang Zuolin and initially sentenced to death, but was pardoned on the stipulation that he serve Zhang Zongchang in 1928. Kohinata joined the Zongchang clique, and has been instrumental in maintaining the army's flexible cavalry corps to counter more advanced army innovations elsewhere."
+ SQI_hakuro_kohinata_commander_desc: "§YGeneral Description\nBorn:§! §g1900, in Sanjo-shi, Niigata, Japanese Empire§!\n§YMilitary Career:§! §gFrom a young age Kohinata was interested in the reports of far-off Tibet, China and Germany as reported by Fukushima Yasumasa. Kohinata took this interest into a career first by joining the Japanese Kwantung Army, serving as a colonel under Sakamoto Rihachiro in Manchuria. Kohinata deserted the Kwantung military in 1920 to visit the mysterious Urga in Mongolia, being captured by bandits on his journey. The bandits took a liking to Kohinata, and allowed him to join their gang of horse thieves. These horse thieves taught Kohinata Daoism, martial arts, and gave him the name 'Asahi-Higashi' - 'Gun of the Devil'. When the Qing were restored, Kohinata began going by the pseudonym Shao, hiding his Japanese ancestry. Kohinata was captured by Zhang Zuolin and initially sentenced to death, but was pardoned on the stipulation that he serve Zhang Zongchang in 1928. Kohinata joined the Zongchang clique, and has been instrumental in maintaining the army's flexible cavalry corps to counter more advanced army innovations elsewhere."
 
  SQI_junnosuke_date: "Junnosuke Date"
- SQI_junnosuke_date_commander_desc: "§YGeneral Description\n§YBorn:§L\n1892\nTokyo, Japanese Empire\n§YMilitary Career:§L\nDate is the runt of the respected and long-lasting Date clan. The original Date clan being the samurai of the Mutsu Province, and included high ranking ministers. Date's family connections saved his life when in 1909 he murdered a fellow student in a rival gang. Date was saved from execution by the legal work of Iwai Saburo, Japan's first detective. While in prison, Date joined the Oomoto Church, which was popular with young officers at the time. Date was released from prison in 1916, and travelled to Manchuria. A plan to assassinate Zhang Zuolin by Prince Yamagata Aritomo ran afoul with Zuolin, forcing Date to swear loyalty to him. Date assigned himself to Zongchang's army in 1929, initially to teach the mercenaries Japanese cavalry tactics. A sober member of Zongchang's clique, Date brings his family's banner to the war for China. "
+ SQI_junnosuke_date_commander_desc: "§YGeneral Description\nBorn:§! §g1892, in Tokyo, Japanese Empire§!\n§YMilitary Career:§! §gDate is the runt of the respected and long-lasting Date clan. The original Date clan being the samurai of the Mutsu Province, and included high ranking ministers. Date's family connections saved his life when in 1909 he murdered a fellow student in a rival gang. Date was saved from execution by the legal work of Iwai Saburo, Japan's first detective. While in prison, Date joined the Oomoto Church, which was popular with young officers at the time. Date was released from prison in 1916, and travelled to Manchuria. A plan to assassinate Zhang Zuolin by Prince Yamagata Aritomo ran afoul with Zuolin, forcing Date to swear loyalty to him. Date assigned himself to Zongchang's army in 1929, initially to teach the mercenaries Japanese cavalry tactics. A sober member of Zongchang's clique, Date brings his family's banner to the war for China. "
 
  SQI_sun_dianying: "Sun Dianying"
- SQI_sun_dianying_commander_desc: "§YGeneral Description\n§YBorn:§L\n1888\nYongchang, Henan, Qing Empire\n§YMilitary Career:§L\nSun Dianying grew up in poverty, holding to the belief that he was descended from the Ming major general Sun Chengzong, and holding a rivalry with the legitimate descendant Sun Yue. Sun quarrelled with his teachers from a young age, and set fire to his school when he dropped out. Sun then became addicted to gambling and opium, and joined the Yangshan bandit Zhang Ping while still a child. Sun also joined the Temple Road Society, a folk religion, and eventually rose into a leadership position within the society. Sun convinced the society to join the Mount Song Pacification Force, an anti-bandit group composed of former bandits. After being routed and witnessing Han Yukun's suicide in 1925, Sun deserted with loyal soldiers. These soldiers entered Bozhou, Anhui, and swore allegiance to the KMT as cover. When the Northern Expedition crumbled in 1927, Sun took his men into Ningxia. There the soldiers showed extreme prejudice in raiding the countryside, attaching religious significance to their banditry. The Ma Clique retaliated, and Sun's bandits retreated to Shandong in 1928. Sun Dianying was pardoned by Zhang Zuolin as part of an agreement to join Zongchang's clique."
+ SQI_sun_dianying_commander_desc: "§YGeneral Description\nBorn:§! §g1888, in Yongchang, Henan, Qing Empire§!\n§YMilitary Career:§! §gSun Dianying grew up in poverty, holding to the belief that he was descended from the Ming major general Sun Chengzong, and holding a rivalry with the legitimate descendant Sun Yue. Sun quarrelled with his teachers from a young age, and set fire to his school when he dropped out. Sun then became addicted to gambling and opium, and joined the Yangshan bandit Zhang Ping while still a child. Sun also joined the Temple Road Society, a folk religion, and eventually rose into a leadership position within the society. Sun convinced the society to join the Mount Song Pacification Force, an anti-bandit group composed of former bandits. After being routed and witnessing Han Yukun's suicide in 1925, Sun deserted with loyal soldiers. These soldiers entered Bozhou, Anhui, and swore allegiance to the KMT as cover. When the Northern Expedition crumbled in 1927, Sun took his men into Ningxia. There the soldiers showed extreme prejudice in raiding the countryside, attaching religious significance to their banditry. The Ma Clique retaliated, and Sun's bandits retreated to Shandong in 1928. Sun Dianying was pardoned by Zhang Zuolin as part of an agreement to join Zongchang's clique."
 
  SQI_zhang_jingyao: "Zhang Jingyao"
- SQI_zhang_jingyao_commander_desc: "§YGeneral Description\n§YBorn:§L\n1881\nHuoqui, Anhui, Qing Empire\n§YMilitary Career:§L\nZhang showed criminal inclinations from a young age, being accused of murder at age 15 in Anhui. Zhang fled Anhui shortly after for Beijing, and fell into the sphere of Yuan Shikai. Zhang trained at Baoding Army Hall in 1911, and assigned to the 11th Army 22nd Regiment under Yuan Shikai. Zhang appealed and was transferred to a marine division to fight the KMT in 1913. This campaign saw him occupy Luzhou, Sichuan in 1915. Zhang betrayed Yuan Shikai and joined the Anhui clique in 1917. Zhang appealed and was denied governorship of Hunan in 1918. Jingyao decided to engage in grifts between the Anhui clique, and later to Zhongchang after the rise of the League of Eight Provinces. Zhang became Zongchang's 2nd Army Chief in 1926, and changed his name to Chang Shigu to hide his warrent for murder. Zhang Jingyao is known for believing in any conspiracy he is told, and being a part of at least half of them."
+ SQI_zhang_jingyao_commander_desc: "§YGeneral Description\nBorn:§! §g1881, in Huoqui, Anhui, Qing Empire§!\n§YMilitary Career:§! §gZhang showed criminal inclinations from a young age, being accused of murder at age 15 in Anhui. Zhang fled Anhui shortly after for Beijing, and fell into the sphere of Yuan Shikai. Zhang trained at Baoding Army Hall in 1911, and assigned to the 11th Army 22nd Regiment under Yuan Shikai. Zhang appealed and was transferred to a marine division to fight the KMT in 1913. This campaign saw him occupy Luzhou, Sichuan in 1915. Zhang betrayed Yuan Shikai and joined the Anhui clique in 1917. Zhang appealed and was denied governorship of Hunan in 1918. Jingyao decided to engage in grifts between the Anhui clique, and later to Zhongchang after the rise of the League of Eight Provinces. Zhang became Zongchang's 2nd Army Chief in 1926, and changed his name to Chang Shigu to hide his warrant for murder. Zhang Jingyao is known for believing in any conspiracy he is told, and being a part of at least half of them."
 
  SQI_qu_tongfeng: "Qu Tongfeng"
- SQI_qu_tongfeng_admiral_desc: "§YAdmiral Description\n§YBorn:§L\n1873\nYantai, Shandong, Qing Empire\n§YNaval Career:§L\nAt age 16, Tongfeng joined the Beiyang Fleet, and served as engineer on the Dingyuan Battleship which is a modern marvel in Northern China. Siding with Yuan Shikai, Qu entered the Tianjin Naval School, and furthered his education at the Imperial Japanese Army Academy, which he graduated from in 1904. Qu returned to China and served as instructor at the Wuyang Academy of Military Sciences in 1910. Initially cooperating with the Republicans in the Wuchang uprising of 1911, Qu bounced around to different posts in the Republic, eventually returning to Yuan briefly before running the Shandong Military Affairs Office in 1916. Qu made an agreement in 1917 with Li Yuanhong to sell mineral rights to an aluminium mine in Shandong to Japan, and allow shipments out of Yantai. The Anhui Clique in 1920, feuding with Li Yanhong, rescinded this right and requested Qu to Nanjing to stand trial. Rather than stand trial, Qu faked illness and postponed his trip until the Anhui Clique became disinterested in 1925. A letter from Sun Yat Sen, requesting Qu rally himself against Wu Peifu stirred him into action, attempting to organise a force in Shandong to join. This force choose to fight Zhang Zongchang upon his arrival to Shandong in 1926, being soundly defeated, and Qu went into hiding. The lack of central authority, and the idea that Sun Yat Sen ordered him to fight but he failed weighed heavily on Qu. Qu was then invited to Fengtian by Zhang Zuolin, who offered to redeem Qu if he joined the Beiyang Navy. Qu, distrusting the Japanese presence in Manchuria, refused and left. Qu is recalled once again, when the current leader of Shandong asks to rebuild the Beiyang Fleet in earnest in Shandong, motivated by a promise to Sun Chuanfang to fight Wu Peifu. "
+ SQI_qu_tongfeng_commander_desc: "§YGeneral Description\nBorn:§! §g1873, in Yantai, Shandong, Qing Empire§!\n§YMilitary Career:§! §gAt age 16, Tongfeng joined the Beiyang Fleet, and served as engineer on the Dingyuan Battleship which is a modern marvel in Northern China. Siding with Yuan Shikai, Qu entered the Tianjin Naval School, and furthered his education at the Imperial Japanese Army Academy, which he graduated from in 1904. Qu returned to China and served as instructor at the Wuyang Academy of Military Sciences in 1910. Initially cooperating with the Republicans in the Wuchang uprising of 1911, Qu bounced around to different posts in the Republic, eventually returning to Yuan briefly before running the Shandong Military Affairs Office in 1916. Qu made an agreement in 1917 with Li Yuanhong to sell mineral rights to an aluminium mine in Shandong to Japan, and allow shipments out of Yantai. The Anhui Clique in 1920, feuding with Li Yanhong, rescinded this right and requested Qu to Nanjing to stand trial. Rather than stand trial, Qu faked illness and postponed his trip until the Anhui Clique became disinterested in 1925. A letter from Sun Yat-sen, requesting Qu rally himself against Wu Peifu stirred him into action, attempting to organise a force in Shandong to join. This force choose to fight Zhang Zongchang upon his arrival to Shandong in 1926, being soundly defeated, and Qu went into hiding. The lack of central authority, and the idea that Sun Yat-sen ordered him to fight but he failed weighed heavily on Qu. Qu was then invited to Fengtian by Zhang Zuolin, who offered to redeem Qu if he joined the Beiyang Navy. Qu, distrusting the Japanese presence in Manchuria, refused and left. Qu is recalled once again, when the current leader of Shandong asks for his return to Shandong, motivated by a promise to Sun Chuanfang to fight. "
+
+ SQI_jin_yune: "Jin Yune"
 
  SQI_li_lijiu: "Li Lijiu"
- SQI_li_lijiu_commander_desc: "§YGeneral Description\n§YBorn:§L\n1897\nNingjin, Zhili, Qing Empire\n§YMilitary Career:§L\nFrom a young age, Li Lijiu was sickly and dependant. According to his later accounts, Li Lijiu was cured by a Yiguandao practitioner using traditional medicine. This healing put Li Lijiu squarely in the realm of the faithful as an adult. It was around this time the young Li Lijiu began to study martial arts. In 1925 he served as a martial arts coach for the Henan Army. Since then, he has been cavorting with various warlords. In 1935, Li came to Nanjing and stayed at his martial arts master Du Xinwu's home. Soon, he became interested in the Yiguandao. The first delivery of tithing to Shandong catapulted Li Lijiu into Zhang Tianran's inner circle. Li Lijiu has returned the favour by dedicating himself to the Red Spears Societies in Shandong, promising to liberate Nanjing and eventually his friend Zhou Fohai from the KMT's socialist overlords."
+ SQI_li_lijiu_commander_desc: "§YGeneral Description\nBorn:§! §g1897, in Ningjin, Zhili, Qing Empire§!\n§YMilitary Career:§! §gFrom a young age, Li Lijiu was sickly and dependant. According to his later accounts, Li Lijiu was cured by a Yiguandao practitioner using traditional medicine. This healing put Li Lijiu squarely in the realm of the faithful as an adult. It was around this time the young Li Lijiu began to study martial arts. In 1925 he served as a martial arts coach for the Henan Army. Since then, he has been cavorting with various warlords. In 1935, Li came to Nanjing and stayed at his martial arts master Du Xinwu's home. Soon, he became interested in the Yiguandao. The first delivery of tithing to Shandong catapulted Li Lijiu into Zhang Tianran's inner circle. Li Lijiu has returned the favour by dedicating himself to the Red Spears Societies in Shandong, promising to liberate Nanjing and eventually his friend Zhou Fohai from the KMT's socialist overlords."
 
  SQI_lu_yongxiang: "Lu Yongxiang"
- SQI_lu_yongxiang_commander_desc: "§YGeneral Description\n§YBorn:§L\n1867\nJinan, Shandong, Qing Empire\n§YMilitary Career:§L\nLu Yongxiang began his military career as a graduate of the Tianjing Wubian Military Academy in the late 19th century. First as a soldier under the Qing statesman Li Hongzhang, then as an instructor at the Wuwei Army Battalion in Shandong. Lu Yongxiang spent the first decade of the 20th century rising through the ranks in Shandong, eventually leading the 20th division Qing New Army against the Xinhai Revolution. Lu's experience and loyalty bought him th title of 'Baron' in Yuan Shikai's Beiyang Army in 1912. After Yuan Shikai's death, Lu joined the Anhui Clique, and served under their clique for several years. Lu Yongxiang led a failed attack on the League under Sun Chuanfang during their struggle with the Anhui Clique, and made a hastily escape to Japan upon his defeat. Unwilling to abandon his home, Lu Yongxiang requested that Grand Marshal Zhang Zuolin find some way for Lu to return to Shandong safely. This return came under the banner of General Zhang Zongchang, who made Lu an important propaganda piece in his struggle against the Northern Expedition. Lu returned to Jinan only to find his hometown overcome with vice. the elder Lu quickly fell into opium addiction in an attempt to reconnect with his home."
+ SQI_lu_yongxiang_commander_desc: "§YGeneral Description\nBorn:§! §g1867, in Jinan, Shandong, Qing Empire§!\n§YMilitary Career:§! §gLu Yongxiang began his military career as a graduate of the Tianjing Wubian Military Academy in the late 19th century. First as a soldier under the Qing statesman Li Hongzhang, then as an instructor at the Wuwei Army Battalion in Shandong. Lu Yongxiang spent the first decade of the 20th century rising through the ranks in Shandong, eventually leading the 20th division Qing New Army against the Xinhai Revolution. Lu's experience and loyalty bought him th title of 'Baron' in Yuan Shikai's Beiyang Army in 1912. After Yuan Shikai's death, Lu joined the Anhui Clique, and served under their clique for several years. Lu Yongxiang led a failed attack on the League under Sun Chuanfang during their struggle with the Anhui Clique, and made a hastily escape to Japan upon his defeat. Unwilling to abandon his home, Lu Yongxiang requested that Grand Marshal Zhang Zuolin find some way for Lu to return to Shandong safely. This return came under the banner of General Zhang Zongchang, who made Lu an important propaganda piece in his struggle against the Northern Expedition. Lu returned to Jinan only to find his hometown overcome with vice. the elder Lu quickly fell into opium addiction in an attempt to reconnect with his home."
 
  SQI_lin_jianzhang: "Lin Jianzhang"
- SQI_lin_jianzhang_commander_desc: "§YAdmiral Description\n§YBorn:§L\n1874\nFuzhou, Fujian, Qing Empire\n§YNaval Career:§L\nLin Jianzhang began his naval career with an immediate appreciation and boldness in new technology. As a native of Fujian, Lin joined the Imperial Chinese Navy, and graduated from the newly-established Kiangnan Naval Academy. Lin demonstrated this boldness during the Xinhai Revolution by launching a rescue mission up the Yangtze river against the republicans. Lin was rewarded for this act by the Nanjing Provisional Government by being promoted to Admiral and given the flagship Nan Shun battleship. This promotion saw Lin's entanglement in chinese politics, and his eventual defection to the Zhili Clique. After the Qing Restoration, Lin declared his fleet independent, and sailed it to Shanghai. This action nearly cost Lin his life, when his fleet deposed him and left him at Yantai. Humiliated yet skilled, Lin became the perfect target for recruitment into Zhang Zuolin's Fengtian Clique, which paid his salary as he was assigned to rebuild a fleet at Yantai."
+ SQI_lin_jianzhang_commander_desc: "§YAdmiral Description\nBorn:§! §g1874, in Fuzhou, Fujian, Qing Empire§!\n§YNaval Career:§! §gLin Jianzhang began his naval career with an immediate appreciation and boldness in new technology. As a native of Fujian, Lin joined the Imperial Chinese Navy, and graduated from the newly-established Kiangnan Naval Academy. Lin demonstrated this boldness during the Xinhai Revolution by launching a rescue mission up the Yangtze River against the republicans. Lin was rewarded for this act by the Nanjing Provisional Government by being promoted to Admiral and given the flagship Nan Shun battleship. This promotion saw Lin's entanglement in chinese politics, and his eventual defection to the Zhili Clique. After the Qing Restoration, Lin declared his fleet independent, and sailed it to Shanghai. This action nearly cost Lin his life, when his fleet deposed him and left him at Yantai. Humiliated yet skilled, Lin became the perfect target for recruitment into Zhang Zuolin's Fengtian Clique, which paid his salary as he was assigned to rebuild a fleet at Yantai."
 
  SQI_zhao_hong_wenguo: "Zhao Hong Wenguo"
- SQI_zhao_hong_wenguo_commander_desc: "Hong Wenguo was born in Hongqigou, Xiuyan, Fengtian in 1881 to an impoverished family. Zhao experienced the events of the First Sino-Japanese War at the age of 14. Zhao married Zhao Yuhuang in 1898, taking his surname, and had 5 sons and 3 daughters. One of her sons, Zhao Dong, became a university professor at Dongbei University. Through her hard work, Madame Zhao gained respect in her village community and improved her family’s financial situation, elevating them to a higher position. When Zhang Zuolin declared her family traitors and bandits in 1930, Zhao took up arms to defend herself. Zhao evacuated her town of Xiyuan ahead of Zhang Zuolin's gendarmerie, and was said to have shot Zuolin's soldiers with two hidden pistols, earning the nickname 'Two Gun Grandma'."
+ SQI_zhao_hong_wenguo_commander_desc: "§YGeneral Description\nBorn:§! §g1881, in Xiuyan, Fengtian, Qing Empire§!\n§YMilitary Career:§! §gHong Wenguo was born in Hongqigou, Xiuyan, Fengtian in 1881 to an impoverished family. Zhao experienced the events of the First Sino-Japanese War at the age of 14. Zhao married Zhao Yuhuang in 1898, taking his surname, and had 5 sons and 3 daughters. One of her sons, Zhao Dong, became a university professor at Dongbei University. Through her hard work, Madame Zhao gained respect in her village community and improved her family’s financial situation, elevating them to a higher position. When Zhang Zuolin declared her family traitors and bandits in 1930, Zhao took up arms to defend herself. Zhao evacuated her town of Xiyuan ahead of Zhang Zuolin's gendarmerie, and was said to have shot Zuolin's soldiers with two hidden pistols, earning the nickname 'Two Gun Grandma'."
 
  SQI_xue_dian: "Xue Dian"
- SQI_xue_dian_commander_desc: "A long and steady career studying Xinji Quan martial arts in Tianjin defined Xue Dian's early years. Xue studied with Masters Li Cunyi, Li Taihe, and Xue Zhengang. When Xue was defeated in a challenge match against Fu Jianqiu, he had to leave town due to cultural rules about martial arts competition. Xue went into this exile in 1925 and went to Shandong, where a chance encounter with Zhang Tianran changed his life. Zhang Tianran gave Xue Dian lifestyle and prayer lessons, which enabled Xue Dian to return to Tianjin and beat Fu Jianqiu. In thanks, Xue Dian tithed his martial arts academy in Tianjin to the Yiguandao, and joined the Yiguandao's charitable organisation. In 1926, Xue Dian attended a secret meeting between the Red Spears and Zhang Tianran, and was made Minor Emperor of Shandong under the Yiguandao in order to lead the Red Spears in military and spiritual training."
+ SQI_xue_dian_commander_desc: "§YGeneral Description\nBorn:§! §g1887, in Shulu, Hebei, Qing Empire§!\n§YMilitary Career:§! §gA long and steady career studying Xinji Quan martial arts in Tianjin defined Xue Dian's early years. Xue studied with Masters Li Cunyi, Li Taihe, and Xue Zhengang. When Xue was defeated in a challenge match against Fu Jianqiu, he had to leave town due to cultural rules about martial arts competition. Xue went into this exile in 1925 and went to Shandong, where a chance encounter with Zhang Tianran changed his life. Zhang Tianran gave Xue Dian lifestyle and prayer lessons, which enabled Xue Dian to return to Tianjin and beat Fu Jianqiu. In thanks, Xue Dian tithed his martial arts academy in Tianjin to the Yiguandao, and joined the Yiguandao's charitable organisation. In 1926, Xue Dian attended a secret meeting between the Red Spears and Zhang Tianran, and was made Minor Emperor of Shandong under the Yiguandao in order to lead the Red Spears in military and spiritual training."
 
  SQI_boris_annenkov: "Boris Annenkov"
- SQI_boris_annenkov_commander_desc: "§YGeneral Description\n§YBorn:§L\n1890\nNovgorod Province, Russian Empire\n§YMilitary Career:§L\nA veteran of the Siberian Cossack Army and the Great War, Boris Annenkov organized and led anti-Bolshevik Cossack forces in the Semipalatinsk and Semirechye areas between 1918 and 1920. With the end of the civil war Annenkov found himself court martialed and imprisoned, ostensibly as a result of political machinations beyond his control. According to his tale, Annenkov escaped prison in 1924 and fled across the Sino-Russian border into Xinjiang, eventually finding his way to Shanghai. General Zhang Zongchang, at the time the de-facto ruler of the city, hired Boris as an officer to lead his Russian mercenary forces. So far, Boris is the highest ranking Russian commander in China proper, a title he covets."
+ SQI_boris_annenkov_commander_desc: "§YGeneral Description\nBorn:§! §g1890, in Novgorod Province, Russian Empire§!\n§YMilitary Career:§! §gA veteran of the Siberian Cossack Army and the Great War, Boris Annenkov organised and led anti-Bolshevik Cossack forces in the Semipalatinsk and Semirechye areas between 1918 and 1920. With the end of the civil war Annenkov found himself court martialed and imprisoned, ostensibly as a result of political machinations beyond his control. According to his tale, Annenkov escaped prison in 1924 and fled across the Sino-Russian border into Xinjiang, eventually finding his way to Shanghai. General Zhang Zongchang, at the time the de-facto ruler of the city, hired Boris as an officer to lead his Russian mercenary forces. So far, Boris is the highest ranking Russian commander in China proper, a title he covets."
 
  SQI_liu_zhennian: "Liu Zhennian"
 
@@ -91,7 +91,7 @@
  SQI_flight_north_desc: "Thousands flee to Shandong to escape the disarray to the south. Pushed by warlords’ levies and pulled by Yiguandao salvationist promises, Zongchang's relaxed rule offers at least temporary asylum. Whomever rules will decide the fate of these refugees."
 
  SQI_Rampant_drug_trade: "Rampant Drug Trade"
- SQI_Rampant_drug_trade_desc: "Zhang Zongchang's own weakness for opium has spread to the Shandong population, much to the peoples' dismay. As the price of the drug rises, violence and extortion escelates. The Yiguandao and Ren Ci are attempting to combat the drug trade."
+ SQI_Rampant_drug_trade_desc: "Zhang Zongchang's own weakness for opium has spread to the Shandong population, much to the peoples' dismay. As the price of the drug rises, violence and extortion escalates. The Yiguandao and Ren Ci are attempting to combat the drug trade."
 
  SQI_Yiguandao_revolt: "Yiguandao Revolt"
  SQI_Yiguandao_revolt_desc: "The protocols given to the Yiguandao should Tianran fall in his sacred mission have been deployed by the remaining minor Emperors and second-level Managers. The Yiguandao are currently asking followers to burn their possessions and relocate to grotto-heavens in preparation for the delusional Maha-Kalpa, the apocalypse. We cannot recruit or tax people in this frenzied state."
@@ -109,7 +109,7 @@
  SQI_flight_to_safety_desc: "After years of banditry disguised as governance, and deception by religious manipulators, Shandong is finally free. The people of Shandong will rejoice and prosper when the drugs are finally burned in a large bonfire."
 
  SQI_Loyal_citizens: "Loyal Citizens"
- SQI_Loyal_citizens_desc: "Finally the fallout of the riots is over, and the people of Shandong shall rejoice with renewaled zeal to change China as a whole. As a result, tax collectors have been able to offer tax credits and refunds to the loyal citizenry."
+ SQI_Loyal_citizens_desc: "Finally the fallout of the riots is over, and the people of Shandong shall rejoice with renewed zeal to change China as a whole. As a result, tax collectors have been able to offer tax credits and refunds to the loyal citizenry."
 
  SQI_controlled_drug_trade: "Controlled Drug Trade"
  SQI_controlled_drug_trade_desc: "Unregulated opium plantations have been subordinated under Zongchang's government at last. The illegal trade with Qingdao and Weihaiwei finally formalised and taxed by the Zongchang clique. The informal legality of drug use is now finalised."
@@ -121,7 +121,7 @@
  SQI_Japanese_military_assistance_desc: "The Japanese officer corps, invited by Junnosuke Date, have made a strong impact on our military formations. Some divisions must now learn commands in japanese, and experts of Black Dragon Society pamphlets are now commonly referred in motivating soldiers."
 
  SQI_German_military_assistance: "German Officer Training"
- SQI_German_military_assistance_desc: "The GEA's advisors have made a strong impact on the officer corp in Shandong. In inclusion to the standard prussian-style military drilling, the company advisors have given lessons in purchasing and preserving the value of military equipment for resale after China is won."
+ SQI_German_military_assistance_desc: "German East Asia's advisors have made a strong impact on the officer corp in Shandong. In inclusion to the standard prussian-style military drilling, the company advisors have given lessons in purchasing and preserving the value of military equipment for resale after China is won."
 
  SQI_Legation_military_assistance: "Legation Officer Training"
  SQI_Legation_military_assistance_desc: "The American, British and French mercenary advisors hired by the Legation cities have taken to their task swimmingly. Officers now know a variety of new insults in new languages, and have gained several new undiscovered venereal diseases. All in all a positive gain."
@@ -133,10 +133,10 @@
  SQI_big_swords_desc: "The Big Swords of northern China have finally fully endorsed the Yiguandao, and are determined to fight on our side. Their leaders believe in the spiritual nature of the struggle for China against foreign devils."
 
  SQI_Guiyidao_support: "Guiyidao Support"
- SQI_Guiyidao_support_desc: "The imitation of Tianran's Chinese Morality and Charity Organisation has finally superceded its inspiration, the Guiyidao. In the best interests of the chinese people, Zhang Tianran has assumed control of the Red Swastika Society facilities in Shandong, and promised to protect the Guiyidao temples from pervasive ongoing banditry."
+ SQI_Guiyidao_support_desc: "The imitation of Tianran's Chinese Morality and Charity Organisation has finally superseded its inspiration, the Guiyidao. In the best interests of the chinese people, Zhang Tianran has assumed control of the Red Swastika Society facilities in Shandong, and promised to protect the Guiyidao temples from pervasive ongoing banditry."
 
  SQI_intervention_idea: "Limited Intervention"
- SQI_intervention_idea_desc: "At the urging of the League refugees, Qu Yingguang has allowed for a limited engagement in the chaotic yellow river valley and beyond. These brave expeditionary forces are composed of volunteers whose concerns lie in the safety of their families in the south."
+ SQI_intervention_idea_desc: "At the urging of the League refugees, Qu Yingguang has allowed for a limited engagement in the chaotic Yellow River Valley and beyond. These brave expeditionary forces are composed of volunteers whose concerns lie in the safety of their families in the south."
 
  SQI_railroad_assisted_army: "Railroad Assisted Army"
  SQI_railroad_assisted_army_desc: "With a vastly improved railway supply chain, it is now possible to supply Shandong troops much more efficiently than before."
@@ -146,6 +146,9 @@
 
  SQI_building_ships_faster: "Shipbuilding Focus"
  SQI_building_ships_faster_desc: "By focusing our resources we will be able to quickly build us a navy."
+
+ SQI_expand_our_control: "Expanding our Control"
+ SQI_expand_our_control_desc: "With the end of the devastating League War, Shandong stands as the true champion of the eastern provinces. It may prove fruitful to swiftly integrate the former League provinces before we can proceed to uniting the rest of China!"
 
 ### Dynamic/state modifiers
 
@@ -179,9 +182,11 @@
  SQI_xuzhou_garrison: "Recruit From the Xuzhou Garrison"
  SQI_xuzhou_garrison_desc: "Around the city of Xuzhou smaller forces would happily join our army for the right price."
 
+ SQI_chahar_cavalry_tt: "§LShould we take this focus, we will be able to recruit a unit of Chahar Cavalry§!£GFX_unit_cavalry_icon_small"
+
 ### Decisions ###
  SQI_riot_policy_decisions: "Shandong Civil Disturbances"
- SQI_riot_policy_decisions_desc: "We must deal with the numerous opportunities political instability has wrought. They hide in the mountains, raiding towns and insisting our governance is illegitimate."
+ SQI_riot_policy_decisions_desc: "We must deal with the numerous opportunists political instability has brought. They hide in the mountains, raiding towns and insist our governance is illegitimate."
 
  SQI_committees_against_vice: "Committees against Vice"
  SQI_committees_against_vice_desc: "The moral obligations of government officials have faltered in Shandong. What little that has been done to prevent drug abuse, gambling and debauchery has so far been handled solely by salvationist sects that operate completely out of government oversight. We must proclaim our leadership in the moral struggle against decadence and work to restore the people’s trust in government. To do so, we will begin by establishing new oversight committees, akin to the longstanding Anti-Drug Association of Shandong, with mandates to suppress illegal activities."
@@ -190,15 +195,12 @@
  SQI_break_the_black_markets_desc: "The concentration of both native Chinese and foreign capital in Shandong, along with ready access to vices such as opium, alcohol and women of ill repute, have all contributed to an incredibly vast network of black markets stretching from Weihaiwei to Jining. They mainly operate through shady backroom deals, or under the cover of nighttime carnivals with their wild Hua Hoey lotteries. The Association for Restoring Benevolence’s first goal was to uncover these black market networks. Now, we must strive to eliminate them!"
 
  SQI_reestablish_provincial_assemblies: "Reestablish Provincial Assemblies"
- SQI_reestablish_provincial_assemblies_desc: "As a veteran of the Zhejiang Autonomy Movement and the early days of organising during the Xinhai Revolution, Qu Yinguang understands the value of democratic participation. The provincial assemblies he opened in 1919 have long since vanished, but it will not take much effort to reestablish them. Prospective candidates will be screened beforehand and elections will be carefully monitored, to ensure that the assemblies do not turn into centres of dissent, but it will give the people of Shandong a rare opportunity to make their voices heard to the Governor."
+ SQI_reestablish_provincial_assemblies_desc: "As a veteran of the Zhejiang Autonomy Movement and the early days of organising during the Xinhai Revolution, Qu Yingguang understands the value of democratic participation. The provincial assemblies he opened in 1919 have long since vanished, but it will not take much effort to reestablish them. Prospective candidates will be screened beforehand and elections will be carefully monitored, to ensure that the assemblies do not turn into centres of dissent, but it will give the people of Shandong a rare opportunity to make their voices heard to the Governor."
 
  SQI_end_Yiguandao_riot: "End Yiguandao Riot"
  SQI_end_peasant_riot: "End Peasant Riot"
  SQI_end_Zongchang_riot: "End Zongchang Riot"
  SQI_end_Loyal_citizens: "Legitimise Regime"
-
- SQI_join_qing_faction: "Join the [QIE.GetFactionName]"
- SQI_join_qing_faction_desc: "With the end of the War of the Five Provinces, we are in position to make our commitment towards our new Manchu allies official. Let us join their alliance - the first step towards Chinese unification."
 
  SQI_decisions_unlocked: "Decisions Unlocked"
 
@@ -217,10 +219,10 @@
  SQI_dockyard_count_tt: "This decision can be taken up to §Y3§! times. (Currently §Y[?SQI_dockyard_count]/3§!)"
 
  SQI_assemble_air_squadron: "Assemble Qing volunteer Air Squadrons"
- SQI_assemble_air_squadron_desc: "Brave Chinese pilots in the Qing kingdom are welcome to use Jinan to practice their shooting skills against foreign imperialists."
+ SQI_assemble_air_squadron_desc: "Brave Chinese pilots in the Qing kingdom are welcome to use Jinan to practise their shooting skills against foreign imperialists."
 
  SQI_assemble_air_squadron2: "Assemble Japanese Air Squadron"
- SQI_assemble_air_squadron2_desc: "Brave Japanese pilots are welcome to use Jinan to practice their shooting skills against western imperialists."
+ SQI_assemble_air_squadron2_desc: "Brave Japanese pilots are welcome to use Jinan to practise their shooting skills against western imperialists."
 
  SQI_request_infantry_equipment: "Request Additional Qing Weapons"
  SQI_request_infantry_equipment_desc: "We need to leverage our supporters in the Qing to send more arms to the fight against foreign imperialism."
@@ -267,7 +269,7 @@
  SQI_create_LSP_tt: "You must control and own the following states:\n   §YShandong§! (Ji'nan, Linyi and Jiaodong)\n   §YJiangsu§! (Huaiyang, Jinling, Nantong and Xuhai)\n   §YJiangxi§! (Gannan, Yuzhang and Xunyang)\n   §YAnhui§!  (Anqing, Wuhu and Huaisi)\n   §YZhejiang§! (Qiantang, Jinhua, Kuaiji, Wenzhou and Lishui)\n   §YFujian§! (Jian'an, Tingzhang, Xiamen and Minhou)"
 
  SQI_raise_army: "Raising an army"
- SQI_raise_army_desc: "Our so called army is lacking compared to the many warlords we hope to face. Although we may not have a modern army, we do have the popularity of the people which we can use to our advantage. If strength does not work numbers will...  "
+ SQI_raise_army_desc: "Our so called army is lacking compared to the many warlords we hope to face. Although we may not have a modern army, we do have the popularity of the people which we can use to our advantage. If strength does not work numbers will..."
 
  SQI_raise_division: "Recruit the peasants of [FROM.GetName]"
  SQI_raise_division_desc: "We can recruit the peasants of [FROM.GetName] to aid our cause."
@@ -280,8 +282,8 @@
  SQI_Zhejiang: "§YIf owned, we will develop Zhejiang§!\n"
  SQI_can_obtain_dock: "§YIf Zongchang is in charge, can begin negotiating with Japan for additional dockyards§!\n"
  SQI_can_obtain_air: "§YCan begin negotiating with your allies for air squadrons§!\n"
- SQI_can_obtain_inf: "§YIf Tianran or Yingguang are in charge, can begin negotating with machinists in the Qing for firearms§!\n"
- SQI_can_obtain_fact: "§YIf Tianran or Yingguang are in charge, can begin negotating with industrialists in the Qing for construction assistance§!\n"
+ SQI_can_obtain_inf: "§YIf Tianran or Yingguang are in charge, can begin negotiating with machinists in the Qing for firearms§!\n"
+ SQI_can_obtain_fact: "§YIf Tianran or Yingguang are in charge, can begin negotiating with industrialists in the Qing for construction assistance§!\n"
 
 ### Parties ###
  SQI_totalist_party: "Socialist Youth League"
@@ -289,13 +291,13 @@
  SQI_syndicalist_party: "Anti-Japanese Solidarity Society"
  SQI_syndicalist_party_long: "Anti-Japanese Solidarity Society (Fanri Tuanjiehui)\n§gA radical splinter of the initial Kuomintang mission in Shandong, this group has spent several years underground in Qingdao waiting for the opportunity to arise. Influenced by translated socialist works published by the Pan-Pacific Trade Union Secretariat, their organisation can only survive with the support of these foreign influencers.§!"
  SQI_radical_socialist_party: "Kuomintang"
- SQI_radical_socialist_party_long: "National Party (Kuomintang)\n§gSince the foundations of the New China movement were laid in Shandong, there is still an undercurrent of progressivism and change in the Shangqing. These people all seek closer ties to the underground Kuomintang south of the Yangtze river.§!"
+ SQI_radical_socialist_party_long: "National Party (Kuomintang)\n§gSince the foundations of the New China movement were laid in Shandong, there is still an undercurrent of progressivism and change in the Shangqing. These people all seek closer ties to the underground Kuomintang south of the Yangtze River.§!"
  SQI_social_democrat_party: "Progressive Party"
  SQI_social_democrat_party_long: "Progressive Party (Jinbudang)\n§gFounded in 1916 by Kang Youwei, the Progressive Party grew largely through donations from ex-patriots and within the margin of democratic opportunism of the decade. When this opportunism was replaced by the Qing Restoration, several party members in Shandong chose to go underground.§!"
  SQI_social_liberal_party: "Guiyidao Society"
  SQI_social_liberal_party_long: "Guiyidao Society (Guiyidao Hui)\n§gThis organisation has a similar background to the Yiguandao, but is inclusive of Christianity and western esotericism. As such their funding has sharply declined in recent years due to the divided nature of Shandong. Those seeking Christianity have already moved to Qingdao. They do however have a strong reputation for nonpartisan welfare, giving to the poor of every race.§!"
  SQI_market_liberal_party: "Dragon Flower Society Heavenly Way"
- SQI_market_liberal_party_long: "Dragon Flower Society Heavenly Way (Yixin Tiandao Longhua Hui)\n§gFounded in Zouping county to combat the execssive poverty in the region, the Dragon Flower Society represents an alternative to banditry that attracted so many that decade. The founder, Ma Shiwei, intended the organisation to unify several different schools of Xiantiandao under a common goal to improve welfare in Shandong. The Dragon Flower Society was only recognised as a political party when interventionists and western observers sought out an alternative to the Yiguandao's latent militarism and the Guiyidao's generous welfare ideals.§!"
+ SQI_market_liberal_party_long: "Dragon Flower Society Heavenly Way (Yixin Tiandao Longhua Hui)\n§gFounded in Zouping county to combat the excessive poverty in the region, the Dragon Flower Society represents an alternative to banditry that attracted so many that decade. The founder, Ma Shiwei, intended the organisation to unify several different schools of Xiantiandao under a common goal to improve welfare in Shandong. The Dragon Flower Society was only recognised as a political party when interventionists and western observers sought out an alternative to the Yiguandao's latent militarism and the Guiyidao's generous welfare ideals.§!"
  SQI_social_conservative_party: "Research Clique"
  SQI_social_conservative_party_long: "Research Clique (Yanjiuxi)\n§gAn offshoot of the 1916 Progressive Party founded by Kang Youwei during the reign of Yuan Shikai, The Shandong Research Clique has struggled since the restoration of the Qing for relevance in Shandong. With membership unwilling to compromise with the intellectual climate of Shandong intelligentsia, party membership is mostly built on donations from ex-patriots and appeals to visiting westerners.§!"
  SQI_authoritarian_democrat_party: "Society of Restoring Benevolence"
@@ -304,7 +306,7 @@
  SQI_paternal_autocrat_party: "Zongchang Clique"
  SQI_paternal_autocrat_party_long: "Zongchang Clique (Zongchang Pai)\n§gThe Zongchang Clique rule over a majority of Shandong from the inland commercial hub of Jinan. This extends along the Shandong railway up until Weifang, and along the main road to Yantai. The clique is run by Zongchang along with his associates loyal to him including Zhang Jingyao and Zhang Zizhong. Zongchang’s true power is in the well armed remnants of the Shandong Revolutionary Army that patrol the province. Although they still technically adhere to a ban on opium, in practice Zongchang uses the railway to get his supply from Qingdao.§!"
  SQI_national_populist_party: "Yiguandao Society"
- SQI_national_populist_party_long: "Yiguandao Society (Yiguandao Hui)\n§gThe Yiguandao is a cult originally part of the White Lotus Society that was practised throughout China in the 19th Century. Their syncretic beliefs combine the structure of heaven of Confucianism, the variety of gods of Buddhism, and the life extending practices of Daoism. The Yiguandao doctrine was confided by Teacher Lu Zhongjie to his small group during the Weltkrieg, and most subsequent converts learn in stages. This ensures that the core leadership has enough chips to adjust the cult to fit their personal goals. First among this group is Teacher Zhang Tianran, the successor to Lu Zhongyi. Through Tianran’s political manoeuvring, the cult has grown to about 7 million adherents across China, with only 500,000 members located within the Shangqing itself.\n\nPeasant Armies throughout Northern China, particularly the Big Swords Society and Red Spears Society, see the Yiguandao as the most morally upright government in China.§!"
+ SQI_national_populist_party_long: "Yiguandao Society (Yiguandao Hui)\n§gThe Yiguandao is a cult originally part of the White Lotus Society that was practised throughout China in the 19th Century. Their syncretic beliefs combine the structure of heaven of Confucianism, the variety of gods of Buddhism, and the life extending practices of Daoism. The Yiguandao doctrine was confided by Teacher Lu Zhongjie to his small group during the Weltkrieg, and most subsequent converts learn in stages. This ensures that the core leadership has enough chips to adjust the cult to fit their personal goals. First among this group is Teacher Zhang Tianran, the successor to Lu Zhongyi. Through Tianran’s political manoeuvring, the cult has grown to about 7 million adherents across China, with only 500,000 members located within the Shangqing itself.\n\nPeasant armies throughout Northern China, particularly the Big Swords Society and Red Spears Society, see the Yiguandao as the most morally upright government in China.§!"
  sqi_pat_aut_liu_heding_puppet: "Anqing Clique"
  SQI_national_government: "Shandong Formed a National Government"
 
@@ -318,10 +320,10 @@
  SQI_Two_Zhangs_Enter_desc: "Years of tension between the Yiguandao and Zhang Zongchang has reached a breaking point. Zongchang's promises to stay clean have withered away, and Qu Yingguang's infiltration into the drug trade has unearthed valuable evidence to convict him in the eyes of the world. With the arrival of Lu Zhongjie to Jinan, Zongchang has put himself on a path of destruction for all three in Shandong."
 
  SQI_Zhang_Tianran_focus: "Announce Revelationary Order"
- SQI_Zhang_Tianran_focus_desc: "As all great teachers in Chinese history have done, Zhang Tianran will reveal revelationary order to the Chinese public through public sermons. While the warlords of China shout and break their men, Zhang Tianran will calmly dictate the future of China as told to him through spirit writing. Through Tianran; Wujimu, Sun Yat-Sen and the Buddha speak."
+ SQI_Zhang_Tianran_focus_desc: "As all great teachers in Chinese history have done, Zhang Tianran will reveal revelationary order to the Chinese public through public sermons. While the warlords of China shout and break their men, Zhang Tianran will calmly dictate the future of China as told to him through spirit writing. Through Tianran, Wujimu, Sun Yat-sen and the Buddha speak."
 
  SQI_Mobbing_Drug_Dealing_Bureaucrats: "Destroy Drug Dealers"
- SQI_Mobbing_Drug_Dealing_Bureaucrats_desc: "The generations of pain China is crawling out of are threatened by vicious seeds of Opium. Opium is not a medicine but a poison upon Chinese people, and something the noble Boxers and Sun Yat-Sen sought to end. Zhang Tianran has organised a list of known drug dealers, and is relying on citizens to uproot them."
+ SQI_Mobbing_Drug_Dealing_Bureaucrats_desc: "The generations of pain China is crawling out of are threatened by vicious seeds of Opium. Opium is not a medicine but a poison upon Chinese people, and something the noble Boxers and Sun Yat-sen sought to end. Zhang Tianran has organised a list of known drug dealers, and is relying on citizens to uproot them."
 
  SQI_Moving_The_Provincial_capital: "Back to the Basics"
  SQI_Moving_The_Provincial_capital_desc: "The whole bureaucracy of Jinan is rotten with blind faith in warlords. The Shandong independence council, Zongchang's Governor's office, and the corrupt importation office must all be condemned. From their failure, the Yiguandao will establish Managers and Teachers to oversee civil governance. "
@@ -423,7 +425,7 @@
  SQI_Reclaim_The_Industry_Of_The_Annexed_Warlords_desc: "After years of unsystematic disregard by the Zhili governors, [SQI.GetLeader] has arrived with a promise to reinvigorate the southern provinces. This initial promise has come with it a bounty to Governors should they defect to this new scheme."
 
  SQI_Victory_In_The_South: "Victory in the South"
- SQI_Victory_In_The_South_desc: "With the vast ruined expanse of the Yangtze river valley now open to [SQI.GetLeader], it is time to hear the needs of the millions of refugees whose homes are now within reach. These grateful citizens will be easily plied to assist in industrialising the region towards our goal of national defence."
+ SQI_Victory_In_The_South_desc: "With the vast ruined expanse of the Yangtze River Valley now open to [SQI.GetLeader], it is time to hear the needs of the millions of refugees whose homes are now within reach. These grateful citizens will be easily plied to assist in industrialising the region towards our goal of national defence."
 
  SQI_Develop_The_Coastline: "Develop the Coastline"
  SQI_Develop_The_Coastline_desc: "The Northern Yangtze region coastline has become a minefield of competing interests, even after the AOG was unseated. It will take the greatest effort of our administration to effectively reestablish sea traffic, but the reward will be great."
@@ -460,7 +462,7 @@
  SQI_Purchasing_Convoys_For_The_Navy_desc: "If we are to draw trade from the contentious Bohai Sea, and survive the submarines, we must invest in more convoys. It is most prudent to acquire them secondhand from old merchant ships."
 
  SQI_Purchasing_Submarines_For_The_Navy: "Purchase Subs for the Beiyang"
- SQI_Purchasing_Submarines_For_The_Navy_desc: "If we are to wrest control of the Bohai Sea from our rivals, we must outwit their superior firepower at sea. The solution is a secretive submarine program. The potential returns if we are able to dislodge this sea outweighs the cost of development."
+ SQI_Purchasing_Submarines_For_The_Navy_desc: "If we are to wrest control of the Bohai Sea from our rivals, we must outwit their superior firepower at sea. The solution is a secretive submarine programme. The potential returns if we are able to dislodge this sea outweighs the cost of development."
 
  SQI_Incorporating_Qingdao_And_Weihaiwei_Ports: "Incorporating Qingdao and Weihaiwei Ports"
  SQI_Incorporating_Qingdao_And_Weihaiwei_Ports_desc: "It is time for us to assume the true home of the Beiyang Fleet, Qingdao. Our grand return will precipitate a revitalisation of Chinese naval industry in Shandong."
@@ -500,12 +502,12 @@
  shandong.2.d: "This day brings to Zongchang another opportunity to humiliate the old man on the mountain, Zhang Tianran. In order to establish his little cult on the hill, Tianran had to expel the sister of his former master, Lu Zhongyi. The sister, Lu Zhongjie, has become a rather concise rebuttal to the numerous Yiguandao well-wishers Zongchang has had to deal with in recent months. This is why she must return to Shandong, if only as a joke. To enhance the shock value, Zongchang has brought his old mother to this welcoming ceremony, which has swelled from the intended group into a sizeable crowd. Zongchang, in an attempt to enhance the humiliation Tianran should feel, has given the elderly Lu Zhongjie a bouquet and a traditional twenty-one gun salute was fired into a nearby apartment building in celebration of Lu Zhongjie's arrival."
  shandong.2.a: "Bullets have to go somewhere"
 
- shandong.970.t: "Zongchang's festivities escelate through Jinan"
+ shandong.970.t: "Zongchang's festivities escalate through Jinan"
  shandong.970.d: "After that rouse of fun and violence, Zongchang dropped his mother off with Lu Zhongjie and has decided to celebrate a night on the town. Zongchang stops occasionally to distribute 'Minsheng' to refugees from Jiangsu. Another encounter that day were Yiguandao protesters at Zongchang's business office. Their daily empty promises have been replaced by outrage over Lu Zhongjie's return to Shandong. Before Zongchang attempted to hit them with his car, they claimed that Tianran would arrive to judge Zongchang's very soul. The only thing that soured the evening was finding out that Zongchang's opium dealer is still in hiding. This no doubt is caused by interloping Ren Ci who have foiled otherwise fun evenings in Jinan with their morality in the past. The adventure ended with a visit to Zongchang's favourite brothel, where several women joined his entourage on the way home that evening to do drugs. As the day comes to an end, one of these ladies has gone missing with some opium, Zongchang asks his officers not to go after her, for there is still plenty more ladies and capsules of opium for the night."
  shandong.970.a: "Her loss then"
 
  shandong.3.t: "A spy for Yingguang is captured"
- shandong.3.d: "After a night of hard drugs and soft women in Jinan, Zongchang was reveling in himself the next morning when he saw a stranger in his backyard. Alerting his wives, and then his guards, Zongchang apprehended the intruder. After Sun Dianying's own special words with the man, it was revealed that he was an ally of Qu Yingguang, and had come after a sex worker had alerted him to drugs on the property. Dianying believes that this intruder is the vanguard of a rebellion Yingguang is planning out of Qufu. A fear Dianying has stoked for several months since his income from taxation was cut off by Yingguang's militia. Commander Junnosuke Date, on the other hand, insists to the hungover Zongchang that Yingguang is planning to alert the Qing instead. Junnosuke insists that their forces be diverted to Dezhou to stop Yingguang from escaping. Barely able to recall the night before, Zongchang decides to..."
+ shandong.3.d: "After a night of hard drugs and soft women in Jinan, Zongchang was revelling in himself the next morning when he saw a stranger in his backyard. Alerting his wives, and then his guards, Zongchang apprehended the intruder. After Sun Dianying's own special words with the man, it was revealed that he was an ally of Qu Yingguang, and had come after a sex worker had alerted him to drugs on the property. Dianying believes that this intruder is the vanguard of a rebellion Yingguang is planning out of Qufu. A fear Dianying has stoked for several months since his income from taxation was cut off by Yingguang's militia. Commander Junnosuke Date, on the other hand, insists to the hungover Zongchang that Yingguang is planning to alert the Qing instead. Junnosuke insists that their forces be diverted to Dezhou to stop Yingguang from escaping. Barely able to recall the night before, Zongchang decides to..."
  shandong.3.a: "Block the roads, Yingguang must be leaving"
  shandong.3.b: "Send men to Yingguang's house"
 
@@ -514,7 +516,7 @@
  shandong.971.a: "That was a Boxer temple, nobody will care"
 
  shandong.972.t: "Sun Dianying fails to find Yingguang at Qufu"
- shandong.972.d: "The soldiers sent to Qufu found what they wanted, but not what they needed. After threats of violence were given by Dianying, and several quarters burned, the occupants of Qufu fled as Dianying began searching for Yingguang. While there was abundant evidence that the Ren Ci had used the manor, neither Yingguang nor the Duke Yansheng were to be found. Zongchang waited several days for a response from Dianying, and received Dianying's most humble apologies and gifts from Confcuian manor. These gifts did little to sate Zongchang's anger, who immediately set out with the Japanese cavalry to Dezhou, furious that Junnosuke's advice was not taken. Zongchang's arrival in Dezhou failed to find Yingguang, not even evidence of him being there. Faced with the dangerous prospect of sending a raid into the Qing kingdom on the hunch of Junnosuke Date, Zongchang decided the investigation was over, and returned to Jinan to continue his harassment campaign on the Yiguandao."
+ shandong.972.d: "The soldiers sent to Qufu found what they wanted, but not what they needed. After threats of violence were given by Dianying, and several quarters burned, the occupants of Qufu fled as Dianying began searching for Yingguang. While there was abundant evidence that the Ren Ci had used the manor, neither Yingguang nor the Duke Yansheng were to be found. Zongchang waited several days for a response from Dianying, and received Dianying's most humble apologies and gifts from Confucian manor. These gifts did little to sate Zongchang's anger, who immediately set out with the Japanese cavalry to Dezhou, furious that Junnosuke's advice was not taken. Zongchang's arrival in Dezhou failed to find Yingguang, not even evidence of him being there. Faced with the dangerous prospect of sending a raid into the Qing kingdom on the hunch of Junnosuke Date, Zongchang decided the investigation was over, and returned to Jinan to continue his harassment campaign on the Yiguandao."
  shandong.972.a: "At least I got some gifts out of this"
 
  shandong.4.t: "Zongchang sends an alibi to the Qing"
@@ -531,7 +533,7 @@
  shandong.6.b: "I'll wait for his desperate letters"
 
  shandong.7.t: "Tianran Passes Judgement on Zongchang"
- shandong.7.d: "Zongchang's contingent arrived at the gates of the Dai Miao, already his soles tired of the 6600 steps. Dianying suggested they conceal their guns, and open fire when they are let in. As Zongchang passed under the Zhengyang Gate, he was fatally shot by a sharpshooter from atop the gate. Dianying attempted to charge the courtyard with whatever men he had, but Jingyao had fled with the soldiers guarding his rear. Dianying was also fatally shot, and the current wherebouts of Zhang Jingyao is unknown. The honoured teacher Zhang Tianran was received in Jinan with an early New Years celebration, and read his final letter to Zongchang to a cheering crowd."
+ shandong.7.d: "Zongchang's contingent arrived at the gates of the Dai Miao, already his soles tired of the 6600 steps. Dianying suggested they conceal their guns, and open fire when they are let in. As Zongchang passed under the Zhengyang Gate, he was fatally shot by a sharpshooter from atop the gate. Dianying attempted to charge the courtyard with whatever men he had, but Jingyao had fled with the soldiers guarding his rear. Dianying was also fatally shot, and the current whereabouts of Zhang Jingyao is unknown. The honoured teacher Zhang Tianran was received in Jinan with an early New Years celebration, and read his final letter to Zongchang to a cheering crowd."
  shandong.7.a: "I declare this a Red Letter Day!"
 
  shandong.8.t: "Zongchang Saves Jinan from Yiguandao Raid"
@@ -544,7 +546,7 @@
  shandong.9.a: "Kill two bald men and everyone goes crazy!"
 
  shandong.1000.t: "A Strike Against Nanjing"
- shandong.1000.d: "The death of Sun has thrown Eastern China into chaos. Fires, looting, and banditry will become the norm throughtout the region, but at the same time, it provides a golden opprotunity. The Zhili hegemony is over, a power vacuum is fast growing in China, and if we can seize our chance and take control of Nanjing, we'll be assured to play a major role in the coming struggles over China's future. Top advisors to [THIS.GetLeader] have advised him to march south towards the old capital and secure our place as one of China's big players."
+ shandong.1000.d: "The death of Sun has thrown Eastern China into chaos. Fires, looting, and banditry will become the norm throughout the region, but at the same time, it provides a golden opportunity. The Zhili hegemony is over, a power vacuum is fast growing in China, and if we can seize our chance and take control of Nanjing, we'll be assured to play a major role in the coming struggles over China's future. Top advisors to [THIS.GetLeader] have advised him to march south towards the old capital and secure our place as one of China's big players."
  shandong.1000.a: "Nanjing will be ours!"
  shandong.1000.b: "We should wait and see..."
 
@@ -561,7 +563,7 @@
  shandong.11.c: "Train Grotto-heaven soldiers"
 
  shandong.12.t: "Investigate missing shipments"
- shandong.12.d: "For the past few months, vital commerce is being disrupted along the Qingdao-Jinan railway. An ongoing police investigation has only determined that it is not the trainline employees, no other possibilities have been ruled out yet. [SQI.GetLeader] has been called in to supervise the investigation before it becomes a major scandal in Jinan. The police, ever cautious of the chinese border guards outside of Qingdao, have suggested we investigate the railway relay stations first. [SQI.GetLeader], on the other hand, is of the suspicion that the items are being stolen along the deserted stretches of countryside between Qingdao and Jinan. Which should we investigate first?"
+ shandong.12.d: "For the past few months, vital commerce is being disrupted along the Qingdao-Jinan railway. An ongoing police investigation has only determined that it is not the train line employees, and no other possibilities have been ruled out yet. [SQI.GetLeader] has been called in to supervise the investigation before it becomes a major scandal in Jinan. The police, ever cautious of the chinese border guards outside of Qingdao, have suggested we investigate the railway relay stations first. [SQI.GetLeader], on the other hand, is of the suspicion that the items are being stolen along the deserted stretches of countryside between Qingdao and Jinan. Which should we investigate first?"
  shandong.12.a: "Investigate the Railway"
  shandong.12.b: "Investigate the Border"
 
@@ -636,7 +638,7 @@
  shandong.995.a: "Wonderful"
 
  shandong.26.t: "Shandong Requests Cadet Training"
- shandong.26.d: "[SQI.GetLeader], governor of Shandong, has sent a formal request that we send a number of Weltkrieg Veterans to assist in the training of his troops. It is certainly true that the French surrender in 1919, and the British collapse in 1925, left the international settlements with a surplus of exiled war veterans, many of whom have since taken to policing or mercenary work. Nontheless, [SQI.GetLeader] is a mere warlord with a great deal of blood on his hands, and Zhang Zongchang's sweep through Shanghai in 1925 left him with a monstrous reputation in local circles. We could accept the deal, but there are also risks to consider."
+ shandong.26.d: "[SQI.GetLeader], governor of Shandong, has sent a formal request that we send a number of Weltkrieg Veterans to assist in the training of his troops. It is certainly true that the French surrender in 1919, and the British collapse in 1925, left the international settlements with a surplus of exiled war veterans, many of whom have since taken to policing or mercenary work. Nonetheless, [SQI.GetLeader] is a mere warlord with a great deal of blood on his hands, and Zhang Zongchang's sweep through Shanghai in 1925 left him with a monstrous reputation in local circles. We could accept the deal, but there are also risks to consider."
  shandong.26.a: "Accept the deal."
  shandong.26.b: "This is too dangerous."
 
@@ -692,7 +694,7 @@
  shandong.37.d1: "While it seemed like Fengtian's recent proposal was not accepted by both us and Anqing, a lowly Anqing diplomat has found the courage to seek an audience with Zhang Zongchang to discuss the possibility of a peace deal without Fengtian interference. Zhang, who was in an uncharacteristically good mood, heard the diplomat out.\n\nWe currently hold territory deemed extremely critical by Chen Tiaoyuan's Anqing. The diplomat said that Anqing was most likely willing to accept peace if we give up territory outside of Jiangsu. This might not be a bad idea, as this territory is difficult to administrate regardless and doesn't give us many benefits, except making Chen very angry. A temporary peace would also allow us time to prepare further actions."
  shandong.37.d2: "While it seemed like Fengtian's recent proposal was not accepted by both us and Anqing, a lowly Anqing diplomat has found the courage to seek an audience with Zhang Zongchang to discuss the possibility of a peace deal without Fengtian interference. Zhang, who was in an uncharacteristically good mood, heard the diplomat out.\n\nWe currently hold territory only in the northern Jiangsu province. The diplomat said that Anqing was most likely willing to accept peace if we hold on only to these territories we acquired. This might not be a bad idea, as getting anything extra would most likely only result in resistance in this new territory. A temporary peace would also allow us time to prepare further actions."
  shandong.37.d3: "While it seemed like Fengtian's recent proposal was not accepted by both us and Anqing, a lowly Anqing diplomat has found the courage to seek an audience with Zhang Zongchang to discuss the possibility of a peace deal without Fengtian interference. Zhang, who was in an uncharacteristically good mood, heard the diplomat out.\n\nWe were unable to acquire any new territory. The diplomat said that Anqing was most likely willing to cede all of Jiangsu in exchange for peace. This is great news, as Jiangsu is the main territory we are after. A temporary peace would also allow us time to prepare further actions."
- shandong.37.d4: "While it seemed like Fengtian's recent proposal was not accepted by both us and Anqing, a lowly Anqing diplomat has found the courage to seek an audience with Zhang Zongchang to discuss the possibility of a peace deal without Fengtian interference. Zhang, who was in an uncharacteristically good mood, heard the diplomat out.\n\nWe were unable to acquire any new territory. The diplomat said that Anqing was most likely willing to cede Xuhai, the western part of Jiangsu, in exchange for peace. This is great news, as this would be a great step torwards further gains. A temporary peace would also allow us time to prepare further actions."
+ shandong.37.d4: "While it seemed like Fengtian's recent proposal was not accepted by both us and Anqing, a lowly Anqing diplomat has found the courage to seek an audience with Zhang Zongchang to discuss the possibility of a peace deal without Fengtian interference. Zhang, who was in an uncharacteristically good mood, heard the diplomat out.\n\nWe were unable to acquire any new territory. The diplomat said that Anqing was most likely willing to cede Xuhai, the western part of Jiangsu, in exchange for peace. This is great news, as this would be a great step towards further gains. A temporary peace would also allow us time to prepare further actions."
  shandong.37.a: "Let's do it."
  shandong.37.b: "Striking now is better."
 
@@ -803,9 +805,9 @@
  shandong.400.a: "Her resolve leaves us no doubt of her ability."
 
  shandong.401.t: "Tianran publishes Provisional Etiquette"
- shandong.401.d: "Tianran has long pushed that the teachings of Buddhism and Confucius are integral aspects of Chinese society that can never be questioned. Within the inner circle of the Yiguandao, a debate rages between Zhang Tianran and Sun Suzhen over how to best engage the literati in Shandong. Tianran and Suzhen have both collaborated on a book entitled 'Provisional Etiquette', intended to demonstrate how the Yiguandao respects the spiritual lineage of chinese leadership. To Zhang Tianran, who was once a minor bureaucrat under Yuan Shikai, the spiritual lineage of China's dictator went from the Regent Zaifeng to Yuan Shikai, then finally to the enthroned Puyi. To Sun Suzhen however, spiritual lineage in China belonged to Sun Yat-Sen, and through Sun Yat-Sen's death there is no true spiritual leader of China currently. Zhang's interpretation appears to hold to his agreement to promote Puyi as Emperor within the Yiguandao, but ignores the wellspring of spiritual support for the southern idealists."
+ shandong.401.d: "Tianran has long pushed that the teachings of Buddhism and Confucius are integral aspects of Chinese society that can never be questioned. Within the inner circle of the Yiguandao, a debate rages between Zhang Tianran and Sun Suzhen over how to best engage the literati in Shandong. Tianran and Suzhen have both collaborated on a book entitled 'Provisional Etiquette', intended to demonstrate how the Yiguandao respects the spiritual lineage of chinese leadership. To Zhang Tianran, who was once a minor bureaucrat under Yuan Shikai, the spiritual lineage of China's dictator went from the Regent Zaifeng to Yuan Shikai, then finally to the enthroned Puyi. To Sun Suzhen however, spiritual lineage in China belonged to Sun Yat-sen, and through Sun Yat-sen's death there is no true spiritual leader of China currently. Zhang's interpretation appears to hold to his agreement to promote Puyi as Emperor within the Yiguandao, but ignores the wellspring of spiritual support for the southern idealists."
  shandong.401.a: "Zhang is right, praise Puyi"
- shandong.401.b: "Sun is right, praise Sun Yat-Sen"
+ shandong.401.b: "Sun is right, praise Sun Yat-sen"
 
  shandong.402.t: "Tianran Warns Public of Maha-Kalpa"
  shandong.402.d: "Spoken often within the temples and schools, but elusive to the secular public, Zhang Tianran has decided to reveal the existence of the Maha-Kalpa prophecy a public rally. To Zhang Tianran and the Yiguandao, the history of the world is divided into three periods by three periods of peace and barbarism, represented by Three Suns. The last aeon, that of the Red Sun, ended with the Xinhai Revolution. The Confucian legend Kang Yuowei is referenced in Zhang Tianran's speech, which agreed that the third age, Datong, or Maha-Kalpa was dawning. Soon, claims Tianran, the Chinese people will be perfected racially or be destroyed by foreigners like the Japanese Emperor or the British Empire.\n\nTo the uncertain people of Shandong, the only concrete suggestion out of so much esoteric ado is that they should work harder towards national unification, and reinforces the already-prevalent feeling of existential struggle they feel."
@@ -826,7 +828,7 @@
  shandong.405.b: "Ignore Xue Dian, Lu Zhongjie dies!"
 
  shandong.406.t: "Red Swastika Society Deserts Yiguandao"
- shandong.406.d: "The Red Swastika Society, formerly an ally of the Yiguandao during the Zhang Zongchang regime, has finally cracked and deserted us. This news comes as a surprise to even the Honoured Teacher, whom can scarely come up with a response to his followers. To Sun Suzhen however, this desertion vindicates her opposition to war posturing, which she claims she had always felt. Sun has taken this opportunity to chastise Zhang Tianran, saying that this was the obvious consequence of trying to balance war with charity. Outside the confines of the Yiguandao inner circle, the minor Emperors and Managers has downplayed this loss. Clearly, they say, the Red Swastika Society been bought out by the American YMCA to slander and defame the Yiguandao."
+ shandong.406.d: "The Red Swastika Society, formerly an ally of the Yiguandao during the Zhang Zongchang regime, has finally cracked and deserted us. This news comes as a surprise to even the Honoured Teacher, whom can scarcely come up with a response to his followers. To Sun Suzhen however, this desertion vindicates her opposition to war posturing, which she claims she had always felt. Sun has taken this opportunity to chastise Zhang Tianran, saying that this was the obvious consequence of trying to balance war with charity. Outside the confines of the Yiguandao inner circle, the minor Emperors and Managers have downplayed this loss. Clearly, they say, the Red Swastika Society been bought out by the American YMCA to slander and defame the Yiguandao."
  shandong.406.a: "The American dollar is to blame"
 
  shandong.407.t: "Tianran Secretly Meets Tsunesaburo Makiguchi"
@@ -842,7 +844,7 @@
  shandong.409.a: "Honourable Koreans should be revered"
 
  shandong.410.t: "Qu Yingguang Sends a Lifeline to Beijing"
- shandong.410.d: "The province of Shandong's fog of confusion has lifted and a man has emerged, Qu Yingguang. Qu was reponsible for alerting the magistrate to Zhang Zongchang's illegal and inexcusable crimes in Shandong, and was appointed Governor in thanks. Governor Qu Yingguang, citing the rebellions that are holding back Shandong, pleads before the Qing government to help restore order. Fears that the province may yet be lost to another upstart warlord, or lost to the KMT abound. Surely, the Qing would not allow another province to fall away from them?"
+ shandong.410.d: "The fog of confusion has lifted from the province of Shandong and one man has emerged: Qu Yingguang. Qu was responsible for alerting the magistrate to Zhang Zongchang's illegal and inexcusable crimes in Shandong, and was appointed Governor in thanks. Governor Qu Yingguang, citing the rebellions that are holding back Shandong, pleads before the Qing government to help restore order. Fears that the province may yet be lost to another upstart warlord, or lost to the KMT, abound. Surely, the Qing would not allow another province to fall away from them?"
  shandong.410.a: "Finally a governor with sense"
  shandong.410.b: "We do not trust a former republican"
 
@@ -862,7 +864,7 @@
 ### 414 - 423 Authdem Flavour Events
 
  shandong.414.t: "Kong Dechang Insults Beijing's Confucian Scholars"
- shandong.414.d: "The young Kong Dechang, the symbol of the Society to Restore Benevolence, has begun making waves with the public. As the inheritor of the Qufu manor legacy, Kong Dechang has been kept abreast of the latest philisophical developments in Confucianism. In this field, Beijing illuminaries like Wu Peifu and Chen Huanzhang have made their own interpretation of the Confucian canon known. What separates Kong Dechang's first publication from others is its rejection of attempts to revive state-enforced piety. While Wu Peifu and Chen Huanzhang have decried their times as impious, Kong Dechang has stated that each individual family in China defines piety through their actions. This rejection of partisanship in the religion he helps represent has upset the intellectuals in Beijing."
+ shandong.414.d: "The young Kong Dechang, the symbol of the Society to Restore Benevolence, has begun making waves with the public. As the inheritor of the Qufu manor legacy, Kong Dechang has been kept abreast of the latest philosophical developments in Confucianism. In this field, Beijing illuminaries like Wu Peifu and Chen Huanzhang have made their own interpretation of the Confucian canon known. What separates Kong Dechang's first publication from others is its rejection of attempts to revive state-enforced piety. While Wu Peifu and Chen Huanzhang have decried their times as impious, Kong Dechang has stated that each individual family in China defines piety through their actions. This rejection of partisanship in the religion he helps represent has upset the intellectuals in Beijing."
  shandong.414.a: "The child is still young, Your grace"
 
  shandong.415.t: "Yingguang Purchases Noble Titleage for Allies"
@@ -870,7 +872,7 @@
  shandong.415.a: "Thank you, your grace"
 
  shandong.416.t: "Famine in Shandong, Qing Aid Needed"
- shandong.416.d: "This year's yield in Shandong is not turning out as well as predicted. Most likely due to the overuse of land for commercial opium farming during the Zongchang years. Qu Yingguang has been called in to solve the food shortage before it leads to endemic famine. Governor Yigguang's solution is to once again go into the provincial reserve and pay for food imports from Hebei, where the harvests are more plentiful. This burden will be shared with the people through additional taxation."
+ shandong.416.d: "This year's yield in Shandong is not turning out as well as predicted. Most likely due to the overuse of land for commercial opium farming during the Zongchang years. Qu Yingguang has been called in to solve the food shortage before it leads to endemic famine. Governor Yingguang's solution is to once again go into the provincial reserve and pay for food imports from Hebei, where the harvests are more plentiful. This burden will be shared with the people through additional taxation."
  shandong.416.a: "We need to save grain from now on"
 
  shandong.417.t: "Big Swords Defect from Yiguandao, Offer Assistance"
@@ -910,7 +912,7 @@
  shandong.428.a: "A shade of Xishans's ideas, I see?"
 
  shandong.429.t: "Brothel Brawl for Business"
- shandong.429.d: "Zhongchang, whether due to being drug addled, or for his own amusement, appointed two men to the same position as Chief of Security. The two men only found out about the other when they both at the same time went to take their new position. Seeking clarification on the issue, they barged into Zhongchang's room, where they found him engaged in depravity as usual. Zhongchang, amused at their confusion, ordered the two men to fight each other for the position, and whoever was on top would claim victory, though he did not rule out a power bottom. The men thus proceeded to tear into each other, much to Zhongchang's and the girls amusement."
+ shandong.429.d: "Zhongchang, whether due to being drug addled, or for his own amusement, appointed two men to the same position as Chief of Security. The two men only found out about the other when they both at the same time went to take their new position. Seeking clarification on the issue, they barged into Zhongchang's room, where they found him engaged in depravity as usual. Zhongchang, amused at their confusion, ordered the two men to fight each other for the position, and whoever was on top would claim victory, though he did not rule out a power bottom. The men thus proceeded to tear into each other, much to Zhongchang's and the girl's amusement."
  shandong.429.a: "It seems it was an orgy in more ways than one"
 
  shandong.430.t: "The Cheapest Medicine"
@@ -922,11 +924,11 @@
  shandong.431.a: "Hard to escape faith in Shandong"
 
  shandong.432.t: "The Empress Has No Clothes"
- shandong.432.d: "Sun Dianying has led a group of bandits to rob the grave of Empress Dowager Cixi in Beijing, a shocking development. Under the cover of night, men lead by Sun Dianying opened Cixi's tomb, and removed much of her gold burial trasures. The apex of their debauchery was when they took the jade melon Cixi held in her sarcophagus. While her legacy has been debated between being a ruthless despot who brought about great humiliation, traditionalist still consider her to be a paragon of Chinese society. Looting her grave is a deep insult to Chinese tradition, and the Qing are deeply embarrassed. Unfortunately, Sun Dianying has returned to the frontline, surrounded by guards and safe from bounty hunters and vigilantes."
+ shandong.432.d: "Sun Dianying has led a group of bandits to rob the grave of Empress Dowager Cixi in Beijing, a shocking development. Under the cover of night, men lead by Sun Dianying opened Cixi's tomb, and removed much of her gold burial treasures. The apex of their debauchery was when they took the jade melon Cixi held in her sarcophagus. While her legacy has been debated between being a ruthless despot who brought about great humiliation, traditionalist still consider her to be a paragon of Chinese society. Looting her grave is a deep insult to Chinese tradition, and the Qing are deeply embarrassed. Unfortunately, Sun Dianying has returned to the frontline, surrounded by guards and safe from bounty hunters and vigilantes."
  shandong.432.a: "That belongs in a museum!"
 
  shandong.433.t: "The Ming Demeaned Once More"
- shandong.433.d: "Sun Dianying, in his growing lust for gold and booty, has decided to rob the Ming Xiaoling Mausoleum grave in Nanjing. Sun Dianying's men again arrived in the night, climbing the tomb's walls before blasting the door open. The Ming Xiaoling Tomb belonging to the Hongwu Emperor, the first Ming. Hongwu who was a Red Turban in a White Lotus Society like the late Zhang Tianran, fueling Sun Dianying's fury. Sun Dianying made off with treasures of the Hongwu Emperor and his wives, their value being permanently sullied by being arranged next to Cixi's jade melon. The grave has been looted and set ablaze, not since Li Zicheng did so in 1644 when he took Beijing has this happened. It really does seem that there is no honour to restore the Ming, despite what those old slogans have said. The hundreds who, in the past, promised to 'Destroy the Qing, Restore the Ming', are saddende by the desecration."
+ shandong.433.d: "Sun Dianying, in his growing lust for gold and booty, has decided to rob the Ming Xiaoling Mausoleum grave in Nanjing. Sun Dianying's men again arrived in the night, climbing the tomb's walls before blasting the door open. The Ming Xiaoling Tomb belonging to the Hongwu Emperor, the first Ming. Hongwu who was a Red Turban in a White Lotus Society like the late Zhang Tianran, fuelling Sun Dianying's fury. Sun Dianying made off with treasures of the Hongwu Emperor and his wives, their value being permanently sullied by being arranged next to Cixi's jade melon. The grave has been looted and set ablaze, not since Li Zicheng did so in 1644 when he took Beijing has this happened. It really does seem that there is no honour to restore the Ming, despite what those old slogans have said. The hundreds who, in the past, promised to 'Destroy the Qing, Restore the Ming', are saddened by the desecration."
  shandong.433.a: "Is nothing sacred anymore?"
 
  shandong.434.t: "A New Headquarters?"
@@ -949,10 +951,6 @@
  shandong.441.t: "The Old Alliance Alive"
  shandong.441.d: "When General Zhang Zongchang presented Zhang Zuolin with a carrying pole at his inauguration, it came with a deep mutual understanding. Zhang Zongchang would not lavish the Marshal with baubles or pleasantries, but would serve as the reliable tool to which Zuolin may achieve victory. This promise made years ago arrives to Zongchang this day. A carrying pole sent by Zhang Zuolin could only mean one thing. The time of great service was approaching, and Zongchang will deliver, whether his honour exists or not."
  shandong.441.a: "This pole will change the fate of China."
-
- shandong.442.t: "The New Qing Empire"
- shandong.442.d: "The fierce battle for the Forbidden City was pressed on Zhang Tianran's orders. The palace gates became a prison for the cowardly Aisin-Gioro family. Several family members attempted to leave but were led back, and the walls manned by Red Spears at all corners. Finally, the Emperor surrendered to the Shangqing. Instead of death, Puyi was forced to capitulate to Zhang Tianran in his Imperial Yellow Jacket, as well as reaffirm to the people his emperorship. Puyi will remain the Emperor, and the Shangqing Tianguo's minor emperors, managers and priests the official magistrates of the Qing Empire. Zhang Tianran has absolved the captive Emperor of any guilt in this war, and declared that this victory is the culmination of a spiritual genealogy that began with the Boxers and Sun Yat Sen."
- shandong.442.a: "This could be the Maha-Kalpa"
 
  shandong.445.t: "Minor Emperor Xue Dian Deserts With Lu Zhongjie"
  shandong.445.d: "After assuring Zhang Tianran and Sun Suzhen that Lu Zhongjie was isolated, the Minor Emperor of Shandong has betrayed the Yiguandao. After failing to arrive for daily exercises, Red Spear soldiers discovered Xue Dian missing from his quarters. Panic ensued as the Red Spears scrambled in vain to find Xue Dian. This panic magnified when the old Homored Teacher, Lu Zhongjie, could not be found as well. After Zhang Tianran arrived in a very uncharacteristic fury, he entered Xue Dian's house to ask the spirits for guidance. After several hours, Zhang Tianran emerged from Xue Dian's quarters, and stated that the Minor Emperor was called by a greater power to commit to an immediate and permanent pilgrimage. While the Red Spears soldiers are sated, the dissidents outside of Taishan have easily deduced that Xue Dian and Lu Zhongjie have escaped the cult. To the surprise of many, including Sun Suzhen, Zhang Tianran has not ordered for a manhunt. It appears as if the Honoured Master has accepted a consequence he did not predict."
@@ -1000,19 +998,13 @@
 ### Beijing loc - organise later ###
  SQI_imprisoned_emperor: "Emperor, Imprisoned"
  SQI_unify_the_country: "Unify the Errant Warlords"
- SQI_unify_the_country_desc: "Zhang Tianran wishes to complete the spiritual genealogy passed from Sun Yat Sen to Puyi. This includes subordinating the Chinese lands that devolved into their own petty leadership. Removing this affront to Confucian values will make our country ready for the Maha-Kalpa."
+ SQI_unify_the_country_desc: "Zhang Tianran wishes to complete the spiritual genealogy passed from Sun Yat-sen to Puyi. This includes subordinating the Chinese lands that devolved into their own petty leadership. Removing this affront to Confucian values will make our country ready for the Maha-Kalpa."
 
 ### Country Names ###
  SQI: "Shandong"
  SQI_ADJ: "Shandong"
  SQI_DEF: "Shandong"
 
- SQI_social_liberal: "Shangqing Tianguo"
- SQI_social_liberal_ADJ: "Shangqing"
- SQI_social_liberal_DEF: "the Shangqing Tianguo"
- SQI_market_liberal: "Shangqing Tianguo"
- SQI_market_liberal_ADJ: "Shangqing"
- SQI_market_liberal_DEF: "the Shangqing Tianguo"
  SQI_social_conservative: "Shandong Clique"
  SQI_social_conservative_ADJ: "Shandong"
  SQI_social_conservative_DEF: "the Shandong Clique"
@@ -1026,99 +1018,94 @@
  SQI_national_populist_ADJ: "Shangqing"
  SQI_national_populist_DEF: "the Shangqing Tianguo"
 
- SQI_QIE: "China"
- SQI_QIE_ADJ: "Chinese"
- SQI_QIE_DEF: "China"
-
- SQI_QIE_totalist: "People's Republic of China"
- SQI_QIE_totalist_ADJ: "Chinese"
- SQI_QIE_totalist_DEF: "the People's Republic of China"
- SQI_QIE_syndicalist: "People's Republic of China"
- SQI_QIE_syndicalist_ADJ: "Chinese"
- SQI_QIE_syndicalist_DEF: "the People's Republic of China"
- SQI_QIE_radical_socialist: "People's Republic of China"
- SQI_QIE_radical_socialist_ADJ: "Chinese"
- SQI_QIE_radical_socialist_DEF: "the People's Republic of China"
- SQI_QIE_social_democrat: "Qing Empire"
- SQI_QIE_social_democrat_ADJ: "Qing"
- SQI_QIE_social_democrat_DEF: "the Qing Empire"
- SQI_QIE_social_liberal: "Qing Empire"
- SQI_QIE_social_liberal_ADJ: "Qing"
- SQI_QIE_social_liberal_DEF: "the Qing Empire"
- SQI_QIE_market_liberal: "Qing Empire"
- SQI_QIE_market_liberal_ADJ: "Qing"
- SQI_QIE_market_liberal_DEF: "the Qing Empire"
- SQI_QIE_social_conservative: "Qing Empire"
- SQI_QIE_social_conservative_ADJ: "Qing"
- SQI_QIE_social_conservative_DEF: "the Qing Empire"
- SQI_QIE_authoritarian_democrat: "Qing Empire"
- SQI_QIE_authoritarian_democrat_ADJ: "Qing"
- SQI_QIE_authoritarian_democrat_DEF: "the Qing Empire"
- SQI_QIE_paternal_autocrat: "Qing Empire"
- SQI_QIE_paternal_autocrat_ADJ: "Qing"
- SQI_QIE_paternal_autocrat_DEF: "the Qing Empire"
- SQI_QIE_national_populist: "Qing Empire"
- SQI_QIE_national_populist_ADJ: "Qing"
- SQI_QIE_national_populist_DEF: "the Qing Empire"
-
- SQI_LSP_totalist: "League of East Chinese Communes"
- SQI_LSP_totalist_ADJ: "Southern Fengtian"
- SQI_LSP_totalist_DEF: "the League of East Chinese Communes"
- SQI_LSP_syndicalist: "League of East Chinese Communes"
- SQI_LSP_syndicalist_ADJ: "Southern Fengtian"
- SQI_LSP_syndicalist_DEF: "the League of East Chinese Communes"
- SQI_LSP_radical_socialist: "League of East Chinese Communes"
- SQI_LSP_radical_socialist_ADJ: "Southern Fengtian"
- SQI_LSP_radical_socialist_DEF: "the League of East Chinese Communes"
  SQI_LSP_social_democrat: "League of East Chinese Provinces"
- SQI_LSP_social_democrat_ADJ: "Southern Fengtian"
  SQI_LSP_social_democrat_DEF: "the League of East Chinese Provinces"
  SQI_LSP_social_liberal: "League of East Chinese Provinces"
- SQI_LSP_social_liberal_ADJ: "Southern Fengtian"
  SQI_LSP_social_liberal_DEF: "the League of East Chinese Provinces"
  SQI_LSP_market_liberal: "League of East Chinese Provinces"
- SQI_LSP_market_liberal_ADJ: "Southern Fengtian"
  SQI_LSP_market_liberal_DEF: "the League of East Chinese Provinces"
  SQI_LSP_social_conservative: "League of East Chinese Provinces"
- SQI_LSP_social_conservative_ADJ: "Southern Fengtian"
  SQI_LSP_social_conservative_DEF: "the League of East Chinese Provinces"
  SQI_LSP_authoritarian_democrat: "League of East Chinese Provinces"
- SQI_LSP_authoritarian_democrat_ADJ: "Southern Fengtian"
  SQI_LSP_authoritarian_democrat_DEF: "the League of East Chinese Provinces"
  SQI_LSP_paternal_autocrat: "League of East Chinese Provinces"
- SQI_LSP_paternal_autocrat_ADJ: "Southern Fengtian"
  SQI_LSP_paternal_autocrat_DEF: "the League of East Chinese Provinces"
  SQI_LSP_national_populist: "League of East Chinese Provinces"
- SQI_LSP_national_populist_ADJ: "Southern Fengtian"
  SQI_LSP_national_populist_DEF: "the League of East Chinese Provinces"
 
- SQI_CSONG_totalist: "Republic of Shandong"
- SQI_CSONG_totalist_ADJ: "Shandong"
- SQI_CSONG_totalist_DEF: "the Republic of Shandong"
- SQI_CSONG_syndicalist: "Republic of Shandong"
- SQI_CSONG_syndicalist_ADJ: "Shandong"
- SQI_CSONG_syndicalist_DEF: "the Republic of Shandong"
- SQI_CSONG_radical_socialist: "Republic of Shandong"
- SQI_CSONG_radical_socialist_ADJ: "Shandong"
- SQI_CSONG_radical_socialist_DEF: "the Republic of Shandong"
- SQI_CSONG_social_democrat: "Republic of Shandong"
- SQI_CSONG_social_democrat_ADJ: "Shandong"
- SQI_CSONG_social_democrat_DEF: "the Republic of Shandong"
- SQI_CSONG_social_liberal: "Shangqing Tianguo"
- SQI_CSONG_social_liberal_ADJ: "Shangqing"
- SQI_CSONG_social_liberal_DEF: "the Shangqing Tianguo"
- SQI_CSONG_market_liberal: "Shangqing Tianguo"
- SQI_CSONG_market_liberal_ADJ: "Shangqing"
- SQI_CSONG_market_liberal_DEF: "the Shangqing Tianguo"
- SQI_CSONG_social_conservative: "Shandong Clique"
- SQI_CSONG_social_conservative_ADJ: "Shandong"
- SQI_CSONG_social_conservative_DEF: "the Shandong Clique"
- SQI_CSONG_authoritarian_democrat: "Shandong Clique"
- SQI_CSONG_authoritarian_democrat_ADJ: "Shandong"
- SQI_CSONG_authoritarian_democrat_DEF: "the Shandong Clique"
- SQI_CSONG_paternal_autocrat: "Shandong Clique"
- SQI_CSONG_paternal_autocrat_ADJ: "Shandong"
- SQI_CSONG_paternal_autocrat_DEF: "the Shandong Clique"
- SQI_CSONG_national_populist: "Shangqing Tianguo"
- SQI_CSONG_national_populist_ADJ: "Shangqing"
- SQI_CSONG_national_populist_DEF: "the Shangqing Tianguo"
+ SQI_LSP_kr_associated_governorate: "League of East Chinese Provinces"
+ SQI_LSP_kr_associated_governorate_DEF: "the League of East Chinese Provinces"
+ SQI_LSP_kr_autonomous_governorate: "League of East Chinese Provinces"
+ SQI_LSP_kr_autonomous_governorate_DEF: "the League of East Chinese Provinces"
+ SQI_LSP_kr_governorate: "League of East Chinese Provinces"
+ SQI_LSP_kr_governorate_DEF: "the League of East Chinese Provinces"
+ SQI_LSP_kr_integrated_governorate: "League of East Chinese Provinces"
+ SQI_LSP_kr_integrated_governorate_DEF: "the League of East Chinese Provinces"
+
+ SQI_government_totalist: "Jinan Government"
+ SQI_government_totalist_DEF: "the Jinan Government"
+ SQI_government_syndicalist: "Jinan Government"
+ SQI_government_syndicalist_DEF: "the Jinan Government"
+ SQI_government_radical_socialist: "Jinan Government"
+ SQI_government_radical_socialist_DEF: "the Jinan Government"
+ SQI_government_social_democrat: "Jinan Government"
+ SQI_government_social_democrat_DEF: "the Jinan Government"
+ SQI_government_social_liberal: "Jinan Government"
+ SQI_government_social_liberal_DEF: "the Jinan Government"
+ SQI_government_market_liberal: "Jinan Government"
+ SQI_government_market_liberal_DEF: "the Jinan Government"
+ SQI_government_social_conservative: "Jinan Government"
+ SQI_government_social_conservative_DEF: "the Jinan Government"
+ SQI_government_authoritarian_democrat: "Jinan Government"
+ SQI_government_authoritarian_democrat_DEF: "the Jinan Government"
+ SQI_government_paternal_autocrat: "Jinan Government"
+ SQI_government_paternal_autocrat_DEF: "the Jinan Government"
+ SQI_government_national_populist: "Jinan Government"
+ SQI_government_national_populist_DEF: "the Jinan Government"
+
+ SQI_government_yiguandao_totalist: "New Qing Government"
+ SQI_government_yiguandao_totalist_DEF: "the New Qing Government"
+ SQI_government_yiguandao_syndicalist: "New Qing Government"
+ SQI_government_yiguandao_syndicalist_DEF: "the New Qing Government"
+ SQI_government_yiguandao_radical_socialist: "New Qing Government"
+ SQI_government_yiguandao_radical_socialist_DEF: "the New Qing Government"
+ SQI_government_yiguandao_social_democrat: "New Qing Government"
+ SQI_government_yiguandao_social_democrat_DEF: "the New Qing Government"
+ SQI_government_yiguandao_social_liberal: "New Qing Government"
+ SQI_government_yiguandao_social_liberal_DEF: "the New Qing Government"
+ SQI_government_yiguandao_market_liberal: "New Qing Government"
+ SQI_government_yiguandao_market_liberal_DEF: "the New Qing Government"
+ SQI_government_yiguandao_social_conservative: "New Qing Government"
+ SQI_government_yiguandao_social_conservative_DEF: "the New Qing Government"
+ SQI_government_yiguandao_authoritarian_democrat: "New Qing Government"
+ SQI_government_yiguandao_authoritarian_democrat_DEF: "the New Qing Government"
+ SQI_government_yiguandao_paternal_autocrat: "New Qing Government"
+ SQI_government_yiguandao_paternal_autocrat_DEF: "the New Qing Government"
+ SQI_government_yiguandao_national_populist: "New Qing Government"
+ SQI_government_yiguandao_national_populist_DEF: "the New Qing Government"
+
+ united_china_yiguandao: "China"
+ united_china_yiguandao_ADJ: "Chinese"
+ united_china_yiguandao_DEF: "China"
+
+ united_china_yiguandao_social_democrat: "New Qing Empire"
+ united_china_yiguandao_social_democrat_ADJ: "Qing"
+ united_china_yiguandao_social_democrat_DEF: "the New Qing Empire"
+ united_china_yiguandao_social_liberal: "New Qing Empire"
+ united_china_yiguandao_social_liberal_ADJ: "Qing"
+ united_china_yiguandao_social_liberal_DEF: "the New Qing Empire"
+ united_china_yiguandao_market_liberal: "New Qing Empire"
+ united_china_yiguandao_market_liberal_ADJ: "Qing"
+ united_china_yiguandao_market_liberal_DEF: "the New Qing Empire"
+ united_china_yiguandao_social_conservative: "New Qing Empire"
+ united_china_yiguandao_social_conservative_ADJ: "Qing"
+ united_china_yiguandao_social_conservative_DEF: "the New Qing Empire"
+ united_china_yiguandao_authoritarian_democrat: "New Qing Empire"
+ united_china_yiguandao_authoritarian_democrat_ADJ: "Qing"
+ united_china_yiguandao_authoritarian_democrat_DEF: "the New Qing Empire"
+ united_china_yiguandao_paternal_autocrat: "New Qing Empire"
+ united_china_yiguandao_paternal_autocrat_ADJ: "Qing"
+ united_china_yiguandao_paternal_autocrat_DEF: "the New Qing Empire"
+ united_china_yiguandao_national_populist: "New Qing Empire"
+ united_china_yiguandao_national_populist_ADJ: "Qing"
+ united_china_yiguandao_national_populist_DEF: "the New Qing Empire"

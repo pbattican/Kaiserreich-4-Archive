@@ -5,18 +5,25 @@ set_convoys = 25
 set_research_slots = 3
 set_stability = 0.6
 set_war_support = 0.35
+starting_train_buffer = 3
 set_cosmetic_tag = SAF_union
 
 save_global_event_target_as = original_south_africa #used in civil war scripts
 
 set_technology = {
-	### INF ###
+	### Infantry ###
 	infantry_weapons = 1
-	tech_support = 1
-	tech_mountaineers = 1
-	tech_engineers = 1
-	gw_artillery = 1
+	infantry_weapons1 = 1
 	motorised_infantry = 1
+	tech_mountaineers = 1
+
+	### Support ###
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+
+	### Artillery ###
+	gw_artillery = 1
 
 	### Trains ###
 	basic_train = 1
@@ -25,6 +32,7 @@ set_technology = {
 ### Planes - BBA ###
 if = {
 	limit = { has_dlc_bba = yes }
+	set_air_oob = "SAF_air_bba"
 	set_technology = {
 		aa_lmg = 1
 		engines_1 = 1
@@ -40,6 +48,7 @@ if = {
 ### Planes - non BBA ###
 if = {
 	limit = { has_dlc_bba = no }
+	set_air_oob = "SAF_air_legacy"
 	set_technology = {
 		early_fighter = 1
 		early_bomber = 1
@@ -153,17 +162,17 @@ country_event = { id = saf.108 days = 25 } #SATLC and ISL
 country_event = { id = saf.155 days = 258 } #Empire Exhibition
 country_event = { id = saf.121 days = 350 } #Dingane's Day
 country_event = { id = saf.98 days = 460 } #New gov-general?
-country_event = { id = saf.169 days = 500 random = 100 } #Orlando Pirates
+country_event = { id = saf.169 days = 500 random_hours = 100 } #Orlando Pirates
 country_event = { id = saf.76 days = 558 } #Starting the construction of the Voortrekker monument
 country_event = { id = saf.69 days = 609 } #Fusion?
 country_event = { id = entf.2 days = 628 } #hobbit
 country_event = { id = saf.120 days = 700 } #Malan replaces Hertzog if they didn't come to power
 country_event = { id = saf.79 days = 949 } #Start of the 1938 Great Trek centenary
 country_event = { id = saf.140 days = 1087 } #Discovery of the Coelecanthearlier
-country_event = { id = saf.170 days = 1200 random = 100 } #Flytaal
+country_event = { id = saf.170 days = 1200 random_hours = 100 } #Flytaal
 country_event = { id = saf.144 days = 2516 } #Hertzog's passing
 country_event = { id = saf.171 days = 3033 } #ANC Youth League
-country_event = { id = saf.187 days = 3804 random = 30 } #Stellenbsoch drops its last English subjects
+country_event = { id = saf.187 days = 3804 random_hours = 30 } #Stellenbsoch drops its last English subjects
 
 #By-elections
 country_event = { id = saf.310 days = 22 } #Port Elizabeth North
@@ -179,6 +188,12 @@ country_event = { id = saf.311 days = 3354 } #Port Elizabeth Central
 country_event = { id = saf.303 days = 3675 } #Cape Town Castle
 country_event = { id = saf.301 days = 3717 } #Caledon
 country_event = { id = saf.300 days = 4348 } #Benoni
+
+### Integration ###
+ROOT = {
+	NMB = { enable_coring_at_fifty_compliance = yes }
+}
+950 = { enable_state_integration_80_compliance = yes } #Inhambane & Gaza
 
 ### Governor-Generals ###
 recruit_character = SAF_george_herbert_hyde_villiers
@@ -229,6 +244,7 @@ recruit_character = SAF_leila_agnes_buissinne_reitz
 recruit_character = SAF_zainunissa_gool
 recruit_character = SAF_william_henry_clark
 recruit_character = SAF_oswald_pirow
+recruit_character = SAF_henry_gluckman
 
 #ZIM_godfrey_martin_huggins - in ZIM file
 
@@ -293,6 +309,7 @@ SAF_frederick_dean = { set_character_flag = SAF_british_character }
 SAF_francis_richard_gurney_hoare = { set_character_flag = SAF_british_character }
 SAF_hector_cyril_daniel = { set_character_flag = SAF_british_character }
 SAF_james_thom_durrant = { set_character_flag = SAF_british_character }
+SAF_henry_gluckman = { set_character_flag = SAF_british_character }
 
 #will always side with Boer SAF
 SAF_james_barry_munnik_hertzog = { set_character_flag = SAF_boer_character }
@@ -310,5 +327,20 @@ SAF_hesperus_andrias_van_ryneveld = { set_character_flag = SAF_boer_character }
 SAF_christoffel_venter = { set_character_flag = SAF_boer_character }
 SAF_union_defence_council = { set_character_flag = SAF_boer_character }
 
+#will join a socialist SAF
+SAF_william_henry_andrews = { set_character_flag = SAF_socialist_character }
+SAF_percy_john_hodgson = { set_character_flag = SAF_socialist_character }
+SAF_adolph_gysbert_malan = { set_character_flag = SAF_socialist_character }
+SAF_govan_archibald_myuyelwa_mbeki = { set_character_flag = SAF_socialist_character }
+SAF_thabo_edwin_mofutsanyana = { set_character_flag = SAF_socialist_character }
+SAF_daniel_hermanus_pienaar = { set_character_flag = SAF_socialist_character }
+SAF_andries_jacob_brink = { set_character_flag = SAF_socialist_character }
+SAF_hendrik_balzazar_klopper = { set_character_flag = SAF_socialist_character }
+SAF_william_henry_evered_poole = { set_character_flag = SAF_socialist_character }
+SAF_pieter_de_waal = { set_character_flag = SAF_socialist_character }
+SAF_edward_neville_syfret = { set_character_flag = SAF_socialist_character }
+SAF_frederick_dean = { set_character_flag = SAF_socialist_character }
+SAF_james_thom_durrant = { set_character_flag = SAF_socialist_character }
+
 ### Event Targets ###
-SAF_george_herbert_hyde_villiers = { set_variable = { SAF_governor_general = THIS } }
+SAF_george_herbert_hyde_villiers = { set_variable = { ROOT.SAF_governor_general = THIS } }

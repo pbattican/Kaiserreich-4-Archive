@@ -88,7 +88,6 @@ add_namespace = annex
 
 country_event = { #Fate of Central Asia
 	id = annex.3000
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3000 FROM = [From.GetName]" }
 	title = annexation_CA_CONQ
 	desc = annexation_CA_CONQ_desc
 	picture = GFX_report_event_SIK_scenery
@@ -108,6 +107,7 @@ country_event = { #Fate of Central Asia
 	is_triggered_only = yes
 
 	option = { #Liberate an united Central Asia
+		log = "[GetLogInfo]: event annex.3000 option annex.3000.a"
 		name = annex.3000.a
 		ai_chance = {
 			base = 20
@@ -139,6 +139,7 @@ country_event = { #Fate of Central Asia
 	}
 
 	option = { #give to Russia
+		log = "[GetLogInfo]: event annex.3000 option annex.3000.b"
 		name = annex.3000.b
 		trigger = {
 			is_russian_tag = no
@@ -165,6 +166,7 @@ country_event = { #Fate of Central Asia
 	}
 
 	option = { #divide
+		log = "[GetLogInfo]: event annex.3000 option annex.3000.c"
 		name = annex.3000.c
 		ai_chance = {
 			base = 80
@@ -185,13 +187,12 @@ country_event = { #Fate of Central Asia
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3000 option annex.integration"
 		name = annex.integration
 		trigger = {
 			is_russian_tag = yes
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		every_state = {
 			limit = {
 				is_central_asia = yes
@@ -206,14 +207,11 @@ country_event = { #Fate of Central Asia
 			}
 			add_claim_by = ROOT
 		}
-		add_to_array = { RUS_integration_array = ALO }
-		add_to_array = { RUS_integration_array = TRK }
-		add_to_array = { RUS_integration_array = BUK }
-		add_to_array = { RUS_integration_array = KHI }
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3000 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			is_russian_tag = no
@@ -230,7 +228,6 @@ country_event = { #Fate of Central Asia
 
 country_event = { #Fate of Alash
 	id = annex.3001
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3001 FROM = [From.GetName]" }
 	title = annexation_ALO_CONQ
 	desc = annexation_ALO_CONQ_desc
 	picture = GFX_report_event_SIK_scenery
@@ -250,6 +247,7 @@ country_event = { #Fate of Alash
 	}
 
 	option = { #Liberate
+		log = "[GetLogInfo]: event annex.3001 option annex.3001.a"
 		name = annex.3001.a
 		ai_chance = {
 			base = 20
@@ -288,6 +286,7 @@ country_event = { #Fate of Alash
 	}
 
 	option = { #give to Russia
+		log = "[GetLogInfo]: event annex.3001 option annex.3001.b"
 		name = annex.3001.b
 		trigger = {
 			is_russian_tag = no
@@ -310,6 +309,7 @@ country_event = { #Fate of Alash
 	}
 
 	option = { #give to Turkestan
+		log = "[GetLogInfo]: event annex.3001 option annex.3001.c"
 		name = annex.3001.c
 		trigger = {
 			is_russian_tag = no
@@ -332,6 +332,7 @@ country_event = { #Fate of Alash
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3001 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -347,9 +348,7 @@ country_event = { #Fate of Alash
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		every_state = {
 			limit = {
 				is_alash = yes
@@ -364,14 +363,11 @@ country_event = { #Fate of Alash
 			}
 			add_claim_by = ROOT
 		}
-		if = {
-			limit = { is_russian_tag = yes }
-			add_to_array = { RUS_integration_array = ALO }
-		}
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3001 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			is_russian_tag = no
@@ -385,7 +381,6 @@ country_event = { #Fate of Alash
 
 country_event = { #Fate of Turkestan
 	id = annex.3002
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3002 FROM = [From.GetName]" }
 	title = annexation_TRK_CONQ
 	desc = annexation_TRK_CONQ_desc
 	picture = GFX_report_event_SIK_scenery
@@ -405,6 +400,7 @@ country_event = { #Fate of Turkestan
 	}
 
 	option = { #Liberate
+		log = "[GetLogInfo]: event annex.3002 option annex.3002.a"
 		name = annex.3002.a
 		ai_chance = {
 			base = 20
@@ -428,6 +424,7 @@ country_event = { #Fate of Turkestan
 	}
 
 	option = { #give to Russia
+		log = "[GetLogInfo]: event annex.3002 option annex.3002.b"
 		name = annex.3002.b
 		trigger = {
 			is_russian_tag = no
@@ -450,6 +447,7 @@ country_event = { #Fate of Turkestan
 	}
 
 	option = { #give to Alash
+		log = "[GetLogInfo]: event annex.3002 option annex.3002.c"
 		name = annex.3002.c
 		trigger = {
 			is_russian_tag = no
@@ -472,6 +470,7 @@ country_event = { #Fate of Turkestan
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3002 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -479,9 +478,7 @@ country_event = { #Fate of Turkestan
 				is_central_asian_tag = yes
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		every_state = {
 			limit = {
 				is_turkestan = yes
@@ -496,14 +493,11 @@ country_event = { #Fate of Turkestan
 			}
 			add_claim_by = ROOT
 		}
-		if = {
-			limit = { is_russian_tag = yes }
-			add_to_array = { RUS_integration_array = TRK }
-		}
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3002 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			is_russian_tag = no
@@ -517,7 +511,6 @@ country_event = { #Fate of Turkestan
 
 country_event = { #Fate of Bukhara
 	id = annex.3003
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3003 FROM = [From.GetName]" }
 	title = annexation_BUK_CONQ
 	desc = annexation_BUK_CONQ_desc
 	picture = GFX_report_event_SIK_scenery
@@ -537,6 +530,7 @@ country_event = { #Fate of Bukhara
 	}
 
 	option = { #Liberate
+		log = "[GetLogInfo]: event annex.3003 option annex.3003.a"
 		name = annex.3003.a
 		ai_chance = {
 			base = 20
@@ -584,6 +578,7 @@ country_event = { #Fate of Bukhara
 	}
 
 	option = { #give to Russia
+		log = "[GetLogInfo]: event annex.3003 option annex.3003.b"
 		name = annex.3003.b
 		trigger = {
 			is_russian_tag = no
@@ -623,6 +618,7 @@ country_event = { #Fate of Bukhara
 	}
 
 	option = { #give to Turkestan
+		log = "[GetLogInfo]: event annex.3003 option annex.3003.c"
 		name = annex.3003.c
 		trigger = {
 			is_russian_tag = no
@@ -651,6 +647,7 @@ country_event = { #Fate of Bukhara
 	}
 
 	option = { #give to Alash
+		log = "[GetLogInfo]: event annex.3003 option annex.3003.d"
 		name = annex.3003.d
 		trigger = {
 			is_russian_tag = no
@@ -685,6 +682,7 @@ country_event = { #Fate of Bukhara
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3003 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -700,9 +698,7 @@ country_event = { #Fate of Bukhara
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		every_state = {
 			limit = {
 				is_bukhara = yes
@@ -717,14 +713,11 @@ country_event = { #Fate of Bukhara
 			}
 			add_claim_by = ROOT
 		}
-		if = {
-			limit = { is_russian_tag = yes }
-			add_to_array = { RUS_integration_array = BUK }
-		}
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3003 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			is_russian_tag = no
@@ -738,7 +731,6 @@ country_event = { #Fate of Bukhara
 
 country_event = { #Fate of Khiva
 	id = annex.3004
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3004 FROM = [From.GetName]" }
 	title = annexation_KHI_CONQ
 	desc = annexation_KHI_CONQ_desc
 	picture = GFX_report_event_SIK_scenery
@@ -758,6 +750,7 @@ country_event = { #Fate of Khiva
 	}
 
 	option = { #Liberate
+		log = "[GetLogInfo]: event annex.3004 option annex.3004.a"
 		name = annex.3004.a
 		ai_chance = {
 			base = 20
@@ -794,6 +787,7 @@ country_event = { #Fate of Khiva
 	}
 
 	option = { #give to Russia
+		log = "[GetLogInfo]: event annex.3004 option annex.3004.b"
 		name = annex.3004.b
 		trigger = {
 			is_russian_tag = no
@@ -833,6 +827,7 @@ country_event = { #Fate of Khiva
 	}
 
 	option = { #give to Turkestan
+		log = "[GetLogInfo]: event annex.3004 option annex.3004.c"
 		name = annex.3004.c
 		trigger = {
 			is_russian_tag = no
@@ -861,6 +856,7 @@ country_event = { #Fate of Khiva
 	}
 
 	option = { #give to Alash
+		log = "[GetLogInfo]: event annex.3004 option annex.3004.d"
 		name = annex.3004.d
 		trigger = {
 			is_russian_tag = no
@@ -889,6 +885,7 @@ country_event = { #Fate of Khiva
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3004 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -896,9 +893,7 @@ country_event = { #Fate of Khiva
 				is_central_asian_tag = yes
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		every_state = {
 			limit = {
 				is_khiva = yes
@@ -913,14 +908,11 @@ country_event = { #Fate of Khiva
 			}
 			add_claim_by = ROOT
 		}
-		if = {
-			limit = { is_russian_tag = yes }
-			add_to_array = { RUS_integration_array = KHI }
-		}
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3004 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			is_russian_tag = no
@@ -934,7 +926,6 @@ country_event = { #Fate of Khiva
 
 country_event = { #Fate of Afghanistan
 	id = annex.3007
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3007 FROM = [From.GetName]" }
 	title = annexation_AFG_CONQ
 	desc = annexation_AFG_CONQ_desc
 	picture = GFX_report_event_generic_diplomacy2
@@ -955,18 +946,18 @@ country_event = { #Fate of Afghanistan
 	}
 
 	option = { #puppet
+		log = "[GetLogInfo]: event annex.3007 option annex.3007.a"
 		name = annex.3007.a
 		trigger = {
 			442 = { is_valid_annexation_state = no }
 		}
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 		set_temp_variable = { tag_to_release = AFG }
 		release_targeted_tag = yes
 	}
 
 	option = { #puppet - with Peshawar
+		log = "[GetLogInfo]: event annex.3007 option annex.3007.b"
 		name = annex.3007.b
 		trigger = {
 			442 = { is_valid_annexation_state = yes }
@@ -987,18 +978,18 @@ country_event = { #Fate of Afghanistan
 	}
 
 	option = { #puppet - without Peshawar
+		log = "[GetLogInfo]: event annex.3007 option annex.3007.c"
 		name = annex.3007.c
 		trigger = {
 			442 = { is_valid_annexation_state = yes }
 		}
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 		set_temp_variable = { tag_to_release = AFG }
 		release_targeted_tag = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3007 option annex.occupation"
 		name = annex.occupation
 		ai_chance = { base = 0 }
 		occupy_medium_country = yes
@@ -1012,7 +1003,6 @@ country_event = { #Fate of Afghanistan
 
 country_event = { #Fate of Siberia
 	id = annex.3008
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3008 FROM = [From.GetName]" }
 	title = annexation_SIB_CONQ
 	desc = annexation_SIB_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -1030,12 +1020,26 @@ country_event = { #Fate of Siberia
 	}
 
 	option = { #puppet
+		log = "[GetLogInfo]: event annex.3008 option annex.3008.a"
 		name = annex.3008.a
 		trigger = {
 			NOT = { country_exists = SIB }
 		}
 		ai_chance = {
 			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					var:398.owner = {
+						OR = {
+							original_tag = RUS
+							original_tag = SOV
+						}
+						ROOT_can_grant_land = yes
+					}
+					TRM = { is_ally_of_ROOT = yes }
+				}
+			}
 		}
 		hidden_effect = {
 			every_state = {
@@ -1057,12 +1061,15 @@ country_event = { #Fate of Siberia
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3008 option annex.3008.c"
 		name = annex.3008.c #give it to Russia
 		trigger = {
 			var:398.owner = {
-				NOT = { tag = TRM }
-				is_russian_tag = yes
-				is_ally_with = ROOT
+				OR = {
+					original_tag = RUS
+					original_tag = SOV
+				}
+				ROOT_can_grant_land = yes
 			}
 		}
 		ai_chance = {
@@ -1070,6 +1077,10 @@ country_event = { #Fate of Siberia
 			modifier = {
 				factor = 0
 				is_german_tag = yes
+			}
+			modifier = {
+				factor = 0
+				TRM = { is_ally_of_ROOT = yes }
 			}
 		}
 		set_temp_variable = { tag_to_release = 398.owner }
@@ -1102,13 +1113,12 @@ country_event = { #Fate of Siberia
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3008 option annex.3008.d"
 		name = annex.3008.d #give it to Transamur
 		trigger = {
 			TRM = { is_ally_of_ROOT = yes }
 		}
-		ai_chance = {
-			base = 300
-		}
+		ai_chance = { base = 300 }
 		set_temp_variable = { tag_to_release = TRM }
 		hidden_effect = {
 			every_state = {
@@ -1135,6 +1145,7 @@ country_event = { #Fate of Siberia
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3008 option annex.occupation"
 		name = annex.occupation
 		ai_chance = { base = 0 }
 		occupy_large_country = yes
@@ -1144,7 +1155,6 @@ country_event = { #Fate of Siberia
 
 country_event = { #Fate of the Russian Far East
 	id = annex.3009
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3009 FROM = [From.GetName]" }
 	title = annexation_TRM_CONQ
 	desc = annexation_TRM_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -1180,6 +1190,7 @@ country_event = { #Fate of the Russian Far East
 	}
 
 	option = { #liberate
+		log = "[GetLogInfo]: event annex.3009 option annex.3009.a"
 		name = annex.3009.a
 		trigger = {
 			NOT = { country_exists = TRM }
@@ -1187,8 +1198,18 @@ country_event = { #Fate of the Russian Far East
 		ai_chance = {
 			base = 100
 			modifier = {
-				factor = 0.5
-				SIB = { is_ally_of_ROOT = yes }
+				factor = 0
+				OR = {
+					var:566.owner = { #Irkutsk
+						OR = {
+							original_tag = RUS
+							original_tag = SOV
+						}
+						ROOT_can_grant_land = yes
+					}
+					SIB = { is_ally_of_ROOT = yes }
+					TRM = { is_ally_of_ROOT = yes }
+				}
 			}
 		}
 		every_state = {
@@ -1202,14 +1223,15 @@ country_event = { #Fate of the Russian Far East
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3009 option annex.3009.b"
 		name = annex.3009.b #give it to Russia
 		trigger = {
 			var:566.owner = { #Irkutsk
 				OR = {
-					tag = RUS
-					tag = SOV
+					original_tag = RUS
+					original_tag = SOV
 				}
-				is_ally_with = ROOT
+				ROOT_can_grant_land = yes
 			}
 		}
 		ai_chance = {
@@ -1217,6 +1239,13 @@ country_event = { #Fate of the Russian Far East
 			modifier = {
 				factor = 0
 				is_german_tag = yes
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					SIB = { is_ally_of_ROOT = yes }
+					TRM = { is_ally_of_ROOT = yes }
+				}
 			}
 		}
 		set_temp_variable = { tag_to_release = 566.owner }
@@ -1236,12 +1265,17 @@ country_event = { #Fate of the Russian Far East
 	}
 
 	option = { #Give it to SIB
+		log = "[GetLogInfo]: event annex.3009 option annex.3009.c"
 		name = annex.3009.c
 		trigger = {
 			SIB = { is_ally_of_ROOT = yes }
 		}
 		ai_chance = {
 			base = 200
+			modifier = {
+				factor = 0
+				TRM = { is_ally_of_ROOT = yes }
+			}
 		}
 		set_temp_variable = { tag_to_release = SIB }
 		hidden_effect = {
@@ -1260,13 +1294,12 @@ country_event = { #Fate of the Russian Far East
 	}
 
 	option = { #Give it to TRM
+		log = "[GetLogInfo]: event annex.3009 option annex.3009.d"
 		name = annex.3009.d
 		trigger = {
 			TRM = { is_ally_of_ROOT = yes }
 		}
-		ai_chance = {
-			base = 200
-		}
+		ai_chance = { base = 200 }
 		set_temp_variable = { tag_to_release = TRM }
 		hidden_effect = {
 			every_state = {
@@ -1284,6 +1317,7 @@ country_event = { #Fate of the Russian Far East
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3009 option annex.occupation"
 		name = annex.occupation
 		ai_chance = { base = 0 }
 		occupy_medium_country = yes
@@ -1297,7 +1331,6 @@ country_event = { #Fate of the Russian Far East
 
 country_event = { #Fate of China
 	id = annex.3010
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3010 FROM = [From.GetName]" }
 	title = annexation_CHI_CONQ
 	desc = annexation_CHI_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -1308,34 +1341,42 @@ country_event = { #Fate of China
 		hidden_effect = {
 			determine_chinese_ally = yes
 			if = {
-				limit = { tag = LEC }
+				limit = { original_tag = LEC }
 				every_owned_state = {
 					limit = {
-						is_not_claim_or_core_of_ROOT = yes
-						OR = {
-							state = 592 #Guangzhou
-							state = 728 #Guangzhouwan
-							state = 729 #Macao
-							state = 744 #Kiaochow
-							state = 802 #Xiamen
-							state = 803 #Wenzhou
-							state = 996 #Weihaiwei
-							state = 1075 #Nantong
-						}
+						is_possible_legation_cities_state = yes
+						NOT = { is_core_of = ROOT }
 					}
 					add_claim_by = LEC
 				}
+			}
+			if = {
+				limit = {
+					original_tag = JAP
+					any_owned_state = {
+						is_china_claim_of_JAP = yes
+						is_manchuria = no
+						has_variable = ambition_area_@ROOT
+					}
+				}
+				save_event_target_as = japan_can_annex_coast
 			}
 		}
 	}
 
 	option = { #Release China
-		name = annex.3010.a
+		log = "[GetLogInfo]: event annex.3010 option annex.china.release_china"
+		name = annex.china.release_china
 		trigger = {
 			has_event_target = china_release_target
+			NOT = { has_event_target = japan_forced_return }
 		}
 		ai_chance = {
 			base = 10
+			modifier = {
+				factor = 0
+				has_event_target = japan_can_annex_coast
+			}
 		}
 		set_temp_variable = { tag_to_release = event_target:china_release_target }
 		release_chinese_government = yes
@@ -1343,18 +1384,15 @@ country_event = { #Fate of China
 	}
 
 	option = { #Release FNG, keep the coastline
-		name = annex.3010.b
+		log = "[GetLogInfo]: event annex.3010 option annex.china.release_china_take_coastline"
+		name = annex.china.release_china_take_coastline
 		trigger = {
-			tag = JAP
+			original_tag = JAP
+			NOT = { has_event_target = japan_forced_return }
 			has_event_target = china_release_target
-			any_owned_state = {
-				is_china_claim_of_JAP = yes
-				has_variable = ambition_area_@ROOT
-			}
+			has_event_target = japan_can_annex_coast
 		}
-		ai_chance = {
-			base = 90
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { japan_keeps_coast = 1 }
 		set_temp_variable = { tag_to_release = event_target:china_release_target }
 		release_chinese_government = yes
@@ -1362,50 +1400,118 @@ country_event = { #Fate of China
 	}
 
 	option = { #Give to a Chinese ally
-		name = annex.3010.c
+		log = "[GetLogInfo]: event annex.3010 option annex.china.give_to_china"
+		name = annex.china.give_to_china
 		trigger = {
 			has_event_target = china_ally_target
+			NOT = { has_event_target = japan_forced_return }
 		}
 		ai_chance = {
 			base = 90
+			modifier = {
+				factor = 0
+				has_event_target = china_release_target
+			}
+			modifier = {
+				factor = 0
+				has_event_target = japan_can_annex_coast
+			}
 		}
 		reverse_add_opinion_modifier = { target = event_target:china_ally_target modifier = KR_returned_land }
 		every_owned_state = {
 			limit = {
-				is_controlled_chinese_region = yes
+				is_china_proper = yes
+				is_claim_or_core_of_ROOT = no
 				OR = {
+					ROOT = { NOT = { has_country_flag = LEC_CONQ } }
+					743 = { is_valid_annexation_state = no }
 					is_possible_legation_cities_state = no
-					ROOT = {
-						NOT = { has_country_flag = LEC_CONQ }
-					}
-				}
-				is_not_claim_or_core_of_ROOT = yes
-				if = {
-					limit = { ROOT = { tag = JAP } }
-					NOT = { has_variable = ambition_area_@ROOT }
 				}
 			}
 			transfer_state_to = event_target:china_ally_target
 		}
 	}
 
-	option = { #Full occupation
-		name = annex.occupation
-		ai_chance = {
-			base = 0
+	option = { #Give to a Chinese ally, keep the coastline
+		log = "[GetLogInfo]: event annex.3010 option annex.china.give_to_china_take_coastline"
+		name = annex.china.give_to_china_take_coastline
+		trigger = {
+			original_tag = JAP
+			NOT = { has_event_target = japan_forced_return }
+			has_event_target = china_ally_target
+			has_event_target = japan_can_annex_coast
 		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_event_target = china_release_target
+			}
+		}
+		reverse_add_opinion_modifier = { target = event_target:china_ally_target modifier = KR_hates_govt }
+		every_owned_state = {
+			limit = {
+				is_china_proper = yes
+				is_claim_or_core_of_ROOT = no
+				NOT = { has_variable = ambition_area_@ROOT }
+				OR = {
+					ROOT = { NOT = { has_country_flag = LEC_CONQ } }
+					743 = { is_valid_annexation_state = no }
+					is_possible_legation_cities_state = no
+				}
+			}
+			transfer_state_to = event_target:china_ally_target
+		}
+	}
+
+	option = { #Return to China (for defeated Japan)
+		log = "[GetLogInfo]: event annex.3010 option annex.china.fading_sun_return_to_china"
+		name = annex.china.fading_sun_return_to_china
+		trigger = {
+			has_event_target = japan_forced_return
+		}
+		every_owned_state = {
+			limit = { is_china_proper = yes }
+			hidden_effect = { remove_core_of = ROOT }
+			remove_claim_by = ROOT
+			set_state_flag = japan_forced_return
+			transfer_state_to = event_target:japan_forced_return
+		}
+		event_target:japan_forced_return = { country_event = annex.300 }
+	}
+
+	option = { #International China Easter egg (for LEC)
+		log = "[GetLogInfo]: event annex.3010 option annex.3010.a"
+		name = annex.3010.a
+		trigger = {
+			original_tag = LEC
+		}
+		ai_chance = { base = 0 }
+		set_cosmetic_tag = LEC_china
+		every_state = {
+			limit = {
+				is_core_china = yes
+				NOT = { is_core_of = ROOT }
+			}
+			add_claim_by = ROOT
+		}
+	}
+
+	option = { #Full occupation
+		log = "[GetLogInfo]: event annex.3010 option annex.occupation"
+		name = annex.occupation
+		trigger = {
+			NOT = { original_tag = LEC }
+			NOT = { has_event_target = japan_forced_return }
+		}
+		ai_chance = { base = 0 }
 		occupy_massive_country = yes
 		set_country_flag = CHI_CONQ
-		if = {
-			limit = { tag = LEC }
-			set_cosmetic_tag = LEC_china
-		}
 	}
 }
 
 country_event = { #Fate of Tibet
 	id = annex.3011
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3011 FROM = [From.GetName]" }
 	title = annexation_TIB_CONQ
 	desc = annexation_TIB_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -1422,6 +1528,7 @@ country_event = { #Fate of Tibet
 						is_claimed_by = TIB
 					}
 					NOT = { region = 146 } #Himalayas
+					NOT = { state = 858 } #Tawang
 				}
 				remove_core_of = TIB
 				remove_claim_by = TIB
@@ -1431,12 +1538,16 @@ country_event = { #Fate of Tibet
 	}
 
 	option = { #Release Tibet
+		log = "[GetLogInfo]: event annex.3011 option annex.3011.a"
 		name = annex.3011.a
+		trigger = {
+			NOT = { has_event_target = japan_forced_return }
+		}
 		ai_chance = {
 			base = 60
 			modifier = {
 				factor = 0
-				can_become_china = no
+				is_chinese_tag = no
 				any_owned_state = {
 					OR = {
 						region = 220 #Xibei
@@ -1447,23 +1558,16 @@ country_event = { #Fate of Tibet
 		}
 		set_temp_variable = { tag_to_release = TIB }
 		release_targeted_tag = yes
-		hidden_effect = {
-			TIB_puppet_setup = yes
-			TIB = {
-				add_state_claim = 858 #Tawang
-				add_state_claim = 601 #Xikang
-				add_state_claim = 604 #Xining
-			}
-		}
+		hidden_effect = { TIB_puppet_setup = yes }
 	}
 
 	option = { #Release Greater Tibet
+		log = "[GetLogInfo]: event annex.3011 option annex.3011.b"
 		name = annex.3011.b
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		trigger = {
-			can_become_china = no
+			NOT = { has_event_target = japan_forced_return }
+			is_chinese_tag = no
 			any_owned_state = {
 				is_not_claim_or_core_of_ROOT = yes
 				OR = {
@@ -1499,15 +1603,16 @@ country_event = { #Fate of Tibet
 		}
 		set_temp_variable = { tag_to_release = TIB }
 		puppet_released_tag = yes
-		hidden_effect = {
-			TIB_puppet_setup = yes
-		}
+		hidden_effect = { TIB_puppet_setup = yes }
 	}
 
 	option = { #Split between Tibet and China
+		log = "[GetLogInfo]: event annex.3011 option annex.3011.c"
 		name = annex.3011.c
 		trigger = {
-			can_become_china = no
+			NOT = { has_event_target = japan_forced_return }
+			has_event_target = china_ally_target
+			is_chinese_tag = no
 			any_owned_state = {
 				is_not_claim_or_core_of_ROOT = yes
 				OR = {
@@ -1516,13 +1621,13 @@ country_event = { #Fate of Tibet
 					state = 693 #Chamdo
 				}
 			}
-			has_event_target = china_ally_target
 		}
 		ai_chance = {
-			base = 20
+			base = 60
 			modifier = {
-				factor = 3
-				is_ally_with = event_target:china_ally_target
+				factor = 0
+				is_major = yes
+				event_target:china_ally_target = { is_ally_of_ROOT = no }
 			}
 		}
 		every_owned_state = {
@@ -1546,19 +1651,24 @@ country_event = { #Fate of Tibet
 		}
 		set_temp_variable = { tag_to_release = TIB }
 		puppet_released_tag = yes
-		hidden_effect = {
-			TIB_puppet_setup = yes
-		}
+		hidden_effect = { TIB_puppet_setup = yes }
 	}
 
 	option = { #Give it to China
-		name = annex.3011.d
+		log = "[GetLogInfo]: event annex.3011 option annex.china.give_to_china"
+		name = annex.china.give_to_china
 		trigger = {
-			can_become_china = no
+			NOT = { has_event_target = japan_forced_return }
 			has_event_target = china_ally_target
+			is_chinese_tag = no
 		}
 		ai_chance = {
 			base = 20
+			modifier = {
+				factor = 0
+				is_major = yes
+				event_target:china_ally_target = { is_ally_of_ROOT = no }
+			}
 		}
 		reverse_add_opinion_modifier = { target = event_target:china_ally_target modifier = KR_returned_land }
 		every_owned_state = {
@@ -1574,8 +1684,28 @@ country_event = { #Fate of Tibet
 		}
 	}
 
+	option = { #Return to China (for defeated Japan)
+		log = "[GetLogInfo]: event annex.3011 option annex.china.fading_sun_return_to_china"
+		name = annex.china.fading_sun_return_to_china
+		trigger = {
+			has_event_target = japan_forced_return
+		}
+		every_owned_state = {
+			limit = { is_core_of = TIB }
+			hidden_effect = { remove_core_of = ROOT }
+			remove_claim_by = ROOT
+			set_state_flag = japan_forced_return
+			transfer_state_to = event_target:japan_forced_return
+		}
+		event_target:japan_forced_return = { country_event = annex.300 }
+	}
+
 	option = { #Annex
-		name = annex.3011.e
+		log = "[GetLogInfo]: event annex.3011 option annex.3011.d"
+		name = annex.3011.d
+		trigger = {
+			is_chinese_tag = yes
+		}
 		ai_chance = {
 			base = 30
 			modifier = {
@@ -1591,9 +1721,6 @@ country_event = { #Fate of Tibet
 				tag = UPC
 			}
 		}
-		trigger = {
-			china_is_potential_government = yes #Chinese tags
-		}
 		occupy_medium_country = yes
 		TIB = {
 			every_core_state = {
@@ -1604,9 +1731,11 @@ country_event = { #Fate of Tibet
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3011 option annex.occupation"
 		name = annex.occupation
 		trigger = {
-			china_is_potential_government = no
+			NOT = { has_event_target = japan_forced_return }
+			is_chinese_tag = no
 		}
 		ai_chance = { base = 0 }
 		occupy_medium_country = yes
@@ -1616,7 +1745,6 @@ country_event = { #Fate of Tibet
 
 country_event = { #Fate of Xinjiang
 	id = annex.3012
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3012 FROM = [From.GetName]" }
 	title = annexation_SIK_CONQ
 	desc = annexation_SIK_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -1634,7 +1762,7 @@ country_event = { #Fate of Xinjiang
 				save_event_target_as = united_central_asia
 			}
 			if = {
-				limit = { china_is_potential_government = yes }
+				limit = { is_chinese_tag = yes }
 				SIK = { set_cosmetic_tag = ETS_puppet }
 			}
 			else = {
@@ -1644,12 +1772,14 @@ country_event = { #Fate of Xinjiang
 	}
 
 	option = { #Release an independent Xinjiang
+		log = "[GetLogInfo]: event annex.3012 option annex.3012.a"
 		name = annex.3012.a
-		ai_chance = {
-			base = 50
+		trigger = {
+			NOT = { has_event_target = japan_forced_return }
 		}
+		ai_chance = { base = 50 }
 		if = {
-			limit = { china_is_potential_government = yes }
+			limit = { is_chinese_tag = yes }
 			set_temp_variable = { tag_to_release = SIK }
 		}
 		else = {
@@ -1671,17 +1801,20 @@ country_event = { #Fate of Xinjiang
 	}
 
 	option = { #Give it to Turkestan
+		log = "[GetLogInfo]: event annex.3012 option annex.3012.b"
 		name = annex.3012.b
 		trigger = {
-			can_become_china = no
+			NOT = { has_event_target = japan_forced_return }
+			is_chinese_tag = no
 			NOT = { has_event_target = united_central_asia }
 			TRK = { ROOT_can_grant_land = yes }
 		}
 		ai_chance = {
 			base = 50
 			modifier = {
-				factor = 2
-				TRK = { is_ally_of_ROOT = yes }
+				factor = 0
+				is_major = yes
+				TRK = { is_ally_of_ROOT = no }
 			}
 		}
 		set_temp_variable = { tag_to_release = TRK }
@@ -1695,16 +1828,19 @@ country_event = { #Fate of Xinjiang
 	}
 
 	option = { #Give it to Central Asian Federation
+		log = "[GetLogInfo]: event annex.3012 option annex.3012.c"
 		name = annex.3012.c
 		trigger = {
-			can_become_china = no
+			NOT = { has_event_target = japan_forced_return }
 			has_event_target = united_central_asia
+			is_chinese_tag = no
 		}
 		ai_chance = {
 			base = 50
 			modifier = {
-				factor = 2
-				is_ally_with = event_target:china_ally_target
+				factor = 0
+				is_major = yes
+				event_target:united_central_asia = { is_ally_of_ROOT = no }
 			}
 		}
 		set_temp_variable = { tag_to_release = event_target:united_central_asia }
@@ -1718,16 +1854,18 @@ country_event = { #Fate of Xinjiang
 	}
 
 	option = { #Give it to China
-		name = annex.3012.d
+		log = "[GetLogInfo]: event annex.3012 option annex.china.give_to_china"
+		name = annex.china.give_to_china
 		trigger = {
-			can_become_china = no
 			has_event_target = china_ally_target
+			is_chinese_tag = no
 		}
 		ai_chance = {
 			base = 50
 			modifier = {
-				factor = 2
-				is_ally_with = event_target:china_ally_target
+				factor = 0
+				is_major = yes
+				event_target:china_ally_target = { is_ally_of_ROOT = no }
 			}
 		}
 		reverse_add_opinion_modifier = { target = event_target:china_ally_target modifier = KR_returned_land }
@@ -1740,8 +1878,25 @@ country_event = { #Fate of Xinjiang
 		}
 	}
 
+	option = { #Return to China (for defeated Japan)
+		log = "[GetLogInfo]: event annex.3012 option annex.china.fading_sun_return_to_china"
+		name = annex.china.fading_sun_return_to_china
+		trigger = {
+			has_event_target = japan_forced_return
+		}
+		every_owned_state = {
+			limit = { is_xinjiang = yes }
+			hidden_effect = { remove_core_of = ROOT }
+			remove_claim_by = ROOT
+			set_state_flag = japan_forced_return
+			transfer_state_to = event_target:japan_forced_return
+		}
+		event_target:japan_forced_return = { country_event = annex.300 }
+	}
+
 	option = { #Annex
-		name = annex.3012.e
+		log = "[GetLogInfo]: event annex.3012 option annex.3012.d"
+		name = annex.3012.d
 		ai_chance = {
 			base = 50
 			modifier = {
@@ -1754,7 +1909,7 @@ country_event = { #Fate of Xinjiang
 			}
 		}
 		trigger = {
-			china_is_potential_government = yes #Chinese tags
+			is_chinese_tag = yes
 		}
 		every_state = {
 			limit = {
@@ -1767,13 +1922,13 @@ country_event = { #Fate of Xinjiang
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3012 option annex.occupation"
 		name = annex.occupation
 		trigger = {
-			china_is_potential_government = no
+			NOT = { has_event_target = japan_forced_return }
+			is_chinese_tag = no
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		occupy_medium_country = yes
 		set_country_flag = SIK_CONQ
 	}
@@ -1781,7 +1936,6 @@ country_event = { #Fate of Xinjiang
 
 country_event = { #Fate of Mongolia
 	id = annex.3013
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3013 FROM = [From.GetName]" }
 	title = annexation_MON_CONQ
 	desc = annexation_MON_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -1799,12 +1953,16 @@ country_event = { #Fate of Mongolia
 	}
 
 	option = { #Release Mongolia
+		log = "[GetLogInfo]: event annex.3013 option annex.3013.a"
 		name = annex.3013.a
+		trigger = {
+			NOT = { has_event_target = japan_forced_return }
+		}
 		ai_chance = {
-			base = 60
+			base = 40
 			modifier = {
 				factor = 0
-				can_become_china = no
+				is_chinese_tag = no
 				any_owned_state = { region = 222 } #Inner Mongolia
 			}
 		}
@@ -1821,12 +1979,12 @@ country_event = { #Fate of Mongolia
 	}
 
 	option = { #Release Greater Mongolia
+		log = "[GetLogInfo]: event annex.3013 option annex.3013.b"
 		name = annex.3013.b
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 40 }
 		trigger = {
-			can_become_china = no
+			NOT = { has_event_target = japan_forced_return }
+			is_chinese_tag = no
 			any_owned_state = { region = 222 } #Inner Mongolia
 		}
 		every_owned_state = {
@@ -1848,18 +2006,21 @@ country_event = { #Fate of Mongolia
 	}
 
 	option = { #Split between Mongolia and China
+		log = "[GetLogInfo]: event annex.3013 option annex.3013.c"
 		name = annex.3013.c
-		ai_chance = {
-			base = 20
-			modifier = {
-				factor = 3
-				is_ally_with = event_target:china_ally_target
-			}
-		}
 		trigger = {
-			can_become_china = no
-			any_owned_state = { region = 222 } #Inner Mongolia
 			has_event_target = china_ally_target
+			NOT = { has_event_target = japan_forced_return }
+			is_chinese_tag = no
+			any_owned_state = { region = 222 } #Inner Mongolia
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 0
+				is_major = yes
+				event_target:china_ally_target = { is_ally_of_ROOT = no }
+			}
 		}
 		every_owned_state = {
 			limit = {
@@ -1881,13 +2042,19 @@ country_event = { #Fate of Mongolia
 	}
 
 	option = { #Give it to China
-		name = annex.3013.d
+		log = "[GetLogInfo]: event annex.3013 option annex.china.give_to_china"
+		name = annex.china.give_to_china
+		trigger = {
+			has_event_target = china_ally_target
+			is_chinese_tag = no
+		}
 		ai_chance = {
 			base = 20
-		}
-		trigger = {
-			can_become_china = no
-			has_event_target = china_ally_target
+			modifier = {
+				factor = 0
+				is_major = yes
+				event_target:china_ally_target = { is_ally_of_ROOT = no }
+			}
 		}
 		reverse_add_opinion_modifier = { target = event_target:china_ally_target modifier = KR_returned_land }
 		every_owned_state = {
@@ -1902,8 +2069,30 @@ country_event = { #Fate of Mongolia
 		}
 	}
 
+	option = { #Return to China (for defeated Japan)
+		log = "[GetLogInfo]: event annex.3013 option annex.china.fading_sun_return_to_china"
+		name = annex.china.fading_sun_return_to_china
+		trigger = {
+			has_event_target = japan_forced_return
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					region = 152 #Outer Mongolia
+					region = 222 #Inner Mongolia
+				}
+			}
+			hidden_effect = { remove_core_of = ROOT }
+			remove_claim_by = ROOT
+			set_state_flag = japan_forced_return
+			transfer_state_to = event_target:japan_forced_return
+		}
+		event_target:japan_forced_return = { country_event = annex.300 }
+	}
+
 	option = { #Annex
-		name = annex.3013.e
+		log = "[GetLogInfo]: event annex.3013 option annex.3013.d"
+		name = annex.3013.d
 		ai_chance = {
 			base = 30
 			modifier = {
@@ -1920,7 +2109,7 @@ country_event = { #Fate of Mongolia
 			}
 		}
 		trigger = {
-			china_is_potential_government = yes #Chinese tags
+			is_chinese_tag = yes
 		}
 		occupy_medium_country = yes
 		MON = {
@@ -1932,9 +2121,11 @@ country_event = { #Fate of Mongolia
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3013 option annex.occupation"
 		name = annex.occupation
 		trigger = {
-			china_is_potential_government = no
+			NOT = { has_event_target = japan_forced_return }
+			is_chinese_tag = no
 		}
 		ai_chance = { base = 0 }
 		occupy_medium_country = yes
@@ -1944,7 +2135,6 @@ country_event = { #Fate of Mongolia
 
 country_event = { #Fate of Tuva
 	id = annex.3014
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3014 FROM = [From.GetName]" }
 	title = annexation_TUVA_CONQ
 	desc = annexation_TUVA_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -1952,55 +2142,53 @@ country_event = { #Fate of Tuva
 	is_triggered_only = yes
 
 	option = { #Give it to Mongolia
+		log = "[GetLogInfo]: event annex.3014 option annex.3014.a"
 		name = annex.3014.a
 		trigger = {
-			NOT = { tag = MON }
+			NOT = { original_tag = MON }
 			MON = { is_ally_of_ROOT = yes }
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = MON }
 		329 = { transfer_state_and_add_core = yes }
 		recheck_annexations = yes
 	}
 
 	option = { #Give it to the Russians
+		log = "[GetLogInfo]: event annex.3014 option annex.3014.b"
 		name = annex.3014.b
 		trigger = {
-			NOT = { tag = MON }
+			NOT = { original_tag = MON }
 			var:811.owner = { #Minusinsk
 				OR = {
 					is_russian_tag = yes
-					tag = SIB
+					original_tag = SIB
 				}
 				is_ally_with = ROOT
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = var:811.owner }
 		329 = { transfer_state_and_add_core = yes }
 		recheck_annexations = yes
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3014 option annex.1005.c"
 		name = annex.1005.c
 		trigger = {
-			tag = MON
+			original_tag = MON
 		}
-		ai_chance = {
-			base = 100
-		}
-		occupy_small_country = yes
+		ai_chance = { base = 100 }
 		add_state_claim = 329
+		occupy_small_country = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3014 option annex.occupation"
 		name = annex.occupation
 		trigger = {
-			NOT = { tag = MON }
+			NOT = { original_tag = MON }
 		}
 		ai_chance = { base = 0 }
 		occupy_small_country = yes
@@ -2010,7 +2198,6 @@ country_event = { #Fate of Tuva
 
 country_event = { #Fate of Manchuria
 	id = annex.3015
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3015 FROM = [From.GetName]" }
 	title = annexation_MAN_CONQ
 	desc = annexation_MAN_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -2019,116 +2206,103 @@ country_event = { #Fate of Manchuria
 
 	immediate = {
 		determine_chinese_ally = yes
+		if = {
+			limit = {
+				original_tag = JAP
+				any_owned_state = {
+					is_manchuria = yes
+					has_variable = ambition_area_@ROOT
+				}
+			}
+			save_event_target_as = japan_can_annex_coast
+		}
+		if = {
+			limit = { is_russian_tag = yes }
+			add_state_claim = 745 ##Dalian
+		}
 	}
 
 	option = { #Release Independent Manchuria
+		log = "[GetLogInfo]: event annex.3015 option annex.3015.a"
 		name = annex.3015.a
 		trigger = {
+			NOT = { has_event_target = japan_forced_return }
 			NOT = { country_exists = MAN }
 		}
 		ai_chance = {
-			base = 5
+			base = 20
 			modifier = {
-				add = 85
-				tag = JAP
+				factor = 0
+				has_event_target = japan_can_annex_coast
 			}
 		}
 		set_temp_variable = { tag_to_release = MAN }
+		hidden_effect = {
+			every_state = {
+				limit = { is_manchuria = yes }
+				add_core_of = var:tag_to_release
+			}
+		}
 		every_owned_state = {
 			limit = {
 				is_manchuria = yes
-				is_not_claim_or_core_of_ROOT = yes
+				is_claim_or_core_of_ROOT = no
 			}
-			var:tag_to_release = {
-				add_state_core = PREV
-				transfer_state = PREV
-			}
+			var:tag_to_release = { transfer_state = PREV }
 		}
-		if = {
-			limit = { tag = JAP }
-			hidden_effect = {
-				puppet_released_tag = yes
-				FNG = { FNG_yang_yuting = { set_nationality = var:tag_to_release } }
-			}
-			set_autonomy = {
-				target = var:tag_to_release
-				autonomy_state = kr_special_autonomous_dependency
-				end_wars = no
-			}
-			var:tag_to_release = {
-				set_politics = {
-					ruling_party = market_liberal
-					elections_allowed = no
-				}
-				hidden_effect = {
-					FNG_yang_yuting = { promote_character = yes }
-					set_popularities = {
-						totalist = 0
-						radical_socialist = 0
-						syndicalist = 0
-						social_democrat = 2
-						social_liberal = 6
-						market_liberal = 47
-						social_conservative = 12
-						authoritarian_democrat = 15
-						paternal_autocrat = 6
-						national_populist = 12
-					}
-				}
-			}
+		MAN_puppet_setup = yes
+	}
+
+	option = { #Release Independent Manchuria, keep coastline
+		log = "[GetLogInfo]: event annex.3015 option annex.3015.b"
+		name = annex.3015.b
+		trigger = {
+			original_tag = JAP
+			NOT = { has_event_target = japan_forced_return }
+			NOT = { country_exists = MAN }
+			has_event_target = japan_can_annex_coast
 		}
-		else = {
-			puppet_released_tag = yes
-			hidden_effect = {
-				var:tag_to_release = {
-					if = {
-						limit = { has_character = FNG_yang_yuting }
-						retire_character = FNG_yang_yuting
-					}
-				}
-			}
-		}
+		ai_chance = { base = 100 }
+		set_temp_variable = { tag_to_release = MAN }
 		hidden_effect = {
-			FNG = { FNG_guan_xiangying = { set_nationality = MAN } }
-			MAN = {
-				if = {
-					limit = { has_character = FNG_guan_xiangying }
-					FNG_guan_xiangying = {
-						promote_character = totalist_subtype
-						promote_character = syndicalist_subtype
-						promote_character = radical_socialist_subtype
-					}
-				}
+			every_state = {
+				limit = { is_manchuria = yes }
+				add_core_of = var:tag_to_release
 			}
 		}
+		every_owned_state = {
+			limit = {
+				is_manchuria = yes
+				is_claim_or_core_of_ROOT = no
+				NOT = { has_variable = ambition_area_@ROOT }
+			}
+			var:tag_to_release = { transfer_state = PREV }
+		}
+		MAN_puppet_setup = yes
 	}
 
 	option = { #Release China
-		name = annex.3010.a
+		log = "[GetLogInfo]: event annex.3015 option annex.china.release_china"
+		name = annex.china.release_china
 		trigger = {
 			has_event_target = china_release_target
 		}
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 0 }
 		set_temp_variable = { tag_to_release = event_target:china_release_target }
 		release_chinese_government_in_manchuria = yes
 		var:tag_to_release = { china_puppet_setup = yes }
 	}
 
 	option = { #Release FNG, keep the coastline
-		name = annex.3010.b
+		log = "[GetLogInfo]: event annex.3015 option annex.china.release_china_take_coastline"
+		name = annex.china.release_china_take_coastline
 		trigger = {
-			tag = JAP
+			original_tag = JAP
+			NOT = { has_event_target = japan_forced_return }
 			has_event_target = china_release_target
-			any_owned_state = {
-				is_manchuria = yes
-				has_variable = ambition_area_@ROOT
-			}
+			has_event_target = japan_can_annex_coast
 		}
-		ai_chance = {
-			base = 90
-		}
+		ai_chance = { base = 0 }
 		set_temp_variable = { japan_keeps_coast = 1 }
 		set_temp_variable = { tag_to_release = event_target:china_release_target }
 		release_chinese_government_in_manchuria = yes
@@ -2136,30 +2310,76 @@ country_event = { #Fate of Manchuria
 	}
 
 	option = { #Give it to China
-		name = annex.3010.c
-		ai_chance = {
-			base = 100
-		}
+		log = "[GetLogInfo]: event annex.3015 option annex.china.give_to_china"
+		name = annex.china.give_to_china
 		trigger = {
-			can_become_china = no
 			has_event_target = china_ally_target
+		}
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				original_tag = JAP
+			}
+			modifier = {
+				factor = 0
+				is_major = yes
+				event_target:china_ally_target = { is_ally_of_ROOT = no }
+			}
 		}
 		reverse_add_opinion_modifier = { target = event_target:china_ally_target modifier = KR_returned_land }
 		every_owned_state = {
 			limit = {
-				is_not_claim_or_core_of_ROOT = yes
 				is_manchuria = yes
-				if = {
-					limit = { ROOT = { tag = JAP } }
-					NOT = { has_variable = ambition_area_@ROOT }
-				}
+				is_claim_or_core_of_ROOT = no
 			}
 			transfer_state_to = event_target:china_ally_target
 		}
 	}
 
+	option = { #Give it to China, keep the coastline
+		log = "[GetLogInfo]: event annex.3015 option annex.china.give_to_china_take_coastline"
+		name = annex.china.give_to_china_take_coastline
+		ai_chance = { base = 0 }
+		trigger = {
+			original_tag = JAP
+			NOT = { has_event_target = japan_forced_return }
+			has_event_target = china_ally_target
+			has_event_target = japan_can_annex_coast
+		}
+		reverse_add_opinion_modifier = { target = event_target:china_ally_target modifier = KR_hates_govt }
+		every_owned_state = {
+			limit = {
+				is_manchuria = yes
+				is_claim_or_core_of_ROOT = no
+				NOT = { has_variable = ambition_area_@ROOT }
+			}
+			transfer_state_to = event_target:china_ally_target
+		}
+	}
+
+	option = { #Return to China (for defeated Japan)
+		log = "[GetLogInfo]: event annex.3015 option annex.china.fading_sun_return_to_china"
+		name = annex.china.fading_sun_return_to_china
+		trigger = {
+			has_event_target = japan_forced_return
+		}
+		every_owned_state = {
+			limit = { is_manchuria = yes }
+			hidden_effect = { remove_core_of = ROOT }
+			remove_claim_by = ROOT
+			set_state_flag = japan_forced_return
+			transfer_state_to = event_target:japan_forced_return
+		}
+		event_target:japan_forced_return = { country_event = annex.300 }
+	}
+
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3015 option annex.occupation"
 		name = annex.occupation
+		trigger = {
+			NOT = { has_event_target = japan_forced_return }
+		}
 		ai_chance = { base = 0 }
 		occupy_large_country = yes
 		set_country_flag = MAN_CONQ
@@ -2168,7 +2388,6 @@ country_event = { #Fate of Manchuria
 
 country_event = { #Fate of the Legation Cities
 	id = annex.3016
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3016 FROM = [From.GetName]" }
 	title = annexation_LEC_CONQ
 	desc = annexation_LEC_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -2180,8 +2399,10 @@ country_event = { #Fate of the Legation Cities
 	}
 
 	option = { #Release the Legation Cities
+		log = "[GetLogInfo]: event annex.3016 option annex.3016.a"
 		name = annex.3016.a
 		trigger = {
+			NOT = { has_event_target = japan_forced_return }
 			has_socialist_government = no
 		}
 		ai_chance = {
@@ -2252,7 +2473,10 @@ country_event = { #Fate of the Legation Cities
 				}
 			}
 			else_if = {
-				limit = { is_in_faction_with = ENT }
+				limit = {
+					is_in_faction_with = ENT
+					is_american_tag = no
+				}
 				LEC = {
 					set_politics = {
 						ruling_party = social_conservative
@@ -2309,12 +2533,16 @@ country_event = { #Fate of the Legation Cities
 						}
 						AND = {
 							tag = CAN
+							is_in_faction_with = ENT
 							NOT = { country_exists = GBR }
 						}
 						tag = GBR
 						AND = {
 							tag = NFA
-							ROOT = { is_in_faction_with = ENT }
+							OR = {
+								owns_state = 16 #Paris
+								ROOT = { is_in_faction_with = ENT }
+							}
 						}
 						tag = JAP
 						tag = RUS
@@ -2335,13 +2563,18 @@ country_event = { #Fate of the Legation Cities
 	}
 
 	option = { #Give it to China
-		name = annex.3010.c
+		log = "[GetLogInfo]: event annex.3016 option annex.china.give_to_china"
+		name = annex.china.give_to_china
+		trigger = {
+			has_event_target = china_ally_target
+		}
 		ai_chance = {
 			base = 80
-		}
-		trigger = {
-			can_become_china = no
-			has_event_target = china_ally_target
+			modifier = {
+				factor = 0
+				is_major = yes
+				event_target:china_ally_target = { is_ally_of_ROOT = no }
+			}
 		}
 		reverse_add_opinion_modifier = { target = event_target:china_ally_target modifier = KR_returned_land }
 		every_owned_state = {
@@ -2355,20 +2588,34 @@ country_event = { #Fate of the Legation Cities
 			transfer_state_to = event_target:china_ally_target
 		}
 		if = {
-			limit = {
-				event_target:china_ally_target = {
-					tag = FNG
-				}
-			}
+			limit = { event_target:china_ally_target = { tag = FNG } }
 			country_event = { id = fengtian.322 days = 2 }
 		}
 	}
 
-	option = { #occupy
-		name = annex.occupation
-		ai_chance = {
-			base = 0
+	option = { #Return to China (for defeated Japan)
+		log = "[GetLogInfo]: event annex.3016 option annex.china.give_to_china_take_coastline"
+		name = annex.china.give_to_china_take_coastline
+		trigger = {
+			has_event_target = japan_forced_return
 		}
+		every_owned_state = {
+			limit = { is_possible_legation_cities_state = yes }
+			hidden_effect = { remove_core_of = ROOT }
+			remove_claim_by = ROOT
+			set_state_flag = japan_forced_return
+			transfer_state_to = event_target:japan_forced_return
+		}
+		event_target:japan_forced_return = { country_event = annex.300 }
+	}
+
+	option = { #occupy
+		log = "[GetLogInfo]: event annex.3016 option annex.occupation"
+		name = annex.occupation
+		trigger = {
+			NOT = { has_event_target = japan_forced_return }
+		}
+		ai_chance = { base = 0 }
 		occupy_small_country = yes
 		set_country_flag = LEC_CONQ
 	}
@@ -2376,7 +2623,6 @@ country_event = { #Fate of the Legation Cities
 
 country_event = { #Fate of Korea
 	id = annex.3017
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3017 FROM = [From.GetName]" }
 	title = annexation_KOR_CONQ
 	desc = annexation_KOR_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -2385,26 +2631,22 @@ country_event = { #Fate of Korea
 
 	immediate = {
 		hidden_effect = {
-			KOR = {
-				drop_cosmetic_tag = yes
-			}
+			KOR = { drop_cosmetic_tag = yes }
 		}
 	}
 
 	option = { #Liberate Korea
+		log = "[GetLogInfo]: event annex.3017 option annex.3017.a"
 		name = annex.3017.a
-		ai_chance = {
-			base = 100
-		}
 		set_temp_variable = { tag_to_release = KOR }
 		release_targeted_tag = yes
 		KOR_return_of_the_provisional_government = yes
 	}
+
 	option = { #Occupy it
+		log = "[GetLogInfo]: event annex.3017 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = KOR_CONQ
 		occupy_medium_country = yes
 	}
@@ -2412,7 +2654,6 @@ country_event = { #Fate of Korea
 
 country_event = { #Fate of Japan
 	id = annex.3018
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3018 FROM = [From.GetName]" }
 	title = annexation_JAP_CONQ
 	desc = annexation_JAP_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -2426,11 +2667,14 @@ country_event = { #Fate of Japan
 				limit = { is_russian_tag = yes }
 				add_state_claim = 537 #Sakhalin
 				add_state_claim = 555 #Kurils
+				add_state_claim = 745 #Dalian
 			}
 		}
+		537 = { retain_state = yes } #Sakhalin
 	}
 
 	option = { #liberate
+		log = "[GetLogInfo]: event annex.3018 option annex.3018.a"
 		name = annex.3018.a
 		trigger = {
 			has_socialist_government = no
@@ -2465,32 +2709,6 @@ country_event = { #Fate of Japan
 							OR = {
 								is_core_of = var:v
 								is_claimed_by = var:v
-							}
-						}
-					}
-					AND = {
-						state = 534 #Sakhalin
-						ROOT = { is_russian_tag = no }
-						NOT = {
-							ROOT = { tag = SIB }
-							var:560.owner = {
-								is_russian_tag = yes
-								is_ally_with = ROOT
-							}
-							AND = {
-								570 = { is_valid_annexation_state = yes } #Novo-Nikolayevsk
-								NOT = {
-									country_exists = SIB
-									ROOT = { has_country_flag = SIB_CONQ }
-								}
-							}
-							AND = {
-								219 = { is_valid_annexation_state = yes } #Moscow
-								NOT = {
-									country_exists = RUS
-									country_exists = SOV
-									ROOT = { has_country_flag = RUS_CONQ }
-								}
 							}
 						}
 					}
@@ -2614,6 +2832,7 @@ country_event = { #Fate of Japan
 	}
 
 	option = { #liberate as republic
+		log = "[GetLogInfo]: event annex.3018 option annex.3018.b"
 		name = annex.3018.b
 		ai_chance = {
 			base = 0
@@ -2646,37 +2865,18 @@ country_event = { #Fate of Japan
 							state = 727 #Line Islands
 						}
 						629 = { is_valid_annexation_state = no } #Hawaii
-						NOT = {
-							ROOT = {
-								any_allied_country = {
-									PREV = { is_claim_or_core_of_PREV = yes }
-								}
+						any_of = {
+							array = ROOT.faction_members
+							OR = {
+								is_core_of = var:v
+								is_claimed_by = var:v
 							}
 						}
-					}
-					AND = {
-						state = 534 #Sakhalin
-						ROOT = { is_russian_tag = no }
-						NOT = {
-							ROOT = { tag = SIB }
-							var:560.owner = {
-								is_russian_tag = yes
-								is_ally_with = ROOT
-							}
-							AND = {
-								570 = { is_valid_annexation_state = yes } #Novo-Nikolayevsk
-								NOT = {
-									country_exists = SIB
-									ROOT = { has_country_flag = SIB_CONQ }
-								}
-							}
-							AND = {
-								219 = { is_valid_annexation_state = yes } #Moscow
-								NOT = {
-									country_exists = RUS
-									country_exists = SOV
-									ROOT = { has_country_flag = RUS_CONQ }
-								}
+						any_of = {
+							array = ROOT.subjects
+							OR = {
+								is_core_of = var:v
+								is_claimed_by = var:v
 							}
 						}
 					}
@@ -2762,6 +2962,7 @@ country_event = { #Fate of Japan
 	}
 
 	option = { #occupation
+		log = "[GetLogInfo]: event annex.3018 option annex.occupation"
 		name = annex.occupation
 		ai_chance = { base = 0 }
 		set_country_flag = JAP_CONQ
@@ -2771,7 +2972,6 @@ country_event = { #Fate of Japan
 
 country_event = { #Fate of Sakhalin
 	id = annex.3019
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3019 FROM = [From.GetName]" }
 	title = annexation_SAKHALIN_CONQ
 	desc = annexation_SAKHALIN_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -2779,11 +2979,12 @@ country_event = { #Fate of Sakhalin
 	is_triggered_only = yes
 
 	option = { #Give it to Japan
+		log = "[GetLogInfo]: event annex.3019 option annex.3019.a"
 		name = annex.3019.a
 		trigger = {
 			NOT = {
-				tag = JAP
-				tag = SIB
+				original_tag = JAP
+				original_tag = SIB
 			}
 			JAP = { is_ally_of_ROOT = yes }
 		}
@@ -2796,46 +2997,58 @@ country_event = { #Fate of Sakhalin
 		}
 		set_temp_variable = { tag_to_release = JAP }
 		537 = { transfer_state_and_add_core = yes }
-		555 = {
-			if = {
-				limit = { is_valid_annexation_state = yes }
-				transfer_state_and_add_core = yes
-			}
-		}
+		555 = { add_core_of_target_and_transfer_if_owned = yes }
 	}
 
 	option = { #Give it to the Russians
+		log = "[GetLogInfo]: event annex.3019 option annex.3019.b"
 		name = annex.3019.b
 		trigger = {
 			is_russian_tag = no
 			NOT = {
-				tag = JAP
-				tag = SIB
+				original_tag = JAP
+				original_tag = SIB
 			}
 			var:560.owner = { #Nikolayevsk
 				is_russian_tag = yes
 				is_ally_with = ROOT
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = var:560.owner }
 		537 = { transfer_state_and_add_core = yes }
-		555 = {
-			if = {
-				limit = { is_valid_annexation_state = yes }
-				transfer_state_and_add_core = yes
+		555 = { add_core_of_target_and_transfer_if_owned = yes }
+	}
+
+	option = { #Give it to Siberia
+		log = "[GetLogInfo]: event annex.3019 option annex.3019.c"
+		name = annex.3019.c
+		trigger = {
+			NOT = {
+				original_tag = JAP
+				original_tag = SIB
+			}
+			SIB = { is_ally_of_ROOT = yes }
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				RUS_is_expansionist = yes
 			}
 		}
+		set_temp_variable = { tag_to_release = SIB }
+		537 = { transfer_state_and_add_core = yes }
+		555 = { add_core_of_target_and_transfer_if_owned = yes }
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3019 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
-				tag = JAP
-				tag = SIB
+				original_tag = JAP
+				original_tag = SIB
 			}
 		}
 		ai_chance = { base = 100 }
@@ -2844,6 +3057,7 @@ country_event = { #Fate of Sakhalin
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3019 option annex.integration"
 		name = annex.integration
 		trigger = {
 			is_russian_tag = yes
@@ -2854,11 +3068,12 @@ country_event = { #Fate of Sakhalin
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3019 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
-				tag = JAP
-				tag = SIB
+				original_tag = JAP
+				original_tag = SIB
 			}
 		}
 		ai_chance = { base = 0 }
@@ -2869,7 +3084,6 @@ country_event = { #Fate of Sakhalin
 
 country_event = { #Fate of Taiwan
 	id = annex.3020
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3020 FROM = [From.GetName]" }
 	title = annexation_TAI_CONQ
 	desc = annexation_TAI_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -2881,10 +3095,11 @@ country_event = { #Fate of Taiwan
 	}
 
 	option = { #Release Taiwan
+		log = "[GetLogInfo]: event annex.3020 option annex.3020.a"
 		name = annex.3020.a
 		trigger = {
-			can_become_china = no
-			NOT = { tag = JAP }
+			NOT = { original_tag = JAP }
+			NOT = { has_country_flag = is_chinese_tag }
 		}
 		ai_chance = {
 			base = 100
@@ -2908,52 +3123,50 @@ country_event = { #Fate of Taiwan
 	}
 
 	option = { #Give it to China
+		log = "[GetLogInfo]: event annex.3020 option annex.3020.b"
 		name = annex.3020.b
 		trigger = {
 			has_event_target = china_ally_target
-			can_become_china = no
-			NOT = { tag = JAP }
+			NOT = { original_tag = JAP }
+			NOT = { has_country_flag = is_chinese_tag }
 		}
-		ai_chance = {
-			base = 50
-		}
-		event_target:china_ally_target = { transfer_state = 524 }
+		ai_chance = { base = 50 }
+		set_temp_variable = { tag_to_release = event_target:china_ally_target }
+		524 = { transfer_state_and_add_claim = yes }
 	}
 
 	option = { #Give it to Japan
+		log = "[GetLogInfo]: event annex.3020 option annex.3020.c"
 		name = annex.3020.c
 		trigger = {
-			can_become_china = no
+			NOT = { has_country_flag = is_chinese_tag }
 			JAP = { is_ally_of_ROOT = yes }
 		}
-		ai_chance = {
-			base = 50
-		}
-		JAP = {
-			add_state_claim = 524
-			transfer_state = 524
-		}
+		ai_chance = { base = 50 }
+		set_temp_variable = { tag_to_release = JAP }
+		524 = { transfer_state_and_add_claim = yes }
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3020 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
-				tag = JAP
-				can_become_china = yes
+				original_tag = JAP
+				has_country_flag = is_chinese_tag
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		add_state_claim = 524
+		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3020 option annex.occupation"
 		name = annex.occupation
 		trigger = {
-			can_become_china = no
-			NOT = { tag = JAP }
+			NOT = { original_tag = JAP }
+			NOT = { has_country_flag = is_chinese_tag }
 		}
 		ai_chance = { base = 0 }
 		occupy_small_country = yes
@@ -2967,7 +3180,6 @@ country_event = { #Fate of Taiwan
 
 country_event = { #Fate of Siam
 	id = annex.3021
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3021 FROM = [From.GetName]" }
 	title = annexation_SIA_CONQ
 	desc = annexation_SIA_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -2991,22 +3203,28 @@ country_event = { #Fate of Siam
 				remove_core_of = SIA
 				remove_claim_by = SIA
 			}
+			if = {
+				limit = {
+					original_tag = YUN
+					has_country_flag = YUN_kill_Siam
+				}
+				clr_country_flag = YUN_kill_Siam
+			}
 		}
 	}
 
 	is_triggered_only = yes
 
 	option = { #puppet - Chakri
+		log = "[GetLogInfo]: event annex.3021 option annex.3021.a"
 		name = annex.3021.a
-		ai_chance = {
-			base = 99
-		}
 		trigger = {
 			NOT = {
-				tag = GER
+				original_tag = GER
+				original_tag = GEA
 				tag = GEX
-				tag = RUS
-				tag = UKR
+				original_tag = RUS
+				original_tag = UKR
 			}
 			has_socialist_government = no
 		}
@@ -3016,8 +3234,8 @@ country_event = { #Fate of Siam
 
 		hidden_effect = {
 			SIA = {
-				SIA_create_mahidol_leaders = yes
-				SIA_remove_royal_titles = yes
+				SIA_create_prajadhipok = yes
+				SIA_reinstall_royal_titles = yes
 				SIA_royal_template = yes
 				if = {
 					limit = { has_country_flag = SIA_byebye_Bangkok }
@@ -3028,18 +3246,18 @@ country_event = { #Fate of Siam
 	}
 
 	option = { #puppet - Chakrabongse
+		log = "[GetLogInfo]: event annex.3021 option annex.3021.b"
 		name = annex.3021.b
-		ai_chance = {
-			base = 99
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			OR = {
-				tag = GER
+				original_tag = GER
+				original_tag = GEA
 				tag = GEX
-				tag = GEA
-				tag = RUS
-				tag = UKR
+				original_tag = RUS
+				original_tag = UKR
 			}
+			has_socialist_government = no
 		}
 		set_temp_variable = { tag_to_release = SIA }
 		release_targeted_tag = yes
@@ -3047,7 +3265,7 @@ country_event = { #Fate of Siam
 
 		hidden_effect = {
 			SIA = {
-				SIA_create_chakrabongse_leaders = yes
+				SIA_create_chula_chakrabongse = yes
 				SIA_reinstall_royal_titles = yes
 				SIA_royal_template = yes
 				if = {
@@ -3059,16 +3277,16 @@ country_event = { #Fate of Siam
 	}
 
 	option = { #puppet - Paribatra
+		log = "[GetLogInfo]: event annex.3021 option annex.3021.c"
 		name = annex.3021.c
-		ai_chance = {
-			base = 198
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			OR = {
-				tag = GER
+				original_tag = GER
+				original_tag = GEA
 				tag = GEX
-				tag = GEA
 			}
+			has_socialist_government = no
 		}
 		set_temp_variable = { tag_to_release = SIA }
 		release_targeted_tag = yes
@@ -3076,7 +3294,7 @@ country_event = { #Fate of Siam
 
 		hidden_effect = {
 			SIA = {
-				SIA_create_paribatra_leaders = yes
+				SIA_create_paribatra_sukhumbhand = yes
 				SIA_reinstall_royal_titles = yes
 				SIA_royal_template = yes
 				if = {
@@ -3087,15 +3305,16 @@ country_event = { #Fate of Siam
 		}
 	}
 	option = { #puppet - Republican
+		log = "[GetLogInfo]: event annex.3021 option annex.3021.e"
 		name = annex.3021.e
-		ai_chance = {
-			base = 99
-		}
 		trigger = {
-			NOT = {
-				tag = GER
-				tag = GEX
-				tag = GEA
+			OR = {
+				has_socialist_government = yes
+				NOT = {
+					original_tag = GER
+					original_tag = GEA
+					tag = GEX
+				}
 			}
 		}
 		set_temp_variable = { tag_to_release = SIA }
@@ -3115,10 +3334,9 @@ country_event = { #Fate of Siam
 		}
 	}
 	option = { # Occupation
+		log = "[GetLogInfo]: event annex.3021 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		occupy_medium_country = yes
 		set_country_flag = SIA_CONQ
 	}
@@ -3126,7 +3344,6 @@ country_event = { #Fate of Siam
 
 country_event = { #Fate of Indochina
 	id = annex.3022
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3022 FROM = [From.GetName]" }
 	title = annexation_INC_CONQ
 	desc = annexation_INC_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -3181,17 +3398,17 @@ country_event = { #Fate of Indochina
 	}
 
 	option = { #Puppet Indochina
+		log = "[GetLogInfo]: event annex.3022 option annex.3022.a"
 		name = annex.3022.a
 		trigger = {
 			NOT = {
 				tag = GEA
 				tag = SIA
+				tag = CHI
 				has_subject = GEA
 			}
 		}
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 		every_state = {
 			limit = { region = 196 } #Indochina
 			add_core_of = INC
@@ -3201,10 +3418,9 @@ country_event = { #Fate of Indochina
 	}
 
 	option = { #Partition Indochina
+		log = "[GetLogInfo]: event annex.3022 option annex.3022.b"
 		name = annex.3022.b
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		trigger = {
 			NOT = {
 				tag = GEA
@@ -3218,10 +3434,9 @@ country_event = { #Fate of Indochina
 	}
 
 	option = { #give to GEA
+		log = "[GetLogInfo]: event annex.3022 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			has_subject = GEA
 		}
@@ -3231,18 +3446,17 @@ country_event = { #Fate of Indochina
 				region = 196 #Indochina
 				is_claim_or_core_of_ROOT = no
 			}
-			add_core_of_target_and_transfer_if_owned = yes
+			add_claim_of_target_and_transfer_if_owned = yes
 		}
 	}
 
 	option = { #Integrate Laos and Cambodia, decide Vietnam later
+		log = "[GetLogInfo]: event annex.3022 option annex.3022.d"
 		name = annex.3022.d
 		trigger = {
 			tag = SIA
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		every_state = {
 			limit = {
 				OR = {
@@ -3261,10 +3475,9 @@ country_event = { #Fate of Indochina
 	}
 
 	option = { #reintegrate
+		log = "[GetLogInfo]: event annex.3022 option annex.3024.b"
 		name = annex.3024.b
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		trigger = {
 			tag = GEA
 		}
@@ -3273,11 +3486,25 @@ country_event = { #Fate of Indochina
 				region = 196 #Indochina
 				is_claim_or_core_of_ROOT = no
 			}
-			remove_claim_and_add_core_of_ROOT = yes
+			add_claim_of_ROOT = yes
 		}
+	}
+	option = { #Release VNQQD
+		log = "[GetLogInfo]: event annex.3022 option annex.3022.kmt"
+		name = annex.3022.kmt
+		trigger = { tag = CHI }
+		ai_chance = { base = 100 }
+		every_state = {
+			limit = { region = 196 } #Indochina
+			add_core_of = INC
+		}
+		set_temp_variable = { tag_to_release = INC }
+		release_targeted_tag = yes
+		INC_released_by_chi = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3022 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -3296,7 +3523,6 @@ country_event = { #Fate of Indochina
 
 country_event = { #Fate of Vietnam
 	id = annex.3023
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3023 FROM = [From.GetName]" }
 	title = annexation_VIN_CONQ
 	desc = annexation_VIN_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -3316,13 +3542,12 @@ country_event = { #Fate of Vietnam
 	}
 
 	option = { #Puppet Vietnam
+		log = "[GetLogInfo]: event annex.3023 option annex.3023.a"
 		name = annex.3023.a
 		trigger = {
 			NOT = { has_subject = GEA }
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = VIN }
 		release_targeted_tag = yes
 		if = {
@@ -3343,13 +3568,16 @@ country_event = { #Fate of Vietnam
 				INC = { country_event = { id = viet.1955 hours = 8 } }
 			}
 		}
+		if = { #Empower the VNQQD
+			limit = { china_is_aligned_with_left_kmt = yes }
+			VIN_released_by_chi = yes
+		}
 	}
 
 	option = { #give to GEA
+		log = "[GetLogInfo]: event annex.3023 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			has_subject = GEA
 		}
@@ -3359,11 +3587,12 @@ country_event = { #Fate of Vietnam
 				is_core_of = VIN
 				is_claim_or_core_of_ROOT = no
 			}
-			add_core_of_target_and_transfer_if_owned = yes
+			add_claim_of_target_and_transfer_if_owned = yes
 		}
 	}
 
 	option = { #Occupy Kampuchea Krom, release the rest
+		log = "[GetLogInfo]: event annex.3023 option annex.3023.b"
 		name = annex.3023.b
 		trigger = {
 			OR = {
@@ -3372,9 +3601,7 @@ country_event = { #Fate of Vietnam
 			}
 			owns_state = 826 #Stung Treng
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		286 = { #Cochinchina
 			retain_state = yes
 			add_resistance = 20
@@ -3388,10 +3615,9 @@ country_event = { #Fate of Vietnam
 	}
 
 	option = { #Reintegrate
+		log = "[GetLogInfo]: event annex.3023 option annex.3024.b"
 		name = annex.3024.b
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			tag = GEA
 		}
@@ -3405,6 +3631,7 @@ country_event = { #Fate of Vietnam
 	}
 
 	option = { #Occupy it
+		log = "[GetLogInfo]: event annex.3023 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = { tag = GEA }
@@ -3417,7 +3644,6 @@ country_event = { #Fate of Vietnam
 
 country_event = { #Fate of Laos
 	id = annex.3024
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3024 FROM = [From.GetName]" }
 	title = annexation_LAO_CONQ
 	desc = annexation_LAO_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -3425,6 +3651,7 @@ country_event = { #Fate of Laos
 	is_triggered_only = yes
 
 	option = { #Puppet Laos
+		log = "[GetLogInfo]: event annex.3024 option annex.3024.a"
 		name = annex.3024.a
 		trigger = {
 			NOT = {
@@ -3436,44 +3663,46 @@ country_event = { #Fate of Laos
 				}
 				AND = {
 					has_subject = GEA
-					GEA = { owns_state = 671 } #Tonkin
+					OR = {
+						GEA = { owns_state = 671 } #Tonkin
+						671 = { owner = { is_subject_of = GEA } }
+					}
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = LAO }
 		var:tag_to_release = { transfer_state = 670 } #Laos
 		puppet_released_tag = yes
 	}
 
 	option = { #give to GEA
+		log = "[GetLogInfo]: event annex.3024 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
 		trigger = {
 			has_subject = GEA
-			GEA = { owns_state = 671 } #Tonkin
+			OR = {
+				GEA = { owns_state = 671 } #Tonkin
+				671 = { owner = { is_subject_of = GEA } }
+			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = GEA }
 		LAO = {
 			every_core_state = {
 				limit = { is_claim_or_core_of_ROOT = no }
-				add_core_of_target_and_transfer_if_owned = yes
+				add_claim_of_target_and_transfer_if_owned = yes
 			}
 		}
 	}
 
 	option = { #Integrate as SIA
+		log = "[GetLogInfo]: event annex.3024 option annex.3024.b"
 		name = annex.3024.b
 		trigger = {
 			original_tag = SIA
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		LAO = {
 			every_core_state = {
 				limit = { is_claim_or_core_of_ROOT = no }
@@ -3491,30 +3720,28 @@ country_event = { #Fate of Laos
 	}
 
 	option = { #Reintegrate
+		log = "[GetLogInfo]: event annex.3024 option annex.3024.b"
 		name = annex.3024.b
 		trigger = {
 			original_tag = GEA
-			owns_state = 671 #Tonkin
+			671 = { is_owned_by_ROOT_or_subject = yes } #Tonkin
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		LAO = {
 			every_core_state = {
 				limit = { NOT = { is_core_of = ROOT } }
-				remove_claim_and_add_core_of_ROOT = yes
+				add_claim_of_ROOT = yes
 			}
 		}
 	}
 
 	option = { #Integrate as INC
+		log = "[GetLogInfo]: event annex.3024 option annex.3024.b"
 		name = annex.3024.b
 		trigger = {
 			original_tag = INC
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		LAO = {
 			every_core_state = {
 				limit = { is_claim_or_core_of_ROOT = no }
@@ -3525,6 +3752,7 @@ country_event = { #Fate of Laos
 	}
 
 	option = { #Occupy it
+		log = "[GetLogInfo]: event annex.3024 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -3536,7 +3764,10 @@ country_event = { #Fate of Laos
 				}
 				AND = {
 					has_subject = GEA
-					GEA = { owns_state = 671 } #Tonkin
+					OR = {
+						GEA = { owns_state = 671 } #Tonkin
+						671 = { owner = { is_subject_of = GEA } }
+					}
 				}
 			}
 		}
@@ -3548,7 +3779,6 @@ country_event = { #Fate of Laos
 
 country_event = { #Fate of Cambodia
 	id = annex.3025
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3025 FROM = [From.GetName]" }
 	title = annexation_CAM_CONQ
 	desc = annexation_CAM_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -3556,6 +3786,7 @@ country_event = { #Fate of Cambodia
 	is_triggered_only = yes
 
 	option = { #Puppet Cambodia
+		log = "[GetLogInfo]: event annex.3025 option annex.3025.a"
 		name = annex.3025.a
 		trigger = {
 			NOT = {
@@ -3567,13 +3798,14 @@ country_event = { #Fate of Cambodia
 				}
 				AND = {
 					has_subject = GEA
-					GEA = { owns_state = 286 } #Cochinchina
+					OR = {
+						GEA = { owns_state = 286 } #Cochinchina
+						286 = { owner = { is_subject_of = GEA } }
+					}
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = CAM }
 		var:tag_to_release = { transfer_state = 750 } #Phnom Penh
 		puppet_released_tag = yes
@@ -3584,31 +3816,32 @@ country_event = { #Fate of Cambodia
 	}
 
 	option = { #give to GEA
+		log = "[GetLogInfo]: event annex.3025 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			has_subject = GEA
-			GEA = { owns_state = 286 } #Cochinchina
+			OR = {
+				GEA = { owns_state = 286 } #Cochinchina
+				286 = { owner = { is_subject_of = GEA } }
+			}
 		}
 		set_temp_variable = { tag_to_release = GEA }
 		CAM = {
 			every_core_state = {
 				limit = { is_claim_or_core_of_ROOT = no }
-				add_core_of_target_and_transfer_if_owned = yes
+				add_claim_of_target_and_transfer_if_owned = yes
 			}
 		}
 	}
 
 	option = { #Integrate as SIA
+		log = "[GetLogInfo]: event annex.3025 option annex.3024.b"
 		name = annex.3024.b
 		trigger = {
 			original_tag = SIA
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		CAM = {
 			every_core_state = {
 				limit = { is_claim_or_core_of_ROOT = no }
@@ -3625,26 +3858,25 @@ country_event = { #Fate of Cambodia
 	}
 
 	option = { #Reintegrate
+		log = "[GetLogInfo]: event annex.3025 option annex.3024.b"
 		name = annex.3024.b
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			original_tag = GEA
+			286 = { is_owned_by_ROOT_or_subject = yes } #Cochinchina
 		}
 		CAM = {
 			every_core_state = {
 				limit = { NOT = { is_core_of = ROOT } }
-				remove_claim_and_add_core_of_ROOT = yes
+				add_claim_of_ROOT = yes
 			}
 		}
 	}
 
 	option = { #Integrate as INC
+		log = "[GetLogInfo]: event annex.3025 option annex.3024.b"
 		name = annex.3024.b
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			original_tag = INC
 		}
@@ -3657,6 +3889,7 @@ country_event = { #Fate of Cambodia
 	}
 
 	option = { #Occupy it
+		log = "[GetLogInfo]: event annex.3025 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -3668,7 +3901,10 @@ country_event = { #Fate of Cambodia
 				}
 				AND = {
 					has_subject = GEA
-					GEA = { owns_state = 286 } #Cochinchina
+					OR = {
+						GEA = { owns_state = 286 } #Cochinchina
+						286 = { owner = { is_subject_of = GEA } }
+					}
 				}
 			}
 		}
@@ -3680,7 +3916,6 @@ country_event = { #Fate of Cambodia
 
 country_event = { #Fate of the Philippines
 	id = annex.3026
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3026 FROM = [From.GetName]" }
 	title = annexation_PHI_CONQ
 	desc = annexation_PHI_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -3700,19 +3935,17 @@ country_event = { #Fate of the Philippines
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3026 option annex.3026.a"
 		name = annex.3026.a #Liberate Philippines
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = PHI }
 		release_targeted_tag = yes
 	}
 
 	option = { #give to GEA
+		log = "[GetLogInfo]: event annex.3026 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			has_subject = GEA
 		}
@@ -3723,10 +3956,9 @@ country_event = { #Fate of the Philippines
 	}
 
 	option = { #annex
+		log = "[GetLogInfo]: event annex.3026 option annex.integration"
 		name = annex.integration
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			original_tag = GEA
 		}
@@ -3735,10 +3967,9 @@ country_event = { #Fate of the Philippines
 	}
 
 	option = { #Occupy Philippines
+		log = "[GetLogInfo]: event annex.3026 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = PHI_CONQ
 		occupy_medium_country = yes
 	}
@@ -3746,7 +3977,6 @@ country_event = { #Fate of the Philippines
 
 country_event = { #Fate of Indonesia
 	id = annex.3027
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3027 FROM = [From.GetName]" }
 	title = annexation_INS_CONQ
 	desc = annexation_INS_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -3792,6 +4022,7 @@ country_event = { #Fate of Indonesia
 	}
 
 	option = { #liberate
+		log = "[GetLogInfo]: event annex.3027 option annex.3027.a"
 		name = annex.3027.a
 		ai_chance = {
 			base = 100
@@ -3820,15 +4051,14 @@ country_event = { #Fate of Indonesia
 	}
 
 	option = { #Restore DEI
+		log = "[GetLogInfo]: event annex.3027 option annex.3027.b"
 		name = annex.3027.b
 		trigger = {
 			tag = HOL
 			has_socialist_government = no
 			NOT = { country_exists = DEI }
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_temp_variable = { tag_to_release = DEI }
 		every_state = {
 			limit = { is_core_of = INS }
@@ -3841,10 +4071,9 @@ country_event = { #Fate of Indonesia
 	}
 
 	option = { #Give it to DEI
+		log = "[GetLogInfo]: event annex.3027 option annex.3027.c"
 		name = annex.3027.c
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			DEI = { is_ally_of_ROOT = yes }
 		}
@@ -3854,10 +4083,9 @@ country_event = { #Fate of Indonesia
 	}
 
 	option = { #Give it to HOL
+		log = "[GetLogInfo]: event annex.3027 option annex.3027.d"
 		name = annex.3027.d
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			HOL = { is_ally_of_ROOT = yes }
 			HOL = {
@@ -3872,10 +4100,9 @@ country_event = { #Fate of Indonesia
 	}
 
 	option = { #Integrate into GEA
+		log = "[GetLogInfo]: event annex.3027 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			GEA = { is_ally_of_ROOT = yes }
 			NOT = { is_ally_with = DEI }
@@ -3893,6 +4120,7 @@ country_event = { #Fate of Indonesia
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3027 option annex.occupation"
 		name = annex.occupation
 		ai_chance = { base = 0 }
 		occupy_medium_country = yes
@@ -3902,7 +4130,6 @@ country_event = { #Fate of Indonesia
 
 country_event = { #Fate of Papua New Guinea
 	id = annex.3028
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3028 FROM = [From.GetName]" }
 	title = annexation_PNG_CONQ
 	desc = annexation_PNG_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -3922,6 +4149,7 @@ country_event = { #Fate of Papua New Guinea
 	}
 
 	option = { #puppet PNG
+		log = "[GetLogInfo]: event annex.3028 option annex.3028.a"
 		name = annex.3028.a
 		trigger = {
 			NOT = {
@@ -3952,6 +4180,7 @@ country_event = { #Fate of Papua New Guinea
 	}
 
 	option = { #Give to Insulindia
+		log = "[GetLogInfo]: event annex.3028 option annex.3028.b"
 		name = annex.3028.b
 		trigger = {
 			INS = { ROOT_can_grant_land = yes }
@@ -3987,6 +4216,7 @@ country_event = { #Fate of Papua New Guinea
 	}
 
 	option = { #Give to Australia
+		log = "[GetLogInfo]: event annex.3028 option annex.3028.c"
 		name = annex.3028.c
 		trigger = {
 			AST = { is_ally_of_ROOT = yes }
@@ -4018,7 +4248,8 @@ country_event = { #Fate of Papua New Guinea
 	}
 
 	option = { #Give to DEI
-		name = annex.3028.d
+		log = "[GetLogInfo]: event annex.3028 option annex.asia.give_to_dei"
+		name = annex.asia.give_to_dei
 		trigger = {
 			DEI = { is_ally_of_ROOT = yes }
 			NOT = {
@@ -4048,6 +4279,7 @@ country_event = { #Fate of Papua New Guinea
 	}
 
 	option = { #Give to GEA
+		log = "[GetLogInfo]: event annex.3028 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
 		trigger = {
 			GEA = { is_ally_of_ROOT = yes }
@@ -4078,6 +4310,7 @@ country_event = { #Fate of Papua New Guinea
 	}
 
 	option = { #annex
+		log = "[GetLogInfo]: event annex.3028 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -4092,9 +4325,7 @@ country_event = { #Fate of Papua New Guinea
 				}
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		add_state_claim = 523 #Papua
 		add_state_claim = 634 #Solomon Islands
 		add_state_claim = 669 #NW. New Guinea
@@ -4105,6 +4336,7 @@ country_event = { #Fate of Papua New Guinea
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3028 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -4127,7 +4359,6 @@ country_event = { #Fate of Papua New Guinea
 
 country_event = { #Fate of Malaysia
 	id = annex.3029
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3029 FROM = [From.GetName]" }
 	title = annexation_MAL_CONQ
 	desc = annexation_MAL_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -4148,6 +4379,7 @@ country_event = { #Fate of Malaysia
 	}
 
 	option = { #liberate
+		log = "[GetLogInfo]: event annex.3029 option annex.3029.a"
 		name = annex.3029.a
 		trigger = {
 			NOT = {
@@ -4172,6 +4404,7 @@ country_event = { #Fate of Malaysia
 	}
 
 	option = { #give to INS
+		log = "[GetLogInfo]: event annex.3029 option annex.3029.b"
 		name = annex.3029.b
 		ai_chance = {
 			base = 80
@@ -4207,6 +4440,7 @@ country_event = { #Fate of Malaysia
 	}
 
 	option = { #give to SIA
+		log = "[GetLogInfo]: event annex.3029 option annex.3029.c"
 		name = annex.3029.c
 		ai_chance = {
 			base = 20
@@ -4239,10 +4473,9 @@ country_event = { #Fate of Malaysia
 	}
 
 	option = { #give to GEA
+		log = "[GetLogInfo]: event annex.3029 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			has_subject = GEA
 		}
@@ -4256,12 +4489,13 @@ country_event = { #Fate of Malaysia
 					state = 724 #Kra Insthmus
 				}
 			}
-			add_core_of_target_and_transfer_if_owned = yes
+			add_claim_of_target_and_transfer_if_owned = yes
 		}
 	}
 
 	option = { #give to DEI
-		name = annex.3029.e
+		log = "[GetLogInfo]: event annex.3029 option annex.asia.give_to_dei"
+		name = annex.asia.give_to_dei
 		ai_chance = {
 			base = 80
 			modifier = {
@@ -4286,16 +4520,35 @@ country_event = { #Fate of Malaysia
 		}
 	}
 
-	option = { #integrate
-		name = annex.integration
-		ai_chance = {
-			base = 100
-		}
+	option = { #Restore GEA
+		log = "[GetLogInfo]: event annex.3029 option annex.3029.f"
+		name = annex.3029.f
 		trigger = {
-			OR = {
-				tag = GEA
-				tag = DEI
+			tag = GER
+			has_socialist_government = no
+			NOT = { country_exists = GEA }
+		}
+		ai_chance = { base = 1000 }
+		set_temp_variable = { tag_to_release = GEA }
+		every_state = {
+			limit = {
+				region = 194 #Malay Peninsula
+				is_claim_or_core_of_ROOT = no
+				NOT = { state = 336 } #Singapore
 			}
+			add_claim_of_target_and_transfer_if_owned = yes
+		}
+		var:tag_to_release = {
+			hidden_effect = { GEA_restored_effect = yes }
+		}
+	}
+
+	option = { #integrate
+		log = "[GetLogInfo]: event annex.3029 option annex.integration"
+		name = annex.integration
+		ai_chance = { base = 100 }
+		trigger = {
+			tag = DEI
 		}
 		every_state = {
 			limit = {
@@ -4312,12 +4565,12 @@ country_event = { #Fate of Malaysia
 	}
 
 	option = { #integrate
+		log = "[GetLogInfo]: event annex.3029 option annex.integration"
 		name = annex.integration
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			OR = {
+				tag = GEA
 				tag = INS
 				tag = SIA
 			}
@@ -4337,6 +4590,7 @@ country_event = { #Fate of Malaysia
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3029 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -4356,7 +4610,6 @@ country_event = { #Fate of Malaysia
 
 country_event = { #Fate of Sarawak
 	id = annex.3030
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3030 FROM = [From.GetName]" }
 	title = annexation_SAR_CONQ
 	desc = annexation_SAR_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -4376,6 +4629,7 @@ country_event = { #Fate of Sarawak
 	}
 
 	option = { #puppet SAR
+		log = "[GetLogInfo]: event annex.3030 option annex.3030.a"
 		name = annex.3030.a
 		trigger = {
 			NOT = {
@@ -4400,6 +4654,7 @@ country_event = { #Fate of Sarawak
 	}
 
 	option = { #Give to MAL
+		log = "[GetLogInfo]: event annex.3030 option annex.3030.b"
 		name = annex.3030.b
 		ai_chance = {
 			base = 80
@@ -4431,6 +4686,7 @@ country_event = { #Fate of Sarawak
 	}
 
 	option = { #Give to INS
+		log = "[GetLogInfo]: event annex.3030 option annex.3030.c"
 		name = annex.3030.c
 		ai_chance = {
 			base = 80
@@ -4452,34 +4708,33 @@ country_event = { #Fate of Sarawak
 			INS = { is_ally_of_ROOT = yes }
 		}
 		set_temp_variable = { tag_to_release = INS }
-		every_state = {
-			limit = {
-				is_core_of = SAR
-				is_claim_or_core_of_ROOT = no
+		SAR = {
+			every_core_state = {
+				limit = { is_claim_or_core_of_ROOT = no }
+				add_claim_of_target_and_transfer_if_owned = yes
 			}
-			add_claim_of_target_and_transfer_if_owned = yes
 		}
 	}
 
 	option = { #give to GEA
+		log = "[GetLogInfo]: event annex.3030 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			has_subject = GEA
 		}
 		set_temp_variable = { tag_to_release = GEA }
-		MAL = {
+		SAR = {
 			every_core_state = {
 				limit = { is_claim_or_core_of_ROOT = no }
-				add_core_of_target_and_transfer_if_owned = yes
+				add_claim_of_target_and_transfer_if_owned = yes
 			}
 		}
 	}
 
 	option = { #give to DEI
-		name = annex.3030.e
+		log = "[GetLogInfo]: event annex.3030 option annex.asia.give_to_dei"
+		name = annex.asia.give_to_dei
 		ai_chance = {
 			base = 80
 			modifier = {
@@ -4491,7 +4746,7 @@ country_event = { #Fate of Sarawak
 			has_subject = DEI
 		}
 		set_temp_variable = { tag_to_release = DEI }
-		MAL = {
+		SAR = {
 			every_core_state = {
 				limit = { is_claim_or_core_of_ROOT = no }
 				add_core_of_target_and_transfer_if_owned = yes
@@ -4500,14 +4755,12 @@ country_event = { #Fate of Sarawak
 	}
 
 	option = { #integrate
+		log = "[GetLogInfo]: event annex.3030 option annex.integration"
 		name = annex.integration
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			OR = {
 				original_tag = MAL
-				original_tag = GEA
 				original_tag = DEI
 			}
 		}
@@ -4517,12 +4770,14 @@ country_event = { #Fate of Sarawak
 	}
 
 	option = { #integrate
+		log = "[GetLogInfo]: event annex.3030 option annex.integration"
 		name = annex.integration
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
-			original_tag = INS
+			OR = {
+				original_tag = GEA
+				original_tag = INS
+			}
 		}
 		add_state_claim = 333
 		add_state_claim = 828
@@ -4530,6 +4785,7 @@ country_event = { #Fate of Sarawak
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3030 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -4553,8 +4809,6 @@ country_event = { #Fate of Sarawak
 
 country_event = { #Fate of India
 	id = annex.3031
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3031 FROM = [From.GetName]" }
-	immediate = { log = "KR_Event_Logging;INDIA IS CONQUERED BY FOREIGN POWER;[GetDateText];[ROOT.GetName];[FROM.GetName]" }
 	title = annexation_IND_CONQ
 	desc = annexation_IND_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -4562,6 +4816,14 @@ country_event = { #Fate of India
 	is_triggered_only = yes
 
 	immediate = {
+		if = {
+			limit = {
+				NOT = { country_exists = HND }
+				NOT = { country_exists = RAJ }
+				NOT = { country_exists = PRF }
+			}
+			log = "KR_Event_Logging;INDIA IS CONQUERED BY FOREIGN POWER;[GetDateText]"
+		}
 		hidden_effect = {
 			add_to_temp_array = { core_removal_array = HND }
 			remove_all_cores_and_claims_of_tags = yes
@@ -4572,10 +4834,19 @@ country_event = { #Fate of India
 					set_nationality = RAJ
 				}
 			}
+			CEY = { every_core_state = { retain_state = yes } }
+			if = {
+				limit = {
+					is_chinese_tag = yes
+					858 = { is_claim_or_core_of_ROOT = no }
+				}
+				add_state_claim = 858 #Tawang
+			}
 		}
 	}
 
 	option = { #puppet Indian state
+		log = "[GetLogInfo]: event annex.3031 option annex.3031.a"
 		name = annex.3031.a
 		trigger = {
 			NOT = {
@@ -4626,6 +4897,7 @@ country_event = { #Fate of India
 		HND_puppet_setup = yes
 	}
 	option = { #release as British India
+		log = "[GetLogInfo]: event annex.3031 option annex.3031.c"
 		name = annex.3031.c
 		trigger = {
 			OR = {
@@ -4693,10 +4965,9 @@ country_event = { #Fate of India
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3031 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -4723,10 +4994,9 @@ country_event = { #Fate of India
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3031 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -4753,10 +5023,9 @@ country_event = { #Fate of India
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3031 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -4783,6 +5052,7 @@ country_event = { #Fate of India
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3031 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -4790,9 +5060,7 @@ country_event = { #Fate of India
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 200
-		}
+		ai_chance = { base = 200 }
 		set_country_flag = IND_CONQ
 		occupy_large_country = yes
 		every_owned_state = {
@@ -4804,6 +5072,7 @@ country_event = { #Fate of India
 		}
 	}
 	option = { #decide separately
+		log = "[GetLogInfo]: event annex.3031 option annex.3031.b"
 		name = annex.3031.b
 		trigger = {
 			NOT = {
@@ -4811,14 +5080,13 @@ country_event = { #Fate of India
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		custom_effect_tooltip = new_annexation_decisions_tt
 		set_country_flag = { flag = IND_CONQ days = 100 value = 1 }
 		recheck_annexations_immediate = yes
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3031 option annex.occupation"
 		name = annex.occupation
 		ai_chance = { base = 0 }
 		set_country_flag = IND_CONQ
@@ -4847,7 +5115,6 @@ country_event = { #Fate of India
 
 country_event = { #Fate of Hindustan // Central India
 	id = annex.3032
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3032 FROM = [From.GetName]" }
 	title = annexation_HND_CONQ
 	desc = annexation_HND_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -4876,6 +5143,7 @@ country_event = { #Fate of Hindustan // Central India
 	}
 
 	option = { #puppet HND
+		log = "[GetLogInfo]: event annex.3032 option annex.3032.a"
 		name = annex.3032.a
 		trigger = {
 			NOT = {
@@ -4892,9 +5160,7 @@ country_event = { #Fate of Hindustan // Central India
 				}
 			}
 		}
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		hidden_effect = {
 			HND = { drop_cosmetic_tag = yes }
 		}
@@ -4907,6 +5173,7 @@ country_event = { #Fate of Hindustan // Central India
 		HND_puppet_setup = yes
 	}
 	option = { #release as British India
+		log = "[GetLogInfo]: event annex.3032 option annex.3031.c"
 		name = annex.3031.c
 		trigger = {
 			OR = {
@@ -4951,10 +5218,9 @@ country_event = { #Fate of Hindustan // Central India
 		release_targeted_tag = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3032 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -4981,10 +5247,9 @@ country_event = { #Fate of Hindustan // Central India
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3032 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5011,10 +5276,9 @@ country_event = { #Fate of Hindustan // Central India
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3032 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5041,6 +5305,7 @@ country_event = { #Fate of Hindustan // Central India
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3032 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -5048,9 +5313,7 @@ country_event = { #Fate of Hindustan // Central India
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 200
-		}
+		ai_chance = { base = 200 }
 		set_country_flag = HND_CONQ
 		occupy_large_country = yes
 		every_owned_state = {
@@ -5062,6 +5325,7 @@ country_event = { #Fate of Hindustan // Central India
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3032 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -5069,9 +5333,7 @@ country_event = { #Fate of Hindustan // Central India
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = HND_CONQ
 		occupy_large_country = yes
 	}
@@ -5079,7 +5341,6 @@ country_event = { #Fate of Hindustan // Central India
 
 country_event = { #Fate of Maharashtra // Bombay
 	id = annex.3033
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3033 FROM = [From.GetName]" }
 	title = annexation_BOM_CONQ
 	desc = annexation_BOM_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -5101,6 +5362,7 @@ country_event = { #Fate of Maharashtra // Bombay
 	}
 
 	option = { #puppet BOM
+		log = "[GetLogInfo]: event annex.3033 option annex.3033.a"
 		name = annex.3033.a
 		trigger = {
 			NOT = {
@@ -5115,9 +5377,7 @@ country_event = { #Fate of Maharashtra // Bombay
 				}
 			}
 		}
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_bombay = yes }
 			add_core_of = BOM
@@ -5126,6 +5386,7 @@ country_event = { #Fate of Maharashtra // Bombay
 		release_targeted_tag = yes
 	}
 	option = { #puppet greater BOM
+		log = "[GetLogInfo]: event annex.3033 option annex.3033.b"
 		name = annex.3033.b
 		trigger = {
 			OR = {
@@ -5144,9 +5405,7 @@ country_event = { #Fate of Maharashtra // Bombay
 				}
 			}
 		}
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_bombay = yes }
 			add_core_of = BOM
@@ -5159,6 +5418,7 @@ country_event = { #Fate of Maharashtra // Bombay
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #release as British India
+		log = "[GetLogInfo]: event annex.3033 option annex.3031.c"
 		name = annex.3031.c
 		trigger = {
 			OR = {
@@ -5191,10 +5451,9 @@ country_event = { #Fate of Maharashtra // Bombay
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3033 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5221,10 +5480,9 @@ country_event = { #Fate of Maharashtra // Bombay
 		}
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3033 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5251,10 +5509,9 @@ country_event = { #Fate of Maharashtra // Bombay
 		}
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3033 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5282,10 +5539,9 @@ country_event = { #Fate of Maharashtra // Bombay
 		}
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3033 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5313,6 +5569,7 @@ country_event = { #Fate of Maharashtra // Bombay
 		}
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3033 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -5321,9 +5578,7 @@ country_event = { #Fate of Maharashtra // Bombay
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_country_flag = BOM_CONQ
 		occupy_medium_country = yes
 		every_owned_state = {
@@ -5335,6 +5590,7 @@ country_event = { #Fate of Maharashtra // Bombay
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3033 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -5343,9 +5599,7 @@ country_event = { #Fate of Maharashtra // Bombay
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = BOM_CONQ
 		occupy_medium_country = yes
 	}
@@ -5353,7 +5607,6 @@ country_event = { #Fate of Maharashtra // Bombay
 
 country_event = { #Fate of Gujarat
 	id = annex.3034
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3034 FROM = [From.GetName]" }
 	title = annexation_GUJ_CONQ
 	desc = annexation_GUJ_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -5375,10 +5628,9 @@ country_event = { #Fate of Gujarat
 	}
 
 	option = { #puppet GUJ
+		log = "[GetLogInfo]: event annex.3034 option annex.3034.a"
 		name = annex.3034.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_gujarat = yes }
 			add_core_of = GUJ
@@ -5387,10 +5639,9 @@ country_event = { #Fate of Gujarat
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3034 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5418,10 +5669,9 @@ country_event = { #Fate of Gujarat
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3034 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5449,10 +5699,9 @@ country_event = { #Fate of Gujarat
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3034 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5480,10 +5729,9 @@ country_event = { #Fate of Gujarat
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3034 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5512,10 +5760,9 @@ country_event = { #Fate of Gujarat
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Pakistanis
+		log = "[GetLogInfo]: event annex.3034 option annex.3039.g"
 		name = annex.3039.g
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5551,10 +5798,9 @@ country_event = { #Fate of Gujarat
 		recheck_annexations = yes
 	}
 	option = { #Give it to Maharashtra
+		log = "[GetLogInfo]: event annex.3034 option annex.3039.h"
 		name = annex.3039.h
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5584,6 +5830,7 @@ country_event = { #Fate of Gujarat
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3034 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -5611,6 +5858,7 @@ country_event = { #Fate of Gujarat
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3034 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -5620,9 +5868,7 @@ country_event = { #Fate of Gujarat
 				tag = PAK
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = GUJ_CONQ
 		occupy_small_country = yes
 	}
@@ -5630,7 +5876,6 @@ country_event = { #Fate of Gujarat
 
 country_event = { #Fate of Rajputana // Rajasthan
 	id = annex.3035
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3035 FROM = [From.GetName]" }
 	title = annexation_RJS_CONQ
 	desc = annexation_RJS_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -5652,10 +5897,9 @@ country_event = { #Fate of Rajputana // Rajasthan
 	}
 
 	option = { #puppet RJS
+		log = "[GetLogInfo]: event annex.3035 option annex.3035.a"
 		name = annex.3035.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_rajasthan = yes }
 			add_core_of = RJS
@@ -5664,10 +5908,9 @@ country_event = { #Fate of Rajputana // Rajasthan
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3035 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5696,6 +5939,7 @@ country_event = { #Fate of Rajputana // Rajasthan
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3035 option annex.3039.k"
 		name = annex.3039.k
 		ai_chance = {
 			base = 80
@@ -5740,6 +5984,7 @@ country_event = { #Fate of Rajputana // Rajasthan
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3035 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -5784,6 +6029,7 @@ country_event = { #Fate of Rajputana // Rajasthan
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3035 option annex.3039.u"
 		name = annex.3039.u
 		ai_chance = {
 			base = 80
@@ -5828,6 +6074,7 @@ country_event = { #Fate of Rajputana // Rajasthan
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Pakistanis
+		log = "[GetLogInfo]: event annex.3035 option annex.3039.g"
 		name = annex.3039.g
 		ai_chance = {
 			base = 20
@@ -5879,6 +6126,7 @@ country_event = { #Fate of Rajputana // Rajasthan
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3035 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -5906,6 +6154,7 @@ country_event = { #Fate of Rajputana // Rajasthan
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3035 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -5915,9 +6164,7 @@ country_event = { #Fate of Rajputana // Rajasthan
 				tag = PAK
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = RJS_CONQ
 		occupy_small_country = yes
 	}
@@ -5925,7 +6172,6 @@ country_event = { #Fate of Rajputana // Rajasthan
 
 country_event = { #Fate of Khalistan
 	id = annex.3036
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3036 FROM = [From.GetName]" }
 	title = annexation_PJB_CONQ
 	desc = annexation_PJB_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -5947,10 +6193,9 @@ country_event = { #Fate of Khalistan
 	}
 
 	option = { #puppet PJB
+		log = "[GetLogInfo]: event annex.3036 option annex.3036.a"
 		name = annex.3036.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_khalistan = yes }
 			add_core_of = PJB
@@ -5959,10 +6204,9 @@ country_event = { #Fate of Khalistan
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3036 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -5991,6 +6235,7 @@ country_event = { #Fate of Khalistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3036 option annex.3039.k"
 		name = annex.3039.k
 		ai_chance = {
 			base = 80
@@ -6034,6 +6279,7 @@ country_event = { #Fate of Khalistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3036 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -6077,6 +6323,7 @@ country_event = { #Fate of Khalistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3036 option annex.3039.u"
 		name = annex.3039.u
 		ai_chance = {
 			base = 80
@@ -6120,6 +6367,7 @@ country_event = { #Fate of Khalistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Pakistanis
+		log = "[GetLogInfo]: event annex.3036 option annex.3039.g"
 		name = annex.3039.g
 		ai_chance = {
 			base = 20
@@ -6163,6 +6411,7 @@ country_event = { #Fate of Khalistan
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3036 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -6172,9 +6421,7 @@ country_event = { #Fate of Khalistan
 				tag = PAK
 			}
 		}
-		ai_chance = {
-			base = 200
-		}
+		ai_chance = { base = 200 }
 		set_country_flag = PJB_CONQ
 		occupy_small_country = yes
 		every_owned_state = {
@@ -6186,6 +6433,7 @@ country_event = { #Fate of Khalistan
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3036 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -6195,9 +6443,7 @@ country_event = { #Fate of Khalistan
 				tag = PAK
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = PJB_CONQ
 		occupy_small_country = yes
 	}
@@ -6205,7 +6451,6 @@ country_event = { #Fate of Khalistan
 
 country_event = { #Fate of Kashmir
 	id = annex.3037
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3037 FROM = [From.GetName]" }
 	title = annexation_KAS_CONQ
 	desc = annexation_KAS_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -6227,10 +6472,9 @@ country_event = { #Fate of Kashmir
 	}
 
 	option = { #puppet KAS
+		log = "[GetLogInfo]: event annex.3037 option annex.3037.a"
 		name = annex.3037.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_kashmir = yes }
 			add_core_of = KAS
@@ -6239,10 +6483,9 @@ country_event = { #Fate of Kashmir
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3037 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -6271,6 +6514,7 @@ country_event = { #Fate of Kashmir
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3037 option annex.3039.k"
 		name = annex.3039.k
 		ai_chance = {
 			base = 80
@@ -6313,6 +6557,7 @@ country_event = { #Fate of Kashmir
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3037 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -6355,6 +6600,7 @@ country_event = { #Fate of Kashmir
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3037 option annex.3039.u"
 		name = annex.3039.u
 		ai_chance = {
 			base = 80
@@ -6397,6 +6643,7 @@ country_event = { #Fate of Kashmir
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Pakistanis
+		log = "[GetLogInfo]: event annex.3037 option annex.3039.g"
 		name = annex.3039.g
 		ai_chance = {
 			base = 20
@@ -6439,10 +6686,9 @@ country_event = { #Fate of Kashmir
 		recheck_annexations = yes
 	}
 	option = { #Give it to Afghanistan
+		log = "[GetLogInfo]: event annex.3037 option annex.3039.r"
 		name = annex.3039.r
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			AFG = {
 				is_ally_of_ROOT = yes
@@ -6468,6 +6714,7 @@ country_event = { #Fate of Kashmir
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3037 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -6477,9 +6724,7 @@ country_event = { #Fate of Kashmir
 				tag = PAK
 			}
 		}
-		ai_chance = {
-			base = 200
-		}
+		ai_chance = { base = 200 }
 		set_country_flag = KAS_CONQ
 		occupy_small_country = yes
 		every_owned_state = {
@@ -6491,6 +6736,7 @@ country_event = { #Fate of Kashmir
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3037 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -6500,9 +6746,7 @@ country_event = { #Fate of Kashmir
 				tag = PAK
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = KAS_CONQ
 		occupy_small_country = yes
 	}
@@ -6510,7 +6754,6 @@ country_event = { #Fate of Kashmir
 
 country_event = { #Fate of Sikkim
 	id = annex.3038
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3038 FROM = [From.GetName]" }
 	title = annexation_SIKKIM_CONQ
 	desc = annexation_SIKKIM_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -6522,10 +6765,9 @@ country_event = { #Fate of Sikkim
 	}
 
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3038 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				RAJ = { is_ally_of_ROOT = yes }
@@ -6544,6 +6786,7 @@ country_event = { #Fate of Sikkim
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3038 option annex.3039.k"
 		name = annex.3039.k
 		ai_chance = {
 			base = 80
@@ -6574,6 +6817,7 @@ country_event = { #Fate of Sikkim
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3038 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -6604,6 +6848,7 @@ country_event = { #Fate of Sikkim
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3038 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -6634,10 +6879,9 @@ country_event = { #Fate of Sikkim
 		recheck_annexations = yes
 	}
 	option = { #Give it to Bengal
+		log = "[GetLogInfo]: event annex.3038 option annex.3039.e"
 		name = annex.3039.e
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 		trigger = {
 			BNG = { is_ally_of_ROOT = yes }
 		}
@@ -6656,10 +6900,9 @@ country_event = { #Fate of Sikkim
 		recheck_annexations = yes
 	}
 	option = { #Give it to Nepal
+		log = "[GetLogInfo]: event annex.3038 option annex.3039.l"
 		name = annex.3039.l
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 		trigger = {
 			NEP = { is_ally_of_ROOT = yes }
 		}
@@ -6674,10 +6917,9 @@ country_event = { #Fate of Sikkim
 		recheck_annexations = yes
 	}
 	option = { #Give it to Bhutan
+		log = "[GetLogInfo]: event annex.3038 option annex.3039.m"
 		name = annex.3039.m
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			BHU = { is_ally_of_ROOT = yes }
 		}
@@ -6692,10 +6934,9 @@ country_event = { #Fate of Sikkim
 		recheck_annexations = yes
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3038 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = SIKKIM_CONQ
 		occupy_small_country = yes
 	}
@@ -6703,7 +6944,6 @@ country_event = { #Fate of Sikkim
 
 country_event = { #Fate of Assam
 	id = annex.3039
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3039 FROM = [From.GetName]" }
 	title = annexation_ASM_CONQ
 	desc = annexation_ASM_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -6721,14 +6961,20 @@ country_event = { #Fate of Assam
 		hidden_effect = {
 			add_to_temp_array = { core_removal_array = ASM }
 			remove_all_cores_and_claims_of_tags = yes
+			if = {
+				limit = {
+					is_chinese_tag = yes
+					858 = { is_claim_or_core_of_ROOT = no }
+				}
+				add_state_claim = 858 #Tawang
+			}
 		}
 	}
 
 	option = { #puppet ASM
+		log = "[GetLogInfo]: event annex.3039 option annex.3039.a"
 		name = annex.3039.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_assam = yes }
 			add_core_of = ASM
@@ -6737,10 +6983,9 @@ country_event = { #Fate of Assam
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3039 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -6769,6 +7014,7 @@ country_event = { #Fate of Assam
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3039 option annex.3039.k"
 		name = annex.3039.k
 		ai_chance = {
 			base = 80
@@ -6811,6 +7057,7 @@ country_event = { #Fate of Assam
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3039 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -6853,6 +7100,7 @@ country_event = { #Fate of Assam
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3039 option annex.3039.u"
 		name = annex.3039.u
 		ai_chance = {
 			base = 80
@@ -6895,10 +7143,9 @@ country_event = { #Fate of Assam
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Bengalese
+		log = "[GetLogInfo]: event annex.3039 option annex.3039.e"
 		name = annex.3039.e
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -6928,6 +7175,7 @@ country_event = { #Fate of Assam
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3039 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -6955,6 +7203,7 @@ country_event = { #Fate of Assam
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3039 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -6964,9 +7213,7 @@ country_event = { #Fate of Assam
 				tag = BNG
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = ASM_CONQ
 		occupy_small_country = yes
 	}
@@ -6974,7 +7221,6 @@ country_event = { #Fate of Assam
 
 country_event = { #Fate of Bengal
 	id = annex.3040
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3040 FROM = [From.GetName]" }
 	title = annexation_BNG_CONQ
 	desc = annexation_BNG_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -6996,10 +7242,9 @@ country_event = { #Fate of Bengal
 	}
 
 	option = { #puppet BNG
+		log = "[GetLogInfo]: event annex.3040 option annex.3040.a"
 		name = annex.3040.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_bengal = yes }
 			add_core_of = BNG
@@ -7008,6 +7253,7 @@ country_event = { #Fate of Bengal
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #puppet greater BNG
+		log = "[GetLogInfo]: event annex.3040 option annex.3040.b"
 		name = annex.3040.b
 		trigger = {
 			any_owned_state = {
@@ -7035,6 +7281,7 @@ country_event = { #Fate of Bengal
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #release the BHC
+		log = "[GetLogInfo]: event annex.3040 option annex.3040.c"
 		name = annex.3040.c
 		trigger = {
 			has_socialist_government = yes
@@ -7053,9 +7300,7 @@ country_event = { #Fate of Bengal
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		hidden_effect = {
 			add_to_temp_array = { core_removal_array = HND }
 			remove_all_cores_and_claims_of_tags = yes
@@ -7083,10 +7328,9 @@ country_event = { #Fate of Bengal
 		}
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3040 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -7114,10 +7358,9 @@ country_event = { #Fate of Bengal
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3040 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -7145,10 +7388,9 @@ country_event = { #Fate of Bengal
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3040 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -7177,10 +7419,9 @@ country_event = { #Fate of Bengal
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3040 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -7209,6 +7450,7 @@ country_event = { #Fate of Bengal
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3040 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -7217,9 +7459,7 @@ country_event = { #Fate of Bengal
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_country_flag = BNG_CONQ
 		occupy_medium_country = yes
 		every_owned_state = {
@@ -7231,6 +7471,7 @@ country_event = { #Fate of Bengal
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3040 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -7239,9 +7480,7 @@ country_event = { #Fate of Bengal
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = BNG_CONQ
 		occupy_medium_country = yes
 	}
@@ -7249,7 +7488,6 @@ country_event = { #Fate of Bengal
 
 country_event = { #Fate of Orissa
 	id = annex.3041
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3041 FROM = [From.GetName]" }
 	title = annexation_ORI_CONQ
 	desc = annexation_ORI_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -7271,10 +7509,9 @@ country_event = { #Fate of Orissa
 	}
 
 	option = { #puppet ORI
+		log = "[GetLogInfo]: event annex.3041 option annex.3041.a"
 		name = annex.3041.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_orissa = yes }
 			add_core_of = ORI
@@ -7283,6 +7520,7 @@ country_event = { #Fate of Orissa
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #puppet greater ORI
+		log = "[GetLogInfo]: event annex.3041 option annex.3041.b"
 		name = annex.3041.b
 		trigger = {
 			OR = {
@@ -7325,10 +7563,9 @@ country_event = { #Fate of Orissa
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3041 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -7357,10 +7594,9 @@ country_event = { #Fate of Orissa
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3041 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -7389,10 +7625,9 @@ country_event = { #Fate of Orissa
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3041 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -7421,10 +7656,9 @@ country_event = { #Fate of Orissa
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3041 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -7453,10 +7687,9 @@ country_event = { #Fate of Orissa
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Bengalese
+		log = "[GetLogInfo]: event annex.3041 option annex.3039.e"
 		name = annex.3039.e
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -7489,6 +7722,7 @@ country_event = { #Fate of Orissa
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3041 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -7498,9 +7732,7 @@ country_event = { #Fate of Orissa
 				tag = BNG
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_country_flag = ORI_CONQ
 		occupy_small_country = yes
 		every_owned_state = {
@@ -7512,6 +7744,7 @@ country_event = { #Fate of Orissa
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3041 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -7521,9 +7754,7 @@ country_event = { #Fate of Orissa
 				tag = BNG
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = ORI_CONQ
 		occupy_small_country = yes
 	}
@@ -7531,7 +7762,6 @@ country_event = { #Fate of Orissa
 
 country_event = { #Fate of Chhatisgarh
 	id = annex.3042
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3042 FROM = [From.GetName]" }
 	title = annexation_CHHAT_CONQ
 	desc = annexation_CHHAT_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -7543,10 +7773,9 @@ country_event = { #Fate of Chhatisgarh
 	}
 
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3042 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				RAJ = { is_ally_of_ROOT = yes }
@@ -7572,6 +7801,7 @@ country_event = { #Fate of Chhatisgarh
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3042 option annex.3039.k"
 		name = annex.3039.k
 		ai_chance = {
 			base = 80
@@ -7601,6 +7831,7 @@ country_event = { #Fate of Chhatisgarh
 		}
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3042 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -7630,6 +7861,7 @@ country_event = { #Fate of Chhatisgarh
 		}
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3042 option annex.3039.u"
 		name = annex.3039.u
 		ai_chance = {
 			base = 80
@@ -7659,10 +7891,9 @@ country_event = { #Fate of Chhatisgarh
 		}
 	}
 	option = { #Give it to Orissa
+		log = "[GetLogInfo]: event annex.3042 option annex.3039.n"
 		name = annex.3039.n
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			ORI = { is_ally_of_ROOT = yes }
 		}
@@ -7677,10 +7908,9 @@ country_event = { #Fate of Chhatisgarh
 		}
 	}
 	option = { #Give it to Hyderabad
+		log = "[GetLogInfo]: event annex.3042 option annex.3039.o"
 		name = annex.3039.o
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			HYD = { is_ally_of_ROOT = yes }
 		}
@@ -7695,10 +7925,9 @@ country_event = { #Fate of Chhatisgarh
 		}
 	}
 	option = { #Give it to Bombay
+		log = "[GetLogInfo]: event annex.3042 option annex.3039.h"
 		name = annex.3039.h
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			BOM = {
 				is_ally_of_ROOT = yes
@@ -7716,10 +7945,9 @@ country_event = { #Fate of Chhatisgarh
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3042 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = CHHAT_CONQ
 		occupy_small_country = yes
 	}
@@ -7727,7 +7955,6 @@ country_event = { #Fate of Chhatisgarh
 
 country_event = { #Fate of Vizagapatnam
 	id = annex.3043
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3043 FROM = [From.GetName]" }
 	title = annexation_VIZAG_CONQ
 	desc = annexation_VIZAG_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -7739,10 +7966,9 @@ country_event = { #Fate of Vizagapatnam
 	}
 
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3043 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				RAJ = { is_ally_of_ROOT = yes }
@@ -7761,10 +7987,9 @@ country_event = { #Fate of Vizagapatnam
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3043 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			RAJ = { is_ally_of_ROOT = yes }
 		}
@@ -7783,10 +8008,9 @@ country_event = { #Fate of Vizagapatnam
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3043 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			HND = { is_ally_of_ROOT = yes }
 		}
@@ -7805,10 +8029,9 @@ country_event = { #Fate of Vizagapatnam
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3043 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			PRF = { is_ally_of_ROOT = yes }
 		}
@@ -7827,10 +8050,9 @@ country_event = { #Fate of Vizagapatnam
 		recheck_annexations = yes
 	}
 	option = { #Give it to Bengal
+		log = "[GetLogInfo]: event annex.3043 option annex.3039.e"
 		name = annex.3039.e
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			BNG = {
 				is_ally_of_ROOT = yes
@@ -7852,10 +8074,9 @@ country_event = { #Fate of Vizagapatnam
 		recheck_annexations = yes
 	}
 	option = { #Give it to Orissa
+		log = "[GetLogInfo]: event annex.3043 option annex.3039.n"
 		name = annex.3039.n
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			ORI = { is_ally_of_ROOT = yes }
 		}
@@ -7874,10 +8095,9 @@ country_event = { #Fate of Vizagapatnam
 		recheck_annexations = yes
 	}
 	option = { #Give it to Hyderabad
+		log = "[GetLogInfo]: event annex.3043 option annex.3039.o"
 		name = annex.3039.o
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			HYD = {
 				is_ally_of_ROOT = yes
@@ -7899,10 +8119,9 @@ country_event = { #Fate of Vizagapatnam
 		recheck_annexations = yes
 	}
 	option = { #Give it to Madras
+		log = "[GetLogInfo]: event annex.3043 option annex.3039.j"
 		name = annex.3039.j
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 		trigger = {
 			MDR = {
 				is_ally_of_ROOT = yes
@@ -7920,10 +8139,9 @@ country_event = { #Fate of Vizagapatnam
 		recheck_annexations = yes
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3043 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = VIZAG_CONQ
 		occupy_small_country = yes
 	}
@@ -7931,7 +8149,6 @@ country_event = { #Fate of Vizagapatnam
 
 country_event = { #Fate of Hyderabad
 	id = annex.3044
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3044 FROM = [From.GetName]" }
 	title = annexation_HYD_CONQ
 	desc = annexation_HYD_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -7954,10 +8171,9 @@ country_event = { #Fate of Hyderabad
 	}
 
 	option = { #puppet HYD
+		log = "[GetLogInfo]: event annex.3044 option annex.3044.a"
 		name = annex.3044.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_hyderabad = yes }
 			add_core_of = HYD
@@ -7966,6 +8182,7 @@ country_event = { #Fate of Hyderabad
 		release_targeted_tag = yes
 	}
 	option = { #puppet greater HYD
+		log = "[GetLogInfo]: event annex.3044 option annex.3044.b"
 		name = annex.3044.b
 		trigger = {
 			owns_state = 424 #Andhra
@@ -7992,10 +8209,9 @@ country_event = { #Fate of Hyderabad
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3044 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8023,6 +8239,7 @@ country_event = { #Fate of Hyderabad
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3044 option annex.3039.k"
 		name = annex.3039.k
 		ai_chance = {
 			base = 80
@@ -8066,6 +8283,7 @@ country_event = { #Fate of Hyderabad
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3044 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -8109,10 +8327,9 @@ country_event = { #Fate of Hyderabad
 		recheck_annexations = yes
 	}
 	option = { #Give it to Maharashtra
+		log = "[GetLogInfo]: event annex.3044 option annex.3039.h"
 		name = annex.3039.h
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8142,6 +8359,7 @@ country_event = { #Fate of Hyderabad
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3044 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -8151,9 +8369,7 @@ country_event = { #Fate of Hyderabad
 				tag = BOM
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_country_flag = HYD_CONQ
 		occupy_medium_country = yes
 		every_owned_state = {
@@ -8165,6 +8381,7 @@ country_event = { #Fate of Hyderabad
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3044 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -8174,9 +8391,7 @@ country_event = { #Fate of Hyderabad
 				tag = BOM
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = HYD_CONQ
 		occupy_medium_country = yes
 	}
@@ -8184,7 +8399,6 @@ country_event = { #Fate of Hyderabad
 
 country_event = { #Fate of Andhra
 	id = annex.3045
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3045 FROM = [From.GetName]" }
 	title = annexation_ANDHRA_CONQ
 	desc = annexation_ANDHRA_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -8196,10 +8410,9 @@ country_event = { #Fate of Andhra
 	}
 
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3045 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				RAJ = { is_ally_of_ROOT = yes }
@@ -8218,10 +8431,9 @@ country_event = { #Fate of Andhra
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3045 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			RAJ = { is_ally_of_ROOT = yes }
 		}
@@ -8240,10 +8452,9 @@ country_event = { #Fate of Andhra
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3045 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			HND = { is_ally_of_ROOT = yes }
 		}
@@ -8262,10 +8473,9 @@ country_event = { #Fate of Andhra
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3045 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			PRF = { is_ally_of_ROOT = yes }
 		}
@@ -8284,10 +8494,9 @@ country_event = { #Fate of Andhra
 		recheck_annexations = yes
 	}
 	option = { #Give it to Hyderabad
+		log = "[GetLogInfo]: event annex.3045 option annex.3039.o"
 		name = annex.3039.o
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			HYD = { is_ally_of_ROOT = yes }
 		}
@@ -8306,10 +8515,9 @@ country_event = { #Fate of Andhra
 		recheck_annexations = yes
 	}
 	option = { #Give it to Mysore
+		log = "[GetLogInfo]: event annex.3045 option annex.3039.i"
 		name = annex.3039.i
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			MYS = { is_ally_of_ROOT = yes }
 		}
@@ -8328,10 +8536,9 @@ country_event = { #Fate of Andhra
 		recheck_annexations = yes
 	}
 	option = { #Give it to Madras
+		log = "[GetLogInfo]: event annex.3045 option annex.3039.j"
 		name = annex.3039.j
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 		trigger = {
 			MDR = { is_ally_of_ROOT = yes }
 		}
@@ -8346,10 +8553,9 @@ country_event = { #Fate of Andhra
 		recheck_annexations = yes
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3045 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = ANDHRA_CONQ
 		occupy_small_country = yes
 	}
@@ -8357,7 +8563,6 @@ country_event = { #Fate of Andhra
 
 country_event = { #Fate of Madras
 	id = annex.3046
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3046 FROM = [From.GetName]" }
 	title = annexation_MDR_CONQ
 	desc = annexation_MDR_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -8379,6 +8584,7 @@ country_event = { #Fate of Madras
 	}
 
 	option = { #puppet Madras only
+		log = "[GetLogInfo]: event annex.3046 option annex.3046.a"
 		name = annex.3046.a
 		ai_chance = {
 			base = 20
@@ -8405,6 +8611,7 @@ country_event = { #Fate of Madras
 		}
 	}
 	option = { #puppet Tamil Nadu
+		log = "[GetLogInfo]: event annex.3046 option annex.3046.b"
 		name = annex.3046.b
 		trigger = {
 			any_owned_state = {
@@ -8434,6 +8641,7 @@ country_event = { #Fate of Madras
 		}
 	}
 	option = { #puppet Dravidia Nadu
+		log = "[GetLogInfo]: event annex.3046 option annex.3046.c"
 		name = annex.3046.c
 		trigger = {
 			owns_state = 424 #Andhra
@@ -8459,10 +8667,9 @@ country_event = { #Fate of Madras
 		MDR = { set_cosmetic_tag = MDR_DRAV }
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3046 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8492,10 +8699,9 @@ country_event = { #Fate of Madras
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3046 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8524,10 +8730,9 @@ country_event = { #Fate of Madras
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3046 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8556,10 +8761,9 @@ country_event = { #Fate of Madras
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3046 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8588,10 +8792,9 @@ country_event = { #Fate of Madras
 		recheck_annexations = yes
 	}
 	option = { #Give it to Mysore
+		log = "[GetLogInfo]: event annex.3046 option annex.3039.i"
 		name = annex.3039.i
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8621,10 +8824,9 @@ country_event = { #Fate of Madras
 		recheck_annexations = yes
 	}
 	option = { #Give it to Ceylon
+		log = "[GetLogInfo]: event annex.3046 option annex.3039.t"
 		name = annex.3039.t
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8653,6 +8855,7 @@ country_event = { #Fate of Madras
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3046 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -8663,9 +8866,7 @@ country_event = { #Fate of Madras
 				tag = CEY
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_country_flag = MDR_CONQ
 		occupy_medium_country = yes
 		every_owned_state = {
@@ -8677,6 +8878,7 @@ country_event = { #Fate of Madras
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3046 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -8687,9 +8889,7 @@ country_event = { #Fate of Madras
 				tag = CEY
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = MDR_CONQ
 		occupy_medium_country = yes
 	}
@@ -8697,7 +8897,6 @@ country_event = { #Fate of Madras
 
 country_event = { #Fate of Mysore
 	id = annex.3047
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3047 FROM = [From.GetName]" }
 	title = annexation_MYS_CONQ
 	desc = annexation_MYS_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -8719,10 +8918,9 @@ country_event = { #Fate of Mysore
 	}
 
 	option = { #puppet MYS
+		log = "[GetLogInfo]: event annex.3047 option annex.3047.a"
 		name = annex.3047.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		every_state = {
 			limit = { is_mysore = yes }
 			add_core_of = MYS
@@ -8731,6 +8929,7 @@ country_event = { #Fate of Mysore
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #puppet greater MYS
+		log = "[GetLogInfo]: event annex.3047 option annex.3047.b"
 		name = annex.3047.b
 		trigger = {
 			any_owned_state = { is_greater_mysore = yes }
@@ -8755,10 +8954,9 @@ country_event = { #Fate of Mysore
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3047 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8787,10 +8985,9 @@ country_event = { #Fate of Mysore
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3047 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8819,10 +9016,9 @@ country_event = { #Fate of Mysore
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3047 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8851,10 +9047,9 @@ country_event = { #Fate of Mysore
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3047 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8883,10 +9078,9 @@ country_event = { #Fate of Mysore
 		recheck_annexations = yes
 	}
 	option = { #Give it to Madras
+		log = "[GetLogInfo]: event annex.3047 option annex.3039.j"
 		name = annex.3039.j
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -8915,6 +9109,7 @@ country_event = { #Fate of Mysore
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3047 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -8924,9 +9119,7 @@ country_event = { #Fate of Mysore
 				tag = MDR
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_country_flag = MYS_CONQ
 		occupy_small_country = yes
 		every_owned_state = {
@@ -8938,6 +9131,7 @@ country_event = { #Fate of Mysore
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3047 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -8947,9 +9141,7 @@ country_event = { #Fate of Mysore
 				tag = MDR
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = MYS_CONQ
 		occupy_small_country = yes
 	}
@@ -8957,7 +9149,6 @@ country_event = { #Fate of Mysore
 
 country_event = { #Fate of Pakistan // Punjab
 	id = annex.3048
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3048 FROM = [From.GetName]" }
 	title = annexation_PAK_CONQ
 	desc = annexation_PAK_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -8979,6 +9170,7 @@ country_event = { #Fate of Pakistan // Punjab
 	}
 
 	option = { #puppet Punjab only
+		log = "[GetLogInfo]: event annex.3048 option annex.3048.a"
 		name = annex.3048.a
 		ai_chance = {
 			base = 20
@@ -9001,6 +9193,7 @@ country_event = { #Fate of Pakistan // Punjab
 		PAK = { set_cosmetic_tag = PAK_punjab }
 	}
 	option = { #puppet PAK
+		log = "[GetLogInfo]: event annex.3048 option annex.3048.b"
 		name = annex.3048.b
 		trigger = {
 			any_owned_state = {
@@ -9044,6 +9237,7 @@ country_event = { #Fate of Pakistan // Punjab
 		release_targeted_tag_with_claims = yes
 	}
 	option = { #puppet PAK without East Punjab
+		log = "[GetLogInfo]: event annex.3048 option annex.3048.c"
 		name = annex.3048.c
 		trigger = {
 			owns_state = 440 #East Punjab
@@ -9081,10 +9275,9 @@ country_event = { #Fate of Pakistan // Punjab
 		}
 	}
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3048 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -9112,10 +9305,9 @@ country_event = { #Fate of Pakistan // Punjab
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3048 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -9143,10 +9335,9 @@ country_event = { #Fate of Pakistan // Punjab
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3048 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -9174,10 +9365,9 @@ country_event = { #Fate of Pakistan // Punjab
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3048 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				tag = RAJ
@@ -9205,6 +9395,7 @@ country_event = { #Fate of Pakistan // Punjab
 		recheck_annexations = yes
 	}
 	option = { #incorporate
+		log = "[GetLogInfo]: event annex.3048 option annex.3039.f"
 		name = annex.3039.f
 		trigger = {
 			OR = {
@@ -9213,9 +9404,7 @@ country_event = { #Fate of Pakistan // Punjab
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_country_flag = PAK_CONQ
 		occupy_medium_country = yes
 		every_owned_state = {
@@ -9227,6 +9416,7 @@ country_event = { #Fate of Pakistan // Punjab
 		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3048 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -9235,9 +9425,7 @@ country_event = { #Fate of Pakistan // Punjab
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = PAK_CONQ
 		occupy_medium_country = yes
 	}
@@ -9245,7 +9433,6 @@ country_event = { #Fate of Pakistan // Punjab
 
 country_event = { #Fate of Baluchistan
 	id = annex.3049
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3049 FROM = [From.GetName]" }
 	title = annexation_BALUCH_CONQ
 	desc = annexation_BALUCH_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -9257,10 +9444,9 @@ country_event = { #Fate of Baluchistan
 	}
 
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3049 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				RAJ = { is_ally_of_ROOT = yes }
@@ -9279,10 +9465,9 @@ country_event = { #Fate of Baluchistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3049 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			RAJ = { is_ally_of_ROOT = yes }
 		}
@@ -9301,10 +9486,9 @@ country_event = { #Fate of Baluchistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3049 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			HND = { is_ally_of_ROOT = yes }
 		}
@@ -9323,10 +9507,9 @@ country_event = { #Fate of Baluchistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3049 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			PRF = { is_ally_of_ROOT = yes }
 		}
@@ -9345,6 +9528,7 @@ country_event = { #Fate of Baluchistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Pakistanis
+		log = "[GetLogInfo]: event annex.3049 option annex.3039.g"
 		name = annex.3039.g
 		ai_chance = {
 			base = 200
@@ -9373,10 +9557,9 @@ country_event = { #Fate of Baluchistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to Gujarat
+		log = "[GetLogInfo]: event annex.3049 option annex.3039.p"
 		name = annex.3039.p
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			GUJ = {
 				is_ally_of_ROOT = yes
@@ -9398,10 +9581,9 @@ country_event = { #Fate of Baluchistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to Afghanistan
+		log = "[GetLogInfo]: event annex.3049 option annex.3039.r"
 		name = annex.3039.r
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			AFG = { is_ally_of_ROOT = yes }
 		}
@@ -9420,10 +9602,9 @@ country_event = { #Fate of Baluchistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to Rajasthan
+		log = "[GetLogInfo]: event annex.3049 option annex.3039.q"
 		name = annex.3039.q
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			RJS = {
 				is_ally_of_ROOT = yes
@@ -9445,10 +9626,9 @@ country_event = { #Fate of Baluchistan
 		recheck_annexations = yes
 	}
 	option = { #Give it to Iran
+		log = "[GetLogInfo]: event annex.3049 option annex.3039.s"
 		name = annex.3039.s
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			PER = {
 				is_ally_of_ROOT = yes
@@ -9466,10 +9646,9 @@ country_event = { #Fate of Baluchistan
 		recheck_annexations = yes
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3049 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = BALUCH_CONQ
 		occupy_small_country = yes
 	}
@@ -9477,7 +9656,6 @@ country_event = { #Fate of Baluchistan
 
 country_event = { #Fate of Quetta
 	id = annex.3050
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3050 FROM = [From.GetName]" }
 	title = annexation_QUETTA_CONQ
 	desc = annexation_QUETTA_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -9489,10 +9667,9 @@ country_event = { #Fate of Quetta
 	}
 
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3050 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				RAJ = { is_ally_of_ROOT = yes }
@@ -9511,6 +9688,7 @@ country_event = { #Fate of Quetta
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3050 option annex.3039.k"
 		name = annex.3039.k
 		ai_chance = {
 			base = 80
@@ -9544,6 +9722,7 @@ country_event = { #Fate of Quetta
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3050 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -9577,6 +9756,7 @@ country_event = { #Fate of Quetta
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3050 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -9610,6 +9790,7 @@ country_event = { #Fate of Quetta
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Pakistanis
+		log = "[GetLogInfo]: event annex.3050 option annex.3039.g"
 		name = annex.3039.g
 		ai_chance = {
 			base = 80
@@ -9643,10 +9824,9 @@ country_event = { #Fate of Quetta
 		recheck_annexations = yes
 	}
 	option = { #Give it to Gujarat
+		log = "[GetLogInfo]: event annex.3050 option annex.3039.p"
 		name = annex.3039.p
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			GUJ = {
 				is_ally_of_ROOT = yes
@@ -9668,10 +9848,9 @@ country_event = { #Fate of Quetta
 		recheck_annexations = yes
 	}
 	option = { #Give it to Afghanistan
+		log = "[GetLogInfo]: event annex.3050 option annex.3039.r"
 		name = annex.3039.r
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			AFG = { is_ally_of_ROOT = yes }
 		}
@@ -9690,10 +9869,9 @@ country_event = { #Fate of Quetta
 		recheck_annexations = yes
 	}
 	option = { #Give it to Rajasthan
+		log = "[GetLogInfo]: event annex.3050 option annex.3039.q"
 		name = annex.3039.q
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			RJS = {
 				is_ally_of_ROOT = yes
@@ -9715,10 +9893,9 @@ country_event = { #Fate of Quetta
 		recheck_annexations = yes
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3050 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = QUETTA_CONQ
 		occupy_small_country = yes
 	}
@@ -9726,7 +9903,6 @@ country_event = { #Fate of Quetta
 
 country_event = { #Fate of Sindh
 	id = annex.3051
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3051 FROM = [From.GetName]" }
 	title = annexation_SINDH_CONQ
 	desc = annexation_SINDH_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -9738,10 +9914,9 @@ country_event = { #Fate of Sindh
 	}
 
 	option = { #Give it to the British
+		log = "[GetLogInfo]: event annex.3051 option annex.3039.b"
 		name = annex.3039.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			NOT = {
 				RAJ = { is_ally_of_ROOT = yes }
@@ -9760,10 +9935,9 @@ country_event = { #Fate of Sindh
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3051 option annex.3039.k"
 		name = annex.3039.k
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			RAJ = { is_ally_of_ROOT = yes }
 		}
@@ -9782,6 +9956,7 @@ country_event = { #Fate of Sindh
 		recheck_annexations = yes
 	}
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3051 option annex.3039.c"
 		name = annex.3039.c
 		ai_chance = {
 			base = 80
@@ -9813,6 +9988,7 @@ country_event = { #Fate of Sindh
 		recheck_annexations = yes
 	}
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3051 option annex.3039.u"
 		name = annex.3039.u
 		ai_chance = {
 			base = 80
@@ -9844,6 +10020,7 @@ country_event = { #Fate of Sindh
 		recheck_annexations = yes
 	}
 	option = { #Give it to the Pakistanis
+		log = "[GetLogInfo]: event annex.3051 option annex.3039.g"
 		name = annex.3039.g
 		ai_chance = {
 			base = 80
@@ -9866,10 +10043,9 @@ country_event = { #Fate of Sindh
 		recheck_annexations = yes
 	}
 	option = { #Give it to Gujarat
+		log = "[GetLogInfo]: event annex.3051 option annex.3039.p"
 		name = annex.3039.p
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			GUJ = { is_ally_of_ROOT = yes }
 		}
@@ -9888,10 +10064,9 @@ country_event = { #Fate of Sindh
 		recheck_annexations = yes
 	}
 	option = { #Give it to Rajasthan
+		log = "[GetLogInfo]: event annex.3051 option annex.3039.q"
 		name = annex.3039.q
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 		trigger = {
 			RJS = { is_ally_of_ROOT = yes }
 		}
@@ -9910,10 +10085,9 @@ country_event = { #Fate of Sindh
 		recheck_annexations = yes
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3051 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = SINDH_CONQ
 		occupy_small_country = yes
 	}
@@ -9921,7 +10095,6 @@ country_event = { #Fate of Sindh
 
 country_event = { #Fate of Nepal
 	id = annex.3052
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3052 FROM = [From.GetName]" }
 	title = annexation_NEP_CONQ
 	desc = annexation_NEP_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -9937,6 +10110,7 @@ country_event = { #Fate of Nepal
 	}
 
 	option = { #puppet Greater Nepal
+		log = "[GetLogInfo]: event annex.3052 option annex.3052.a"
 		name = annex.3052.a
 		ai_chance = {
 			base = 90
@@ -9975,10 +10149,9 @@ country_event = { #Fate of Nepal
 		release_targeted_tag = yes
 	}
 	option = { #puppet Nepal only
+		log = "[GetLogInfo]: event annex.3052 option annex.3052.b"
 		name = annex.3052.b
-		ai_chance = {
-			base = 90
-		}
+		ai_chance = { base = 90 }
 		trigger = {
 			OR = {
 				owns_state = 814 #Uttarakhand
@@ -9991,10 +10164,9 @@ country_event = { #Fate of Nepal
 		release_targeted_tag = yes
 	}
 	option = { #puppet Nepal
+		log = "[GetLogInfo]: event annex.3052 option annex.3052.c"
 		name = annex.3052.c
-		ai_chance = {
-			base = 90
-		}
+		ai_chance = { base = 90 }
 		trigger = {
 			NOT = {
 				owns_state = 814 #Uttarakhand
@@ -10007,10 +10179,9 @@ country_event = { #Fate of Nepal
 		release_targeted_tag = yes
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3052 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		occupy_small_country = yes
 		set_country_flag = NEP_CONQ
 	}
@@ -10018,7 +10189,6 @@ country_event = { #Fate of Nepal
 
 country_event = { #Fate of Bhutan
 	id = annex.3053
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3053 FROM = [From.GetName]" }
 	title = annexation_BHU_CONQ
 	desc = annexation_BHU_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -10026,29 +10196,36 @@ country_event = { #Fate of Bhutan
 	is_triggered_only = yes
 
 	option = { #puppet
+		log = "[GetLogInfo]: event annex.3053 option annex.3053.a"
 		name = annex.3053.a
 		ai_chance = {
-			base = 10
+			base = 1
+			modifier = {
+				factor = 0
+				original_tag = TIB
+			}
 		}
 		set_temp_variable = { tag_to_release = BHU }
 		release_targeted_tag = yes
 	}
 
 	option = { #integrate
+		log = "[GetLogInfo]: event annex.3053 option annex.integration"
 		name = annex.integration
-		trigger = { tag = TIB }
-		ai_chance = {
-			base = 1000
+		trigger = {
+			original_tag = TIB
 		}
 		add_state_core = 324
 		occupy_small_country = yes
 	}
 
 	option = { #occupation
+		log = "[GetLogInfo]: event annex.3053 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
+		trigger = {
+			NOT = { original_tag = TIB }
 		}
+		ai_chance = { base = 0 }
 		set_country_flag = BHU_CONQ
 		occupy_small_country = yes
 	}
@@ -10056,7 +10233,6 @@ country_event = { #Fate of Bhutan
 
 country_event = { #Fate of Burma
 	id = annex.3054
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3054 FROM = [From.GetName]" }
 	title = annexation_BRM_CONQ
 	desc = annexation_BRM_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -10099,6 +10275,7 @@ country_event = { #Fate of Burma
 	}
 
 	option = { #liberate, republic
+		log = "[GetLogInfo]: event annex.3054 option annex.3054.a"
 		name = annex.3054.a
 		ai_chance = {
 			base = 80
@@ -10128,6 +10305,7 @@ country_event = { #Fate of Burma
 	}
 
 	option = { #liberate, kingdom
+		log = "[GetLogInfo]: event annex.3054 option annex.3054.b"
 		name = annex.3054.b
 		trigger = {
 			has_socialist_government = no
@@ -10163,27 +10341,24 @@ country_event = { #Fate of Burma
 	}
 
 	option = { #Give it to the Raj
+		log = "[GetLogInfo]: event annex.3054 option annex.3039.k"
 		name = annex.3039.k
 		trigger = {
-			RAJ = { is_ally_of_ROOT = yes }
+			RAJ = {
+				is_ally_of_ROOT = yes
+				OR = {
+					owns_state = 434 #Manipur
+					owns_state = 432 #Assam
+				}
+			}
 			NOT = {
-				tag = RAJ
-				tag = PRF
-				tag = HND
+				original_tag = RAJ
+				original_tag = PRF
+				original_tag = HND
 			}
 		}
 		ai_chance = {
 			factor = 80
-			modifier = {
-				factor = 0
-				RAJ = {
-					NOT = {
-						owns_state = 434 #Manipur
-						owns_state = 432 #Assam
-						any_owned_state = { is_coastal = yes }
-					}
-				}
-			}
 		}
 		set_temp_variable = { tag_to_release = RAJ }
 		every_state = {
@@ -10199,27 +10374,24 @@ country_event = { #Fate of Burma
 	}
 
 	option = { #Give it to HND
+		log = "[GetLogInfo]: event annex.3054 option annex.3039.c"
 		name = annex.3039.c
-		ai_chance = {
-			base = 80
-			modifier = {
-				factor = 0
-				HND = {
-					NOT = {
-						owns_state = 434 #Manipur
-						owns_state = 432 #Assam
-						any_owned_state = { is_coastal = yes }
-					}
+		trigger = {
+			HND = {
+				is_ally_of_ROOT = yes
+				OR = {
+					owns_state = 434 #Manipur
+					owns_state = 432 #Assam
 				}
 			}
-		}
-		trigger = {
-			HND = { is_ally_of_ROOT = yes }
 			NOT = {
-				tag = RAJ
-				tag = PRF
-				tag = HND
+				original_tag = RAJ
+				original_tag = PRF
+				original_tag = HND
 			}
+		}
+		ai_chance = {
+			base = 80
 		}
 		set_temp_variable = { tag_to_release = HND }
 		every_state = {
@@ -10235,27 +10407,24 @@ country_event = { #Fate of Burma
 	}
 
 	option = { #Give it to PRF
+		log = "[GetLogInfo]: event annex.3054 option annex.3039.u"
 		name = annex.3039.u
-		ai_chance = {
-			base = 80
-			modifier = {
-				factor = 0
-				PRF = {
-					NOT = {
-						owns_state = 434 #Manipur
-						owns_state = 432 #Assam
-						any_owned_state = { is_coastal = yes }
-					}
+		trigger = {
+			PRF = {
+				is_ally_of_ROOT = yes
+				OR = {
+					owns_state = 434 #Manipur
+					owns_state = 432 #Assam
 				}
 			}
-		}
-		trigger = {
-			PRF = { is_ally_of_ROOT = yes }
 			NOT = {
-				tag = RAJ
-				tag = PRF
-				tag = HND
+				original_tag = RAJ
+				original_tag = PRF
+				original_tag = HND
 			}
+		}
+		ai_chance = {
+			base = 80
 		}
 		set_temp_variable = { tag_to_release = PRF }
 		every_state = {
@@ -10271,17 +10440,16 @@ country_event = { #Fate of Burma
 	}
 
 	option = { #integrate
+		log = "[GetLogInfo]: event annex.3054 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
-				tag = RAJ
-				tag = PRF
-				tag = HND
+				original_tag = RAJ
+				original_tag = PRF
+				original_tag = HND
 			}
 		}
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 90 }
 		every_state = {
 			limit = {
 				is_claim_or_core_of_ROOT = no
@@ -10291,17 +10459,19 @@ country_event = { #Fate of Burma
 				}
 			}
 			add_claim_by = ROOT
+
 		}
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3054 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
-				tag = RAJ
-				tag = PRF
-				tag = HND
+				original_tag = RAJ
+				original_tag = PRF
+				original_tag = HND
 			}
 		}
 		ai_chance = { base = 0 }
@@ -10312,7 +10482,6 @@ country_event = { #Fate of Burma
 
 country_event = { #Fate of Kachin
 	id = annex.3055
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3055 FROM = [From.GetName]" }
 	title = annexation_KAC_CONQ
 	desc = annexation_KAC_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -10320,6 +10489,7 @@ country_event = { #Fate of Kachin
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event annex.3055 option annex.3055.a"
 		name = annex.3055.a #Release KAC
 		trigger = {
 			NOT = { tag = BRM }
@@ -10336,18 +10506,18 @@ country_event = { #Fate of Kachin
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3055 option annex.3055.b"
 		name = annex.3055.b #Give to BRM
 		trigger = {
 			BRM = { ROOT_can_grant_land = yes }
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = BRM }
 		701 = { transfer_state_and_add_claim = yes }
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3055 option annex.3055.c"
 		name = annex.3055.c #Give to India
 		trigger = {
 			NOT = {
@@ -10364,14 +10534,13 @@ country_event = { #Fate of Kachin
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = 640.owner }
 		701 = { transfer_state_and_add_claim = yes }
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3055 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -10386,14 +10555,13 @@ country_event = { #Fate of Kachin
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		add_state_claim = 701
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3055 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -10416,7 +10584,6 @@ country_event = { #Fate of Kachin
 
 country_event = { #Fate of Shan
 	id = annex.3056
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3056 FROM = [From.GetName]" }
 	title = annexation_SHA_CONQ
 	desc = annexation_SHA_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -10424,6 +10591,7 @@ country_event = { #Fate of Shan
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event annex.3056 option annex.3056.a"
 		name = annex.3056.a #Release SHA
 		trigger = {
 			NOT = {
@@ -10447,19 +10615,19 @@ country_event = { #Fate of Shan
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3056 option annex.3056.a"
 		name = annex.3056.a #Give to SHA
 		trigger = {
 			SHA = { ROOT_can_grant_land = yes }
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = SHA }
 		72 = { add_core_of_target_and_transfer_if_owned = yes } #Upper Shan
 		756 = { add_core_of_target_and_transfer_if_owned = yes } #Lower Shan
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3056 option annex.3056.b"
 		name = annex.3056.b #Give to BRM
 		trigger = {
 			NOT = { tag = SIA }
@@ -10483,6 +10651,7 @@ country_event = { #Fate of Shan
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3056 option annex.3056.c"
 		name = annex.3056.c #Give to SIA
 		trigger = {
 			NOT = { tag = BRM }
@@ -10506,6 +10675,7 @@ country_event = { #Fate of Shan
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3056 option annex.3056.d"
 		name = annex.3056.d #Give to India
 		trigger = {
 			NOT = {
@@ -10542,6 +10712,7 @@ country_event = { #Fate of Shan
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3056 option annex.3056.e"
 		name = annex.3056.e #Split between BRM and SIA
 		trigger = {
 			owns_state = 72
@@ -10549,9 +10720,7 @@ country_event = { #Fate of Shan
 			BRM = { ROOT_can_grant_land = yes }
 			SIA = { ROOT_can_grant_land = yes }
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = BRM }
 		72 = { add_claim_of_target_and_transfer_if_owned = yes } #Upper Shan
 		set_temp_variable = { tag_to_release = SIA }
@@ -10559,6 +10728,7 @@ country_event = { #Fate of Shan
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3056 option annex.3056.f"
 		name = annex.3056.f #Split between India and SIA
 		trigger = {
 			NOT = {
@@ -10578,9 +10748,7 @@ country_event = { #Fate of Shan
 			}
 			SIA = { ROOT_can_grant_land = yes }
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = 640.owner }
 		72 = { add_claim_of_target_and_transfer_if_owned = yes } #Upper Shan
 		set_temp_variable = { tag_to_release = SIA }
@@ -10588,6 +10756,7 @@ country_event = { #Fate of Shan
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3056 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -10603,15 +10772,14 @@ country_event = { #Fate of Shan
 				}
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		add_state_claim = 72 #Upper Shan
 		add_state_claim = 756 #Lower Shan
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3056 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -10627,7 +10795,6 @@ country_event = { #Fate of Shan
 
 country_event = { #Fate of Ceylon
 	id = annex.3057
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3057 FROM = [From.GetName]" }
 	title = annexation_CEY_CONQ
 	desc = annexation_CEY_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -10636,22 +10803,45 @@ country_event = { #Fate of Ceylon
 
 	immediate = {
 		hidden_effect = {
-			add_to_temp_array = { core_removal_array = CEY }
-			remove_all_cores_and_claims_of_tags = yes
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = CEY
+						is_claimed_by = CEY
+					}
+					NOT = {
+						state = 422 #Ceylon
+						state = 281 #Maldives
+						state = 710 #Diego Garcia
+					}
+				}
+				remove_core_of = CEY
+				remove_claim_by = CEY
+			}
 		}
 	}
 
 	option = { #puppet
+		log = "[GetLogInfo]: event annex.3057 option annex.3057.a"
 		name = annex.3057.a
 		ai_chance = {
-			base = 99
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					original_tag = RAJ
+					original_tag = HND
+					original_tag = MDR
+					original_tag = PRF
+				}
+			}
 		}
-
 		422 = { add_core_of = CEY }
 		set_temp_variable = { tag_to_release = CEY }
 		release_targeted_tag = yes
 	}
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3057 option annex.3057.c"
 		name = annex.3057.c
 		trigger = {
 			OR = {
@@ -10661,24 +10851,13 @@ country_event = { #Fate of Ceylon
 				tag = PRF
 			}
 		}
-		ai_chance = {
-			base = 80
-			modifier = {
-				factor = 10
-				tag = MDR
-			}
-		}
+		ai_chance = { base = 1 }
 
 		occupy_small_country = yes
-		if = {
-			limit = {
-				422 = { is_not_claim_or_core_of_ROOT = yes }
-			}
-			add_state_claim = 422
-		}
-		set_country_flag = CEY_CONQ
+		422 = { add_claim_of_ROOT = yes }
 	}
 	option = { #occupation
+		log = "[GetLogInfo]: event annex.3057 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -10688,9 +10867,7 @@ country_event = { #Fate of Ceylon
 				tag = MDR
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		occupy_medium_country = yes
 		set_country_flag = CEY_CONQ
 	}
@@ -10702,7 +10879,6 @@ country_event = { #Fate of Ceylon
 
 country_event = { #Fate of Australasia
 	id = annex.3058
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3058 FROM = [From.GetName]" }
 	title = annexation_AST_CONQ
 	desc = annexation_AST_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -10770,15 +10946,17 @@ country_event = { #Fate of Australasia
 				}
 				CAN = { save_event_target_as = british_target }
 			}
-			GEA = { country_event = { id = austral.373 days = 2 random_days = 7 } }
+			if = {
+				limit = { is_in_faction_with = ENT }
+				GEA = { country_event = { id = austral.373 days = 20 } }
+			}
 		}
 	}
 
 	option = { #Puppet Australasia
+		log = "[GetLogInfo]: event annex.3058 option annex.3058.a"
 		name = annex.3058.a
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		trigger = {
 			284 = { is_valid_annexation_state = yes } #North Island
 			NOT = { has_event_target = british_target }
@@ -10792,10 +10970,9 @@ country_event = { #Fate of Australasia
 	}
 
 	option = { #Release New Zealand
+		log = "[GetLogInfo]: event annex.3058 option annex.3058.b"
 		name = annex.3058.b
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		trigger = {
 			284 = { is_valid_annexation_state = yes } #North Island
 			NOT = { has_event_target = british_target }
@@ -10816,6 +10993,7 @@ country_event = { #Fate of Australasia
 	}
 
 	option = { #Puppet Australasia and give it the Pacific Islands
+		log = "[GetLogInfo]: event annex.3058 option annex.3058.c"
 		name = annex.3058.c
 		trigger = {
 			284 = { is_valid_annexation_state = yes } #North Island
@@ -10835,9 +11013,7 @@ country_event = { #Fate of Australasia
 				757 = { is_valid_annexation_state = yes } #Kaiser-Wilhelmsland
 			}
 		}
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		AST = {
 			add_state_claim = 523 #Papua
 			add_state_claim = 634 #Solomon Islands
@@ -10852,6 +11028,7 @@ country_event = { #Fate of Australasia
 	}
 
 	option = { #Release Just Australia
+		log = "[GetLogInfo]: event annex.3058 option annex.3058.d"
 		name = annex.3058.d
 		trigger = {
 			284 = { is_valid_annexation_state = no } #North Island
@@ -10863,6 +11040,7 @@ country_event = { #Fate of Australasia
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3058 option annex.3058.e"
 		name = annex.3058.e #The New Guard can restore order
 		trigger = {
 			tag = event_target:british_target
@@ -10895,6 +11073,7 @@ country_event = { #Fate of Australasia
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3058 option annex.3058.f"
 		name = annex.3058.f #The Governor General will rule in our name
 		trigger = {
 			tag = event_target:british_target
@@ -10923,6 +11102,7 @@ country_event = { #Fate of Australasia
 	}
 
 	option = { #return it to ENT
+		log = "[GetLogInfo]: event annex.3058 option annex.3058.g"
 		name = annex.3058.g
 		trigger = {
 			has_event_target = british_target
@@ -10945,6 +11125,7 @@ country_event = { #Fate of Australasia
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3058 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			OR = {
@@ -10952,9 +11133,7 @@ country_event = { #Fate of Australasia
 				NOT = { has_event_target = british_target }
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		occupy_medium_country = yes
 		set_country_flag = AST_CONQ
 	}
@@ -10962,7 +11141,6 @@ country_event = { #Fate of Australasia
 
 country_event = { #Fate of New Zealand
 	id = annex.3060
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3060 FROM = [From.GetName]" }
 	title = annexation_NZL_CONQ
 	desc = annexation_NZL_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -10970,23 +11148,21 @@ country_event = { #Fate of New Zealand
 	is_triggered_only = yes
 
 	option = { #Release New Zealand
+		log = "[GetLogInfo]: event annex.3060 option annex.3060.a"
 		name = annex.3060.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		set_temp_variable = { tag_to_release = NZL }
 		release_targeted_tag = yes
 		NZL_puppet_setup = yes
 	}
 
 	option = { #Give it to Australia
+		log = "[GetLogInfo]: event annex.3060 option annex.3060.b"
 		name = annex.3060.b
 		trigger = {
 			AST = { is_ally_with = FROM }
 		}
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		AST = {
 			if = {
 				limit = { has_cosmetic_tag = AST_entente }
@@ -11002,10 +11178,9 @@ country_event = { #Fate of New Zealand
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3060 option annex.occupation"
 		name = annex.occupation
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		occupy_small_country = yes
 		set_country_flag = NZL_CONQ
 	}
@@ -11013,7 +11188,6 @@ country_event = { #Fate of New Zealand
 
 country_event = { #Fate of Hawaii
 	id = annex.3061
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3061 FROM = [From.GetName]" }
 	title = annexation_HAW_CONQ
 	desc = annexation_HAW_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -11026,16 +11200,20 @@ country_event = { #Fate of Hawaii
 				limit = { is_american_pacific_islands = yes }
 				add_core_of = HAW
 			}
+			HAW = {
+				HAW_lydia_liliuokalani_kawananakoa = { remove_all_country_leader_roles = yes }
+			}
 		}
 	}
 
 	option = { #Release Hawaii as a republic
+		log = "[GetLogInfo]: event annex.3061 option annex.3061.a"
 		name = annex.3061.a
 		ai_chance = {
 			base = 5
 			modifier = {
 				factor = 0
-				tag = JAP
+				original_tag = JAP
 			}
 			modifier = {
 				factor = 0
@@ -11045,12 +11223,6 @@ country_event = { #Fate of Hawaii
 		set_temp_variable = { tag_to_release = HAW }
 		release_targeted_tag = yes
 		var:tag_to_release = {
-			hidden_effect = {
-				promote_character = HAW_john_henry_wilson
-				promote_character = HAW_samuel_wilder_king
-				promote_character = HAW_lawrence_mccully_judd
-				promote_character = HAW_henry_alexander_baldwin
-			}
 			if = {
 				limit = { has_completed_focus = HAW_monarchy_restoration }
 				uncomplete_national_focus = {
@@ -11082,13 +11254,16 @@ country_event = { #Fate of Hawaii
 	}
 
 	option = { #Release Hawaii as a monarchy
+		log = "[GetLogInfo]: event annex.3061 option annex.3061.b"
 		name = annex.3061.b
-		trigger = { has_elected_government = yes }
+		trigger = {
+			has_elected_government = yes
+		}
 		ai_chance = {
 			base = 5
 			modifier = {
 				factor = 0
-				tag = JAP
+				original_tag = JAP
 			}
 			modifier = {
 				factor = 0
@@ -11099,57 +11274,23 @@ country_event = { #Fate of Hawaii
 		release_targeted_tag = yes
 		HAW = {
 			set_cosmetic_tag = HAW_kingdom
-			HAW_lydia_liliuokalani_kawananakoa = { set_character_name = HAW_lydia_liliuokalani_kawananakoa_regnal }
-			if = {
-				limit = { HAW_lydia_liliuokalani_kawananakoa = { has_ideology = social_democrat_subtype } }
-				promote_character = {
-					character = HAW_lydia_liliuokalani_kawananakoa
-					ideology = social_democrat_subtype
-				}
-			}
-			else = {
+			HAW_lydia_liliuokalani_kawananakoa = {
+				set_character_name = HAW_lydia_liliuokalani_kawananakoa_regnal
 				add_country_leader_role = {
 					character = HAW_lydia_liliuokalani_kawananakoa
 					country_leader = { ideology = social_democrat_subtype }
 					promote_leader = yes
 				}
-			}
-			if = {
-				limit = { HAW_lydia_liliuokalani_kawananakoa = { has_ideology = social_liberal_subtype } }
-				promote_character = {
-					character = HAW_lydia_liliuokalani_kawananakoa
-					ideology = social_liberal_subtype
-				}
-			}
-			else = {
 				add_country_leader_role = {
 					character = HAW_lydia_liliuokalani_kawananakoa
 					country_leader = { ideology = social_liberal_subtype }
 					promote_leader = yes
 				}
-			}
-			if = {
-				limit = { HAW_lydia_liliuokalani_kawananakoa = { has_ideology = market_liberal_subtype } }
-				promote_character = {
-					character = HAW_lydia_liliuokalani_kawananakoa
-					ideology = market_liberal_subtype
-				}
-			}
-			else = {
 				add_country_leader_role = {
 					character = HAW_lydia_liliuokalani_kawananakoa
 					country_leader = { ideology = market_liberal_subtype }
 					promote_leader = yes
 				}
-			}
-			if = {
-				limit = { HAW_lydia_liliuokalani_kawananakoa = { has_ideology = social_conservative_subtype } }
-				promote_character = {
-					character = HAW_lydia_liliuokalani_kawananakoa
-					ideology = social_conservative_subtype
-				}
-			}
-			else = {
 				add_country_leader_role = {
 					character = HAW_lydia_liliuokalani_kawananakoa
 					country_leader = { ideology = social_conservative_subtype }
@@ -11174,6 +11315,7 @@ country_event = { #Fate of Hawaii
 	}
 
 	option = { #Give it to America
+		log = "[GetLogInfo]: event annex.3061 option annex.3061.c"
 		name = annex.3061.c
 		trigger = {
 			var:797.owner = {
@@ -11185,7 +11327,8 @@ country_event = { #Fate of Hawaii
 			base = 90
 			modifier = {
 				factor = 0
-				tag = JAP
+				original_tag = JAP
+				NOT = { is_ally_with = 797.owner }
 			}
 		}
 		every_owned_state = {
@@ -11196,14 +11339,12 @@ country_event = { #Fate of Hawaii
 	}
 
 	option = { #Give it to Japan
+		log = "[GetLogInfo]: event annex.3061 option annex.3061.d"
 		name = annex.3061.d
 		trigger = {
-			NOT = { tag = JAP }
 			JAP = { is_ally_of_ROOT = yes }
 		}
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		every_owned_state = {
 			limit = { is_american_pacific_islands = yes }
 			transfer_state_to = JAP
@@ -11212,13 +11353,12 @@ country_event = { #Fate of Hawaii
 	}
 
 	option = { #Give it to GEA
+		log = "[GetLogInfo]: event annex.3061 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
 		trigger = {
 			has_subject = GEA
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		every_owned_state = {
 			limit = { is_american_pacific_islands = yes }
 			GEA = {
@@ -11230,12 +11370,18 @@ country_event = { #Fate of Hawaii
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3061 option annex.3061.f"
 		name = annex.3061.f
 		trigger = {
-			tag = JAP
+			original_tag = JAP
 		}
 		ai_chance = {
 			base = 100
+			modifier = {
+				factor = 0
+				original_tag = JAP
+				is_ally_with = 797.owner
+			}
 		}
 		every_state = {
 			limit = { is_american_pacific_islands = yes }
@@ -11245,6 +11391,7 @@ country_event = { #Fate of Hawaii
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3061 option annex.occupation"
 		name = annex.occupation
 		ai_chance = { base = 0 }
 		occupy_small_country = yes
@@ -11254,7 +11401,6 @@ country_event = { #Fate of Hawaii
 
 country_event = { #Fate of Stung Treng
 	id = annex.3062
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3062 FROM = [From.GetName]" }
 	title = annexation_STUNGTRENG_CONQ
 	desc = annexation_STUNGTRENG_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -11262,6 +11408,7 @@ country_event = { #Fate of Stung Treng
 	is_triggered_only = yes
 
 	option = { #Give it to Cambodia
+		log = "[GetLogInfo]: event annex.3062 option annex.3062.a"
 		name = annex.3062.a
 		trigger = {
 			NOT = {
@@ -11271,9 +11418,12 @@ country_event = { #Fate of Stung Treng
 					tag = SIA
 					owns_state = 750 #Phnom Penh
 				}
-				AND = {
-					GEA = { is_ally_of_ROOT = yes }
-					GEA = { owns_state = 286 } #Cochinchina
+				GEA = {
+					is_subject_of = ROOT
+					OR = {
+						owns_state = 286 #Cochinchina
+						286 = { owner = { is_subject_of = PREV.PREV } }
+					}
 				}
 			}
 			CAM = { ROOT_can_grant_land = yes }
@@ -11294,6 +11444,7 @@ country_event = { #Fate of Stung Treng
 	}
 
 	option = { #Give it to Vietnam
+		log = "[GetLogInfo]: event annex.3062 option annex.3062.b"
 		name = annex.3062.b
 		trigger = {
 			NOT = {
@@ -11303,9 +11454,12 @@ country_event = { #Fate of Stung Treng
 					tag = SIA
 					owns_state = 750 #Phnom Penh
 				}
-				AND = {
-					GEA = { is_ally_of_ROOT = yes }
-					GEA = { owns_state = 286 } #Cochinchina
+				GEA = {
+					is_subject_of = ROOT
+					OR = {
+						owns_state = 286 #Cochinchina
+						286 = { owner = { is_subject_of = PREV.PREV } }
+					}
 				}
 			}
 			VIN = { ROOT_can_grant_land = yes }
@@ -11326,6 +11480,7 @@ country_event = { #Fate of Stung Treng
 	}
 
 	option = { #Give it to Indochina
+		log = "[GetLogInfo]: event annex.3062 option annex.3062.c"
 		name = annex.3062.c
 		trigger = {
 			NOT = {
@@ -11335,9 +11490,12 @@ country_event = { #Fate of Stung Treng
 					tag = SIA
 					owns_state = 750 #Phnom Penh
 				}
-				AND = {
-					GEA = { is_ally_of_ROOT = yes }
-					GEA = { owns_state = 286 } #Cochinchina
+				GEA = {
+					is_subject_of = ROOT
+					OR = {
+						owns_state = 286 #Cochinchina
+						286 = { owner = { is_subject_of = PREV.PREV } }
+					}
 				}
 			}
 			INC = { ROOT_can_grant_land = yes }
@@ -11358,14 +11516,18 @@ country_event = { #Fate of Stung Treng
 	}
 
 	option = { #Give it to GEA
+		log = "[GetLogInfo]: event annex.3062 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea
 		trigger = {
-			has_subject = GEA
-			GEA = { owns_state = 286 } #Cochinchina
+			GEA = {
+				is_subject_of = ROOT
+				OR = {
+					owns_state = 286 #Cochinchina
+					286 = { owner = { is_subject_of = PREV.PREV } }
+				}
+			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_temp_variable = { tag_to_release = GEA }
 		826 = {
 			transfer_state_and_add_claim = yes
@@ -11374,14 +11536,13 @@ country_event = { #Fate of Stung Treng
 	}
 
 	option = { #Give it to Siam
+		log = "[GetLogInfo]: event annex.3062 option annex.3062.d"
 		name = annex.3062.d
 		trigger = {
 			SIA = { is_ally_of_ROOT = yes }
 			SIA = { owns_state = 750 } #Phnom Penh
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = SIA }
 		826 = {
 			transfer_state_and_add_claim = yes
@@ -11390,6 +11551,7 @@ country_event = { #Fate of Stung Treng
 	}
 
 	option = { #Integrate
+		log = "[GetLogInfo]: event annex.3062 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -11402,20 +11564,13 @@ country_event = { #Fate of Stung Treng
 				}
 				AND = {
 					tag = GEA
-					owns_state = 286 #Cochinchina
+					286 = { is_owned_by_ROOT_or_subject = yes } #Cochinchina
 				}
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		if = {
-			limit = {
-				OR = {
-					tag = CAM
-					tag = GEA
-				}
-			}
+			limit = { tag = CAM }
 			add_state_core = 826
 		}
 		else = {
@@ -11426,6 +11581,7 @@ country_event = { #Fate of Stung Treng
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3062 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -11438,7 +11594,7 @@ country_event = { #Fate of Stung Treng
 				}
 				AND = {
 					tag = GEA
-					owns_state = 286 #Cochinchina
+					286 = { is_owned_by_ROOT_or_subject = yes } #Cochinchina
 				}
 			}
 		}
@@ -11450,7 +11606,6 @@ country_event = { #Fate of Stung Treng
 
 country_event = { #Fate of Moulmein
 	id = annex.3063
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3063 FROM = [From.GetName]" }
 	title = annexation_MOULMEIN_CONQ
 	desc = annexation_MOULMEIN_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -11458,6 +11613,7 @@ country_event = { #Fate of Moulmein
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event annex.3063 option annex.3063.a"
 		name = annex.3063.a #Give to BRM
 		trigger = {
 			NOT = {
@@ -11489,6 +11645,7 @@ country_event = { #Fate of Moulmein
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3063 option annex.3063.b"
 		name = annex.3063.b #Give to SIA
 		trigger = {
 			NOT = {
@@ -11527,6 +11684,7 @@ country_event = { #Fate of Moulmein
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3063 option annex.3063.c"
 		name = annex.3063.c #Give to India
 		trigger = {
 			NOT = {
@@ -11544,9 +11702,7 @@ country_event = { #Fate of Moulmein
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = 640.owner }
 		831 = {
 			transfer_state_and_add_claim = yes
@@ -11555,6 +11711,7 @@ country_event = { #Fate of Moulmein
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3063 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -11569,14 +11726,13 @@ country_event = { #Fate of Moulmein
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		add_state_claim = 831
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3063 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -11599,7 +11755,6 @@ country_event = { #Fate of Moulmein
 
 country_event = { #Fate of Tenasserim
 	id = annex.3064
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3064 FROM = [From.GetName]" }
 	title = annexation_TENASSERIM_CONQ
 	desc = annexation_TENASSERIM_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -11607,6 +11762,7 @@ country_event = { #Fate of Tenasserim
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event annex.3064 option annex.3064.a"
 		name = annex.3064.a #Give to BRM
 		trigger = {
 			NOT = {
@@ -11638,6 +11794,7 @@ country_event = { #Fate of Tenasserim
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3064 option annex.3064.b"
 		name = annex.3064.b #Give to SIA
 		trigger = {
 			NOT = {
@@ -11676,6 +11833,7 @@ country_event = { #Fate of Tenasserim
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3064 option annex.3064.c"
 		name = annex.3064.c #Give to India
 		trigger = {
 			NOT = {
@@ -11693,9 +11851,7 @@ country_event = { #Fate of Tenasserim
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_temp_variable = { tag_to_release = 640.owner }
 		749 = {
 			transfer_state_and_add_claim = yes
@@ -11704,6 +11860,7 @@ country_event = { #Fate of Tenasserim
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3064 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -11718,14 +11875,13 @@ country_event = { #Fate of Tenasserim
 				}
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		add_state_claim = 749
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3064 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -11747,7 +11903,6 @@ country_event = { #Fate of Tenasserim
 
 country_event = { #Fate of Samaburi
 	id = annex.3065
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3065 FROM = [From.GetName]" }
 	title = annexation_SAMABURI_CONQ
 	desc = annexation_SAMABURI_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -11755,6 +11910,7 @@ country_event = { #Fate of Samaburi
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event annex.3065 option annex.3065.a"
 		name = annex.3065.a #Give to LAO
 		trigger = {
 			NOT = { tag = SIA }
@@ -11776,6 +11932,7 @@ country_event = { #Fate of Samaburi
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3065 option annex.3065.b"
 		name = annex.3065.b #Give to SIA
 		trigger = {
 			NOT = {
@@ -11815,6 +11972,7 @@ country_event = { #Fate of Samaburi
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3065 option annex.3065.c"
 		name = annex.3065.c #Give to INC
 		trigger = {
 			INC = {
@@ -11844,6 +12002,7 @@ country_event = { #Fate of Samaburi
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3065 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea #Give to GEA
 		trigger = {
 			GEA = {
@@ -11851,17 +12010,16 @@ country_event = { #Fate of Samaburi
 				owns_state = 670 #Laos
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_temp_variable = { tag_to_release = GEA }
 		882 = {
-			transfer_state_and_add_core = yes
+			transfer_state_and_add_claim = yes
 			state_given_notification_effect = yes
 		}
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3065 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -11875,9 +12033,7 @@ country_event = { #Fate of Samaburi
 				}
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		if = {
 			limit = {
 				670 = { is_core_of = ROOT } #Laos
@@ -11891,6 +12047,7 @@ country_event = { #Fate of Samaburi
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3065 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -11912,7 +12069,6 @@ country_event = { #Fate of Samaburi
 
 country_event = { #Fate of Battambang
 	id = annex.3066
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3066 FROM = [From.GetName]" }
 	title = annexation_BATTAMBANG_CONQ
 	desc = annexation_BATTAMBANG_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -11920,6 +12076,7 @@ country_event = { #Fate of Battambang
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event annex.3066 option annex.3066.a"
 		name = annex.3066.a #Give to CAM
 		trigger = {
 			NOT = { tag = SIA }
@@ -11941,6 +12098,7 @@ country_event = { #Fate of Battambang
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3066 option annex.3066.b"
 		name = annex.3066.b #Give to SIA
 		trigger = {
 			NOT = {
@@ -11980,6 +12138,7 @@ country_event = { #Fate of Battambang
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3066 option annex.3066.c"
 		name = annex.3066.c #Give to INC
 		trigger = {
 			INC = {
@@ -12009,22 +12168,22 @@ country_event = { #Fate of Battambang
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3066 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea #Give to GEA
 		trigger = {
 			has_subject = GEA
 			GEA = { owns_state = 750 } #Phnom Penh
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_temp_variable = { tag_to_release = GEA }
 		825 = {
-			transfer_state_and_add_core = yes
+			transfer_state_and_add_claim = yes
 			state_given_notification_effect = yes
 		}
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3066 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
@@ -12038,9 +12197,7 @@ country_event = { #Fate of Battambang
 				}
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		if = {
 			limit = {
 				OR = {
@@ -12057,6 +12214,7 @@ country_event = { #Fate of Battambang
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3066 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
@@ -12078,7 +12236,6 @@ country_event = { #Fate of Battambang
 
 state_event = { #Fate of the Northern Malaysian states
 	id = annex.3067
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3067 FROM = [From.GetName]" }
 	title = annexation_NORTHERN_MALAYA_CONQ
 	desc = annexation_NORTHERN_MALAYA_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -12086,6 +12243,7 @@ state_event = { #Fate of the Northern Malaysian states
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event annex.3067 option annex.3067.a"
 		name = annex.3067.a #Give to MAL
 		trigger = {
 			MAL = { ROOT_can_grant_land = yes }
@@ -12110,6 +12268,7 @@ state_event = { #Fate of the Northern Malaysian states
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3067 option annex.3067.b"
 		name = annex.3067.b #Give to SIA
 		trigger = {
 			SIA = { ROOT_can_grant_land = yes }
@@ -12152,6 +12311,7 @@ state_event = { #Fate of the Northern Malaysian states
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3067 option annex.3067.c"
 		name = annex.3067.c #Give to INS
 		trigger = {
 			INS = {
@@ -12159,15 +12319,14 @@ state_event = { #Fate of the Northern Malaysian states
 				owns_state = 846 #Johore
 			}
 		}
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		set_temp_variable = { tag_to_release = INS }
 		THIS = { transfer_state_and_add_claim = yes } #scoped for the tooltip
 		state_given_notification_effect = yes
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3067 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea #Give to GEA
 		trigger = {
 			GEA = {
@@ -12175,15 +12334,14 @@ state_event = { #Fate of the Northern Malaysian states
 				owns_state = 846 #Johore
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_temp_variable = { tag_to_release = GEA }
-		THIS = { transfer_state_and_add_core = yes } #scoped for the tooltip
+		THIS = { transfer_state_and_add_claim = yes } #scoped for the tooltip
 		state_given_notification_effect = yes
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3067 option annex.integration"
 		name = annex.integration
 		trigger = {
 			ROOT = {
@@ -12194,18 +12352,11 @@ state_event = { #Fate of the Northern Malaysian states
 				}
 			}
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		if = {
 			limit = {
-				OR = {
-					ROOT = { tag = GEA }
-					AND = {
-						ROOT = { tag = SIA }
-						state = 830 #Pattani
-					}
-				}
+				ROOT = { tag = SIA }
+				state = 830 #Pattani
 			}
 			owner = { add_state_core = PREV }
 		}
@@ -12216,6 +12367,7 @@ state_event = { #Fate of the Northern Malaysian states
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3067 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			ROOT = {
@@ -12249,7 +12401,6 @@ state_event = { #Fate of the Northern Malaysian states
 
 country_event = { #Fate of Singapore
 	id = annex.3068
-	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.3068 FROM = [From.GetName]" }
 	title = annexation_SINGAPORE_CONQ
 	desc = annexation_SINGAPORE_CONQ_desc
 	picture = GFX_report_event_generic_conference2
@@ -12257,16 +12408,18 @@ country_event = { #Fate of Singapore
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event annex.3068 option annex.3068.a"
 		name = annex.3068.a #Keep it
 		trigger = {
 			NOT = {
-				tag = GEA
-				tag = SIA
-				tag = INS
+				original_tag = GEA
+				original_tag = SIA
+				original_tag = INS
+				original_tag = DEI
 				has_subject = GEA
+				has_subject = DEI
 			}
 			has_socialist_government = no
-			is_actual_major = yes
 		}
 		ai_chance = {
 			base = 0
@@ -12281,16 +12434,16 @@ country_event = { #Fate of Singapore
 				}
 			}
 		}
-		add_state_claim = 336 #Singapore
-		recheck_annexations = yes
+		336 = { occupy_state_annexation = yes } #Singapore
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3068 option annex.3068.b"
 		name = annex.3068.b #Give to MAL
 		trigger = {
 			NOT = {
-				tag = SIA
-				tag = INS
+				original_tag = SIA
+				original_tag = INS
 			}
 			MAL = { ROOT_can_grant_land = yes }
 		}
@@ -12316,11 +12469,12 @@ country_event = { #Fate of Singapore
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3068 option annex.3068.c"
 		name = annex.3068.c #Give to SIA
 		trigger = {
 			NOT = {
-				tag = SIA
-				tag = INS
+				original_tag = SIA
+				original_tag = INS
 			}
 			SIA = {
 				owns_state = 846 #Johore
@@ -12349,11 +12503,12 @@ country_event = { #Fate of Singapore
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3068 option annex.3068.d"
 		name = annex.3068.d #Give to INS
 		trigger = {
 			NOT = {
-				tag = SIA
-				tag = INS
+				original_tag = SIA
+				original_tag = INS
 			}
 			INS = { is_ally_of_ROOT = yes }
 		}
@@ -12379,13 +12534,12 @@ country_event = { #Fate of Singapore
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3068 option annex.asia.give_to_gea"
 		name = annex.asia.give_to_gea #Give to GEA
 		trigger = {
 			has_subject = GEA
 		}
-		ai_chance = {
-			base = 1000
-		}
+		ai_chance = { base = 1000 }
 		set_temp_variable = { tag_to_release = GEA }
 		336 = {
 			transfer_state_and_add_core = yes
@@ -12394,46 +12548,149 @@ country_event = { #Fate of Singapore
 	}
 
 	option = {
+		log = "[GetLogInfo]: event annex.3068 option annex.asia.give_to_dei"
+		name = annex.asia.give_to_dei #Give to DEI
+		trigger = {
+			has_subject = DEI
+		}
+		ai_chance = { base = 1000 }
+		set_temp_variable = { tag_to_release = DEI }
+		336 = {
+			transfer_state_and_add_core = yes
+			state_given_notification_effect = yes
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event annex.3068 option annex.integration"
 		name = annex.integration
 		trigger = {
 			OR = {
-				tag = SIA
-				tag = INS
-				tag = GEA
+				original_tag = GEA
+				original_tag = DEI
 			}
 		}
-		ai_chance = {
-			base = 1000
+		ai_chance = { base = 1000 }
+		add_state_core = 336
+		recheck_annexations = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event annex.3068 option annex.integration"
+		name = annex.integration
+		trigger = {
+			OR = {
+				original_tag = SIA
+				original_tag = INS
+			}
 		}
-		if = {
-			limit = { tag = GEA }
-			add_state_core = 336
-		}
-		else = {
-			add_state_claim = 336
-		}
+		ai_chance = { base = 1000 }
+		add_state_claim = 336
 		recheck_annexations = yes
 	}
 
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.3068 option annex.occupation"
 		name = annex.occupation
 		trigger = {
 			NOT = {
-				tag = SIA
-				tag = INS
-				tag = GEA
+				original_tag = SIA
+				original_tag = INS
+				original_tag = GEA
+				original_tag = DEI
 				has_subject = GEA
-				AND = {
-					is_actual_major = yes
-					has_socialist_government = no
+				has_subject = DEI
+			}
+		}
+		ai_chance = { base = 0 }
+		set_country_flag = SINGAPORE_CONQ
+		occupy_small_country = yes
+		336 = { occupy_state_annexation = yes }
+	}
+}
+
+country_event = { #Fate of East Timor
+	id = annex.3069
+	title = annexation_EAST_TIMOR_CONQ
+	desc = annexation_EAST_TIMOR_CONQ_desc
+	picture = GFX_report_event_generic_conference2
+
+	is_triggered_only = yes
+
+	option = { #Give to INS
+		log = "[GetLogInfo]: event annex.3069 option annex.3069.a"
+		name = annex.3069.a
+		trigger = {
+			INS = { ROOT_can_grant_land = yes }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					DEI = { is_ally_of_ROOT = yes }
+					GEA = { is_ally_of_ROOT = yes }
 				}
 			}
 		}
-		ai_chance = {
-			base = 0
+		set_temp_variable = { tag_to_release = INS }
+		721 = {
+			transfer_state_and_add_core = yes
+			state_given_notification_effect = yes
 		}
-		set_country_flag = SINGAPORE_CONQ
+	}
+
+	option = { #Give to DEI
+		log = "[GetLogInfo]: event annex.3069 option annex.asia.give_to_dei"
+		name = annex.asia.give_to_dei
+		trigger = {
+			DEI = { is_ally_of_ROOT = yes }
+		}
+		ai_chance = { base = 50 }
+		set_temp_variable = { tag_to_release = DEI }
+		721 = {
+			transfer_state_and_add_core = yes
+			state_given_notification_effect = yes
+		}
+	}
+
+	option = { #Give to GEA
+		log = "[GetLogInfo]: event annex.3069 option annex.asia.give_to_gea"
+		name = annex.asia.give_to_gea
+		trigger = {
+			GEA = { is_ally_of_ROOT = yes }
+		}
+		ai_chance = { base = 50 }
+		set_temp_variable = { tag_to_release = GEA }
+		721 = {
+			transfer_state_and_add_claim = yes
+			state_given_notification_effect = yes
+		}
+	}
+
+	option = { #integrate
+		log = "[GetLogInfo]: event annex.3069 option annex.integration"
+		name = annex.integration
+		ai_chance = { base = 100 }
+		trigger = {
+			original_tag = INS
+		}
+		add_state_core = 721
 		recheck_annexations = yes
+	}
+
+	option = { #occupy
+		log = "[GetLogInfo]: event annex.3069 option annex.occupation"
+		name = annex.occupation
+		trigger = {
+			NOT = {
+				original_tag = INS
+				has_subject = DEI
+				has_subject = GEA
+			}
+		}
+		ai_chance = { base = 0 }
 		occupy_small_country = yes
+		set_country_flag = EAST_TIMOR_CONQ
 	}
 }

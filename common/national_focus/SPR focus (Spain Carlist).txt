@@ -17,10 +17,10 @@ focus_tree = {
 		cost = 8.00
 		x = 3
 		y = 0
-		ai_will_do = { factor = 100	}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_restauracion"
-			log = "KR_Event_Logging;SPR WINS SCW;[GetDateText];[ROOT.GetName];[FROM.GetName]"
+			log = "KR_Event_Logging;Carlists WINS SCW;[GetDateText]"
 			add_political_power = 100
 			if = {
 				limit = { has_global_flag = spanish_civil_war }
@@ -221,7 +221,7 @@ focus_tree = {
 		icon = GFX_goal_POR_royal_edicts
 		cost = 8.00
 		prerequisite = { focus = SPR_patria }
-		prerequisite = { focus = SPR_call_for_unity	}
+		prerequisite = { focus = SPR_call_for_unity }
 		prerequisite = { focus = SPR_furos }
 		relative_position_id = SPR_restauracion
 		x = 1
@@ -737,6 +737,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_spanish_miracle"
 			remove_ideas = SPR_recovering_economy
+			add_research_slot_until_five = yes
 		}
 	}
 ### Foreign Policy ###
@@ -832,21 +833,29 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_latin_economic_union"
 			add_political_power = 100
-			custom_effect_tooltip = SPR_economic_cooperation
-			hidden_effect = {
-				add_opinion_modifier = { target = POR modifier = mediterranean_economic_block }
-				reverse_add_opinion_modifier = { target = POR modifier = mediterranean_economic_block }
-				POR = { add_ideas = SPR_economic_cooperation_idea }
-
-				add_opinion_modifier = { target = NFA modifier = mediterranean_economic_block }
-				reverse_add_opinion_modifier = { target = NFA modifier = mediterranean_economic_block }
-				NFA = { add_ideas = SPR_economic_cooperation_idea }
-
-				if = {
-					limit = { SIC = { is_in_faction_with = ENT } }
-					add_opinion_modifier = { target = SIC modifier = mediterranean_economic_block }
-					reverse_add_opinion_modifier = { target = SIC modifier = mediterranean_economic_block }
-					SIC = { add_ideas = SPR_economic_cooperation_idea }
+			add_ideas = SPR_economic_cooperation_idea
+			custom_effect_tooltip = tooltip_white_line
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = POR
+						original_tag = NFA
+						original_tag = SIC
+						original_tag = SRD
+					}
+					has_socialist_government = no
+					OR = {
+						is_in_faction = no
+						is_in_faction_with = ROOT
+					}
+					at_war_with_or_justifying_wargoal_against_ROOT = no
+				}
+				country_event = sprf.6
+				custom_effect_tooltip = tooltip_white_line
+				effect_tooltip = {
+					add_ideas = SPR_economic_cooperation_idea
+					add_opinion_modifier = { target = ROOT modifier = mediterranean_economic_block }
+					reverse_add_opinion_modifier = { target = ROOT modifier = mediterranean_economic_block }
 				}
 			}
 		}
@@ -907,9 +916,7 @@ focus_tree = {
 		relative_position_id = SPR_legion_espanola
 		x = -3
 		y = 1
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_modern_terrico"
 			add_doctrine_cost_reduction = {
@@ -1061,9 +1068,7 @@ focus_tree = {
 		relative_position_id = SPR_legion_espanola
 		x = 3
 		y = 1
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_army_of_maneuver"
 			add_doctrine_cost_reduction = {
@@ -1234,7 +1239,7 @@ focus_tree = {
 		relative_position_id = SPR_armada_espanola
 		x = 2
 		y = 1
-		ai_will_do = {	factor = 10 }
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_infanteria_de_marina"
 			add_tech_bonus = {
@@ -1265,9 +1270,7 @@ focus_tree = {
 		relative_position_id = SPR_armada_espanola
 		x = -1
 		y = 2
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_grand_navy"
 			add_doctrine_cost_reduction = {
@@ -1289,7 +1292,7 @@ focus_tree = {
 		relative_position_id = SPR_armada_espanola
 		x = -1
 		y = 3
-		ai_will_do = {	factor = 10	}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_modern_galleons"
 			add_tech_bonus = {
@@ -1342,9 +1345,7 @@ focus_tree = {
 		relative_position_id = SPR_armada_espanola
 		x = 1
 		y = 2
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_defend_the_coast"
 			navy_experience = 10
@@ -1367,7 +1368,7 @@ focus_tree = {
 		relative_position_id = SPR_armada_espanola
 		x = 1
 		y = 3
-		ai_will_do = {	factor = 10 }
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_coast_guard"
 			add_tech_bonus = {
@@ -1389,7 +1390,7 @@ focus_tree = {
 		relative_position_id = SPR_armada_espanola
 		x = 2
 		y = 4
-		ai_will_do = {	factor = 10	}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_cruiser_support"
 			add_tech_bonus = {
@@ -1412,7 +1413,7 @@ focus_tree = {
 		relative_position_id = SPR_armada_espanola
 		x = 0
 		y = 4
-		ai_will_do = {	factor = 10 }
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_protect_our_colonies"
 			290 = {
@@ -1470,7 +1471,7 @@ focus_tree = {
 		relative_position_id = SPR_armada_espanola
 		x = 0
 		y = 5
-		ai_will_do = {	factor = 30	}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_masters_of_the_sea"
 			navy_experience = 25
@@ -1493,7 +1494,7 @@ focus_tree = {
 		cost = 8.00
 		x = 32
 		y = 5
-		ai_will_do = {	factor = 10	}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_aviacion_legionaria"
 			air_experience = 10
@@ -1558,7 +1559,7 @@ focus_tree = {
 		relative_position_id = SPR_aviacion_legionaria
 		x = 0
 		y = 1
-		ai_will_do = {	factor = 10	}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_new_pilots"
 			air_experience = 25
@@ -1575,9 +1576,7 @@ focus_tree = {
 		relative_position_id = SPR_aviacion_legionaria
 		x = 2
 		y = 1
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_aviation_industry"
 			add_ideas = SPR_aviation_industry_idea
@@ -1603,9 +1602,7 @@ focus_tree = {
 		relative_position_id = SPR_aviacion_legionaria
 		x = -1
 		y = 2
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_air_supremecy"
 			add_doctrine_cost_reduction = {
@@ -1627,7 +1624,7 @@ focus_tree = {
 		relative_position_id = SPR_aviacion_legionaria
 		x = -1
 		y = 3
-		ai_will_do = {	factor = 10 }
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_fighters"
 			add_tech_bonus = {
@@ -1659,9 +1656,7 @@ focus_tree = {
 		relative_position_id = SPR_aviacion_legionaria
 		x = 1
 		y = 2
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_army_air_support"
 			add_doctrine_cost_reduction = {
@@ -1683,7 +1678,7 @@ focus_tree = {
 		relative_position_id = SPR_aviacion_legionaria
 		x = 1
 		y = 3
-		ai_will_do = { factor = 10	}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPR_bombers"
 			add_tech_bonus = {
@@ -1784,7 +1779,7 @@ focus_tree = {
 			}
 			297 = {
 				if = {
-					limit = { is_owned_by = SPR	}
+					limit = { is_owned_by = SPR }
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = air_base

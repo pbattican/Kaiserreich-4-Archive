@@ -14,7 +14,6 @@ add_namespace = japfeng
 
 country_event = { #Recovering from the Lost Decade, triggered at game start
 	id = japdom.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.1 FROM = [From.GetName]" }
 	title = japdom.1.t
 	desc = japdom.1.d
 	picture = GFX_report_event_JAP_lost_decade
@@ -23,6 +22,7 @@ country_event = { #Recovering from the Lost Decade, triggered at game start
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.1 option japdom.1.a"
 		name = japdom.1.a
 		hidden_effect = {
 			country_event = { id = japdom.2 days = 21 }
@@ -32,7 +32,6 @@ country_event = { #Recovering from the Lost Decade, triggered at game start
 
 country_event = { #Dissolution of the Diet, triggered soon after start
 	id = japdom.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.2 FROM = [From.GetName]" }
 	title = japdom.2.t
 	desc = japdom.2.d
 	picture = GFX_report_event_JAP_diet
@@ -40,6 +39,7 @@ country_event = { #Dissolution of the Diet, triggered soon after start
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.2 option japdom.2.a"
 		name = japdom.2.a
 		add_political_power = 25
 		hidden_effect = {
@@ -53,7 +53,6 @@ country_event = { #Dissolution of the Diet, triggered soon after start
 
 country_event = { #General Election Feb. 1936, triggered early 1936, important flag set
 	id = japdom.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.3 FROM = [From.GetName]" }
 	title = japdom.3.t
 	desc = japdom.3.d
 	picture = GFX_report_event_JAP_voting
@@ -66,6 +65,7 @@ country_event = { #General Election Feb. 1936, triggered early 1936, important f
 	}
 
 	option = { #The Seiyukai have defended their absolute majority!
+		log = "[GetLogInfo]: event japdom.3 option japdom.3.a"
 		name = japdom.3.a
 		add_political_power = 50
 		set_country_flag = JAP_STRONG_SEIYUKAI
@@ -78,6 +78,7 @@ country_event = { #General Election Feb. 1936, triggered early 1936, important f
 		}
 	}
 	option = { #The Seiyukai have lost their absolute majority!
+		log = "[GetLogInfo]: event japdom.3 option japdom.3.b"
 		name = japdom.3.b
 		add_political_power = -50
 		set_temp_variable = { ideology_change_var = -0.15 }
@@ -100,7 +101,6 @@ country_event = { #General Election Feb. 1936, triggered early 1936, important f
 
 country_event = { #The Assassination of Katayama Sen, triggered early 1936
 	id = japdom.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.4 FROM = [From.GetName]" }
 	title = japdom.4.t
 	desc = japdom.4.d
 	picture = GFX_report_event_JAP_Katayama
@@ -109,6 +109,7 @@ country_event = { #The Assassination of Katayama Sen, triggered early 1936
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.4 option japdom.4.a"
 		name = japdom.4.a
 		add_stability = -0.05
 		hidden_effect = {
@@ -119,7 +120,6 @@ country_event = { #The Assassination of Katayama Sen, triggered early 1936
 
 country_event = { #Friction Within the Japanese Left, triggered early 1936
 	id = japdom.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.5 FROM = [From.GetName]" }
 	title = japdom.5.t
 	desc = japdom.5.d
 	picture = GFX_report_event_FNG_protest
@@ -128,6 +128,7 @@ country_event = { #Friction Within the Japanese Left, triggered early 1936
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.5 option japdom.5.a"
 		name = japdom.5.a
 		hidden_effect = {
 			country_event = { id = japdom.7 days = 65 }
@@ -137,7 +138,6 @@ country_event = { #Friction Within the Japanese Left, triggered early 1936
 
 country_event = { #The May 15 Incident, triggered mid 1936
 	id = japdom.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.6 FROM = [From.GetName]" }
 	title = japdom.6.t
 	desc = japdom.6.d
 	picture = GFX_report_event_JAP_coup
@@ -146,9 +146,9 @@ country_event = { #The May 15 Incident, triggered mid 1936
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.6 option japdom.6.a"
 		name = japdom.6.a
 		add_stability = -0.05
-		clear_sic_slot = yes
 		activate_advisor = JAP_suzuki_kisaburo_sic
 		retire_character = JAP_inukai_tsuyoshi
 	}
@@ -156,7 +156,6 @@ country_event = { #The May 15 Incident, triggered mid 1936
 
 country_event = { #Restorationists and Centralists, triggered mid 1936
 	id = japdom.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.7 FROM = [From.GetName]" }
 	title = japdom.7.t
 	desc = japdom.7.d
 	picture = GFX_report_event_JAP_restorationist_centralist
@@ -165,6 +164,7 @@ country_event = { #Restorationists and Centralists, triggered mid 1936
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.7 option japdom.7.a"
 		name = japdom.7.a
 		add_stability = -0.02
 	}
@@ -172,7 +172,6 @@ country_event = { #Restorationists and Centralists, triggered mid 1936
 
 country_event = { #The NSA debate begins
 	id = japdom.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.8 FROM = [From.GetName]" }
 	title = japdom.8.t
 	desc = japdom.8.d
 	picture = GFX_report_event_JAP_meeting
@@ -181,6 +180,7 @@ country_event = { #The NSA debate begins
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.8 option japdom.8.a"
 		name = japdom.8.a
 		add_political_power = 25
 		set_country_flag = JAP_security_debate
@@ -189,7 +189,6 @@ country_event = { #The NSA debate begins
 
 country_event = { #The National Security Act, triggered by focus end of 1936, very important flags set
 	id = japdom.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.9 FROM = [From.GetName]" }
 	title = japdom.9.t
 	desc = japdom.9.d
 	picture = GFX_report_event_generic_diplomacy1
@@ -198,6 +197,7 @@ country_event = { #The National Security Act, triggered by focus end of 1936, ve
 	fire_only_once = yes
 
 	option = { #The Act is forced through
+		log = "[GetLogInfo]: event japdom.9 option japdom.9.a"
 		name = japdom.9.a
 		ai_chance = {
 			base = 50
@@ -218,6 +218,7 @@ country_event = { #The National Security Act, triggered by focus end of 1936, ve
 		}
 	}
 	option = { #Public opinion and the opposition defeat the Act
+		log = "[GetLogInfo]: event japdom.9 option japdom.9.b"
 		name = japdom.9.b
 		ai_chance = {
 			base = 50
@@ -246,7 +247,6 @@ country_event = { #The National Security Act, triggered by focus end of 1936, ve
 
 country_event = { #The Trial of the May 15 Incident, triggered by the NSA passing
 	id = japdom.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.10 FROM = [From.GetName]" }
 	title = japdom.10.t
 	desc = japdom.10.d
 	picture = GFX_report_event_generic_trial_big
@@ -255,6 +255,7 @@ country_event = { #The Trial of the May 15 Incident, triggered by the NSA passin
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.10 option japdom.10.a"
 		name = japdom.10.a
 		add_stability = -0.02
 		add_political_power = -25
@@ -267,7 +268,6 @@ country_event = { #The Trial of the May 15 Incident, triggered by the NSA passin
 
 country_event = { #The Assassination of Suzuki Kisaburo, triggered by the NSA passing
 	id = japdom.11
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.11 FROM = [From.GetName]" }
 	title = japdom.11.t
 	desc = japdom.11.d
 	picture = GFX_report_event_POL_assassination
@@ -276,9 +276,9 @@ country_event = { #The Assassination of Suzuki Kisaburo, triggered by the NSA pa
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.11 option japdom.11.a"
 		name = japdom.11.a
 		add_stability = -0.02
-		clear_sic_slot = yes
 		activate_advisor = JAP_imperial_diet_sic
 		retire_character = JAP_suzuki_kisaburo
 		country_event = japdom.14
@@ -291,7 +291,6 @@ country_event = { #The Assassination of Suzuki Kisaburo, triggered by the NSA pa
 
 country_event = { #Government Under Fire
 	id = japdom.12
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.12 FROM = [From.GetName]" }
 	title = japdom.12.t
 	desc = japdom.12.d
 	picture = GFX_report_event_USA_Riots
@@ -300,6 +299,7 @@ country_event = { #Government Under Fire
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.12 option japdom.12.a"
 		name = japdom.12.a
 		add_stability = -0.01
 		hidden_effect = {
@@ -310,7 +310,6 @@ country_event = { #Government Under Fire
 
 country_event = { #Resignation of Suzuki Kisaburo, triggered by the NSA not passing
 	id = japdom.13
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.13 FROM = [From.GetName]" }
 	title = japdom.13.t
 	desc = japdom.13.d
 	picture = GFX_report_event_JAP_crowd
@@ -319,9 +318,9 @@ country_event = { #Resignation of Suzuki Kisaburo, triggered by the NSA not pass
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.13 option japdom.13.a"
 		name = japdom.13.a
 		add_stability = -0.05
-		clear_sic_slot = yes
 		activate_advisor = JAP_imperial_diet_sic
 		hidden_effect = {
 			country_event = { id = japdom.14 days = 30 }
@@ -331,7 +330,6 @@ country_event = { #Resignation of Suzuki Kisaburo, triggered by the NSA not pass
 
 country_event = { #The Election of Mizuno Rentaro
 	id = japdom.14
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.14 FROM = [From.GetName]" }
 	title = japdom.14.t
 	picture = GFX_report_event_JAP_rentaro
 	desc = {
@@ -351,9 +349,9 @@ country_event = { #The Election of Mizuno Rentaro
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.14 option japdom.14.a"
 		name = japdom.14.a
 		add_stability = 0.05
-		clear_sic_slot = yes
 		activate_advisor = JAP_mizuno_rentaro_sic
 		if = {
 			limit = {
@@ -368,7 +366,6 @@ country_event = { #The Election of Mizuno Rentaro
 
 country_event = { #Japan's Longest Winter, triggered by no NSA after 1936, important flag set
 	id = japdom.15
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.15 FROM = [From.GetName]" }
 	title = japdom.15.t
 	desc = japdom.15.d
 	picture = GFX_report_event_japanese_officers
@@ -376,6 +373,7 @@ country_event = { #Japan's Longest Winter, triggered by no NSA after 1936, impor
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.15 option japdom.15.a"
 		name = japdom.15.a
 		add_stability = -0.05
 		add_political_power = 50
@@ -385,13 +383,13 @@ country_event = { #Japan's Longest Winter, triggered by no NSA after 1936, impor
 
 country_event = { #Japan's longest day - army coup successful, triggered by focus "The Longest Day", lots of important flags set
 	id = japdom.16
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.16 FROM = [From.GetName]" }
 	title = japdom.16.t
 	desc = japdom.16.d
 	picture = GFX_report_event_japanese_soldiers_02
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.16 option japdom.16.a"
 		name = japdom.16.a
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -401,7 +399,6 @@ country_event = { #Japan's longest day - army coup successful, triggered by focu
 			ideology = paternal_autocrat
 			popularity = 0.5
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_hiranuma_kiichiro_sic
 		hidden_effect = {
 			country_event = { id = japdom.18 days = 5 }
@@ -411,7 +408,6 @@ country_event = { #Japan's longest day - army coup successful, triggered by focu
 
 country_event = { #Army coups fails, triggered by disagreeing with emperor when he doesn't support the government
 	id = japdom.17
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.17 FROM = [From.GetName]" }
 	title = japdom.17.t
 	desc = japdom.17.d
 	picture = GFX_report_event_JAP_barricade
@@ -423,6 +419,7 @@ country_event = { #Army coups fails, triggered by disagreeing with emperor when 
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.17 option japdom.17.a"
 		name = japdom.17.a
 		add_stability = -0.10
 		retire_character = JAP_doihara_kenji
@@ -436,26 +433,26 @@ country_event = { #Army coups fails, triggered by disagreeing with emperor when 
 
 country_event = { #The Power Struggle
 	id = japdom.18
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.18 FROM = [From.GetName]" }
 	title = japdom.18.t
 	desc = japdom.18.d
 	picture = GFX_report_event_JAP_restorationist_centralist
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.18 option japdom.18.a"
 		name = japdom.18.a
 		add_political_power = -25
 	}
 }
 country_event = { #The restorationist counter-coup, triggered by focus "The Showa Restoration", important flag set
 	id = japdom.19
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.19 FROM = [From.GetName]" }
 	title = japdom.19.t
 	desc = japdom.19.d
 	picture = GFX_report_event_JAP_coup
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.19 option japdom.19.a"
 		name = japdom.19.a
 		add_stability = 0.05
 		retire_character = JAP_doihara_kenji
@@ -469,14 +466,12 @@ country_event = { #The restorationist counter-coup, triggered by focus "The Show
 			ideology = national_populist
 			popularity = 0.5
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_hiranuma_kiichiro_sic
 		hidden_effect = { news_event = worldnews.479 }
 	}
 }
 country_event = { #Army coup fails, centralist incoming, triggered by focus "Military Centralism"
 	id = japdom.20
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.20 FROM = [From.GetName]" }
 	title = japdom.20.t
 	desc = japdom.20.d
 	picture = GFX_report_event_JAP_revolt
@@ -484,6 +479,7 @@ country_event = { #Army coup fails, centralist incoming, triggered by focus "Mil
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.20 option japdom.20.a"
 		name = japdom.20.a
 		add_stability = -0.05
 		retire_character = JAP_araki_sadao
@@ -492,17 +488,15 @@ country_event = { #Army coup fails, centralist incoming, triggered by focus "Mil
 }
 country_event = { #The Centralists counter-coup is successful, triggered by previous event
 	id = japdom.21
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.21 FROM = [From.GetName]" }
 	title = japdom.21.t
 	desc = japdom.21.d
 	picture = GFX_report_event_JAP_coup
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = { #new ministers
+		log = "[GetLogInfo]: event japdom.21 option japdom.21.a"
 		name = japdom.21.a
-		ai_chance = {
-			base = 50
-		}
+		ai_chance = { base = 50 }
 		remove_ideas = JAP_DEM_GOV
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -512,15 +506,13 @@ country_event = { #The Centralists counter-coup is successful, triggered by prev
 			ideology = paternal_autocrat
 			popularity = 0.35
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_hayashi_senjuro_sic
 		hidden_effect = { news_event = worldnews.480 }
 	}
 	option = { #keep ministers
+		log = "[GetLogInfo]: event japdom.21 option japdom.21.b"
 		name = japdom.21.b
-		ai_chance = {
-			base = 50
-		}
+		ai_chance = { base = 50 }
 		add_stability = 0.10
 		remove_ideas = JAP_DEM_GOV
 		set_politics = {
@@ -537,7 +529,6 @@ country_event = { #The Centralists counter-coup is successful, triggered by prev
 
 country_event = { #The Government of National Unity, triggered by having focus Electorate Reform
 	id = japdom.22
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.22 FROM = [From.GetName]" }
 	title = japdom.22.t
 	desc = japdom.22.d
 	picture = GFX_report_event_JAP_politician
@@ -545,6 +536,7 @@ country_event = { #The Government of National Unity, triggered by having focus E
 	is_triggered_only = yes
 
 	option = { #national government
+		log = "[GetLogInfo]: event japdom.22 option japdom.22.a"
 		name = japdom.22.a
 		ai_chance = {
 			base = 50
@@ -568,7 +560,6 @@ country_event = { #The Government of National Unity, triggered by having focus E
 			ideology = authoritarian_democrat
 			popularity = 0.45
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_adachi_kenzo_sic
 		set_party_name = {
 			ideology = market_liberal
@@ -585,11 +576,16 @@ country_event = { #The Government of National Unity, triggered by having focus E
 			name = JAP_national_unity_gov
 			long_name = JAP_national_unity_gov_long
 		}
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
 		hidden_effect = {
 			country_event = { id = japdom.34 days = 500 }
 		}
 	}
 	option = { #no need
+		log = "[GetLogInfo]: event japdom.22 option japdom.22.b"
 		name = japdom.22.b
 		ai_chance = {
 			base = 50
@@ -612,7 +608,6 @@ country_event = { #The Government of National Unity, triggered by having focus E
 
 country_event = { #On the Basic Principles of National Defence, triggered by having focus Military Centralism
 	id = japdom.23
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.23 FROM = [From.GetName]" }
 	title = japdom.23.t
 	desc = japdom.23.d
 	picture = GFX_report_event_generic_diplomacy1
@@ -620,6 +615,7 @@ country_event = { #On the Basic Principles of National Defence, triggered by hav
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.23 option japdom.23.a"
 		name = japdom.23.a
 		add_war_support = 0.05
 	}
@@ -627,7 +623,6 @@ country_event = { #On the Basic Principles of National Defence, triggered by hav
 
 country_event = { #On The Fundamental Principles of the National Structure, triggered by having focus A Political Blueprint
 	id = japdom.24
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.24 FROM = [From.GetName]" }
 	title = japdom.24.t
 	desc = japdom.24.d
 	picture = GFX_report_event_JAP_politician
@@ -635,19 +630,20 @@ country_event = { #On The Fundamental Principles of the National Structure, trig
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.24 option japdom.24.a"
 		name = japdom.24.a
 		add_stability = 0.05
 	}
 }
 country_event = { #The New System Movement
 	id = japdom.25
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.25 FROM = [From.GetName]" }
 	title = japdom.25.t
 	desc = japdom.25.d
 	picture = GFX_report_event_japanese_reply
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.25 option japdom.25.a"
 		name = japdom.25.a
 		add_political_power = 25
 		set_party_name = {
@@ -660,27 +656,26 @@ country_event = { #The New System Movement
 }
 country_event = { #The First Convention of the Taisei Yokusankai
 	id = japdom.26
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.26 FROM = [From.GetName]" }
 	title = japdom.26.t
 	desc = japdom.26.d
 	picture = GFX_report_event_JAP_meeting
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.26 option japdom.26.a"
 		name = japdom.26.a
 		add_political_power = 50
 	}
 }
 country_event = { #Konoe Fumimaro Secures Support Kakushinha
 	id = japdom.27
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.27 FROM = [From.GetName]" }
 	title = japdom.27.t
 	desc = japdom.27.d
 	picture = GFX_report_event_japanese_reply
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.27 option japdom.27.a"
 		name = japdom.27.a
-		clear_sic_slot = yes
 		activate_advisor = JAP_konoe_fumimaro_sic
 		add_political_power = 25
 	}
@@ -688,30 +683,28 @@ country_event = { #Konoe Fumimaro Secures Support Kakushinha
 
 country_event = { #Araki Sadao Secures Support
 	id = japdom.28
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.28 FROM = [From.GetName]" }
 	title = japdom.28.t
 	desc = japdom.28.d
 	picture = GFX_report_event_japanese_officers
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.28 option japdom.28.a"
 		name = japdom.28.a
-		clear_sic_slot = yes
 		activate_advisor = JAP_araki_sadao_sic
 		add_political_power = 25
 	}
 }
 country_event = { #Kuhara Fusanosuke Secures Support
 	id = japdom.29
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.29 FROM = [From.GetName]" }
 	title = japdom.29.t
 	desc = japdom.29.d
 	picture = GFX_report_event_JAP_meeting
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.29 option japdom.28.a"
 		name = japdom.28.a
-		clear_sic_slot = yes
 		activate_advisor = JAP_kuhara_furanosuke_sic
 		add_political_power = 25
 	}
@@ -724,7 +717,6 @@ country_event = { #Kuhara Fusanosuke Secures Support
 ###########################
 country_event = {
 	id = japdom.31
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.31 FROM = [From.GetName]" }
 	title = japdom.31.t
 	desc = japdom.31.d
 	picture = GFX_report_event_JAP_voting
@@ -738,6 +730,7 @@ country_event = {
 	}
 
 	option = { #Conservatives
+		log = "[GetLogInfo]: event japdom.31 option japdom.31.a"
 		name = japdom.31.a
 		ai_chance = {
 			base = 50
@@ -761,10 +754,10 @@ country_event = {
 			ideology = social_conservative
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_mizuno_rentaro_sic
 	}
 	option = { #Liberals
+		log = "[GetLogInfo]: event japdom.31 option japdom.31.b"
 		name = japdom.31.b
 		ai_chance = {
 			base = 50
@@ -785,10 +778,10 @@ country_event = {
 			ideology = market_liberal
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_hamaguchi_osachi_sic
 	}
 	option = { #maintain coalition
+		log = "[GetLogInfo]: event japdom.31 option japdom.31.c"
 		name = japdom.31.c
 		trigger = {
 			has_government = authoritarian_democrat
@@ -802,7 +795,6 @@ country_event = {
 			ideology = authoritarian_democrat
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_adachi_kenzo_sic
 	}
 }
@@ -813,7 +805,6 @@ country_event = {
 
 country_event = {
 	id = japdom.32
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.32 FROM = [From.GetName]" }
 	title = japdom.32.t
 	desc = japdom.32.d
 	picture = GFX_report_event_JAP_politician
@@ -821,6 +812,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.32 option japdom.32.a"
 		name = japdom.32.a
 		add_stability = -0.05
 		add_popularity = {
@@ -835,7 +827,6 @@ country_event = {
 
 country_event = { #Formation of the Kokumin Domei
 	id = japdom.33
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.33 FROM = [From.GetName]" }
 	title = japdom.33.t
 	desc = japdom.33.d
 	picture = GFX_report_event_JAP_announcement
@@ -848,6 +839,7 @@ country_event = { #Formation of the Kokumin Domei
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japdom.33 option japdom.33.a"
 		name = japdom.33.a
 		add_stability = 0.05
 		set_party_name = {
@@ -870,7 +862,6 @@ country_event = { #Formation of the Kokumin Domei
 
 country_event = { # The National Unity Government Breaks Up
 	id = japdom.34
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.34 FROM = [From.GetName]" }
 	title = japdom.34.t
 	desc = japdom.34.d
 	picture = GFX_report_event_JAP_announcement
@@ -879,6 +870,7 @@ country_event = { # The National Unity Government Breaks Up
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.34 option japdom.34.a"
 		name = japdom.34.a
 		set_party_name = {
 			ideology = market_liberal
@@ -895,6 +887,7 @@ country_event = { # The National Unity Government Breaks Up
 			name = JAP_authoritarian_democrat_party_kd
 			long_name = JAP_authoritarian_democrat_party_long_kd
 		}
+		end_coalition = yes
 	}
 }
 
@@ -904,7 +897,6 @@ country_event = { # The National Unity Government Breaks Up
 
 country_event = { #The Cabinet Planning Board
 	id = japdom.35
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.35 FROM = [From.GetName]" }
 	title = japdom.35.t
 	desc = japdom.35.d
 	picture = GFX_report_event_JAP_foreign_minister_2
@@ -912,6 +904,7 @@ country_event = { #The Cabinet Planning Board
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.35 option japdom.35.a"
 		name = japdom.35.a
 		add_political_power = 25
 	}
@@ -919,7 +912,6 @@ country_event = { #The Cabinet Planning Board
 
 country_event = { #Zaibatsu Corruption Scandal
 	id = japdom.36
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.36 FROM = [From.GetName]" }
 	title = japdom.36.t
 	desc = japdom.36.d
 	picture = GFX_report_event_JAP_ultimatum
@@ -927,6 +919,7 @@ country_event = { #Zaibatsu Corruption Scandal
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.36 option japdom.36.a"
 		name = japdom.36.a
 		add_political_power = -50
 	}
@@ -938,7 +931,6 @@ country_event = { #Zaibatsu Corruption Scandal
 
 country_event = { #The Popular Front Incident
 	id = japdom.45
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.45 FROM = [From.GetName]" }
 	title = japdom.45.t
 	desc = japdom.45.d
 	picture = GFX_report_event_FNG_several_prisoners
@@ -951,6 +943,7 @@ country_event = { #The Popular Front Incident
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japdom.45 option japdom.45.a"
 		name = japdom.45.a
 		add_political_power = 25
 		add_stability = 0.05
@@ -978,7 +971,6 @@ country_event = { #The Popular Front Incident
 
 country_event = { #The Second Popular Front Incident
 	id = japdom.46
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.46 FROM = [From.GetName]" }
 	title = japdom.46.t
 	desc = japdom.46.d
 	picture = GFX_report_event_LEC_shanghai_police_patrol
@@ -987,6 +979,7 @@ country_event = { #The Second Popular Front Incident
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.46 option japdom.46.a"
 		name = japdom.46.a
 		add_political_power = -5
 		add_stability = 0.02
@@ -1014,7 +1007,6 @@ country_event = { #The Second Popular Front Incident
 
 country_event = { #The Keihin Workers' Group Incident
 	id = japdom.47
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.47 FROM = [From.GetName]" }
 	title = japdom.47.t
 	desc = japdom.47.d
 	picture = GFX_report_event_YUN_intellectuals
@@ -1023,6 +1015,7 @@ country_event = { #The Keihin Workers' Group Incident
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.47 option japdom.47.a"
 		name = japdom.47.a
 		add_political_power = -10
 		add_stability = 0.01
@@ -1034,7 +1027,6 @@ country_event = { #The Keihin Workers' Group Incident
 
 country_event = { #The Planning Board Incident
 	id = japdom.48
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.48 FROM = [From.GetName]" }
 	title = japdom.48.t
 	desc = japdom.48.d
 	picture = GFX_report_event_CHI_intelligence
@@ -1043,6 +1035,7 @@ country_event = { #The Planning Board Incident
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.48 option japdom.48.a"
 		name = japdom.48.a
 		add_political_power = -20
 		hidden_effect = {
@@ -1053,7 +1046,6 @@ country_event = { #The Planning Board Incident
 
 country_event = { #The Research Department Incident
 	id = japdom.49
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.49 FROM = [From.GetName]" }
 	title = japdom.49.t
 	desc = japdom.49.d
 	picture = GFX_report_event_JAP_science
@@ -1062,6 +1054,7 @@ country_event = { #The Research Department Incident
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.49 option japdom.49.a"
 		name = japdom.49.a
 		add_political_power = -30
 		hidden_effect = {
@@ -1072,7 +1065,6 @@ country_event = { #The Research Department Incident
 
 country_event = { #The Yokohama Incident
 	id = japdom.50
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.50 FROM = [From.GetName]" }
 	title = japdom.50.t
 	desc = japdom.50.d
 	picture = GFX_report_event_JAP_news
@@ -1081,6 +1073,7 @@ country_event = { #The Yokohama Incident
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.50 option japdom.50.a"
 		name = japdom.50.a
 		add_political_power = -50
 		add_stability = -0.05
@@ -1090,7 +1083,6 @@ country_event = { #The Yokohama Incident
 
 country_event = { #Tokyo Officers Accused of Torture
 	id = japdom.51
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.51 FROM = [From.GetName]" }
 	title = japdom.51.t
 	desc = japdom.51.d
 	picture = GFX_report_event_JAP_politician
@@ -1100,16 +1092,11 @@ country_event = { #Tokyo Officers Accused of Torture
 
 	trigger = {
 		has_country_flag = JAP_NSA
-		OR = {
-			has_government = social_democrat
-			has_government = social_liberal
-			has_government = market_liberal
-			has_government = social_conservative
-			has_government = authoritarian_democrat
-		}
+		has_democratic_government = yes
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japdom.51 option japdom.51.a"
 		name = japdom.51.a
 		add_stability = -0.05
 	}
@@ -1153,7 +1140,6 @@ country_event = { #Tokyo Officers Accused of Torture
 
 country_event = { #The Great Drought of 1939
 	id = japdom.53
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.53 FROM = [From.GetName]" }
 	title = japdom.53.t
 	desc = japdom.53.d
 	picture = GFX_report_event_JAP_rice_farmers
@@ -1162,6 +1148,7 @@ country_event = { #The Great Drought of 1939
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.53 option japdom.53.a"
 		name = japdom.53.a
 		set_country_flag = JAP_great_drought_active
 		add_ideas = JAP_great_drought
@@ -1173,7 +1160,6 @@ country_event = { #The Great Drought of 1939
 
 country_event = { #The Great Drought Gets Worse
 	id = japdom.60
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.60 FROM = [From.GetName]" }
 	title = japdom.60.t
 	desc = japdom.60.d
 	picture = GFX_report_event_JAP_rice_farmers
@@ -1182,6 +1168,7 @@ country_event = { #The Great Drought Gets Worse
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.60 option japdom.60.a"
 		name = japdom.60.a
 		swap_ideas = {
 			remove_idea = JAP_great_drought
@@ -1208,7 +1195,6 @@ country_event = { #The Great Drought Gets Worse
 
 country_event = { # Japan can ask for food from Fengtian
 	id = japdom.61
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.61 FROM = [From.GetName]" }
 	title = japdom.61.t
 	desc = {
 		text = japdom.61.d_pervasive #Mantetsu Influence is Pervasive or Dominant
@@ -1238,10 +1224,9 @@ country_event = { # Japan can ask for food from Fengtian
 	is_triggered_only = yes
 
 	option = { # Force Compliance
+		log = "[GetLogInfo]: event japdom.61 option japdom.61.a"
 		name = japdom.61.a
-		ai_chance = {
-			base = 50
-		}
+		ai_chance = { base = 50 }
 		trigger = {
 			FNG = {
 				OR = {
@@ -1257,10 +1242,9 @@ country_event = { # Japan can ask for food from Fengtian
 	}
 
 	option = { # Request
+		log = "[GetLogInfo]: event japdom.61 option japdom.61.b"
 		name = japdom.61.b
-		ai_chance = {
-			base = 50
-		}
+		ai_chance = { base = 50 }
 		set_global_flag = fengtian_normal
 		FNG = {
 			country_event = { id = fengtian.43 days = 2 }
@@ -1268,16 +1252,14 @@ country_event = { # Japan can ask for food from Fengtian
 	}
 
 	option = { # Do nothing
+		log = "[GetLogInfo]: event japdom.61 option japdom.61.c"
 		name = japdom.61.c
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 	}
 }
 
 country_event = { # Fengtian refuses to provide food
 	id = japdom.62
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.62 FROM = [From.GetName]" }
 
 	title = {
 		text = japdom.62.t
@@ -1310,18 +1292,19 @@ country_event = { # Fengtian refuses to provide food
 	is_triggered_only = yes
 
 	option = { # Punish
+		log = "[GetLogInfo]: event japdom.62 option japdom.62.a"
 		name = japdom.62.a
 		set_global_flag = japan_punishes_fengtian
 	}
 
 	option = { # Do not Punish
+		log = "[GetLogInfo]: event japdom.62 option japdom.62.b"
 		name = japdom.62.b
 	}
 }
 
 country_event = { # The Drought Ends
 	id = japdom.63
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.63 FROM = [From.GetName]" }
 	title = japdom.63.t
 	desc = japdom.63.d
 	picture = GFX_report_event_JAP_rice_farmers
@@ -1330,6 +1313,7 @@ country_event = { # The Drought Ends
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.63 option japdom.63.a"
 		name = japdom.63.a
 		add_political_power = 100
 		if = {
@@ -1345,7 +1329,6 @@ country_event = { # The Drought Ends
 
 country_event = { #Fengtian provides food
 	id = japdom.64
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.64 FROM = [From.GetName]" }
 	title = japdom.64.t
 	desc = japdom.64.d
 	picture = GFX_report_event_JAP_rice_farmers
@@ -1354,6 +1337,7 @@ country_event = { #Fengtian provides food
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.64 option japdom.64.a"
 		name = japdom.64.a
 		swap_ideas = {
 			remove_idea = JAP_great_drought_worse
@@ -1369,7 +1353,6 @@ country_event = { #Fengtian provides food
 country_event = { #General Election 1940
 	id = japdom.54
 	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event japdom.54 FROM = [From.GetName]"
 		hidden_effect = {
 			set_party_name = {
 				ideology = market_liberal
@@ -1400,6 +1383,7 @@ country_event = { #General Election 1940
 	}
 
 	option = { #Elect Rikken Seiyukai (Conservatives)
+		log = "[GetLogInfo]: event japdom.54 option japdom.54.a"
 		name = japdom.54.a
 		ai_chance = {
 			base = 25
@@ -1421,10 +1405,10 @@ country_event = { #General Election 1940
 			ideology = social_conservative
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_yoshizawa_kenkichi_sic
 	}
 	option = { #Elect Minseito (Liberals)
+		log = "[GetLogInfo]: event japdom.54 option japdom.54.b"
 		name = japdom.54.b
 		ai_chance = {
 			base = 25
@@ -1446,10 +1430,10 @@ country_event = { #General Election 1940
 			ideology = market_liberal
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_ugaki_kazushige_sic
 	}
 	option = { #Elect Kokumin Domei (Nationalists)
+		log = "[GetLogInfo]: event japdom.54 option japdom.54.c"
 		name = japdom.54.c
 		ai_chance = {
 			base = 25
@@ -1471,10 +1455,10 @@ country_event = { #General Election 1940
 			ideology = authoritarian_democrat
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_maeda_yonezo_sic
 	}
 	option = { #Elect Shakai Taishuto (Socialists)
+		log = "[GetLogInfo]: event japdom.54 option japdom.54.e"
 		name = japdom.54.e
 		ai_chance = {
 			base = 25
@@ -1496,14 +1480,12 @@ country_event = { #General Election 1940
 			ideology = social_democrat
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_abe_isoo_sic
 	}
 }
 
 country_event = { #General Election 1944
 	id = japdom.55
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.55 FROM = [From.GetName]" }
 	title = japdom.55.t
 	desc = japdom.54.d
 	picture = GFX_report_event_JAP_voting
@@ -1516,6 +1498,7 @@ country_event = { #General Election 1944
 	}
 
 	option = { #Elect Rikken Seiyukai (Conservatives)
+		log = "[GetLogInfo]: event japdom.55 option japdom.54.a"
 		name = japdom.54.a
 		ai_chance = {
 			base = 25
@@ -1537,10 +1520,10 @@ country_event = { #General Election 1944
 			ideology = social_conservative
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_hatoyama_ichiro_sic
 	}
 	option = { #Elect Minseito (Liberals)
+		log = "[GetLogInfo]: event japdom.55 option japdom.54.b"
 		name = japdom.54.b
 		ai_chance = {
 			base = 25
@@ -1562,10 +1545,10 @@ country_event = { #General Election 1944
 			ideology = market_liberal
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_machida_chuji_sic
 	}
 	option = { #Elect Kokumin Domei (Nationalists)
+		log = "[GetLogInfo]: event japdom.55 option japdom.54.c"
 		name = japdom.54.c
 		ai_chance = {
 			base = 25
@@ -1587,10 +1570,10 @@ country_event = { #General Election 1944
 			ideology = authoritarian_democrat
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_maeda_yonezo_sic
 	}
 	option = { #Elect Shakai Taishuto (Socialists)
+		log = "[GetLogInfo]: event japdom.55 option japdom.54.e"
 		name = japdom.54.e
 		ai_chance = {
 			base = 25
@@ -1612,7 +1595,6 @@ country_event = { #General Election 1944
 			ideology = social_democrat
 			popularity = 0.3
 		}
-		clear_sic_slot = yes
 		activate_advisor = JAP_katayama_testu_sic
 	}
 }
@@ -1623,7 +1605,6 @@ country_event = { #General Election 1944
 
 country_event = { #The Emperor has been shot!
 	id = japdom.56
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.56 FROM = [From.GetName]" }
 	title = japdom.56.t
 	desc = japdom.56.d
 	picture = GFX_report_event_POL_assassination
@@ -1635,6 +1616,7 @@ country_event = { #The Emperor has been shot!
 	}
 
 	option = { #He survives
+		log = "[GetLogInfo]: event japdom.56 option japdom.56.a"
 		name = japdom.56.a
 		ai_chance = {
 			base = 50
@@ -1647,6 +1629,7 @@ country_event = { #The Emperor has been shot!
 	}
 
 	option = { #His Majesty is dead, Prince Chichibu will become regent.
+		log = "[GetLogInfo]: event japdom.56 option japdom.56.b"
 		name = japdom.56.b
 		ai_chance = {
 			base = 50
@@ -1726,7 +1709,6 @@ country_event = { #The Emperor has been shot!
 
 country_event = { #A Second Meiji restoration?
 	id = japdom.57
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.57 FROM = [From.GetName]" }
 	title = japdom.57.t
 	desc = japdom.57.d
 	picture = GFX_report_event_JAP_restorationist_centralist
@@ -1738,6 +1720,7 @@ country_event = { #A Second Meiji restoration?
 	}
 
 	option = { #yes
+		log = "[GetLogInfo]: event japdom.57 option japdom.57.a"
 		name = japdom.57.a
 		ai_chance = { base = 70 }
 		effect_tooltip = { remove_country_leader_trait = JAP_imperial_regent }
@@ -1755,6 +1738,7 @@ country_event = { #A Second Meiji restoration?
 	}
 
 	option = { #no
+		log = "[GetLogInfo]: event japdom.57 option japdom.57.b"
 		name = japdom.57.b
 		ai_chance = { base = 30 }
 	}
@@ -1762,17 +1746,14 @@ country_event = { #A Second Meiji restoration?
 
 country_event = { #Hayashi Senjuro is dead!
 	id = japdom.58
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.58 FROM = [From.GetName]" }
 	title = japdom.58.t
 	desc = {
 		text = japdom.58.d.pataut
-		trigger = { has_idea = JAP_hayashi_senjuro_sic }
+		trigger = { JAP_hayashi_senjuro = { is_second_in_command = yes } }
 	}
 	desc = {
 		text = japdom.58.d.defaul
-		trigger = {
-			NOT = { has_idea = JAP_hayashi_senjuro_sic }
-		}
+		trigger = { JAP_hayashi_senjuro = { is_second_in_command = no } }
 	}
 	picture = GFX_report_event_europe_funeral
 
@@ -1781,20 +1762,17 @@ country_event = { #Hayashi Senjuro is dead!
 	trigger = { NOT = { has_government = national_populist } }
 
 	option = { # Nagata Tetsuzan
+		log = "[GetLogInfo]: event japdom.58 option japdom.58.a"
 		name = japdom.58.a
-		trigger = {
-			has_idea = JAP_hayashi_senjuro_sic
-		}
+		trigger = { JAP_hayashi_senjuro = { is_second_in_command = yes } }
 		retire_character = JAP_hayashi_senjuro
-		clear_sic_slot = yes
 		activate_advisor = JAP_nagata_tetsuzan_sic
 	}
 
 	option = { #Gomeifuku wo inorimasu
+		log = "[GetLogInfo]: event japdom.58 option japdom.58.b"
 		name = japdom.58.b
-		trigger = {
-			NOT = { has_idea = JAP_hayashi_senjuro_sic }
-		}
+		trigger = { JAP_hayashi_senjuro = { is_second_in_command = no } }
 		retire_character = JAP_hayashi_senjuro
 	}
 }
@@ -1805,13 +1783,13 @@ country_event = { #Hayashi Senjuro is dead!
 
 country_event = { #Government asks the Emperor to speak, supports government
 	id = japdom.65
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.65 FROM = [From.GetName]" }
 	title = japdom.65.t
 	desc = japdom.65.d
 	picture = GFX_report_event_JAP_hirohito_addressing
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.65 option japdom.65.a"
 		name = japdom.65.a #Agree with Emperor
 		ai_chance = {
 			base = 50
@@ -1824,6 +1802,7 @@ country_event = { #Government asks the Emperor to speak, supports government
 		set_country_flag = emperor_support_agree
 	}
 	option = {
+		log = "[GetLogInfo]: event japdom.65 option japdom.65.b"
 		name = japdom.65.b #Disagree with Emperor
 		ai_chance = {
 			base = 50
@@ -1847,13 +1826,13 @@ country_event = { #Government asks the Emperor to speak, supports government
 
 country_event = { #Government asks the Emperor to speak, does not support government
 	id = japdom.72
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.72 FROM = [From.GetName]" }
 	title = japdom.72.t
 	desc = japdom.72.d
 	picture = GFX_report_event_JAP_hirohito_addressing
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japdom.72 option japdom.72.a"
 		name = japdom.72.a #Agree with Emperor
 		ai_chance = {
 			base = 50
@@ -1871,6 +1850,7 @@ country_event = { #Government asks the Emperor to speak, does not support govern
 		set_country_flag = emperor_no_support_agree
 	}
 	option = {
+		log = "[GetLogInfo]: event japdom.72 option japdom.72.b"
 		name = japdom.72.b #Disagree with Emperor
 		ai_chance = {
 			base = 50
@@ -1889,7 +1869,6 @@ country_event = { #Government asks the Emperor to speak, does not support govern
 
 country_event = { #Glorious Mantetsu rails gone
 	id = japdom.74
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.74 FROM = [From.GetName]" }
 	title = japdom.74.t
 	desc = japdom.74.d
 	picture = GFX_report_event_JAP_infrastructure
@@ -1898,6 +1877,7 @@ country_event = { #Glorious Mantetsu rails gone
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.74 option japdom.74.a"
 		name = japdom.74.a
 		remove_ideas = JAP_change_rail
 		remove_ideas = JAP_narrow_rail
@@ -1906,7 +1886,6 @@ country_event = { #Glorious Mantetsu rails gone
 
 country_event = { #Land Reform? Land Reform
 	id = japdom.75
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.75 FROM = [From.GetName]" }
 	title = japdom.75.t
 	picture = GFX_report_event_JAP_lost_decade
 
@@ -1941,12 +1920,14 @@ country_event = { #Land Reform? Land Reform
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japdom.75 option japdom.75.a"
 		name = japdom.75.a
 		trigger = {
 			check_variable = { JAP_land_reform_variable < 3 }
 		}
 	}
 	option = {
+		log = "[GetLogInfo]: event japdom.75 option japdom.75.b"
 		name = japdom.75.b
 		trigger = {
 			check_variable = { JAP_land_reform_variable > 2 }
@@ -1955,6 +1936,7 @@ country_event = { #Land Reform? Land Reform
 		remove_ideas = JAP_bad_land
 	}
 	option = {
+		log = "[GetLogInfo]: event japdom.75 option japdom.75.c"
 		name = japdom.75.c
 		trigger = {
 			check_variable = { JAP_land_reform_variable > 5 }
@@ -1966,6 +1948,7 @@ country_event = { #Land Reform? Land Reform
 		536 = { increase_state_category_by_one_level = yes }
 	}
 	option = {
+		log = "[GetLogInfo]: event japdom.75 option japdom.75.d"
 		name = japdom.75.d
 		trigger = {
 			check_variable = { JAP_land_reform_variable > 7 }
@@ -1982,30 +1965,26 @@ country_event = { #Land Reform? Land Reform
 
 country_event = { #RIKEN North established
 	id = japdom.235
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.235 FROM = [From.GetName]" }
 	title = japdom.235.t
 	desc = japdom.235.d
 	picture = GFX_report_event_JAP_science
-	fire_only_once = yes
+
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.235 option japdom.235.a"
 		name = japdom.235.a
-		533 = {
-			add_extra_state_shared_building_slots = 1
-		}
+		533 = { add_extra_state_shared_building_slots = 1 }
 	}
 	option = {
+		log = "[GetLogInfo]: event japdom.235 option japdom.235.b"
 		name = japdom.235.b
-		282 = {
-			add_extra_state_shared_building_slots = 1
-		}
+		282 = { add_extra_state_shared_building_slots = 1 }
 	}
 }
 
 country_event = { #Naval Bias
 	id = japdom.236
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.236 FROM = [From.GetName]" }
 	title = japdom.236.t
 	desc = japdom.236.d
 	picture = GFX_report_event_JAP_battleship_kongo
@@ -2013,13 +1992,13 @@ country_event = { #Naval Bias
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.236 option japdom.236.a"
 		name = japdom.236.a
 	}
 }
 
 country_event = { #Army Bias
 	id = japdom.237
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.237 FROM = [From.GetName]" }
 	title = japdom.237.t
 	desc = japdom.237.d
 	picture = GFX_report_event_JAP_battle_flag
@@ -2027,13 +2006,13 @@ country_event = { #Army Bias
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.237 option japdom.237.a"
 		name = japdom.237.a
 	}
 }
 
 country_event = { #Fate of the Imperial Family
 	id = japdom.241
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.241 FROM = [From.GetName]" }
 	title = japdom.241.t
 	desc = japdom.241.d
 	picture = GFX_report_event_jap_imperial_family
@@ -2047,10 +2026,9 @@ country_event = { #Fate of the Imperial Family
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japdom.241 option japdom.241.a"
 		name = japdom.241.a
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		JAP = {
 			add_stability = 0.1
 			add_ideas = JAP_Imperial_Family_powerless
@@ -2065,10 +2043,9 @@ country_event = { #Fate of the Imperial Family
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japdom.241 option japdom.241.b"
 		name = japdom.241.b
-		ai_chance = {
-			base = 15
-		}
+		ai_chance = { base = 15 }
 		JAP = {
 			effect_tooltip = {
 				if = {
@@ -2094,7 +2071,6 @@ country_event = { #Fate of the Imperial Family
 
 country_event = { #Black Monday
 	id = japdom.242
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.242 FROM = [From.GetName]" }
 	title = japdom.242.t
 	desc = japdom.242.d
 	picture = GFX_report_event_JAP_economy_building
@@ -2102,6 +2078,7 @@ country_event = { #Black Monday
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.242 option japdom.242.a"
 		name = japdom.242.a
 		add_stability = -0.03
 	}
@@ -2109,7 +2086,6 @@ country_event = { #Black Monday
 
 country_event = { #Nagata versus Obata
 	id = japdom.243
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.243 FROM = [From.GetName]" }
 	title = japdom.243.t
 	desc = japdom.243.d
 	picture = GFX_report_event_JAP_officers
@@ -2118,6 +2094,7 @@ country_event = { #Nagata versus Obata
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.243 option japdom.243.a"
 		name = japdom.243.a
 	}
 }
@@ -2126,7 +2103,6 @@ country_event = { #Nagata versus Obata
 
 country_event = { #Question of Dedication Technology
 	id = japdom.301
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.301 FROM = [From.GetName]" }
 	title = japdom.301.t
 	desc = japdom.301.d
 	picture = GFX_report_event_JAP_battleship_kongo
@@ -2134,6 +2110,7 @@ country_event = { #Question of Dedication Technology
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.301 option japdom.301.a"
 		name = japdom.301.a
 		swap_ideas = {
 			remove_idea = JAP_nav_qual_1
@@ -2142,6 +2119,7 @@ country_event = { #Question of Dedication Technology
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japdom.301 option japdom.301.b"
 		name = japdom.301.b
 		ai_chance = { factor = 0 }
 	}
@@ -2149,7 +2127,6 @@ country_event = { #Question of Dedication Technology
 
 country_event = { #Question of Dedication Production
 	id = japdom.302
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.302 FROM = [From.GetName]" }
 	title = japdom.302.t
 	desc = japdom.302.d
 	picture = GFX_report_event_JAP_battleship_kongo
@@ -2157,6 +2134,7 @@ country_event = { #Question of Dedication Production
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japdom.302 option japdom.302.a"
 		name = japdom.302.a
 		swap_ideas = {
 			remove_idea = JAP_nav_mass_1
@@ -2165,6 +2143,7 @@ country_event = { #Question of Dedication Production
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japdom.302 option japdom.302.b"
 		name = japdom.302.b
 		ai_chance = { factor = 0 }
 	}
@@ -2172,7 +2151,6 @@ country_event = { #Question of Dedication Production
 
 country_event = { #New Carrier plane
 	id = japdom.303
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.303 FROM = [From.GetName]" }
 	title = japdom.303.t
 	desc = japdom.303.d
 	picture = GFX_report_event_fighters
@@ -2180,6 +2158,7 @@ country_event = { #New Carrier plane
 	is_triggered_only = yes
 
 	option = { #Fighter
+		log = "[GetLogInfo]: event japdom.303 option japdom.303.a"
 		name = japdom.303.a
 		custom_effect_tooltip = JAP_tooltip_Figter
 		hidden_effect = {
@@ -2188,6 +2167,7 @@ country_event = { #New Carrier plane
 	}
 
 	option = { #Dive Bomber
+		log = "[GetLogInfo]: event japdom.303 option japdom.303.b"
 		name = japdom.303.b
 		save_event_target_as = cas
 		custom_effect_tooltip = JAP_tooltip_CAS
@@ -2196,6 +2176,7 @@ country_event = { #New Carrier plane
 		}
 	}
 	option = { #Torpedo Bomber
+		log = "[GetLogInfo]: event japdom.303 option japdom.303.c"
 		name = japdom.303.c
 		save_event_target_as = naval_bombers
 		custom_effect_tooltip = JAP_tooltip_Naval_Bomber
@@ -2207,7 +2188,6 @@ country_event = { #New Carrier plane
 
 country_event = { #New plane ready
 	id = japdom.304
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japdom.304 FROM = [From.GetName]" }
 	title = japdom.304.t
 	desc = japdom.304.d
 	picture = GFX_report_event_JAP_science
@@ -2215,6 +2195,7 @@ country_event = { #New plane ready
 	is_triggered_only = yes
 
 	option = { #Fighter
+		log = "[GetLogInfo]: event japdom.304 option japdom.304.a"
 		name = japdom.304.a
 		trigger = {
 			NOT = { has_event_target = cas }
@@ -2225,47 +2206,50 @@ country_event = { #New plane ready
 			if = {
 				limit = { has_tech = advanced_small_airframe }
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_3_short
+					name = "A7M Reppū"
 					type = cv_small_plane_airframe_3
 					modules = {
-						fixed_main_weapon_slot = light_mg_4x
+						fixed_main_weapon_slot = aircraft_cannon_2_2x
 						engine_type_slot = engine_4_1x
-						special_type_slot_1 = empty
+						special_type_slot_1 = drop_tanks
+						special_type_slot_2 = armor_plate_small
+						special_type_slot_3 = air_air_radar_1
 					}
 				}
 			}
 			else_if = {
 				limit = { has_tech = improved_small_airframe }
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_2_short
+					name = "A6M Rei-sen"
 					type = cv_small_plane_airframe_2
 					modules = {
-						fixed_main_weapon_slot = light_mg_4x
+						fixed_main_weapon_slot = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
 						engine_type_slot = engine_3_1x
-						special_type_slot_1 = empty
+						special_type_slot_1 = drop_tanks
+						special_type_slot_2 = armor_plate_small
 					}
 				}
 			}
 			else_if = {
 				limit = { has_tech = basic_small_airframe }
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_1_short
+					name = "A5M"
 					type = cv_small_plane_airframe_1
 					modules = {
-						fixed_main_weapon_slot = light_mg_2x
+						fixed_main_weapon_slot = light_mg_4x
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
 						engine_type_slot = engine_2_1x
-						special_type_slot_1 = empty
 					}
 				}
 			}
 			else = {
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_0_short
+					name = "A4N"
 					type = cv_small_plane_airframe_0
 					modules = {
-						fixed_main_weapon_slot = light_mg_2x
+						fixed_main_weapon_slot = light_mg_4x
 						engine_type_slot = engine_1_1x
-						special_type_slot_1 = empty
 					}
 				}
 			}
@@ -2282,6 +2266,7 @@ country_event = { #New plane ready
 	}
 
 	option = { #Dive Bomber
+		log = "[GetLogInfo]: event japdom.304 option japdom.304.a"
 		name = japdom.304.a
 		trigger = { has_event_target = cas }
 		if = {
@@ -2289,34 +2274,40 @@ country_event = { #New plane ready
 			if = {
 				limit = { has_tech = advanced_small_airframe }
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_3_short
+					name = "D4Y Suisei"
 					type = cv_small_plane_cas_airframe_3
 					modules = {
-						fixed_main_weapon_slot = bomb_locks
-						engine_type_slot = engine_3_1x
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = bomb_locks
+						engine_type_slot = engine_4_1x
 						special_type_slot_1 = dive_brakes_small
+						special_type_slot_2 = armor_plate_small
+						special_type_slot_3 = air_ground_radar_1
 					}
 				}
 			}
 			else_if = {
 				limit = { has_tech = improved_small_airframe }
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_2_short
+					name = "D3A"
 					type = cv_small_plane_cas_airframe_2
 					modules = {
-						fixed_main_weapon_slot = bomb_locks
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = bomb_locks
 						engine_type_slot = engine_3_1x
 						special_type_slot_1 = dive_brakes_small
+						special_type_slot_2 = armor_plate_small
 					}
 				}
 			}
 			else_if = {
 				limit = { has_tech = basic_small_airframe }
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_1_short
+					name = "D1A2"
 					type = cv_small_plane_cas_airframe_1
 					modules = {
-						fixed_main_weapon_slot = bomb_locks
+						fixed_main_weapon_slot = small_bomb_bay
 						engine_type_slot = engine_2_1x
 						special_type_slot_1 = dive_brakes_small
 					}
@@ -2324,7 +2315,7 @@ country_event = { #New plane ready
 			}
 			else = {
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_0_short
+					name = "Ki-32"
 					type = cv_small_plane_cas_airframe_0
 					modules = {
 						fixed_main_weapon_slot = bomb_locks
@@ -2346,6 +2337,7 @@ country_event = { #New plane ready
 	}
 
 	option = { #Torpedo Bomber
+		log = "[GetLogInfo]: event japdom.304 option japdom.304.a"
 		name = japdom.304.a
 		trigger = { has_event_target = naval_bombers }
 		if = {
@@ -2353,50 +2345,52 @@ country_event = { #New plane ready
 			if = {
 				limit = { has_tech = advanced_small_airframe }
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_3_short
+					name = "B7A Ryūsei"
 					type = cv_small_plane_naval_bomber_airframe_3
 					modules = {
 						fixed_main_weapon_slot = torpedo_mounting
-						fixed_auxiliary_weapon_slot_1 = bomb_locks
+						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
 						engine_type_slot = engine_4_1x
-						special_type_slot_1 = fuel_tanks_small
+						special_type_slot_1 = lmg_defense_turret_2x
+						special_type_slot_2 = drop_tanks
 					}
 				}
 			}
 			else_if = {
 				limit = { has_tech = improved_small_airframe }
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_2_short
+					name = "B6N Tenzan"
 					type = cv_small_plane_naval_bomber_airframe_2
 					modules = {
 						fixed_main_weapon_slot = torpedo_mounting
-						fixed_auxiliary_weapon_slot_1 = bomb_locks
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
 						engine_type_slot = engine_3_1x
-						special_type_slot_1 = fuel_tanks_small
+						special_type_slot_1 = lmg_defense_turret
+						special_type_slot_2 = drop_tanks
 					}
 				}
 			}
 			else_if = {
 				limit = { has_tech = basic_small_airframe }
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_1_short
+					name = "B5N"
 					type = cv_small_plane_naval_bomber_airframe_1
 					modules = {
 						fixed_main_weapon_slot = torpedo_mounting
-						fixed_auxiliary_weapon_slot_1 = bomb_locks
+						fixed_auxiliary_weapon_slot_1 = light_mg_2x
 						engine_type_slot = engine_2_1x
-						special_type_slot_1 = fuel_tanks_small
+						special_type_slot_1 = lmg_defense_turret
 					}
 				}
 			}
 			else = {
 				create_equipment_variant = {
-					name = JAP_cv_fighter_equipment_0_short
+					name = "G3M1"
 					type = cv_small_plane_naval_bomber_airframe_0
 					modules = {
 						fixed_main_weapon_slot = torpedo_mounting
 						engine_type_slot = engine_1_1x
-						special_type_slot_1 = empty
+						special_type_slot_1 = dive_brakes_small
 					}
 				}
 			}
@@ -2419,7 +2413,6 @@ country_event = { #New plane ready
 
 country_event = { #Mantetsu Declares Record Earnings
 	id = japfor.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.1 FROM = [From.GetName]" }
 	title = japfor.1.t
 	desc = japfor.1.d
 	picture = GFX_report_event_JAP_manchurian_exploitation
@@ -2427,6 +2420,7 @@ country_event = { #Mantetsu Declares Record Earnings
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.1 option japfor.1.a"
 		name = japfor.1.a
 		add_political_power = 25
 		hidden_effect = {
@@ -2447,16 +2441,14 @@ country_event = { #Mantetsu Declares Record Earnings
 
 country_event = { #Offering training to Chinese warlords
 	id = japfor.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.3 FROM = [From.GetName]" }
 	title = japfor.3.t
 	desc = japfor.3.d
 	picture = GFX_report_event_JAP_manchu_exploit
 	is_triggered_only = yes
 
 	option = { #yes
-		ai_chance = {
-			base = 99
-		}
+		log = "[GetLogInfo]: event japfor.3 option japfor.3.a"
+		ai_chance = { base = 99 }
 		name = japfor.3.a
 		add_timed_idea = {
 			idea = JAP_china_training
@@ -2477,9 +2469,8 @@ country_event = { #Offering training to Chinese warlords
 	}
 
 	option = { #no
-		ai_chance = {
-			base = 1
-		}
+		log = "[GetLogInfo]: event japfor.3 option japfor.3.b"
+		ai_chance = { base = 1 }
 		name = japfor.3.b
 		add_political_power = 10
 		set_country_flag = JAP_no_training_help
@@ -2489,13 +2480,13 @@ country_event = { #Offering training to Chinese warlords
 
 country_event = { #giving offsite mils to warlords
 	id = japfor.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.4 FROM = [From.GetName]" }
 	title = japfor.4.t
 	desc = japfor.4.d
 	picture = GFX_report_event_SZC_sichuan_chengdu_arsenal
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.4 option japfor.4.a"
 		name = japfor.4.a
 		if = {
 			limit = {
@@ -2550,6 +2541,7 @@ country_event = { #giving offsite mils to warlords
 		}
 	}
 	option = {
+		log = "[GetLogInfo]: event japfor.4 option japfor.4.b"
 		name = japfor.4.b
 		ai_chance = { base = 0 }
 		add_political_power = 10
@@ -2559,17 +2551,15 @@ country_event = { #giving offsite mils to warlords
 
 country_event = { #supporting a Warlord's offensive
 	id = japfor.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.5 FROM = [From.GetName]" }
 	title = japfor.5.t
 	desc = japfor.5.d
 	picture = GFX_report_event_JAP_rising_sun
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.5 option japfor.5.a"
 		name = japfor.5.a
-		ai_chance = {
-			base = 99
-		}
+		ai_chance = { base = 99 }
 		if = {
 			limit = {
 				OR = {
@@ -2589,10 +2579,9 @@ country_event = { #supporting a Warlord's offensive
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.5 option japfor.5.b"
 		name = japfor.5.b
-		ai_chance = {
-			base = 1
-		}
+		ai_chance = { base = 1 }
 		add_political_power = 10
 		set_country_flag = JAP_refused_offensive_help
 	}
@@ -2600,13 +2589,13 @@ country_event = { #supporting a Warlord's offensive
 
 country_event = { #Providing plane licenses
 	id = japfor.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.6 FROM = [From.GetName]" }
 	title = japfor.6.t
 	desc = japfor.6.d
 	picture = GFX_report_event_JAP_troops_zero
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.6 option japfor.6.a"
 		name = japfor.6.a
 		if = {
 			limit = {
@@ -2670,13 +2659,13 @@ country_event = { #Providing plane licenses
 
 country_event = { #Japan supports our independence
 	id = japfor.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.7 FROM = [From.GetName]" }
 	title = japfor.7.t
 	desc = japfor.7.d
 	picture = GFX_report_event_chinese_japanese_handshake
 	is_triggered_only = yes
 
 	option = { #accept
+		log = "[GetLogInfo]: event japfor.7 option japfor.7.a"
 		name = japfor.7.a
 		army_experience = 20
 		add_timed_idea = {
@@ -2688,6 +2677,7 @@ country_event = { #Japan supports our independence
 	}
 
 	option = { #refuse
+		log = "[GetLogInfo]: event japfor.7 option japfor.7.b"
 		name = japfor.7.b
 		ai_chance = { base = 0 }
 		add_political_power = 10
@@ -2697,7 +2687,6 @@ country_event = { #Japan supports our independence
 
 country_event = { #Japan sends Abdurresid Ibrahim
 	id = japfor.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.8 FROM = [From.GetName]" }
 	title = japfor.8.t
 	desc = japfor.8.d
 	picture = GFX_report_event_chinese_japanese_handshake
@@ -2705,6 +2694,7 @@ country_event = { #Japan sends Abdurresid Ibrahim
 	is_triggered_only = yes
 
 	option = { #Welcome, honoured teacher
+		log = "[GetLogInfo]: event japfor.8 option japfor.8.a"
 		name = japfor.8.a
 		add_opinion_modifier = {
 			target = JAP
@@ -2715,7 +2705,6 @@ country_event = { #Japan sends Abdurresid Ibrahim
 
 country_event = { #Offer arms factories to weaker tags
 	id = japfor.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.9 FROM = [From.GetName]" }
 	title = japfor.9.t
 	desc = japfor.9.d
 	picture = GFX_report_event_JAP_motorized
@@ -2723,6 +2712,7 @@ country_event = { #Offer arms factories to weaker tags
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.9 option japfor.9.a"
 		name = japfor.9.a
 		add_offsite_building = { type = arms_factory level = 2 }
 		set_country_flag = has_offsite_mils_from_JAP
@@ -2754,6 +2744,7 @@ country_event = { #Offer arms factories to weaker tags
 		}
 	}
 	option = {
+		log = "[GetLogInfo]: event japfor.9 option japfor.9.b"
 		name = japfor.9.b
 		add_political_power = 10
 		set_country_flag = JAP_refused_offsite_mils
@@ -2762,7 +2753,6 @@ country_event = { #Offer arms factories to weaker tags
 
 country_event = { #Money from mysterious sources
 	id = japfor.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.10 FROM = [From.GetName]" }
 	title = japfor.10.t
 	desc = japfor.10.d
 	picture = GFX_report_event_JAP_officer_phone
@@ -2770,6 +2760,7 @@ country_event = { #Money from mysterious sources
 	fire_only_once = yes
 
 	option = { #We're not complaining
+		log = "[GetLogInfo]: event japfor.10 option japfor.10.a"
 		name = japfor.10.a
 		add_political_power = 100
 	}
@@ -2783,13 +2774,13 @@ country_event = { #Money from mysterious sources
 
 country_event = { #The Tokyo Conference Invitation
 	id = japfor.21
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.21 FROM = [From.GetName]" }
 	title = japfor.21.t
 	desc = japfor.21.d
 	is_triggered_only = yes
 	picture = GFX_report_event_JAP_announcement
 
 	option = { #yes
+		log = "[GetLogInfo]: event japfor.21 option japfor.21.a"
 		name = japfor.21.a
 		ai_chance = {
 			base = 100
@@ -2809,6 +2800,7 @@ country_event = { #The Tokyo Conference Invitation
 	}
 
 	option = { #no
+		log = "[GetLogInfo]: event japfor.21 option japfor.21.b"
 		name = japfor.21.b
 		ai_chance = {
 			base = 0
@@ -2827,20 +2819,19 @@ country_event = { #The Tokyo Conference Invitation
 
 country_event = { #FROM attends the Tokyo Conference
 	id = japfor.22
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.22 FROM = [From.GetName]" }
 	title = japfor.22.t
 	desc = japfor.22.d
 	is_triggered_only = yes
 	picture = GFX_report_event_generic_diplomacy3
 
 	option = { #Welcome!
+		log = "[GetLogInfo]: event japfor.22 option japfor.22.a"
 		name = japfor.22.a
 	}
 }
 
 country_event = { #FROM Refuses to attend
 	id = japfor.23
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.23 FROM = [From.GetName]" }
 	title = japfor.23.t
 	desc = japfor.23.d
 	picture = GFX_report_event_generic_diplomacy4
@@ -2848,13 +2839,13 @@ country_event = { #FROM Refuses to attend
 	is_triggered_only = yes
 
 	option = { #Hell with them
+		log = "[GetLogInfo]: event japfor.23 option japfor.23.a"
 		name = japfor.23.a
 	}
 }
 
 country_event = { #Propose a joint condemnation: denounce imperialism, colonialism and anti-Asian racism
 	id = japfor.24
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.24 FROM = [From.GetName]" }
 	title = japfor.24.t
 	desc = japfor.24.d
 	picture = GFX_report_event_japanese_siam_politicians
@@ -2869,10 +2860,9 @@ country_event = { #Propose a joint condemnation: denounce imperialism, coloniali
 	}
 
 	option = { # Publish it for signing
+		log = "[GetLogInfo]: event japfor.24 option japfor.24.a"
 		name = japfor.24.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		custom_effect_tooltip = JAP_95_chance_of_agreeing_tt
 		every_country = {
 			limit = {
@@ -2886,10 +2876,9 @@ country_event = { #Propose a joint condemnation: denounce imperialism, coloniali
 		}
 	}
 	option = { # Pressure the attendees as well
+		log = "[GetLogInfo]: event japfor.24 option japfor.24.b"
 		name = japfor.24.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_political_power = -25
 		custom_effect_tooltip = JAP_100_chance_of_agreeing_tt
 		set_country_flag = JAP_pressured_for_condmen
@@ -2908,7 +2897,6 @@ country_event = { #Propose a joint condemnation: denounce imperialism, coloniali
 
 country_event = { #The condemnation proposal
 	id = japfor.25
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.25 FROM = [From.GetName]" }
 	title = japfor.25.t
 	desc = japfor.25.d
 	picture = GFX_report_event_generic_sign_treaty2
@@ -2916,14 +2904,14 @@ country_event = { #The condemnation proposal
 	is_triggered_only = yes
 
 	option = { #sign it
+		log = "[GetLogInfo]: event japfor.25 option japfor.25.a"
 		name = japfor.25.a
-		ai_chance = {
-			base = 95
-		}
+		ai_chance = { base = 95 }
 		add_political_power = -10
 	}
 
 	option = { #refuse
+		log = "[GetLogInfo]: event japfor.25 option japfor.25.b"
 		name = japfor.25.b
 		ai_chance = {
 			base = 5
@@ -2950,20 +2938,19 @@ country_event = { #The condemnation proposal
 
 country_event = { #FROM drops out
 	id = japfor.26
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.26 FROM = [From.GetName]" }
 	title = japfor.26.t
 	desc = japfor.26.d
 	picture = GFX_report_event_JAP_ultimatum
 	is_triggered_only = yes
 
 	option = { #bah
+		log = "[GetLogInfo]: event japfor.26 option japfor.26.a"
 		name = japfor.26.a
 	}
 }
 
 country_event = { #Bring forward a charter on pan-Asian trade
 	id = japfor.27
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.27 FROM = [From.GetName]" }
 	title = japfor.27.t
 	desc = japfor.27.d
 	picture = GFX_report_event_JAP_meeting
@@ -2979,10 +2966,9 @@ country_event = { #Bring forward a charter on pan-Asian trade
 	}
 
 	option = { # Perfect, they must agree...
+		log = "[GetLogInfo]: event japfor.27 option japfor.27.a"
 		name = japfor.27.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		custom_effect_tooltip = JAP_80_chance_of_agreeing_tt
 		every_country = {
 			limit = {
@@ -2996,10 +2982,9 @@ country_event = { #Bring forward a charter on pan-Asian trade
 		}
 	}
 	option = { # ...but maybe we can soften the terms
+		log = "[GetLogInfo]: event japfor.27 option japfor.27.b"
 		name = japfor.27.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = JAP_pressured_for_trade
 		custom_effect_tooltip = JAP_nerf_copro_bonuses_tt
 		custom_effect_tooltip = JAP_100_chance_of_agreeing_tt
@@ -3018,16 +3003,14 @@ country_event = { #Bring forward a charter on pan-Asian trade
 
 country_event = { #Japan's resolution on trade
 	id = japfor.28
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.28 FROM = [From.GetName]" }
 	title = japfor.28.t
 	desc = japfor.28.d
 	is_triggered_only = yes
 	picture = GFX_report_event_generic_diplomacy1
 
 	option = { #sign!
-		ai_chance = {
-			base = 80
-		}
+		log = "[GetLogInfo]: event japfor.28 option japfor.28.a"
+		ai_chance = { base = 80 }
 		name = japfor.28.a
 		if = {
 			limit = { country_exists = GER }
@@ -3037,6 +3020,7 @@ country_event = { #Japan's resolution on trade
 	}
 
 	option = { #no
+		log = "[GetLogInfo]: event japfor.28 option japfor.28.b"
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -3064,7 +3048,6 @@ country_event = { #Japan's resolution on trade
 
 country_event = { #Call for economic integration
 	id = japfor.29
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.29 FROM = [From.GetName]" }
 	title = japfor.29.t
 	desc = japfor.29.d
 	picture = GFX_report_event_JAP_meeting
@@ -3080,10 +3063,9 @@ country_event = { #Call for economic integration
 	}
 
 	option = { # Publish it for signing
+		log = "[GetLogInfo]: event japfor.29 option japfor.29.a"
 		name = japfor.29.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		custom_effect_tooltip = JAP_80_chance_of_agreeing_tt
 		every_country = {
 			limit = {
@@ -3097,10 +3079,9 @@ country_event = { #Call for economic integration
 		}
 	}
 	option = { # Lessen the terms of the agreement
+		log = "[GetLogInfo]: event japfor.29 option japfor.29.b"
 		name = japfor.29.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = JAP_harder_eco_int
 		set_variable = { JAP_eco_cost_1 = 200 }
 		set_variable = { JAP_eco_cost_2 = 400 }
@@ -3121,13 +3102,13 @@ country_event = { #Call for economic integration
 
 country_event = { #Japan's resolution on economic integration
 	id = japfor.30
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.30 FROM = [From.GetName]" }
 	title = japfor.30.t
 	desc = japfor.30.d
 	is_triggered_only = yes
 	picture = GFX_report_event_SIA_Treaty_signed
 
 	option = { #sign!
+		log = "[GetLogInfo]: event japfor.30 option japfor.30.a"
 		trigger = {
 			NOT = {
 				AND = {
@@ -3137,15 +3118,14 @@ country_event = { #Japan's resolution on economic integration
 				}
 			}
 		}
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		name = japfor.30.a
 		add_political_power = 25
 		set_country_flag = tokyo_conference_trade_ally
 	}
 
 	option = { #no
+		log = "[GetLogInfo]: event japfor.30 option japfor.30.b"
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -3172,7 +3152,6 @@ country_event = { #Japan's resolution on economic integration
 
 country_event = { #Call for military action vs colonialists
 	id = japfor.31
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.31 FROM = [From.GetName]" }
 	title = japfor.31.t
 	desc = japfor.31.d
 	picture = GFX_report_event_JAP_restorationist_centralist
@@ -3188,10 +3167,9 @@ country_event = { #Call for military action vs colonialists
 	}
 
 	option = { #publish it for signing
+		log = "[GetLogInfo]: event japfor.31 option japfor.31.a"
 		name = japfor.31.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		custom_effect_tooltip = JAP_80_chance_of_agreeing_tt
 		every_country = {
 			limit = {
@@ -3202,10 +3180,9 @@ country_event = { #Call for military action vs colonialists
 		}
 	}
 	option = { # Pressure the attendees
+		log = "[GetLogInfo]: event japfor.31 option japfor.31.b"
 		name = japfor.31.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_political_power = -100
 		set_country_flag = JAP_pressured_for_ally
 		custom_effect_tooltip = JAP_100_chance_of_agreeing_tt
@@ -3221,7 +3198,6 @@ country_event = { #Call for military action vs colonialists
 
 country_event = { #Japan's resolution on military alliance
 	id = japfor.32
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.32 FROM = [From.GetName]" }
 	title = japfor.32.t
 	desc = japfor.32.d
 	picture = GFX_report_event_JAP_rising_sun
@@ -3229,6 +3205,7 @@ country_event = { #Japan's resolution on military alliance
 	is_triggered_only = yes
 
 	option = { #sign!
+		log = "[GetLogInfo]: event japfor.32 option japfor.32.a"
 		trigger = {
 			NOT = {
 				AND = {
@@ -3238,9 +3215,7 @@ country_event = { #Japan's resolution on military alliance
 				}
 			}
 		}
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		name = japfor.32.a
 		clr_country_flag = attending_tokyo_conference
 		add_to_array = { global.JAP_possible_allies_array = ROOT }
@@ -3250,6 +3225,7 @@ country_event = { #Japan's resolution on military alliance
 	}
 
 	option = { #no
+		log = "[GetLogInfo]: event japfor.32 option japfor.32.b"
 		trigger = {
 			NOT = { JAP = { is_ally_with = ROOT } }
 		}
@@ -3270,7 +3246,6 @@ country_event = { #Japan's resolution on military alliance
 
 country_event = { #FROM signs the military alliance
 	id = japfor.33
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.33 FROM = [From.GetName]" }
 	title = japfor.33.t
 	desc = japfor.33.d
 	picture = GFX_report_event_SIA_Treaty_signed
@@ -3278,19 +3253,20 @@ country_event = { #FROM signs the military alliance
 	is_triggered_only = yes
 
 	option = { #excellent!
+		log = "[GetLogInfo]: event japfor.33 option japfor.33.a"
 		name = japfor.33.a
 	}
 }
 
 country_event = { #FROM seperatist Chinese tag accepts offer
 	id = japfor.340
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.340 FROM = [From.GetName]" }
 	title = japfor.340.t
 	desc = japfor.340.d
 	is_triggered_only = yes
 	picture = GFX_report_event_generic_diplomacy3
 
 	option = {
+		log = "[GetLogInfo]: event japfor.340 option japfor.340.a"
 		name = japfor.340.a
 		add_to_faction = FROM
 	}
@@ -3298,26 +3274,26 @@ country_event = { #FROM seperatist Chinese tag accepts offer
 
 country_event = { #FROM seperatist Chinese tag refuses offer
 	id = japfor.341
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.341 FROM = [From.GetName]" }
 	title = japfor.341.t
 	desc = japfor.341.d
 	is_triggered_only = yes
 	picture = GFX_report_event_JAP_ultimatum
 
 	option = {
+		log = "[GetLogInfo]: event japfor.341 option japfor.341.a"
 		name = japfor.341.a
 	}
 }
 
 country_event = { #Japan offers membership in sphere / from Tokyo Conference
 	id = japfor.342
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.342 FROM = [From.GetName]" }
 	title = japfor.342.t
 	desc = japfor.342.d
 	is_triggered_only = yes
 	picture = GFX_report_event_JAP_foreign_minister_2
 
 	option = {
+		log = "[GetLogInfo]: event japfor.342 option japfor.342.a"
 		name = japfor.342.a #Accepts
 		ai_chance = {
 			base = 100
@@ -3359,6 +3335,7 @@ country_event = { #Japan offers membership in sphere / from Tokyo Conference
 		}
 	}
 	option = {
+		log = "[GetLogInfo]: event japfor.342 option japfor.342.b"
 		name = japfor.342.b #Refuses
 		ai_chance = {
 			base = 0
@@ -3405,7 +3382,6 @@ country_event = { #Japan offers membership in sphere / from Tokyo Conference
 
 country_event = { #Japanese ultimatum
 	id = japfor.41
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.41 FROM = [From.GetName]" }
 	title = japfor.41.t
 	desc = japfor.41.d
 	picture = GFX_report_event_JAP_ultimatum
@@ -3413,20 +3389,18 @@ country_event = { #Japanese ultimatum
 	is_triggered_only = yes
 
 	option = { #ignore
+		log = "[GetLogInfo]: event japfor.41 option japfor.41.a"
 		name = japfor.41.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		JAP = {
 			country_event = { id = japfor.42 days = 2 }
 		}
 	}
 
 	option = { #Agree
+		log = "[GetLogInfo]: event japfor.41 option japfor.41.b"
 		name = japfor.41.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_stability = -0.30
 		JAP = {
 			country_event = { id = japfor.43 days = 2 }
@@ -3436,7 +3410,6 @@ country_event = { #Japanese ultimatum
 
 country_event = { #Germany refuses our ultimatum
 	id = japfor.42
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.42 FROM = [From.GetName]" }
 	title = japfor.42.t
 	desc = japfor.42.d
 	picture = GFX_report_event_GEA_coltroops
@@ -3445,27 +3418,24 @@ country_event = { #Germany refuses our ultimatum
 	fire_only_once = yes
 
 	option = { #Declare war!
+		log = "[GetLogInfo]: event japfor.42 option japfor.42.a"
 		name = japfor.42.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		declare_war_on = {
 			target = GEA
 			type = annex_everything
 		}
 	}
 	option = { #back down
+		log = "[GetLogInfo]: event japfor.42 option japfor.42.b"
 		name = japfor.42.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_stability = -0.10
 	}
 }
 
 country_event = { #GEA accepts our conditions
 	id = japfor.43
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.43 FROM = [From.GetName]" }
 	title = japfor.43.t
 	desc = japfor.43.d
 	picture = GFX_report_event_japan_europe_pact
@@ -3474,6 +3444,7 @@ country_event = { #GEA accepts our conditions
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.43 option japfor.43.a"
 		name = japfor.43.a
 		every_country = {
 			limit = {
@@ -3510,7 +3481,6 @@ country_event = { #GEA accepts our conditions
 
 country_event = { #My Raja, Japan brings us news!
 	id = japfor.45
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.45 FROM = [From.GetName]" }
 	title = japfor.45.t
 	desc = japfor.45.d
 	picture = GFX_report_event_JAP_announcement
@@ -3518,6 +3488,7 @@ country_event = { #My Raja, Japan brings us news!
 	is_triggered_only = yes
 
 	option = { #Accept
+		log = "[GetLogInfo]: event japfor.45 option japfor.45.a"
 		name = japfor.45.a
 		ai_chance = {
 			base = 60
@@ -3570,6 +3541,7 @@ country_event = { #My Raja, Japan brings us news!
 		}
 	}
 	option = { #Politely decline their support
+		log = "[GetLogInfo]: event japfor.45 option japfor.45.b"
 		name = japfor.45.b
 		ai_chance = {
 			base = 40
@@ -3599,7 +3571,6 @@ country_event = { #My Raja, Japan brings us news!
 
 country_event = { #Offer accepted
 	id = japfor.46
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.46 FROM = [From.GetName]" }
 	title = japfor.46.t
 	desc = japfor.46.d
 	picture = GFX_report_event_RAJ_raj
@@ -3607,6 +3578,7 @@ country_event = { #Offer accepted
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.46 option japfor.46.a"
 		name = japfor.46.a
 		add_political_power = 25
 		if = {
@@ -3629,7 +3601,6 @@ country_event = { #Offer accepted
 
 country_event = { #India declines us
 	id = japfor.47
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.47 FROM = [From.GetName]" }
 	title = japfor.47.t
 	desc = japfor.47.d
 	picture = GFX_report_event_JAP_ambassador_kisaburo
@@ -3637,6 +3608,7 @@ country_event = { #India declines us
 	is_triggered_only = yes
 
 	option = { #Damn and blast
+		log = "[GetLogInfo]: event japfor.47 option japfor.47.a"
 		name = japfor.47.a
 		add_political_power = -25
 	}
@@ -3648,7 +3620,6 @@ country_event = { #India declines us
 
 country_event = { #Japan threatens us!
 	id = japfor.55
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.55 FROM = [From.GetName]" }
 	title = japfor.55.t
 	desc = japfor.55.d
 	picture = GFX_report_event_JAP_mutsu
@@ -3660,10 +3631,9 @@ country_event = { #Japan threatens us!
 	is_triggered_only = yes
 
 	option = { #resist
+		log = "[GetLogInfo]: event japfor.55 option japfor.55.a"
 		name = japfor.55.a
-		ai_chance = {
-			base = 75
-		}
+		ai_chance = { base = 75 }
 		add_stability = 0.05
 		if = {
 			limit = { is_subject = yes }
@@ -3751,6 +3721,7 @@ country_event = { #Japan threatens us!
 	}
 
 	option = { #surrender
+		log = "[GetLogInfo]: event japfor.55 option japfor.55.b"
 		name = japfor.55.b
 		trigger = { is_subject = no }
 		ai_chance = {
@@ -3782,7 +3753,6 @@ country_event = { #Japan threatens us!
 
 country_event = { #Philippines begs for help
 	id = japfor.56
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.56 FROM = [From.GetName]" }
 	title = japfor.56.t
 	desc = japfor.56.d
 	picture = GFX_report_event_generic_diplomacy4
@@ -3790,6 +3760,7 @@ country_event = { #Philippines begs for help
 	is_triggered_only = yes
 
 	option = { #offer help
+		log = "[GetLogInfo]: event japfor.56 option japfor.56.a"
 		name = japfor.56.a
 		ai_chance = {
 			base = 25
@@ -3817,6 +3788,7 @@ country_event = { #Philippines begs for help
 	}
 
 	option = { #don't
+		log = "[GetLogInfo]: event japfor.56 option japfor.56.b"
 		name = japfor.56.b
 		trigger = {
 			NOT = {
@@ -3824,9 +3796,7 @@ country_event = { #Philippines begs for help
 				FROM = { is_guaranteed_by = ROOT }
 			}
 		}
-		ai_chance = {
-			base = 75
-		}
+		ai_chance = { base = 75 }
 		JAP = {
 			country_event = { id = japfor.58 days = 2 }
 		}
@@ -3835,7 +3805,6 @@ country_event = { #Philippines begs for help
 
 country_event = { #Philippines resists with foreign backing
 	id = japfor.57
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.57 FROM = [From.GetName]" }
 	title = japfor.57.t
 	desc = japfor.57.d
 	picture = GFX_report_event_GER_ship
@@ -3847,6 +3816,7 @@ country_event = { #Philippines resists with foreign backing
 	}
 
 	option = { #war
+		log = "[GetLogInfo]: event japfor.57 option japfor.57.a"
 		name = japfor.57.a
 		ai_chance = {
 			base = 75
@@ -3861,10 +3831,9 @@ country_event = { #Philippines resists with foreign backing
 		}
 	}
 	option = { #back down
+		log = "[GetLogInfo]: event japfor.57 option japfor.57.b"
 		name = japfor.57.b
-		ai_chance = {
-			base = 25
-		}
+		ai_chance = { base = 25 }
 		add_war_support = -0.10
 		event_target:philippines_backer = {
 			country_event = japfor.5701
@@ -3877,7 +3846,6 @@ country_event = { #Philippines resists with foreign backing
 
 country_event = { #Japan has backed down
 	id = japfor.5701
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.5701 FROM = [From.GetName]" }
 	title = japfor.5701.t
 	desc = japfor.5701.d
 	picture = GFX_report_event_JAP_foreign_minister
@@ -3885,13 +3853,13 @@ country_event = { #Japan has backed down
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.5701 option japfor.5701.a"
 		name = japfor.5701.a
 	}
 }
 
 country_event = { #Philippines resists without backing
 	id = japfor.58
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.58 FROM = [From.GetName]" }
 	title = japfor.58.t
 	desc = japfor.58.d
 	picture = GFX_report_event_JAP_battle_flag
@@ -3903,6 +3871,7 @@ country_event = { #Philippines resists without backing
 	}
 
 	option = { #war
+		log = "[GetLogInfo]: event japfor.58 option japfor.58.a"
 		name = japfor.58.a
 		declare_war_on = {
 			target = PHI
@@ -3913,7 +3882,6 @@ country_event = { #Philippines resists without backing
 
 country_event = { #Philippines Surrenders!
 	id = japfor.59
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.59 FROM = [From.GetName]" }
 	title = japfor.59.t
 	desc = japfor.59.d
 	picture = GFX_report_event_JAP_rising_sun
@@ -3925,6 +3893,7 @@ country_event = { #Philippines Surrenders!
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.59 option japfor.59.a"
 		name = japfor.59.a
 		if = {
 			limit = { PHI = { has_socialist_government = yes } }
@@ -3942,6 +3911,7 @@ country_event = { #Philippines Surrenders!
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.59 option japfor.59.b"
 		name = japfor.59.b
 		trigger = {
 			PHI = { is_ai = yes }
@@ -3954,7 +3924,6 @@ country_event = { #Philippines Surrenders!
 
 country_event = { #Japan threatens us!
 	id = japfor.62
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.62 FROM = [From.GetName]" }
 	title = japfor.62.t
 	desc = japfor.62.d
 	picture = GFX_report_event_JAP_mutsu
@@ -3967,10 +3936,9 @@ country_event = { #Japan threatens us!
 	}
 
 	option = { #resist
+		log = "[GetLogInfo]: event japfor.62 option japfor.62.a"
 		name = japfor.62.a
-		ai_chance = {
-			base = 65
-		}
+		ai_chance = { base = 65 }
 		division_template = {
 			name = "Militia"
 			division_names_group = USA_GAR_01
@@ -4024,6 +3992,7 @@ country_event = { #Japan threatens us!
 	}
 
 	option = { #surrender
+		log = "[GetLogInfo]: event japfor.62 option japfor.62.b"
 		name = japfor.62.b
 		ai_chance = {
 			base = 35
@@ -4040,7 +4009,6 @@ country_event = { #Japan threatens us!
 
 country_event = { #Hawaii Surrenders!
 	id = japfor.63
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.63 FROM = [From.GetName]" }
 	title = japfor.63.t
 	desc = japfor.63.d
 	picture = GFX_report_event_CHI_ambassador_announcement
@@ -4052,6 +4020,7 @@ country_event = { #Hawaii Surrenders!
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.63 option japfor.63.a"
 		name = japfor.63.a
 		if = {
 			limit = { HAW = { has_socialist_government = yes } }
@@ -4069,6 +4038,7 @@ country_event = { #Hawaii Surrenders!
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.63 option japfor.63.b"
 		name = japfor.63.b
 		trigger = {
 			HAW = { is_ai = yes }
@@ -4081,7 +4051,6 @@ country_event = { #Hawaii Surrenders!
 
 country_event = { #Hawaii begs for help
 	id = japfor.64
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.64 FROM = [From.GetName]" }
 	title = japfor.64.t
 	desc = japfor.64.d
 	picture = GFX_report_event_JAP_mutsu
@@ -4095,6 +4064,7 @@ country_event = { #Hawaii begs for help
 	}
 
 	option = { #help
+		log = "[GetLogInfo]: event japfor.64 option japfor.64.a"
 		name = japfor.64.a
 		ai_chance = {
 			base = 25
@@ -4123,6 +4093,7 @@ country_event = { #Hawaii begs for help
 		}
 	}
 	option = { #Don't
+		log = "[GetLogInfo]: event japfor.64 option japfor.65.b"
 		name = japfor.65.b
 		trigger = {
 			NOT = {
@@ -4131,9 +4102,7 @@ country_event = { #Hawaii begs for help
 				has_war_with = JAP
 			}
 		}
-		ai_chance = {
-			base = 75
-		}
+		ai_chance = { base = 75 }
 		add_stability = 0.05
 		JAP = {
 			country_event = { id = japfor.66 days = 2 }
@@ -4143,7 +4112,6 @@ country_event = { #Hawaii begs for help
 
 country_event = { #Hawaii resists with American backing
 	id = japfor.65
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.65 FROM = [From.GetName]" }
 	title = japfor.65.t
 	desc = japfor.65.d
 	picture = GFX_report_event_USA_soldiers_watching
@@ -4155,6 +4123,7 @@ country_event = { #Hawaii resists with American backing
 	}
 
 	option = { #war
+		log = "[GetLogInfo]: event japfor.65 option japfor.65.a"
 		name = japfor.65.a
 		ai_chance = {
 			base = 50
@@ -4180,6 +4149,7 @@ country_event = { #Hawaii resists with American backing
 		}
 	}
 	option = { #Don't
+		log = "[GetLogInfo]: event japfor.65 option japfor.65.b"
 		name = japfor.65.b
 		ai_chance = {
 			base = 50
@@ -4194,7 +4164,6 @@ country_event = { #Hawaii resists with American backing
 
 country_event = { #Hawaii resists without American backing
 	id = japfor.66
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.66 FROM = [From.GetName]" }
 	title = japfor.66.t
 	desc = japfor.66.d
 	picture = GFX_report_event_USA_soldiers1
@@ -4206,6 +4175,7 @@ country_event = { #Hawaii resists without American backing
 	}
 
 	option = { #war
+		log = "[GetLogInfo]: event japfor.66 option japfor.65.a"
 		name = japfor.65.a
 		ai_chance = {
 			base = 50
@@ -4220,6 +4190,7 @@ country_event = { #Hawaii resists without American backing
 		}
 	}
 	option = { #Don't
+		log = "[GetLogInfo]: event japfor.66 option japfor.65.b"
 		name = japfor.65.b
 		ai_chance = {
 			base = 50
@@ -4243,7 +4214,6 @@ country_event = { #Hawaii resists without American backing
 
 country_event = { # Kitei Son and Nan Shoryu
 	id = japfor.500
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.500 FROM = [From.GetName]" }
 	title = japfor.500.t
 	desc = japfor.500.d
 	picture = GFX_report_event_JAP_foreign_minister
@@ -4252,13 +4222,13 @@ country_event = { # Kitei Son and Nan Shoryu
 	is_triggered_only = yes
 
 	option = { # Japanese, whether they like or not!
+		log = "[GetLogInfo]: event japfor.500 option japfor.500.a"
 		name = japfor.500.a
 	}
 }
 
 country_event = { #The Legacy of the Korean Rebellion of 1925
 	id = japfor.501
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.501 FROM = [From.GetName]" }
 	title = japfor.501.t
 	desc = japfor.501.d
 	picture = GFX_report_event_FNG_protest
@@ -4267,6 +4237,7 @@ country_event = { #The Legacy of the Korean Rebellion of 1925
 	is_triggered_only = yes
 
 	option = { # Launch a crackdown immediately!
+		log = "[GetLogInfo]: event japfor.501 option japfor.501.a"
 		name = japfor.501.a
 		add_stability = -0.05
 		add_political_power = -25
@@ -4275,7 +4246,6 @@ country_event = { #The Legacy of the Korean Rebellion of 1925
 
 country_event = { # Wartime Unrest in Korea
 	id = japfor.67
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.67 FROM = [From.GetName]" }
 	title = japfor.67.t
 	desc = japfor.67.d
 	picture = GFX_report_event_CHI_china_abandoned
@@ -4289,6 +4259,7 @@ country_event = { # Wartime Unrest in Korea
 	}
 
 	option = { # Bolster the Chōsen Garrison!
+		log = "[GetLogInfo]: event japfor.67 option japfor.67.a"
 		name = japfor.67.a
 		add_manpower = -5000
 		add_equipment_to_stockpile = {
@@ -4301,7 +4272,6 @@ country_event = { # Wartime Unrest in Korea
 
 country_event = { #The Busan Negotiations
 	id = japfor.510
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.510 FROM = [From.GetName]" }
 	title = japfor.510.t
 	desc = japfor.510.d
 	picture = GFX_report_event_JAP_crowd
@@ -4310,6 +4280,7 @@ country_event = { #The Busan Negotiations
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.510 option japfor.510.a"
 		name = japfor.510.a
 		add_stability = -0.05
 		set_variable = { JAP_korean_anger_var = 0 }
@@ -4319,13 +4290,13 @@ country_event = { #The Busan Negotiations
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.510 option japfor.510.b"
 		name = japfor.510.b
 	}
 }
 
 country_event = { # First Negotiation; Japanization policies
 	id = japfor.511
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.511 FROM = [From.GetName]" }
 	title = japfor.511.t
 	desc = japfor.511.d
 	picture = GFX_report_event_JAP_meeting
@@ -4334,6 +4305,7 @@ country_event = { # First Negotiation; Japanization policies
 	is_triggered_only = yes
 
 	option = { # Let them keep some Korean
+		log = "[GetLogInfo]: event japfor.511 option japfor.511.a"
 		name = japfor.511.a
 		add_political_power = -15
 		hidden_effect = {
@@ -4341,6 +4313,7 @@ country_event = { # First Negotiation; Japanization policies
 		}
 	}
 	option = { # Must have Japanization
+		log = "[GetLogInfo]: event japfor.511 option japfor.511.b"
 		name = japfor.511.b
 		custom_effect_tooltip = JAP_koreans_strongly_oppose
 		hidden_effect = {
@@ -4351,7 +4324,6 @@ country_event = { # First Negotiation; Japanization policies
 
 country_event = { # Second Negotiation - Status of Korea in the empire
 	id = japfor.512
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.512 FROM = [From.GetName]" }
 	title = japfor.512.t
 	desc = japfor.512.d
 	picture = GFX_report_event_JAP_politician
@@ -4360,6 +4332,7 @@ country_event = { # Second Negotiation - Status of Korea in the empire
 	is_triggered_only = yes
 
 	option = { # Incorporate it into the empire
+		log = "[GetLogInfo]: event japfor.512 option japfor.512.a"
 		name = japfor.512.a
 		add_political_power = -15
 		hidden_effect = {
@@ -4367,6 +4340,7 @@ country_event = { # Second Negotiation - Status of Korea in the empire
 		}
 	}
 	option = { # Keep it as a colony
+		log = "[GetLogInfo]: event japfor.512 option japfor.512.b"
 		name = japfor.512.b
 		add_to_variable = { JAP_korean_anger_var = 1 }
 		if = {
@@ -4387,7 +4361,6 @@ country_event = { # Second Negotiation - Status of Korea in the empire
 
 country_event = { # Third Negotiation - Pick the Governor-general of Korea
 	id = japfor.513
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.513 FROM = [From.GetName]" }
 	title = japfor.513.t
 	desc = japfor.513.d
 	picture = GFX_report_event_JAP_foreign_minister_2
@@ -4396,6 +4369,7 @@ country_event = { # Third Negotiation - Pick the Governor-general of Korea
 	is_triggered_only = yes
 
 	option = { # Korean
+		log = "[GetLogInfo]: event japfor.513 option japfor.513.a"
 		name = japfor.513.a
 		add_political_power = -15
 		hidden_effect = {
@@ -4404,6 +4378,7 @@ country_event = { # Third Negotiation - Pick the Governor-general of Korea
 	}
 
 	option = { # Japanese
+		log = "[GetLogInfo]: event japfor.513 option japfor.513.b"
 		name = japfor.513.b
 		custom_effect_tooltip = JAP_koreans_strongly_oppose
 		hidden_effect = {
@@ -4414,7 +4389,6 @@ country_event = { # Third Negotiation - Pick the Governor-general of Korea
 
 country_event = { # Third negotiation - Koreans serving in the government?
 	id = japfor.514
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.514 FROM = [From.GetName]" }
 	title = japfor.514.t
 	desc = japfor.514.d
 	picture = GFX_report_event_JAP_diet
@@ -4423,6 +4397,7 @@ country_event = { # Third negotiation - Koreans serving in the government?
 	is_triggered_only = yes
 
 	option = { # Sure why not
+		log = "[GetLogInfo]: event japfor.514 option japfor.514.a"
 		name = japfor.514.a
 		add_political_power = -15
 		hidden_effect = {
@@ -4431,6 +4406,7 @@ country_event = { # Third negotiation - Koreans serving in the government?
 	}
 
 	option = { # No way
+		log = "[GetLogInfo]: event japfor.514 option japfor.514.b"
 		name = japfor.514.b
 		add_to_variable = { JAP_korean_anger_var = 1 }
 		if = {
@@ -4451,7 +4427,6 @@ country_event = { # Third negotiation - Koreans serving in the government?
 
 country_event = { # Third negotiation - Democracy in Korea?
 	id = japfor.515
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.515 FROM = [From.GetName]" }
 	title = japfor.515.t
 	desc = japfor.515.d
 	picture = GFX_report_event_election_vote
@@ -4460,6 +4435,7 @@ country_event = { # Third negotiation - Democracy in Korea?
 	is_triggered_only = yes
 
 	option = { # Allow partial suffrage
+		log = "[GetLogInfo]: event japfor.515 option japfor.515.a"
 		name = japfor.515.a
 		add_political_power = -15
 		hidden_effect = {
@@ -4468,6 +4444,7 @@ country_event = { # Third negotiation - Democracy in Korea?
 	}
 
 	option = { # Nope
+		log = "[GetLogInfo]: event japfor.515 option japfor.515.b"
 		name = japfor.515.b
 		add_to_variable = { JAP_korean_anger_var = 1 }
 		if = {
@@ -4488,7 +4465,6 @@ country_event = { # Third negotiation - Democracy in Korea?
 
 country_event = { # Fourth Negotiation - Political prisoners
 	id = japfor.516
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.516 FROM = [From.GetName]" }
 	title = japfor.516.t
 	desc = japfor.516.d
 	picture = GFX_report_event_FNG_several_prisoners
@@ -4497,6 +4473,7 @@ country_event = { # Fourth Negotiation - Political prisoners
 	is_triggered_only = yes
 
 	option = { # Release them
+		log = "[GetLogInfo]: event japfor.516 option japfor.516.a"
 		name = japfor.516.a
 		add_political_power = -15
 		hidden_effect = {
@@ -4505,6 +4482,7 @@ country_event = { # Fourth Negotiation - Political prisoners
 	}
 
 	option = { # Keep them in Jail
+		log = "[GetLogInfo]: event japfor.516 option japfor.516.b"
 		name = japfor.516.b
 		add_to_variable = { JAP_korean_anger_var = 1 }
 		if = {
@@ -4523,7 +4501,6 @@ country_event = { # Fourth Negotiation - Political prisoners
 
 country_event = { # Negotiations Successful!
 	id = japfor.517
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.517 FROM = [From.GetName]" }
 	title = japfor.517.t
 	desc = japfor.517.d
 
@@ -4532,6 +4509,7 @@ country_event = { # Negotiations Successful!
 	picture = GFX_report_event_CHI_official_announcement
 
 	option = { # Our benevolence knows no bounds!
+		log = "[GetLogInfo]: event japfor.517 option japfor.517.a"
 		name = japfor.517.a
 		set_temp_variable = { ideology_change_var = -5 }
 		change_ruling_party_popularity = yes
@@ -4542,7 +4520,6 @@ country_event = { # Negotiations Successful!
 
 country_event = { # Negotiations Failed!
 	id = japfor.518
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.518 FROM = [From.GetName]" }
 	title = japfor.518.t
 	desc = japfor.518.d
 
@@ -4551,6 +4528,7 @@ country_event = { # Negotiations Failed!
 	picture = GFX_report_event_generic_riot3
 
 	option = { # How insolent of them...
+		log = "[GetLogInfo]: event japfor.518 option japfor.518.a"
 		name = japfor.518.a
 	}
 }
@@ -4561,7 +4539,6 @@ country_event = { # Negotiations Failed!
 
 country_event = {
 	id = japfor.90
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.90 FROM = [From.GetName]" }
 	title = japfor.90.t
 	desc = japfor.90.d
 	picture = GFX_report_event_generic_economy_growth
@@ -4569,6 +4546,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.90 option japfor.90.a"
 		name = japfor.90.a
 		ai_chance = {
 			base = 100
@@ -4597,6 +4575,7 @@ country_event = {
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.90 option japfor.90.b"
 		name = japfor.90.b
 		ai_chance = {
 			base = 0
@@ -4615,7 +4594,6 @@ country_event = {
 
 country_event = {
 	id = japfor.91
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.91 FROM = [From.GetName]" }
 	title = japfor.91.t
 	desc = japfor.91.d
 	picture = GFX_report_event_generic_economy_growth
@@ -4623,13 +4601,13 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.91 option japfor.91.a"
 		name = japfor.91.a
 	}
 }
 
 country_event = {
 	id = japfor.92
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.92 FROM = [From.GetName]" }
 	title = japfor.92.t
 	desc = japfor.92.d
 	picture = GFX_report_event_generic_economy_growth
@@ -4637,6 +4615,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.92 option japfor.92.a"
 		name = japfor.92.a
 	}
 }
@@ -4647,7 +4626,6 @@ country_event = {
 
 country_event = { #Report from Far East
 	id = japfor.112
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.112 FROM = [From.GetName]" }
 	title = japfor.112.t
 	desc = japfor.112.d
 	picture = GFX_report_event_CHI_intelligence
@@ -4656,17 +4634,15 @@ country_event = { #Report from Far East
 	fire_only_once = yes
 
 	option = { #Do nothing
+		log = "[GetLogInfo]: event japfor.112 option japfor.112.a"
 		name = japfor.112.a
-		ai_chance = {
-			base = 25
-		}
+		ai_chance = { base = 25 }
 	}
 
 	option = { #Strongly worded letter
+		log = "[GetLogInfo]: event japfor.112 option japfor.112.b"
 		name = japfor.112.b
-		ai_chance = {
-			base = 75
-		}
+		ai_chance = { base = 75 }
 		JAP = {
 			country_event = japfor.113
 		}
@@ -4675,7 +4651,6 @@ country_event = { #Report from Far East
 
 country_event = { #Report from Germany
 	id = japfor.113
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.113 FROM = [From.GetName]" }
 	title = japfor.113.t
 	desc = japfor.113.d
 
@@ -4683,18 +4658,19 @@ country_event = { #Report from Germany
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.113 option japfor.113.a"
 		name = japfor.113.a
 	}
 }
 
 country_event = { #Operation Kuma
 	id = japfor.114
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.114 FROM = [From.GetName]" }
 	title = japfor.114.t
 	desc = japfor.114.d
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.114 option japfor.114.a"
 		name = japfor.114.a
 		add_war_support = 0.05
 	}
@@ -4705,7 +4681,6 @@ country_event = { #Operation Kuma
 country_event = { #Japanese demands - HOL
 
 	id = japfor.176
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.176 FROM = [From.GetName]" }
 	title = japfor.176.t
 	desc = japfor.176.d
 	picture = GFX_report_event_JAP_ultimatum
@@ -4713,6 +4688,7 @@ country_event = { #Japanese demands - HOL
 	is_triggered_only = yes
 
 	option = { #Germany
+		log = "[GetLogInfo]: event japfor.176 option japfor.176.a"
 
 		trigger = {
 			country_exists = GER
@@ -4724,9 +4700,7 @@ country_event = { #Japanese demands - HOL
 		}
 
 		name = japfor.176.a
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 
 		GER = {
 			country_event = { id = japfor.177 days = 1 }
@@ -4736,6 +4710,7 @@ country_event = { #Japanese demands - HOL
 	}
 
 	option = { #surrender
+		log = "[GetLogInfo]: event japfor.176 option japfor.176.b"
 
 		trigger = {
 
@@ -4746,9 +4721,7 @@ country_event = { #Japanese demands - HOL
 		}
 
 		name = japfor.176.b
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 10 }
 
 		add_stability = -0.10
 
@@ -4758,6 +4731,7 @@ country_event = { #Japanese demands - HOL
 	}
 
 	option = { #face them alone
+		log = "[GetLogInfo]: event japfor.176 option japfor.176.c"
 
 		name = japfor.176.c
 		ai_chance = {
@@ -4783,7 +4757,6 @@ country_event = { #Japanese demands - HOL
 country_event = { #Dutch beg for help
 
 	id = japfor.177
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.177 FROM = [From.GetName]" }
 	title = japfor.177.t
 	desc = japfor.177.d
 	picture = GFX_report_event_generic_diplomacy4
@@ -4791,6 +4764,7 @@ country_event = { #Dutch beg for help
 	is_triggered_only = yes
 
 	option = { #Agree
+		log = "[GetLogInfo]: event japfor.177 option japfor.177.a"
 
 		name = japfor.177.a
 		ai_chance = {
@@ -4813,11 +4787,10 @@ country_event = { #Dutch beg for help
 	}
 
 	option = { #decline
+		log = "[GetLogInfo]: event japfor.177 option japfor.177.b"
 
 		name = japfor.177.b
-		ai_chance = {
-			base = 30
-		}
+		ai_chance = { base = 30 }
 
 		add_political_power = -25
 
@@ -4830,7 +4803,6 @@ country_event = { #Dutch beg for help
 country_event = { #Germany supports the netherlands
 
 	id = japfor.178
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.178 FROM = [From.GetName]" }
 	title = japfor.178.t
 	desc = japfor.178.d
 	picture = GFX_report_event_GER_ship
@@ -4838,6 +4810,7 @@ country_event = { #Germany supports the netherlands
 	is_triggered_only = yes
 
 	option = { #attack
+		log = "[GetLogInfo]: event japfor.178 option japfor.178.a"
 		name = japfor.178.a
 		declare_war_on = {
 			target = GER
@@ -4848,6 +4821,7 @@ country_event = { #Germany supports the netherlands
 	}
 
 	option = { #Pull back
+		log = "[GetLogInfo]: event japfor.178 option japfor.178.b"
 		name = japfor.178.b
 		add_stability = -0.05
 
@@ -4863,7 +4837,6 @@ country_event = { #Germany supports the netherlands
 country_event = { #The Japanese back down
 
 	id = japfor.179
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.179 FROM = [From.GetName]" }
 	title = japfor.179.t
 	desc = japfor.179.d
 	picture = GFX_report_event_JAP_foreign_minister
@@ -4871,6 +4844,7 @@ country_event = { #The Japanese back down
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.179 option japfor.179.a"
 
 		name = japfor.179.a
 
@@ -4881,7 +4855,6 @@ country_event = { #The Japanese back down
 country_event = { #The Germans refuse!
 
 	id = japfor.180
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.180 FROM = [From.GetName]" }
 	title = japfor.180.t
 	desc = japfor.180.d
 	picture = GFX_report_event_JAP_battleship_kongo
@@ -4889,6 +4862,7 @@ country_event = { #The Germans refuse!
 	is_triggered_only = yes
 
 	option = { #surrender
+		log = "[GetLogInfo]: event japfor.180 option japfor.180.a"
 
 		trigger = {
 
@@ -4899,9 +4873,7 @@ country_event = { #The Germans refuse!
 		}
 
 		name = japfor.180.a
-		ai_chance = {
-			base = 90
-		}
+		ai_chance = { base = 90 }
 
 		add_stability = -0.10
 
@@ -4911,11 +4883,10 @@ country_event = { #The Germans refuse!
 	}
 
 	option = { #fight
+		log = "[GetLogInfo]: event japfor.180 option japfor.180.b"
 
 		name = japfor.180.b
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 10 }
 
 		add_war_support = 0.05
 
@@ -4928,7 +4899,6 @@ country_event = { #The Germans refuse!
 country_event = { #The Dutch fold!
 
 	id = japfor.181
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.181 FROM = [From.GetName]" }
 	title = japfor.181.t
 	desc = japfor.181.d
 	picture = GFX_report_event_JAP_rising_sun
@@ -4936,6 +4906,7 @@ country_event = { #The Dutch fold!
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.181 option japfor.181.a"
 
 		name = japfor.181.a
 
@@ -4962,7 +4933,6 @@ country_event = { #The Dutch fold!
 country_event = { #The Dutch resist!
 
 	id = japfor.182
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.182 FROM = [From.GetName]" }
 	title = japfor.182.t
 	desc = japfor.182.d
 	picture = GFX_report_event_HOL_dutch_army5
@@ -4970,11 +4940,10 @@ country_event = { #The Dutch resist!
 	is_triggered_only = yes
 
 	option = { #war
+		log = "[GetLogInfo]: event japfor.182 option japfor.182.a"
 
 		name = japfor.182.a
-		ai_chance = {
-			base = 95
-		}
+		ai_chance = { base = 95 }
 
 		add_war_support = 0.04
 
@@ -4999,11 +4968,10 @@ country_event = { #The Dutch resist!
 	}
 
 	option = { #back down
+		log = "[GetLogInfo]: event japfor.182 option japfor.182.b"
 
 		name = japfor.182.b
-		ai_chance = {
-			base = 5
-		}
+		ai_chance = { base = 5 }
 
 		add_stability = -0.10
 
@@ -5016,7 +4984,6 @@ country_event = { #The Dutch resist!
 country_event = { #The Japanese back down!
 
 	id = japfor.183
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.183 FROM = [From.GetName]" }
 	title = japfor.183.t
 	desc = japfor.183.d
 	picture = GFX_report_event_japanese_reply
@@ -5024,6 +4991,7 @@ country_event = { #The Japanese back down!
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.183 option japfor.183.a"
 
 		name = japfor.183.a
 
@@ -5034,7 +5002,6 @@ country_event = { #The Japanese back down!
 country_event = { #The Japanese demands INS
 
 	id = japfor.190
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.190 FROM = [From.GetName]" }
 	title = japfor.190.t
 	desc = japfor.190.d
 	picture = GFX_report_event_JAP_ultimatum
@@ -5042,6 +5009,7 @@ country_event = { #The Japanese demands INS
 	is_triggered_only = yes
 
 	option = { #Germany
+		log = "[GetLogInfo]: event japfor.190 option japfor.176.a"
 
 		trigger = {
 			country_exists = GER
@@ -5053,9 +5021,7 @@ country_event = { #The Japanese demands INS
 		}
 
 		name = japfor.176.a
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 
 		GER = {
 			country_event = { id = japfor.191 days = 2 }
@@ -5065,6 +5031,7 @@ country_event = { #The Japanese demands INS
 	}
 
 	option = { #surrender
+		log = "[GetLogInfo]: event japfor.190 option japfor.176.b"
 
 		trigger = {
 
@@ -5075,9 +5042,7 @@ country_event = { #The Japanese demands INS
 		}
 
 		name = japfor.176.b
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 10 }
 
 		add_stability = -0.10
 
@@ -5087,6 +5052,7 @@ country_event = { #The Japanese demands INS
 	}
 
 	option = { #face them alone
+		log = "[GetLogInfo]: event japfor.190 option japfor.176.c"
 
 		name = japfor.176.c
 		ai_chance = {
@@ -5112,7 +5078,6 @@ country_event = { #The Japanese demands INS
 country_event = { #Indonesia begs for help!
 
 	id = japfor.191
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.191 FROM = [From.GetName]" }
 	title = japfor.191.t
 	desc = japfor.191.d
 	picture = GFX_report_event_generic_diplomacy4
@@ -5120,6 +5085,7 @@ country_event = { #Indonesia begs for help!
 	is_triggered_only = yes
 
 	option = { #Agree
+		log = "[GetLogInfo]: event japfor.191 option japfor.177.a"
 
 		name = japfor.177.a
 		ai_chance = {
@@ -5142,11 +5108,10 @@ country_event = { #Indonesia begs for help!
 	}
 
 	option = { #decline
+		log = "[GetLogInfo]: event japfor.191 option japfor.177.b"
 
 		name = japfor.177.b
-		ai_chance = {
-			base = 30
-		}
+		ai_chance = { base = 30 }
 
 		add_political_power = -25
 
@@ -5159,7 +5124,6 @@ country_event = { #Indonesia begs for help!
 country_event = { #Germany supports Indonesia
 
 	id = japfor.192
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.192 FROM = [From.GetName]" }
 	title = japfor.192.t
 	desc = japfor.192.d
 	picture = GFX_report_event_GER_march
@@ -5167,6 +5131,7 @@ country_event = { #Germany supports Indonesia
 	is_triggered_only = yes
 
 	option = { #attack
+		log = "[GetLogInfo]: event japfor.192 option japfor.178.a"
 		name = japfor.178.a
 		declare_war_on = {
 			target = GER
@@ -5177,6 +5142,7 @@ country_event = { #Germany supports Indonesia
 	}
 
 	option = { #Pull back
+		log = "[GetLogInfo]: event japfor.192 option japfor.178.b"
 		name = japfor.178.b
 		add_stability = -0.05
 
@@ -5192,7 +5158,6 @@ country_event = { #Germany supports Indonesia
 country_event = { #The Japanese back down
 
 	id = japfor.193
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.193 FROM = [From.GetName]" }
 	title = japfor.179.t
 	desc = japfor.179.d
 	picture = GFX_report_event_japanese_reply
@@ -5200,6 +5165,7 @@ country_event = { #The Japanese back down
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.193 option japfor.179.a"
 
 		name = japfor.179.a
 
@@ -5210,7 +5176,6 @@ country_event = { #The Japanese back down
 country_event = { #The Germans refuse!
 
 	id = japfor.194
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.194 FROM = [From.GetName]" }
 	title = japfor.180.t
 	desc = japfor.180.d
 	picture = GFX_report_event_BEL_Retreating_Germans
@@ -5218,6 +5183,7 @@ country_event = { #The Germans refuse!
 	is_triggered_only = yes
 
 	option = { #surrender
+		log = "[GetLogInfo]: event japfor.194 option japfor.180.a"
 		trigger = {
 			NOT = {
 				has_government = national_populist
@@ -5232,6 +5198,7 @@ country_event = { #The Germans refuse!
 	}
 
 	option = { #fight
+		log = "[GetLogInfo]: event japfor.194 option japfor.180.b"
 		name = japfor.180.b
 
 		add_war_support = 0.05
@@ -5244,7 +5211,6 @@ country_event = { #The Germans refuse!
 country_event = { #The Indonesians fold!
 
 	id = japfor.195
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.195 FROM = [From.GetName]" }
 	title = japfor.195.t
 	desc = japfor.195.d
 	picture = GFX_report_event_japanese_parade
@@ -5252,6 +5218,7 @@ country_event = { #The Indonesians fold!
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.195 option japfor.181.a"
 		name = japfor.181.a
 		add_stability = 0.10
 
@@ -5271,7 +5238,6 @@ country_event = { #The Indonesians fold!
 country_event = { #The Indonsians resist!
 
 	id = japfor.196
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.196 FROM = [From.GetName]" }
 	title = japfor.196.t
 	desc = japfor.196.d
 	picture = GFX_report_event_JAP_battle_flag
@@ -5279,6 +5245,7 @@ country_event = { #The Indonsians resist!
 	is_triggered_only = yes
 
 	option = { #war
+		log = "[GetLogInfo]: event japfor.196 option japfor.196.a"
 		name = japfor.196.a
 
 		add_war_support = 0.04
@@ -5300,11 +5267,10 @@ country_event = { #The Indonsians resist!
 	}
 
 	option = { #back down
+		log = "[GetLogInfo]: event japfor.196 option japfor.182.b"
 
 		name = japfor.182.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 
 		add_stability = -0.10
 
@@ -5317,7 +5283,6 @@ country_event = { #The Indonsians resist!
 country_event = { #The Japanese back down!
 
 	id = japfor.197
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.197 FROM = [From.GetName]" }
 	title = japfor.183.t
 	desc = japfor.183.d
 	picture = GFX_report_event_JAP_foreign_minister
@@ -5325,6 +5290,7 @@ country_event = { #The Japanese back down!
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.197 option japfor.183.a"
 		name = japfor.183.a
 
 		add_stability = 0.10
@@ -5337,7 +5303,6 @@ country_event = { #The Japanese back down!
 
 country_event = { #Fengtian Requests a Bailout
 	id = japfor.202
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.202 FROM = [From.GetName]" }
 	title = japfor.202.t
 	desc = japfor.202.d
 	picture = GFX_report_event_CHI_official_announcement
@@ -5347,6 +5312,7 @@ country_event = { #Fengtian Requests a Bailout
 	is_triggered_only = yes
 
 	option = { #Accept
+		log = "[GetLogInfo]: event japfor.202 option japfor.202.a"
 		name = japfor.202.a
 		add_political_power = 25
 		add_timed_idea = {
@@ -5356,26 +5322,22 @@ country_event = { #Fengtian Requests a Bailout
 		FNG = {
 			country_event = fengtian.73
 		}
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 	}
 
 	option = { #Refuse
+		log = "[GetLogInfo]: event japfor.202 option japfor.202.b"
 		name = japfor.202.b
 		add_stability = -0.05
 		FNG = {
 			country_event = fengtian.74
 		}
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 	}
 }
 
 country_event = { #Fengtian blames Japan for the crisis
 	id = japfor.203
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.203 FROM = [From.GetName]" }
 	title = japfor.203.t
 	desc = japfor.203.d
 	picture = GFX_report_event_CHI_official_announcement
@@ -5385,26 +5347,24 @@ country_event = { #Fengtian blames Japan for the crisis
 	is_triggered_only = yes
 
 	option = { #False accusations!
+		log = "[GetLogInfo]: event japfor.203 option japfor.203.a"
 		name = japfor.203.a
 		add_political_power = -25
 		FNG = {
 			country_event = fengtian.75
 		}
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 	}
 
 	option = { #Punish this insolence!
+		log = "[GetLogInfo]: event japfor.203 option japfor.203.b"
 		name = japfor.203.b
 		add_stability = 0.02
 		set_global_flag = fengtian_blames_japan
 		FNG = {
 			country_event = fengtian.22
 		}
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 	}
 }
 
@@ -5412,7 +5372,6 @@ country_event = { #Fengtian blames Japan for the crisis
 
 country_event = { #Fengtian Diplomatic
 	id = japfor.204
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.204 FROM = [From.GetName]" }
 	title = japfor.204.t
 	desc = {
 		text = japfor.204.d
@@ -5447,6 +5406,7 @@ country_event = { #Fengtian Diplomatic
 	}
 
 	option = { #Declare war
+		log = "[GetLogInfo]: event japfor.204 option japfor.204.a"
 		name = japfor.204.a
 		ai_chance = { base = 30 }
 		if = {
@@ -5474,6 +5434,7 @@ country_event = { #Fengtian Diplomatic
 	}
 
 	option = { #Force Fengtian
+		log = "[GetLogInfo]: event japfor.204 option japfor.204.b"
 		name = japfor.204.b
 		trigger = {
 			FNG = {
@@ -5491,6 +5452,7 @@ country_event = { #Fengtian Diplomatic
 	}
 
 	option = { #Punish Fengtian
+		log = "[GetLogInfo]: event japfor.204 option japfor.204.c"
 		name = japfor.204.c
 		ai_chance = { base = 70 }
 		add_stability = -0.03
@@ -5500,6 +5462,7 @@ country_event = { #Fengtian Diplomatic
 	}
 
 	option = { #Do Nothing
+		log = "[GetLogInfo]: event japfor.204 option japfor.204.e"
 		name = japfor.204.e
 		ai_chance = { base = 0 }
 		add_stability = -0.10
@@ -5508,7 +5471,6 @@ country_event = { #Fengtian Diplomatic
 
 country_event = { #Fengtian non-diplomatic
 	id = japfor.205
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.205 FROM = [From.GetName]" }
 	title = japfor.205.t
 	desc = japfor.205.d
 	picture = GFX_report_event_CHI_official_announcement
@@ -5518,6 +5480,7 @@ country_event = { #Fengtian non-diplomatic
 	is_triggered_only = yes
 
 	option = { #Send an ultimatum
+		log = "[GetLogInfo]: event japfor.205 option japfor.205.a"
 		name = japfor.205.a
 		ai_chance = { base = 100 }
 		set_global_flag = jap_fengtian_ultimatum
@@ -5528,6 +5491,7 @@ country_event = { #Fengtian non-diplomatic
 	}
 
 	option = { #Do Nothing
+		log = "[GetLogInfo]: event japfor.205 option japfor.205.b"
 		name = japfor.205.b
 		ai_chance = { base = 0 }
 		add_stability = -0.10
@@ -5538,7 +5502,6 @@ country_event = { #Fengtian non-diplomatic
 
 country_event = {
 	id = japfor.206
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.206 FROM = [From.GetName]" }
 	title = japfor.206.t
 	desc = japfor.206.d
 	picture = GFX_report_event_CHI_official_announcement
@@ -5548,33 +5511,30 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { #Punish this insolence!
+		log = "[GetLogInfo]: event japfor.206 option japfor.206.a"
 		name = japfor.206.a
 		add_political_power = 50
 		FNG = {
 			country_event = fengtian.22
 		}
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 	}
 
 	option = { #Denounce Fengtian
+		log = "[GetLogInfo]: event japfor.206 option japfor.206.b"
 		name = japfor.206.b
 		add_political_power = 10
 		FNG = {
 			country_event = fengtian.113
 		}
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 	}
 
 	option = { #Stay silent
+		log = "[GetLogInfo]: event japfor.206 option japfor.206.c"
 		name = japfor.206.c
 		add_political_power = -50
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 	}
 }
 
@@ -5584,7 +5544,6 @@ country_event = {
 
 country_event = { #Russia bear is dying
 	id = japfor.213
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.213 FROM = [From.GetName]" }
 	title = japfor.213.t
 	desc = japfor.213.d
 	picture = GFX_report_event_soviet_soldiers
@@ -5604,20 +5563,18 @@ country_event = { #Russia bear is dying
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.213 option japfor.213.a"
 		name = japfor.213.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		JAP = {
 			country_event = japfor.214
 		}
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.213 option japfor.213.b"
 		name = japfor.213.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_stability = -0.25
 		add_war_support = -0.25
 	}
@@ -5625,7 +5582,6 @@ country_event = { #Russia bear is dying
 
 country_event = { #Russia offers us peace
 	id = japfor.214
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.214 FROM = [From.GetName]" }
 	title = japfor.214.t
 	desc = japfor.214.d
 	picture = GFX_report_event_generic_sign_treaty3
@@ -5635,10 +5591,9 @@ country_event = { #Russia offers us peace
 	fire_only_once = yes
 
 	option = { #Peace
+		log = "[GetLogInfo]: event japfor.214 option japfor.214.a"
 		name = japfor.214.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		add_stability = 0.10
 		RUS = {
 			white_peace_with_ROOT = yes
@@ -5674,10 +5629,9 @@ country_event = { #Russia offers us peace
 		}
 	}
 	option = { #Fight on
+		log = "[GetLogInfo]: event japfor.214 option japfor.214.b"
 		name = japfor.214.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_stability = -0.15
 		add_war_support = -0.15
 	}
@@ -5685,12 +5639,12 @@ country_event = { #Russia offers us peace
 
 country_event = { #Hawaii accepted our offer
 	id = japfor.218
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.218 FROM = [From.GetName]" }
 	title = japfor.218.t
 	desc = japfor.218.d
 	picture = GFX_report_event_chinese_japanese_handshake
 	is_triggered_only = yes
 	option = {
+		log = "[GetLogInfo]: event japfor.218 option japfor.218.a"
 		name = japfor.218.a
 		add_to_faction = HAW
 	}
@@ -5702,7 +5656,6 @@ country_event = { #Hawaii accepted our offer
 
 country_event = { # Japan seizes Guam
 	id = japfor.225
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.225 FROM = [From.GetName]" }
 	title = japfor.225.t
 	desc = japfor.225.d
 	picture = GFX_report_event_USA_guamtake
@@ -5714,10 +5667,9 @@ country_event = { # Japan seizes Guam
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.225 option japfor.225.a"
 		name = japfor.225.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		random_country = {
 			limit = { owns_state = 638 }
 			add_opinion_modifier = { target = ROOT modifier = KR_outraged }
@@ -5728,10 +5680,9 @@ country_event = { # Japan seizes Guam
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.225 option japfor.225.b"
 		name = japfor.225.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		random_country = {
 			limit = { owns_state = 638 }
 			add_opinion_modifier = { target = ROOT modifier = KR_outraged }
@@ -5740,17 +5691,15 @@ country_event = { # Japan seizes Guam
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.225 option japfor.225.c"
 		name = japfor.225.c
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_stability = -0.02
 	}
 }
 
 country_event = { # Japan seizes Guam
 	id = japfor.226
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.226 FROM = [From.GetName]" }
 	title = japfor.226.t
 	desc = japfor.226.d
 	picture = GFX_report_event_USA_guamtake
@@ -5758,6 +5707,7 @@ country_event = { # Japan seizes Guam
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.226 option japfor.226.a"
 		name = japfor.226.a
 		FROM = { transfer_state = 638 }
 		if = {
@@ -5778,7 +5728,6 @@ country_event = { # Japan seizes Guam
 
 country_event = {
 	id = japfor.227
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.227 FROM = [From.GetName]" }
 	title = japfor.227.t
 	desc = japfor.227.d
 	picture = GFX_report_event_generic_economy_growth
@@ -5787,6 +5736,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.227 option japfor.227.a"
 		name = japfor.227.a
 		add_political_power = -25
 		add_opinion_modifier = {
@@ -5802,15 +5752,19 @@ country_event = {
 
 country_event = { #hidden event to fire the peace mission
 	id = japfor.229
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.229 FROM = [From.GetName]" }
 
 	hidden = yes
 
 	trigger = {
 		original_tag = JAP
 		has_war = yes
-		is_faction_leader = yes
+		has_capitulated = no
+		is_valid_peace_target = yes
 		NOT = { has_active_mission = JAP_fading_sun_timer }
+		OR = {
+			is_ai = no
+			NOT = { has_global_flag = JAP_will_surrender }
+		}
 		525 = {
 			is_owned_by_ROOT_or_ally = yes
 			is_controlled_by_ROOT_or_ally = no
@@ -5819,6 +5773,77 @@ country_event = { #hidden event to fire the peace mission
 			is_owned_by_ROOT_or_ally = yes
 			is_controlled_by_ROOT_or_ally = no
 		}
+		OR = {
+			AND = {
+				any_enemy_country = {
+					has_country_flag = is_chinese_tag
+					OR = {
+						china_is_potential_government = yes
+						is_faction_leader = yes #United Front
+					}
+					is_valid_peace_target = yes
+				}
+				if = {
+					limit = { is_ally_with = MAN }
+					MAN = { has_capitulated = yes }
+				}
+				else_if = {
+					limit = { NOT = { has_war_with = FNG } }
+					OR = {
+						NOT = { country_exists = FNG }
+						FNG = { has_capitulated = yes }
+					}
+				}
+				if = {
+					limit = { is_ally_with = LEC }
+					LEC = { has_capitulated = yes }
+				}
+				NOT = {
+					any_allied_country = {
+						is_tag_in_china_area = yes
+						has_capitulated = no
+					}
+					any_owned_state = {
+						is_china_claim_area = yes
+						NOT = { state = 524 } #Taiwan
+						NOT = { state = 745 } #Dalian
+						is_controlled_by = ROOT
+					}
+				}
+			}
+			AND = {
+				OR = {
+					RUS = {
+						has_war_with = ROOT
+						is_valid_peace_target = yes
+					}
+					SOV = {
+						has_war_with = ROOT
+						is_valid_peace_target = yes
+					}
+				}
+				if = {
+					limit = {
+						country_exists = MAN
+						is_ally_with = MAN
+					}
+					MAN = { has_capitulated = yes }
+				}
+				if = {
+					limit = {
+						OR = {
+							RUS = { has_war_with = FNG }
+							SOV = { has_war_with = FNG }
+						}
+						FNG = { has_capitulated = yes }
+					}
+				}
+				OR = {
+					NOT = { country_exists = TRM }
+					TRM = { has_capitulated = yes }
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = {
@@ -5826,12 +5851,13 @@ country_event = { #hidden event to fire the peace mission
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.229 option 1"
 		activate_mission = JAP_fading_sun_timer
 		every_enemy_country = {
 			limit = {
 				is_ai = no
 				OR = {
-					is_chinese_tag = yes
+					is_tag_in_china_area = yes
 					is_russian_tag = yes
 				}
 			}
@@ -5843,14 +5869,63 @@ country_event = { #hidden event to fire the peace mission
 ### China ###
 country_event = { #Japan Offers Peace
 	id = japfor.230
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.230 FROM = [From.GetName]" }
 	title = japfor.230.t
-	desc = japfor.230.d
+
+	desc = {
+		text = japfor.230.d.taiwan_kept
+		trigger = {
+			JAP = {
+				owns_state = 524
+				enemies_naval_strength_ratio < 4
+			}
+			NOT = {
+				var:524.controller = {
+					is_tag_in_china_area = yes
+					has_war_with = event_target:japan
+				}
+			}
+		}
+	}
+	desc = {
+		text = japfor.230.d.taiwan_handed_over
+		trigger = {
+			JAP = {
+				owns_state = 524
+				enemies_naval_strength_ratio > 4
+			}
+			NOT = {
+				var:524.controller = {
+					is_tag_in_china_area = yes
+					has_war_with = event_target:japan
+				}
+			}
+		}
+	}
+	desc = {
+		text = japfor.230.d.taiwan_occupied
+		trigger = {
+			JAP = {
+				owns_state = 524
+				var:524.controller = {
+					is_tag_in_china_area = yes
+					has_war_with = event_target:japan
+				}
+			}
+		}
+	}
+	desc = {
+		text = japfor.230.d.no_taiwan
+		trigger = {
+			NOT = { JAP = { owns_state = 524 } } #Taiwan
+		}
+	}
+
 	picture = GFX_report_event_JAP_meeting
 
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.230 option japfor.230.a"
 		name = japfor.230.a
 		ai_chance = { base = 100 }
 		set_country_flag = JAP_accepted_peace
@@ -5868,7 +5943,7 @@ country_event = { #Japan Offers Peace
 					is_subject_of = event_target:japan
 					OR = {
 						original_tag = KOR
-						is_chinese_tag = yes
+						is_tag_in_china_area = yes
 						AND = {
 							has_capitulated = yes
 							capital_scope = { controller = { is_ally_with = ROOT } }
@@ -5889,7 +5964,7 @@ country_event = { #Japan Offers Peace
 					is_in_faction_with = event_target:japan
 					OR = {
 						original_tag = KOR
-						is_chinese_tag = yes
+						is_tag_in_china_area = yes
 						AND = {
 							has_capitulated = yes
 							capital_scope = { controller = { is_ally_with = ROOT } }
@@ -5906,15 +5981,16 @@ country_event = { #Japan Offers Peace
 						is_ally_with = event_target:japan
 						NOT = {
 							original_tag = KOR
-							is_chinese_tag = yes
+							is_tag_in_china_area = yes
 							AND = {
 								has_capitulated = yes
 								capital_scope = { controller = { is_ally_with = ROOT } }
 							}
 						}
 					}
-					is_mainland_china = yes
-					controller = { is_chinese_tag = yes }
+					is_china_claim_area = yes
+					NOT = { state = 524 } #Taiwan
+					controller = { is_tag_in_china_area = yes }
 				}
 				controller = {
 					if = {
@@ -5932,32 +6008,48 @@ country_event = { #Japan Offers Peace
 						is_ally_with = event_target:japan
 						NOT = {
 							original_tag = KOR
-							is_chinese_tag = yes
+							is_tag_in_china_area = yes
 							AND = {
 								has_capitulated = yes
 								capital_scope = { controller = { is_ally_with = ROOT } }
 							}
 						}
 					}
-					is_mainland_china = yes
-					controller = { is_chinese_tag = no }
+					is_china_claim_area = yes
+					NOT = { state = 524 } #Taiwan
+					controller = { is_tag_in_china_area = no }
 				}
 				transfer_state_to = CHN
 			}
 
-			### Handle Taiwan and Korea
+			### Handle Taiwan
 			if = {
-				limit = { owns_state = 524 }
+				limit = {
+					JAP = {
+						owns_state = 524
+						OR = {
+							enemies_naval_strength_ratio > 4
+							var:524.controller = {
+								is_tag_in_china_area = yes
+								has_war_with = event_target:japan
+							}
+						}
+					}
+				}
+				event_target:japan = { remove_state_claim = 524 }
 				if = {
 					limit = {
 						var:524.controller = {
-							is_chinese_tag = yes
+							is_tag_in_china_area = yes
 							has_war_with = event_target:japan
 						}
 					}
 					var:524.controller = {
 						if = {
-							limit = { is_subject = yes }
+							limit = {
+								is_subject = yes
+								is_chinese_tag = no
+							}
 							overlord = { transfer_state = 524 }
 						}
 						else = {
@@ -5969,11 +6061,17 @@ country_event = { #Japan Offers Peace
 					CHN = { transfer_state = 524 }
 				}
 			}
+
+			### Handle Korea
+			event_target:japan = {
+				remove_state_claim = 525
+				remove_state_claim = 527
+			}
 			if = {
 				limit = {
 					525 = {
 						is_owned_by = event_target:japan
-						controller = { is_chinese_tag = yes }
+						controller = { is_tag_in_china_area = yes }
 					}
 				}
 				var:525.controller = {
@@ -5990,7 +6088,7 @@ country_event = { #Japan Offers Peace
 				limit = {
 					527 = {
 						is_owned_by = event_target:japan
-						controller = { is_chinese_tag = yes }
+						controller = { is_tag_in_china_area = yes }
 					}
 				}
 				var:527.controller = {
@@ -6008,6 +6106,7 @@ country_event = { #Japan Offers Peace
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.230 option japfor.230.b"
 		name = japfor.230.b
 		ai_chance = { base = 0 }
 		set_country_flag = JAP_refused_peace
@@ -6019,7 +6118,7 @@ country_event = { #Japan Offers Peace
 			}
 		}
 		add_political_power = -100
-		add_war_support = -0.2
+		add_war_support = -0.1
 		event_target:japan = { country_event = japfor.233 }
 		JAP_china_peace_next_country = yes
 	}
@@ -6027,7 +6126,6 @@ country_event = { #Japan Offers Peace
 
 country_event = { #Peace Goes Into Effect
 	id = japfor.231
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.231 FROM = [From.GetName]" }
 
 	title = {
 		text = japfor.231.t.peace
@@ -6043,9 +6141,45 @@ country_event = { #Peace Goes Into Effect
 	}
 
 	desc = {
-		text = japfor.231.d.peace
+		text = japfor.231.d.peace_taiwan_kept
 		trigger = {
 			has_event_target = JAP_peace_with_china
+			owns_state = 524 #Taiwan
+			controls_state = 524 #Taiwan
+			enemies_naval_strength_ratio < 4
+		}
+	}
+	desc = {
+		text = japfor.231.d.peace_taiwan_handed_over
+		trigger = {
+			has_event_target = JAP_peace_with_china
+			owns_state = 524 #Taiwan
+			controls_state = 524 #Taiwan
+			enemies_naval_strength_ratio > 4
+		}
+	}
+	desc = {
+		text = japfor.231.d.peace_taiwan_occupied
+		trigger = {
+			has_event_target = JAP_peace_with_china
+			owns_state = 524 #Taiwan
+			var:524.controller = {
+				has_war_with = ROOT
+				has_country_flag = JAP_accepted_peace
+			}
+		}
+	}
+	desc = {
+		text = japfor.231.d.peace_no_taiwan
+		trigger = {
+			has_event_target = JAP_peace_with_china
+			OR = {
+				NOT = { owns_state = 524 } #Taiwan
+				var:524.controller = {
+					has_war_with = ROOT
+					NOT = { has_country_flag = JAP_accepted_peace }
+				}
+			}
 		}
 	}
 	desc = {
@@ -6062,7 +6196,7 @@ country_event = { #Peace Goes Into Effect
 		if = {
 			limit = {
 				any_enemy_country = {
-					is_chinese_tag = yes
+					is_tag_in_china_area = yes
 					is_valid_peace_target = yes
 					has_country_flag = JAP_accepted_peace
 				}
@@ -6072,6 +6206,7 @@ country_event = { #Peace Goes Into Effect
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.231 option japfor.231.a"
 		name = japfor.231.a
 		trigger = {
 			has_event_target = JAP_peace_with_china
@@ -6084,7 +6219,7 @@ country_event = { #Peace Goes Into Effect
 			limit = {
 				OR = {
 					original_tag = KOR
-					is_chinese_tag = yes
+					is_tag_in_china_area = yes
 					AND = {
 						has_capitulated = yes
 						capital_scope = { controller = { has_country_flag = JAP_accepted_peace } }
@@ -6105,7 +6240,7 @@ country_event = { #Peace Goes Into Effect
 				is_in_faction_with = ROOT
 				OR = {
 					original_tag = KOR
-					is_chinese_tag = yes
+					is_tag_in_china_area = yes
 					AND = {
 						has_capitulated = yes
 						capital_scope = { controller = { has_country_flag = JAP_accepted_peace } }
@@ -6119,9 +6254,10 @@ country_event = { #Peace Goes Into Effect
 		every_state = {
 			limit = {
 				owner = { is_ally_with = ROOT }
-				is_mainland_china = yes
+				is_china_claim_area = yes
+				NOT = { state = 524 } #Taiwan
 				controller = {
-					is_chinese_tag = yes
+					is_tag_in_china_area = yes
 					has_war_with = ROOT
 				}
 			}
@@ -6138,31 +6274,42 @@ country_event = { #Peace Goes Into Effect
 		every_state = {
 			limit = {
 				owner = { is_ally_with = ROOT }
-				is_mainland_china = yes
-				NOT = {
-					controller = {
-						is_chinese_tag = yes
-						has_war_with = ROOT
-					}
-				}
+				is_china_claim_area = yes
+				NOT = { state = 524 } #Taiwan
 			}
 			transfer_state_to = CHN
 		}
 
-		### Handle Taiwan and Korea
+		### Handle Taiwan
 		if = {
-			limit = { owns_state = 524 }
+			limit = {
+				owns_state = 524
+				OR = {
+					var:524.controller = {
+						has_war_with = ROOT
+						has_country_flag = JAP_accepted_peace
+					}
+					AND = {
+						controls_state = 524
+						enemies_naval_strength_ratio > 4
+					}
+				}
+			}
+			remove_state_core = 524
+			remove_state_claim = 524
 			if = {
 				limit = {
 					var:524.controller = {
-						is_chinese_tag = yes
 						has_war_with = ROOT
 						has_country_flag = JAP_accepted_peace
 					}
 				}
 				var:524.controller = {
 					if = {
-						limit = { is_subject = yes }
+						limit = {
+							is_subject = yes
+							is_chinese_tag = no
+						}
 						overlord = { transfer_state = 524 }
 					}
 					else = {
@@ -6170,16 +6317,19 @@ country_event = { #Peace Goes Into Effect
 					}
 				}
 			}
-			else = {
-				CHN = { transfer_state = 524 }
-			}
 		}
+
+		### Handle Korea
+		remove_state_core = 525
+		remove_state_core = 527
+		remove_state_claim = 525
+		remove_state_claim = 527
 		if = {
 			limit = {
 				525 = {
 					is_owned_by = ROOT
 					controller = {
-						is_chinese_tag = yes
+						is_tag_in_china_area = yes
 						has_country_flag = JAP_accepted_peace
 					}
 				}
@@ -6199,7 +6349,7 @@ country_event = { #Peace Goes Into Effect
 				527 = {
 					is_owned_by = ROOT
 					controller = {
-						is_chinese_tag = yes
+						is_tag_in_china_area = yes
 						has_country_flag = JAP_accepted_peace
 					}
 				}
@@ -6231,9 +6381,15 @@ country_event = { #Peace Goes Into Effect
 			LEC_remove_from_legation_council = yes
 		}
 
+		### Disable Fengtian Mantetsu mechanic
+		FNG_break_with_japan = yes
+
 		### Disable Japanese ambitions towards China
 		every_state = {
-			limit = { is_mainland_china = yes }
+			limit = {
+				is_china_claim_area = yes
+				NOT = { state = 524 } #Taiwan
+			}
 			remove_core_of = JAP
 			remove_claim_by = JAP
 			clear_variable = ambition_area_JAP
@@ -6242,8 +6398,7 @@ country_event = { #Peace Goes Into Effect
 		### Peace everyone out
 		every_enemy_country = {
 			limit = {
-				is_chinese_tag = yes
-				is_valid_peace_target = yes
+				is_tag_in_china_area = yes
 				has_country_flag = JAP_accepted_peace
 			}
 			white_peace_with_ROOT = yes
@@ -6253,15 +6408,10 @@ country_event = { #Peace Goes Into Effect
 		### Remove guarantees and wargoals, create NAPs and truces
 		every_country = {
 			limit = {
-				is_chinese_tag = yes
+				is_tag_in_china_area = yes
 				NOT = {
 					is_ally_with = ROOT
 					has_war_with = ROOT
-				}
-				if = {
-					limit = { original_tag = LEC }
-					is_subject = yes
-					overlord = { is_chinese_tag = yes }
 				}
 			}
 			if = {
@@ -6301,6 +6451,7 @@ country_event = { #Peace Goes Into Effect
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.231 option japfor.231.b"
 		name = japfor.231.b
 		trigger = {
 			NOT = { has_event_target = JAP_peace_with_china }
@@ -6319,7 +6470,6 @@ country_event = { #Peace Goes Into Effect
 
 country_event = { #End of the Sino-Japanese War
 	id = japfor.232
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.232 FROM = [From.GetName]" }
 	title = japfor.232.t
 	desc = japfor.232.d
 	picture = GFX_report_event_CHI_victory2
@@ -6329,21 +6479,11 @@ country_event = { #End of the Sino-Japanese War
 	immediate = {
 		hidden_effect = {
 			set_truce = { target = FROM days = 730 }
-			if = {
-				limit = { is_faction_leader = yes }
-				every_other_country = {
-					limit = { is_in_faction_with = ROOT }
-					country_event = japfor.232
-				}
-			}
-			else_if = {
-				limit = { num_subjects > 0 }
-				every_subject_country = { country_event = japfor.232 }
-			}
 		}
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.232 option japfor.232.a"
 		name = japfor.232.a
 		effect_tooltip = {
 			set_truce = { target = FROM days = 730 }
@@ -6353,7 +6493,6 @@ country_event = { #End of the Sino-Japanese War
 
 country_event = { #FROM Refuses Peace
 	id = japfor.233
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.233 FROM = [From.GetName]" }
 	title = japfor.233.t
 	desc = japfor.233.d
 	picture = GFX_report_event_japanese_reply
@@ -6361,6 +6500,7 @@ country_event = { #FROM Refuses Peace
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.233 option japfor.233.a"
 		name = japfor.233.a
 	}
 }
@@ -6368,7 +6508,6 @@ country_event = { #FROM Refuses Peace
 ### Russia ###
 country_event = { #Japan Offers Peace
 	id = japfor.238
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.238 FROM = [From.GetName]" }
 	title = japfor.238.t
 	desc = japfor.238.d
 	picture = GFX_report_event_JAP_meeting
@@ -6377,6 +6516,7 @@ country_event = { #Japan Offers Peace
 	timeout_days = 4
 
 	option = {
+		log = "[GetLogInfo]: event japfor.238 option japfor.238.a"
 		name = japfor.238.a
 		ai_chance = {
 			base = 100
@@ -6416,13 +6556,10 @@ country_event = { #Japan Offers Peace
 				limit = {
 					is_subject_of = FROM
 					OR = {
-						tag = MON
-						tag = ETS
-						tag = KUM
-						tag = MAN
-						tag = FNG
-						tag = TRM
-						tag = KOR
+						is_tag_in_china_area = yes
+						original_tag = TRM
+						original_tag = SIB
+						original_tag = KOR
 					}
 				}
 				overlord = {
@@ -6436,13 +6573,10 @@ country_event = { #Japan Offers Peace
 				limit = {
 					is_in_faction_with = FROM
 					OR = {
-						tag = MON
-						tag = ETS
-						tag = KUM
-						tag = MAN
-						tag = FNG
-						tag = TRM
-						tag = KOR
+						is_tag_in_china_area = yes
+						original_tag = TRM
+						original_tag = SIB
+						original_tag = KOR
 					}
 				}
 				leave_faction = yes
@@ -6454,11 +6588,19 @@ country_event = { #Japan Offers Peace
 						state = 537 #Sakhalin
 						state = 555 #Kurils
 						AND = {
-							state = 745 #Dalian
+							is_manchuria = yes
 							OR = {
 								controller = { is_ally_with = FROM }
-								var:716.controller = { is_ally_with = FROM }
+								var:716.controller = { is_ally_with = FROM } #Shenyang
 								MAN = { is_subject_of = FROM }
+							}
+						}
+						AND = {
+							is_china_proper = yes
+							OR = {
+								controller = { is_ally_with = FROM }
+								var:608.controller = { is_ally_with = FROM } #Beijing
+								FNG = { is_ally_with = FROM }
 							}
 						}
 						is_claim_or_core_of_ROOT = yes
@@ -6467,15 +6609,27 @@ country_event = { #Japan Offers Peace
 								PREV.PREV = { is_claim_or_core_of_PREV = yes }
 							}
 						}
+						ROOT = {
+							any_subject_country = {
+								PREV.PREV = { is_claim_or_core_of_PREV = yes }
+							}
+						}
 					}
 				}
 				transfer_state_to = ROOT
 			}
+			FROM = { white_peace_with_ROOT = yes }
+			diplomatic_relation = {
+				country = ROOT
+				relation = non_aggression_pact
+			}
+			set_truce = { target = ROOT days = 730 }
 		}
 		FROM = { country_event = japfor.239 }
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.238 option japfor.238.b"
 		name = japfor.238.b
 		ai_chance = {
 			base = 0
@@ -6516,14 +6670,13 @@ country_event = { #Japan Offers Peace
 		}
 		set_country_flag = JAP_refused_peace
 		add_political_power = -100
-		add_war_support = -0.2
+		add_war_support = -0.1
 		FROM = { country_event = japfor.241 }
 	}
 }
 
 country_event = { #Russia Accepts Peace
 	id = japfor.239
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.239 FROM = [From.GetName]" }
 	title = japfor.239.t
 	desc = japfor.239.d
 	picture = GFX_report_event_JAP_hirohito_addressing
@@ -6531,6 +6684,7 @@ country_event = { #Russia Accepts Peace
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.239 option japfor.239.a"
 		name = japfor.239.a
 		clr_global_flag = JAP_will_surrender
 
@@ -6538,13 +6692,10 @@ country_event = { #Russia Accepts Peace
 		every_subject_country = {
 			limit = {
 				OR = {
-					tag = MON
-					tag = ETS
-					tag = KUM
-					tag = MAN
-					tag = FNG
-					tag = TRM
-					tag = KOR
+					is_tag_in_china_area = yes
+					original_tag = TRM
+					original_tag = SIB
+					original_tag = KOR
 				}
 			}
 			overlord = {
@@ -6558,13 +6709,10 @@ country_event = { #Russia Accepts Peace
 			limit = {
 				is_in_faction_with = ROOT
 				OR = {
-					tag = MON
-					tag = ETS
-					tag = KUM
-					tag = MAN
-					tag = FNG
-					tag = TRM
-					tag = KOR
+					is_tag_in_china_area = yes
+					original_tag = TRM
+					original_tag = SIB
+					original_tag = KOR
 				}
 			}
 			leave_faction = yes
@@ -6578,11 +6726,19 @@ country_event = { #Russia Accepts Peace
 					state = 537 #Sakhalin
 					state = 555 #Kurils
 					AND = {
-						state = 745 #Dalian
+						is_manchuria = yes
 						OR = {
 							controller = { is_ally_with = FROM }
 							var:716.controller = { is_ally_with = FROM }
 							MAN = { is_subject_of = FROM }
+						}
+					}
+					AND = {
+						is_china_proper = yes
+						OR = {
+							controller = { is_ally_with = FROM }
+							var:608.controller = { is_ally_with = FROM }
+							FNG = { is_ally_with = FROM }
 						}
 					}
 					ROOT = {
@@ -6602,6 +6758,7 @@ country_event = { #Russia Accepts Peace
 				owns_state = 525
 				var:524.controller = { is_ally_with = FROM }
 			}
+			remove_state_claim = 525
 			FROM = { transfer_state = 525 }
 		}
 		if = {
@@ -6609,6 +6766,7 @@ country_event = { #Russia Accepts Peace
 				owns_state = 527
 				var:524.controller = { is_ally_with = FROM }
 			}
+			remove_state_claim = 527
 			FROM = { transfer_state = 527 }
 		}
 
@@ -6617,17 +6775,34 @@ country_event = { #Russia Accepts Peace
 			white_peace_with_ROOT = yes
 			country_event = japfor.240
 		}
-		diplomatic_relation = {
-			country = FROM
-			relation = non_aggression_pact
+
+		### Remove guarantees and wargoals, create NAPs and truces
+		every_country = {
+			limit = {
+				is_ally_with = FROM
+				NOT = { has_war_with = ROOT }
+			}
+			diplomatic_relation = {
+				country = ROOT
+				relation = non_aggression_pact
+			}
+			set_truce = { target = ROOT days = 730 }
+			if = {
+				limit = { has_wargoal_against = ROOT }
+				remove_wargoal = { target = ROOT type = all }
+			}
+			ROOT = {
+				if = {
+					limit = { has_wargoal_against = PREV }
+					remove_wargoal = { target = PREV type = all }
+				}
+			}
 		}
-		set_truce = { target = FROM days = 730 }
 	}
 }
 
 country_event = { #Peace with Japan
 	id = japfor.240
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.240 FROM = [From.GetName]" }
 	title = japfor.240.t
 	desc = japfor.240.d
 	picture = GFX_report_event_japanese_reply
@@ -6635,13 +6810,13 @@ country_event = { #Peace with Japan
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.240 option japfor.240.a"
 		name = japfor.240.a
 	}
 }
 
 country_event = { #FROM Refuses Peace
 	id = japfor.241
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.241 FROM = [From.GetName]" }
 	title = japfor.241.t
 	desc = japfor.241.d
 	picture = GFX_report_event_japanese_reply
@@ -6649,6 +6824,7 @@ country_event = { #FROM Refuses Peace
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.241 option japfor.241.a"
 		name = japfor.241.a
 	}
 }
@@ -6656,7 +6832,6 @@ country_event = { #FROM Refuses Peace
 ### Japan capitulates ###
 country_event = { #Inform former faction members of peace
 	id = japfor.251
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.251 FROM = [From.GetName]" }
 	title = japfor.251.t
 	desc = japfor.251.d
 	picture = GFX_report_event_japanese_chinese_surrender
@@ -6666,6 +6841,7 @@ country_event = { #Inform former faction members of peace
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.251 option japfor.251.a"
 		name = japfor.251.a
 	}
 }
@@ -6673,7 +6849,6 @@ country_event = { #Inform former faction members of peace
 # The Fading Sun
 news_event = {
 	id = japfor.252
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.252 FROM = [From.GetName]" }
 	title = japfor.252.t
 	desc = japfor.252.d
 	picture = GFX_news_event_JAP_coup
@@ -6691,6 +6866,7 @@ news_event = {
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.252 option japfor.251.a"
 		name = japfor.251.a
 	}
 }
@@ -6699,7 +6875,6 @@ news_event = {
 
 country_event = { #aid anqing?
 	id = japfor.257
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.257 FROM = [From.GetName]" }
 	title = japfor.257.t
 	desc = japfor.257.d
 	picture = GFX_report_event_ANQ_chen_tiaoyuan
@@ -6707,6 +6882,7 @@ country_event = { #aid anqing?
 	is_triggered_only = yes
 
 	option = { #yes reconstruction
+		log = "[GetLogInfo]: event japfor.257 option japfor.257.a"
 		name = japfor.257.a
 		ai_chance = { base = 60 }
 		ANQ = { set_country_flag = ANQ_fengjapan_aids_reconstruction }
@@ -6716,6 +6892,7 @@ country_event = { #aid anqing?
 	}
 
 	option = { #not worth it
+		log = "[GetLogInfo]: event japfor.257 option japfor.257.b"
 		name = japfor.257.b
 		ai_chance = { base = 40 }
 		hidden_effect = {
@@ -6728,7 +6905,6 @@ country_event = { #aid anqing?
 
 country_event = { #start reconstruction
 	id = japfor.258
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.258 FROM = [From.GetName]" }
 	title = japfor.258.t
 	desc = japfor.258.d
 	picture = GFX_report_event_CHI_economic
@@ -6736,6 +6912,7 @@ country_event = { #start reconstruction
 	is_triggered_only = yes
 
 	option = { #okay
+		log = "[GetLogInfo]: event japfor.258 option japfor.258.a"
 		name = japfor.258.a
 		add_timed_idea = {
 			idea = JAP_ANQ_Reconstruction_Plan
@@ -6746,7 +6923,6 @@ country_event = { #start reconstruction
 
 country_event = { #anq abandons reclamtion - feng cuts out
 	id = japfor.259
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.259 FROM = [From.GetName]" }
 	title = japfor.259.t
 	desc = japfor.259.d
 	picture = GFX_report_event_CHI_ambassador_announcement
@@ -6754,13 +6930,13 @@ country_event = { #anq abandons reclamtion - feng cuts out
 	is_triggered_only = yes
 
 	option = { #okay
+		log = "[GetLogInfo]: event japfor.259 option japfor.259.a"
 		name = japfor.259.a
 	}
 }
 
 country_event = { #anq abandons reclamtion - feng tolerates
 	id = japfor.260
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.260 FROM = [From.GetName]" }
 	title = japfor.260.t
 	desc = japfor.260.d
 	picture = GFX_report_event_CHI_official_announcement
@@ -6768,13 +6944,13 @@ country_event = { #anq abandons reclamtion - feng tolerates
 	is_triggered_only = yes
 
 	option = { #okay
+		log = "[GetLogInfo]: event japfor.260 option japfor.260.a"
 		name = japfor.260.a
 	}
 }
 
 country_event = { #anq cuts ties fully itself
 	id = japfor.261
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.261 FROM = [From.GetName]" }
 	title = japfor.261.t
 	desc = japfor.261.d
 	picture = GFX_report_event_ANQ_chen_tiaoyuan
@@ -6782,6 +6958,7 @@ country_event = { #anq cuts ties fully itself
 	is_triggered_only = yes
 
 	option = { #okay
+		log = "[GetLogInfo]: event japfor.261 option japfor.261.a"
 		name = japfor.261.a
 		if = {
 			limit = {
@@ -6798,7 +6975,6 @@ country_event = { #anq cuts ties fully itself
 
 country_event = { #Japan lays claim to the American Pacific
 	id = japfor.316
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.316 FROM = [From.GetName]" }
 	title = japfor.316.t
 	desc = japfor.316.d
 	picture = GFX_report_event_USA_guamtake
@@ -6806,6 +6982,7 @@ country_event = { #Japan lays claim to the American Pacific
 	is_triggered_only = yes
 
 	option = { #Let them have the islands, we have more pressing issues
+		log = "[GetLogInfo]: event japfor.316 option japfor.316.a"
 		name = japfor.316.a
 		ai_chance = {
 			base = 0
@@ -6819,6 +6996,7 @@ country_event = { #Japan lays claim to the American Pacific
 	}
 
 	option = { #This is an act of war!
+		log = "[GetLogInfo]: event japfor.316 option japfor.316.b"
 		name = japfor.316.b
 		ai_chance = {
 			base = 100
@@ -6834,7 +7012,6 @@ country_event = { #Japan lays claim to the American Pacific
 
 country_event = { #The American islands are ours!
 	id = japfor.317
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.317 FROM = [From.GetName]" }
 	title = japfor.317.t
 	desc = japfor.317.d
 	picture = GFX_report_event_japanese_soldiers_03
@@ -6842,6 +7019,7 @@ country_event = { #The American islands are ours!
 	is_triggered_only = yes
 
 	option = { #Subarashi!
+		log = "[GetLogInfo]: event japfor.317 option japfor.317.a"
 		name = japfor.317.a
 		add_stability = 0.05
 		FROM = {
@@ -6855,7 +7033,6 @@ country_event = { #The American islands are ours!
 
 country_event = { #The Americans object
 	id = japfor.318
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.318 FROM = [From.GetName]" }
 	title = japfor.318.t
 	desc = japfor.318.d
 	picture = GFX_report_event_usa_heavy_cruiser
@@ -6863,6 +7040,7 @@ country_event = { #The Americans object
 	is_triggered_only = yes
 
 	option = { #Prepare the invasion forces!
+		log = "[GetLogInfo]: event japfor.318 option japfor.318.a"
 		name = japfor.318.a
 		ai_chance = {
 			base = 100
@@ -6892,6 +7070,7 @@ country_event = { #The Americans object
 		}
 	}
 	option = { #We will back down...
+		log = "[GetLogInfo]: event japfor.318 option japfor.318.b"
 		name = japfor.318.b
 		ai_chance = {
 			base = 0
@@ -6918,7 +7097,6 @@ country_event = { #The Americans object
 
 country_event = { #Explain to Japan what the Concordia Association is and how it works.
 	id = japfeng.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfeng.1 FROM = [From.GetName]" }
 	title = japfeng.1.t
 	desc = japfeng.1.d
 	fire_only_once = yes
@@ -6926,6 +7104,7 @@ country_event = { #Explain to Japan what the Concordia Association is and how it
 	picture = GFX_report_event_JAP_kwantung
 
 	option = { #If the bird will not sing...
+		log = "[GetLogInfo]: event japfeng.1 option japfeng.1.a"
 		name = japfeng.1.a
 		FNG = {
 			country_event = japfeng.2
@@ -6935,7 +7114,6 @@ country_event = { #Explain to Japan what the Concordia Association is and how it
 
 country_event = { #Explain to Fengtian that Japan is about to come down like a tonne of bricks
 	id = japfeng.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfeng.2 FROM = [From.GetName]" }
 	title = japfeng.2.t
 	desc = japfeng.2.d
 	fire_only_once = yes
@@ -6943,6 +7121,7 @@ country_event = { #Explain to Fengtian that Japan is about to come down like a t
 	picture = GFX_report_event_JAP_soldiers
 
 	option = { #Yikes
+		log = "[GetLogInfo]: event japfeng.2 option japfeng.2.a"
 		name = japfeng.2.a
 		FNG = {
 			country_event = japfeng.2
@@ -6952,7 +7131,6 @@ country_event = { #Explain to Fengtian that Japan is about to come down like a t
 
 country_event = { #Japan makes its decision
 	id = japfeng.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfeng.3 FROM = [From.GetName]" }
 	title = japfeng.1.t
 	desc = japfeng.1.d
 	picture = GFX_report_event_JAP_officer_phone
@@ -6960,6 +7138,7 @@ country_event = { #Japan makes its decision
 	is_triggered_only = yes
 
 	option = { #Kill it
+		log = "[GetLogInfo]: event japfeng.3 option japfeng.3.a"
 		name = japfeng.3.a
 		ai_chance = {
 			base = 40
@@ -6982,6 +7161,7 @@ country_event = { #Japan makes its decision
 	}
 
 	option = { #Coax it
+		log = "[GetLogInfo]: event japfeng.3 option japfeng.3.b"
 		name = japfeng.3.b
 		ai_chance = {
 			base = 60
@@ -7013,10 +7193,28 @@ country_event = { #Japan makes its decision
 	}
 
 	option = { #Wait for it
+		log = "[GetLogInfo]: event japfeng.3 option japfeng.3.c"
 		name = japfeng.3.c
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
+	}
+}
+
+country_event = { #Fengtian: Japan Launches Operation Ichi-Gou
+	id = japfeng.4
+	title = japfeng.4.t
+	desc = japfeng.4.d
+	picture = GFX_report_event_CHI_warlord_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { FROM = { add_to_faction = ROOT } }
+	}
+
+	option = {
+		log = "[GetLogInfo]: event japfeng.4 option japfeng.4.a"
+		name = japfeng.4.a
+		effect_tooltip = { FROM = { add_to_faction = ROOT } }
 	}
 }
 
@@ -7026,7 +7224,6 @@ country_event = { #Japan makes its decision
 
 country_event = { #Setup and monthly checking
 	id = japfor.400
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.400 FROM = [From.GetName]" }
 
 	hidden = yes
 	is_triggered_only = yes
@@ -7043,7 +7240,6 @@ country_event = { #Setup and monthly checking
 
 country_event = { #Invited into economic sphere (via decision)
 	id = japfor.401
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.401 FROM = [From.GetName]" }
 	title = japfor.401.t
 	picture = GFX_report_event_JAP_announcement
 
@@ -7059,6 +7255,7 @@ country_event = { #Invited into economic sphere (via decision)
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.401 option japfor.401.a"
 		name = japfor.401.a #Agree
 		ai_chance = {
 			base = 50
@@ -7143,6 +7340,7 @@ country_event = { #Invited into economic sphere (via decision)
 		}
 	}
 	option = {
+		log = "[GetLogInfo]: event japfor.401 option japfor.401.b"
 		name = japfor.401.b #Refuse
 		ai_chance = {
 			base = 50
@@ -7229,7 +7427,6 @@ country_event = { #Invited into economic sphere (via decision)
 
 country_event = { #Accepted
 	id = japfor.402
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.402 FROM = [From.GetName]" }
 	title = japfor.402.t
 	desc = japfor.402.d
 	picture = GFX_report_event_chinese_japanese_handshake
@@ -7237,6 +7434,7 @@ country_event = { #Accepted
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.402 option japfor.402.a"
 		name = japfor.402.a
 		add_political_power = 25
 		if = {
@@ -7255,7 +7453,6 @@ country_event = { #Accepted
 
 country_event = { #Refused
 	id = japfor.403
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.403 FROM = [From.GetName]" }
 	title = japfor.403.t
 	desc = japfor.403.d
 	picture = GFX_report_event_JAP_ambassador_kisaburo
@@ -7263,6 +7460,7 @@ country_event = { #Refused
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.403 option japfor.403.a"
 		name = japfor.403.a
 		add_political_power = -25
 		reverse_add_opinion_modifier = { target = FROM modifier = KR_hates_govt }
@@ -7271,7 +7469,6 @@ country_event = { #Refused
 
 country_event = { #Removing a country from the economic sphere
 	id = japfor.404
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.404 FROM = [From.GetName]" }
 
 	hidden = yes
 	is_triggered_only = yes
@@ -7287,7 +7484,6 @@ country_event = { #Removing a country from the economic sphere
 
 country_event = { #Japan promotes investment
 	id = japfor.405
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.405 FROM = [From.GetName]" }
 	title = japfor.405.t
 	desc = japfor.405.d
 	picture = GFX_report_event_JAP_economy_building
@@ -7295,6 +7491,7 @@ country_event = { #Japan promotes investment
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.405 option japfor.405.a"
 		name = japfor.405.a
 		add_stability = 0.03
 		if = {
@@ -7325,7 +7522,6 @@ country_event = { #Japan promotes investment
 
 country_event = { #Japanese investment builds a factory
 	id = japfor.406
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.406 FROM = [From.GetName]" }
 	title = japfor.406.t
 	desc = japfor.406.d
 	picture = GFX_report_event_generic_economic_policy
@@ -7343,6 +7539,7 @@ country_event = { #Japanese investment builds a factory
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.406 option japfor.406.a"
 		name = japfor.406.a
 		add_one_random_civilian_factory = yes
 	}
@@ -7350,7 +7547,6 @@ country_event = { #Japanese investment builds a factory
 
 country_event = { #Japanese economic takeover
 	id = japfor.407
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.407 FROM = [From.GetName]" }
 	title = japfor.407.t
 	desc = japfor.407.d
 	picture = GFX_report_event_JAP_announcement
@@ -7365,6 +7561,7 @@ country_event = { #Japanese economic takeover
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.407 option japfor.407.a"
 		name = japfor.407.a
 		remove_ideas = JAP_member_integration_3
 		get_current_government_type = yes
@@ -7381,7 +7578,6 @@ country_event = { #Japanese economic takeover
 
 country_event = { #country withdraws from alliance
 	id = japfor.408
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.408 FROM = [From.GetName]" }
 	title = japfor.408.t
 	desc = japfor.408.d
 	picture = GFX_report_event_JAP_foreign_minister
@@ -7389,6 +7585,7 @@ country_event = { #country withdraws from alliance
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.408 option japfor.408.a"
 		name = japfor.408.a
 		remove_from_faction = FROM
 	}
@@ -7396,7 +7593,6 @@ country_event = { #country withdraws from alliance
 
 country_event = { #country withdraws from economic sphere
 	id = japfor.409
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.409 FROM = [From.GetName]" }
 	title = japfor.409.t
 	desc = japfor.409.d
 	picture = GFX_report_event_JAP_foreign_minister_2
@@ -7404,6 +7600,7 @@ country_event = { #country withdraws from economic sphere
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.409 option japfor.409.a"
 		name = japfor.409.a
 		add_political_power = -25
 	}
@@ -7411,7 +7608,6 @@ country_event = { #country withdraws from economic sphere
 
 country_event = { #country nationalizes Japanese investments
 	id = japfor.410
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.410 FROM = [From.GetName]" }
 	title = japfor.410.t
 	desc = japfor.410.d
 	picture = GFX_report_event_FNG_industry
@@ -7419,6 +7615,7 @@ country_event = { #country nationalizes Japanese investments
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.410 option japfor.410.a"
 		name = japfor.410.a #Let them go
 		ai_chance = {
 			base = 50
@@ -7432,6 +7629,7 @@ country_event = { #country nationalizes Japanese investments
 		add_stability = -0.03
 	}
 	option = {
+		log = "[GetLogInfo]: event japfor.410 option japfor.410.b"
 		name = japfor.410.b #They have no right!
 		trigger = { NOT = { has_capitulated = yes } }
 		ai_chance = {
@@ -7481,7 +7679,6 @@ country_event = { #country nationalizes Japanese investments
 
 country_event = { #sphere member joins another faction
 	id = japfor.411
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.411 FROM = [From.GetName]" }
 	title = japfor.411.t
 	desc = japfor.411.d
 	picture = GFX_report_event_generic_conference1
@@ -7514,6 +7711,7 @@ country_event = { #sphere member joins another faction
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.411 option japfor.411.a"
 		name = japfor.411.a
 		event_target:withdraw_country = {
 			custom_effect_tooltip = JAP_THIS_withdraws_from_sphere
@@ -7526,7 +7724,6 @@ country_event = { #sphere member joins another faction
 
 country_event = { #sphere member removed
 	id = japfor.412
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.412 FROM = [From.GetName]" }
 	title = japfor.412.t
 	desc = japfor.412.d
 	picture = GFX_report_event_JAP_politician
@@ -7541,6 +7738,7 @@ country_event = { #sphere member removed
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.412 option japfor.412.a"
 		name = japfor.412.a
 		custom_effect_tooltip = JAP_withdraws_from_sphere
 		reverse_add_opinion_modifier = { target = JAP modifier = KR_disapproves_of_govt }
@@ -7549,7 +7747,6 @@ country_event = { #sphere member removed
 
 country_event = { #Japan builds dockyards
 	id = japfor.420
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.420 FROM = [From.GetName]" }
 	title = japfor.420.t
 	desc = japfor.420.d
 	picture = GFX_report_event_JAP_economy_building
@@ -7568,6 +7765,7 @@ country_event = { #Japan builds dockyards
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.420 option japfor.420.a"
 		name = japfor.420.a
 		random_owned_controlled_state = {
 			limit = {
@@ -7587,7 +7785,6 @@ country_event = { #Japan builds dockyards
 
 country_event = { #Japan send naval advisors
 	id = japfor.421
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.421 FROM = [From.GetName]" }
 	title = japfor.421.t
 	desc = japfor.421.d
 	picture = GFX_report_event_JAP_economy_building
@@ -7601,6 +7798,7 @@ country_event = { #Japan send naval advisors
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.421 option japfor.421.a"
 		name = japfor.421.a
 		add_political_power = -20
 		add_tech_bonus = {
@@ -7612,6 +7810,7 @@ country_event = { #Japan send naval advisors
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.421 option japfor.421.b"
 		name = japfor.421.b
 		add_political_power = -20
 		add_doctrine_cost_reduction = {
@@ -7623,6 +7822,7 @@ country_event = { #Japan send naval advisors
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.421 option japfor.421.c"
 		name = japfor.421.c
 		add_political_power = -20
 		navy_experience = 30
@@ -7631,7 +7831,6 @@ country_event = { #Japan send naval advisors
 
 country_event = { #prosperity ships shared
 	id = japfor.422
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.422 FROM = [From.GetName]" }
 	title = japfor.422.t
 	desc = japfor.422.d
 	picture = GFX_report_event_JAP_politician
@@ -7639,6 +7838,7 @@ country_event = { #prosperity ships shared
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.422 option japfor.422.a"
 		name = japfor.422.a
 		add_ideas = JAP_nav_tra_idea
 		add_equipment_to_stockpile = {
@@ -7650,7 +7850,6 @@ country_event = { #prosperity ships shared
 
 country_event = { #Japan wants to take over our dockyards
 	id = japfor.423
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.423 FROM = [From.GetName]" }
 	title = japfor.423.t
 	desc = japfor.423.d
 	picture = GFX_report_event_JAP_politician
@@ -7658,6 +7857,7 @@ country_event = { #Japan wants to take over our dockyards
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.423 option japfor.423.a"
 		name = japfor.423.a
 		ai_chance = {
 			base = 100
@@ -7706,6 +7906,7 @@ country_event = { #Japan wants to take over our dockyards
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.423 option japfor.423.b"
 		name = japfor.423.b
 		trigger = { is_subject = no }
 		ai_chance = {
@@ -7726,7 +7927,6 @@ country_event = { #Japan wants to take over our dockyards
 
 country_event = { #Japan return our dockyards
 	id = japfor.424
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.424 FROM = [From.GetName]" }
 	title = japfor.424.t
 	desc = japfor.424.d
 	picture = GFX_report_event_JAP_politician
@@ -7734,6 +7934,7 @@ country_event = { #Japan return our dockyards
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.424 option japfor.424.a"
 		name = japfor.424.a
 		every_owned_state = {
 			limit = { has_variable = JAP_dockyards_under_japanese_control }
@@ -7749,7 +7950,6 @@ country_event = { #Japan return our dockyards
 
 country_event = { #member ask japan for advisor group
 	id = japfor.425
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.425 FROM = [From.GetName]" }
 	title = japfor.425.t
 	desc = japfor.425.d
 	picture = GFX_report_event_JAP_politician
@@ -7757,10 +7957,9 @@ country_event = { #member ask japan for advisor group
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.425 option japfor.425.a"
 		name = japfor.425.a
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 		add_political_power = 10
 		FROM = {
 			country_event = japfor.421
@@ -7768,10 +7967,9 @@ country_event = { #member ask japan for advisor group
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.425 option japfor.425.b"
 		name = japfor.425.b
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 10 }
 		add_political_power = -10
 		FROM = {
 			country_event = japfor.426
@@ -7781,7 +7979,6 @@ country_event = { #member ask japan for advisor group
 
 country_event = { #Japan send as to the non-named black hole
 	id = japfor.426
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.426 FROM = [From.GetName]" }
 	title = japfor.426.t
 	desc = japfor.426.d
 	picture = GFX_report_event_JAP_politician
@@ -7789,6 +7986,7 @@ country_event = { #Japan send as to the non-named black hole
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.426 option japfor.426.a"
 		name = japfor.426.a
 		add_political_power = 20
 	}
@@ -7796,7 +7994,6 @@ country_event = { #Japan send as to the non-named black hole
 
 country_event = { #Member refuses to cede control of dockyards
 	id = japfor.427
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.427 FROM = [From.GetName]" }
 	title = japfor.427.t
 	desc = japfor.427.d
 	picture = GFX_report_event_JAP_politician
@@ -7804,6 +8001,7 @@ country_event = { #Member refuses to cede control of dockyards
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.427 option japfor.427.a"
 		name = japfor.427.a
 		add_political_power = 50
 		remove_targeted_decision = { decision = JAP_invest_in_sphere_take_dockyards target = FROM }
@@ -7816,7 +8014,6 @@ country_event = { #Member refuses to cede control of dockyards
 
 country_event = { #Japan and the Asian Economic Sphere embargo us!
 	id = japfor.450
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.450 FROM = [From.GetName]" }
 	title = japfor.450.t
 	desc = japfor.450.d
 	picture = GFX_report_event_JAP_ultimatum
@@ -7824,6 +8021,7 @@ country_event = { #Japan and the Asian Economic Sphere embargo us!
 	is_triggered_only = yes
 
 	option = { #We can endure this
+		log = "[GetLogInfo]: event japfor.450 option japfor.450.a"
 		name = japfor.450.a
 		ai_chance = {
 			base = 55
@@ -7843,15 +8041,14 @@ country_event = { #Japan and the Asian Economic Sphere embargo us!
 	}
 
 	option = { #Seek closer economic ties with the Japanese
+		log = "[GetLogInfo]: event japfor.450 option japfor.450.c"
 		name = japfor.450.c
 		trigger = {
 			tag = AST
 			has_government = paternal_autocrat
 			NOT = { has_completed_focus = AST_ties_with_japan }
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		set_country_flag = AST_has_ties_with_japan
 		add_ideas = JAP_trade_embargoed
 		JAP = {
@@ -7859,6 +8056,7 @@ country_event = { #Japan and the Asian Economic Sphere embargo us!
 		}
 	}
 	option = { #Impose our own tarrifs
+		log = "[GetLogInfo]: event japfor.450 option japfor.450.b"
 		name = japfor.450.b
 		ai_chance = {
 			base = 45
@@ -7885,7 +8083,6 @@ country_event = { #Japan and the Asian Economic Sphere embargo us!
 
 country_event = { #Japan and the Asian Economic Sphere embargo us!
 	id = japfor.451
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.451 FROM = [From.GetName]" }
 	title = japfor.451.t
 	desc = japfor.451.d
 	picture = GFX_report_event_BEL_Cruiser
@@ -7893,6 +8090,7 @@ country_event = { #Japan and the Asian Economic Sphere embargo us!
 	is_triggered_only = yes
 
 	option = { #We can endure this
+		log = "[GetLogInfo]: event japfor.451 option japfor.451.a"
 		name = japfor.451.a
 		ai_chance = {
 			base = 25
@@ -7904,10 +8102,9 @@ country_event = { #Japan and the Asian Economic Sphere embargo us!
 		add_war_support = 0.05
 	}
 	option = { #War!
+		log = "[GetLogInfo]: event japfor.451 option japfor.451.b"
 		name = japfor.451.b
-		ai_chance = {
-			base = 75
-		}
+		ai_chance = { base = 75 }
 		add_war_support = 0.05
 		create_wargoal = {
 			target = FROM
@@ -7918,7 +8115,6 @@ country_event = { #Japan and the Asian Economic Sphere embargo us!
 
 country_event = { #Australia wants closer ties
 	id = japfor.452
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.452 FROM = [From.GetName]" }
 	title = japfor.452.t
 	desc = japfor.452.d
 	picture = GFX_report_event_AST_stephenson
@@ -7926,6 +8122,7 @@ country_event = { #Australia wants closer ties
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.452 option japfor.452.a"
 		name = japfor.452.a
 		add_political_power = 50
 		custom_effect_tooltip = JAP_AST_joins_sphere
@@ -7942,20 +8139,19 @@ country_event = { #Australia wants closer ties
 
 country_event = { #Australia/NZ choose to endure the embargo
 	id = japfor.453
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.453 FROM = [From.GetName]" }
 	title = japfor.453.t
 	desc = japfor.453.d
 
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.453 option japfor.453.a"
 		name = japfor.453.a
 	}
 }
 
 country_event = { #Warning Japan is going to attack you
 	id = japfor.454
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.454 FROM = [From.GetName]" }
 	title = japfor.454.t
 	desc = japfor.454.d
 	picture = GFX_report_event_GXC_federalist_troops_rally
@@ -7963,13 +8159,13 @@ country_event = { #Warning Japan is going to attack you
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.454 option japfor.454.a"
 		name = japfor.454.a
 	}
 }
 
 country_event = { #Japan is ramping up pressure against the Indies
 	id = japfor.455
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.455 FROM = [From.GetName]" }
 	title = japfor.455.t
 	desc = japfor.455.d
 
@@ -7979,6 +8175,7 @@ country_event = { #Japan is ramping up pressure against the Indies
 	fire_only_once = yes
 
 	option = { #Beg the kaiser for help
+		log = "[GetLogInfo]: event japfor.455 option japfor.455.a"
 		name = japfor.455.a
 		trigger = {
 			1020 = { is_owned_by = DEI }
@@ -7989,19 +8186,16 @@ country_event = { #Japan is ramping up pressure against the Indies
 				is_faction_leader = yes
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		GER = {
 			country_event = { id = japfor.456 days = 1 }
 		}
 	}
 
 	option = { #Surely they won't attack?!
+		log = "[GetLogInfo]: event japfor.455 option japfor.455.b"
 		name = japfor.455.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		JAP = {
 			country_event = { id = japfor.459 days = 1 }
 		}
@@ -8010,7 +8204,6 @@ country_event = { #Japan is ramping up pressure against the Indies
 
 country_event = { #Japan is planning an attack against the Dutch East Indies, who ask for our (Germany) help
 	id = japfor.456
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.456 FROM = [From.GetName]" }
 	title = japfor.456.t
 	desc = japfor.456.d
 
@@ -8020,6 +8213,7 @@ country_event = { #Japan is planning an attack against the Dutch East Indies, wh
 	fire_only_once = yes
 
 	option = { #If the indies fall, it threatens our possessions too, we're here!
+		log = "[GetLogInfo]: event japfor.456 option japfor.456.a"
 		name = japfor.456.a
 		ai_chance = {
 			base = 100
@@ -8035,6 +8229,7 @@ country_event = { #Japan is planning an attack against the Dutch East Indies, wh
 	}
 
 	option = { #Surely they won't attack?!
+		log = "[GetLogInfo]: event japfor.456 option japfor.456.b"
 		name = japfor.456.b
 		ai_chance = {
 			base = 0
@@ -8051,7 +8246,6 @@ country_event = { #Japan is planning an attack against the Dutch East Indies, wh
 
 country_event = { #Germany helps out...
 	id = japfor.457
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.457 FROM = [From.GetName]" }
 	title = japfor.457.t
 	desc = japfor.457.d
 
@@ -8061,6 +8255,7 @@ country_event = { #Germany helps out...
 	fire_only_once = yes
 
 	option = { #If the indies fall, it threatens our possessions too, we're here!
+		log = "[GetLogInfo]: event japfor.457 option japfor.457.a"
 		name = japfor.457.a
 		effect_tooltip = {
 			GER = {
@@ -8075,7 +8270,6 @@ country_event = { #Germany helps out...
 
 country_event = { #Tyfusmoffen willen niet helpen
 	id = japfor.458
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.458 FROM = [From.GetName]" }
 	title = japfor.458.t
 	desc = japfor.458.d
 
@@ -8085,6 +8279,7 @@ country_event = { #Tyfusmoffen willen niet helpen
 	fire_only_once = yes
 
 	option = { #Damn boii
+		log = "[GetLogInfo]: event japfor.458 option japfor.458.a"
 		name = japfor.458.a
 		JAP = {
 			country_event = { id = japfor.459 days = 1 }
@@ -8094,7 +8289,6 @@ country_event = { #Tyfusmoffen willen niet helpen
 
 country_event = { #Indonesia is unprotected
 	id = japfor.459
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.459 FROM = [From.GetName]" }
 	title = japfor.459.t
 	desc = japfor.459.d
 
@@ -8104,6 +8298,7 @@ country_event = { #Indonesia is unprotected
 	fire_only_once = yes
 
 	option = { #Hell yeah
+		log = "[GetLogInfo]: event japfor.459 option japfor.459.a"
 		name = japfor.459.a
 		if = {
 			limit = {
@@ -8119,7 +8314,6 @@ country_event = { #Indonesia is unprotected
 
 country_event = { #Indonesia resists with German backing
 	id = japfor.460
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.460 FROM = [From.GetName]" }
 	title = japfor.460.t
 	desc = japfor.460.d
 	picture = GFX_report_event_GEA_coltroops
@@ -8128,6 +8322,7 @@ country_event = { #Indonesia resists with German backing
 	fire_only_once = yes
 
 	option = { #war
+		log = "[GetLogInfo]: event japfor.460 option japfor.460.a"
 		name = japfor.460.a
 		ai_chance = {
 			base = 50
@@ -8155,6 +8350,7 @@ country_event = { #Indonesia resists with German backing
 		}
 	}
 	option = { #Don't
+		log = "[GetLogInfo]: event japfor.460 option japfor.460.b"
 		name = japfor.460.b
 		ai_chance = {
 			base = 50
@@ -8169,7 +8365,6 @@ country_event = { #Indonesia resists with German backing
 
 country_event = { #Japan Pursues Divide and Conquer Strategy
 	id = japfor.461
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.461 FROM = [From.GetName]" }
 	title = japfor.461.t
 	desc = japfor.461.d
 
@@ -8179,6 +8374,7 @@ country_event = { #Japan Pursues Divide and Conquer Strategy
 	fire_only_once = yes
 
 	option = { #
+		log = "[GetLogInfo]: event japfor.461 option japfor.461.a"
 		name = japfor.461.a
 		set_temp_variable = { ZCPOP = 5 }
 		FNG_ZCPOP = yes
@@ -8189,7 +8385,6 @@ country_event = { #Japan Pursues Divide and Conquer Strategy
 
 country_event = { #Japan Pursues Burn to Ash Strategy
 	id = japfor.462
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.462 FROM = [From.GetName]" }
 	title = japfor.462.t
 	desc = japfor.462.d
 
@@ -8199,6 +8394,7 @@ country_event = { #Japan Pursues Burn to Ash Strategy
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.462 option japfor.462.a"
 		name = japfor.462.a
 		set_temp_variable = { ZCPOP = 5 }
 		FNG_ZCPOP = yes
@@ -8209,7 +8405,6 @@ country_event = { #Japan Pursues Burn to Ash Strategy
 
 country_event = { #Japan Starts to Plant Sakura Trees
 	id = japfor.463
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.463 FROM = [From.GetName]" }
 	title = japfor.463.t
 	desc = japfor.463.d
 
@@ -8219,6 +8414,7 @@ country_event = { #Japan Starts to Plant Sakura Trees
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.463 option japfor.463.a"
 		name = japfor.463.a
 		set_temp_variable = { ZCPOP = 5 }
 		FNG_ZCPOP = yes
@@ -8229,7 +8425,6 @@ country_event = { #Japan Starts to Plant Sakura Trees
 
 country_event = { #Japan Rewards Our Loyalty
 	id = japfor.464
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.464 FROM = [From.GetName]" }
 	title = japfor.464.t
 	desc = japfor.464.d
 
@@ -8239,6 +8434,7 @@ country_event = { #Japan Rewards Our Loyalty
 	fire_only_once = yes
 
 	option = {
+		log = "[GetLogInfo]: event japfor.464 option japfor.464.a"
 		name = japfor.464.a
 		set_temp_variable = { ZCPOP = -10 }
 		FNG_ZCPOP = yes
@@ -8321,10 +8517,8 @@ country_event = { #Japan Rewards Our Loyalty
 
 news_event = {
 	id = japfor.470
-	immediate = { log = "[GetDateText]: [Root.GetName]: event japfor.470 FROM = [From.GetName]" }
 	title = japfor.470.t
 	desc = japfor.470.d
-
 	picture = news_event_NFA_shell_algiers
 
 	major = yes
@@ -8335,6 +8529,46 @@ news_event = {
 	}
 
 	option = {
+		log = "[GetLogInfo]: event japfor.470 option 1"
 		name = "[THIS.worldnews_japan_vs_america]"
+	}
+}
+
+news_event = { #The Rising Sun
+	id = japfor.471
+	title = japfor.471.t
+
+	desc = {
+		text = japfor.471.d.default
+		trigger = { NOT = { has_global_flag = JAP_defeated_by_china } }
+	}
+	desc = {
+		text = japfor.471.d.defeated_in_china
+		trigger = { has_global_flag = JAP_defeated_by_china }
+	}
+
+	picture = GFX_news_event_japanese_parade
+
+	major = yes
+	fire_for_sender = no
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	show_major = {
+		regional_asia_news = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event japfor.471 option japfor.471.a"
+		name = japfor.471.a
+		effect_tooltip = {
+			add_named_threat = {
+				threat = 6
+				name = JAP_rising_sun_threat
+			}
+		}
 	}
 }

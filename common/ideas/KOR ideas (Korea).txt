@@ -184,11 +184,20 @@ ideas = {
 				social_liberal_drift = 0.10
 				social_conservative_drift = 0.10
 				market_liberal_drift = 0.10
-
 			}
 		}
 		KOR_army_of_the_republic = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_army_of_the_republic" }
+			picture = big_entente_idea
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		KOR_army_of_the_empire = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	KOR_army_of_the_empire" }
 			picture = big_entente_idea
 			allowed = { always = no }
 			modifier = {
@@ -406,7 +415,6 @@ ideas = {
 				industrial_capacity_factory = 0.2
 				stability_factor = -0.15
 				line_change_production_efficiency_factor = 0.05
-
 			}
 		}
 		KOR_nation_wide_education_expansion = {
@@ -602,6 +610,27 @@ ideas = {
 				consumer_goods_factor = -0.01
 			}
 		}
+		KOR_twin_tigers_idea = { #for korea
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_twin_tigers_idea " }
+			picture = LEC_China_Rising
+			name = KOR_twin_tigers_idea
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.01
+				cic_to_overlord_factor = 0.25
+			}
+		}
+		KOR_twin_tigers_idea2 = { #for ROC
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_twin_tigers_idea " }
+			picture = LEC_China_Rising
+			name = KOR_twin_tigers_idea
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.01
+				consumer_goods_factor = -0.01
+			}
+		}
+
 		KOR_peoples_army = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOR_peoples_army" }
 			picture = UoB_militia_idea

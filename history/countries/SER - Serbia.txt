@@ -3,6 +3,7 @@ set_research_slots = 3
 oob = "SER"
 set_war_support = 0.4
 set_cosmetic_tag = SER_republic
+starting_train_buffer = 2
 
 save_global_event_target_as = original_serbia #used in scripts
 
@@ -177,6 +178,7 @@ recruit_character = SER_dusan_simovic
 recruit_character = SER_milan_spasic
 recruit_character = SER_petar_bojovic
 recruit_character = SER_konstantin_popovic
+recruit_character = SER_arso_jovanovic
 
 ## Advisors
 recruit_character = SER_sima_markovic
@@ -206,6 +208,7 @@ activate_advisor = SER_milan_grol_sic
 ### Character Setup ###
 SER_petar_bojovic = { retire = yes }
 SER_konstantin_popovic = { retire = yes }
+SER_arso_jovanovic = { retire = yes }
 
 ### Operatives ###
 if = {

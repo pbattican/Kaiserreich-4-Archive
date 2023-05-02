@@ -5,7 +5,9 @@ set_research_slots = 3
 set_stability = 0.9
 set_war_support = 0.1
 set_convoys = 75
-starting_train_buffer = 1
+starting_train_buffer = 2
+
+save_global_event_target_as = original_sweden
 
 country_event = { id = swe.0 days = 1 } #Intro
 country_event = { id = swe.2 days = 106 } #Per Albin Hansson critises our crisis response

@@ -13,9 +13,7 @@ ICE_Coastal_Road = {
 				has_country_flag = ICE_Road_Construction
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_infrastructure_factor = 0.15
 		}
@@ -23,7 +21,7 @@ ICE_Coastal_Road = {
 		cost = 45
 		days_remove = 60
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Build_Miklabraut"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Build_Miklabraut"
 			set_country_flag = ICE_Road_Construction
 		}
 
@@ -44,9 +42,7 @@ ICE_Coastal_Road = {
 				has_country_flag = ICE_Road_Construction
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_infrastructure_factor = 0.15
 		}
@@ -54,7 +50,7 @@ ICE_Coastal_Road = {
 		cost = 55
 		days_remove = 90
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Build_Hvalfjaroarvegur"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Build_Hvalfjaroarvegur"
 			set_country_flag = ICE_Road_Construction
 		}
 
@@ -74,9 +70,7 @@ ICE_Coastal_Road = {
 				has_country_flag = ICE_Road_Construction
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_infrastructure_factor = 0.15
 		}
@@ -84,7 +78,7 @@ ICE_Coastal_Road = {
 		cost = 50
 		days_remove = 60
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Build_Vesturlandsvegur"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Build_Vesturlandsvegur"
 			set_country_flag = ICE_Road_Construction
 		}
 
@@ -104,9 +98,7 @@ ICE_Coastal_Road = {
 				has_country_flag = ICE_Road_Construction
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_infrastructure_factor = 0.15
 		}
@@ -114,7 +106,7 @@ ICE_Coastal_Road = {
 		cost = 60
 		days_remove = 120
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Build_Borgarbraut"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Build_Borgarbraut"
 			set_country_flag = ICE_Road_Construction
 		}
 
@@ -134,9 +126,7 @@ ICE_Coastal_Road = {
 				has_country_flag = ICE_Road_Construction
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_infrastructure_factor = 0.15
 		}
@@ -144,7 +134,7 @@ ICE_Coastal_Road = {
 		cost = 60
 		days_remove = 120
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Build_Hringvegur"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Build_Hringvegur"
 			set_country_flag = ICE_Road_Construction
 		}
 
@@ -170,9 +160,7 @@ ICE_Coastal_Road = {
 				has_country_flag = ICE_Road_Construction
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_infrastructure_factor = 0.15
 		}
@@ -180,7 +168,7 @@ ICE_Coastal_Road = {
 		cost = 60
 		days_remove = 90
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Build_Suourlandsvegur"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Build_Suourlandsvegur"
 			set_country_flag = ICE_Road_Construction
 		}
 
@@ -200,9 +188,7 @@ ICE_Coastal_Road = {
 				has_country_flag = ICE_Road_Construction
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_infrastructure_factor = 0.15
 		}
@@ -210,7 +196,7 @@ ICE_Coastal_Road = {
 		cost = 55
 		days_remove = 60
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Build_Suourlandsbraut"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Build_Suourlandsbraut"
 			set_country_flag = ICE_Road_Construction
 		}
 
@@ -230,9 +216,7 @@ ICE_Coastal_Road = {
 				has_country_flag = ICE_Road_Construction
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_infrastructure_factor = 0.15
 		}
@@ -240,7 +224,7 @@ ICE_Coastal_Road = {
 		cost = 65
 		days_remove = 120
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Build_Austurvegur"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Build_Austurvegur"
 			set_country_flag = ICE_Road_Construction
 		}
 
@@ -266,9 +250,7 @@ ICE_State_Projects = {
 		available = {
 			has_manpower > 550
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_industrial_complex_factor = 0.10
 		}
@@ -276,7 +258,7 @@ ICE_State_Projects = {
 		cost = 20
 		days_remove = 125
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Industry_Expansion_Prereq"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Industry_Expansion_Prereq"
 			add_manpower = -550
 		}
 
@@ -295,9 +277,7 @@ ICE_State_Projects = {
 		available = {
 			has_manpower > 800
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_industrial_complex_factor = 0.10
 		}
@@ -305,7 +285,7 @@ ICE_State_Projects = {
 		cost = 60
 		days_remove = 250
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Industry_Expansion"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Industry_Expansion"
 			add_manpower = -800
 		}
 
@@ -330,15 +310,13 @@ ICE_State_Projects = {
 		available = {
 			has_manpower > 1000
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 		cost = 75
 		days_remove = 180
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Electric_Dam_1"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Electric_Dam_1"
 			add_manpower = -1000
 		}
 
@@ -364,15 +342,13 @@ ICE_State_Projects = {
 		available = {
 			has_manpower > 200
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 		cost = 75
 		days_remove = 180
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Electric_Dam_2"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Electric_Dam_2"
 			add_manpower = -200
 		}
 
@@ -413,14 +389,12 @@ ICE_Fishing_Regions_decisions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		fire_only_once = yes
 		cost = 30
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Greenland_Region"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Greenland_Region"
 			hidden_effect = {
 				set_country_flag = ICE_Greenland_Fishing
 			}
@@ -467,14 +441,12 @@ ICE_Fishing_Regions_decisions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 80
-		}
+		ai_will_do = { factor = 80 }
 
 		fire_only_once = yes
 		cost = 75
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_North_Atlantic_Region"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_North_Atlantic_Region"
 			DEN = {
 				diplomatic_relation = {
 					country = ICE
@@ -522,12 +494,10 @@ ICE_Canadian_Engineers = {
 			production_speed_buildings_factor = 0.25
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Invite_Experts"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Invite_Experts"
 		}
 
 		remove_effect = {
@@ -541,12 +511,10 @@ ICE_Canadian_Engineers = {
 		cost = 150
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Request_Industrial_Assistance"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Request_Industrial_Assistance"
 			add_offsite_building = { type = industrial_complex level = 1 }
 		}
 	}
@@ -568,7 +536,7 @@ ICE_Canadian_Engineers = {
 		days_remove = 125
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_CAN_Industry_Expansion_Prereq target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_CAN_Industry_Expansion_Prereq target: [From.GetName]"
 		}
 
 		remove_effect = {
@@ -598,7 +566,7 @@ ICE_Canadian_Engineers = {
 		days_remove = 175
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_CAN_Industry_Expansion target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_CAN_Industry_Expansion target: [From.GetName]"
 		}
 
 		remove_effect = {
@@ -652,15 +620,13 @@ ICE_Canadian_Engineers = {
 		modifier = {
 			civilian_factory_use = 3
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 		cost = 10
 		days_remove = 60
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_CAN_Port_Expand_1 target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_CAN_Port_Expand_1 target: [From.GetName]"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_CAN_Port_Expand_1 target: [From.GetName]"
@@ -687,16 +653,14 @@ ICE_Canadian_Engineers = {
 		modifier = {
 			civilian_factory_use = 3
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 		cost = 10
 		days_remove = 60
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_CAN_Port_Expand_2 target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_CAN_Port_Expand_2 target: [From.GetName]"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_CAN_Port_Expand_2 target: [From.GetName]"
@@ -723,16 +687,14 @@ ICE_Canadian_Engineers = {
 		modifier = {
 			civilian_factory_use = 3
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 		cost = 10
 		days_remove = 60
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_CAN_Port_Expand_3 target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_CAN_Port_Expand_3 target: [From.GetName]"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_CAN_Port_Expand_3 target: [From.GetName]"
@@ -758,15 +720,13 @@ ICE_Canadian_Engineers = {
 		modifier = {
 			civilian_factory_use = 3
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 		cost = 10
 		days_remove = 45
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Reykjavik_Air target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Reykjavik_Air target: [From.GetName]"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Reykjavik_Air target: [From.GetName]"
@@ -785,9 +745,7 @@ ICE_Military_Projects = {
 	ICE_Reykjavik_LFort_1 = {
 		icon = GFX_decision_fortress
 		allowed = { always = no }			# Activated by ICE_Military_Projects
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 		cost = 15
@@ -810,9 +768,7 @@ ICE_Military_Projects = {
 	ICE_Reykjavik_LFort_Lev2 = {
 		icon = GFX_decision_fortress
 		allowed = { always = no }			# Activated by ICE_Reykjavik_LFort_1
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 15
@@ -834,9 +790,7 @@ ICE_Military_Projects = {
 	ICE_Reykjavik_AA_1 = {
 		icon = GFX_decision_AA_small
 		allowed = { always = no }			# Activated by ICE_Military_Projects
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 20
@@ -858,9 +812,7 @@ ICE_Military_Projects = {
 	ICE_Reykjavik_AA_2 = {
 		icon = GFX_decision_AA_small
 		allowed = { always = no }			# Activated by ICE_Reykjavik_AA_1
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 20
@@ -881,9 +833,7 @@ ICE_Military_Projects = {
 	ICE_Reykjavik_SFort_1 = {
 		icon = GFX_decision_fortress
 		allowed = { always = no }			# Activated by ICE_Military_Projects
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 		cost = 15
@@ -906,9 +856,7 @@ ICE_Military_Projects = {
 	ICE_Reykjavik_SFort_Lev2 = {
 		icon = GFX_decision_fortress
 		allowed = { always = no }			# Activated by ICE_Reykjavik_SFort_1
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 15
@@ -930,9 +878,7 @@ ICE_Military_Projects = {
 	ICE_Keflavik_Air = {
 		icon = GFX_decision_generic_air
 		allowed = { always = no }			# Activated by ICE_Military_Projects
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 20
@@ -959,9 +905,7 @@ ICE_Military_Projects = {
 		visible = {
 			is_in_faction_with = CAN
 		}
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = no
 		cancel_if_not_visible = yes
@@ -970,7 +914,7 @@ ICE_Military_Projects = {
 		days_re_enable = 180
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Reinforce_IRAF"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Reinforce_IRAF"
 			country_event = ice.113
 		}
 	}
@@ -981,9 +925,7 @@ ICE_Military_Projects = {
 		available = {
 			has_tech = radio_detection
 		}
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 35
@@ -1006,9 +948,7 @@ ICE_Union_Engineers = {
 	ICE_Retool_Ind = {
 		icon = GFX_decision_generic_operation
 		allowed = { always = no }			# Activated by ICE_Synd_Ind
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 55
@@ -1028,9 +968,7 @@ ICE_Union_Engineers = {
 	ICE_Fuel_Prereq = {
 		icon = GFX_decision_generic_industry
 		allowed = { always = no }			# Activated by ICE_ENGfuel
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 25
@@ -1048,9 +986,7 @@ ICE_Union_Engineers = {
 	ICE_Fuel = {
 		icon = GFX_decision_oil
 		allowed = { always = no }			# Activated by ICE_Fuel_Prereq
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		modifier = {
 			production_speed_synthetic_refinery_factor = 0.1
 		}
@@ -1081,9 +1017,7 @@ ICE_Union_Engineers = {
 		modifier = {
 			civilian_factory_use = 2
 		}
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 10
@@ -1114,9 +1048,7 @@ ICE_Union_Engineers = {
 		modifier = {
 			civilian_factory_use = 2
 		}
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 10
@@ -1147,9 +1079,7 @@ ICE_Union_Engineers = {
 		modifier = {
 			civilian_factory_use = 2
 		}
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		fire_only_once = yes
 		cost = 10
@@ -1179,9 +1109,7 @@ ICE_Union_Engineers = {
 		modifier = {
 			civilian_factory_use = 2
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 		cost = 10
@@ -1210,15 +1138,13 @@ ICE_Union_Engineers = {
 		modifier = {
 			civilian_factory_use = 3
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 		cost = 10
 		days_remove = 45
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_ENG_Reykjavik_Air target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_ENG_Reykjavik_Air target: [From.GetName]"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_ENG_Reykjavik_Air target: [From.GetName]"
@@ -1250,7 +1176,7 @@ ICE_Resist_Invaders = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Spread_Propaganda"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Spread_Propaganda"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Spread_Propaganda"
@@ -1282,7 +1208,7 @@ ICE_Resist_Invaders = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Broadcast_Propaganda"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Broadcast_Propaganda"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Broadcast_Propaganda"
@@ -1317,7 +1243,7 @@ ICE_Resist_Invaders = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Request_Canadian_Aid"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Request_Canadian_Aid"
 			CAN = { country_event = { id = ice.591 days = 1 } }
 		}
 	}
@@ -1386,7 +1312,7 @@ ICE_Resist_Invaders = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Scout"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Scout"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Scout"
@@ -1438,7 +1364,7 @@ ICE_Resist_Invaders = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Sabotage"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Sabotage"
 			random_list = {
 				65 = {
 					custom_effect_tooltip = ICE_Sabotage_Success
@@ -1607,12 +1533,10 @@ ICE_Resist_Invaders = {
 
 		cost = 75
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Declare_Canada"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Declare_Canada"
 			separate_peace_all_wars = yes
 			ICE = {
 				complete_national_focus = ICE_Ottawa_King
@@ -1634,12 +1558,10 @@ ICE_Iceland_Abroad = {
 		cost = 20
 		state_target = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Airport_Expansion target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Airport_Expansion target: [From.GetName]"
 			FROM = {
 				add_building_construction = {
 					type = air_base
@@ -1657,12 +1579,10 @@ ICE_Iceland_Abroad = {
 		cost = 20
 		state_target = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Port_Expansion target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Port_Expansion target: [From.GetName]"
 			FROM = {
 				add_building_construction = {
 					type = naval_base
@@ -1690,11 +1610,9 @@ ICE_Iceland_Abroad = {
 		fire_only_once = yes
 		cost = 20
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Trade_decision target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Trade_decision target: [From.GetName]"
 			if = {
 				limit = {
 					ICE = {
@@ -1741,12 +1659,10 @@ ICE_Iceland_Banking = {
 		modifier = {
 			stability_weekly = 0.003
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Curb_Inflation_dec"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Curb_Inflation_dec"
 		}
 
 		remove_effect = {
@@ -1767,12 +1683,10 @@ ICE_Iceland_Banking = {
 			political_power_gain = 0.05
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Fiscal_Austerity_dec"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Fiscal_Austerity_dec"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Fiscal_Austerity_dec"
@@ -1790,12 +1704,10 @@ ICE_Iceland_Banking = {
 		modifier = {
 			min_export = 0.1
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Encourage_Exports"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Encourage_Exports"
 		}
 
 		remove_effect = {
@@ -1814,12 +1726,10 @@ ICE_Iceland_Banking = {
 		modifier = {
 			political_power_gain = -0.05
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Loans_to_Fishers"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Loans_to_Fishers"
 		}
 
 		remove_effect = {
@@ -1844,12 +1754,10 @@ ICE_Iceland_Banking = {
 			political_power_gain = -0.15
 			stability_weekly = 0.003
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Subsidize_Fishers"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Subsidize_Fishers"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Subsidize_Fishers"
@@ -1869,9 +1777,7 @@ ICE_Althing = {
 			political_power_gain = -0.10
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Rally_Support"
@@ -1887,12 +1793,10 @@ ICE_Althing = {
 		fire_only_once = yes
 		cost = 15
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Repeal_Prohibition"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Repeal_Prohibition"
 			add_stability = 0.03
 			add_political_power = -10
 		}
@@ -1906,9 +1810,7 @@ ICE_Althing = {
 		cost = 55
 		days_remove = 7
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Guttoslagurinn_Meeting"
@@ -1927,9 +1829,7 @@ ICE_Althing = {
 			stability_weekly = 0.001
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Alleviate_Unemployment"
@@ -1943,12 +1843,10 @@ ICE_Althing = {
 		fire_only_once = yes
 		cost = 25
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ICE_Travel_Schools"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ICE_Travel_Schools"
 			add_ideas = ICE_Travelling_Schools_Idea
 		}
 	}
@@ -1959,9 +1857,7 @@ ICE_Althing = {
 		fire_only_once = yes
 		cost = 45
 		days_remove = 175
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove ICE_Infrastructure"

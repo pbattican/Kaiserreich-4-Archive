@@ -28,12 +28,10 @@ political_actions = {
 			stability_weekly = -0.002 #== 10% in one year
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GER_integrate_austria target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete GER_integrate_austria target: [From.GetName]"
 			add_state_core = 4 #Lower Austria
 			add_state_core = 152 #Upper Austria
 			add_state_core = 153 #Tyrol
@@ -90,12 +88,10 @@ political_actions = {
 			stability_weekly = -0.002 #== 5% in one year
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GER_integrate_switzerland target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete GER_integrate_switzerland target: [From.GetName]"
 			add_state_core = 3 #Swiss Plateau
 			add_state_core = 151 #Eastern Switzerland
 		}
@@ -116,7 +112,10 @@ political_actions = {
 		}
 
 		available = {
-			FROM = { controls_all_owned_states = yes }
+			FROM = {
+				controls_all_owned_states = yes
+				at_peace_or_same_enemies_as_ROOT = yes
+			}
 		}
 
 		visible = {
@@ -126,14 +125,6 @@ political_actions = {
 			NOT = {
 				is_in_faction_with = FROM
 				has_war_with = FROM
-			}
-			any_enemy_country = {
-				OR = {
-					tag = INT
-					tag = RUS
-					tag = SOV
-				}
-				NOT = { has_war_with = FROM }
 			}
 			FROM = {
 				exists = yes
@@ -184,7 +175,7 @@ political_actions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GER_appeal_to_old_friends target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete GER_appeal_to_old_friends target: [From.GetName]"
 			if = {
 				limit = { FROM = { tag = AUS } }
 				AUS = {
@@ -224,10 +215,7 @@ political_actions = {
 				tag = NEE
 				tag = RAJ
 			}
-			OR = {
-				tag = QIE
-				is_chinese_tag = no #can't join
-			}
+			is_tag_in_china_area = no #can't join
 		}
 
 		targets = { GER }
@@ -248,70 +236,11 @@ political_actions = {
 		fire_only_once = no
 		cost = 0
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GER_join_kaiser_wilhelm_society target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete GER_join_kaiser_wilhelm_society target: [From.GetName]"
 			add_to_tech_sharing_group = german_research
-		}
-	}
-
-	GER_puppet_core_germany = {
-		icon = generic_nationalism
-
-		allowed = {
-			OR = {
-				tag = PRE
-				tag = NGF
-				tag = RHI
-				tag = BAY
-			}
-		}
-
-		available = {
-			has_full_control_of_state = FROM
-		}
-
-		visible = {
-			FROM = {
-				is_owned_by = ROOT
-				is_claimed_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		state_target = yes
-		target_array = global.GER_germany_region
-		target_trigger = {
-			FROM = {
-				is_owned_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		fire_only_once = no
-		days_remove = 60
-		cost = 25
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GER_puppet_core_germany target: [From.GetName]"
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GER_puppet_core_germany target: [From.GetName]"
-			FROM = {
-				if = {
-					limit = { is_claimed_by = ROOT }
-					remove_claim_by = ROOT
-				}
-				add_core_of = ROOT
-			}
 		}
 	}
 }
@@ -357,12 +286,10 @@ french_occupation_decisions = {
 		days_remove = 30
 		cost = 25
 
-		ai_will_do = {
-			factor = 200
-		}
+		ai_will_do = { factor = 200 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GER_erode_cof_legitimacy"
+			log = "[GetDateText]: [Root.GetName]: Decision complete GER_erode_cof_legitimacy"
 			set_country_flag = GER_eroding_cof_leg
 		}
 
@@ -479,7 +406,7 @@ french_occupation_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GER_invite_nfa_to_france target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete GER_invite_nfa_to_france target: [From.GetName]"
 			NFA = { country_event = capt.43 }
 		}
 	}

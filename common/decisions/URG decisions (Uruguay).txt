@@ -14,6 +14,10 @@ political_actions = {
 			}
 		}
 
+		available = {
+			NOT = { has_country_flag = URG_already_requesting_help }
+		}
+
 		target_array = enemies
 		target_root_trigger = { has_war = yes }
 		target_trigger = {
@@ -26,7 +30,8 @@ political_actions = {
 		ai_will_do = { base = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision URG_call_for_brazilian_aid target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete URG_call_for_brazilian_aid target: [From.GetName]"
+			set_country_flag = URG_already_requesting_help
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = 1000
@@ -40,8 +45,9 @@ political_actions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_call_for_brazilian_aid target: [From.GetName]"
+			clr_country_flag = URG_already_requesting_help
 			FROM = { save_event_target_as = threatening_country }
-			BRA = { country_event = bra.126 }
+			BRA = { country_event = bra.125 }
 		}
 	}
 }
@@ -72,9 +78,7 @@ URG_military_decisions = {
 		cost = 50
 		fire_only_once = yes
 		cancel_if_not_visible = yes
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_invite_advisors target: [From.GetName]"
 			add_timed_idea = {
@@ -96,11 +100,9 @@ URG_military_decisions = {
 		}
 		cost = 100
 		fire_only_once = yes
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision URG_yankee_airplanes"
+			log = "[GetDateText]: [Root.GetName]: Decision complete URG_yankee_airplanes"
 			add_equipment_to_stockpile = {
 				type = small_plane_airframe
 				amount = 200
@@ -124,9 +126,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_1 target: [From.GetName]"
 			FROM = {
@@ -150,9 +150,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_2 target: [From.GetName]"
 			FROM = {
@@ -175,9 +173,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_3 target: [From.GetName]"
 			FROM = {
@@ -201,9 +197,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_4 target: [From.GetName]"
 			FROM = {
@@ -226,9 +220,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_5 target: [From.GetName]"
 			FROM = {
@@ -252,9 +244,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_6 target: [From.GetName]"
 			FROM = {
@@ -277,9 +267,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_7 target: [From.GetName]"
 			FROM = {
@@ -303,9 +291,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_8 target: [From.GetName]"
 			FROM = {
@@ -328,9 +314,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_9 target: [From.GetName]"
 			FROM = {
@@ -354,9 +338,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_10 target: [From.GetName]"
 			FROM = {
@@ -379,9 +361,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_11 target: [From.GetName]"
 			FROM = {
@@ -405,9 +385,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_12 target: [From.GetName]"
 			FROM = {
@@ -430,9 +408,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_13 target: [From.GetName]"
 			FROM = {
@@ -475,9 +451,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_14 target: [From.GetName]"
 			FROM = {
@@ -506,9 +480,7 @@ URG_military_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 		state_target = yes
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arg_fort_15 target: [From.GetName]"
 			FROM = {
@@ -529,3 +501,186 @@ URG_military_decisions = {
 	}
 }
 
+URG_economic_decisions = {
+	URG_improve_agriculture_dec = {
+		icon = GFX_decision_generic_agriculture
+		allowed = { always = no }
+		cost = 50
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			FROM = { is_controlled_by = owner }
+		}
+		visible = {
+			FROM = { is_owned_by_ROOT_or_ally = yes }
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		days_remove = 150
+		fire_only_once = yes
+		state_target = yes
+
+		ai_will_do = { base = 40 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove URG_improve_agriculture_dec target: [From.GetName]"
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	URG_improve_cattle_ranches_dec = {
+		icon = GFX_decision_animal_husbandry
+		allowed = { always = no }
+		cost = 50
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			FROM = { is_controlled_by = owner }
+		}
+		visible = {
+			FROM = { is_owned_by_ROOT_or_ally = yes }
+		}
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		days_remove = 150
+		fire_only_once = yes
+		state_target = yes
+
+		ai_will_do = { base = 40 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove URG_improve_cattle_ranches_dec target: [From.GetName]"
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	URG_arms_industry_investments = {
+		icon = GFX_decision_generic_industry
+		allowed = { always = no }
+		cost = 50
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			FROM = { is_controlled_by = owner }
+		}
+		visible = {
+			FROM = { is_owned_by_ROOT_or_ally = yes }
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+		state_target = yes
+
+		ai_will_do = { factor = 25 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete URG_arms_industry_investments target: [From.GetName]"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove URG_arms_industry_investments target: [From.GetName]"
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	URG_dockyards_dec = {
+		icon = GFX_decision_generic_merge_plant_ship
+		allowed = { always = no }
+		cost = 30
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			FROM = { is_controlled_by = owner }
+		}
+		visible = {
+			FROM = { is_owned_by_ROOT_or_ally = yes }
+		}
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+		state_target = yes
+
+		ai_will_do = { base = 5 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove URG_dockyards_dec target: [From.GetName]"
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	URG_improve_resource_extraction_dec = {
+		icon = GFX_decision_cash_flow
+		allowed = { always = no }
+		cost = 30
+
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 2
+			FROM = { is_controlled_by = owner }
+		}
+		visible = {
+			FROM = { is_owned_by_ROOT_or_ally = yes }
+		}
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+		state_target = yes
+
+		ai_will_do = { base = 30 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove URG_improve_resource_extraction_dec target: [From.GetName]"
+			FROM = {
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
+		}
+	}
+}

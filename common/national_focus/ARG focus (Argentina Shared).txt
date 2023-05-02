@@ -18,9 +18,7 @@ shared_focus = {
 	x = 12
 	y = 0
 
-	ai_will_do = {
-		base = 1000
-	}
+	ai_will_do = { base = 1000 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Five_Year_Plan"
@@ -47,9 +45,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 1000
-	}
+	ai_will_do = { base = 1000 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Budget_Cuts"
@@ -74,9 +70,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Economic_Control_over_Argentina"
@@ -108,6 +102,11 @@ shared_focus = {
 
 	ai_will_do = {
 		base = 100
+		modifier = {
+			factor = 0
+			NOT = { has_completed_focus = ARG_Domestic_Aircraft_Manufactories }
+			NOT = { has_completed_focus = ARG_FM_Investement_Program }
+		}
 	}
 
 	completion_reward = {
@@ -142,12 +141,11 @@ shared_focus = {
 	y = 2
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Renegotiate_with_Mitteleuropa"
+		add_stability = 0.1
 		swap_ideas = {
 			remove_idea = ARG_Black_Monday2_1
 			add_idea = ARG_Black_Monday3
@@ -198,9 +196,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Shift_to_Consumer_Goods"
@@ -228,13 +224,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-		modifier = {
-			factor = 0
-			NOT = { has_completed_focus = ARG_Renegotiate_with_Mitteleuropa }
-		}
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Engines_of_War"
@@ -254,9 +244,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Domestic_Aircraft_Manufactories"
@@ -290,9 +278,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Spread_out_Military_Production"
@@ -320,9 +306,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_FM_Investement_Program"
@@ -388,9 +372,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Banco_Central_de_la_Republica_Argentina"
@@ -413,9 +395,7 @@ shared_focus = {
 	y = 4
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Stop_the_Economic_Downturn"
@@ -441,9 +421,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Stop_the_Economic_Downturn
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Parana_Infrastructure_Plan"
@@ -471,9 +449,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Stop_the_Economic_Downturn
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Grants_for_the_Universidad_de_Buenos_Aires"
@@ -500,9 +476,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Stop_the_Economic_Downturn
 
-	ai_will_do = {
-		base = 50
-	}
+	ai_will_do = { base = 50 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_YPF_Expansion"
@@ -540,9 +514,7 @@ shared_focus = {
 		has_country_flag = ARG_Mendoza_Rail_finished
 	}
 
-	ai_will_do = {
-		base = 0
-	}
+	ai_will_do = { base = 0 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Modernise_Animal_Husbandry"
@@ -580,9 +552,7 @@ shared_focus = {
 		has_country_flag = ARG_Mendoza_Rail_finished
 	}
 
-	ai_will_do = {
-		base = 50
-	}
+	ai_will_do = { base = 50 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Modernise_Farms"
@@ -621,9 +591,7 @@ shared_focus = {
 		has_country_flag = ARG_Mendoza_Rail_finished
 	}
 
-	ai_will_do = {
-		base = 50
-	}
+	ai_will_do = { base = 50 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Modernise_Forestry"
@@ -652,9 +620,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Modernise_Farms
 
-	ai_will_do = {
-		base = 50
-	}
+	ai_will_do = { base = 50 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Modernise_Fishing"
@@ -683,9 +649,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Modernise_Farms
 
-	ai_will_do = {
-		base = 50
-	}
+	ai_will_do = { base = 50 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Expand_Excavation_Industry"
@@ -722,9 +686,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Modernise_Fishing
 
-	ai_will_do = {
-		base = 50
-	}
+	ai_will_do = { base = 50 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Economic_Reinvigoration"
@@ -833,9 +795,7 @@ shared_focus = {
 	y = 5
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Export_to_South_America"
@@ -906,9 +866,7 @@ shared_focus = {
 	y = 5
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 10
-	}
+	ai_will_do = { base = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Mitteleuropan_Tank_Deal"
@@ -937,9 +895,7 @@ shared_focus = {
 	y = 5
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Increase_European_Export"
@@ -978,9 +934,7 @@ shared_focus = {
 	y = 6
 	relative_position_id = ARG_Five_Year_Plan
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_War_Profiteering"
@@ -1054,6 +1008,16 @@ shared_focus = {
 						}
 					}
 				}
+				hidden_effect = {
+					### Some tips
+					PAR = { country_event = { id = southern.40 days = 2 } }
+					BOL = { country_event = { id = southern.40 days = 2 } }
+					PRU = { country_event = { id = southern.40 days = 2 } }
+					## Just FYI
+					URG = { country_event = { id = southern.40 days = 2 } }
+					CHL = { country_event = { id = southern.40 days = 2 } }
+					BRA = { country_event = { id = southern.40 days = 2 } }
+				}
 			}
 		}
 	}
@@ -1074,9 +1038,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_FOP_Debacle
 
-	ai_will_do = {
-		base = 500
-	}
+	ai_will_do = { base = 500 }
 
 	bypass = {
 		has_elected_government = yes
@@ -1107,9 +1069,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_FOP_Debacle
 
-	ai_will_do = {
-		base = 500
-	}
+	ai_will_do = { base = 500 }
 
 	bypass = {
 		has_elected_government = yes
@@ -1191,9 +1151,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_FOP_Debacle
 
-	ai_will_do = {
-		base = 500
-	}
+	ai_will_do = { base = 500 }
 
 	bypass = {
 		has_elected_government = yes
@@ -1232,9 +1190,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = ARG_FOP_Debacle
 
-	ai_will_do = {
-		base = 500
-	}
+	ai_will_do = { base = 500 }
 
 	bypass = {
 		OR = {
@@ -1248,10 +1204,10 @@ shared_focus = {
 
 	will_lead_to_war_with = FOP
 	will_lead_to_war_with = CHL
-	will_lead_to_war_with = PAR
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Strike_Now"
+		add_war_support = 0.1
 		declare_war_on = {
 			target = FOP
 			type = annex_everything
@@ -1265,7 +1221,6 @@ shared_focus = {
 		activate_mission = ARG_successful_campaign
 		hidden_effect = {
 			FOP = { activate_mission = FOP_successful_campaign }
-			PAR = { activate_targeted_decision = { target = ARG decision = PAR_reclaim_misiones } }
 		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1286,9 +1241,7 @@ shared_focus = {
 	y = 4
 	relative_position_id = ARG_FOP_Debacle
 
-	ai_will_do = {
-		base = 500
-	}
+	ai_will_do = { base = 500 }
 
 	bypass = {
 		has_elected_government = yes
@@ -1337,9 +1290,7 @@ shared_focus = {
 	y = 5
 	relative_position_id = ARG_FOP_Debacle
 
-	ai_will_do = {
-		base = 250
-	}
+	ai_will_do = { base = 250 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Infrastructural_Expansion"
@@ -1384,9 +1335,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = ARG_FOP_Debacle
 
-	ai_will_do = {
-		base = 250
-	}
+	ai_will_do = { base = 250 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_From_Shore_to_Shining_Shore"
@@ -1415,9 +1364,7 @@ shared_focus = {
 	y = 4
 	relative_position_id = ARG_FOP_Debacle
 
-	ai_will_do = {
-		base = 50
-	}
+	ai_will_do = { base = 50 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Eradicate_Syndicalist_Insurgents"
@@ -1454,9 +1401,7 @@ shared_focus = {
 	y = 5
 	relative_position_id = ARG_FOP_Debacle
 
-	ai_will_do = {
-		base = 15
-	}
+	ai_will_do = { base = 15 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Expand_Naval_Facilities"
@@ -1485,9 +1430,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = ARG_Economic_Reinvigoration
 
-	ai_will_do = {
-		base = 250
-	}
+	ai_will_do = { base = 250 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_A_Catholic_Federation"
@@ -1587,9 +1530,11 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Punish_Paraguay
 
-	ai_will_do = {
-		base = 10
+	bypass = {
+		301 = { resistance < 5 }
 	}
+
+	ai_will_do = { base = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Integrate_Paraguay"
@@ -1620,9 +1565,11 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Integrate_Paraguay
 
-	ai_will_do = {
-		base = 10
+	bypass = {
+		301 = { compliance > 50 }
 	}
+
+	ai_will_do = { base = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Ideological_Persecution"
@@ -1653,9 +1600,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Ideological_Persecution
 
-	ai_will_do = {
-		base = 10
-	}
+	ai_will_do = { base = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Agriculture_Expansion_in_Paraguay"
@@ -1692,9 +1637,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Punish_Paraguay
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Improve_Economic_Ties_With_New_Territories"
@@ -1808,9 +1751,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Uruguay_is_ours
 
-	ai_will_do = {
-		base = 50
-	}
+	ai_will_do = { base = 50 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Integrate_Uruguay"
@@ -1842,9 +1783,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Integrate_Uruguay
 
-	ai_will_do = {
-		base = 10
-	}
+	ai_will_do = { base = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Connect_the_Railroads"
@@ -1871,9 +1810,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Connect_the_Railroads
 
-	ai_will_do = {
-		base = 10
-	}
+	ai_will_do = { base = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Agriculture_Expansion_in_Uruguay"
@@ -1951,6 +1888,9 @@ shared_focus = {
 				type = annex_everything
 			}
 		}
+		hidden_effect = {
+			activate_targeted_decision = { target = 1073 decision = ARG_integrate_state_decision }
+		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
@@ -2017,9 +1957,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Yacuiba_Dispute
 
-	ai_will_do = {
-		base = 10
-	}
+	ai_will_do = { base = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Expand_Mining_Facilities"
@@ -2047,9 +1985,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = ARG_Expand_Mining_Facilities
 
-	ai_will_do = {
-		base = 10
-	}
+	ai_will_do = { base = 10 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Mitteleuropan_Resource_Industrialists"
@@ -2153,9 +2089,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = ARG_Missiones_Orientales
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Tigthen_ties_with_Peru"
@@ -2203,9 +2137,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Missiones_Orientales
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	select_effect = {
 		log = "[GetDateText]: [Root.GetName]: Select Focus ARG_Ensure_Supply_Lines"
@@ -2317,7 +2249,6 @@ shared_focus = {
 				has_completed_focus = ARG_Joint_Research
 			}
 		}
-
 	}
 
 	completion_reward = {
@@ -2375,9 +2306,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Tigthen_ties_with_Peru
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Joint_Research"
@@ -2489,9 +2418,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Ultimate_Confrontation
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Seize_Brazilian_Rubber_Plantations"
@@ -2542,9 +2469,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Ultimate_Confrontation
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Impose_Heavy_Reparations"
@@ -2587,9 +2512,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Ultimate_Confrontation
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Subjugate_South_America"
@@ -2623,9 +2546,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Subjugate_South_America
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Economic_Dominance_in_South_America"
@@ -2674,9 +2595,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Subjugate_South_America
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Break_Up_Socialist_Revolters"
@@ -2734,9 +2653,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Subjugate_South_America
 
-	ai_will_do = {
-		base = 200
-	}
+	ai_will_do = { base = 200 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Secure_The_Frontier"
@@ -2773,7 +2690,6 @@ shared_focus = {
 				has_government = paternal_autocrat
 			}
 		}
-
 	}
 	prerequisite = {
 		focus = ARG_Subjugate_South_America
@@ -2786,9 +2702,7 @@ shared_focus = {
 	will_lead_to_war_with = TEX
 	will_lead_to_war_with = USA
 
-	ai_will_do = {
-		base = 0
-	}
+	ai_will_do = { base = 0 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Neutralize_The_Threat"
@@ -2837,9 +2751,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_A_Catholic_Federation
 
-	ai_will_do = {
-		base = 5
-	}
+	ai_will_do = { base = 5 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Catholic_Brothers_around_the_World"
@@ -2863,9 +2775,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Catholic_Brothers_around_the_World
 
-	ai_will_do = {
-		base = 5
-	}
+	ai_will_do = { base = 5 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Encourage_Spanish_Immigration"
@@ -2910,9 +2820,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Encourage_Spanish_Immigration
 
-	ai_will_do = {
-		base = 5
-	}
+	ai_will_do = { base = 5 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Fallout_of_the_American_Civil_War"
@@ -2944,9 +2852,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Catholic_Brothers_around_the_World
 
-	ai_will_do = {
-		base = 5
-	}
+	ai_will_do = { base = 5 }
 
 	bypass = {
 		OR = {
@@ -3005,9 +2911,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Protect_the_heart_of_Christianity
 
-	ai_will_do = {
-		base = 5
-	}
+	ai_will_do = { base = 5 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Refuge_for_Italian_Scientists"
@@ -3066,9 +2970,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Rapid_Militarisation
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Eradicate_Military_Cliques"
@@ -3092,9 +2994,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Eradicate_Military_Cliques
 
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Create_Espionage_Agency"
@@ -3258,7 +3158,7 @@ shared_focus = {
 		}
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = 750
+			amount = 1000
 			producer = GER
 		}
 		activate_targeted_decision = { target = GER decision = ARG_buy_small_arms }
@@ -3693,7 +3593,10 @@ shared_focus = {
 	relative_position_id = ARG_Mobile_Doctrine_Innovations
 
 	available = {
-		has_global_flag = USA_civil_war_over_flag
+		OR = {
+			has_global_flag = USA_civil_war_over_flag
+			date > 1940.1.1
+		}
 	}
 
 	ai_will_do = {
@@ -3769,6 +3672,7 @@ shared_focus = {
 		OR = {
 			GER = { exists = no }
 			FRA = { exists = no }
+			date > 1941.6.1
 		}
 	}
 
@@ -3894,17 +3798,15 @@ shared_focus = {
 		hidden_effect = {
 			set_technology = { jungle_warfare = 1 popup = no }
 		}
-		effect_tooltip = {
-			every_unit_leader = {
-				limit = {
-					OR = {
-						is_character = ARG_enrique_mosconi
-						is_character = ARG_humberto_sosa_molina
-					}
-					NOT = { has_trait = jungle_rat }
+		every_character = {
+			limit = {
+				OR = {
+					is_character = ARG_enrique_mosconi
+					is_character = ARG_humberto_sosa_molina
 				}
-				add_trait = { trait = jungle_rat }
+				NOT = { has_trait = jungle_rat }
 			}
+			add_trait = { trait = jungle_rat }
 		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
@@ -3923,9 +3825,7 @@ shared_focus = {
 		has_completed_focus = ARG_Economic_Control_over_Argentina
 	}
 
-	ai_will_do = {
-		base = 1
-	}
+	ai_will_do = { base = 1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Republican_Airforce"
@@ -3946,9 +3846,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Republican_Airforce
 
-	ai_will_do = {
-		base = 1
-	}
+	ai_will_do = { base = 1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Rain_Down_Hellfire"
@@ -3973,9 +3871,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Republican_Airforce
 
-	ai_will_do = {
-		base = 1
-	}
+	ai_will_do = { base = 1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Figther_Focus"
@@ -4001,9 +3897,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Republican_Airforce
 
-	ai_will_do = {
-		base = 1
-	}
+	ai_will_do = { base = 1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_CAS_Focus"
@@ -4029,9 +3923,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Figther_Focus
 
-	ai_will_do = {
-		base = 1
-	}
+	ai_will_do = { base = 1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Air_Doctrine"
@@ -4049,7 +3941,10 @@ shared_focus = {
 	id = ARG_War_Experience
 	icon = GFX_focus_generic_eagle
 	available = {
-		has_global_flag = USA_civil_war_over_flag
+		OR = {
+			has_global_flag = USA_civil_war_over_flag
+			date > 1940.1.1
+		}
 	}
 	prerequisite = {
 		focus = ARG_Air_Doctrine
@@ -4059,9 +3954,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Air_Doctrine
 
-	ai_will_do = {
-		base = 1
-	}
+	ai_will_do = { base = 1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_War_Experience"
@@ -4086,9 +3979,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Air_Doctrine
 
-	ai_will_do = {
-		base = 1
-	}
+	ai_will_do = { base = 1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Pilots_Training"
@@ -4108,9 +3999,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = ARG_Air_Doctrine
 
-	ai_will_do = {
-		base = 1
-	}
+	ai_will_do = { base = 1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ARG_Paratrooper_Corps"
@@ -4828,9 +4717,32 @@ shared_focus = {
 		}
 		custom_effect_tooltip = ARG_increase_navy_influence_tt
 
-		every_navy_leader = {
-			add_skill_level = 1
-			add_trait = { trait = blue_water_expert }
+		if = {
+			limit = { has_completed_focus = ARG_Fleet_on_the_Open_Seas }
+			every_navy_leader = {
+				add_skill_level = 1
+				add_attack = 1
+				add_trait = { trait = ironside }
+			}
+		}
+		else_if = {
+			limit = { has_completed_focus = ARG_Quick_but_Powerful }
+			every_navy_leader = {
+				add_skill_level = 1
+				add_maneuver = 1
+				add_trait = { trait = superior_tactician }
+			}
+		}
+		else_if = {
+			limit = { has_completed_focus = ARG_Coastal_Protection }
+			every_navy_leader = {
+				add_skill_level = 1
+				add_defense = 1
+				add_trait = { trait = fleet_protector }
+			}
+		}
+		else = {
+			custom_effect_tooltip = ARG_navy_academy_effect_tt
 		}
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }

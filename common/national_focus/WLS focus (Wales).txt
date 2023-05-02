@@ -28,9 +28,7 @@ focus_tree = {
 		y = 0
 		cost = 2
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -59,9 +57,7 @@ focus_tree = {
 		y = 1
 		cost = 2
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -103,9 +99,7 @@ focus_tree = {
 		y = 1
 		cost = 2
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -149,7 +143,6 @@ focus_tree = {
 					name = WLS_paternal_autocrat_party2
 					long_name = WLS_paternal_autocrat_party_long2
 				}
-				clear_sic_slot = yes
 				activate_advisor = WLS_ambrose_bebb_sic
 			}
 		}
@@ -166,9 +159,7 @@ focus_tree = {
 		y = 1
 		cost = 2
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -193,7 +184,6 @@ focus_tree = {
 					ideology = paternal_autocrat
 					popularity = -0.05
 				}
-				clear_sic_slot = yes
 				activate_advisor = WLS_ambrose_bebb_sic
 			}
 		}
@@ -209,9 +199,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -236,9 +224,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -263,9 +249,7 @@ focus_tree = {
 		y = 4
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -294,9 +278,7 @@ focus_tree = {
 		y = 5
 		cost = 8
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -321,9 +303,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = authoritarian_democrat
@@ -349,9 +329,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			OR = {
@@ -383,9 +361,7 @@ focus_tree = {
 		y = 4
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			OR = {
@@ -442,9 +418,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = authoritarian_democrat
@@ -490,9 +464,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = authoritarian_democrat
@@ -519,9 +491,7 @@ focus_tree = {
 		y = 4
 		cost = 8
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = authoritarian_democrat
@@ -587,9 +557,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		ai_will_do = {
-			base = 50
-		}
+		ai_will_do = { base = 50 }
 
 		available_if_capitulated = yes
 
@@ -617,9 +585,7 @@ focus_tree = {
 		y = 0
 		cost = 2
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -645,9 +611,7 @@ focus_tree = {
 		y = 1
 		cost = 2
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = paternal_autocrat
@@ -678,7 +642,6 @@ focus_tree = {
 						ideology = paternal_autocrat
 						popularity = -0.05
 					}
-					clear_sic_slot = yes
 					activate_advisor = WLS_saunders_lewis_sic
 				}
 				else_if = {
@@ -695,7 +658,6 @@ focus_tree = {
 						ideology = paternal_autocrat
 						popularity = -0.05
 					}
-					clear_sic_slot = yes
 					activate_advisor = WLS_megan_lloyd_george_sic
 				}
 			}
@@ -782,9 +744,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			OR = {
@@ -813,9 +773,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			OR = {
@@ -860,9 +818,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			OR = {
@@ -891,9 +847,7 @@ focus_tree = {
 		y = 4
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			OR = {
@@ -950,9 +904,7 @@ focus_tree = {
 		y = 4
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			OR = {
@@ -984,9 +936,7 @@ focus_tree = {
 		y = 5
 		cost = 8
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			OR = {
@@ -1015,9 +965,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			custom_trigger_tooltip = {
@@ -1054,9 +1002,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			custom_trigger_tooltip = {
@@ -1111,9 +1057,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available_if_capitulated = yes
 
@@ -1140,9 +1084,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available_if_capitulated = yes
 
@@ -1178,9 +1120,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available_if_capitulated = yes
 
@@ -1240,9 +1180,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available_if_capitulated = yes
 
@@ -1277,9 +1215,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			custom_trigger_tooltip = {
@@ -1355,9 +1291,7 @@ focus_tree = {
 		y = 0
 		cost = 1
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_socialist_government = yes
@@ -1382,9 +1316,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_socialist_government = yes
@@ -1420,9 +1352,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_socialist_government = yes
@@ -1475,9 +1405,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_socialist_government = yes
@@ -1517,9 +1445,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_socialist_government = yes
@@ -1572,9 +1498,7 @@ focus_tree = {
 		y = 4
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_socialist_government = yes
@@ -1602,9 +1526,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_socialist_government = yes
@@ -1629,9 +1551,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_socialist_government = yes
@@ -1657,9 +1577,7 @@ focus_tree = {
 		y = 5
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_socialist_government = yes
@@ -1688,9 +1606,7 @@ focus_tree = {
 		y = 6
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			OR = {
@@ -1720,9 +1636,7 @@ focus_tree = {
 		y = 6
 		cost = 5
 
-		ai_will_do = {
-			base = 100
-		}
+		ai_will_do = { base = 100 }
 
 		available = {
 			has_government = totalist

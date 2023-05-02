@@ -27,9 +27,7 @@ SAU_JBS_Power_Struggle = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 200
-		}
+		ai_will_do = { factor = 200 }
 	}
 	SAU_War_of_Unification_Peace = {
 		icon = generic_ignite_civil_war
@@ -155,9 +153,7 @@ SAU_JBS_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SAU_Sway_Ruwala target: [From.GetName]"
@@ -217,9 +213,7 @@ SAU_JBS_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SAU_Sway_Anizzah target: [From.GetName]"
@@ -298,9 +292,7 @@ SAU_JBS_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SAU_Sway_Dhafir target: [From.GetName]"
@@ -362,9 +354,7 @@ SAU_JBS_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SAU_Sway_Mutair_Busayis target: [From.GetName]"
@@ -426,9 +416,7 @@ SAU_JBS_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SAU_Sway_Utaibah_Ikh target: [From.GetName]"
@@ -494,9 +482,7 @@ SAU_JBS_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SAU_Sway_Utaibah target: [From.GetName]"
@@ -570,9 +556,7 @@ SAU_JBS_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SAU_Sway_Duwasir target: [From.GetName]"
@@ -652,7 +636,7 @@ SAU_Ikhwan_Rides_Out = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_Ikwhan_Qatar"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_Ikwhan_Qatar"
 			set_country_flag = { flag = SAU_ongoing_ikhwan_raid days = @SAU_ikhwan_raid_time value = 1 }
 		}
 
@@ -691,7 +675,7 @@ SAU_Ikhwan_Rides_Out = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_Ikwhan_UAE"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_Ikwhan_UAE"
 			set_country_flag = { flag = SAU_ongoing_ikhwan_raid days = @SAU_ikhwan_raid_time value = 1 }
 		}
 
@@ -733,7 +717,7 @@ SAU_Ikhwan_Rides_Out = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_Ikwhan_Asir"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_Ikwhan_Asir"
 			set_country_flag = { flag = SAU_ongoing_ikhwan_raid days = @SAU_ikhwan_raid_time value = 1 }
 		}
 
@@ -777,7 +761,7 @@ SAU_Ikhwan_Rides_Out = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_Ikwhan_Hejaz"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_Ikwhan_Hejaz"
 			set_country_flag = { flag = SAU_ongoing_ikhwan_raid days = @SAU_ikhwan_raid_time value = 1 }
 		}
 
@@ -820,7 +804,7 @@ SAU_Ikhwan_Rides_Out = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_Ikwhan_Basra"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_Ikwhan_Basra"
 			set_country_flag = { flag = SAU_ongoing_ikhwan_raid days = @SAU_ikhwan_raid_time value = 1 }
 		}
 
@@ -859,7 +843,7 @@ SAU_Ikhwan_Rides_Out = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_Ikwhan_Baghdad"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_Ikwhan_Baghdad"
 			set_country_flag = { flag = SAU_ongoing_ikhwan_raid days = @SAU_ikhwan_raid_time value = 1 }
 		}
 
@@ -898,7 +882,7 @@ SAU_Ikhwan_Rides_Out = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_Ikwhan_Damascus"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_Ikwhan_Damascus"
 			set_country_flag = { flag = SAU_ongoing_ikhwan_raid days = @SAU_ikhwan_raid_time value = 1 }
 		}
 
@@ -940,7 +924,7 @@ SAU_Ikhwan_Rides_Out = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_Ikwhan_Medina"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_Ikwhan_Medina"
 			set_country_flag = { flag = SAU_ongoing_ikhwan_raid days = @SAU_ikhwan_raid_time value = 1 }
 		}
 
@@ -975,7 +959,7 @@ JBS_Ottoman_Favours = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision JBS_Ottoman_Training"
+			log = "[GetDateText]: [Root.GetName]: Decision complete JBS_Ottoman_Training"
 			army_experience = 25
 		}
 
@@ -1001,16 +985,14 @@ JBS_Ottoman_Favours = {
 		cost = 50
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision JBS_Ottoman_Weapons_Assistance"
+			log = "[GetDateText]: [Root.GetName]: Decision complete JBS_Ottoman_Weapons_Assistance"
 			add_offsite_building = {
 				type = arms_factory
 				level = 1
 			}
 		}
 
-		ai_will_do = {
-			factor = 300
-		}
+		ai_will_do = { factor = 300 }
 	}
 	JBS_Support_the_Ottomans = {
 		icon = generic_prepare_civil_war
@@ -1030,12 +1012,12 @@ JBS_Ottoman_Favours = {
 		war_with_on_remove = HEJ
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled JBS_Support_the_Ottomans target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel JBS_Support_the_Ottomans target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision JBS_Support_the_Ottomans target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete JBS_Support_the_Ottomans target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -1079,7 +1061,11 @@ JBS_Ottoman_Favours = {
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = JBS_forpol option = JBS_FORPOL_EGY }
+				OR = {
+					has_game_rule = { rule = JBS_path option = JBS_PATH_SAUD }
+					has_game_rule = { rule = JBS_path option = JBS_PATH_ABDALLAH_IBN_TALAL_OTT }
+					has_game_rule = { rule = JBS_path option = JBS_PATH_ABDALLAH_IBN_MITAB }
+				}
 			}
 		}
 	}
@@ -1101,7 +1087,7 @@ JBS_Ottoman_Favours = {
 		cost = 0
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision JBS_Join_Cairo_Pact"
+			log = "[GetDateText]: [Root.GetName]: Decision complete JBS_Join_Cairo_Pact"
 			EGY = {
 				add_to_faction = JBS
 			}
@@ -1115,7 +1101,10 @@ JBS_Ottoman_Favours = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = JBS_forpol option = JBS_FORPOL_OTT }
+				OR = {
+					has_game_rule = { rule = JBS_path option = JBS_PATH_ABDALLAH_IBN_TALAL_EGY }
+					has_game_rule = { rule = JBS_path option = JBS_PATH_SUBHAN }
+				}
 			}
 		}
 	}
@@ -1144,15 +1133,13 @@ foreign_politics = {
 		cost = 0
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_Join_Cairo_Pact"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_Join_Cairo_Pact"
 			EGY = {
 				add_to_faction = SAU
 			}
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 	}
 
 	SAU_OMA_Whitepeace = {
@@ -1184,7 +1171,7 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SAU_OMA_Whitepeace"
+			log = "[GetDateText]: [Root.GetName]: Decision complete SAU_OMA_Whitepeace"
 			effect_tooltip = {
 				set_state_owner = 859 #Oman
 				random_other_country = {
@@ -1232,7 +1219,7 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision OMA_SAU_Whitepeace"
+			log = "[GetDateText]: [Root.GetName]: Decision complete OMA_SAU_Whitepeace"
 			SAU = { set_state_owner = 859 } #Oman
 			random_other_country = {
 				limit = { has_guaranteed = OMA }
@@ -1279,9 +1266,7 @@ JBS_SAU_Power_Struggle = {
 			country_event = jbs.4
 		}
 
-		ai_will_do = {
-			factor = 200
-		}
+		ai_will_do = { factor = 200 }
 	}
 	JBS_War_of_Unification_Peace = {
 		icon = generic_ignite_civil_war
@@ -1417,9 +1402,7 @@ JBS_SAU_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove JBS_Sway_Harb target: [From.GetName]"
@@ -1482,9 +1465,7 @@ JBS_SAU_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove JBS_Sway_Hutaim target: [From.GetName]"
@@ -1551,9 +1532,7 @@ JBS_SAU_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove JBS_Sway_Muntafiq target: [From.GetName]"
@@ -1633,9 +1612,7 @@ JBS_SAU_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove JBS_Sway_Anizzah target: [From.GetName]"
@@ -1729,12 +1706,10 @@ JBS_SAU_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision JBS_Sway_Mutair_Dawish target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete JBS_Sway_Mutair_Dawish target: [From.GetName]"
 			set_country_flag = swaying_faisal
 		}
 
@@ -1776,12 +1751,10 @@ JBS_SAU_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision JBS_Sway_Mutair_Busayis target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete JBS_Sway_Mutair_Busayis target: [From.GetName]"
 			set_country_flag = swaying_busayis
 		}
 
@@ -1846,9 +1819,7 @@ JBS_SAU_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove JBS_Sway_Ajman target: [From.GetName]"
@@ -1898,7 +1869,7 @@ JBS_SAU_Power_Struggle = {
 							owner = JBS
 						}
 					}
-					IKH = { IKH_zaidan_ibn_hithlain = {	set_nationality = PREV.PREV } }
+					IKH = { IKH_zaidan_ibn_hithlain = { set_nationality = PREV.PREV } }
 				}
 			}
 		}
@@ -1930,9 +1901,7 @@ JBS_SAU_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove JBS_Sway_Utaibah target: [From.GetName]"
@@ -2015,9 +1984,7 @@ JBS_SAU_Power_Struggle = {
 		}
 		priority = 50
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove JBS_Sway_Awazim target: [From.GetName]"

@@ -378,6 +378,44 @@ ITA_notitaly_join_with_confed = {
 	restore_previous_government_type = yes
 }
 
+Italy_general_transfer_effect = {
+	hidden_effect = {
+		if = {
+			limit = { has_character = PAP_georg_von_sury_d_aspremont }
+			retire_character = PAP_georg_von_sury_d_aspremont ##The Swiss Guard isn't serving an united Italy
+		}
+		if = {
+			limit = {
+				ROOT = {
+					original_tag = ITA ##The royals you kicked out aren't going to lead your military
+					NOT = { has_government = authoritarian_democrat }
+				}
+			}
+			if = {
+				limit = { has_character = SRD_amedeo_aosta }
+				retire_character = SRD_amedeo_aosta
+			}
+			if = {
+				limit = { has_character = SRD_umberto_carignano }
+				retire_character = SRD_umberto_carignano
+			}
+			if = {
+				limit = { has_character = SRD_filiberto_pistoia }
+				retire_character = SRD_filiberto_pistoia
+			}
+			if = {
+				limit = { has_character = SRD_adalberto_genova }
+				retire_character = SRD_adalberto_genova
+			}
+			if = {
+				limit = { has_character = SRD_aimone_aosta }
+				retire_character = SRD_aimone_aosta
+			}
+		}
+	}
+	every_unit_leader = { set_nationality = ROOT }
+}
+
 ITA_join_with_empire = {
 	hidden_effect = {
 		every_subject_country = {
@@ -410,83 +448,24 @@ ITA_join_with_empire = {
 		}
 	}
 
-	every_state = {
-		limit = { is_claim_or_core_of_PREV = yes }
-		if = {
-			limit = {
-				is_core_of = PREV
-				NOT = { is_core_of = ROOT }
-			}
-			hidden_effect = { remove_claim_by = ROOT }
-			add_core_of = ROOT
-		}
+	every_core_state = {
+		remove_core_of = PREV
+		add_core_of = ROOT
 		hidden_effect = {
-			if = {
-				limit = { is_core_of = PREV }
-				remove_core_of = PREV
-			}
-			if = {
-				limit = { is_claimed_by = PREV }
-				remove_claim_by = PREV
-			}
+			remove_claim_by = PREV
+			remove_claim_by = ROOT
 		}
 	}
-
-	every_unit_leader = {
-		limit = {
-			NOT = {
-				is_character = PAP_georg_von_sury_d_aspremont ##The Swiss Guard isn't serving an united Italy
-				AND = {
-					ROOT = {
-						original_tag = ITA ##The royals you kicked out aren't going to lead your military
-						NOT = { has_government = authoritarian_democrat }
-					}
-					OR = {
-						is_character = SRD_amedeo_aosta
-						is_character = SRD_umberto_carignano
-						is_character = SRD_filiberto_pistoia
-						is_character = SRD_adalberto_genova
-						is_character = SRD_aimone_aosta
-					}
-				}
-			}
+	hidden_effect = {
+		every_state = {
+			limit = { is_claimed_by = PREV }
+			remove_claim_by = PREV
 		}
-		set_nationality = ROOT
 	}
-	every_navy_leader = {
-		limit = {
-			NOT = {
-				is_character = PAP_georg_von_sury_d_aspremont
-				AND = {
-					ROOT = {
-						original_tag = ITA
-						NOT = {
-							has_government = authoritarian_democrat
-						}
-					}
-					OR = {
-						is_character = SRD_amedeo_aosta
-						is_character = SRD_umberto_carignano
-						is_character = SRD_filiberto_pistoia
-						is_character = SRD_adalberto_genova
-						is_character = SRD_aimone_aosta
-					}
-				}
-			}
-		}
-		set_nationality = ROOT
-	}
-	transfer_navy = { target = ROOT }
+	Italy_general_transfer_effect = yes
 	ROOT = {
 		annex_country = { target = PREV transfer_troops = yes }
-	}
-
-	if = {
-		limit = {
-			is_ai = no
-			ROOT = { is_ai = yes }
-		}
-		ROOT = { change_tag_from = PREV }
+		change_tag_from = PREV
 	}
 }
 
@@ -584,199 +563,33 @@ SRI_next_neosanfedisti_attack = {
 	}
 }
 
-ITA_remove_italian_cores = {
-	hidden_effect = {
-		for_each_scope_loop = {
-			array = global.italian_tags_array
-			if = {
-				limit = { exists = no }
-				every_core_state = {
-					limit = { check_variable = { PREV.core_countries^num > 1 } }
-					remove_core_of = PREV
-				}
-				every_state = {
-					limit = { is_claimed_by = PREV }
-					remove_claim_by = PREV
-				}
-			}
-		}
-	}
-}
-
-italy_recalculate_integration_decisions = {
-	# VNC can only core the Austrian claims
+italy_move_capital_to_rome = {
 	if = {
-		limit = { tag = VNC }
-		103 = { #Rijeka
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-		163 = { #Dalmatia
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-		488 = { #Trieste
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-		736 = { #Istria
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-		783 = { #Trentino
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-		841 = { #Kotor
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-	}
-	# PAP can only core the Donation of Pepin
-	else_if = {
-		limit = { tag = PAP }
-		157 = { #Marches
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-		161 = { #Romagna
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-		1005 = { #Umbria
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-	}
-	# LOM can only core Ticino and Trentino
-	else_if = {
-		limit = { tag = LOM }
-		761 = { #Ticino
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-		783 = { #Trentino
-			if = {
-				limit = {
-					is_controlled_by = PREV
-					NOT = { is_core_of = PREV }
-				}
-				italy_enable_coring_decisions_on_state = yes
-			}
-		}
-	}
-	# unifiers get all possible decisions
-	else_if = {
 		limit = {
-			OR = {
-				NOT = { tag = SIC }
-				has_country_flag = SIC_empire
+			2 = {
+				is_owned_and_controlled_by = PREV #Lazio
+				is_core_of = PREV
+				is_capital = no
 			}
 		}
-		every_controlled_state = {
-			limit = {
-				is_italy_or_potential_claim = yes
-				NOT = { is_core_of = PREV }
-			}
-			italy_enable_coring_decisions_on_state = yes
-		}
+		set_capital = { state = 2 remember_old_capital = no }
 	}
 }
 
-italy_enable_coring_decisions_on_state = {
-	if = {
-		limit = { NOT = { has_state_flag = italy_coring_enabled_@PREV } }
-		set_state_flag = italy_coring_enabled_@PREV
-		if = {
-			limit = {
-				OR = {
-					is_island_state = yes
-					region = 169 #Tyrhhenian Sea
-					state = 115 #Sicily
-				}
-			}
-			PREV = { activate_targeted_decision = { decision = italy_generic_gain_core_island target = PREV } }
-			if = {
-				limit = { has_resistance = yes }
-				PREV = {
-					activate_targeted_decision = { decision = italy_generic_weaken_resistance target = PREV }
-					activate_targeted_decision = { decision = italy_generic_increase_control target = PREV }
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					AND = {
-						PREV = { tag = SRD }
-						OR = {
-							state = 158 #Piedmont
-							state = 838 #Liguria
-							state = 1003 #Aosta
-						}
-					}
-				}
-			}
-			PREV = { activate_targeted_decision = { decision = italy_generic_gain_core target = PREV } }
-			if = {
-				limit = { has_resistance = yes }
-				PREV = {
-					activate_targeted_decision = { decision = italy_generic_weaken_resistance target = PREV }
-					activate_targeted_decision = { decision = italy_generic_increase_control target = PREV }
-				}
-			}
-		}
-	}
+italy_enable_claim_integration = {
+	1 = { enable_state_integration_80_compliance = yes } #Corsica
+	103 = { enable_state_integration_80_compliance = yes } #Rijeka
+	116 = { enable_state_integration_80_compliance = yes } #Malta
+	163 = { enable_state_integration_80_compliance = yes } #Dalmatia
+	488 = { enable_state_integration_80_compliance = yes } #Trieste
+	683 = { enable_state_integration_80_compliance = yes } #Gorizia
+	735 = { enable_state_integration_80_compliance = yes } #Savoy
+	736 = { enable_state_integration_80_compliance = yes } #Istria
+	761 = { enable_state_integration_80_compliance = yes } #Ticino
+	762 = { enable_state_integration_80_compliance = yes } #Nice
+	783 = { enable_state_integration_80_compliance = yes } #Trentino
+	841 = { enable_state_integration_80_compliance = yes } #Kotor
+	943 = { enable_state_integration_80_compliance = yes } #Upper Savoy
 }
 
 italy_add_reunification_wars_threat = {
@@ -791,96 +604,124 @@ italy_add_reunification_wars_threat = {
 	}
 }
 
-EMI_move_sardinian_characters_to_emilia = {
-	SRD = {
-		SRD_mario_roatta = { set_nationality = EMI }
-		SRD_bruno_malaguti = { set_nationality = EMI }
-	}
-	hidden_effect = {
-		EMI = {
-			SRD_mario_roatta = {
-				if = {
-					limit = { has_ideology = paternal_autocrat_subtype }
-					promote_character = paternal_autocrat_subtype
-				}
-				else = {
-					add_country_leader_role = {
-						country_leader = {
-							ideology = paternal_autocrat_subtype
-						}
-						promote_leader = yes
+LOM_create_adriano_visconti = {
+	ITA = {
+		ITA_adriano_visconti = {
+			set_character_name = LOM_adriano_visconti_regnal
+			character_becomes_leader_of_ruling_party_effect_tooltip = yes
+			hidden_effect = {
+				remove_all_country_leader_roles = yes
+				add_country_leader_role = {
+					country_leader = {
+						ideology = social_democrat_subtype
+						desc = ITA_adriano_visconti_leader_desc
 					}
+					promote_leader = yes
 				}
-				if = {
-					limit = { has_ideology = national_populist_subtype }
-					promote_character = national_populist_subtype
-				}
-				else = {
-					add_country_leader_role = {
-						country_leader = {
-							ideology = national_populist_subtype
-						}
-						promote_leader = yes
+				add_country_leader_role = {
+					country_leader = {
+						ideology = social_liberal_subtype
+						desc = ITA_adriano_visconti_leader_desc
 					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						ideology = market_liberal_subtype
+						desc = ITA_adriano_visconti_leader_desc
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						ideology = social_conservative_subtype
+						desc = ITA_adriano_visconti_leader_desc
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						desc = ITA_adriano_visconti_leader_desc
+						ideology = authoritarian_democrat_subtype
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						ideology = paternal_autocrat_subtype
+						desc = ITA_adriano_visconti_leader_desc
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						ideology = national_populist_subtype
+						desc = ITA_adriano_visconti_leader_desc
+					}
+					promote_leader = yes
 				}
 			}
 		}
 	}
 }
 
-LOM_create_adriano_visconti = {
-	ITA = { ITA_adriano_visconti = { set_nationality = PREV.PREV } }
-	ITA_adriano_visconti = {
-		set_character_name = LOM_adriano_visconti_regnal
-		remove_all_country_leader_roles = yes
-		add_country_leader_role = {
-			country_leader = {
-				ideology = social_democrat_subtype
-				desc = ITA_adriano_visconti_leader_desc
+ITA_create_early_armor_variants = {
+	if = {
+		limit = { has_dlc_nsb = yes }
+		create_equipment_variant = {
+			name = "Fiat 3000"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
 			}
-			promote_leader = yes
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 2
+			}
+			obsolete = yes
 		}
-		add_country_leader_role = {
-			country_leader = {
-				ideology = social_liberal_subtype
-				desc = ITA_adriano_visconti_leader_desc
+		create_equipment_variant = {
+			name = "Fiat 3000B"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
 			}
-			promote_leader = yes
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 2
+			}
 		}
-		add_country_leader_role = {
-			country_leader = {
-				ideology = market_liberal_subtype
-				desc = ITA_adriano_visconti_leader_desc
+	}
+}
+
+ITA_create_basic_armor_variants = {
+	if = {
+		limit = { has_dlc_nsb = yes }
+		create_equipment_variant = {
+			name = "L3/35"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
 			}
-			promote_leader = yes
-		}
-		add_country_leader_role = {
-			country_leader = {
-				ideology = social_conservative_subtype
-				desc = ITA_adriano_visconti_leader_desc
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 1
 			}
-			promote_leader = yes
-		}
-		add_country_leader_role = {
-			country_leader = {
-				desc = ITA_adriano_visconti_leader_desc
-				ideology = authoritarian_democrat_subtype
-			}
-			promote_leader = yes
-		}
-		add_country_leader_role = {
-			country_leader = {
-				ideology = paternal_autocrat_subtype
-				desc = ITA_adriano_visconti_leader_desc
-			}
-			promote_leader = yes
-		}
-		add_country_leader_role = {
-			country_leader = {
-				ideology = national_populist_subtype
-				desc = ITA_adriano_visconti_leader_desc
-			}
-			promote_leader = yes
 		}
 	}
 }

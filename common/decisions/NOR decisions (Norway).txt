@@ -23,7 +23,7 @@ prospect_for_resources = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NOR_norsk_jernverk_mining_steel target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NOR_norsk_jernverk_mining_steel target: [From.GetName]"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NOR_norsk_jernverk_mining_steel target: [From.GetName]"
@@ -35,9 +35,7 @@ prospect_for_resources = {
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 	}
 
 	NOR_aluminium_industry_mining = {
@@ -65,7 +63,7 @@ prospect_for_resources = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NOR_aluminium_industry_mining target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NOR_aluminium_industry_mining target: [From.GetName]"
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NOR_aluminium_industry_mining target: [From.GetName]"
@@ -77,9 +75,7 @@ prospect_for_resources = {
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 	}
 }
 
@@ -128,13 +124,23 @@ foreign_politics = {
 		cost = 30
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NOR_join_faction target: [From.GetName]"
 			FROM = { country_event = norway.225 }
+			if = {
+				limit = {
+					OR = {
+						has_wargoal_against = DEN
+						has_wargoal_against = ICE
+						has_wargoal_against = SWE
+						has_wargoal_against = FIN
+					}
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				effect_tooltip = { NOR_remove_greater_norway_wargoals = yes }
+			}
 		}
 	}
 }

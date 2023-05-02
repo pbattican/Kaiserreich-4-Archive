@@ -130,7 +130,7 @@ characters = {
 		name = COL_jose_maria_villarreal
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/Generic/Portrait_South_America_Generic_new_4.png"
+				large = GFX_Portrait_South_America_Generic_new_4
 			}
 		}
 		country_leader = {
@@ -185,8 +185,8 @@ characters = {
 		name = COL_efrain_rojas
 		portraits = {
 			army = {
-				large = "gfx/leaders/Generic/Portrait_South_America_Generic_land_new_1.png"
-				small = "gfx/interface/advisors/Generic/Portrait_South_America_Generic_land_new_1.png"
+				large = GFX_Portrait_South_America_Generic_land_new_1
+				small = GFX_Portrait_South_America_Generic_land_new_1_small
 			}
 		}
 		corps_commander = {
@@ -206,8 +206,8 @@ characters = {
 		name = COL_luis_acevedo
 		portraits = {
 			army = {
-				large = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_2.png"
-				small = "gfx/interface/advisors/Generic/Portrait_Europe_Generic_navy_new_2.png"
+				large = GFX_Portrait_Europe_Generic_navy_new_2
+				small = GFX_Portrait_Europe_Generic_navy_new_2_small
 			}
 		}
 		navy_leader = {
@@ -223,8 +223,8 @@ characters = {
 		name = COL_mario_espinoza_gacitua
 		portraits = {
 			army = {
-				large = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_4.png"
-				small = "gfx/interface/advisors/Generic/Portrait_Europe_Generic_navy_new_4.png"
+				large = GFX_Portrait_Europe_Generic_navy_new_4
+				small = GFX_Portrait_Europe_Generic_navy_new_4_small
 			}
 		}
 		navy_leader = {
@@ -240,7 +240,7 @@ characters = {
 		name = COL_esteban_jaramillo
 		portraits = {
 			civilian = {
-				small = "gfx/interface/advisors/Generic/Portrait_South_America_Generic_new_2.png"
+				small = GFX_Portrait_South_America_Generic_new_2_small
 			}
 		}
 		advisor = {
@@ -285,7 +285,7 @@ characters = {
 		name = COL_benito_hernandez_bustos
 		portraits = {
 			civilian = {
-				small = "gfx/interface/advisors/Generic/Portrait_South_America_Generic_new_4.png"
+				small = GFX_Portrait_South_America_Generic_new_4_small
 			}
 		}
 		advisor = {
@@ -363,11 +363,9 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = COL_congreso_de_la_republica_sic
-			traits = { KR_parliament_sic second_in_command_trait }
+			traits = { KR_parliament_sic }
 			cost = 0
-			removal_cost = -1
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
+			can_be_fired = no
 		}
 	}
 
@@ -446,7 +444,7 @@ characters = {
 		name = COL_laureano_gomez
 		portraits = {
 			army = {
-				small = "gfx/interface/advisors/Generic/Portrait_South_America_Generic_land_new_1.png"
+				small = GFX_Portrait_South_America_Generic_land_new_1_small
 			}
 		}
 		advisor = {
@@ -462,7 +460,7 @@ characters = {
 		name = COL_felix_mercado
 		portraits = {
 			army = {
-				small = "gfx/interface/advisors/Generic/Portrait_South_America_Generic_land_new_7.png"
+				small = GFX_Portrait_South_America_Generic_land_new_7_small
 			}
 		}
 		advisor = {
@@ -478,7 +476,7 @@ characters = {
 		name = COL_mauricio_soto_gomez
 		portraits = {
 			army = {
-				small = "gfx/interface/advisors/Generic/Portrait_South_America_Generic_navy_new_1.png"
+				small = GFX_Portrait_South_America_Generic_navy_new_1_small
 			}
 		}
 		advisor = {

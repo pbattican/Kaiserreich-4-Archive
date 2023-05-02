@@ -30,23 +30,28 @@ focus_tree = {
 		available = {
 			NOT = { country_exists = RUS }
 		}
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Rebuild_The_Country"
 			if = {
 				limit = { has_idea = SOV_war_communism }
 				remove_ideas = SOV_war_communism
+				custom_effect_tooltip = tooltip_white_line
 			}
 			if = {
 				limit = { has_idea = SOV_chaotic_revolution }
 				remove_ideas = SOV_chaotic_revolution
 				hidden_effect = { country_lock_all_division_template = no }
+				custom_effect_tooltip = tooltip_white_line
 			}
 			else_if = {
 				limit = { has_idea = SOV_for_the_revolution }
 				remove_ideas = SOV_for_the_revolution
+				custom_effect_tooltip = tooltip_white_line
+			}
+			add_timed_idea = {
+				idea = SOV_post_war_reconstruction
+				days = 365
 			}
 			if = {
 				limit = { has_template = "Gorodskaya Militsiya" }
@@ -81,9 +86,7 @@ focus_tree = {
 			focus = SOV_Revolutionary_Vanguard
 			focus = SOV_Industrial_Democracy
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Proletarian_Humanism"
 			add_ideas = SOV_proletarian_humanism_idea_1
@@ -101,9 +104,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Proletarian_Humanism
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Fight_Urban_Rural_Conflict"
 			if = { #has union control
@@ -140,9 +141,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Fight_Urban_Rural_Conflict
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Voluntary_Collectivisation"
 			if = { #has union control
@@ -182,9 +181,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Control_The_Unions
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Cautious_Industrialisation"
 			if = { #has urban-rural conflict
@@ -222,9 +219,7 @@ focus_tree = {
 			focus = SOV_Proletarian_Humanism
 			focus = SOV_Revolutionary_Vanguard
 		}
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Control_The_Unions"
 			add_stability = -0.1
@@ -326,9 +321,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Control_The_Unions
 		}
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Fight_Bureaucratisation"
 			add_research_slot_until_five = yes
@@ -353,9 +346,7 @@ focus_tree = {
 			focus = SOV_Proletarian_Humanism
 			focus = SOV_Industrial_Democracy
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Revolutionary_Vanguard"
 			add_ideas = SOV_revolutionary_vanguard_idea_1
@@ -373,9 +364,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Revolutionary_Vanguard
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Militarisation_of_Labour"
 			if = { #has union control
@@ -445,9 +434,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Revolutionary_Vanguard
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_First_Five_Year_Plan"
 			activate_mission = SOV_The_First_Five_Year_Plan
@@ -466,9 +453,7 @@ focus_tree = {
 			focus = SOV_Industrial_Democracy
 			focus = SOV_Revolutionary_Vanguard
 		}
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Proletarian_Revolution"
 			if = {
@@ -671,9 +656,7 @@ focus_tree = {
 			focus = SOV_Revolutionary_Vanguard
 			focus = SOV_Proletarian_Humanism
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Industrial_Democracy"
 			add_ideas = SOV_industrial_democracy_idea_1
@@ -694,9 +677,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Proletarian_Revolution
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Break_The_Smychka"
 			if = { #has mass collectivisation
@@ -740,9 +721,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Industrial_Democracy
 		}
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Create_the_VSR"
 			if = { #has proletarian revolution
@@ -796,9 +775,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Break_The_Smychka
 		}
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Separation_Of_Powers"
 			add_research_slot_until_five = yes
@@ -830,9 +807,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Rebuild_The_Country
 		}
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Help_The_People"
 			SOV_reduce_civil_war_devastation = yes
@@ -850,9 +825,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Rebuild_The_Country
 		}
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Rebuild_The_Bureaucracy"
 			SOV_reduce_civil_war_devastation = yes
@@ -870,9 +843,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Rebuild_The_Country
 		}
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_The_GOELRO_Plan"
 			SOV_reduce_civil_war_devastation = yes
@@ -896,9 +867,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_The_GOELRO_Plan
 		}
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Allow_Small_Traders"
 			SOV_reduce_civil_war_devastation = yes
@@ -1398,13 +1367,19 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1000
+			modifier = {
+				factor = 0
+				OR = {
+					has_idea = SOV_aftermath_of_the_civil_war_1
+					has_idea = SOV_aftermath_of_the_civil_war_2
+					has_idea = SOV_aftermath_of_the_civil_war_3
+					has_idea = SOV_aftermath_of_the_civil_war_4
+					has_idea = SOV_aftermath_of_the_civil_war_5
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_Spreading_The_Revolution"
-			add_named_threat = {
-				threat = threat_value
-				name = SOV_spreading_the_revolution_threat
-			}
 			if = {
 				limit = { NOT = { country_exists = INT } }
 				save_global_event_target_as = KR_internationale_leader
@@ -1415,6 +1390,10 @@ focus_tree = {
 			else = {
 				create_faction = SOV_faction
 				calculate_faction_joining_tension = yes
+				add_named_threat = {
+					threat = threat_value
+					name = SOV_spreading_the_revolution_threat
+				}
 				if = {
 					limit = { has_global_flag = FRA_created_phalanstere }
 					FRA_add_to_phalanstere = yes
@@ -1483,7 +1462,6 @@ focus_tree = {
 					}
 				}
 			}
-			set_country_flag = RUS_can_integrate
 			custom_effect_tooltip = tooltip_white_line
 			unlock_decision_category_tooltip = SOV_Spreading_The_Revolution_decisions
 			hidden_effect = { MIE_form_intermarium = yes }
@@ -1568,6 +1546,13 @@ focus_tree = {
 			second_weltkrieg_can_start = yes
 			is_faction_leader = yes
 		}
+		continue_if_invalid = yes
+		cancel = {
+			is_faction_leader = no
+		}
+		bypass = {
+			NOT = { can_declare_war_on = GER }
+		}
 		relative_position_id = SOV_Spreading_The_Revolution
 		x = 1
 		y = 1
@@ -1579,15 +1564,14 @@ focus_tree = {
 			factor = 3000
 			modifier = {
 				factor = 0
-				OR = {
-					alliance_strength_ratio < 0.5
-					surrender_progress > 0
-					has_country_flag = imminent_war
-				}
+				date < 1939.6.1
 			}
 			modifier = {
 				factor = 0
-				can_declare_war_on = GER
+				RUS_dont_attack_if_vulnerable_or_preparing = yes
+			}
+			modifier = {
+				factor = 0
 				UKR = {
 					is_in_faction_with = GER
 					RUS_dont_attack_if_target_is_stronger = yes
@@ -1595,7 +1579,6 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				can_declare_war_on = GER
 				POL = {
 					is_in_faction_with = GER
 					RUS_dont_attack_if_target_is_stronger = yes
@@ -1603,12 +1586,13 @@ focus_tree = {
 			}
 		}
 		will_lead_to_war_with = GER
+		will_lead_to_war_with = AUS
 		will_lead_to_war_with = UKR
 		will_lead_to_war_with = GEO
 		will_lead_to_war_with = AZR
 		select_effect = {
 			log = "[GetDateText]: [Root.GetName]: Select Focus SOV_The_Final_Battle"
-			set_country_flag = { flag = imminent_war days = 45 value = 1 }
+			set_country_flag = { flag = imminent_war days = 60 value = 1 }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_The_Final_Battle"
@@ -1619,41 +1603,53 @@ focus_tree = {
 			}
 			add_state_claim = 537 #Sakhalin
 			add_state_claim = 555 #Kurils
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
 			if = {
-				limit = { can_declare_war_on = GER }
+				limit = {
+					can_declare_war_on = GEO
+					GEO = {
+						OR = {
+							is_subject = no
+							is_ally_with = GER
+							is_guaranteed_by = GER
+						}
+					}
+				}
 				declare_war_on = {
-					target = GER
+					target = GEO
 					type = annex_everything
 				}
-				if = {
-					limit = {
-						can_declare_war_on = GEO
-						GEO = {
-							OR = {
-								is_ally_with = GER
-								is_guaranteed_by = GER
-							}
+			}
+			if = {
+				limit = {
+					can_declare_war_on = AZR
+					AZR = {
+						OR = {
+							is_subject = no
+							is_ally_with = GER
+							is_guaranteed_by = GER
 						}
-					}
-					declare_war_on = {
-						target = GEO
-						type = annex_everything
 					}
 				}
-				if = {
-					limit = {
-						can_declare_war_on = AZR
-						AZR = {
-							OR = {
-								is_ally_with = GER
-								is_guaranteed_by = GER
-							}
-						}
+				declare_war_on = {
+					target = AZR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					can_declare_war_on = WHR
+					WHR = {
+						has_socialist_government = no
+						NOT = { is_in_faction_with = GER }
 					}
-					declare_war_on = {
-						target = AZR
-						type = annex_everything
-					}
+				}
+				declare_war_on = {
+					target = WHR
+					type = annex_everything
 				}
 			}
 			if = {
@@ -1670,6 +1666,26 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
+				every_other_country = {
+					limit = {
+						is_in_faction_with = GER
+						OR = {
+							original_tag = FIN
+							original_tag = BAT
+							original_tag = EST
+							original_tag = LAT
+							original_tag = LIT
+							original_tag = WHR
+							original_tag = UKR
+							original_tag = POL
+						}
+						ROOT = { can_declare_war_on = PREV }
+					}
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = ROOT
+					}
+				}
 				WHR = { country_event = { id = whrpol.53 days = 2 } }
 			}
 		}

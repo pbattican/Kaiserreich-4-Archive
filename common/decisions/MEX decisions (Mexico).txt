@@ -37,7 +37,7 @@ foreign_politics = {# Foreign Policy
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_join_international target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_join_international target: [From.GetName]"
 			FROM = {
 				country_event = { id = mexico.200 days = 1 }
 			}
@@ -74,7 +74,7 @@ foreign_politics = {# Foreign Policy
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_join_entente target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_join_entente target: [From.GetName]"
 			ENT = { country_event = mexico.202 }
 		}
 	}
@@ -130,7 +130,7 @@ foreign_politics = {# Foreign Policy
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_intervene_csa target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_intervene_csa target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 25 value = 1 }
 			every_other_country = {
 				limit = {
@@ -222,12 +222,10 @@ MEX_central_american_intervention = {
 		fire_only_once = yes
 		cost = 50
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_support_socialists target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_support_socialists target: [From.GetName]"
 			send_equipment = {
 				type = infantry_equipment
 				amount = 500
@@ -282,13 +280,13 @@ MEX_central_american_intervention = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled MEX_fight_reactionary_central_america target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel MEX_fight_reactionary_central_america target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			add_political_power = 50
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_fight_reactionary_central_america target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_fight_reactionary_central_america target: [From.GetName]"
 			FROM = { country_event = mexico.500 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -334,7 +332,7 @@ MEX_central_american_intervention = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_retake_yucatan_mission"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_retake_yucatan_mission"
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_political_power = 100
@@ -349,12 +347,10 @@ MEX_central_american_intervention = {
 		fire_only_once = yes
 		cost = 50
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_claim_central_america"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_claim_central_america"
 			every_state = {
 				limit = { region = 34 } #Central America
 				add_claim_by = ROOT
@@ -415,12 +411,12 @@ MEX_central_american_intervention = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled MEX_fight_central_america target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel MEX_fight_central_america target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_fight_central_america target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_fight_central_america target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -528,7 +524,7 @@ MEX_reconquista_decisons = {# Reconquistia Decisions
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_reconquista_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_reconquista_decision"
 			set_country_flag = { flag = imminent_war days = 25 value = 1 }
 			every_other_country = {
 				limit = {
@@ -649,9 +645,7 @@ MEX_economic_decisions = {# Economic Decisions
 		days_remove = 60
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove MEX_nationalize_oil"
@@ -687,7 +681,7 @@ MEX_cristero_war = {# Cristero War stuff
 		ai_will_do = { factor = 150 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_restore_order_cristero target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_restore_order_cristero target: [From.GetName]"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -724,12 +718,10 @@ MEX_cristero_war = {# Cristero War stuff
 		days_mission_timeout = 30
 		days_re_enable = 30
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_cristero_raid_mission"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_cristero_raid_mission"
 			subtract_from_variable = { var = MEX_cristero_power value = 1 }
 			custom_effect_tooltip = MEX_cristero_subtract_1
 			hidden_effect = {
@@ -775,7 +767,7 @@ MEX_campesinos_war = {# Campesinos War Stuff
 		ai_will_do = { factor = 150 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_restore_order_campesinos target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_restore_order_campesinos target: [From.GetName]"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -819,12 +811,10 @@ MEX_campesinos_war = {# Campesinos War Stuff
 		days_mission_timeout = 30
 		days_re_enable = 30
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision MEX_campesinos_raid_mission"
+			log = "[GetDateText]: [Root.GetName]: Decision complete MEX_campesinos_raid_mission"
 			subtract_from_variable = { var = MEX_campesinos_power value = 1 }
 			custom_effect_tooltip = MEX_campesinos_subtract_1
 			hidden_effect = {

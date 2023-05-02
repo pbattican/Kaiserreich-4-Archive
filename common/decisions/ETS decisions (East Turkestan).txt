@@ -17,13 +17,11 @@ ETS_foreign_diplomacy = {
 			}
 		}
 
-		cost = 5
+		cost = 50
 
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		days_remove = 5
 
@@ -40,13 +38,11 @@ ETS_foreign_diplomacy = {
 
 		allowed = { always = no } #Activated from effect
 
-		cost = 5
+		cost = 50
 
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		days_remove = 5
 
@@ -69,13 +65,11 @@ ETS_foreign_diplomacy = {
 			}
 		}
 
-		cost = 5
+		cost = 50
 
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		days_remove = 5
 
@@ -91,11 +85,9 @@ ETS_foreign_diplomacy = {
 		icon = generic_agreement
 
 		allowed = { always = no } #Activated from effect
-		cost = 5
+		cost = 50
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		days_remove = 5
 
 		remove_effect = {
@@ -110,11 +102,9 @@ ETS_foreign_diplomacy = {
 		icon = generic_agreement
 
 		allowed = { always = no } #Activated from effect
-		cost = 5
+		cost = 50
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		days_remove = 5
 
 		remove_effect = {
@@ -165,12 +155,10 @@ ETS_foreign_diplomacy = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_foreign_support_more_equipment_partial_support target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_foreign_support_more_equipment_partial_support target: [From.GetName]"
 		}
 
 		days_remove = 14
@@ -230,12 +218,10 @@ ETS_foreign_diplomacy = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_foreign_support_more_equipment_full_support target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_foreign_support_more_equipment_full_support target: [From.GetName]"
 		}
 
 		days_remove = 70
@@ -249,23 +235,15 @@ ETS_foreign_diplomacy = {
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 200
+					amount = 100
 					producer = FROM
 				}
 			}
 			else = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 100
+					amount = 50
 					producer = FROM
-				}
-			}
-			hidden_effect = { # create a loop
-				if = {
-					limit = {
-						NOT = { has_global_flag = ETS_rebellion_victory }
-					}
-					activate_targeted_decision = { target = FROM decision = ETS_foreign_support_more_equipment_full_support }
 				}
 			}
 		}
@@ -292,12 +270,10 @@ ETS_war_economy = {
 
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_convert_gold_to_currency"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_convert_gold_to_currency"
 			add_political_power = 20
 			set_temp_variable = { temp1 = ETS_gold_amount }
 			divide_temp_variable = { temp1 = 10 }
@@ -346,7 +322,7 @@ ETS_war_economy = {
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout ETS_weekly_hotan_gold"
 			custom_effect_tooltip = ETS_gold_hotan_weekly_tt
-			add_to_variable = { ETS_gold_amount = 1.0 }
+			add_to_variable = { ETS_gold_amount = 0.5 }
 		}
 	}
 #Hotan Factory
@@ -363,14 +339,12 @@ ETS_war_economy = {
 			has_country_flag = ETS_mineral_processing_learned
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_complete_hotan_conversion"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_complete_hotan_conversion"
 			custom_effect_tooltip = ETS_convert_hotan_tt
 			set_country_flag = ETS_hotan_conversion_completed
 			hidden_effect = {
@@ -421,15 +395,13 @@ ETS_war_economy = {
 
 		target_array = ETS_foreign_country_array_majors_yay
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
-		cost = 5
+		cost = 50
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_hire_firearm_expert_foreign target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_hire_firearm_expert_foreign target: [From.GetName]"
 			set_country_flag = ETS_conversion_help_@FROM
 			set_country_flag = ETS_firearm_expert_hiring
 			custom_effect_tooltip = ETS_foreign_firearm_expert_hired_tooltip
@@ -468,15 +440,13 @@ ETS_war_economy = {
 			NOT = { has_country_flag = ETS_firearm_expert_hiring }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
-		cost = 5
+		cost = 50
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_hire_firearm_expert_local target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_hire_firearm_expert_local target: [From.GetName]"
 			set_country_flag = ETS_conversion_help_@FROM
 			set_country_flag = ETS_firearm_expert_hiring
 			custom_effect_tooltip = ETS_local_firearm_expert_hired_tooltip
@@ -523,15 +493,13 @@ ETS_war_economy = {
 		}
 		target_array = ETS_foreign_country_array_majors_yay
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		cost = 5
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_learn_gunpowder_foreign target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_learn_gunpowder_foreign target: [From.GetName]"
 			set_country_flag = ETS_conversion_help_@FROM
 			custom_effect_tooltip = ETS_foreign_gunpowder_tooltip
 		}
@@ -568,15 +536,13 @@ ETS_war_economy = {
 			NOT = { has_country_flag = ETS_mineral_processing_learning }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
-		cost = 5
+		cost = 50
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_learn_gunpowder_local target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_learn_gunpowder_local target: [From.GetName]"
 			set_country_flag = ETS_conversion_help_@FROM
 			custom_effect_tooltip = ETS_local_gunpowder_tooltip
 		}
@@ -622,15 +588,13 @@ ETS_war_economy = {
 
 		target_array = ETS_foreign_country_array_majors_yay
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		cost = 5
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_learn_mineral_processing_foreign target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_learn_mineral_processing_foreign target: [From.GetName]"
 			set_country_flag = ETS_conversion_help_@FROM
 			set_country_flag = ETS_mineral_processing_learning
 			custom_effect_tooltip = ETS_mineral_processing_tooltip
@@ -675,15 +639,13 @@ ETS_war_economy = {
 			NOT = { has_country_flag = ETS_mineral_processing_learning }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		cost = 5
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_learn_mineral_processing_local target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_learn_mineral_processing_local target: [From.GetName]"
 			set_country_flag = ETS_conversion_help_@FROM
 			set_country_flag = ETS_mineral_processing_learning
 			custom_effect_tooltip = ETS_mineral_processing_tooltip
@@ -727,14 +689,12 @@ ETS_military_operation = {
 			has_global_flag = ETS_rebellion_victory
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		cost = 40
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_create_an_army"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_create_an_army"
 			set_country_flag = ETS_army_created
 			remove_dynamic_modifier = {
 				modifier = ETS_fledgling_military
@@ -773,12 +733,10 @@ ETS_military_operation = {
 			highlight_state_targets = { state = 287 }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_bughra_raise_militia"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_bughra_raise_militia"
 			add_manpower = -4500
 			hidden_effect = {
 				add_command_power = -25
@@ -844,12 +802,10 @@ ETS_military_operation = {
 			highlight_state_targets = { state = 619 }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_timur_raise_militia"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_timur_raise_militia"
 			add_manpower = -4500
 			hidden_effect = {
 				add_command_power = -25
@@ -919,14 +875,12 @@ ETS_military_operation = {
 		}
 		target_array = ETS_foreign_country_array_majors_yay
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		cost = 20
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_army_training_adopt_formation_foreign target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_army_training_adopt_formation_foreign target: [From.GetName]"
 			set_country_flag = ETS_army_training_help_@FROM
 			set_country_flag = ETS_army_adopt_formation_training
 		}
@@ -978,14 +932,12 @@ ETS_military_operation = {
 			NOT = { has_country_flag = ETS_army_adopt_formation_training }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
-		cost = 20
+		cost = 30
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_army_training_adopt_formation_local target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_army_training_adopt_formation_local target: [From.GetName]"
 			set_country_flag = ETS_army_training_help_@FROM
 			set_country_flag = ETS_army_adopt_formation_training
 		}
@@ -1048,14 +1000,12 @@ ETS_military_operation = {
 		}
 		target_array = ETS_foreign_country_array_majors_yay
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
-		cost = 20
+		cost = 30
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_army_training_combat_techniques_foreign target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_army_training_combat_techniques_foreign target: [From.GetName]"
 			set_country_flag = ETS_army_training_help_@FROM
 			set_country_flag = ETS_army_combat_techniques_training
 		}
@@ -1114,14 +1064,12 @@ ETS_military_operation = {
 			NOT = { has_country_flag = ETS_army_combat_techniques_training }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
-		cost = 20
+		cost = 30
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_army_training_combat_techniques_local target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_army_training_combat_techniques_local target: [From.GetName]"
 			set_country_flag = ETS_army_training_help_@FROM
 			set_country_flag = ETS_army_combat_techniques_training
 		}
@@ -1168,14 +1116,27 @@ ETS_military_operation = {
 		}
 
 		cost = 0
+		days_remove = 25
 		fire_only_once = yes
+		cancel_if_not_visible = yes
+		war_with_target_on_remove = yes
 
-		ai_will_do = {
-			factor = 100
+		ai_will_do = { factor = 100 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel ETS_war_with_KUM target: [From.GetName]"
+			clear_decision_attack_AI = yes
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_war_with_KUM target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_war_with_KUM target: [From.GetName]"
+			FROM = { country_event = kr.political.30 } #warning event
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove ETS_war_with_KUM target: [From.GetName]"
+			clear_decision_attack_AI = yes
 			declare_war_on = {
 				target = FROM
 				type = annex_everything
@@ -1206,15 +1167,13 @@ ETS_turkic_diplo_decisions = {
 			FROM = { is_subject = no }
 		}
 
-		cost = 10
+		cost = 40
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_reach_out_to_country_decision target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_reach_out_to_country_decision target: [From.GetName]"
 			FROM = {
 				country_event = { id = ets.53 days = 1 }
 			}
@@ -1249,15 +1208,13 @@ ETS_turkic_diplo_decisions = {
 			NOT = { has_war_with = ETS }
 		}
 
-		cost = 25
+		cost = 50
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ETS_send_officers_to_train_in_otto_decision target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete ETS_send_officers_to_train_in_otto_decision target: [From.GetName]"
 			FROM = {
 				country_event = { id = ets.54 days = 1 }
 			}

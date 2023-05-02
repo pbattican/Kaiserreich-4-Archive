@@ -180,7 +180,7 @@ country_event = { id = uob.1004 days = 745 }
 country_event = { id = uob.1005 days = 3050 }
 news_event = { id = uob.1019 days = 488 }
 country_event = { id = uob.1020 days = 10 }
-country_event = { id = comfrance.71 days = 456 random = 120 }
+country_event = { id = comfrance.71 days = 456 random_hours = 120 }
 country_event = { id = uob.1034 days = 520 }
 country_event = { id = uob.1035 days = 60 }
 country_event = { id = uob.1014 days = 1898 } #Tom Mann Passes Away
@@ -205,7 +205,7 @@ recruit_character = ENG_ebby_edwards
 
 ### SiCs / Advisors ###
 recruit_character = ENG_fenner_brockway
-recruit_character = ENG_j_t_murphy
+recruit_character = ENG_jt_murphy
 recruit_character = ENG_george_hardy
 
 recruit_character = ENG_wilfred_risdon
@@ -214,9 +214,9 @@ recruit_character = ENG_john_beckett
 recruit_character = ENG_harry_pollitt
 recruit_character = ENG_abe_moffat
 recruit_character = ENG_manny_shinwell
-recruit_character = ENG_r_h_tawney
+recruit_character = ENG_rh_tawney
 recruit_character = ENG_alfred_salter
-recruit_character = ENG_g_d_h_cole
+recruit_character = ENG_gdh_cole
 recruit_character = ENG_harold_nicolson
 recruit_character = ENG_william_temple
 recruit_character = ENG_aneurin_bevan
@@ -253,8 +253,8 @@ recruit_character = ENG_giffard_le_quesne_martel
 recruit_character = ENG_william_slim
 
 ### Admirals ###
-recruit_character = ENG_andrew_cunningham
 recruit_character = ENG_max_horton
+recruit_character = ENG_reginald_drax
 recruit_character = ENG_edward_evans
 recruit_character = ENG_geoffrey_layton
 recruit_character = ENG_arthur_power
@@ -371,7 +371,7 @@ if = {
 			tank_nsb_engine_upgrade = 2
 			tank_nsb_armor_upgrade = 1
 		}
-		icon = "gfx/interface/equipmentdesigner/tanks/designer/Union_of_Britain/ENG_basic_light_tank.png"
+		icon = GFX_ENG_basic_light_tank_medium
 		obsolete = yes #used for oob
 	}
 	create_equipment_variant = {
@@ -387,7 +387,7 @@ if = {
 			special_type_slot_1 = tank_radio_1
 			special_type_slot_2 = smoke_launchers
 		}
-		icon = "gfx/interface/equipmentdesigner/tanks/designer/Union_of_Britain/ENG_basic_light_tank.png"
+		icon = GFX_ENG_basic_light_tank_medium
 		upgrades = {
 			tank_nsb_engine_upgrade = 2
 			tank_nsb_armor_upgrade = 1
@@ -409,7 +409,7 @@ if = {
 			tank_nsb_armor_upgrade = 1
 			tank_nsb_engine_upgrade = 2
 		}
-		icon = "gfx/interface/equipmentdesigner/tanks/designer/Union_of_Britain/ENG_basic_main_tank.png"
+		icon = GFX_ENG_basic_medium_tank_medium
 	}
 	create_equipment_variant = {
 		name = "Vickers 6 ton A"
@@ -460,7 +460,6 @@ if = {
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
-		icon = "GFX_ENG_early_fighter_medium"
 	}
 	create_equipment_variant = {
 		name = "Hawker Nimrod"
@@ -470,7 +469,6 @@ if = {
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
-		icon = "GFX_ENG_early_fighter_medium"
 	}
 	create_equipment_variant = {
 		name = "Hawker Hind"
@@ -480,7 +478,6 @@ if = {
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
-		icon = "GFX_ENG_early_bomber_medium"
 	}
 	create_equipment_variant = {
 		name = "Blackburn Baffin"
@@ -490,7 +487,6 @@ if = {
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
-		icon = "GFX_ENG_early_bomber_medium"
 	}
 	create_equipment_variant = {
 		name = "Blackburn Baffin"
@@ -510,7 +506,6 @@ if = {
 			special_type_slot_1 = empty
 		}
 		obsolete = yes
-		icon = "GFX_ENG_early_bomber_medium"
 	}
 	create_equipment_variant = {
 		name = "Handley-Page Hampden"
@@ -520,6 +515,5 @@ if = {
 			engine_type_slot = engine_2_2x
 			special_type_slot_1 = lmg_defense_turret
 		}
-		icon = "GFX_ENG_tactical_bomber1_medium"
 	}
 }

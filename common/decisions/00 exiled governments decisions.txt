@@ -33,13 +33,11 @@ governments_in_exile = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision request_reinstatement target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete request_reinstatement target: [From.GetName]"
 			FROM = { country_event = mtg_exile_government.2 }
 		}
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	grant_parliamentary_audience = {
@@ -157,9 +155,7 @@ governments_in_exile = {
 			targeted_legitimacy_daily = 0.05
 		}
 
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 	exile_recruitment_campaign = {
@@ -231,7 +227,7 @@ governments_in_exile = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision exile_extraction_campaign target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete exile_extraction_campaign target: [From.GetName]"
 			hidden_effect = { add_command_power = -25 }
 		}
 
@@ -302,7 +298,7 @@ governments_in_exile = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision request_control_of_navy target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete request_control_of_navy target: [From.GetName]"
 			FROM = { country_event = { id = mtg_exile_government.3 hours = 6 } }
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
@@ -316,9 +312,7 @@ governments_in_exile = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 	}
 }
 
@@ -346,7 +340,7 @@ category_exile_forces = {
 		days_remove = 120
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision weapons_for_the_resistance target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete weapons_for_the_resistance target: [From.GetName]"
 			set_temp_variable = { resistance_equipment_needed = FROM.num_owned_states }
 			subtract_from_temp_variable = { resistance_equipment_needed = FROM.num_owned_controlled_states }
 			multiply_temp_variable = { resistance_equipment_needed = -75 }
@@ -362,9 +356,7 @@ category_exile_forces = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 0.01
-		}
+		ai_will_do = { factor = 0.01 }
 	}
 
 	unity_parade = {
@@ -446,7 +438,7 @@ category_exile_forces = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision joint_training_exercise target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete joint_training_exercise target: [From.GetName]"
 			hidden_effect = { add_command_power = -25 }
 			army_experience = 25
 			air_experience = 50

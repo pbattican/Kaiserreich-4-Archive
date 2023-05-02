@@ -1,15 +1,16 @@
 ﻿capital = 288
-
 oob = "BRM"
 set_naval_oob = "BRM_naval"
+set_stability = 0.45
+set_war_support = 0.40
+set_research_slots = 2
+set_convoys = 20
 
 set_technology = {
 	### Infantry ###
 	infantry_weapons = 1
+	tech_irregulars = 1
 	tech_mountaineers = 1
-
-	### Trains ###
-	basic_train = 1
 }
 
 ### Navy - MtG ###
@@ -41,12 +42,6 @@ if = {
 	}
 }
 
-set_research_slots = 2
-set_convoys = 20
-
-set_stability = 45
-set_war_support = 0.40
-
 set_politics = {
 	ruling_party = authoritarian_democrat
 	last_election = "1935.11.9"
@@ -68,8 +63,8 @@ set_popularities = {
 }
 
 country_event = { id = burma.0 days = 1 } # Introduction
-country_event = { id = burma.1 days = 300 random = 240 } # Riots and Protests at Rangoon University
-country_event = { id = burma.3 days = 450 random = 360 } # Labour unrest at Yenangyaung Oil Fields
+country_event = { id = burma.1 days = 300 random_hours = 240 } # Riots and Protests at Rangoon University
+country_event = { id = burma.3 days = 450 random_hours = 360 } # Labour unrest at Yenangyaung Oil Fields
 
 ### Country Leaders ###
 recruit_character = BRM_than_thun

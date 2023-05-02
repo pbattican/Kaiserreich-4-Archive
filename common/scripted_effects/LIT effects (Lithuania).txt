@@ -1,6 +1,6 @@
 LIT_remove_monarchy = {
 	if = {
-		limit = { has_cosmetic_tag = LIT_LITBEL_monarchy }
+		limit = { has_cosmetic_tag = LIT_LITBEL_MONARCHY }
 		set_cosmetic_tag = LIT_LITBEL
 	}
 	else_if = {
@@ -21,12 +21,16 @@ LIT_remove_monarchy = {
 			retire = yes
 		}
 	}
+	if = {
+		limit = { has_character = LIT_wilhelm_von_urach }
+		LIT_wilhelm_von_urach = { retire = yes }
+	}
 }
 
 LIT_create_vytautas = {
 	if = {
 		limit = { has_cosmetic_tag = LIT_LITBEL }
-		set_cosmetic_tag = LIT_LITBEL_monarchy
+		set_cosmetic_tag = LIT_LITBEL_MONARCHY
 	}
 	else = {
 		set_cosmetic_tag = LIT_monarchy
@@ -39,6 +43,10 @@ LIT_create_vytautas = {
 		if = {
 			limit = { NOT = { has_character = LIT_eberhard_von_urach } }
 			LIT_eberhard_von_urach = { set_nationality = PREV }
+		}
+		if = {
+			limit = { NOT = { has_character = LIT_wilhelm_von_urach } }
+			LIT_wilhelm_von_urach = { set_nationality = PREV }
 		}
 	}
 	LIT_karl_gero_von_urach = {

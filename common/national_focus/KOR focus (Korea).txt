@@ -12,18 +12,20 @@ focus_tree = {
 	}
 
 	default = no
-	continuous_focus_position = { x = 45 y = 1000 }
+	continuous_focus_position = { x = 135 y = 935 }
 
 #### Reconstruction #####
 	focus = {
 		id = KOR_return_of_the_provisional_government
 		icon = GFX_goal_generic_parliament2
-		x = 3
+		cost = 0
+
+		x = 4
 		y = 0
+
 		available = {
 			always = no
 		}
-		cost = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_return_of_the_provisional_government"
 			add_political_power = 100
@@ -33,12 +35,12 @@ focus_tree = {
 		id = KOR_work_with_the_peoples_committees
 		icon = GFX_goal_conspiracy
 		cost = 3
-		x = -1
-		y = 1
+
 		relative_position_id = KOR_return_of_the_provisional_government
-		ai_will_do = {
-			base = 15
-		}
+		x = -2
+		y = 1
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_return_of_the_provisional_government
 		}
@@ -58,12 +60,12 @@ focus_tree = {
 		id = KOR_provisional_legal_code
 		icon = GFX_goal_constitutional_guarantees
 		cost = 3
+
+		relative_position_id = KOR_return_of_the_provisional_government
 		x = 2
 		y = 1
-		relative_position_id = KOR_return_of_the_provisional_government
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_return_of_the_provisional_government
 		}
@@ -81,12 +83,12 @@ focus_tree = {
 		id = KOR_investigate_the_traitors
 		icon = GFX_goal_generic_trial
 		cost = 3
+
+		relative_position_id = KOR_provisional_legal_code
 		x = -1
 		y = 1
-		relative_position_id = KOR_provisional_legal_code
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_provisional_legal_code
 		}
@@ -106,12 +108,12 @@ focus_tree = {
 		id = KOR_pardon_the_collaborators
 		icon = GFX_goal_Korea_Colony
 		cost = 3
+
+		relative_position_id = KOR_provisional_legal_code
 		x = 1
 		y = 1
-		relative_position_id = KOR_provisional_legal_code
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_provisional_legal_code
 		}
@@ -147,12 +149,12 @@ focus_tree = {
 		id = KOR_begin_reconstruction_efforts
 		icon = GFX_goal_generic_destruction_civil_war
 		cost = 3
+
+		relative_position_id = KOR_work_with_the_peoples_committees
 		x = 0
 		y = 1
-		relative_position_id = KOR_work_with_the_peoples_committees
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_work_with_the_peoples_committees
 		}
@@ -176,12 +178,12 @@ focus_tree = {
 		id = KOR_rapid_industrialisation
 		icon = GFX_goal_munitions_factories
 		cost = 3
+
+		relative_position_id = KOR_begin_reconstruction_efforts
 		x = -1
 		y = 1
-		relative_position_id = KOR_begin_reconstruction_efforts
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_begin_reconstruction_efforts
 		}
@@ -233,12 +235,12 @@ focus_tree = {
 		id = KOR_advanced_grain_procurement_methods
 		icon = GFX_goal_generic_agriculture2
 		cost = 3
+
+		relative_position_id = KOR_begin_reconstruction_efforts
 		x = 1
 		y = 1
-		relative_position_id = KOR_begin_reconstruction_efforts
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_begin_reconstruction_efforts
 		}
@@ -266,12 +268,12 @@ focus_tree = {
 		id = KOR_koreas_industrial_revolution
 		icon = GFX_goal_production
 		cost = 3
+
+		relative_position_id = KOR_rapid_industrialisation
 		x = 0
 		y = 2
-		relative_position_id = KOR_rapid_industrialisation
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_rapid_industrialisation
 		}
@@ -296,19 +298,18 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-
 		}
 	}
 	focus = {
 		id = KOR_back_to_the_land
 		icon = GFX_goal_agrarian_soldiers
 		cost = 3
+
+		relative_position_id = KOR_advanced_grain_procurement_methods
 		x = 0
 		y = 2
-		relative_position_id = KOR_advanced_grain_procurement_methods
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_advanced_grain_procurement_methods
 		}
@@ -334,12 +335,12 @@ focus_tree = {
 		id = KOR_form_the_KNR
 		icon = GFX_goal_generic_railroad
 		cost = 3
+
+		relative_position_id = KOR_rapid_industrialisation
 		x = 1
 		y = 1
-		relative_position_id = KOR_rapid_industrialisation
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_rapid_industrialisation
 		}
@@ -371,12 +372,12 @@ focus_tree = {
 		id = KOR_find_what_we_can_salvage
 		icon = GFX_goal_generic_industry_reallocation
 		cost = 3
+
+		relative_position_id = KOR_investigate_the_traitors
 		x = 1
 		y = 1
-		relative_position_id = KOR_investigate_the_traitors
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_investigate_the_traitors
 			focus = KOR_pardon_the_collaborators
@@ -393,12 +394,12 @@ focus_tree = {
 		id = KOR_reestablish_government_legitimacy
 		icon = GFX_goal_COS_Ferrer_Coup
 		cost = 3
+
+		relative_position_id = KOR_find_what_we_can_salvage
 		x = 0
 		y = 1
-		relative_position_id = KOR_find_what_we_can_salvage
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_find_what_we_can_salvage
 		}
@@ -415,12 +416,12 @@ focus_tree = {
 		id = KOR_reopen_the_schools
 		icon = GFX_goal_ENG_Highland_Research_Towns
 		cost = 3
-		x = 2
-		y = 1
+
 		relative_position_id = KOR_reestablish_government_legitimacy
-		ai_will_do = {
-			base = 15
-		}
+		x = 1
+		y = 1
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_reestablish_government_legitimacy
 		}
@@ -431,19 +432,18 @@ focus_tree = {
 				remove_idea = KOR_low_literacy_rate
 				add_idea = KOR_developing_literacy
 			}
-
 		}
 	}
 	focus = {
 		id = KOR_contact_the_youth_groups
 		icon = GFX_goal_generic_army_cooperation
 		cost = 3
-		x = 0
-		y = 1
+
 		relative_position_id = KOR_reestablish_government_legitimacy
-		ai_will_do = {
-			base = 15
-		}
+		x = -1
+		y = 1
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_reestablish_government_legitimacy
 		}
@@ -465,12 +465,12 @@ focus_tree = {
 		id = KOR_korea_reborn
 		icon = GFX_goal_DOM_The_Phoenix
 		cost = 3
+
+		relative_position_id = KOR_contact_the_youth_groups
 		x = -1
 		y = 1
-		relative_position_id = KOR_contact_the_youth_groups
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_contact_the_youth_groups
 		}
@@ -499,9 +499,8 @@ focus_tree = {
 		cost = 3
 		x = 15
 		y = 0
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = KOR_non_socialist_paths_tt
@@ -524,7 +523,6 @@ focus_tree = {
 			527 = {
 				increase_state_category_by_one_level = yes
 			}
-
 		}
 	}
 
@@ -532,20 +530,23 @@ focus_tree = {
 		id = KOR_encourage_democratic_principles
 		icon = GFX_goal_DOM_End_Judicial_Corruption
 		cost = 3
+
+		relative_position_id = KOR_begin_the_land_reform
 		x = -2
 		y = 1
-		relative_position_id = KOR_begin_the_land_reform
+
 		prerequisite = {
 			focus = KOR_begin_the_land_reform
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		available = {
 			has_country_flag = KOR_democratic
 		}
 		mutually_exclusive = {
 			focus = KOR_maintain_martial_law
+		}
+		mutually_exclusive = {
+			focus = KOR_three_stage_revolution
 		}
 		on_uncomplete = {
 			remove_ideas = KOR_encourage_democracy
@@ -554,15 +555,21 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_encourage_democratic_principles"
 			add_ideas = KOR_encourage_democracy
 		}
-
 	}
 	focus = {
 		id = KOR_maintain_martial_law
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
 		cost = 3
+
+		relative_position_id = KOR_begin_the_land_reform
 		x = 2
 		y = 1
-		relative_position_id = KOR_begin_the_land_reform
+		allow_branch = {
+			NOT = {
+				has_country_flag = KOR_under_the_rkmt
+			}
+		}
+
 		prerequisite = {
 			focus = KOR_begin_the_land_reform
 		}
@@ -576,9 +583,7 @@ focus_tree = {
 				}
 			}
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		mutually_exclusive = {
 			focus = KOR_encourage_democratic_principles
 		}
@@ -596,21 +601,62 @@ focus_tree = {
 			add_ideas = KOR_martial_law
 			add_ideas = KOR_agitated_population
 		}
-
 	}
+	focus = {
+		id = KOR_three_stage_revolution
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		cost = 3
+
+		relative_position_id = KOR_begin_the_land_reform
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = KOR_begin_the_land_reform
+		}
+		allow_branch = {
+			has_country_flag = KOR_under_the_rkmt
+		}
+		available = {
+			has_country_flag = KOR_under_the_rkmt
+		}
+		ai_will_do = { base = 15 }
+		mutually_exclusive = {
+			focus = KOR_encourage_democratic_principles
+		}
+		on_uncomplete = {
+			add_ideas = KOR_growing_legitimacy
+			add_ideas = KOR_a_people_once_more
+			remove_ideas = KOR_martial_law
+			remove_ideas = KOR_agitated_population
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_three_stage_revolution"
+			add_stability = -0.15
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+			remove_ideas = KOR_growing_legitimacy
+			remove_ideas = KOR_a_people_once_more
+			add_ideas = KOR_martial_law
+			add_ideas = KOR_agitated_population
+		}
+	}
+
 	focus = {
 		id = KOR_legislate_freedoms
 		icon = GFX_goal_KOR_Coat_Of_Arms
 		cost = 3
+
+		relative_position_id = KOR_encourage_democratic_principles
 		x = -1
 		y = 1
-		relative_position_id = KOR_encourage_democratic_principles
+
 		prerequisite = {
 			focus = KOR_encourage_democratic_principles
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			add_stability = -0.1
 			remove_ideas = KOR_national_solidarity
@@ -629,15 +675,15 @@ focus_tree = {
 		id = KOR_pursue_equalization_of_society
 		icon = GFX_focus_generic_female_soldiers
 		cost = 3
+
+		relative_position_id = KOR_legislate_freedoms
 		x = 0
 		y = 1
-		relative_position_id = KOR_legislate_freedoms
+
 		prerequisite = {
 			focus = KOR_legislate_freedoms
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_equal_society
 		}
@@ -653,15 +699,15 @@ focus_tree = {
 		id = KOR_decentralized_education
 		icon = GFX_goal_KTG_Educate_natives
 		cost = 3
+
+		relative_position_id = KOR_pursue_equalization_of_society
 		x = 1
 		y = 1
-		relative_position_id = KOR_pursue_equalization_of_society
+
 		prerequisite = {
 			focus = KOR_pursue_equalization_of_society
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_decentralized_education_idea
 		}
@@ -678,15 +724,15 @@ focus_tree = {
 		id = KOR_five_year_plan
 		icon = GFX_goal_manage_industries
 		cost = 3
+
+		relative_position_id = KOR_pursue_equalization_of_society
 		x = -1
 		y = 1
-		relative_position_id = KOR_pursue_equalization_of_society
+
 		prerequisite = {
 			focus = KOR_pursue_equalization_of_society
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_rapidly_developing_economy
 		}
@@ -713,21 +759,20 @@ focus_tree = {
 				add_idea = KOR_rapidly_developing_economy
 			}
 		}
-
 	}
 	focus = {
 		id = KOR_foster_intensive_capitalism
 		icon = GFX_goal_capitalist_system
 		cost = 3
+
+		relative_position_id = KOR_five_year_plan
 		x = 0
 		y = 1
-		relative_position_id = KOR_five_year_plan
+
 		prerequisite = {
 			focus = KOR_five_year_plan
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_miracle_on_the_han_river
 		}
@@ -743,15 +788,15 @@ focus_tree = {
 		id = KOR_attend_the_needs_of_all
 		icon = GFX_goal_healthcare
 		cost = 3
+
+		relative_position_id = KOR_decentralized_education
 		x = 0
 		y = 1
-		relative_position_id = KOR_decentralized_education
+
 		prerequisite = {
 			focus = KOR_decentralized_education
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_nation_wide_education_expansion
 			add_stability = -0.10
@@ -769,18 +814,18 @@ focus_tree = {
 		id = KOR_the_first_election
 		icon = GFX_goal_generic_elections
 		cost = 3
+
+		relative_position_id = KOR_foster_intensive_capitalism
 		x = 1
 		y = 1
-		relative_position_id = KOR_foster_intensive_capitalism
+
 		prerequisite = {
 			focus = KOR_foster_intensive_capitalism
 		}
 		prerequisite = {
 			focus = KOR_attend_the_needs_of_all
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			add_political_power = -50
 		}
@@ -832,16 +877,17 @@ focus_tree = {
 		id = KOR_establish_the_armed_forces
 		icon = GFX_goal_KOR_Army
 		cost = 3
+
+		relative_position_id = KOR_legislate_freedoms
 		x = 3
 		y = 0
-		relative_position_id = KOR_legislate_freedoms
+
 		prerequisite = {
 			focus = KOR_maintain_martial_law
 			focus = KOR_encourage_democratic_principles
+			focus = KOR_three_stage_revolution
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_army_of_the_republic
 		}
@@ -864,22 +910,28 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			add_ideas = KOR_army_of_the_republic
+			if = {
+				limit = {
+					has_country_flag = monarchy_KOR
+				}
+				add_ideas = KOR_army_of_the_empire
+			}
+			else = { add_ideas = KOR_army_of_the_republic }
 		}
 	}
 	focus = {
 		id = KOR_found_the_airforce
 		icon = GFX_goal_KOR_Airforce
 		cost = 3
+
+		relative_position_id = KOR_establish_the_armed_forces
 		x = 1
 		y = 1
-		relative_position_id = KOR_establish_the_armed_forces
+
 		prerequisite = {
 			focus = KOR_establish_the_armed_forces
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_found_the_airforce"
 			525 = {
@@ -908,15 +960,15 @@ focus_tree = {
 		id = KOR_establish_the_navy
 		icon = GFX_goal_KOR_Navy
 		cost = 3
+
+		relative_position_id = KOR_establish_the_armed_forces
 		x = -1
 		y = 1
-		relative_position_id = KOR_establish_the_armed_forces
+
 		prerequisite = {
 			focus = KOR_establish_the_armed_forces
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_establish_the_navy"
 			525 = {
@@ -933,18 +985,18 @@ focus_tree = {
 		id = KOR_expand_the_intelligence_corps
 		icon = GFX_goal_KOR_secret_agency
 		cost = 3
+
+		relative_position_id = KOR_establish_the_navy
 		x = 1
 		y = 1
-		relative_position_id = KOR_establish_the_navy
+
 		prerequisite = {
 			focus = KOR_establish_the_navy
 		}
 		prerequisite = {
 			focus = KOR_found_the_airforce
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_expand_the_intelligence_corps"
 			if = {
@@ -964,15 +1016,16 @@ focus_tree = {
 		id = KOR_tighten_the_party_state
 		icon = GFX_focus_generic_authoritarian_government
 		cost = 3
+
+		relative_position_id = KOR_maintain_martial_law
 		x = 1
 		y = 1
-		relative_position_id = KOR_maintain_martial_law
+
 		prerequisite = {
 			focus = KOR_maintain_martial_law
+			focus = KOR_three_stage_revolution
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			add_political_power = -50
 			add_stability = -0.1
@@ -1002,29 +1055,32 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KOR_sponser_illminist_groups
+		id = KOR_sponser_ilminist_groups
 		icon = GFX_goal_generic_paramilitary
 		cost = 3
+
+		relative_position_id = KOR_tighten_the_party_state
 		x = 2
 		y = 1
-		relative_position_id = KOR_tighten_the_party_state
+
 		available = {
 			has_country_flag = nat_pop_KOR
 		}
 		prerequisite = {
 			focus = KOR_tighten_the_party_state
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		mutually_exclusive = {
 			focus = KOR_amend_the_constitution
+		}
+		mutually_exclusive = {
+			focus = KOR_host_national_assembly
 		}
 		on_uncomplete = {
 			remove_ideas = KOR_ilminism
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus KOR_sponser_illminist_groups"
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_sponser_ilminist_groups"
 			add_ideas = KOR_ilminism
 			hidden_effect = {
 				if = {
@@ -1050,8 +1106,50 @@ focus_tree = {
 				set_politics = {
 					ruling_party = national_populist
 				}
-				clear_sic_slot = yes
 				activate_advisor = KOR_kim_koo_sic
+			}
+		}
+	}
+	focus = {
+		id = KOR_host_national_assembly
+		icon = GFX_focus_chi_legislative_yuan
+		cost = 3
+
+		relative_position_id = KOR_tighten_the_party_state
+		x = 0
+		y = 1
+		allow_branch = {
+			has_country_flag = KOR_under_the_rkmt
+		}
+		available = {
+			NOT = { has_country_flag = nat_pop_KOR }
+			has_country_flag = KOR_under_the_rkmt
+		}
+		prerequisite = {
+			focus = KOR_tighten_the_party_state
+		}
+		ai_will_do = { base = 15 }
+		mutually_exclusive = {
+			focus = KOR_sponser_ilminist_groups
+		}
+		on_uncomplete = {
+			add_political_power = -50
+			remove_ideas = KOR_amended_constitution
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_host_national_assembly"
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = KOR_martial_law
+				add_idea = KOR_amended_constitution
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.05
 			}
 		}
 	}
@@ -1060,20 +1158,23 @@ focus_tree = {
 		id = KOR_amend_the_constitution
 		icon = GFX_goal_generic_suspend_constitution
 		cost = 3
+
+		relative_position_id = KOR_tighten_the_party_state
 		x = 0
 		y = 1
-		relative_position_id = KOR_tighten_the_party_state
+
 		available = {
 			NOT = { has_country_flag = nat_pop_KOR }
+		}
+		allow_branch = {
+			NOT = { has_country_flag = KOR_under_the_rkmt }
 		}
 		prerequisite = {
 			focus = KOR_tighten_the_party_state
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		mutually_exclusive = {
-			focus = KOR_sponser_illminist_groups
+			focus = KOR_sponser_ilminist_groups
 		}
 		on_uncomplete = {
 			add_political_power = -50
@@ -1089,12 +1190,105 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = KOR_ratify_the_constitution
+		icon = GFX_goal_constitutional_guarantees
+		cost = 3
+
+		relative_position_id = KOR_host_national_assembly
+		x = 0
+		y = 1
+
+		available = {
+			has_country_flag = KOR_under_the_rkmt
+		}
+		prerequisite = {
+			focus = KOR_host_national_assembly
+		}
+		allow_branch = {
+			NOT = { has_country_flag = monarchy_KOR }
+			NOT = { has_completed_focus = KOR_amend_the_constitution }
+			has_country_flag = KOR_under_the_rkmt
+		}
+		ai_will_do = { base = 15 }
+		on_uncomplete = {
+			remove_ideas = KOR_revive_nationalism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_ratify_the_constitution"
+			swap_ideas = {
+				remove_idea = KOR_developing_literacy
+				add_idea = KOR_revive_nationalism
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = KOR_national_reconstruction
+		icon = GFX_goal_generic_improve_industry
+		cost = 3
+
+		relative_position_id = KOR_ratify_the_constitution
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = KOR_ratify_the_constitution
+		}
+		ai_will_do = { base = 15 }
+		on_uncomplete = {
+			remove_ideas = KOR_revitalized_economy
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_national_reconstruction"
+			swap_ideas = {
+				remove_idea = KOR_developing_industry
+				add_idea = KOR_revitalized_economy
+			}
+		}
+	}
+	focus = {
+		id = KOR_twin_tigers
+		icon = GFX_goal_QIE_zhili_unite_china
+		cost = 3
+
+		relative_position_id = KOR_national_reconstruction
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = KOR_national_reconstruction
+		}
+		ai_will_do = { base = 15 }
+		on_uncomplete = {
+			remove_ideas = KOR_revive_nationalism2
+			add_ideas = KOR_agitated_population
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_twin_tigers"
+			swap_ideas = {
+				remove_idea = KOR_revive_nationalism
+				add_idea = KOR_revive_nationalism2
+			}
+			remove_ideas = KOR_agitated_population
+			add_ideas = KOR_twin_tigers_idea
+			set_temp_variable = { ideology_change_var = 0.1 }
+			change_ruling_party_popularity = yes
+			if = {
+				limit = { is_subject = yes }
+				overlord = { country_event = kor.4 }
+			}
+		}
+	}
+
+	focus = {
 		id = KOR_figurehead_of_the_nation
 		icon = GFX_goal_generic_council
 		cost = 3
+
+		relative_position_id = KOR_amend_the_constitution
 		x = 0
 		y = 1
-		relative_position_id = KOR_amend_the_constitution
+
 		available = {
 			has_country_flag = authoritarian_KOR
 		}
@@ -1105,10 +1299,9 @@ focus_tree = {
 			NOT = {
 				has_country_flag = monarchy_KOR
 			}
+			NOT = { has_country_flag = KOR_under_the_rkmt }
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_revive_nationalism
 		}
@@ -1124,9 +1317,11 @@ focus_tree = {
 		id = KOR_install_confucian_principles
 		icon = GFX_goal_QIE_confucianism
 		cost = 3
+
+		relative_position_id = KOR_amend_the_constitution
 		x = 0
 		y = 1
-		relative_position_id = KOR_amend_the_constitution
+
 		prerequisite = {
 			focus = KOR_amend_the_constitution
 		}
@@ -1136,9 +1331,7 @@ focus_tree = {
 		allow_branch = {
 			has_country_flag = monarchy_KOR
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			add_stability = -0.1
 			remove_ideas = KOR_confucian_education
@@ -1156,15 +1349,15 @@ focus_tree = {
 		id = KOR_withold_the_holy_rituals
 		icon = GFX_goal_ANQ_centralization
 		cost = 3
+
+		relative_position_id = KOR_install_confucian_principles
 		x = 0
 		y = 1
-		relative_position_id = KOR_install_confucian_principles
+
 		prerequisite = {
 			focus = KOR_install_confucian_principles
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			add_ideas = KOR_silenced_democracy
 			remove_ideas = KOR_korean_corporatism
@@ -1182,15 +1375,15 @@ focus_tree = {
 		id = KOR_the_korean_restoration
 		icon = GFX_focus_man_claim_the_mandate_of_heaven
 		cost = 3
+
+		relative_position_id = KOR_withold_the_holy_rituals
 		x = 0
 		y = 1
-		relative_position_id = KOR_withold_the_holy_rituals
+
 		prerequisite = {
 			focus = KOR_withold_the_holy_rituals
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			add_political_power = -100
 			remove_ideas = KOR_the_confucian_state
@@ -1237,7 +1430,6 @@ focus_tree = {
 						}
 					}
 				}
-				clear_sic_slot = yes
 				activate_advisor = KOR_kim_koo_sic #promote Kim Koo to SiC
 			}
 		}
@@ -1247,15 +1439,15 @@ focus_tree = {
 		id = KOR_intensify_modernisation_efforts
 		icon = GFX_goal_workers_for_business
 		cost = 3
+
+		relative_position_id = KOR_figurehead_of_the_nation
 		x = 0
 		y = 1
-		relative_position_id = KOR_figurehead_of_the_nation
+
 		prerequisite = {
 			focus = KOR_figurehead_of_the_nation
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_revitalized_economy
 		}
@@ -1271,15 +1463,15 @@ focus_tree = {
 		id = KOR_true_korean_democracy
 		icon = GFX_focus_usa_voter_registration_act
 		cost = 3
+
+		relative_position_id = KOR_intensify_modernisation_efforts
 		x = 0
 		y = 1
-		relative_position_id = KOR_intensify_modernisation_efforts
+
 		prerequisite = {
 			focus = KOR_intensify_modernisation_efforts
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_revive_nationalism2
 			add_ideas = KOR_agitated_population
@@ -1299,15 +1491,15 @@ focus_tree = {
 		id = KOR_the_militarization_of_society
 		icon = GFX_goal_mass_concentration_of_army
 		cost = 3
+
+		relative_position_id = KOR_sponser_ilminist_groups
 		x = 2
 		y = 1
-		relative_position_id = KOR_sponser_illminist_groups
+
 		prerequisite = {
-			focus = KOR_sponser_illminist_groups
+			focus = KOR_sponser_ilminist_groups
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = extensive_conscription
 			add_ideas = KOR_martial_law
@@ -1331,15 +1523,15 @@ focus_tree = {
 		id = KOR_regeneration_of_the_korean_nation
 		icon = GFX_goal_social_reforms
 		cost = 3
+
+		relative_position_id = KOR_sponser_ilminist_groups
 		x = 0
 		y = 1
-		relative_position_id = KOR_sponser_illminist_groups
+
 		prerequisite = {
-			focus = KOR_sponser_illminist_groups
+			focus = KOR_sponser_ilminist_groups
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_korean_corporatism
 		}
@@ -1371,15 +1563,15 @@ focus_tree = {
 		id = KOR_encourage_nationalistic_education
 		icon = GFX_goal_ideology_national_populist
 		cost = 3
+
+		relative_position_id = KOR_sponser_ilminist_groups
 		x = 0
 		y = 2
-		relative_position_id = KOR_sponser_illminist_groups
+
 		prerequisite = {
 			focus = KOR_regeneration_of_the_korean_nation
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			remove_ideas = KOR_nationalistic_education
 			add_popularity = {
@@ -1403,15 +1595,15 @@ focus_tree = {
 		id = KOR_a_classless_korea
 		icon = GFX_goal_NFA_protective_inequality
 		cost = 3
+
+		relative_position_id = KOR_the_militarization_of_society
 		x = 0
 		y = 1
-		relative_position_id = KOR_the_militarization_of_society
+
 		prerequisite = {
 			focus = KOR_the_militarization_of_society
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			add_ideas = KOR_agitated_population
 			add_stability = 0.2
@@ -1420,25 +1612,24 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_a_classless_korea"
 			remove_ideas = KOR_agitated_population
 			add_stability = -0.2
-
 		}
 	}
 	focus = {
 		id = KOR_the_embodiment_of_the_korean_state
 		icon = GFX_goal_national_populism
 		cost = 3
+
+		relative_position_id = KOR_encourage_nationalistic_education
 		x = 1
 		y = 1
-		relative_position_id = KOR_encourage_nationalistic_education
+
 		prerequisite = {
 			focus = KOR_a_classless_korea
 		}
 		prerequisite = {
 			focus = KOR_encourage_nationalistic_education
 		}
-		ai_will_do = {
-			base = 15
-		}
+		ai_will_do = { base = 15 }
 		on_uncomplete = {
 			add_political_power = -100
 			remove_ideas = KOR_promote_nationwide_ilminism
@@ -1463,9 +1654,8 @@ focus_tree = {
 		cost = 3
 		x = 33
 		y = 0
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		available = {
 			has_completed_focus = KOR_korea_reborn
 			custom_trigger_tooltip = {
@@ -1521,12 +1711,12 @@ focus_tree = {
 		id = KOR_true_korean_socialism
 		icon = GFX_goal_syndicalism
 		cost = 3
+
+		relative_position_id = KOR_the_revolution_triumphant
 		x = -2
 		y = 1
-		relative_position_id = KOR_the_revolution_triumphant
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		available = {
 			has_country_flag = KOR_socialist
 		}
@@ -1559,12 +1749,12 @@ focus_tree = {
 		id = KOR_begin_the_five_year_plan
 		icon = GFX_goal_generic_improve_industry
 		cost = 3
+
+		relative_position_id = KOR_true_korean_socialism
 		x = -1
 		y = 1
-		relative_position_id = KOR_true_korean_socialism
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_true_korean_socialism
 		}
@@ -1584,12 +1774,12 @@ focus_tree = {
 		id = KOR_central_planning_committee
 		icon = GFX_focus_SOV_the_supreme_soviet
 		cost = 3
+
+		relative_position_id = KOR_begin_the_five_year_plan
 		x = 1
 		y = 1
-		relative_position_id = KOR_begin_the_five_year_plan
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_begin_the_five_year_plan
 		}
@@ -1631,12 +1821,12 @@ focus_tree = {
 		id = KOR_communal_homes_for_all
 		icon = GFX_collective_housing
 		cost = 3
+
+		relative_position_id = KOR_begin_the_five_year_plan
 		x = -1
 		y = 1
-		relative_position_id = KOR_begin_the_five_year_plan
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_begin_the_five_year_plan
 		}
@@ -1650,7 +1840,6 @@ focus_tree = {
 			else = {
 				remove_ideas = KOR_socialist_five_year_plan3
 			}
-
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_communal_homes_for_all"
@@ -1681,12 +1870,12 @@ focus_tree = {
 		id = KOR_vanguard_of_the_revolution
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
 		cost = 3
+
+		relative_position_id = KOR_begin_the_five_year_plan
 		x = -3
 		y = 1
-		relative_position_id = KOR_begin_the_five_year_plan
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_begin_the_five_year_plan
 		}
@@ -1716,12 +1905,12 @@ focus_tree = {
 		id = KOR_purge_counter_revolutionaries
 		icon = GFX_goal_backstab
 		cost = 3
+
+		relative_position_id = KOR_vanguard_of_the_revolution
 		x = 1
 		y = 1
-		relative_position_id = KOR_vanguard_of_the_revolution
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_vanguard_of_the_revolution
 		}
@@ -1795,12 +1984,12 @@ focus_tree = {
 		id = KOR_revolutionary_society
 		icon = GFX_goal_revolution_tools
 		cost = 3
+
+		relative_position_id = KOR_communal_homes_for_all
 		x = 1
 		y = 1
-		relative_position_id = KOR_communal_homes_for_all
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_communal_homes_for_all
 		}
@@ -1829,12 +2018,12 @@ focus_tree = {
 		id = KOR_install_political_tutelage
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
 		cost = 3
+
+		relative_position_id = KOR_the_revolution_triumphant
 		x = 1
 		y = 1
-		relative_position_id = KOR_the_revolution_triumphant
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		available = {
 			has_country_flag = KOR_under_the_kmt
 		}
@@ -1867,12 +2056,12 @@ focus_tree = {
 		id = KOR_strong_and_prosperous_nation
 		icon = GFX_goal_generic_workers_democracy
 		cost = 3
+
+		relative_position_id = KOR_revolutionary_society
 		x = -1
 		y = 1
-		relative_position_id = KOR_revolutionary_society
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_revolutionary_society
 		}
@@ -1901,12 +2090,12 @@ focus_tree = {
 		id = KOR_deal_with_the_kip
 		icon = GFX_goal_LEP_selective_enforcement
 		cost = 3
+
+		relative_position_id = KOR_install_political_tutelage
 		x = -1
 		y = 1
-		relative_position_id = KOR_install_political_tutelage
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_install_political_tutelage
 		}
@@ -1972,12 +2161,12 @@ focus_tree = {
 		id = KOR_revive_korea
 		icon = GFX_goal_brain
 		cost = 3
+
+		relative_position_id = KOR_install_political_tutelage
 		x = 1
 		y = 1
-		relative_position_id = KOR_install_political_tutelage
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_install_political_tutelage
 		}
@@ -1998,12 +2187,12 @@ focus_tree = {
 		id = KOR_nationalize_key_industries
 		icon = GFX_goal_state_economy
 		cost = 3
+
+		relative_position_id = KOR_install_political_tutelage
 		x = 0
 		y = 2
-		relative_position_id = KOR_install_political_tutelage
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_install_political_tutelage
 		}
@@ -2049,12 +2238,12 @@ focus_tree = {
 		id = KOR_the_second_national_assembly
 		icon = GFX_focus_chi_legislative_yuan
 		cost = 3
+
+		relative_position_id = KOR_install_political_tutelage
 		x = 3
 		y = 1
-		relative_position_id = KOR_install_political_tutelage
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_install_political_tutelage
 		}
@@ -2092,12 +2281,12 @@ focus_tree = {
 		id = KOR_pragmatic_principles
 		icon = GFX_goal_Centralised_Government
 		cost = 3
+
+		relative_position_id = KOR_revive_korea
 		x = 1
 		y = 1
-		relative_position_id = KOR_revive_korea
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_revive_korea
 		}
@@ -2135,12 +2324,12 @@ focus_tree = {
 		id = KOR_department_of_military_affairs
 		icon = GFX_goal_CHI_military_affairs_cmsn
 		cost = 3
+
+		relative_position_id = KOR_revive_korea
 		x = 0
 		y = 2
-		relative_position_id = KOR_revive_korea
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_revive_korea
 		}
@@ -2154,7 +2343,6 @@ focus_tree = {
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 1
-
 			}
 			525 = {
 				add_building_construction = {
@@ -2173,12 +2361,12 @@ focus_tree = {
 		id = KOR_harmonic_co_existence
 		icon = GFX_goal_china_deal
 		cost = 3
+
+		relative_position_id = KOR_department_of_military_affairs
 		x = 1
 		y = 1
-		relative_position_id = KOR_department_of_military_affairs
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_department_of_military_affairs
 		}
@@ -2188,7 +2376,7 @@ focus_tree = {
 		on_uncomplete = {
 			remove_ideas = KOR_sino_korean_friendship
 			remove_ideas = KOR_three_principles_5
-			CHI = {
+			overlord = {
 				remove_ideas = KOR_sino_korean_friendship2
 			}
 			add_stability = -0.15
@@ -2201,8 +2389,9 @@ focus_tree = {
 				remove_idea = KOR_three_principles_4
 				add_idea = KOR_three_principles_5
 			}
-			CHI = {
-				add_ideas = KOR_sino_korean_friendship2
+			if = {
+				limit = { is_subject = yes }
+				overlord = { country_event = kor.3 }
 			}
 		}
 	}
@@ -2210,12 +2399,12 @@ focus_tree = {
 		id = KOR_expropriate_the_landlords
 		icon = GFX_goal_OTT_Land_Reform
 		cost = 3
+
+		relative_position_id = KOR_the_revolution_triumphant
 		x = 3
 		y = 1
-		relative_position_id = KOR_the_revolution_triumphant
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_the_revolution_triumphant
 		}
@@ -2240,12 +2429,12 @@ focus_tree = {
 		id = KOR_land_to_the_tiller
 		icon = GFX_goal_Workers_Paradise
 		cost = 3
+
+		relative_position_id = KOR_the_revolution_triumphant
 		x = 5
 		y = 1
-		relative_position_id = KOR_the_revolution_triumphant
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_the_revolution_triumphant
 		}
@@ -2280,12 +2469,12 @@ focus_tree = {
 		id = KOR_the_korean_peoples_army
 		icon = GFX_goal_KOR_socialist_Army
 		cost = 3
+
+		relative_position_id = KOR_deal_with_the_kip
 		x = 0
 		y = 2
-		relative_position_id = KOR_deal_with_the_kip
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_deal_with_the_kip
 			focus = KOR_begin_the_five_year_plan
@@ -2320,12 +2509,12 @@ focus_tree = {
 		id = KOR_the_peoples_air_force
 		icon = GFX_goal_KOR_socialist_Airforce
 		cost = 3
+
+		relative_position_id = KOR_the_korean_peoples_army
 		x = -1
 		y = 1
-		relative_position_id = KOR_the_korean_peoples_army
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_the_korean_peoples_army
 		}
@@ -2357,12 +2546,12 @@ focus_tree = {
 		id = KOR_the_peoples_navy
 		icon = GFX_goal_KOR_socialist_Navy
 		cost = 3
+
+		relative_position_id = KOR_the_korean_peoples_army
 		x = 1
 		y = 1
-		relative_position_id = KOR_the_korean_peoples_army
-		ai_will_do = {
-			base = 15
-		}
+
+		ai_will_do = { base = 15 }
 		prerequisite = {
 			focus = KOR_the_korean_peoples_army
 		}

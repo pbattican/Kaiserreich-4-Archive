@@ -25,7 +25,6 @@ focus_tree = {
 		}
 		x = 14
 		y = 0
-
 	}
 	focus = {
 		id = LAT_a_new_beginning
@@ -47,7 +46,6 @@ focus_tree = {
 		relative_position_id = LAT_2nd_awakening
 		x = 0
 		y = 1
-
 	}
 	focus = {
 		id = LAT_convene_the_constituent_assembly
@@ -217,6 +215,9 @@ focus_tree = {
 				remove_idea = LAT_territory_1
 				add_idea = LAT_territory_2
 			}
+			hidden_effect = {
+				country_event = { id = KRLAT.28 days = 10 }
+			}
 		}
 	}
 	focus = {
@@ -237,6 +238,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LAT_a_ready_and_operational_country"
 			add_political_power = 50
 			add_stability = 0.1
+			hidden_effect = {
+				country_event = { id = KRLAT.30 days = 45 }
+			}
 		}
 	}
 	focus = {
@@ -564,6 +568,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LAT_an_agrarian_economy"
 			add_ideas = LAT_agrarian_economy
 			custom_effect_tooltip = LAT_agrarian_tt
+			hidden_effect = {
+				country_event = { id = KRLAT.33 days = 360 }
+			}
 		}
 	}
 	focus = {
@@ -728,6 +735,9 @@ focus_tree = {
 					remove_idea = LAT_growing_economy_2
 					add_idea = LAT_growing_economy_3
 				}
+			}
+			hidden_effect = {
+				country_event = { id = KRLAT.29 days = 360 }
 			}
 		}
 	}
@@ -910,7 +920,7 @@ focus_tree = {
 	focus = {
 		id = LAT_create_the_naval_and_air_forces
 		icon = GFX_goal_LAT_navy
-		cost = 6
+		cost = 8
 		prerequisite = {
 			focus = LAT_rebuild_the_Latvian_armed_forces
 		}
@@ -1146,6 +1156,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LAT_revolution_come_from_countryside"
+			add_manpower = 41000
 			swap_ideas = {
 				remove_idea = LAT_EST_roads_to_riga_1
 				add_idea = LAT_EST_roads_to_riga_2
@@ -1166,6 +1177,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LAT_there_can_be_only_one"
 			remove_ideas = LAT_dualism
+			hidden_effect = {
+				country_event = { id = ISKO.24 days = 10 }
+			}
 		}
 	}
 	focus = {
@@ -1256,6 +1270,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LAT_Latvian_socialism"
 			country_event = ISKO.3
+			hidden_effect = {
+				country_event = { id = ISKO.22 days = 360 }
+			}
 		}
 	}
 	focus = {
@@ -1310,6 +1327,9 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+			hidden_effect = {
+				country_event = { id = ISKO.19 days = 360 }
 			}
 		}
 	}
@@ -1466,6 +1486,9 @@ focus_tree = {
 					add_idea = LAT_bolshevism_political
 				}
 			}
+			hidden_effect = {
+				country_event = { id = ISKO.20 days = 30 }
+			}
 		}
 	}
 	focus = {
@@ -1502,7 +1525,6 @@ focus_tree = {
 		cost = 5
 		available = {
 			is_subject = no
-			is_in_faction = no
 			INT = { is_faction_leader = yes }
 			NOT = {
 				has_war_with = INT
@@ -1526,11 +1548,14 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LAT_a_world_revolution"
 			add_ideas = LAT_spread_the_revolution
 			if = {
-				limit = { SOV = { is_faction_leader = yes } }
-				SOV = { country_event = KRLAT.6 }
-			}
-			else = {
-				INT = { country_event = KRLAT.6 }
+				limit = { is_in_faction = no }
+				if = {
+					limit = { SOV = { is_faction_leader = yes } }
+					SOV = { country_event = KRLAT.6 }
+				}
+				else = {
+					INT = { country_event = KRLAT.6 }
+				}
 			}
 			hidden_effect = { activate_targeted_decision = { target = ROOT decision = LAT_SOV_Create_Soviet_Union } }
 		}
@@ -1649,6 +1674,9 @@ focus_tree = {
 			add_opinion_modifier = {
 				target = SRI
 				modifier = KR_pleased
+			}
+			hidden_effect = {
+				country_event = { id = ISKO.23 days = 20 }
 			}
 		}
 	}
@@ -1840,12 +1868,37 @@ focus_tree = {
 		}
 		relative_position_id = LAT_a_lettish_red_army
 		x = 3
-		y = 2
+		y = 1
 		search_filters = { FOCUS_FILTER_PRODUCTION }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LAT_foreign_equipment"
 			activate_targeted_decision = { target = FRA decision = LAT_buy_small_arms }
 			army_experience = 10
+			hidden_effect = {
+				country_event = { id = ISKO.25 days = 75 }
+			}
+		}
+	}
+	focus = {
+		id = LAT_air_force
+		icon = GFX_goal_generic_airports
+		cost = 7
+		prerequisite = {
+			focus = LAT_foreign_equipment
+		}
+		relative_position_id = LAT_foreign_equipment
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_PRODUCTION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus LAT_air_force"
+			air_experience = 25
+			add_tech_bonus = {
+				name = LAT_technologies_for_the_army
+				bonus = 1
+				uses = 1
+				category = light_fighter
+			}
 		}
 	}
 	focus = {
@@ -1979,6 +2032,9 @@ focus_tree = {
 				remove_idea = LAT_bolshevism_political_military
 				add_idea = LAT_october_revolution_legacy
 			}
+			hidden_effect = {
+				country_event = { id = ISKO.21 days = 30 }
+			}
 		}
 	}
 	focus = {
@@ -2041,6 +2097,9 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = LAT_totalism_1
 				add_idea = LAT_totalism_2
+			}
+			hidden_effect = {
+				country_event = { id = ISKO.20 days = 30 }
 			}
 		}
 	}
@@ -2399,7 +2458,7 @@ focus_tree = {
 						region = 130 # Ukraine
 						region = 134 # Caucasus
 						region = 135 # Kuban
-						region = 155 # Galicia
+						is_galicia = yes
 						is_russian_far_east = yes
 						state = 555 #Kuril Islands
 						is_siberia = yes
@@ -2476,7 +2535,6 @@ focus_tree = {
 				add_core_of = LAT
 			}
 			add_war_support = 0.25
-
 		}
 	}
 }

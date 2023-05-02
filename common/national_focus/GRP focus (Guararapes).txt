@@ -22,13 +22,14 @@ focus_tree = {
 	focus = {
 		id = GRP_federal_navy
 		icon = GFX_goal_generic_build_navy
+		cost = 10
+
+		x = 0
+		y = 0
+
 		available = {
 			is_subject = yes
 		}
-		x = 0
-		y = 0
-		cost = 10
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_federal_navy"
 			navy_experience = 25
@@ -39,15 +40,15 @@ focus_tree = {
 	focus = {
 		id = GRP_dockyard
 		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = GRP_federal_navy }
-		x = 2
-		y = 1
-		relative_position_id = GRP_federal_navy
 		cost = 10
 
-		ai_will_do = {
-			factor = 50
-		}
+		relative_position_id = GRP_federal_navy
+		x = 2
+		y = 1
+
+		prerequisite = { focus = GRP_federal_navy }
+
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_dockyard"
@@ -59,15 +60,15 @@ focus_tree = {
 	focus = {
 		id = GRP_dubmarina
 		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = GRP_dockyard }
-		x = 2
-		y = 2
-		relative_position_id = GRP_federal_navy
 		cost = 10
 
-		ai_will_do = {
-			factor = 50
-		}
+		relative_position_id = GRP_federal_navy
+		x = 2
+		y = 2
+
+		prerequisite = { focus = GRP_dockyard }
+
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_dubmarina"
@@ -84,15 +85,15 @@ focus_tree = {
 	focus = {
 		id = GRP_more_dockyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = GRP_dubmarina }
-		x = 2
-		y = 3
-		relative_position_id = GRP_federal_navy
 		cost = 10
 
-		ai_will_do = {
-			factor = 50
-		}
+		relative_position_id = GRP_federal_navy
+		x = 2
+		y = 3
+
+		prerequisite = { focus = GRP_dubmarina }
+
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_more_dockyards"
@@ -104,15 +105,15 @@ focus_tree = {
 	focus = {
 		id = GRP_naval_doctrine_focus
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = GRP_more_dockyards }
-		x = 2
-		y = 4
-		relative_position_id = GRP_federal_navy
 		cost = 10
 
-		ai_will_do = {
-			factor = 50
-		}
+		relative_position_id = GRP_federal_navy
+		x = 2
+		y = 4
+
+		prerequisite = { focus = GRP_more_dockyards }
+
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_naval_doctrine_focus"
@@ -129,15 +130,15 @@ focus_tree = {
 	focus = {
 		id = GRP_destroyers
 		icon = GFX_focus_generic_destroyer
-		prerequisite = { focus = GRP_naval_doctrine_focus }
-		x = 0
-		y = 5
-		relative_position_id = GRP_federal_navy
 		cost = 10
 
-		ai_will_do = {
-			factor = 50
-		}
+		relative_position_id = GRP_federal_navy
+		x = 0
+		y = 5
+
+		prerequisite = { focus = GRP_naval_doctrine_focus }
+
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_destroyers"
@@ -154,15 +155,15 @@ focus_tree = {
 	focus = {
 		id = GRP_base_air_sea
 		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = GRP_federal_navy }
-		x = 0
-		y = 2
-		relative_position_id = GRP_federal_navy
 		cost = 10
 
-		ai_will_do = {
-			factor = 50
-		}
+		relative_position_id = GRP_federal_navy
+		x = 0
+		y = 2
+
+		prerequisite = { focus = GRP_federal_navy }
+
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_base_air_sea"
@@ -217,15 +218,15 @@ focus_tree = {
 	focus = {
 		id = GRP_castal_forts
 		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = GRP_base_air_sea }
-		x = 0
-		y = 3
-		relative_position_id = GRP_federal_navy
 		cost = 10
 
-		ai_will_do = {
-			factor = 50
-		}
+		relative_position_id = GRP_federal_navy
+		x = 0
+		y = 3
+
+		prerequisite = { focus = GRP_base_air_sea }
+
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_castal_forts"
@@ -278,13 +279,15 @@ focus_tree = {
 	focus = {
 		id = GRP_the_federation
 		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 6
+		y = 0
+
 		available = {
 			is_subject = yes
 		}
-		x = 6
-		y = 0
-		relative_position_id = GRP_federal_navy
-		cost = 10
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_the_federation"
@@ -296,13 +299,15 @@ focus_tree = {
 	focus = {
 		id = GRP_institutional_foundations
 		icon = GFX_focus_generic_treaty
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 6
+		y = 1
+
 		available = {
 			is_subject = yes
 		}
-		x = 6
-		y = 1
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_the_federation }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_institutional_foundations"
@@ -314,13 +319,15 @@ focus_tree = {
 	focus = {
 		id = GRP_rebuilding_the_equatorial_legacy
 		icon = GFX_goal_KTG_Bookstack
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 6
+		y = 2
+
 		available = {
 			is_subject = yes
 		}
-		x = 6
-		y = 2
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_institutional_foundations }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_rebuilding_the_equatorial_legacy"
@@ -335,13 +342,15 @@ focus_tree = {
 	focus = {
 		id = GRP_take_over_brs
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 4
+		y = 1
+
 		available = {
 			is_subject = yes
 		}
-		x = 4
-		y = 1
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_the_federation }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_take_over_brs"
@@ -353,13 +362,15 @@ focus_tree = {
 	focus = {
 		id = GRP_land_redistribution
 		icon = GFX_goal_agriculture
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 4
+		y = 2
+
 		available = {
 			is_subject = yes
 		}
-		x = 4
-		y = 2
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_take_over_brs }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_land_redistribution"
@@ -374,13 +385,15 @@ focus_tree = {
 	focus = {
 		id = GRP_railways_of_the_sertao
 		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 8
+		y = 1
+
 		available = {
 			is_subject = yes
 		}
-		x = 8
-		y = 1
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_the_federation }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_railways_of_the_sertao"
@@ -418,13 +431,15 @@ focus_tree = {
 	focus = {
 		id = GRP_development_effort
 		icon = GFX_goal_generic_construction
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 8
+		y = 2
+
 		available = {
 			is_subject = yes
 		}
-		x = 8
-		y = 2
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_railways_of_the_sertao }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_development_effort"
@@ -441,13 +456,15 @@ focus_tree = {
 	focus = {
 		id = GRP_psi_push
 		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 7
+		y = 3
+
 		available = {
 			is_subject = yes
 		}
-		x = 7
-		y = 3
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_development_effort focus = GRP_rebuilding_the_equatorial_legacy }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_psi_push"
@@ -459,13 +476,15 @@ focus_tree = {
 	focus = {
 		id = GRP_prospecting
 		icon = GFX_goal_generic_construction2
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 7
+		y = 4
+
 		available = {
 			is_subject = yes
 		}
-		x = 7
-		y = 4
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_psi_push }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_prospecting"
@@ -481,13 +500,15 @@ focus_tree = {
 	focus = {
 		id = GRP_battle_famine
 		icon = GFX_goal_famine
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 5
+		y = 3
+
 		available = {
 			is_subject = yes
 		}
-		x = 5
-		y = 3
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_land_redistribution focus = GRP_rebuilding_the_equatorial_legacy }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_battle_famine"
@@ -499,13 +520,15 @@ focus_tree = {
 	focus = {
 		id = GRP_education
 		icon = GFX_focus_research2
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 5
+		y = 4
+
 		available = {
 			is_subject = yes
 		}
-		x = 5
-		y = 4
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_battle_famine }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_education"
@@ -517,13 +540,15 @@ focus_tree = {
 	focus = {
 		id = GRP_heavy_industrialization
 		icon = GFX_goal_factory_complex
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 6
+		y = 5
+
 		available = {
 			is_subject = yes
 		}
-		x = 6
-		y = 5
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_education }
 		prerequisite = { focus = GRP_prospecting }
 		completion_reward = {
@@ -536,13 +561,15 @@ focus_tree = {
 	focus = {
 		id = GRP_tanks
 		icon = GFX_focus_generic_tank_production
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 8
+		y = 5
+
 		available = {
 			is_subject = yes
 		}
-		x = 8
-		y = 5
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_army_doctrine }
 		prerequisite = { focus = GRP_prospecting }
 		completion_reward = {
@@ -560,13 +587,15 @@ focus_tree = {
 	focus = {
 		id = GRP_logistical_expansion
 		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 8
+		y = 7
+
 		available = {
 			is_subject = yes
 		}
-		x = 8
-		y = 7
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_tanks }
 		prerequisite = { focus = GRP_heavy_arms_industry_effort }
 		completion_reward = {
@@ -633,13 +662,15 @@ focus_tree = {
 	focus = {
 		id = GRP_sao_luis_paraiba
 		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 8
+		y = 8
+
 		available = {
 			is_subject = yes
 		}
-		x = 8
-		y = 8
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_logistical_expansion }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_sao_luis_paraiba"
@@ -677,13 +708,15 @@ focus_tree = {
 	focus = {
 		id = GRP_desperado_blaster
 		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 8
+		y = 9
+
 		available = {
 			is_subject = yes
 		}
-		x = 8
-		y = 9
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_sao_luis_paraiba }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_desperado_blaster"
@@ -700,13 +733,15 @@ focus_tree = {
 	focus = {
 		id = GRP_e_uma_cilada_bino
 		icon = GFX_goal_generic_army_motorized
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 10
+		y = 9
+
 		available = {
 			is_subject = yes
 		}
-		x = 10
-		y = 9
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_sao_luis_paraiba }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_e_uma_cilada_bino"
@@ -723,13 +758,15 @@ focus_tree = {
 	focus = {
 		id = GRP_heavy_arms_industry_effort
 		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 7
+		y = 6
+
 		available = {
 			is_subject = yes
 		}
-		x = 7
-		y = 6
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_tanks }
 		prerequisite = { focus = GRP_heavy_industrialization }
 		completion_reward = {
@@ -749,13 +786,15 @@ focus_tree = {
 	focus = {
 		id = GRP_shining_future
 		icon = GFX_focus_research
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 6
+		y = 7
+
 		available = {
 			is_subject = yes
 		}
-		x = 6
-		y = 7
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_heavy_industrialization }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_shining_future"
@@ -767,13 +806,15 @@ focus_tree = {
 	focus = {
 		id = GRP_federal_aiforce
 		icon = GFX_goal_generic_build_airforce
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 5
+		y = 6
+
 		available = {
 			is_subject = yes
 		}
-		x = 5
-		y = 6
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_naval_academy }
 		prerequisite = { focus = GRP_heavy_industrialization }
 		completion_reward = {
@@ -829,13 +870,15 @@ focus_tree = {
 	focus = {
 		id = GRP_air_academy
 		icon = GFX_goal_generic_air_doctrine
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 4
+		y = 7
+
 		available = {
 			is_subject = yes
 		}
-		x = 4
-		y = 7
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_naval_academy }
 		prerequisite = { focus = GRP_federal_aiforce }
 		completion_reward = {
@@ -853,13 +896,15 @@ focus_tree = {
 	focus = {
 		id = GRP_fighters
 		icon = GFX_goal_generic_air_fighter_new
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 4
+		y = 8
+
 		available = {
 			is_subject = yes
 		}
-		x = 4
-		y = 8
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_air_academy }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_fighters"
@@ -877,13 +922,15 @@ focus_tree = {
 	focus = {
 		id = GRP_bomber
 		icon = GFX_goal_generic_air_bomber_new
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 4
+		y = 9
+
 		available = {
 			is_subject = yes
 		}
-		x = 4
-		y = 9
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_fighters }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_bomber"
@@ -900,13 +947,15 @@ focus_tree = {
 	focus = {
 		id = GRP_navy_support_bigger_bases
 		icon = GFX_goal_generic_air_fighter2_new
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 2
+		y = 9
+
 		available = {
 			is_subject = yes
 		}
-		x = 2
-		y = 9
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_fighters }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_navy_support_bigger_bases"
@@ -960,13 +1009,15 @@ focus_tree = {
 	focus = {
 		id = GRP_naval_academy
 		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 4
+		y = 5
+
 		available = {
 			is_subject = yes
 		}
-		x = 4
-		y = 5
-		relative_position_id = GRP_federal_navy
-		cost = 10
 		prerequisite = { focus = GRP_education }
 		prerequisite = { focus = GRP_naval_doctrine_focus }
 		completion_reward = {
@@ -984,13 +1035,15 @@ focus_tree = {
 	focus = {
 		id = GRP_federal_army
 		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 12
+		y = 0
+
 		available = {
 			is_subject = yes
 		}
-		x = 12
-		y = 0
-		relative_position_id = GRP_federal_navy
-		cost = 10
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_federal_army"
@@ -1002,14 +1055,16 @@ focus_tree = {
 	focus = {
 		id = GRP_guararepes_militia
 		icon = GFX_goal_army_guy_2
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 12
+		y = 2
+
 		prerequisite = { focus = GRP_recruits }
 		available = {
 			is_subject = yes
 		}
-		x = 12
-		y = 2
-		relative_position_id = GRP_federal_navy
-		cost = 10
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_guararepes_militia"
@@ -1021,14 +1076,16 @@ focus_tree = {
 	focus = {
 		id = GRP_devend_what_is_ours
 		icon = GFX_goal_generic_defence
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 12
+		y = 3
+
 		prerequisite = { focus = GRP_guararepes_militia }
 		available = {
 			is_subject = yes
 		}
-		x = 12
-		y = 3
-		relative_position_id = GRP_federal_navy
-		cost = 10
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_devend_what_is_ours"
@@ -1043,14 +1100,16 @@ focus_tree = {
 	focus = {
 		id = GRP_recruits
 		icon = GFX_goal_conscription
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 10
+		y = 1
+
 		prerequisite = { focus = GRP_federal_army }
 		available = {
 			is_subject = yes
 		}
-		x = 10
-		y = 1
-		relative_position_id = GRP_federal_navy
-		cost = 10
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_recruits"
@@ -1062,14 +1121,16 @@ focus_tree = {
 	focus = {
 		id = GRP_equipmentent_renewal
 		icon = GFX_goal_generic_small_arms
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 10
+		y = 2
+
 		prerequisite = { focus = GRP_recruits }
 		available = {
 			is_subject = yes
 		}
-		x = 10
-		y = 2
-		relative_position_id = GRP_federal_navy
-		cost = 10
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_equipmentent_renewal"
@@ -1086,14 +1147,16 @@ focus_tree = {
 	focus = {
 		id = GRP_army_arty
 		icon = GFX_goal_doctrine_fire_superiority
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 10
+		y = 3
+
 		prerequisite = { focus = GRP_equipmentent_renewal }
 		available = {
 			is_subject = yes
 		}
-		x = 10
-		y = 3
-		relative_position_id = GRP_federal_navy
-		cost = 10
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_army_arty"
@@ -1110,14 +1173,16 @@ focus_tree = {
 	focus = {
 		id = GRP_army_doctrine
 		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 10
+		y = 4
+
 		prerequisite = { focus = GRP_army_arty }
 		available = {
 			is_subject = yes
 		}
-		x = 10
-		y = 4
-		relative_position_id = GRP_federal_navy
-		cost = 10
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_army_doctrine"
@@ -1135,14 +1200,16 @@ focus_tree = {
 	focus = {
 		id = GRP_elite_forces
 		icon = GFX_goal_generic_special_forces
+		cost = 10
+
+		relative_position_id = GRP_federal_navy
+		x = 12
+		y = 5
+
 		prerequisite = { focus = GRP_army_doctrine }
 		available = {
 			is_subject = yes
 		}
-		x = 12
-		y = 5
-		relative_position_id = GRP_federal_navy
-		cost = 10
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRP_elite_forces"

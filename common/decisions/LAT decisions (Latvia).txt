@@ -39,11 +39,11 @@ foreign_politics = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LAT_attack_riga target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LAT_attack_riga target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_attack_riga target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_attack_riga target: [From.GetName]"
 			FROM = { country_event = KRLAT.9 }	#warning event
 			setup_decision_attack_AI = yes
 		}
@@ -107,7 +107,7 @@ foreign_politics = {
 		war_with_on_remove = SOV
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_demand_western_dvinsk target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_demand_western_dvinsk target: [From.GetName]"
 			add_war_support = 0.05
 			hidden_effect = {
 				FROM = { country_event = LATFOR.2 }
@@ -127,9 +127,7 @@ foreign_politics = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 0 }
 	}
 	LAT_join_russia = {
 		icon = GFX_decision_generic_flags
@@ -174,7 +172,7 @@ foreign_politics = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_join_russia target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_join_russia target: [From.GetName]"
 			FROM = { country_event = LATFOR.21 }
 		}
 	}
@@ -204,11 +202,11 @@ foreign_politics = {
 		ai_will_do = { base = 0 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LAT_attack_country target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LAT_attack_country target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_attack_country target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_attack_country target: [From.GetName]"
 			setup_decision_attack_AI = yes
 			FROM = { country_event = LATFOR.24 }	#warning event
 		}
@@ -251,7 +249,7 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_buy_small_arms target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_buy_small_arms target: [From.GetName]"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 1000
@@ -275,17 +273,21 @@ foreign_politics = {
 			is_ai = no
 			has_completed_focus = LAT_look_to_russian_bolshevism
 			NOT = { country_exists = RUS }
+			NOT = {
+				SOV = {
+					exists = yes
+					is_subject = no
+				}
+			}
 		}
 
 		cost = 25
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_SOV_Create_Soviet_Union"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_SOV_Create_Soviet_Union"
 			add_stability = 0.1
 			country_event = ISKO.16
 		}
@@ -337,12 +339,12 @@ foreign_politics = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LAT_SOV_Attack_Europe target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LAT_SOV_Attack_Europe target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_SOV_Attack_Europe target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_SOV_Attack_Europe target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -403,12 +405,12 @@ foreign_politics = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LAT_SOV_Attack_Asia target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LAT_SOV_Attack_Asia target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_SOV_Attack_Asia target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_SOV_Attack_Asia target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -442,9 +444,7 @@ political_actions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
@@ -471,9 +471,7 @@ political_actions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
@@ -502,9 +500,7 @@ political_actions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
@@ -536,9 +532,7 @@ political_actions = {
 			NOT = { has_war_with = FROM }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
@@ -581,14 +575,12 @@ political_actions = {
 			NOT = { has_country_flag = LAT_setting_up_faction }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_EST_Last_Stand target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_EST_Last_Stand target: [From.GetName]"
 			FROM = { country_event = LATFOR.27 }
 			set_country_flag = LAT_setting_up_faction
 			custom_effect_tooltip = if_they_accept_tt
@@ -629,14 +621,12 @@ political_actions = {
 			NOT = { has_country_flag = LAT_setting_up_faction }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LAT_LIT_Last_Stand target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LAT_LIT_Last_Stand target: [From.GetName]"
 			FROM = { country_event = LATFOR.27 }
 			set_country_flag = LAT_setting_up_faction
 			custom_effect_tooltip = if_they_accept_tt
@@ -659,9 +649,7 @@ economy_decisions = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
@@ -688,9 +676,7 @@ economy_decisions = {
 			190 = { is_owned_and_controlled_by = ROOT }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
@@ -722,9 +708,7 @@ economy_decisions = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
@@ -752,9 +736,7 @@ economy_decisions = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		fire_only_once = yes
 
@@ -784,9 +766,7 @@ LAT_military_decisions = {
 	LAT_reorganise_high_command = {
 		icon = GFX_decision_fortress
 		allowed = { always = no }						# Activated by focus LAT_Imanta_Regiment
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		modifier = {
 			planning_speed = -0.25
@@ -817,9 +797,7 @@ LAT_military_decisions = {
 	LAT_form_training_camps = {
 		icon = GFX_decision_soldierly_discipline
 		allowed = { always = no }						# Activated by focus LAT_Imanta_Regiment
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		modifier = {
 			training_time_factor = 0.2

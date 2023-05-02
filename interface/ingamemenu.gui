@@ -66,7 +66,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "menu_wiki_button"
-			position = { x = 16 y = 138}
+			position = { x = 16 y = 178}
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "MENU_BAR_GAME_WIKI"
 			buttonFont = "hoi_24header"
@@ -77,7 +77,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "menu_resign_button"
-			position = { x = 16 y = 178}
+			position = { x = 16 y = 218}
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "MENU_BAR_GAME_RESIGN"
 			buttonFont = "hoi_24header"
@@ -87,7 +87,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "menu_quit_button"
-			position = { x = 16 y = 218 }
+			position = { x = 16 y = 258 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "MENU_BAR_QUIT"
 			buttonFont = "hoi_24header"
@@ -106,56 +106,64 @@ guiTypes = {
 			oversound = ui_menu_over
 		}
 
-		positionType = {
-			name = "playthrough_stats_offset"
-			position = { x = 0 y = 40 }
-		}
-
-		### Order changed to Discord-Twitter-Wikia-Steam-Forums - file keeps the vanilla order of buttonTypes (DO NOT REORDER)
 		ButtonType = {
 			name = "homepage_button"
-			position = { x = 59 y = 389 }
+			position = { x = 10000 y = 10000 } #KR: disabled (originally 19,389)
 			quadTextureSprite ="homepage"
 			clicksound = click_default
 			pdx_tooltip = "MENU_HOMEPAGE"
-			web_link = "https://discord.gg/013cqzfpWMRLqnvHr" #KR: changed to Discord link
 		}
 		ButtonType = {
 			name = "forum_button"
-			position = { x = 219 y = 389 }
+			position = { x = 10000 y = 10000 } #KR: disabled (originally 59,389)
 			quadTextureSprite ="forum"
 			clicksound = click_default
 			pdx_tooltip = "MENU_FORUM"
-			web_link = "https://forum.paradoxplaza.com/forum/index.php?forums/hearts-of-iron-iv.844/"
+			web_link = "http://forum.paradoxplaza.com/forum/forumdisplay.php?844-Hearts-of-Iron-IV"
 		}
 		ButtonType = {
 			name = "facebook_button"
-			position = { x = 179 y = 389 }
+			position = { x = 10000 y = 10000 } #KR: disabled (originally 99,389)
 			quadTextureSprite ="facebook"
 			clicksound = click_default
 			pdx_tooltip = "MENU_FACEBOOK"
-			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=1521695605" #KR: changed to Steam link
+			web_link = "https://www.facebook.com/Heartsofiron"
 		}
 		ButtonType = {
 			name = "twitter_button"
-			position = { x = 99 y = 389 }
+			position = { x = 99 y = 389 } #KR: changed position (originally 139,389)
 			quadTextureSprite ="twitter"
-			clicksound = click_default
+			#clicksound = click_default
 			pdx_tooltip = "MENU_TWITTER"
-			web_link = "https://twitter.com/kaisermod" #KR: changed link
+			web_link = "https://twitter.com/kaisermod" #KR: adj. link
+		}
+		ButtonType = {
+			name = "instagram_button"
+			position = { x = 139 y = 389 } #KR: changed position (originally 179,389)
+			quadTextureSprite ="instagram"
+			#clicksound = click_default
+			pdx_tooltip = "MENU_WIKIA" #KR: adj. tooltip
+			web_link = "https://kaiserreich.wikia.com" #KR: adj. link
+		}
+		ButtonType = {
+			name = "discord_button"
+			position = { x = 179 y = 389 } #KR: changed position (originally 219,389)
+			quadTextureSprite ="discord"
+			#clicksound = click_default
+			pdx_tooltip = "MENU_DISCORD"
+			web_link = "https://discord.gg/kaiserreich" #KR: adj. link
 		}
 		ButtonType = {
 			name = "privacy_policy_button"
-			position = { x = 139 y = 389 }
+			position = { x = 10000 y = 10000 } #KR: disabled (originally 259,389)
 			quadTextureSprite ="privacy"
-			clicksound = click_default
+			#clicksound = click_default
 			pdx_tooltip = "MENU_PRIVACY_POLICY"
-			web_link = "https://kaiserreich.wikia.com" #KR: changed to Wiki link
 		}
 
 		ButtonType = {
 			name = "achievements_button"
-			position = { x = 259 y = 389 }
+			position = { x = 299 y = 389 }
 			quadTextureSprite ="achievements"
 			pdx_tooltip = "MENU_ACHIEVEMENTS"
 		}
@@ -419,7 +427,6 @@ guiTypes = {
 				format = "UPPER_LEFT"
 				max_slots_horizontal = 1
 			}
-
 		}
 
 		instantTextBoxType={
@@ -553,6 +560,5 @@ guiTypes = {
 			quadTextureSprite = "GFX_missing_dlc_warning_sign"
 			position = { x= 250 y = 20 }
 		}
-
 	}
 }

@@ -118,6 +118,33 @@ characters = {
 	################
 	### Generals ###
 	################
+	ANQ_ma_dengying = {
+		name = ANQ_ma_dengying
+		portraits = {
+			army = {
+				small = "gfx/interface/advisors/ANQ/ANQ_ma_dengying.png"
+				large = "gfx/leaders/ANQ/Portrait_ANQ_Ma_Dengyin.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				media_personality
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = ANQ_ma_dengying_sic
+			traits = { KR_political_protege_sic }
+			cost = 0
+			can_be_fired = no
+		}
+	}
 	ANQ_zhang_zhongli = {
 		name = ANQ_zhang_zhongli
 		portraits = {
@@ -381,7 +408,7 @@ characters = {
 		name = ANQ_ge_jingen
 		portraits = {
 			army = {
-				small = "gfx/interface/advisors/Generic/Portrait_Asia_Generic_air_new_3.png"
+				small = "gfx/interface/advisors/ANQ/ANQ_ge_jingen.png"
 			}
 		}
 		advisor = {

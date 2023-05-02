@@ -33,10 +33,6 @@ focus_tree = {
 				factor = 5
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
-			modifier = {
-				factor = 0
-				NOT = { has_country_flag = choice_made }
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_activate_the_Western_Defense_Command"
@@ -185,52 +181,10 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			add_advisor_role = {
-				character = PSA_john_lesesne_dewitt
-				advisor = {
-					slot = theorist
-					idea_token = PSA_john_lesesne_dewitt_theorist
-					ledger = army
-					available = {
-						not_already_hired_except_as = theorist
-					}
-					traits = { KR_grand_battle_plan_expert }
-					cost = 150
-				}
-			}
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = PSA_john_lesesne_dewitt_theorist
 			hidden_effect = {
-				if = {
-					limit = { has_idea = PSA_john_lesesne_dewitt_army_chief }
-					PSA_john_lesesne_dewitt = { remove_army_chief_role = yes }
-					add_advisor_role = {
-						character = PSA_john_lesesne_dewitt
-						advisor = {
-							slot = army_chief
-							idea_token = PSA_john_lesesne_dewitt_army_chief
-							available = {
-								not_already_hired_except_as = army_chief
-							}
-							traits = { KR_army_chief_defensive_2 }
-							cost = 100
-						}
-						activate = yes
-					}
-				}
-				else = {
-					PSA_john_lesesne_dewitt = { remove_army_chief_role = yes }
-					add_advisor_role = {
-						character = PSA_john_lesesne_dewitt
-						advisor = {
-							slot = army_chief
-							idea_token = PSA_john_lesesne_dewitt_army_chief
-							available = {
-								not_already_hired_except_as = army_chief
-							}
-							traits = { KR_army_chief_defensive_2 }
-							cost = 100
-						}
-					}
-				}
+				PSA_george_catlett_marshall = { remove_theorist_role = yes }
 			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
@@ -269,52 +223,10 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			add_advisor_role = {
-				character = PSA_george_catlett_marshall
-				advisor = {
-					slot = theorist
-					idea_token = PSA_george_catlett_marshall_theorist
-					ledger = army
-					available = {
-						not_already_hired_except_as = theorist
-					}
-					traits = { KR_mobile_warfare_expert }
-					cost = 150
-				}
-			}
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = PSA_george_catlett_marshall_theorist
 			hidden_effect = {
-				if = {
-					limit = { has_idea = PSA_george_catlett_marshall_army_chief }
-					PSA_george_catlett_marshall = { remove_army_chief_role = yes }
-					add_advisor_role = {
-						character = PSA_george_catlett_marshall
-						advisor = {
-							slot = army_chief
-							idea_token = PSA_george_catlett_marshall_army_chief
-							available = {
-								not_already_hired_except_as = army_chief
-							}
-							traits = { KR_army_chief_reform_3 }
-							cost = 200
-						}
-						activate = yes
-					}
-				}
-				else = {
-					PSA_george_catlett_marshall = { remove_army_chief_role = yes }
-					add_advisor_role = {
-						character = PSA_george_catlett_marshall
-						advisor = {
-							slot = army_chief
-							idea_token = PSA_george_catlett_marshall_army_chief
-							available = {
-								not_already_hired_except_as = army_chief
-							}
-							traits = { KR_army_chief_reform_3 }
-							cost = 200
-						}
-					}
-				}
+				PSA_john_lesesne_dewitt = { remove_theorist_role = yes }
 			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
@@ -1197,10 +1109,6 @@ focus_tree = {
 			modifier = {
 				factor = 1.5
 				has_war = yes
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_country_flag = choice_made }
 			}
 		}
 		completion_reward = {
@@ -2439,9 +2347,7 @@ focus_tree = {
 		available = { has_global_flag = USA_civil_war_over_flag }
 		x = 14
 		y = 0
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_last_bastion"
 			remove_ideas = PSA_last_bastion_of_american_democracy
@@ -2473,9 +2379,7 @@ focus_tree = {
 			has_government = social_conservative
 		}
 		bypass = { has_government = social_conservative }
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -11
 		y = 1
@@ -2496,9 +2400,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -14
 		y = 2
@@ -2520,9 +2422,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -14
 		y = 4
@@ -2543,9 +2443,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -12
 		y = 2
@@ -2568,9 +2466,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -10
 		y = 2
@@ -2596,9 +2492,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -8
 		y = 2
@@ -2629,9 +2523,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -13
 		y = 3
@@ -2663,9 +2555,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -11
 		y = 3
@@ -2698,9 +2588,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -9
 		y = 3
@@ -2727,9 +2615,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -11
 		y = 4
@@ -2757,9 +2643,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -8
 		y = 4
@@ -2786,9 +2670,7 @@ focus_tree = {
 		available = {
 			has_government = social_conservative
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -11
 		y = 5
@@ -2813,14 +2695,9 @@ focus_tree = {
 			focus = PSA_social_conservatives_in_power
 		}
 		available = {
-			OR = {
-				has_government = social_conservative
-				has_government = market_liberal
-			}
+			has_right_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -6
 		y = 2
@@ -2839,14 +2716,9 @@ focus_tree = {
 			focus = PSA_gospel_of_wealth
 		}
 		available = {
-			OR = {
-				has_government = social_conservative
-				has_government = market_liberal
-			}
+			has_right_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -7
 		y = 3
@@ -2877,14 +2749,9 @@ focus_tree = {
 			focus = PSA_gospel_of_wealth
 		}
 		available = {
-			OR = {
-				has_government = social_conservative
-				has_government = market_liberal
-			}
+			has_right_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -5
 		y = 3
@@ -2918,14 +2785,9 @@ focus_tree = {
 			focus = PSA_labor_management
 		}
 		available = {
-			OR = {
-				has_government = social_conservative
-				has_government = market_liberal
-			}
+			has_right_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -6
 		y = 4
@@ -2947,14 +2809,9 @@ focus_tree = {
 			focus = PSA_fiscal_reform
 		}
 		available = {
-			OR = {
-				has_government = social_conservative
-				has_government = market_liberal
-			}
+			has_right_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -6
 		y = 5
@@ -2979,9 +2836,7 @@ focus_tree = {
 			has_government = market_liberal
 		}
 		bypass = { has_government = market_liberal }
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -3
 		y = 1
@@ -3002,9 +2857,7 @@ focus_tree = {
 		available = {
 			has_government = market_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -4
 		y = 2
@@ -3027,9 +2880,7 @@ focus_tree = {
 		available = {
 			has_government = market_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -2
 		y = 2
@@ -3055,9 +2906,7 @@ focus_tree = {
 		available = {
 			has_government = market_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -3
 		y = 3
@@ -3081,9 +2930,7 @@ focus_tree = {
 		available = {
 			has_government = market_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -4
 		y = 4
@@ -3112,9 +2959,7 @@ focus_tree = {
 		available = {
 			has_government = market_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -2
 		y = 4
@@ -3140,9 +2985,7 @@ focus_tree = {
 		available = {
 			has_government = market_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -3
 		y = 5
@@ -3172,9 +3015,7 @@ focus_tree = {
 				has_government = social_liberal
 			}
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 0
 		y = 2
@@ -3200,9 +3041,7 @@ focus_tree = {
 				has_government = social_liberal
 			}
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = -1
 		y = 3
@@ -3228,9 +3067,7 @@ focus_tree = {
 				has_government = social_liberal
 			}
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 1
 		y = 3
@@ -3262,9 +3099,7 @@ focus_tree = {
 				has_government = social_liberal
 			}
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 0
 		y = 4
@@ -3289,9 +3124,7 @@ focus_tree = {
 				has_government = social_liberal
 			}
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 0
 		y = 5
@@ -3314,9 +3147,7 @@ focus_tree = {
 			has_government = social_liberal
 		}
 		bypass = { has_government = social_liberal }
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 3
 		y = 1
@@ -3337,9 +3168,7 @@ focus_tree = {
 		available = {
 			has_government = social_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 2
 		y = 2
@@ -3362,9 +3191,7 @@ focus_tree = {
 		available = {
 			has_government = social_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 4
 		y = 2
@@ -3389,9 +3216,7 @@ focus_tree = {
 		available = {
 			has_government = social_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 3
 		y = 3
@@ -3416,9 +3241,7 @@ focus_tree = {
 		available = {
 			has_government = social_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 2
 		y = 4
@@ -3444,9 +3267,7 @@ focus_tree = {
 		available = {
 			has_government = social_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 4
 		y = 4
@@ -3472,9 +3293,7 @@ focus_tree = {
 		available = {
 			has_government = social_liberal
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 3
 		y = 5
@@ -3496,14 +3315,9 @@ focus_tree = {
 			focus = PSA_social_democrats_in_power
 		}
 		available = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-			}
+			has_left_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 6
 		y = 2
@@ -3521,14 +3335,9 @@ focus_tree = {
 			focus = PSA_new_nationalism
 		}
 		available = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-			}
+			has_left_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 5
 		y = 3
@@ -3559,14 +3368,9 @@ focus_tree = {
 			focus = PSA_new_nationalism
 		}
 		available = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-			}
+			has_left_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 7
 		y = 3
@@ -3600,14 +3404,9 @@ focus_tree = {
 			focus = PSA_labor_relations_act
 		}
 		available = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-			}
+			has_left_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 6
 		y = 4
@@ -3629,14 +3428,9 @@ focus_tree = {
 			focus = PSA_social_security
 		}
 		available = {
-			OR = {
-				has_government = social_liberal
-				has_government = social_democrat
-			}
+			has_left_democratic_government = yes
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 6
 		y = 5
@@ -3662,9 +3456,7 @@ focus_tree = {
 			has_government = social_democrat
 		}
 		bypass = { has_government = social_democrat }
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 11
 		y = 1
@@ -3685,9 +3477,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 8
 		y = 2
@@ -3709,9 +3499,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 8
 		y = 4
@@ -3732,9 +3520,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 10
 		y = 2
@@ -3760,9 +3546,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 12
 		y = 2
@@ -3784,9 +3568,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 14
 		y = 2
@@ -3818,9 +3600,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 9
 		y = 3
@@ -3850,9 +3630,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 11
 		y = 3
@@ -3883,9 +3661,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 13
 		y = 3
@@ -3913,9 +3689,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 11
 		y = 4
@@ -3938,9 +3712,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 14
 		y = 4
@@ -3969,9 +3741,7 @@ focus_tree = {
 		available = {
 			has_government = social_democrat
 		}
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		relative_position_id = PSA_last_bastion
 		x = 11
 		y = 5
@@ -4093,9 +3863,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_arsenal_of_democracy"
@@ -4125,9 +3893,7 @@ focus_tree = {
 		x = -1
 		y = 2
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_longer_reach"
@@ -4169,9 +3935,7 @@ focus_tree = {
 		x = 1
 		y = 2
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_on_the_beach"
@@ -4215,9 +3979,7 @@ focus_tree = {
 		x = 0
 		y = 3
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_working_with_allies"
@@ -4241,9 +4003,7 @@ focus_tree = {
 		x = 0
 		y = 4
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_american_century"
@@ -4315,9 +4075,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_man_the_walls"
@@ -4346,9 +4104,7 @@ focus_tree = {
 		x = -1
 		y = 2
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_business_of_neutrality"
@@ -4371,9 +4127,7 @@ focus_tree = {
 		x = 1
 		y = 2
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_look_inward"
@@ -4400,9 +4154,7 @@ focus_tree = {
 		x = 0
 		y = 3
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_leap_forward"
@@ -4429,9 +4181,7 @@ focus_tree = {
 		x = 0
 		y = 4
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_peace_at_last"

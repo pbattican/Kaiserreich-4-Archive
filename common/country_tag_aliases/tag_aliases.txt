@@ -8,11 +8,6 @@ UPC = {
 	global_event_target = UPC_leader
 }
 
-### Liangguang Civil War
-GXW = {
-	global_event_target = GXC_civil_war_target
-}
-
 ### South Africa
 ZAR = {
 	original_tag = SAF
@@ -40,6 +35,10 @@ SWF = {
 ### "China" target
 CHN = {
 	variable = global.china_target_tag
+}
+### Chinese United Front leader
+CUF = {
+	global_event_target = china_united_front_leader
 }
 
 ### Entente Leader
@@ -89,6 +88,11 @@ GEX = {
 SWA = {
 	global_event_target = KR_suedwest
 }
+
+### Zanzibar
+### temporarily added for patch compatibility purposes
+### remove after BETA 0.24.2!
+ZZB = { original_tag = ZAN }
 
 ### Ottomans
 OTT = {

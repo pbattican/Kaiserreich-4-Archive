@@ -11,7 +11,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -22,7 +26,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -33,7 +41,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -45,7 +57,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -57,7 +73,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -69,7 +89,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -82,6 +106,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -94,6 +122,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -106,6 +138,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 3
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -117,7 +153,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 2
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -129,7 +169,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -141,7 +185,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 4
+			factor = 6
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -153,7 +201,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -165,7 +217,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -177,7 +233,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -189,7 +249,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.25
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -201,7 +265,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -213,7 +281,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -227,7 +299,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -241,7 +317,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 3
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -255,40 +335,59 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 4
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
-	KR_MHC_army_regrouping_1 = { # Org regenerates 4% faster
+	KR_MHC_army_regrouping_1 = {
 		sprite = 5
-		army_morale_factor = 0.04
+		land_reinforce_rate = 0.03
+		org_loss_when_moving = -0.05
 
 		command_cap = @tier1
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
-	KR_MHC_army_regrouping_2 = { # Org regenerates 8% faster
+	KR_MHC_army_regrouping_2 = {
 		sprite = 5
-		army_morale_factor = 0.08
+		land_reinforce_rate = 0.06
+		org_loss_when_moving = -0.1
 
 		command_cap = @tier2
 
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
-	KR_MHC_army_regrouping_3 = { # Org regenerates 12% faster
+	KR_MHC_army_regrouping_3 = {
 		sprite = 5
-		army_morale_factor = 0.12
+		land_reinforce_rate = 0.09
+		org_loss_when_moving = -0.15
 
 		command_cap = @tier3
 
 		ai_will_do = {
 			factor = 3
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -300,6 +399,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -311,6 +414,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -322,39 +429,55 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 3
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
-	KR_MHC_army_logistics_1 = {  # Ground units suffer 4% less attrition
+	KR_MHC_army_logistics_1 = {
 		sprite = 6
-		attrition = -0.04
+		supply_consumption_factor = -0.04
 
 		command_cap = @tier1
 
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
-	KR_MHC_army_logistics_2 = {  # Ground units suffer 8% less attrition
+	KR_MHC_army_logistics_2 = {
 		sprite = 6
-		attrition = -0.08
+		supply_consumption_factor = -0.08
 
 		command_cap = @tier2
 
 		ai_will_do = {
 			factor = 4
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
-	KR_MHC_army_logistics_3 = {  # Ground units suffer 12% less attrition
+	KR_MHC_army_logistics_3 = {
 		sprite = 6
-		attrition = -0.12
+		supply_consumption_factor = -0.012
 
 		command_cap = @tier3
 
 		ai_will_do = {
 			factor = 6
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -365,7 +488,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -376,7 +503,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -387,7 +518,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -398,7 +533,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -409,7 +548,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -420,7 +563,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -431,7 +578,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -442,7 +593,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -453,7 +608,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -464,7 +623,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -475,7 +638,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -486,7 +653,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1.25
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -499,6 +670,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -510,7 +685,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 1.5
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -522,7 +701,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1.75
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -535,6 +718,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -546,7 +733,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 1.5
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -558,7 +749,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1.75
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -571,6 +766,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -582,7 +781,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 1.5
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -594,7 +797,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1.75
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -608,7 +815,11 @@ leader_traits = {
 			factor = 1
 			modifier = {
 				factor = 0
-				has_navy_size = { unit = carrier size < 1 }
+				has_navy_size = { unit = carrier size < 2 }
+			}
+			modifier = {
+				factor = 0
+				command_power < @tier1
 			}
 		}
 	}
@@ -620,10 +831,14 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 1.5
 			modifier = {
 				factor = 0
-				has_navy_size = { unit = carrier size < 1 }
+				has_navy_size = { unit = carrier size < 2 }
+			}
+			modifier = {
+				factor = 0
+				command_power < @tier2
 			}
 		}
 	}
@@ -635,10 +850,14 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1.75
 			modifier = {
 				factor = 0
-				has_navy_size = { unit = carrier size < 1 }
+				has_navy_size = { unit = carrier size < 2 }
+			}
+			modifier = {
+				factor = 0
+				command_power < @tier3
 			}
 		}
 	}
@@ -653,6 +872,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -663,7 +886,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -674,7 +901,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -685,7 +916,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -700,6 +935,14 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				has_navy_size = { unit = carrier size < 2 }
+			}
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -712,7 +955,15 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 1.5
+			modifier = {
+				factor = 0
+				has_navy_size = { unit = carrier size < 2 }
+			}
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -725,7 +976,15 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1.75
+			modifier = {
+				factor = 0
+				has_navy_size = { unit = carrier size < 2 }
+			}
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -739,6 +998,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -751,7 +1014,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 1.5
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -764,7 +1031,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1.75
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -778,6 +1049,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -791,6 +1066,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -803,7 +1082,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 2.5
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -817,6 +1100,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -829,7 +1116,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 1.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -842,7 +1133,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 2
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -856,7 +1151,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -870,7 +1169,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -884,7 +1187,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -896,6 +1203,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -906,7 +1217,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 1.25
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -917,7 +1232,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 1.5
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -930,7 +1249,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -943,7 +1266,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -956,7 +1283,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 0
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 
@@ -967,7 +1298,11 @@ leader_traits = {
 		command_cap = @tier1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0.25
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 
@@ -978,7 +1313,11 @@ leader_traits = {
 		command_cap = @tier2
 
 		ai_will_do = {
-			factor = 2
+			factor = 0.5
+			modifier = {
+				factor = 0
+				command_power < @tier2
+			}
 		}
 	}
 
@@ -989,7 +1328,11 @@ leader_traits = {
 		command_cap = @tier3
 
 		ai_will_do = {
-			factor = 3
+			factor = 0.75
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
 		}
 	}
 	# copy of KR_MHC_pilot_training_1, but without a paper sprite, meant for icons
@@ -1002,6 +1345,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				command_power < @tier1
+			}
 		}
 	}
 

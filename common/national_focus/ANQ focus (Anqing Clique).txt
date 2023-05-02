@@ -17,8 +17,13 @@ focus_tree = {
 
 	continuous_focus_position = {
 		x = 50
-		y = 2200
+		y = 1200
 	}
+
+	shared_focus = CHS_provisional_government
+	shared_focus = CHS_reintegrate_academies
+	shared_focus = CHS_standardised_arsenals
+	shared_focus = CHS_southern_fleets_legacy
 
 	#########################
 	# Revamped Foreign Tree #
@@ -32,9 +37,7 @@ focus_tree = {
 		x = 9
 		y = 0
 
-		ai_will_do = {
-			factor = 300
-		}
+		ai_will_do = { factor = 300 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ANQ_rolling_dice"
@@ -147,6 +150,7 @@ focus_tree = {
 					province = 10101
 				}
 			}
+			country_event = anq.107
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -265,11 +269,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ANQ_tokyo_university_exchange_program"
-			add_research_slot_until_four = yes
+			china_add_research_slots = yes
 			custom_effect_tooltip = anq_increase_jap_1
 			add_to_variable = { ANQ_tokyo_score = 1 }
+			country_event = anq.108
 			if = {
-				limit = { has_country_flag = ANQ_is_profengtian }
+				limit = { ANQ_is_profengtian = yes }
 				custom_effect_tooltip = anq_increase_fng_2
 				hidden_effect = {
 					add_popularity = {
@@ -416,7 +421,7 @@ focus_tree = {
 			custom_effect_tooltip = anq_increase_jap_1
 			add_to_variable = { ANQ_tokyo_score = 1 }
 			if = {
-				limit = { has_country_flag = ANQ_is_profengtian }
+				limit = { ANQ_is_profengtian = yes }
 				custom_effect_tooltip = anq_increase_fng_2
 				hidden_effect = {
 					add_popularity = {
@@ -470,7 +475,7 @@ focus_tree = {
 			custom_effect_tooltip = anq_increase_jap_1
 			add_to_variable = { ANQ_tokyo_score = 1 }
 			if = {
-				limit = { has_country_flag = ANQ_is_profengtian }
+				limit = { ANQ_is_profengtian = yes }
 				custom_effect_tooltip = anq_increase_fng_2
 				hidden_effect = {
 					add_popularity = {
@@ -528,7 +533,7 @@ focus_tree = {
 			custom_effect_tooltip = anq_increase_jap_1
 			add_to_variable = { ANQ_tokyo_score = 1 }
 			if = {
-				limit = { has_country_flag = ANQ_is_profengtian }
+				limit = { ANQ_is_profengtian = yes }
 				custom_effect_tooltip = anq_increase_fng_1
 				hidden_effect = {
 					add_popularity = {
@@ -585,7 +590,7 @@ focus_tree = {
 			custom_effect_tooltip = anq_increase_jap_1
 			add_to_variable = { ANQ_tokyo_score = 1 }
 			if = {
-				limit = { has_country_flag = ANQ_is_profengtian }
+				limit = { ANQ_is_profengtian = yes }
 				custom_effect_tooltip = anq_increase_fng_2
 				hidden_effect = {
 					add_popularity = {
@@ -642,7 +647,7 @@ focus_tree = {
 			custom_effect_tooltip = anq_increase_jap_1
 			add_to_variable = { ANQ_tokyo_score = 1 }
 			if = {
-				limit = { has_country_flag = ANQ_is_profengtian }
+				limit = { ANQ_is_profengtian = yes }
 				custom_effect_tooltip = anq_increase_fng_2
 				hidden_effect = {
 					add_popularity = {
@@ -908,7 +913,7 @@ focus_tree = {
 	#
 	#	completion_reward = {
 	#		if = {
-	#			limit = { has_country_flag = ANQ_is_profengtian }
+	#			limit = { ANQ_is_profengtian = yes }
 	#			custom_effect_tooltip = anq_increase_fng_1
 	#			hidden_effect = {
 	#				add_popularity = {
@@ -1035,15 +1040,14 @@ focus_tree = {
 			}
 			if = {
 				limit = { can_declare_war_on = GXC }
-				create_wargoal = {
-					target = GXC
-					type = annex_everything
-				}
-				if = {
-					limit = { GXC = { has_civil_war = yes } }
-					create_wargoal = {
-						target = GXW
-						type = annex_everything
+				every_country_with_original_tag = {
+					original_tag_to_check = GXC
+					limit = { ROOT = { can_declare_war_on = PREV } }
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
 					}
 				}
 			}
@@ -1073,6 +1077,7 @@ focus_tree = {
 				ideology = authoritarian_democrat
 				popularity = 0.05
 			}
+			country_event = anq.106
 			hidden_effect = {
 				set_politics = {
 					ruling_party = authoritarian_democrat
@@ -1101,7 +1106,6 @@ focus_tree = {
 				activate_targeted_decision = { target = QIE decision = ANQ_placate_qing }
 				activate_targeted_decision = { target = QIE decision = ANQ_join_QIE_alliance }
 				activate_targeted_decision = { target = FNG decision = ANQ_join_war_vs_FNG_self }
-				activate_targeted_decision = { target = FNG decision = ANQ_join_war_vs_FNG }
 
 				activate_targeted_decision = { target = 606 decision = ANQ_Yangtze_River_Line }
 				activate_targeted_decision = { target = 1050 decision = ANQ_Huai_River_Line }
@@ -1401,16 +1405,13 @@ focus_tree = {
 		available = {
 			OR = {
 				has_full_control_of_state = 608
-				custom_trigger_tooltip = {
-					tooltip = ANQ_is_proqing
-					has_country_flag = ANQ_is_proqing
-				}
+				ANQ_is_proqing = yes
 			}
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ANQ_academia_sinica"
-			add_research_slot_until_four = yes
+			china_add_research_slots = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -1451,7 +1452,6 @@ focus_tree = {
 			add_popularity = {
 				ideology = social_liberal
 				popularity = 0.03
-
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1501,7 +1501,6 @@ focus_tree = {
 					modifier = large_increase
 				}
 			}
-
 			custom_effect_tooltip = anq_increase_qie_5
 			hidden_effect = {
 				add_popularity = {
@@ -1538,12 +1537,12 @@ focus_tree = {
 			}
 			every_other_country = {
 				limit = {
-					NOT = { is_in_faction_with = QIE }
+					NOT = { is_ally_with = QIE }
 					OR = {
-						is_chinese_tag = yes
-						tag = GER
-						tag = JAP
-						tag = RUS
+						is_tag_in_china_area = yes
+						original_tag = GER
+						original_tag = JAP
+						original_tag = RUS
 					}
 				}
 				reverse_add_opinion_modifier = {
@@ -1733,19 +1732,6 @@ focus_tree = {
 				country_exists = CHI
 				country_exists = LEP
 			}
-			if = {
-				limit = {
-					SQI = {
-						is_in_faction = no
-						NOT = { has_government = authoritarian_democrat }
-					}
-				}
-				OR = {
-					has_country_flag = ANQ_sqi_is_ally
-					has_subject = SQI
-					NOT = { country_exists = SQI }
-				}
-			}
 		}
 
 		ai_will_do = { factor = 1000 }
@@ -1781,7 +1767,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = anq.78 days = 10 } #kuomintang yiguandao
 				if = {
-					limit = { has_country_flag = ANQ_is_profengtian }
+					limit = { ANQ_is_profengtian = yes }
 					country_event = { id = anq.213 days = 16 }
 				}
 				country_event = { id = anq.118 days = 20 random_days = 10 }
@@ -1807,13 +1793,6 @@ focus_tree = {
 				activate_targeted_decision = { target = THIS decision = ANQ_factory_repair_teams_decision }
 				activate_targeted_decision = { target = THIS decision = ANQ_new_industrial_investments_decision }
 				activate_targeted_decision = { target = THIS decision = ANQ_village_reconstruction_decision }
-			}
-			hidden_effect = {
-				activate_targeted_decision = { target = THIS decision = anq_integrate_jiangsu_province }
-				activate_targeted_decision = { target = THIS decision = anq_integrate_nanjing }
-				activate_targeted_decision = { target = THIS decision = anq_integrate_fujian_province }
-				activate_targeted_decision = { target = THIS decision = anq_integrate_zhejiang_province }
-				activate_targeted_decision = { target = THIS decision = anq_integrate_jiangxi_province }
 			}
 		}
 		search_filters = {
@@ -1898,6 +1877,13 @@ focus_tree = {
 				remove_idea = ANQ_idea_institutional_chaos1
 				add_idea = ANQ_idea_institutional_chaos2
 			}
+			every_owned_state = {
+				limit = {
+					is_core_of = LEP
+					has_resistance = yes
+				}
+				add_compliance = 10
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1966,9 +1952,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ANQ_new_provincial_governments"
-			custom_effect_tooltip = anq_can_integrate_tt
-			set_country_flag = ANQ_can_integrate_five_provinces
 			remove_ideas = ANQ_idea_institutional_chaos2
+			every_owned_state = {
+				limit = {
+					is_core_of = LEP
+					has_resistance = yes
+				}
+				add_compliance = 15
+			}
 		}
 	}
 
@@ -2010,7 +2001,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ANQ_nanjing_purges"
-			custom_effect_tooltip = anq_nanjing_purge_integration_tt
 			add_ideas = ANQ_clique_control
 			# Social Credit Score
 			custom_effect_tooltip = anq_decrease_cred_10
@@ -2211,6 +2201,15 @@ focus_tree = {
 				remove_idea = ANQ_ruined_interior
 				add_idea = ANQ_ruined_interior1
 			}
+			if = {
+				limit = {
+					ANQ_is_proqing = yes
+					QIE = {
+						exists = yes
+					}
+				}
+				country_event = anq.110
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -2233,12 +2232,6 @@ focus_tree = {
 
 		available = {
 			has_idea = ANQ_yiguandao
-			SQI = {
-				OR = {
-					exists = no
-					NOT = { has_government = national_populist }
-				}
-			}
 		}
 
 		completion_reward = {
@@ -2275,7 +2268,6 @@ focus_tree = {
 
 		available = {
 			has_idea = ANQ_kuomintang
-			CHI = { exists = no }
 		}
 
 		completion_reward = {
@@ -2352,16 +2344,17 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ANQ_rural_outreach"
 			remove_ideas = ANQ_ruined_interior2
 			if = {
-				limit = { has_country_flag = ANQ_is_proqing }
+				limit = { ANQ_is_proqing = yes }
 				custom_effect_tooltip = anq_unlocks_future_banditry_projects_tt
 			}
 			# Social Credit Score
-			custom_effect_tooltip = anq_increase_cred_10
+			custom_effect_tooltip = anq_increase_cred_5
 			add_to_variable = {
 				var = credibility_factor
-				value = 10
+				value = 5
 			}
 			anq_recalculate_chens_credibility = yes
+			country_event = anq.109
 		}
 	}
 
@@ -2392,7 +2385,7 @@ focus_tree = {
 			country_event = { id = anq.33 days = 15 }
 
 			if = { #event anq.94 triggers through has_completed_focus in ANQ scripted eff
-				limit = { has_country_flag = ANQ_is_proqing }
+				limit = { ANQ_is_proqing = yes }
 				custom_effect_tooltip = anq_unlocks_future_canal_qing_authority_tt
 			}
 		}
@@ -2438,7 +2431,11 @@ focus_tree = {
 					add_idea = ANQ_developing_nation2
 				}
 			}
-			else = { add_ideas = ANQ_modern_schooling_system_idea }
+			else = {
+				add_ideas = ANQ_modern_schooling_system_idea
+			}
+			china_add_research_slots = yes
+			country_event = anq.111
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -3112,7 +3109,6 @@ focus_tree = {
 				}
 			}
 			air_experience = 25
-
 		}
 		search_filters = {
 			FOCUS_FILTER_AIR_XP

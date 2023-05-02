@@ -72,14 +72,12 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = FRA_marcel_cachin_sic
-			traits = { KR_compassionate_gentleman_sic second_in_command_trait }
+			traits = { KR_compassionate_gentleman_sic }
 			cost = 0
-			removal_cost = -1
+			can_be_fired = no
 			visible = {
 				has_country_flag = FRA_cachin_sic_chosen
 			}
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
 		}
 	}
 	FRA_leon_jouhaux = {
@@ -164,32 +162,28 @@ characters = {
 			traits = { KR_industrialiser }
 		}
 	}
-	FRA_sebastien_faure = {
-		name = FRA_sebastien_faure
+	FRA_pierre_monatte = {
+		name = FRA_pierre_monatte
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/FRA/Portrait_FRA_Sebastien_Faure.png"
+				large = "gfx/leaders/FRA/Portrait_FRA_Pierre_Monatte.png"
 			}
 			army = {
-				small = "gfx/interface/advisors/FRA/FRA_Sebastien_Faure.png"
+				small = "gfx/interface/advisors/FRA/FRA_Pierre_Monatte.png"
 			}
 		}
 		country_leader = {
-			desc = FRA_sebastien_faure_leader_desc
+			desc = FRA_pierre_monatte_leader_desc
 			ideology = syndicalist_subtype
-		}
-		country_leader = {
-			desc = FRA_sebastien_faure_leader_desc
-			ideology = radical_socialist_subtype
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = FRA_sebastien_faure
+			idea_token = FRA_pierre_monatte
 			available = {
 				NOT = { has_government = totalist }
 				is_country_leader = no
 			}
-			traits = { KR_social_revolutionary }
+			traits = { KR_naive_optimist }
 		}
 	}
 	FRA_conseil_de_defense_federal = {
@@ -217,11 +211,9 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = FRA_confederation_general_du_travail_sic
-			traits = { KR_socialist_sic second_in_command_trait }
+			traits = { KR_socialist_sic }
 			cost = 0
-			removal_cost = -1
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
+			can_be_fired = no
 		}
 	}
 
@@ -532,7 +524,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = FRA_andre_marty_commander_desc
-			traits = { organizer trickster trait_cautious }
+			traits = { militias_officer trickster trait_cautious }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -883,22 +875,6 @@ characters = {
 			traits = { KR_great_compromiser }
 		}
 	}
-	FRA_pierre_monatte = {
-		name = FRA_pierre_monatte
-		portraits = {
-			army = {
-				small = "gfx/interface/advisors/FRA/FRA_Pierre_Monatte.png"
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = FRA_pierre_monatte
-			available = {
-				NOT = { has_government = totalist }
-			}
-			traits = { KR_naive_optimist }
-		}
-	}
 	FRA_daniel_guerin = {
 		name = FRA_daniel_guerin
 		portraits = {
@@ -1010,14 +986,12 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = FRA_jacque_duclos_sic
-			traits = { KR_war_propagandist_sic second_in_command_trait }
+			traits = { KR_war_propagandist_sic }
 			cost = 0
-			removal_cost = -1
+			can_be_fired = no
 			visible = {
 				has_country_flag = FRA_duclos_sic_chosen
 			}
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
 		}
 	}
 	FRA_jean_zyromski = {

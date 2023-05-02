@@ -11,7 +11,7 @@ political_actions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LEB_progressive_propaganda"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LEB_progressive_propaganda"
 			LEB_womens_flag_improve = yes
 		}
 		remove_effect = {
@@ -21,9 +21,7 @@ political_actions = {
 				popularity = 0.05
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 	}
 	LEB_promote_full_equality = {
 		icon = generic_political_discourse
@@ -40,7 +38,7 @@ political_actions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LEB_promote_full_equality"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LEB_promote_full_equality"
 			LEB_womens_flag_improve = yes
 		}
 		remove_effect = {
@@ -50,9 +48,7 @@ political_actions = {
 				popularity = 0.05
 			}
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 	}
 	LEB_allow_corruption = {
 		icon = ger_mefo_bills
@@ -75,7 +71,7 @@ political_actions = {
 			political_power_gain = 0.05
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LEB_allow_corruption"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LEB_allow_corruption"
 			set_country_flag = LEB_took_stance_on_corruption
 		}
 		remove_effect = {
@@ -83,9 +79,7 @@ political_actions = {
 			LEB_constitutionals_corruption_increase = yes
 			clr_country_flag = LEB_took_stance_on_corruption
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 	}
 	LEB_root_out_corruption = {
 		icon = oppression
@@ -112,7 +106,7 @@ political_actions = {
 			political_power_cost = 0.05
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LEB_root_out_corruption"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LEB_root_out_corruption"
 			set_country_flag = LEB_took_stance_on_corruption
 		}
 		remove_effect = {
@@ -120,9 +114,7 @@ political_actions = {
 			LEB_constitutionals_corruption_decrease = yes
 			clr_country_flag = LEB_took_stance_on_corruption
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 	}
 	LEB_encourage_jewish_immigration = {
 		icon = generic_political_discourse
@@ -134,9 +126,7 @@ political_actions = {
 			political_power_cost = 0.05
 			MONTHLY_POPULATION = 0.35
 		}
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 	}
 }
 foreign_politics = {
@@ -158,11 +148,9 @@ foreign_politics = {
 
 		cost = 50
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LEB_join_the_entente_decision target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LEB_join_the_entente_decision target: [From.GetName]"
 			FROM = {
 				country_event = leb.20
 			}
@@ -199,7 +187,7 @@ foreign_politics = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LEB_join_the_cairo_pact target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LEB_join_the_cairo_pact target: [From.GetName]"
 			EGY = {
 				country_event = leb.20
 			}
@@ -234,7 +222,7 @@ foreign_politics = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LEB_join_the_arab_league target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LEB_join_the_arab_league target: [From.GetName]"
 			FROM = {
 				country_event = leb.20
 			}

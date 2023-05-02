@@ -23,9 +23,7 @@ focus_tree = {
 		x = 12
 		y = 0
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -56,9 +54,7 @@ focus_tree = {
 			has_government = paternal_autocrat
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -84,9 +80,7 @@ focus_tree = {
 			has_government = paternal_autocrat
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -115,9 +109,7 @@ focus_tree = {
 			has_government = paternal_autocrat
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -146,9 +138,7 @@ focus_tree = {
 			has_government = paternal_autocrat
 		}
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		available_if_capitulated = yes
 
@@ -177,9 +167,7 @@ focus_tree = {
 			has_government = paternal_autocrat
 		}
 
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 
 		available_if_capitulated = yes
 
@@ -224,11 +212,11 @@ focus_tree = {
 			factor = 10
 			modifier = {
 				factor = 5
-				has_idea = GBR_robert_gascoyne_cecil
+				GBR_robert_gascoyne_cecil = { is_second_in_command = yes }
 			}
 			modifier = {
 				factor = 2
-				has_idea = GBR_anthony_eden
+				GBR_anthony_eden = { is_second_in_command = yes }
 			}
 		}
 
@@ -278,7 +266,7 @@ focus_tree = {
 			factor = 10
 			modifier = {
 				factor = 5
-				has_idea = GBR_henry_page_croft
+				GBR_henry_page_croft = { is_second_in_command = yes }
 			}
 		}
 
@@ -292,8 +280,7 @@ focus_tree = {
 				elections_allowed = no
 			}
 			country_event = uk.35
-			clear_sic_slot = yes
-			activate_advisor = GBR_robert_vansittart
+			activate_advisor = GBR_robert_vansittart_second_in_command
 			hidden_effect = {
 				set_variable = { var = bra_supp value = party_popularity@paternal_autocrat }
 				multiply_variable = { var = bra_supp value = 100 }
@@ -329,9 +316,7 @@ focus_tree = {
 			is_subject = no
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -360,9 +345,7 @@ focus_tree = {
 		x = -10
 		y = 1
 
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 
 		available_if_capitulated = yes
 
@@ -423,9 +406,7 @@ focus_tree = {
 		x = -2
 		y = 2
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		available_if_capitulated = yes
 
@@ -447,9 +428,7 @@ focus_tree = {
 		x = -2
 		y = 3
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -582,9 +561,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		available_if_capitulated = yes
 
@@ -620,9 +597,7 @@ focus_tree = {
 			controls_all_owned_states = yes
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -650,9 +625,7 @@ focus_tree = {
 			controls_all_owned_states = yes
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -1592,9 +1565,7 @@ focus_tree = {
 		x = 1
 		y = 3
 
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		available_if_capitulated = yes
 
@@ -1764,9 +1735,7 @@ focus_tree = {
 		x = 0
 		y = 4
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		available_if_capitulated = yes
 
@@ -1800,9 +1769,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 30
-		}
+		ai_will_do = { factor = 30 }
 
 		available_if_capitulated = yes
 
@@ -1858,6 +1825,13 @@ focus_tree = {
 					has_completed_focus = NEE_Take_Leadership_of_ENT
 					is_faction_leader = yes
 				}
+				faction_leader = {
+					OR = {
+						tag = USA
+						tag = PSA
+						tag = TEX
+					}
+				}
 			}
 		}
 
@@ -1896,9 +1870,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -1958,9 +1930,7 @@ focus_tree = {
 			controls_all_owned_states = yes
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -1994,9 +1964,7 @@ focus_tree = {
 			NFA = { has_completed_focus = NATFRA_Indestructible_Bonds }
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -2020,9 +1988,7 @@ focus_tree = {
 		x = 1
 		y = 2
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		available_if_capitulated = yes
 
@@ -2077,9 +2043,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 
 		available_if_capitulated = yes
 
@@ -2106,9 +2070,7 @@ focus_tree = {
 			NOT = { owns_state = 119 }
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		available_if_capitulated = yes
 
@@ -2146,9 +2108,7 @@ focus_tree = {
 			has_navy_size = { size > 24 }
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available_if_capitulated = yes
 
@@ -2181,9 +2141,7 @@ focus_tree = {
 			has_navy_size = { size > 24 }
 		}
 
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 
 		available_if_capitulated = yes
 
@@ -2217,9 +2175,7 @@ focus_tree = {
 			has_navy_size = { size > 24 }
 		}
 
-		ai_will_do = {
-			factor = 15
-		}
+		ai_will_do = { factor = 15 }
 
 		available_if_capitulated = yes
 
@@ -2283,7 +2239,14 @@ focus_tree = {
 			OR = {
 				is_faction_leader = yes
 				is_in_faction = no
-				faction_leader = { tag = NEE }
+				faction_leader = {
+					OR = {
+						tag = NEE
+						tag = USA
+						tag = PSA
+						tag = TEX
+					}
+				}
 			}
 			299 = { is_owned_by_ROOT_or_ally = yes }
 			118 = { is_owned_by_ROOT_or_ally = yes }
@@ -2291,9 +2254,7 @@ focus_tree = {
 			has_navy_size = { size > 24 }
 		}
 
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 
 		available_if_capitulated = yes
 

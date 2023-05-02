@@ -1,13 +1,12 @@
 ﻿#KAISERREICH for HEARTS of IRON 4
-Beta 0.23.3 - 'Not Yet Lost'
+Beta 0.24.2 - 'Year of the Rabbit'
 
 #Created by the Kaiserreich 4 team
 Talented friends, every single one
 
-Adrianator2
+84F8DB
 Alpinia
 Arvidus
-Asratius
 Augenis
 Blackfalcon501
 Carmain
@@ -22,15 +21,17 @@ Flamefang
 Gaboemi
 Gideones
 Hamfast
+hildagrim
 Ido
 Igor050301
 JazzyHugh
 Jeankedezeehond
 Jonny BL
 Juliet Wehrwolf
-KFateweaver
+katieluka
 Kennedy
 kergely
+KFateweaver
 Klyntar King
 Krčo
 Luwofe
@@ -38,15 +39,14 @@ Matoro
 McOmghall
 ~mw~ // miwaco.
 NukeGaming
-OMD
 Owenomaly
-PPsyrius
 Pelmen
+PPsyrius
 RagnoStrangeros
-Retrocognition
 Rnk
 Shiroe
 Sonny O'Cad
+SuperGreenBeans
 suzuha
 The Alpha Dog
 The Irredentista
@@ -57,11 +57,12 @@ Zimbabwe Salt Co.
 #Our Fallen Comrades
 Kaiserreich is built on your shoulders
 
-Ace of Aces
+Adrianator2
 Ahearne
 Akamber
 AllyJammy
 Anbory
+Asratius
 Autovonbismarck
 BattleSarge
 Beelzebub
@@ -73,6 +74,7 @@ Dedlift
 Delincious
 Denizz
 Devastator
+Dick Bong, Ace of Aces
 Dr. Njitram
 DrDiHai
 Drozdovite
@@ -93,7 +95,6 @@ Gibzit
 Go.Jr
 Harmazon
 Herkles
-hildagrim
 Hyvinvointinionvaakalaudalla
 Imhungry5462
 Indyclone77
@@ -108,7 +109,6 @@ Khalil
 Kornilov
 Kracc
 Liegnitz
-MPdisappeared
 MaelTec
 Maltesefalcon
 MantisToboggan
@@ -120,7 +120,9 @@ Miklos Horthy
 Mikus
 Miyokari
 MonarchistKaiser
+MPdisappeared
 Nijato
+O M D
 Packard
 Paul
 Phil
@@ -135,7 +137,6 @@ Rinbro
 Roniius
 Roparex
 Rylock
-SPQR
 Saladenicoise
 Satellite Yung
 Sbadkins4
@@ -145,6 +146,7 @@ Sir Rogers
 Sjarlewis
 Skip
 Skullcrusher
+SPQR
 Stekpanna
 Story
 Tatiana
@@ -272,6 +274,10 @@ Neutrino
 
 #Based On An Idea By
 Sarmatia1871
+
+Expanded Tank Designer:
+Issaac411
+Freezer
 
 
 

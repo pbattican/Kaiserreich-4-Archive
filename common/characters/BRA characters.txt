@@ -1,3 +1,4 @@
+
 characters = {
 	#######################
 	### Country Leaders ###
@@ -239,7 +240,7 @@ characters = {
 		name = BRA_everardo_dias
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/Generic/Portrait_Europe_Generic_new_3.png"
+				large = "gfx/leaders/BRA/Portrait_BRA_Everardo_Dias.png"
 			}
 		}
 		country_leader = {
@@ -736,6 +737,13 @@ characters = {
 			desc = BRA_gustavo_dodt_barroso_leader_desc
 			ideology = national_populist_subtype
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = BRA_gustavo_dodt_barroso_sic
+			traits = { KR_local_tyrant_sic }
+			cost = 0
+			can_be_fired = no
+		}
 	}
 	BRA_pedro_henrique_de_orleans_braganca = {
 		name = BRA_pedro_henrique_de_orleans_braganca
@@ -1079,21 +1087,25 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = BRA_congresso_nacional_sic
-			traits = { KR_parliament_sic second_in_command_trait }
+			traits = { KR_parliament_sic }
 			cost = 0
-			removal_cost = -1
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
+			can_be_fired = no
 		}
 	}
-	BRA_arlindo_veiga_dos_santos = {
+	BRA_arlindo_veiga_dos_santos = { #recruited in bra.112
 		name = BRA_arlindo_veiga_dos_santos
 		portraits = {
 			civilian = {
 				small = "gfx/interface/advisors/BRA/BRA_arlindo_veiga_dos_santos.png"
 			}
 		}
-		#role created by bra.112
+		advisor = {
+			slot = second_in_command
+			idea_token = BRA_arlindo_veiga_dos_santos_sic
+			traits = { BRA_royal_legitimist_sic }
+			cost = 0
+			can_be_fired = no
+		}
 	}
 
 	################
@@ -1389,6 +1401,7 @@ characters = {
 			}
 			traits = { KR_air_chief_safety_2 }
 			cost = 100
+			ai_will_do = { factor = 0 }
 		}
 	}
 	BRA_argemiro_de_assis_brasil = {
@@ -1520,6 +1533,12 @@ characters = {
 				large = "gfx/leaders/BRA/Portrait_BRA_Mascarenhas_de_Morais.png"
 			}
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = BRA_joao_batista_mascarenhas_de_morais
+			traits = { KR_army_chief_organisational_2 }
+			cost = 100
+		}
 		corps_commander = {
 			desc = BRA_joao_batista_mascarenhas_de_morais_commander_desc
 			traits = { brilliant_strategist war_hero trickster fortress_buster }
@@ -1580,13 +1599,6 @@ characters = {
 				large = "gfx/leaders/BRA/Portrait_BRA_Newton_Cavalcanti.png"
 			}
 		}
-		advisor = {
-			slot = high_command
-			idea_token = BRA_newton_de_andrade_cavalcanti
-			ledger = army
-			traits = { KR_MHC_infantry_1 }
-			cost = 50
-		}
 		corps_commander = {
 			desc = BRA_newton_de_andrade_cavalcanti_commander_desc
 			traits = { career_officer trait_cautious desert_fox }
@@ -1628,6 +1640,7 @@ characters = {
 			idea_token = BRA_euclides_de_oliveira_figueiredo
 			traits = { KR_army_chief_reform_2 }
 			cost = 100
+			ai_will_do = { factor = 0.5 }
 		}
 		corps_commander = {
 			desc = BRA_euclides_de_oliveira_figueiredo_commander_desc
@@ -1707,6 +1720,14 @@ characters = {
 				large = "gfx/leaders/BRA/Portrait_BRA_Tertuliano_Potiguara.png"
 			}
 		}
+		advisor = {
+			slot = high_command
+			idea_token = BRA_tertuliano_de_albuquerque_potiguara
+			ledger = army
+			traits = { KR_MHC_infantry_2 }
+			cost = 100
+			ai_will_do = { factor = 3 }
+		}
 		corps_commander = {
 			desc = BRA_tertuliano_de_albuquerque_potiguara_commander_desc
 			traits = { career_officer media_personality commando }
@@ -1752,13 +1773,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 		}
-		advisor = {
-			slot = high_command
-			idea_token = BRA_bertoldo_ritter_klinger
-			ledger = army
-			traits = { KR_MHC_army_regrouping_1 }
-			cost = 50
-		}
 	}
 	BRA_araken_de_oliveira = {
 		name = BRA_araken_de_oliveira
@@ -1767,12 +1781,6 @@ characters = {
 				small = "gfx/interface/advisors/BRA/BRA_araken_de_oliveira.png"
 				large = "gfx/leaders/BRA/Portrait_BRA_Araken_Oliveira.png"
 			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = BRA_araken_de_oliveira
-			traits = { KR_army_chief_morale_1 }
-			cost = 50
 		}
 		corps_commander = {
 			desc = BRA_araken_de_oliveira_commander_desc
@@ -1828,6 +1836,13 @@ characters = {
 				large = "gfx/leaders/BRA/Portrait_BRA_Marcondes_Salgado.png"
 			}
 		}
+		advisor = {
+			slot = high_command
+			idea_token = BRA_julio_marcondes_cesar_salgado
+			ledger = army
+			traits = { KR_MHC_army_regrouping_2 }
+			cost = 100
+		}
 		corps_commander = {
 			desc = BRA_julio_marcondes_cesar_salgado_commander_desc
 			traits = { media_personality politically_connected panzer_leader commando combined_arms_expert }
@@ -1875,6 +1890,7 @@ characters = {
 			idea_token = BRA_benjamin_de_almeida_sodre
 			traits = { KR_navy_chief_manoeuvre_1 }
 			cost = 50
+			ai_will_do = { factor = 0 }
 		}
 		navy_leader = {
 			traits = { old_guard_navy spotter }
@@ -1885,11 +1901,11 @@ characters = {
 			coordination_skill = 2
 		}
 	}
-	BRA_adalberto_de_barros_nunes = {
-		name = BRA_adalberto_de_barros_nunes
+	BRA_adalberto_nunes = {
+		name = BRA_adalberto_nunes
 		portraits = {
 			army = {
-				small = "gfx/interface/advisors/BRA/BRA_adalberto_de_barros_nunes.png"
+				small = "gfx/interface/advisors/BRA/BRA_adalberto_nunes.png"
 				large = "gfx/leaders/BRA/Portrait_BRA_Adalberto_Nunes.png"
 			}
 		}
@@ -1933,6 +1949,7 @@ characters = {
 			idea_token = BRA_henrique_aristides_guilhem
 			traits = { KR_navy_chief_decisive_battle_2 }
 			cost = 100
+			ai_will_do = { factor = 0 }
 		}
 	}
 	BRA_joao_valdetaro_de_amorim_e_mello = {
@@ -1965,6 +1982,7 @@ characters = {
 			}
 			traits = { KR_air_chief_ground_support_1 }
 			cost = 50
+			ai_will_do = { factor = 0 }
 		}
 		advisor = {
 			slot = high_command

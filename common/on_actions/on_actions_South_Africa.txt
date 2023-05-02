@@ -42,6 +42,10 @@ on_actions = {
 				limit = { tag = SAF }
 				country_event = saf.71 #1938 no fusion
 				country_event = saf.73 #1938 fusion
+				country_event = saf.204 #1943 authdem fusion
+				country_event = saf.205 #1943 soccon fusion
+				country_event = saf.206 #1943 soclib fusion
+				country_event = saf.210 #1948 liberal landslide
 				country_event = saf.123 #usual generic
 				country_event = saf.124 #mixed race may vote
 				country_event = natal.51 #South African Federation
@@ -105,7 +109,6 @@ on_actions = {
 		effect = {
 			if = {
 				limit = { original_tag = SAF }
-				clear_sic_slot = yes
 				if = {
 					limit = {
 						will_have_totalist_government = yes
@@ -231,9 +234,8 @@ on_actions = {
 				limit = { has_global_flag = saf_boer_war }
 				if = {
 					limit = {
-						has_civil_war = yes
+						ZAR = { has_war_with = NAT }
 						NAT = { has_capitulated = no }
-						NOT = { ZAR = { has_active_mission = SAF_hold_natal_mission } }
 					}
 					ZAR = { activate_mission = SAF_conquer_natal_mission }
 					every_country = {
@@ -241,8 +243,8 @@ on_actions = {
 						activate_mission = SAF_hold_natal_mission
 
 						#make sure the values are in sync
-						set_temp_variable = { difference = 365 }
-						subtract_from_temp_variable = { difference = NAT.days_mission_timeout@SAF_conquer_natal_mission }
+						set_temp_variable = { difference = ZAR.days_mission_timeout@SAF_conquer_natal_mission }
+						subtract_from_temp_variable = { difference = days_mission_timeout@SAF_hold_natal_mission }
 						add_days_mission_timeout = {
 							mission = SAF_hold_natal_mission
 							days = difference
@@ -251,20 +253,17 @@ on_actions = {
 				}
 				if = {
 					limit = {
-						ZAR = {
-							has_war_with = ZIM
-							NOT = { has_active_mission = ZIM_hold_rhodesia_mission }
-						}
+						ZAR = { has_war_with = ZIM }
 						ZIM = { has_capitulated = no }
 					}
-					ZAR = { activate_mission = SAF_hold_rhodesia_mission }
+					ZAR = { activate_mission = SAF_conquer_rhodesia_mission }
 					every_country = {
 						limit = { is_ally_with = ZIM }
 						activate_mission = ZIM_hold_rhodesia_mission
 
 						#make sure the values are in sync
-						set_temp_variable = { difference = 365 }
-						subtract_from_temp_variable = { difference = ZIM.days_mission_timeout@SAF_hold_rhodesia_mission }
+						set_temp_variable = { difference = ZAR.days_mission_timeout@SAF_conquer_rhodesia_mission }
+						subtract_from_temp_variable = { difference = days_mission_timeout@ZIM_hold_rhodesia_mission }
 						add_days_mission_timeout = {
 							mission = ZIM_hold_rhodesia_mission
 							days = difference
@@ -284,7 +283,6 @@ on_actions = {
 								NOT = { has_war_with = NAT }
 								NAT = { has_capitulated = yes }
 							}
-							NOT = { has_active_mission = SAF_defend_south_africa_mission }
 						}
 					}
 					ZAR = { activate_mission = SAF_defend_south_africa_mission }
@@ -293,8 +291,8 @@ on_actions = {
 						activate_mission = ENT_invade_south_africa_mission
 
 						#make sure the values are in sync
-						set_temp_variable = { difference = 365 }
-						subtract_from_temp_variable = { difference = ZAR.days_mission_timeout@SAF_defend_south_africa_mission }
+						set_temp_variable = { difference = ZAR.days_mission_timeout@SAF_defend_south_africa_mission }
+						subtract_from_temp_variable = { difference = days_mission_timeout@ENT_invade_south_africa_mission }
 						add_days_mission_timeout = {
 							mission = ENT_invade_south_africa_mission
 							days = difference
@@ -305,8 +303,9 @@ on_actions = {
 			else_if = {
 				limit = {
 					has_war_with = ENT
+					has_socialist_government = yes
 					surrender_progress < 0.4
-					NOT = { has_active_mission = SAF_defend_socialist_south_africa_mission }
+					is_valid_peace_target = yes
 				}
 				activate_mission = SAF_defend_socialist_south_africa_mission
 				every_enemy_country = {
@@ -314,13 +313,25 @@ on_actions = {
 					activate_mission = ENT_invade_socialist_south_africa_mission
 
 					#make sure the values are in sync
-					set_temp_variable = { difference = 365 }
-					subtract_from_temp_variable = { difference = SAF.days_mission_timeout@SAF_defend_socialist_south_africa_mission }
+					set_temp_variable = { difference = SAF.days_mission_timeout@SAF_defend_socialist_south_africa_mission }
+					subtract_from_temp_variable = { difference = days_mission_timeout@ENT_invade_socialist_south_africa_mission }
 					add_days_mission_timeout = {
 						mission = ENT_invade_socialist_south_africa_mission
 						days = difference
 					}
 				}
+			}
+		}
+	}
+
+	on_civil_war_end_before_annexation = { #if Van Rensburg takes over before the peace fires with ENT, on_civil_war_end won't restore elections
+		effect = {
+			if = {
+				limit = {
+					tag = SAF
+					has_government = national_populist
+				}
+				clr_country_flag = had_elections
 			}
 		}
 	}

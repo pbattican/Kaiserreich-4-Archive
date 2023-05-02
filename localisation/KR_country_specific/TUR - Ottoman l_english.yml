@@ -196,6 +196,8 @@
  OTT_maintenance_of_order_law_tooltip: "$TRIGGER_OR_STARTS$:\n   The Grand Vizier has seized power in the Balkan War\n   The Grand Vizier has seized power after a failed assassination attempt\n   The Grand Vizier has been granted excecutive powers to eradicate the Karakol Society\n   Arabs have risen up in revolt"
  OTT_less_than_124_deputies: "Has less than 124 deputies in support of the coalition"
 
+ OTT_new_focus_ohf: "§GIt will unlock a new focus tree.§!"
+
 ### Focuses
  ott_education_decree_tt: "\nFailure to push through the §YEducation Decree§! could have §RSevere Consequences§!"
  ott_judicial_decree_tt: "\nFailure to reform the §YCivil Code§! could have §RSevere Consequences§!"
@@ -205,7 +207,7 @@
  ott_constitution_tt: "The Ottoman Parliament, the Grand Vizier and the Padishah [OTT.GetLeader] will produce a modern constitution for the Ottoman Empire.\n\n§YPluralist Constitution§!:\n§gPower shall be placed closer to the individual instead of the state with the importance of individual freedoms such as Free Speech and Freedom of Religion guaranteed and protected. The Sultan will relinquish his right to directly influence matters of state and will instead delegate those to a democratically elected body.§!\nGains National Spirit §YPluralist Constitution§!, which grants: ($MODIFIER_POLITICAL_POWER_FACTOR$: §G+5%§!, $MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+5.00%§!)\n\n§YAuthoritarian Constitution§!:\n§gPower will be centralised around the Party whose elected leader will be appointed Grand Vizier whilst all other parties are banned. The Sultan preserves the right to control all religious affairs but must abide with the Party for matters of state.§!\nGains National Spirit §YAuthoritarian Constitution§!, which grants: ($MODIFIER_POLITICAL_POWER_FACTOR$: §G+10%§!, Non-Core Conscription Factor: §G+10%§!)\n\n"
  ott_religious_organisation_tt: "\nHeavy resistance from the §RUlema§! and §RConservative Opposition§! can be expected"
  ott_maintenance_of_order_law_tt: "This Irade will grant §CFar Reaching Executive Powers§! to the §YGrand Vizier§! to eradicate dissent and remove anti-OHF elements from the state apparatus\n\nAllows placing §YVilayets§! under £manpower_texticon  §YMartial Law§!"
- ott_maghrebi_frontier_tt: "Unlock £decision_icon_small §YDecisions§! to invite §C [MOR.GetNameWithFlag], [ALG.GetNameWithFlag], [TUN.GetNameWithFlag], [SOM.GetNameWithFlag], [CHA.GetNameWithFlag], [MLI.GetNameWithFlag], [NGR.GetNameWithFlag], [MRT.GetNameWithFlag], [ZZB.GetNameWithFlag] §! to the §YIstanbul Pact§!\n\nUnlock £decision_icon_small §YDecisions§! to invite §C [MOR.GetNameWithFlag], [ALG.GetNameWithFlag], [TUN.GetNameWithFlag], [LBA.GetNameWithFlag], [EGY.GetNameWithFlag], [SUD.GetNameWithFlag], [SOM.GetNameWithFlag], [CHA.GetNameWithFlag], [MLI.GetNameWithFlag], [NGR.GetNameWithFlag], [MRT.GetNameWithFlag], [ZZB.GetNameWithFlag], [CAR.GetNameWithFlag] §! to the §YAssociation of Muslim Nations§!"
+ ott_maghrebi_frontier_tt: "Unlock £decision_icon_small §YDecisions§! to invite §C [MOR.GetNameWithFlag], [ALG.GetNameWithFlag], [TUN.GetNameWithFlag], [SOM.GetNameWithFlag], [CHA.GetNameWithFlag], [MLI.GetNameWithFlag], [NGR.GetNameWithFlag], [MRT.GetNameWithFlag], [ZAN.GetNameWithFlag] §! to the §YIstanbul Pact§!\n\nUnlock £decision_icon_small §YDecisions§! to invite §C [MOR.GetNameWithFlag], [ALG.GetNameWithFlag], [TUN.GetNameWithFlag], [LBA.GetNameWithFlag], [EGY.GetNameWithFlag], [SUD.GetNameWithFlag], [SOM.GetNameWithFlag], [CHA.GetNameWithFlag], [MLI.GetNameWithFlag], [NGR.GetNameWithFlag], [MRT.GetNameWithFlag], [ZAN.GetNameWithFlag], [CAR.GetNameWithFlag] §! to the §YAssociation of Muslim Nations§!"
  ott_arab_peninsula_tt: "Unlock £decision_icon_small §YDecisions§! to invite §C [JBS.GetNameWithFlag], [OMA.GetNameWithFlag] §! to the §YIstanbul Pact§!\n\nUnlock £decision_icon_small §YDecisions§! to invite §C [JBS.GetNameWithFlag], [OMA.GetNameWithFlag], [YEM.GetNameWithFlag] §! to the §YAssociation of Muslim Nations§!"
  ott_orient_tt: "Unlock £decision_icon_small §YDecisions§! to invite §C [AZR.GetNameWithFlag], [AFG.GetNameWithFlag] §! to the §YIstanbul Pact§!\n\nUnlock £decision_icon_small §YDecisions§! to invite §C [AZR.GetNameWithFlag], [PER.GetNameWithFlag], [TRK.GetNameWithFlag], [BUK.GetNameWithFlag], [KHI.GetNameWithFlag], [ALO.GetNameWithFlag], [AFG.GetNameWithFlag], [KUM.GetNameWithFlag], [ETS.GetNameWithFlag], [INS.GetNameWithFlag], [MAL.GetNameWithFlag], [SAR.GetNameWithFlag] §! to the §YAssociation of Muslim Nations§!"
  ott_gamble_caucasus_tt: "§C[AZR.GetNameWithFlag]§! will be brought into our sphere in exchange for §YReichspakt§! membership"
@@ -218,7 +220,6 @@
  ott_but_purging_is_cooler_tt: "Enables §YPurge Disloyal Elements§! state interaction\n\n"
  ott_centralisation_army: "$ott_centralisation_add_tooltip$\n$MODIFIER_POLITICAL_POWER_FACTOR$: §G+1%§!\nRecovery Rate: §G+1%§!\n$MODIFIER_ARMY_ORG_FACTOR$ Factor: §G+1%§!\nAir Superiority: §G+1%§!\n$modifier_production_speed_arms_factory_factor$: §G+1%§!\n\n"
  ott_reorganisation_commision: "\n§RDisables§! the §YLoosen Tax Burden§! state interaction\n§RDisables§! the §YIncrease Tax Burden§! state interaction\n§GUnlocks§! the §YCrush Corruption§! state interaction\n§GUnlocks§! the §YFocus Relief Efforts§! state interaction"
- OTT_desert_tt: "§GOttoman Desert Corps§! will help us control desert areas better.\n§ROttoman Desert Rangers§! now patrol the wastes\n"
  ott_army_tree_tt: "Has completed focus §YBalance the Budget§!"
  OTT_every_islamic_country: "Every Islamic country"
  OTT_armor_division_template_gained: "Gain 2 £nato_unit_light_armor_icon_small  §YZirhli Alayi§! with 4 §YLight Armour§! and 2 §YMotorized§! battalions, 1 §YSupport Artillery§! support group, 1 §YEngineer§! support group, and 1 §YMotorised Recon§! support group.\n\n"
@@ -238,7 +239,6 @@
 
 ### Country Flags
  free_press: "Freedom of Press is guaranteed by the Constitution"
- ott_millet_full_reform: "Millet protected education has been abolished"
  separated_church_state: "The Constitution pursues a Secularist Agenda"
  ott_sharif_abolished: "$has_completed_decision$ $OTT_ARA_Abolish_Sharif$§!"
  sharif_dead: "The Grand Sharif of Mecca has passed away"
@@ -247,12 +247,10 @@
  ott_abolished_royal_pardon: "The Constitution has abolished the Royal Pardon"
  ott_language_reformed_flag: "The Türk Dil Kurumu has been created"
  ott_halkevleri_created: "The Halkevleri have been created"
- ott_aze_arrangement: "§YBaku Accords have been signed§!"
  mecelle_kept: "The Mecelle remains the centrepiece of Ottoman Law"
  retarded_legal_system: "Legal System has been decentralised"
  ASY_got_an_ass_whooping: "The Assyrian Levies have been dismantled"
  black_monday_yeet: "The effects of Black Monday are gone"
- AXIS_VICTORY: "The Cairo Pact is victorious"
  EGY_CONQ: "Annexed Egypt"
  expanded_millets: "The Millets have been expanded"
  ziraat_bypass: "Ziraat Bankasi has been established"
@@ -261,7 +259,6 @@
  ott_millet_mektepleri_prereq_tt: "Has completed focus §YMillet Mektepleri§!\n"
 
 ### Global Flags
- OTT_Surrender: "The Ottomans have been defeated."
  SUEZ_SUCCESS: "The §GPort Said Convention§! has been signed"
  SUEZ_CANAL_BLOCKED: "The Suez Canal is blocked"
  SUEZ_REOPENED: "The Suez Canal will be §Hreopened§!."
@@ -274,13 +271,11 @@
  ott_increase_syr_int_5: "Increase §YIntegration of the Syrian Vilayets§! by §G5%§!"
  ott_increase_syr_int_10: "Increase §YIntegration of the Syrian Vilayets§! by §G10%§!"
  ott_increase_syr_int_20: "Increase §YIntegration of the Syrian Vilayets§! by §G20%§!"
- ott_increase_syr_int_40: "Increase §YIntegration of the Syrian Vilayets§! by §G40%§!"
  ott_set_integration_syr_100: "Increases §YIntegration of the Syrian Vilayets§! to §G100%§!"
 
 # Greek Islands
  ott_increase_gre_int_5: "Increase §YIntegration of the Greek Insular Vilayets§! by §G5%§!"
  ott_increase_gre_int_10: "Increase §YIntegration of the Greek Insular Vilayets§! by §G10%§!"
- ott_increase_gre_int_15: "Increase §YIntegration of the Greek Insular Vilayets§! by §G15%§!"
  ott_increase_gre_int_20: "Increase §YIntegration of the Greek Insular Vilayets§! by §G20%§!"
 
 # Kurdistan
@@ -290,17 +285,13 @@
 
 # Hejaz
  ott_decrease_hej_int_5: "Decrease §YIntegration of the Arab Peninsular Vilayets§! by §R5%§!"
- ott_decrease_hej_int_15: "Decrease §YIntegration of the Arab Peninsular Vilayets§! by §R15%§!"
  ott_increase_hej_int_5: "Increase §YIntegration of the Arab Peninsular Vilayets§! by §G5%§!"
- ott_increase_hej_int_10: "Increase §YIntegration of the Arab Peninsular Vilayets§! by §G10%§!"
- ott_increase_hej_int_15: "Increase §YIntegration of the Arab Peninsular Vilayets§! by §G15%§!"
  ott_increase_hej_int_20: "Increase §YIntegration of the Arab Peninsular Vilayets§! by §G20%§!"
 
 # Iraq
  ott_increase_irq_int_5: "Increase §YIntegration of the Mesopotamian Vilayets§! by §G5%§!"
  ott_decrease_irq_int_5: "Decrease §YIntegration of the Mesopotamian Vilayets§! by §R5%§!"
  ott_increase_irq_int_10: "Increase §YIntegration of the Mesopotamian Vilayets§! by §G10%§!"
- ott_increase_irq_int_15: "Increase §YIntegration of the Mesopotamian Vilayets§! by §G15%§!"
  ott_increase_irq_int_20: "Increase §YIntegration of the Mesopotamian Vilayets§! by §G20%§!"
  ott_set_integration_irq_100: "Increases §YIntegration of the Iraqi Vilayets§! to §G100%§!"
 
@@ -615,15 +606,11 @@
  OTT_t_nat_support_header: "§CT. Nationalist§!: §G[?OTT.nat_tur_sup_deputies]§!/[?OTT.nat_tur_deputies]"
  OTT_ind_support_header: "§CIndependent§!: §G[?OTT.ind_sup_deputies]§!/[?OTT.ind_deputies]"
 
- ott_small_support_congress_tt: "More than §Y124 deputies§! support us in the §CMeclis-i Mebusân§!"
- ott_plurality_congress_tt: "More than §Y249 deputies§! support us in the §CMeclis-i Mebusân§!"
-
  ott_small_support_congress_deficit_tt: "§gSince we have less than §Y124 £deputies_texticon deputies§! on our side in the §CMeclis-i Mebusân§! (§Wcurrent : §Y[?OTT.representatives_support]§! £deputies_texticon §!), we will receive the following effects:§!\n"
  ott_plurality_congress_deficit_tt: "§gSince we have less than §Y249 £deputies_texticon deputies§! on our side in the §CMeclis-i Mebusân§! (§Wcurrent : §Y[?OTT.representatives_support]§! £deputies_texticon §!), we will receive the following effects:§!\n"
 
  more_tur_than_ara_tt: "more Turkish nationalist £deputies_texticon §Ydeputies§! than Arab nationalist £deputies_texticon §Ydeputies§!"
 
- 75_con_opp_tt: "\n§Y75 £deputies_texticon deputies§! from the conservatives join the §Ropposition§!"
  50_con_opp_tt: "\n§Y50 £deputies_texticon deputies§! from the conservatives join the §Ropposition§!"
  30_con_opp_tt: "\n§Y30 £deputies_texticon deputies§! from the conservatives join the §Ropposition§!"
  30_con_sup_tt: "\n§Y30 £deputies_texticon deputies§! from the conservatives join the §Gcoalition§!"
@@ -679,7 +666,7 @@
  OTT_Commision_Ottomanish_Language: "Reform the Ottoman Language"
  OTT_Commision_Ottomanish_Language_desc: "Based on a Perso-Arabic script, many of the more radical reformers within the Party believe the Ottoman language is needlessly complicated and therefore hindering literacy programmes. They have therefore pushed towards the adoption of the Latin Script with the necessary adjustments to fit the Turkish language."
  OTT_Reform_Millet_System: "Reform the Millet System"
- OTT_Reform_Millet_System_desc: "The Millet System was a creation to ensure that Ottoman citizens who did not practice the Islamic faith could govern themselves and as such limit sectarian conflict. This has over the years however, led to non-Muslim citizens almost completely detaching themselves from the Empire, and has encouraged the disaster that followed in the Balkans. With a new Civil Code, surely this system is no longer necessary?"
+ OTT_Reform_Millet_System_desc: "The Millet System was a creation to ensure that Ottoman citizens who did not practise the Islamic faith could govern themselves and as such limit sectarian conflict. This has over the years however, led to non-Muslim citizens almost completely detaching themselves from the Empire, and has encouraged the disaster that followed in the Balkans. With a new Civil Code, surely this system is no longer necessary?"
 
  OTT_Ottoman_Constitution: "Procuring a New Constitution"
  OTT_Ottoman_Constitution_desc: "Our current constitution dates from 1876 when Abdulhamid II was forced to concede power to the Young Ottomans. Despite a temporary setback between 1878-1908, this same constitution would be brought back by the Young Turks during the constitutional revolution. Many believe the document is dated however and gives unnecessary power to the office of the Sultan. A revision is in order!"
@@ -748,7 +735,7 @@
  OTT_Handle_the_Yemeni_Affair: "Handle the Yemeni Affair"
  OTT_Handle_the_Yemeni_Affair_desc: "The Imam has made the crucial mistake to doubt Ottoman superiority on the field of battle and has as such thrown away any chances at retaining the special status of his realm. Holed up in their mountains and believing themselves untouchable by the Ottoman Army, they are in for a rude awakening..."
  OTT_Lift_Military_Restrictions: "Lift Military Restrictions"
- OTT_Lift_Military_Restrictions_desc: "As part of the treaty imposed on the Egyptian state after their defeat in the Levantine war, the size of their military was limited to 20.000 as to not present a threat to our interests. The rise of tensions across the world however and the vulnerability of the Canal and the Libyan flank have made us consider lifting these limitations and use the Egyptian manpower to defend the Caliphate."
+ OTT_Lift_Military_Restrictions_desc: "As part of the treaty imposed on the Egyptian state after their defeat in the Levantine war, the size of their military was limited to 20.000 as to not present a threat to our interests. The rise of tensions across the world however and the vulnerability of the Canal and the Libyan flank have made us consider lifting these limitations and using the Egyptian manpower to defend the Caliphate."
  OTT_United_Once_More: "United Once More"
  OTT_United_Once_More_desc: "The disaster that befell the Ottoman state in the 19th century and which was only aggravated at the turn of the 20th century has now been corrected as Istanbul and Cairo are now finally reunited! To prevent this from happening again however, the government has decreed an extensive reorganisation of both parts of the Empire including economic, administrative and cultural adjustments."
  OTT_Haifa_Cairo_Railroad: "Construct the Haifa-Cairo Railroad"
@@ -859,7 +846,7 @@
  OTT_Raise_Import_Tariffs: "Raise Import Tariffs"
  OTT_Raise_Import_Tariffs_desc: "To encourage domestic industry and prevent reliance on foreign construction materials and basic consumer goods, the government will raise import tariffs substantially. Although this is a great boon for the nascent Anatolian industry, many in Beirut, Alexandretta and Haifa fear that this will greatly damage their status as gateways to the Orient."
  OTT_Restrict_Foreign_Exchange_Regime: "Restrict Foreign Exchange Regime"
- OTT_Restrict_Foreign_Exchange_Regime_desc: "Lack of confidence in the Ottoman government has pushed many investors to sell off their Liras in favour of foreign currencies in recent months, to the detriment of its value. By restricting our domestic investors' capacity to sell off their Lira's we can strengthen our currency compared to the leading currencies of the world like the Mark."
+ OTT_Restrict_Foreign_Exchange_Regime_desc: "Lack of confidence in the Ottoman government has pushed many investors to sell off their Liras in favour of foreign currencies in recent months, to the detriment of its value. By restricting our domestic investors' capacity to sell off their Liras, we can strengthen our currency compared to the leading currencies of the world like the Mark."
  OTT_Quantity_Restrictions_Import: "Impose Quantity Restrictions on Import"
  OTT_Quantity_Restrictions_Import_desc: "Whilst the government aims to create a strong local industry, it too often finds itself relying on goods imported from the Donau-monarchy or the German Empire. Steel, machinery, chemicals, etc. are all imported which makes us not only reliant on those nations, but greatly hampers domestic goods as they can't compete with the cheap export products of the larger manufactures abroad."
  OTT_Ziraat_Bankasi_Credit: "Ziraat Bankasi Credit Programme"
@@ -911,7 +898,7 @@
  OTT_Abolish_Mecelle_Fevzi: "Abolish the Mecelle Code"
  OTT_Abolish_Mecelle_Fevzi_desc: "Following the suggestions made by the Judicial Commission, the time has finally come to rid ourselves of the Mecelle. A new civil code, fully secular in nature, will treat all Ottoman citizens as equals and will show the desire to tear down the last conservative anchor points."
  OTT_Reform_the_Millet_System: "Reform the Millet System"
- OTT_Reform_the_Millet_System_desc: "The Millet System was a creation to ensure that Ottoman citizens who did not practice the Islamic faith could govern themselves, and as such, limit sectarian conflict. This has over the years however led to non-Muslim citizens almost completely detaching themselves from the Empire, and has encouraged the disaster that followed in the Balkans. With a new Civil Code, surely this system is no longer necessary?"
+ OTT_Reform_the_Millet_System_desc: "The Millet System was a creation to ensure that Ottoman citizens who did not practise the Islamic faith could govern themselves, and as such, limit sectarian conflict. This has over the years however led to non-Muslim citizens almost completely detaching themselves from the Empire, and has encouraged the disaster that followed in the Balkans. With a new Civil Code, surely this system is no longer necessary?"
  OTT_Confiscate_Privy_Purse_Holdings: "Confiscate the Privy Purse Holdings"
  OTT_Confiscate_Privy_Purse_Holdings_desc: "Although the power of the monarchy has seen a steady decline these last few decades under the supervision of ambitious party figures, the crown is still the direct owner of vast swathes of the empire and uses these lands for their own benefit and enrichment. That they are depriving the state of resources in a state of crisis should be unacceptable and will only fund the religious extremists."
  OTT_Marechal_Nous_Voila: "\"Mareşal biz buradayız!\""
@@ -922,6 +909,16 @@
  OTT_Consolidate_Military_Dictatorship_desc: "Even though the Marshal supports the notion of democracy, and initially planned an immediate return to parliamentary rule, he has steadily grown disillusioned with the political establishment. Seeing them as a disease weakening the empire from the inside, perfidious voices all around him have urged the Marshal to maintain military rule on the state until we can be absolutely sure our interests are safe."
  OTT_Lift_State_of_Emergency: "Lift the State of Emergency"
  OTT_Lift_State_of_Emergency_desc: "Although the Marshal has shown his clear disgust for the weakness of the decentralists which has led to the crisis the empire only recently has been plummeted in, he still supports the notion of democracy and with the nation stabilised and the economy recovering, he has in cooperation with various political figures decided to hand power back to the establishment and lift the state of emergency."
+ OTT_reorganize_the_military: "Reorganise the Military"
+ OTT_reorganize_the_military_desc: "The Ottoman army has suffered too many setbacks and its incompetence is linked to its connection to politics. Now that the Marshal has his hand on the power, everything must start with a reorganization of the army.Officers must review new battle plans and soldiers return to training."
+ OTT_infallible_army: "An Infallible Army"
+ OTT_infallible_army_desc: "The Ottoman army was given a complete review. The efficiency of the soltats must have been greatly improved. It should be able to protect the empire and the state in case of war."
+ OTT_relinquish_some_powers: "Relinquish Certain Powers"
+ OTT_relinquish_some_powers_desc: "Although the Marshal leads the nation with an iron fist, he is a wise man. He knows that the Ottoman Empire so vast could not be ruled by a small group of men without failing. He therefore proposed certain alliances to the democrats to maintain stability and a semblance of democracy."
+ OTT_cautious_progress: "Cautious Progress"
+ OTT_cautious_progress_desc: "Progress was the very lifeblood of the OHF and its predecessors' government. Now that he has taken over the Marshal must remain in continuity. However, he has understood that too many reforms are detrimental to the stability of the country. It is necessary to be careful and to take the time to make the people accept them."
+ OTT_new_military_dictatorship: "A New Military Dictatorship"
+ OTT_new_military_dictatorship_desc: "20 years after the fall of the CUP triumvirate, a new dictatorship rules the empire. This time led by a single, confident man. It will put the empire back on the right track and lead it to make the right choices for the future of the Ottoman state."
 
  OTT_Enshrine_Endeavour_Front: "Enshrine the 'Endeavour Front'"
  OTT_Enshrine_Endeavour_Front_desc: "Including key politicians from all factions, both decentralist and centralist, this 'Endeavour' front strives to provide a stable transitional government until all foreign threats have abated and the internal situation has been pacified. Consisting largely of military figures loyal to either the OHF or DF, the front nonetheless also includes various Arabs and other minorities to ensure a lasting peace."
@@ -1228,6 +1225,15 @@
 
  ott_widespread_illiteracy_fevzi: "Widespread Illiteracy"
  ott_widespread_illiteracy_fevzi_desc: "Illiteracy is widespread amongst the common people of the empire, as both the difficulty of the Perso-Arabic script and a general disinterest of the lower classes to even bother learning to read, is greatly hampering the industrialisation of our grand empire."
+
+ ott_fevzi_reorganize_military: "Military Reorganisation"
+ ott_fevzi_reorganize_military_desc: ""
+
+ ott_fevzi_military_einforced: "Infallible Army"
+ ott_fevzi_military_einforced_desc: ""
+
+ ott_fevzi_cautious_reforms: "Cautious Reforms"
+ ott_fevzi_cautious_reforms_desc: ""
 
 ### Political (Sabahattin)
  ott_private_initiative: "Encouraged Private Initiative"
@@ -1548,9 +1554,8 @@
  ottpol.30.a: "Splitters!"
 
  ottpol.31.t: "[GetYear] Emergency Elections"
- ottpol.31.d: "Caused by the fall of the OHF government, the various peoples of the Empire have once more been called to the ballots to decide the future of the Eternal State. Torn apart by an internal divide, the OHF seems primed to suffer a massive defeat as many voters are likely to jump ship over to the new DP. Nonetheless, the HIF has also been polling well as many of the elite fear that the DP is just another wolf in sheep clothes."
- ottpol.31.a: "DP Victory"
- ottpol.31.b: "HIF Victory"
+ ottpol.31.d: "Caused by the fall of the OHF government, the various peoples of the Empire have once more been called to the ballots to decide the future of the Eternal State. Torn apart by an internal divide, the OHF seems primed to suffer a massive defeat as many voters are likely to jump ship over to the new DF. Nonetheless, the HIF has also been polling well as many of the elite fear that the DF is just another wolf in sheep clothes."
+ ottpol.31.a: "HIF Victory"
 
 ### Successful Assassination Attempt
  ottpol.32.t: "A Sunny Day in Izmir"
@@ -1589,8 +1594,7 @@
 
  ottpol.40.t: "Ottoman Elections of [GetYear]"
  ottpol.40.d: "With the untimely death of our former Grand Vizier and the subsequent power struggle within the OHF, new elections have been written out by Sultan [OTT.GetLeader] to ensure a stable and democratically elected succession. Military interference in its affairs however indicates that without their link through Mustafa Kemal, the army may soon start playing a more direct role in politics and push the nation more on a course they prefer. Either way many fear that these elections are only the beginning and that the situation will remain unstable for the foreseeing future."
- ottpol.40.a: "OHF retains dominance"
- ottpol.40.b: "Liberal Entente retakes the majority"
+ ottpol.40.a: "Liberal Entente retakes the majority"
 
  ottpol.41.t: "Military Launches Coup"
  ottpol.41.d: "What many feared would come has been confirmed earlier today as Fevzi Pasha has officially declared the state of emergency postponing elections indefinitely and closing parliament until further notice. Having both the army and a large part of the OHF network on his side, it seems unlikely that this will only be for a short duration and many fear that a military dictatorship may be here to stay after the assassination of the Grand Vizier only a few weeks earlier. To counter possible resistance in the outer vilayets all Walis have been recalled to the capital to discuss further policy and likely be replaced by military men loyal to the new regime. Over in Kostantiniyye itself, Ismet Pasha has been appointed Grand Vizier to ensure a steady hand in day to day affairs but within the political circles it is clear to most that he has mostly been appointed to the position as a puppet for Fevzi's regime."
@@ -1668,7 +1672,6 @@
  ottkem.15.t: "Ottoman Constitution - Sovereign Rights of the Sultan"
  ottkem.15.d: "Article 7. Among the sacred prerogatives of the Sultan are the following: The mention of his name in prayers; the minting of money; the granting of high public offices and titles, according to the law ad hoc; the conferring of orders; the selection and appointment of the Grand Vizier and the Seyhülislam; the confirmation in their offices of the members of the Cabinet formed and proposed by the Grand Vizier, and, if need arise, the dismissal and replacement of Ministers according to established practice;"
  ottkem.15.a: "Approved."
- ottkem.15.b: "Constrain the Imperial prerogatives."
 
  ottkem.16.t: "Ottoman Constitution - Basic Human Rights"
  ottkem.16.d: "Article 10. All subjects of the empire are called Ottomans, without distinction whatever faith they profess.\n\nArticle 11. Every Ottoman enjoys personal liberty on condition of not interfering with the liberty of others.\n\nArticle 12. Personal liberty is wholly inviolable. No one can suffer punishment, under any pretext whatsoever, except in cases determined by law, and according to the forms prescribed by it.\n\nArticle 13. All Ottomans are equal in the eyes of the law. They have the same rights, and owe the same duties towards their country, without prejudice to religion.\n\nArticle 14. All Ottomans are admitted to public offices, according to their fitness, merit, and ability."
@@ -1788,7 +1791,6 @@
  ottkem.40.t: "Reports of a Conspiracy against the Sultan"
  ottkem.40.d: "Troubling news arose earlier this week as the Milli Emniyet Hizmeti started picking up the trail of a conspiracy against the Sultan and the government in general. Consisting of a radicalised core of former CUP supporters, an anonymous source tipped off the Kostantiniyye police warning them of a coming plot to assassinate both the Sultan and the Grand Vizier, assert control over the Porte and crown a new Sultan subservient to their cause. Amongst the conspirators various members of the old CUP Teskilât-i Mahsusa (Special Organisation) of Enver Pasha, many still placed in high positions within the army and security forces. The size of the network is hard to estimate, as bad communication with the Eastern provinces where various groups loyal to Envers former Army of Islam still roam, hindering the gendarmerie’s ability to conduct a full investigation."
  ottkem.40.a: "Order the arrest of Kara Kemal and place the suspects under House Arrest!"
- ottkem.40.b: "This is clearly a hornet's nest, end the investigation."
 
  ottkem.41.t: "Constantinople Corps Prevents Arrests"
  ottkem.41.d: "Police officers attempting to arrest Kara Kemal and 7 other politicians were blocked by soldiers of the Constantinople Corps today. Army units prevented the arrests and took Kara Kemal and the others into hiding at an unknown location. There is great confusion as to what is happening."
@@ -2281,7 +2283,7 @@
  otteco.5.a: "Splendid!"
 
  otteco.6.t: "Completion of the Kut Barrage"
- otteco.6.d: "To maintain a high enough water level in the Tigris to sustain the Gharraf irrigation canal, around the city of Kut, construction was started by an Ottoman-Assyrian company in 1931 on a barrage. Works were temporarily halted in early 1936 as a major flood on the Tigris river, flooded the construction site which delayed the works for another 6 months.\n\nConstruction of the barrage was carried out by 2,500 Arab and Assyrian workers, and involved the removal of 1,223,288 cubic metres (1,600,000 cu yd) of ground whilst for the barrage itself 191,139 cubic metres (250,000 cu yd) of concrete was used. "
+ otteco.6.d: "To maintain a high enough water level in the Tigris to sustain the Gharraf irrigation canal, around the city of Kut, construction was started by an Ottoman-Assyrian company in 1931 on a barrage. Works were temporarily halted in early 1936 as a major flood on the Tigris River, flooded the construction site which delayed the works for another 6 months.\n\nConstruction of the barrage was carried out by 2,500 Arab and Assyrian workers, and involved the removal of 1,223,288 cubic metres (1,600,000 cu yd) of ground whilst for the barrage itself 191,139 cubic metres (250,000 cu yd) of concrete was used. "
  otteco.6.a: "Splendid!"
 
  otteco.7.t: "The Iraqi Concession"
@@ -2502,7 +2504,7 @@
  ottfla.10.a: "Onwards we march!"
 
  ottfla.11.t: "Creation of the State Airlines General Directorate"
- ottfla.11.d: "Seen as one of the most vital technological advancements of our era, the Ottoman government has always had a keen interest in the field of aviation, as its potential for partisan suppression and quick communication are essential for maintaining the integrity of the Sublime State. Besides military applications however, there has been a growing interest into the potential of civilian transportation by air from the centre to the periphery.\n\nTo cater to this demand, the government has struck a partnership with the German aircraft manufacturer Junkers to enable the construction of license built planes within the Ottoman Empire. Even though the Empire doesn't readily possess the technological prowess or degree of industrialisation to mass produce aircraft, this sector of the industry has been absorbed into the state directives as essential to the interests of the Ottoman state.\n\nThe current airline, operated by the Ministry of Defence, has also been rebranded into the State Airlines General Directorate and folded into the Department of Transportation. Whilst ambitious plans for an airport in Kostantiniyye have also been drafted up, the lack of funding has postponed these indefinitely with the already collected funding instead shifted towards the expansion of air strips in Baghdad, Beirut, Mecca and Misurata."
+ ottfla.11.d: "Seen as one of the most vital technological advancements of our era, the Ottoman government has always had a keen interest in the field of aviation, as its potential for partisan suppression and quick communication are essential for maintaining the integrity of the Sublime State. Besides military applications however, there has been a growing interest into the potential of civilian transportation by air from the centre to the periphery.\n\nTo cater to this demand, the government has struck a partnership with the German aircraft manufacturer Junkers to enable the construction of licence built planes within the Ottoman Empire. Even though the Empire doesn't readily possess the technological prowess or degree of industrialisation to mass produce aircraft, this sector of the industry has been absorbed into the state directives as essential to the interests of the Ottoman state.\n\nThe current airline, operated by the Ministry of Defence, has also been rebranded into the State Airlines General Directorate and folded into the Department of Transportation. Whilst ambitious plans for an airport in Kostantiniyye have also been drafted up, the lack of funding has postponed these indefinitely with the already collected funding instead shifted towards the expansion of air strips in Baghdad, Beirut, Mecca and Misurata."
  ottfla.11.a: "We take to the skies!"
 
  ottfla.12.t: "[TUR.GetNameDefCap] Celebrates Eid-ul-Fitr"
@@ -2549,18 +2551,6 @@
  ottfla.22.t: "Fahrettin Pasha Appointed Governor of Jerusalem"
  ottfla.22.d: "While the Great Syrian Revolt has been crushed for good, unrest in the areas around Jerusalem has not yet ended, mainly propagated by small groups of rebels clashing with government troops and Zionist militias. To that end, Fahrettin Pasha a relatively uncontroversial military man associated with the OHF has been appointed as the regional governor with the task of ensuring the region's compliance."
  ottfla.22.a: "Best of luck to him."
-
-###########
-# REVOLTS #
-###########
-# Loss of Tripolitania
- ottrev.3.t: "Trouble in [LBA.GetName]"
- ottrev.3.d: "Although Ottoman troops fought side by side with the Senoussis during the Weltkrieg, the region has drifted away from Kostantiniyye ever since the Turkish-Italian war. The Egyptians, well aware of this, have been exploiting the rift the past decades and as the Porte itself went for a decisively secularist and centralist policy over the years, [LBA.GetName] has looked for an alternative. With tensions mounting in the Mashriq, and with Egyptian ambitions on it becoming more and more clear, border transgressions have increased as well arming revolutionaries and anti-Ottoman rebel groups."
- ottrev.3.a: "Most disturbing."
-
- ottrev.4.t: "[LBA.GetName] Severs Ties with the Sublime Porte"
- ottrev.4.d: "Our old ally, Ahmed Sharif I Al Senoussi, was deposed earlier this week as the Egyptian backed Idris has triumphantly returned to his homeland. The new leader is not planning on hiding his intentions, as earlier today he publicly announced an alliance between his kingdom and the Sultanate of Egypt. The Ottoman military mission which was training with Libyan forces outside the city of Tobruk has been immediately kicked out to the outrage of our government who see in this nothing but an imperialist move by the Egyptians."
- ottrev.4.a: "They will pay for this!"
 
 ##################
 # FOREIGN POLICY #
@@ -2650,7 +2640,6 @@
  ottfor.20.t: "A Tale of Two"
  ottfor.20.d: "Throughout the long existence of the Ottoman Empire, only few have proven to be as worthy a rival as the Austrian Empire. Time upon time again, war between our two grand empires has led to border shifts in the Balkans, with consequences still unwinding up to this day. Nonetheless, times have changed and what once might have seen impossible is now closer than ever before.\n\nBased around an idea propagated by the Konstantinopolis Macar Bilim Enstitüsü (Hungarian Academy in [773.GetCapitalVictoryPointName]), and with timid approval from our Grand Vizier, ambassadors both in Vienna and [TUR.Capital.GetCapitalVictoryPointName] have been working around the clock to improve ties between the two empires in a time where Prussian domination and radical political change are rocking the world as we know it. Even though initial response to the idea of camaraderie has been positive, many still question how far this relation should go, with some suggesting a mere exchanging of pleasantries, whilst others are pushing for something far more.\n\nThe Balkans, the primary battlefield of old between us and them, remains a divisive subject as the lack of strong Austrian-Ottoman response in recent years to its significant political developments has greatly reduced both the influence and capacity to uphold the status quo. Although the shape of a stable and ideal Balkan theatre remains different in [TUR.Capital.GetCapitalVictoryPointName] and Vienna, both want to ensure peace in the region with no local power capable of challenging themselves."
  ottfor.20.a: "Send orders to our Ambassador to pursue further cooperation."
- ottfor.20.b: "Some wounds just cannot be closed..."
 
  ottfor.21.t: "A Tale of Two"
  ottfor.21.d: "Throughout the long existence of the Ottoman Empire, only few have proven to be as worthy a rival as the Austrian Empire. Time upon time again, war between our two grand empires has led to border shifts in the Balkans, with consequences still unwinding up to this day. Nonetheless, times have changed and what once might have seen impossible is now closer than ever before.\n\nBased around an idea propagated by the Konstantinopolis Macar Bilim Enstitüsü (Hungarian Academy in [773.GetCapitalVictoryPointName]), and with timid approval from our Grand Vizier, ambassadors both in Vienna and [TUR.Capital.GetCapitalVictoryPointName] have been working around the clock to improve ties between the two empires in a time where Prussian domination and radical political change are rocking the world as we know it. Even though initial response to the idea of camaraderie has been positive, many still question how far this relation should go, with some suggesting a mere exchanging of pleasantries, whilst others are pushing for something far more.\n\nThe Balkans, the primary battlefield of old between us and them, remains a divisive subject as the lack of strong Austrian-Ottoman response in recent years to its significant political developments has greatly reduced both the influence and capacity to uphold the status quo. Although the shape of a stable and ideal Balkan theatre remains different in [TUR.Capital.GetCapitalVictoryPointName] and Vienna, both want to ensure peace in the region with no local power capable of challenging themselves."
@@ -2942,7 +2931,7 @@
  ottfor.66.b: "Propose an Ottoman-Russian split of the Persian Empire."
 
  ottfor.67.t: "The Ottomans Propose an Iranian Buffer State"
- ottfor.67.d: "Split in two by the Anglo-Russian Convention before the Weltkrieg, the collapse of first the Russian and later the British Empire, have granted Persia a moment of respite, as it was able to turn inwards and restructure its struggling state apparatus. Nonetheless, it has not been able to remain at peace, as renewed border conflicts with our Empire over Iraqi Kurdistan and the Persian Gulf have placed the old rivals against each other with the daggers drawn.\n\nWith Russian interference bearing down on Central Asia and the Caucasus, they have seen it necessary to ensure the survival of an independent Iranian buffer state which prevents Russian access to the Persian Gulf and safeguards their Eastern flank. Whilst this offer has not been outright rejected, hawks in Moscow are pushing for a stricter delineation and the split of the Iranian nation in spheres of influence, much like the old convention. Herein they see Khuzestan, Kurdistan and the land West of lake Urmiah as falling within the Ottoman sphere and the rest as governed by a Russian puppet in Teheran."
+ ottfor.67.d: "Split in two by the Anglo-Russian Convention before the Weltkrieg, the collapse of first the Russian and later the British Empire, have granted Persia a moment of respite, as it was able to turn inwards and restructure its struggling state apparatus. Nonetheless, it has not been able to remain at peace, as renewed border conflicts with our Empire over Iraqi Kurdistan and the Persian Gulf have placed the old rivals against each other with the daggers drawn.\n\nWith Russian interference bearing down on Central Asia and the Caucasus, they have seen it necessary to ensure the survival of an independent Iranian buffer state which prevents Russian access to the Persian Gulf and safeguards their Eastern flank. Whilst this offer has not been outright rejected, hawks in Moscow are pushing for a stricter delineation and the split of the Iranian nation in spheres of influence, much like the old convention. Herein they see Khuzestan, Kurdistan and the land West of Lake Urmiah as falling within the Ottoman sphere and the rest as governed by a Russian puppet in Teheran."
  # ->OTT 71:
  ottfor.67.a: "Agree with their terms."
  # ->OTT 69:
@@ -3017,7 +3006,7 @@
  ottfor.771.t: "The End of the Russo-Ottoman Convention"
  ottfor.771.d.TUR_war: "While our diplomats laboured in Baku to establish a detente with their Russian counterparts, it seems the left hand did not know what the right hand was doing. The outbreak of war with our giant northern neighbour has led to a hasty abandonment of the talks, despite an attempted intervention by Muslim clergy in the Northern Caucasus. It seems our sphere of influence in the Middle East and the Caucasus will be established by the blood of our gallant soldiers - or the Russians'"
  ottfor.771.d.TUR_russia_dead: "With the capitulation of the old Russian regime to invading forces, the Russian diplomats engaged with ours in Baku over a settlement in the Caucasus and Iran have packed their bags - either returning to Moscow to request positions in the new provisional government or fleeing into exile. The dramatic shift in the Russian geopolitical landscape has greatly relieved the Porte, however, and means that we can at least expect little aggression from the north for a brief while."
- ottfor.771.d.RUS_war: "With the outbreak of war with the Ottoman Empire, the Russo-Ottoman Convention has found itself void. As our diplomats secure safe passage back home, our armies have already started mobilization along the border with the Ottoman Empire. Due to the ongoing hostilities between our two nations, we no longer need to abide by terms of the Russo-Ottoman Convention."
+ ottfor.771.d.RUS_war: "With the outbreak of war with the Ottoman Empire, the Russo-Ottoman Convention has found itself void. As our diplomats secure safe passage back home, our armies have already started mobilisation along the border with the Ottoman Empire. Due to the ongoing hostilities between our two nations, we no longer need to abide by terms of the Russo-Ottoman Convention."
  ottfor.771.d.RUS_turkey_dead: "While our diplomats laboured in Baku to establish a detente with their Ottoman counterparts, it seems the left hand did not know what the right hand was doing. The Ottoman entrance into the war renders any possible deals with the old empire moot. A hasty intervention by religious affiliates of the government was unsuccessful in securing a continuation of diplomacy, and ambassadors and diplomatic staff have returned to their home countries, not to see their counterparts again until hostilities come to a close. Of course, Russian agents are still cultivating contacts with possible future friendly politicians within the fragile Ottoman edifice..."
  ottfor.771.a: "Very well."
 
@@ -3122,6 +3111,10 @@
  ottfor.98.d: "Azerbaijan has foolishly decided to ignore our request for aid against Iran, claiming that the situation is too dangerous for Azerbaijan to enter into a state of war against Iran. This betrayal, after all we have done to assist Azerbaijan. will not be forgotten. Regardless, we shall have to continue our struggle against the Iranian menace alone."
  ottfor.98.a: "Will no one stand by us?"
 
+ ottfor.100.t: "[From.Owner.GetName] Plans to Attack"
+ ottfor.100.d: "Pushed on the back foot, the Ottomans, according to our intelligence, have begun talks with Azerbaijan to open a second front in our north, and promise Iranian Azerbaijan to the Azeris. We must begin preparations against a potential assault immediately!"
+ ottfor.100.a: "Bastards"
+
 ####################
 ### GUI Elements ###
 ####################
@@ -3148,7 +3141,7 @@
  OTT_Action_Calm_Down_Local_Leaders_desc: "The current administration of the Vilayet has proven tricky to control with many of our local bureaucrats and administrative personnel deeply influenced by the opposition. To secure the loyalty of the Vilayet, we should recall our governor and replace them with more fitting personnel for faster integration in the future.\n\n[THIS.OTT_ACTION_CALM_DOWN_LOCAL_LEADERS_complete_check] All of the following must be true:\n   [THIS.OTT_ACTION_CALM_DOWN_LOCAL_LEADERS_focus_check] Has completed focus §YOHF Membership Reward Programme§!\n   [THIS.OTT_ACTION_CALM_DOWN_LOCAL_LEADERS_pp_check] More Political Power than §Y20§!\n\n§YEffect§!:\n§Y[THIS.GetName]§! £resistance_texticon  §Yunrest§! will §Gdecrease§!\nPolitical Power: §R-20§!"
 
  OTT_Action_Recruit_Local_Troops: "§YRecruit Local Troops§!"
- OTT_Action_Recruit_Local_Troops_desc: "The fate of the Caliphate hangs on a thread once more as war has reached our shores. All citizens must now rally to its banner to preserve both our honour and territorial integrity!\n\n[THIS.OTT_ACTION_RECRUIT_LOCAL_TROOPS_complete_check] All of the following must be true:\n   [THIS.OTT_ACTION_RECRUIT_LOCAL_TROOPS_war_check] At war\n   [THIS.OTT_ACTION_RECRUIT_LOCAL_TROOPS_focus_check] Has not completed focus §YReform the Conscription System§!\n   [THIS.OTT_ACTION_RECRUIT_LOCAL_TROOPS_xp_check] More than §Y30§! Army Experience\n   [THIS.OTT_ACTION_RECRUIT_LOCAL_TROOPS_control_check] Controlled by §H[From.GetNameDef]§!\n   [THIS.OTT_ACTION_RECRUIT_LOCAL_TROOPS_flag_check] Not: Has already raised irregulars in this state\n\n§YEffect§!:\n§Y[THIS.GetName]§! Create §YOttoman§! unit\nArmy experience: §R-30§!"
+ OTT_Action_Recruit_Local_Troops_desc: "The fate of the Caliphate hangs on a thread once more as war has reached our shores. All citizens must now rally to its banner to preserve both our honour and territorial integrity!\n\n[!OTT_Action_Recruit_Local_Troops_button_click_enabled]\n§YEffect§!:\n§Y[THIS.GetName]§!: [!OTT_Action_Recruit_Local_Troops_button_click]"
 
  OTT_Loosen_Tax_Burden: "§YLoosen Tax Burden§! [THIS.Corruption_Check]"
  OTT_Loosen_Tax_Burden_desc: "Support in the Ottoman Parliament depends on a lot of factors but what is still the most direct way to a man’s vote is that passing through his purse. First and foremost the deputies want extras for their own people, and coin thrown their way. Whilst this can be 'arranged' through tax exemption and the ability to avoid the dreaded draft for the Ottoman army, it goes without saying that this will greatly hamper the overall capacity of the government as corruption will likely skyrocket beyond control.\n\n[!OTT_Loosen_Tax_Burden_button_click_enabled]\n§YEffect§!:\n§Y[?THIS.deputy_calculator] £deputies_texticon deputies§! from the [THIS.OTT_LOOSEN_TAX_BURDEN_party] join the §Gcoalition§!\n§Y[THIS.GetName]§! Local Manpower: §R-25%§!\n§Y[THIS.GetName]§! £resistance_texticon  §Yunrest§! will §Gdecrease§!\nPolitical Power: §R-10§!"
@@ -3255,13 +3248,13 @@
  OTT_Population_Sivas_desc: "In poverty only second to Ankara, the Vilayet of Sivas is not a glamorous part of the Empire, and more often than not forgotten about in the capital. Its population, predominately Turkish peasants after the Armenian Massacres eradicated its middle class, is often used as one of the main manpower pools of the Empire as its population remains deeply loyal to the Ottoman government.\n\nPolitically the population, much like the other rural areas of Anatolia, has spoken out in favour of Kemal whose prestige and status during the final days of the Weltkrieg remains burned into their minds. Not only his success on the field flocks the Sivan population to his flag, as his plans to tackle religion in the empire have given hope to the Alevi population that their constant struggle with the Sunnis might finally come to an end."
 
  OTT_Population_Batumi: "Majority Culture: §YGeorgian§!, Lazi\nMajority Religion: §YOrthodox Christian§!"
- OTT_Population_Batumi_desc: "The ancient port city of Batumi lies on the coast of the Black Sea, between the mouth of the river Çoruh to its south and a natural harbour to its north. It is known for the high quality lemons that grow in the orchards around the town, and the botanical garden that was founded in 1912 grows all sorts of exotic plants and flora from the Caucasus. It came under the rule of the Sublime Porte in the 16th century, but it was lost in the war against Russia in 1878. With the victory in the Weltkrieg and the Treaty of Poti, it was returned to the Empire. Its harbour being a centre for trade on the periphery of the realm and the border to the Caucasus, Batumi's population is a diverse mix of Armenians, Turks, Russians, Greeks and the slight majority of Georgians. While economic interests bring the inhabitants together, the neighbouring state of Georgia has its eyes on what they believe to be rightfully theirs."
+ OTT_Population_Batumi_desc: "The ancient port city of Batumi lies on the coast of the Black Sea, between the mouth of the Çoruh River to its south and a natural harbour to its north. It is known for the high quality lemons that grow in the orchards around the town, and the botanical garden that was founded in 1912 grows all sorts of exotic plants and flora from the Caucasus. It came under the rule of the Sublime Porte in the 16th century, but it was lost in the war against Russia in 1878. With the victory in the Weltkrieg and the Treaty of Poti, it was returned to the Empire. Its harbour being a centre for trade on the periphery of the realm and the border to the Caucasus, Batumi's population is a diverse mix of Armenians, Turks, Russians, Greeks and the slight majority of Georgians. While economic interests bring the inhabitants together, the neighbouring state of Georgia has its eyes on what they believe to be rightfully theirs."
 
  OTT_Population_Lazistan: "Majority Culture: §YLazi§!, Turkish\nMajority Religion: §YSunni Muslim§!"
  OTT_Population_Lazistan_desc: "Inhabited by the Kartvelian Lazi minority, the Sandjak of Lazistan was a cosmopolitan society consisting of Greek, Turkish, Kurdish, Georgian, Armenian and Lazi people. Originally even claimed by the Armenian state, very little remains of its non-Muslim population as the massacres struck the area hard and thousands of Armenians were slaughtered during the Weltkrieg. Reprisals by Russo-Armenian troops before the 1917 revolution made matters even worse as the already exhausted population suffered another hit, now to its Sunni population. As the end of the Weltkrieg arrived for the Lazi people, their lands have been ravaged by war and constant migration. Their economy, based on agriculture (mainly the export of hazelnuts) and the exploitation of the Zinc mines, has not aged well either as many have permanently left the region in search of better lands.\n\nThe Lazi people share many similarities with the Georgian people further up North, and although the difference in religion between Christian Georgia and Muslim Lazistan have thus far led to little cooperation between the two regions, Georgian spies have been caught in the region who have supposedly been attempting to gather support for an anti-Ottoman insurrection. Their attempts seem to have failed however thus far as the Lazis are fairly content with our rule and have little faith in Georgian rule."
 
- OTT_Population_Kars: "Majority Culture: §YTurkish§!, Kurdish\nMajority Religion: §YSunni Muslim§!"
- OTT_Population_Kars_desc: "The Vilayet of Kars was seized by the Russian Empire after our defeat in the Russo-Ottoman war and has only fairly recently returned to the Empire. Decades of rule by the Russians and their Armenian allies, Armenians became a substantial minority in the Kars Oblast although never becoming more than a majority. The war has not been kind to this Armenian population however, as what once constituted 30% of the total population has now been reduced to the single digits, with those that remain afraid of further punitive actions by the Ottoman government. The nearby Armenian Vilayet has attracted many of the survivors of such atrocities as no attempt was made by the Ottoman Empire to stop them from leaving. What is left is a Muslim province inhabited by Turks and a Kurdish minority loyal to the Ottoman regime that has saved them from Russian advances and the Armenian reprisals.\n\nIts economy is solely based on agriculture, with the majority of its lands devoted to the cultivation of grain and the remaining part used for animal husbandry. Around the pastures of Ardahan and Kars there is also a sizeable beekeeping culture although its effects on the overall economy remain fairly low."
+ OTT_Population_Kars: "Majority Culture: §YTurkish§!, Kurdish, Armenian\nMajority Religion: §YSunni Muslim§!, Orthodox Christian"
+ OTT_Population_Kars_desc: "The Vilayet of Kars was seized by the Russian Empire after our defeat in the Russo-Ottoman War and has only fairly recently returned to the Empire. During decades of rule by the Russians and their Armenian allies, Armenians became a substantial minority in the Kars Oblast, making up as much as 30% of its population at the dawn of the century.\n\nWhilst the Weltkrieg has not been kind to the Empire's Armenian population, the people of Kars spent much of the conflict under Russian occupation and were thus largely spared from its hardships and atrocities. Following Russia's collapse into civil war and the subsequent Ottoman reclamation of the Empire's eastern territories, however, a fear of persecution led many Armenians to flee towards the east, hoping to find refuge in the mountains of their homeland. Nonetheless, with the war nearing its end and an Ottoman victory on the horizon, those who stayed behind were mostly left unharmed. Because of this, Armenians to this day make up a sizeable portion of the local folk in the eastern parts of the province, with the remainder of the population mainly consisting of Muslim Turks and a Kurdish minority loyal to the Ottoman regime that has saved them from Russian advances and the Armenian reprisals.\n\nIts economy is solely based on agriculture, with the majority of its lands devoted to the cultivation of grain and the remaining part used for animal husbandry. Around the pastures of Ardahan and Kars, there is also a sizeable beekeeping culture, although its effects on the overall economy remain fairly low."
 
  OTT_Population_Diyarbakir: "Majority Culture: §YKurdish§!, Turkish, Arab (Syrian)\nMajority Religion: §YSunni Muslim§!"
  OTT_Population_Diyarbakir_desc: "Part of the Kurdish core territories, the region of Diyarbakir is a prosperous albeit, agrarian, region as its capital, the city of Diyarbakir, is known as an important centre of learning and important city for the Muslim faith. Home of the Diyarbakir Ulu Camii, the fifth holiest site in Islam and one of the oldest churches in the world, the city and its region suffered greatly during the last years of the Weltkrieg, as illness, fire and misery plagued its population.\n\nServing as an important strategic location for the Ottoman armed forces on the Eastern flank of the Empire, it is closely supervised by the Empire in the hopes of avoiding another confrontation with the Kurdish people. Resistance to Kostantiniyye remains little for the moment, but fears of the far reaching secularisation promoted by the OHF and the centralised control rule within the Kurdish region, as they are afraid that without the uniting factor of the Caliphate, the Turks will slowly but surely push them out."
@@ -3309,7 +3302,7 @@
  OTT_Population_Palestine_desc: "One of the most contested regions in the world, Jerusalem is home to Holy Sites of not one but three of the major world religions, and has as such served a pivotal role in the history of mankind. Under Ottoman rule, the region flourished as the Millet system was employed to the fullest here, and was later codified in the Tanzimat Reforms. This granted Muslims, Jews, Christians and other groups a large degree of communal autonomy in matters of worship, jurisdiction over personal status, taxes, and in managing their schools and charitable institutions.\n\nThe history of Jerusalem and Palestine as a whole was shaken up severely around the start of the 20th century, as the Zionist movement grew in strength and number with the Yishuv settling all around the region, establishing their own customs and even revitalising the long dead Hebrew language. This Jewish population would later also lead to the Balfour declaration by the British government, and the Talaat declaration which followed it, both promising to grant the Yishuv rights for the creation of a Jewish national home in Palestine. When the tide of war turned and the British were forced to evacuate the Mashriq, they nonetheless saw an opportunity in the declarations, and after a long diplomatic struggle succeeded in establishing the M.O.J, an international mandate aimed at keeping the peace in Palestine.\n\nThis mandate was however seen by the Muslim population of the Middle East as an affront, and quickly gave rise to the establishment of a large resistance movement aimed at stopping Jewish settlement, abolishment of the M.O.J. and the full restoration of Ottoman, Sunni, rule. Embittered by Ottoman failures to block foreign involvement in the region, many Palestinians turned towards the Sultanate of Egypt and became fierce proponents of Arab nationalism. Tensions between the various faiths have exploded over the last few years and with war on the horizon, all of Palestine holds its breath."
 
  OTT_Population_Maan: "Majority Culture: §YArab (Syrian)§!, Circassian\nMajority Religion: §YSunni§!"
- OTT_Population_Maan_desc: "The Southern Syrian lands around the town of Amman have long escaped Ottoman authority, and have been neglected by our predecessors. Mainly used as an access point to the far more important Hejaz, our control over the region is limited to the direct area around the Hejaz Railway and certain pilgrim hotspots along the way to Mecca. This has resulted in a large influx of migrants from Syria, Circassia and even Anatolia which have fled from the conscription and taxation of the North.\n\nControl over the Eastern bank of the Jordan river was limited at best before the Weltkrieg with many Bedouin raiding settled areas and tribes migrating between Central Arabia and Ma'an. With the restoration of order by the military however, a large efflux of settlers from Palestine has moved eastwards adding to the still small cities of al-Salt and Amman. The economic exploitation of the region has also seen steady development, with mining operations adding to the otherwise primarily agricultural economy."
+ OTT_Population_Maan_desc: "The Southern Syrian lands around the town of Amman have long escaped Ottoman authority, and have been neglected by our predecessors. Mainly used as an access point to the far more important Hejaz, our control over the region is limited to the direct area around the Hejaz Railway and certain pilgrim hotspots along the way to Mecca. This has resulted in a large influx of migrants from Syria, Circassia and even Anatolia which have fled from the conscription and taxation of the North.\n\nControl over the Eastern bank of the Jordan River was limited at best before the Weltkrieg with many Bedouin raiding settled areas and tribes migrating between Central Arabia and Ma'an. With the restoration of order by the military however, a large efflux of settlers from Palestine has moved eastwards adding to the still small cities of al-Salt and Amman. The economic exploitation of the region has also seen steady development, with mining operations adding to the otherwise primarily agricultural economy."
 
  OTT_Population_Sinai: "Majority Culture: §YArab (Egyptian)§!\nMajority Religion: §YSunni§!"
  OTT_Population_Sinai_desc: "Primarily known for the presence of Mt Sinai, a holy place for the three primary faiths of the Middle East, the Sinai finds itself in a peculiar spot. With little settlement possible as the majority of the region consists of the Sinai Desert, there are nonetheless a variety of Bedouin tribes who have established their home on the outskirts of the desert.\n\nWhilst much like the rest of the Middle East, the Sinai has a long and diverse history, it was shook up as recently as the Weltkrieg when it was the location of heavy fighting between the Ottoman Turks and the British. The Turks attempting to seize the Suez Canal and as such cut off the British from their empire were rebuked in two separate assaults after which British troops themselves made the perilous crossing to invade Syria."
@@ -3492,7 +3485,7 @@
  TUR_resat_muhlis_erkmen: "Reşat Muhlis Bey"
  TUR_resat_muhlis_erkmen_surname: "Reşat Muhlis Erkmen"
 
- TUR_suleiman_sirri_aral: "Suleiman Sirri Bey"
+ TUR_suleiman_sirri_aral: "Süleyman Sırrı Bey"
  TUR_suleiman_sirri_aral_surname: "Suleiman Sirri Aral"
 
  TUR_yunus_nadi_abalioglu: "Yunus Nadi Bey"

@@ -4,12 +4,12 @@ set_research_slots = 2
 set_stability = 0.2
 set_war_support = 0.3
 set_convoys = 10
+starting_train_buffer = 2
 
 set_technology = {
 	### Infantry ###
 	infantry_weapons = 1
 	tech_irregulars = 1
-	tech_mountaineers = 1
 
 	### Support ###
 	tech_support = 1
@@ -36,16 +36,11 @@ if = {
 set_cosmetic_tag = LEP_LEP
 country_lock_all_division_template = yes
 
-### Offsite Factories ###
-
-add_offsite_building = {
-	type = arms_factory
-	level = 3
-}
-
-add_offsite_building = {
-	type = industrial_complex
-	level = 6
+QIE = {
+	set_autonomy = {
+		target = ROOT
+		autonomy_state = kr_associated_governorate
+	}
 }
 
 diplomatic_relation = { country = GEA relation = non_aggression_pact }
@@ -76,7 +71,9 @@ add_ideas = {
 	LEP_Tsingtau_Collaboration2
 
 	LEP_units_bonus
+	unequal_treaties
 }
+china_add_poor_army = yes
 
 #tsingtau collab level
 set_variable = {
@@ -85,7 +82,6 @@ set_variable = {
 }
 
 country_event = { id = lepcollapse.1 days = 3 } # Sun Chuanfang meets with the governors
-country_event = { id = lep.1 days = 1 }
 
 ### Country Leaders ###
 recruit_character = LEP_board_of_directors
@@ -130,6 +126,10 @@ recruit_character = LEP_shi_yousan
 recruit_character = LEP_yang_shuzhuang
 recruit_character = ANQ_shen_jingchen
 recruit_character = ANQ_sa_benxin
+
+### Character Setup ###
+LEP_sun_chuanfang = { set_variable = { china_alignment = token:zhili } }
+LEP_qi_xieyuan = { set_variable = { china_alignment = token:zhili } }
 
 # FLAVOR LEP
 country_event = { id = lep.206 days = 1521 } #Chen Xuezhao

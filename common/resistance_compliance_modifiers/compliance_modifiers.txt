@@ -6,6 +6,11 @@ compliance_15 = {
 	small_icon = "GFX_occupation_compliance_modifier_small_strip:1"
 	threshold = 15
 	margin = 2
+
+	visible = {
+		NOT = { FROM = { original_tag = XXA } }
+	}
+
 	state_modifier = {
 		enemy_operative_detection_chance = 0.25
 	}
@@ -17,6 +22,11 @@ compliance_25 = {
 	small_icon = "GFX_occupation_compliance_modifier_small_strip:2"
 	threshold = 25
 	margin = 2
+
+	visible = {
+		NOT = { FROM = { original_tag = XXA } }
+	}
+
 	state_modifier = {
 		required_garrison_factor = -0.25
 		recruitable_population = 0.005
@@ -28,6 +38,10 @@ compliance_40 = {
 	small_icon = "GFX_occupation_compliance_modifier_small_strip:3"
 	threshold = 40
 	margin = 2
+
+	visible = {
+		NOT = { FROM = { original_tag = XXA } }
+	}
 
 	state_modifier = {
 		local_factories = 0.1
@@ -41,12 +55,45 @@ compliance_60 = {
 	threshold = 60
 	margin = 2
 
+	visible = {
+		NOT = { FROM = { original_tag = XXA } }
+	}
+
 	state_modifier = {
 		recruitable_population_factor = 0.2
 	}
 }
 
-compliance_integration = {
+compliance_integration_50 = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:5"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:5"
+	threshold = 50
+	margin = 2
+
+	visible = {
+		has_country_flag = can_integrate_50_@FROM
+	}
+
+	on_enable = {
+		if = {
+			limit = { FROM = { original_tag = XXA } }
+			effect_tooltip = {
+				every_controlled_state = {
+					limit = {
+						has_state_flag = can_integrate_50_@ROOT
+						NOT = { is_core_of = ROOT }
+					}
+					add_state_core_upon_reaching_compliance_threshold = yes
+				}
+			}
+		}
+		else = {
+			add_country_cores_upon_reaching_compliance_threshold = yes
+		}
+	}
+}
+compliance_integration_80 = {
 	type = core_compliance_modifier
 	icon = "GFX_occupation_compliance_modifier_strip:5"
 	small_icon = "GFX_occupation_compliance_modifier_small_strip:5"
@@ -54,37 +101,55 @@ compliance_integration = {
 	margin = 2
 
 	visible = {
-		has_country_flag = can_integrate_@FROM
-	}
-
-	enabled = {
-		NOT = { country_exists = FROM }
+		has_country_flag = can_integrate_80_@FROM
 	}
 
 	on_enable = {
-		FROM = {
-			if = {
-				limit = { remove_cores_of_tag_if_non_existent = yes }
-				every_core_state = {
-					add_core_of = ROOT
-					hidden_effect = {
-						remove_claim_by = ROOT
-						remove_core_of = FROM
+		if = {
+			limit = { FROM = { original_tag = XXA } }
+			effect_tooltip = {
+				every_controlled_state = {
+					limit = {
+						has_state_flag = can_integrate_80_@ROOT
+						NOT = { is_core_of = ROOT }
 					}
-				}
-				hidden_effect = {
-					every_state = { remove_claim_by = FROM }
-				}
-			}
-			else = {
-				every_core_state = {
-					add_core_of = ROOT
-					hidden_effect = { remove_claim_by = ROOT }
+					add_state_core_upon_reaching_compliance_threshold = yes
 				}
 			}
 		}
-		hidden_effect = {
-			fire_country_specific_integration_content = yes
+		else = {
+			add_country_cores_upon_reaching_compliance_threshold = yes
 		}
+	}
+}
+
+compliance_integration_state_50 = {
+	type = state_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:5"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:5"
+	threshold = 50
+	margin = 2
+
+	visible = {
+		has_state_flag = can_integrate_50_@ROOT
+	}
+
+	on_enable = {
+		add_state_core_upon_reaching_compliance_threshold = yes
+	}
+}
+compliance_integration_state_80 = {
+	type = state_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:5"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:5"
+	threshold = 80
+	margin = 2
+
+	visible = {
+		has_state_flag = can_integrate_80_@ROOT
+	}
+
+	on_enable = {
+		add_state_core_upon_reaching_compliance_threshold = yes
 	}
 }

@@ -27,7 +27,7 @@ EGY_cairo_pact_decisions = {# Cairo Pact stuff aka joining it
 		ai_will_do = { factor = 70 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EGY_ally_with_morroco_decision target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete EGY_ally_with_morroco_decision target: [From.GetName]"
 			FROM = { country_event = egy.160 }
 		}
 	}
@@ -45,7 +45,7 @@ EGY_cairo_pact_decisions = {# Cairo Pact stuff aka joining it
 			FROM = { is_valid_peace_target = yes }
 		}
 
-		targets = { CAR KBR HAU ZZB SOM }
+		targets = { CAR KBR HAU ZAN SOM }
 		target_root_trigger = { has_completed_focus = EGY_gather_african_allies }
 		target_trigger = {
 			FROM = { is_valid_peace_target = yes }
@@ -57,7 +57,7 @@ EGY_cairo_pact_decisions = {# Cairo Pact stuff aka joining it
 		ai_will_do = { factor = 70 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EGY_ally_with_africa_decision target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete EGY_ally_with_africa_decision target: [From.GetName]"
 			if = {
 				limit = { tag = CAR }
 				FROM = { country_event = cea.4 }
@@ -104,7 +104,7 @@ EGY_cairo_pact_decisions = {# Cairo Pact stuff aka joining it
 		ai_will_do = { factor = 70 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EGY_ally_with_africa_decision_NFA target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete EGY_ally_with_africa_decision_NFA target: [From.GetName]"
 			if = {
 				limit = { tag = CAR }
 				FROM = { country_event = cea.4 }
@@ -147,16 +147,14 @@ EGY_cairo_pact_decisions = {# Cairo Pact stuff aka joining it
 		cost = 0
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		highlight_states = {
 			highlight_state_targets = { state = 291 state = 344 state = 349 state = 350 state = 352 state = 454 state = 455 state = 553 state = 554 state = 676 state = 677 state = 679 state = 680 state = 754 state = 812 state = 819 state = 992 state = 995 }
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EGY_press_ottoman_surrender"
+			log = "[GetDateText]: [Root.GetName]: Decision complete EGY_press_ottoman_surrender"
 			OTT = {
 				country_event = cp.1
 			}
@@ -312,7 +310,7 @@ EGY_Integration = {
 
 		cancel_if_not_visible = yes
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled EGY_Integrate_Syria target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel EGY_Integrate_Syria target: [From.GetName]"
 			add_political_power = 25
 		}
 
@@ -327,9 +325,7 @@ EGY_Integration = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 	}
 }
 
@@ -351,12 +347,10 @@ EGY_libyan_egyptian_unification_decisions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EGY_promote_the_HIMT target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete EGY_promote_the_HIMT target: [From.GetName]"
 			FROM = {
 				country_event = egy.188
 				effect_tooltip = {
@@ -394,7 +388,7 @@ EGY_libyan_egyptian_unification_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision TRP_promote_the_HIMT"
+			log = "[GetDateText]: [Root.GetName]: Decision complete TRP_promote_the_HIMT"
 			add_popularity = {
 				ideology = national_populist
 				popularity = -0.07
@@ -430,12 +424,10 @@ EGY_libyan_egyptian_unification_decisions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EGY_pan_arabist_propaganda target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete EGY_pan_arabist_propaganda target: [From.GetName]"
 			FROM = {
 				country_event = egy.189
 				effect_tooltip = {
@@ -473,7 +465,7 @@ EGY_libyan_egyptian_unification_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision TRP_pan_arabist_propaganda"
+			log = "[GetDateText]: [Root.GetName]: Decision complete TRP_pan_arabist_propaganda"
 			add_popularity = {
 				ideology = national_populist
 				popularity = -0.07
@@ -510,12 +502,10 @@ EGY_libyan_egyptian_unification_decisions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EGY_decry_tripolitanian_nationalism target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete EGY_decry_tripolitanian_nationalism target: [From.GetName]"
 			FROM = {
 				country_event = egy.190
 				effect_tooltip = {
@@ -553,7 +543,7 @@ EGY_libyan_egyptian_unification_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision TRP_decry_tripolitanian_nationalism"
+			log = "[GetDateText]: [Root.GetName]: Decision complete TRP_decry_tripolitanian_nationalism"
 			add_popularity = {
 				ideology = national_populist
 				popularity = -0.05
@@ -592,12 +582,10 @@ EGY_libyan_egyptian_unification_decisions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EGY_propose_unification target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete EGY_propose_unification target: [From.GetName]"
 			FROM = { country_event = egy.194 }
 		}
 	}

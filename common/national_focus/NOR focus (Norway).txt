@@ -25,9 +25,7 @@ focus_tree = {
 		y = 0
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_fund_nth"
@@ -48,9 +46,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 6
-		ai_will_do = {
-			factor = 12
-		}
+		ai_will_do = { factor = 12 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_railway_act"
@@ -92,9 +88,7 @@ focus_tree = {
 		y = 1
 		cost = 6
 
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_south_industry_1"
@@ -127,9 +121,7 @@ focus_tree = {
 		y = 2
 		cost = 6
 
-		ai_will_do = {
-			factor = 12
-		}
+		ai_will_do = { factor = 12 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_north_infrastructure"
@@ -194,9 +186,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_industrial_census"
@@ -213,9 +203,7 @@ focus_tree = {
 		y = 3
 		cost = 6
 
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_north_industry"
@@ -247,9 +235,7 @@ focus_tree = {
 		y = 4
 		cost = 8
 
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_norsk_jernverk"
@@ -279,9 +265,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_south_industry_2"
@@ -326,9 +310,7 @@ focus_tree = {
 		y = 3
 		cost = 7
 
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_aluminium_industry"
@@ -356,9 +338,7 @@ focus_tree = {
 		x = 7
 		y = 0
 		cost = 5
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_limited_rearmament"
 			if = {
@@ -381,9 +361,7 @@ focus_tree = {
 		y = 1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_weapon_industry_1"
@@ -412,9 +390,7 @@ focus_tree = {
 		y = 2
 		cost = 8
 
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_weapon_industry_2"
@@ -442,9 +418,7 @@ focus_tree = {
 		x = 5
 		y = 3
 		cost = 8
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_extra_tech_slot"
@@ -460,9 +434,7 @@ focus_tree = {
 		x = 5
 		y = 4
 		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_oslo_analyser"
@@ -485,9 +457,7 @@ focus_tree = {
 		y = 3
 		cost = 8
 		available = { has_tech = fuel_silos }
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_oil_industry"
@@ -530,9 +500,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		cost = 6
-		ai_will_do = {
-			factor = 12
-		}
+		ai_will_do = { factor = 12 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_glomma_line"
@@ -566,9 +534,7 @@ focus_tree = {
 		x = 12
 		y = 0
 		cost = 6
-		ai_will_do = {
-			factor = 2
-		}
+		ai_will_do = { factor = 2 }
 
 		available = {
 			if = {
@@ -604,9 +570,7 @@ focus_tree = {
 		x = 11
 		y = 1
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 
 		available = {
 			if = {
@@ -634,9 +598,7 @@ focus_tree = {
 		x = 11
 		y = 2
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 
 		available = {
 			if = {
@@ -676,9 +638,7 @@ focus_tree = {
 		x = 13
 		y = 1
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 
 		available = {
 			if = {
@@ -706,9 +666,7 @@ focus_tree = {
 		x = 13
 		y = 2
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 
 		available = {
 			if = {
@@ -738,9 +696,7 @@ focus_tree = {
 		x = 12
 		y = 3
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 
 		available = {
 			if = {
@@ -769,9 +725,7 @@ focus_tree = {
 		x = 10
 		y = 3
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 
 		available = {
 			if = {
@@ -802,9 +756,7 @@ focus_tree = {
 		x = 14
 		y = 3
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 
 		available = {
 			if = {
@@ -835,9 +787,7 @@ focus_tree = {
 		x = 11
 		y = 4
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 
 		available = {
 			if = {
@@ -874,9 +824,7 @@ focus_tree = {
 		x = 13
 		y = 4
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 
 		available = {
 			if = {
@@ -911,16 +859,23 @@ focus_tree = {
 		x = 18
 		y = 0
 		cost = 8
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_cruiser_question"
-			create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "Norge Class" }
-			create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "Norge Class" }
-			create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "Norge Class" }
-			create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "Norge Class" }
+			if = {
+				limit = { has_dlc_mtg = yes }
+				create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "Norge Class" }
+				create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "Norge Class" }
+				create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "Norge Class" }
+				create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "Norge Class" }
+			}
+			else = {
+				create_ship = { type = heavy_cruiser_1 equipment_variant = "Weltkrieg Heavy Cruiser" }
+				create_ship = { type = heavy_cruiser_1 equipment_variant = "Weltkrieg Heavy Cruiser" }
+				create_ship = { type = heavy_cruiser_1 equipment_variant = "Weltkrieg Heavy Cruiser" }
+				create_ship = { type = heavy_cruiser_1 equipment_variant = "Weltkrieg Heavy Cruiser" }
+			}
 		}
 	}
 
@@ -935,9 +890,7 @@ focus_tree = {
 
 		relative_position_id = NOR_cruiser_question
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_nortraship"
@@ -965,9 +918,7 @@ focus_tree = {
 
 		relative_position_id = NOR_cruiser_question
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_coastal_artillery"
@@ -1016,9 +967,7 @@ focus_tree = {
 
 		relative_position_id = NOR_cruiser_question
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_naval_rearmament"
@@ -1065,9 +1014,7 @@ focus_tree = {
 
 		relative_position_id = NOR_cruiser_question
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_large_navy"
@@ -1113,9 +1060,7 @@ focus_tree = {
 
 		relative_position_id = NOR_cruiser_question
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_light_cruisers"
@@ -1169,9 +1114,7 @@ focus_tree = {
 
 		relative_position_id = NOR_cruiser_question
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_heavy_cruisers"
@@ -1223,9 +1166,7 @@ focus_tree = {
 
 		relative_position_id = NOR_cruiser_question
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_small_navy"
@@ -1271,9 +1212,7 @@ focus_tree = {
 
 		relative_position_id = NOR_cruiser_question
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_submarines"
@@ -1340,9 +1279,7 @@ focus_tree = {
 
 		relative_position_id = NOR_cruiser_question
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_destroyers"
@@ -1403,9 +1340,7 @@ focus_tree = {
 		x = 24
 		y = 0
 		cost = 6
-		ai_will_do = {
-			factor = 0.25
-		}
+		ai_will_do = { factor = 0.25 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_army_airforce"
@@ -1428,17 +1363,25 @@ focus_tree = {
 
 		relative_position_id = NOR_army_airforce
 
-		ai_will_do = {
-			factor = 0.25
-		}
+		ai_will_do = { factor = 0.25 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_navy_airforce"
 			air_experience = 10
-			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment_1
-				amount = 30
-				producer = NOR
+			if = {
+				limit = { has_socialist_government = yes }
+				add_equipment_to_stockpile = {
+					type = small_plane_naval_bomber_airframe
+					amount = 30
+					producer = FRA
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = small_plane_naval_bomber_airframe
+					amount = 30
+					producer = GER
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_AIRFORCE_BONUS }
@@ -1455,9 +1398,7 @@ focus_tree = {
 
 		relative_position_id = NOR_army_airforce
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_united_airforce"
@@ -1476,9 +1417,7 @@ focus_tree = {
 
 		relative_position_id = NOR_army_airforce
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_support_DNL"
@@ -1514,9 +1453,7 @@ focus_tree = {
 
 		relative_position_id = NOR_army_airforce
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_airbase_infrastructure"
@@ -1564,9 +1501,7 @@ focus_tree = {
 
 		relative_position_id = NOR_army_airforce
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_offensive_airforce"
@@ -1596,9 +1531,7 @@ focus_tree = {
 
 		relative_position_id = NOR_army_airforce
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_close_air_support"
@@ -1628,9 +1561,7 @@ focus_tree = {
 
 		relative_position_id = NOR_army_airforce
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_defensive_airforce"
@@ -1660,9 +1591,7 @@ focus_tree = {
 
 		relative_position_id = NOR_army_airforce
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_naval_bombers"
@@ -1691,9 +1620,7 @@ focus_tree = {
 
 		relative_position_id = NOR_army_airforce
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_andoya_rocket_base"
@@ -1722,9 +1649,7 @@ focus_tree = {
 		y = 6
 		cost = 6
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_working_norway_victorious"
@@ -1749,9 +1674,7 @@ focus_tree = {
 
 		prerequisite = { focus = NOR_SYN_working_norway_victorious }
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		relative_position_id = NOR_SYN_working_norway_victorious
 		completion_reward = {
@@ -1772,9 +1695,7 @@ focus_tree = {
 
 		prerequisite = { focus = NOR_SYN_working_norway_victorious }
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		relative_position_id = NOR_SYN_working_norway_victorious
 		completion_reward = {
@@ -1801,9 +1722,7 @@ focus_tree = {
 		y = 2
 		cost = 6
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		relative_position_id = NOR_SYN_working_norway_victorious
 		completion_reward = {
@@ -1826,9 +1745,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_black_monday"
@@ -1857,9 +1774,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_three_year_plan"
@@ -1882,9 +1797,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_socialist_press"
@@ -1907,9 +1820,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_worker_academies"
@@ -1932,9 +1843,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_red_guards"
@@ -1983,9 +1892,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_secret_police"
@@ -2008,9 +1915,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_industrial_espionage"
@@ -2036,9 +1941,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_workers_judiciary"
@@ -2061,9 +1964,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_capitalists_trial"
@@ -2092,9 +1993,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_diplo_relations"
@@ -2140,9 +2039,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_harbor_finns"
@@ -2167,9 +2064,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_bring_the_britons_back"
@@ -2194,9 +2089,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_military_aid"
@@ -2220,9 +2113,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_norway_at_arms"
@@ -2245,9 +2136,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_phalanstere"
@@ -2269,9 +2158,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_new_norway_in_new_world"
@@ -2297,9 +2184,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_swedish_unions"
@@ -2359,9 +2244,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_fund_fs"
@@ -2384,9 +2267,7 @@ focus_tree = {
 
 		relative_position_id = NOR_SYN_constitution
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_SYN_kompani_linge"
@@ -2405,9 +2286,7 @@ focus_tree = {
 		y = 6
 		cost = 5
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_political_mandate"
@@ -2430,9 +2309,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_political_mandate
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_black_monday_1"
@@ -2455,9 +2332,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_public_broadcasting"
@@ -2470,10 +2345,7 @@ focus_tree = {
 		id = NOR_DEM_socdem_agreement
 		icon = GFX_GBR_fate_of_unions
 		available = {
-			OR = {
-				has_government = social_democrat
-				has_government = social_liberal
-			}
+			has_left_democratic_government = yes
 		}
 		prerequisite = { focus = NOR_DEM_public_broadcasting }
 		mutually_exclusive = { focus = NOR_DEM_conservative_agreement }
@@ -2483,9 +2355,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_socdem_agreement"
@@ -2509,9 +2379,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_mixed_industry"
@@ -2525,10 +2393,7 @@ focus_tree = {
 		id = NOR_DEM_conservative_agreement
 		icon = GFX_goal_generic_union_agreement
 		available = {
-			OR = {
-				has_government = market_liberal
-				has_government = social_conservative
-			}
+			has_right_democratic_government = yes
 		}
 		prerequisite = { focus = NOR_DEM_public_broadcasting }
 		mutually_exclusive = { focus = NOR_DEM_socdem_agreement }
@@ -2538,9 +2403,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_conservative_agreement"
@@ -2564,9 +2427,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_free_market"
@@ -2590,9 +2451,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_social_security"
@@ -2616,9 +2475,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_free_education"
@@ -2642,9 +2499,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_new_police"
@@ -2668,9 +2523,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_landvernet"
@@ -2693,9 +2546,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_royal_guards"
@@ -2755,9 +2606,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_black_monday_1
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_new_intelligence"
@@ -2863,9 +2712,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_armed_neutrality
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_neutrality_1"
@@ -2889,9 +2736,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_armed_neutrality
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_neutrality_2"
@@ -2918,9 +2763,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_armed_neutrality
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_neutrality_3"
@@ -2951,9 +2794,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_armed_neutrality
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_restart_russian_trade"
@@ -2980,9 +2821,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_armed_neutrality
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_german_trade"
@@ -3009,9 +2848,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_armed_neutrality
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_canadian_trade"
@@ -3083,9 +2920,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_internationalism
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_join_entente"
@@ -3111,9 +2946,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_internationalism
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_canadian_investments"
@@ -3169,9 +3002,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_internationalism
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_military_mission"
@@ -3204,9 +3035,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_internationalism
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_little_norway"
@@ -3221,7 +3050,7 @@ focus_tree = {
 				add_ideas = NOR_canadian_mission_idea_2
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = small_plane_airframe
 				amount = 100
 				producer = ENT
 			}
@@ -3303,9 +3132,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_nordic_council"
@@ -3372,9 +3199,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_defense_union"
@@ -3434,9 +3259,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_material_cooperation"
@@ -3495,9 +3318,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_military_volunteers"
@@ -3566,9 +3387,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_passport_union"
@@ -3626,9 +3445,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_joint_sessions"
@@ -3707,9 +3524,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_investments"
@@ -3776,9 +3591,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_monetary_union"
@@ -3836,9 +3649,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_found_sas"
@@ -3924,9 +3735,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_custom_union"
@@ -3971,9 +3780,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_common_tech"
@@ -4031,9 +3838,7 @@ focus_tree = {
 
 		relative_position_id = NOR_DEM_treaty_of_stockholm
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_DEM_common_tech_2"
@@ -4171,9 +3976,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_new_state"
@@ -4196,9 +3999,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_new_state
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_unions"
@@ -4220,9 +4021,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_unions
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_hirden"
@@ -4269,9 +4068,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_unions
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_hirdens_flykorps"
@@ -4302,9 +4099,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_unions
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_hirdmarinen"
@@ -4340,9 +4135,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_unions
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_quisling_guard"
@@ -4399,9 +4192,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_unions
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_statspolitiet"
@@ -4424,9 +4215,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_unions
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_education"
@@ -4449,9 +4238,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_unions
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_central_planning"
@@ -4484,9 +4271,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_unions
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_arbeidstjenesten"
@@ -4573,7 +4358,7 @@ focus_tree = {
 			has_dictatorship_government = yes
 			is_subject = no
 			OR = {
-				var:101.owner = { has_socialist_government = yes }
+				var:100.owner = { has_socialist_government = yes }
 				NOT = { is_in_faction_with = GER }
 			}
 		}
@@ -4590,7 +4375,7 @@ focus_tree = {
 				}
 				AND = {
 					is_in_faction_with = GER
-					var:101.owner = { has_socialist_government = no }
+					var:100.owner = { has_socialist_government = no }
 				}
 			}
 		}
@@ -4748,9 +4533,7 @@ focus_tree = {
 
 		relative_position_id = NOR_NAT_greenland_claim
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		will_lead_to_war_with = SWE
 

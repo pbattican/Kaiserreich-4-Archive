@@ -9,19 +9,24 @@ set_convoys = 300
 starting_train_buffer = 2
 
 set_technology = {
-	### General ###
-	fuel_silos = 1
-
 	### Infantry ###
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1
 	motorised_infantry = 1
+	tech_mountaineers = 1
+	marines = 1
+
+	### Support ###
+	tech_support = 1
 	tech_recon = 1
 	tech_engineers = 1
 	tech_military_police = 1
-	marines = 1
+
+	### Artillery ###
 	gw_artillery = 1
+
+	### Industry ###
+	fuel_silos = 1
 
 	### Trains ###
 	basic_train = 1
@@ -149,7 +154,7 @@ country_event = { id = japfor.1 days = 7 } #Mantetsu Declares Record Earnings
 country_event = { id = japdom.6 days = 135 } #The May 15 Incident
 country_event = { id = japdom.8 days = 153 } #The NSA debate begins
 country_event = { id = japfor.500 days = 237 } # Kitei Son and Nan Shoryu
-country_event = { id = japdom.56 days = 658 random = 360 } #The Emperor has been shot!
+country_event = { id = japdom.56 days = 658 random_hours = 360 } #The Emperor has been shot!
 country_event = { id = japdom.45 days = 714 } #The Popular Front Incident
 country_event = { id = japdom.53 days = 1247 } #The Great Drought of 1939
 news_event = { id = worldnews.483 days = 1688 } # 1940 Olympics
@@ -173,9 +178,6 @@ add_dynamic_modifier = {
 	scope = FNG
 }
 
-give_guarantee = FNG
-add_to_array = { FNG.guarantor_array = JAP }
-
 set_politics = {
 	ruling_party = social_conservative
 	last_election = "1932.2.20"
@@ -198,7 +200,7 @@ set_popularities = {
 
 create_faction = co_prosperity_sphere
 if = {
-	limit = { has_dlc_tfv = yes }
+	limit = { has_tech_sharing_feature = yes }
 	every_country = {
 		limit = { is_ally_with = JAP }
 		add_to_tech_sharing_group = japan_research
@@ -349,7 +351,7 @@ if = {
 			tank_nsb_armor_upgrade = 1
 		}
 		obsolete = yes
-		icon = "gfx/interface/equipmentdesigner/tanks/designer/Japan/JAP_basic_light_tank.png"
+		icon = GFX_JAP_basic_light_tank_medium
 	}
 	create_equipment_variant = {
 		name = "Type 89 I-Go"
@@ -366,7 +368,7 @@ if = {
 			tank_nsb_engine_upgrade = 3
 			tank_nsb_armor_upgrade = 2
 		}
-		icon = "gfx/interface/equipmentdesigner/tanks/designer/Japan/JAP_basic_main_tank.png"
+		icon = GFX_JAP_basic_medium_tank_medium
 	}
 	create_equipment_variant = {
 		name = "Type 95 Ha-Go"
@@ -383,7 +385,7 @@ if = {
 			tank_nsb_engine_upgrade = 2
 			tank_nsb_armor_upgrade = 2
 		}
-		icon = "gfx/interface/equipmentdesigner/tanks/designer/Japan/JAP_imp_light_tank.png"
+		icon = GFX_JAP_improved_light_tank_medium
 	}
 }
 
@@ -392,83 +394,82 @@ if = {
 	create_equipment_variant = {
 		name = "Ki-10"
 		type = small_plane_airframe_0
+		parent_version = 0
 		modules = {
 			fixed_main_weapon_slot = light_mg_2x
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
-		icon = "GFX_JAP_early_fighter_medium"
 	}
 	create_equipment_variant = {
 		name = "Ki-2"
 		type = small_plane_cas_airframe_0
+		parent_version = 0
 		modules = {
 			fixed_main_weapon_slot = small_bomb_bay
 			engine_type_slot = engine_1_2x
 			special_type_slot_1 = lmg_defense_turret
 		}
-		icon = "GFX_JAP_early_bomber_medium"
 	}
 	create_equipment_variant = {
 		name = "Ki-1"
 		type = medium_plane_airframe_0
+		parent_version = 0
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
 			engine_type_slot = engine_1_2x
 			special_type_slot_1 = lmg_defense_turret
 		}
-		icon = "GFX_JAP_early_bomber_medium"
 	}
 	create_equipment_variant = {
 		name = "Ki-3"
 		type = small_plane_cas_airframe_0
+		parent_version = 0
 		modules = {
 			fixed_main_weapon_slot = bomb_locks
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = lmg_defense_turret
 		}
-		icon = "GFX_JAP_early_fighter_medium"
 	}
 	create_equipment_variant = {
 		name = "Aichi D1A2"
 		type = cv_small_plane_cas_airframe_0
+		parent_version = 0
 		modules = {
 			fixed_main_weapon_slot = bomb_locks
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = dive_brakes_small
 		}
-		icon = "GFX_JAP_cv_CAS1_medium"
 	}
 	create_equipment_variant = {
 		name = "A4N"
 		type = cv_small_plane_airframe_0
+		parent_version = 0
 		modules = {
 			fixed_main_weapon_slot = light_mg_2x
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
-		icon = "GFX_JAP_iw_small_airframe_medium"
 	}
 	create_equipment_variant = {
 		name = "B2M"
 		type = cv_small_plane_naval_bomber_airframe_0
+		parent_version = 0
 		modules = {
 			fixed_main_weapon_slot = torpedo_mounting
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
 		obsolete = yes
-		icon = "GFX_JAP_early_fighter_medium"
 	}
 	create_equipment_variant = {
 		name = "B4Y"
 		type = cv_small_plane_naval_bomber_airframe_1
+		parent_version = 0
 		modules = {
 			fixed_main_weapon_slot = torpedo_mounting
-			fixed_auxiliary_weapon_slot_1 = bomb_locks
 			engine_type_slot = engine_2_1x
 			special_type_slot_1 = empty
 		}
-		icon = "GFX_JAP_cv_naval_bomber1_medium"
 	}
 }

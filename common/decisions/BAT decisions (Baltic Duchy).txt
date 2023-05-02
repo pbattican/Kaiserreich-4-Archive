@@ -47,7 +47,7 @@ BAT_dualism_decision_category = {
 		days_mission_timeout = 45
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_brotherhood_timer"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_brotherhood_timer"
 			add_political_power = 50
 			add_stability = 0.10
 		}
@@ -69,12 +69,10 @@ BAT_dualism_decision_category = {
 
 		cost = 150
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_retake_landtag"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_retake_landtag"
 			custom_effect_tooltip = BAT_retake_landtag_tooltip
 			hidden_effect = {
 				country_event = KRBAT.15
@@ -97,12 +95,10 @@ BAT_dualism_decision_category = {
 		cost = 0
 		days_remove = 7
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_landowners_alliance"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_landowners_alliance"
 			set_country_flag = { flag = BAT_already_seeking_allies days = 7 value = 1 }
 		}
 
@@ -130,12 +126,10 @@ BAT_dualism_decision_category = {
 		cost = 0
 		days_remove = 7
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_merchants_alliance"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_merchants_alliance"
 			set_country_flag = { flag = BAT_already_seeking_allies days = 7 value = 1 }
 		}
 
@@ -163,12 +157,10 @@ BAT_dualism_decision_category = {
 		cost = 0
 		days_remove = 7
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_liberals_alliance"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_liberals_alliance"
 			set_country_flag = { flag = BAT_already_seeking_allies days = 7 value = 1 }
 		}
 
@@ -197,12 +189,10 @@ BAT_dualism_decision_category = {
 		cost = 0
 		days_remove = 7
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_knighthoods_alliance"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_knighthoods_alliance"
 			set_country_flag = { flag = BAT_already_seeking_allies days = 7 value = 1 }
 		}
 
@@ -291,9 +281,7 @@ BAT_forest_brothers_decision_category = {
 		cost = 15
 		days_remove = 21
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_Latvian_concessions"
@@ -322,9 +310,7 @@ BAT_forest_brothers_decision_category = {
 		cost = 15
 		days_remove = 21
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_Estonian_concessions"
@@ -353,9 +339,7 @@ BAT_forest_brothers_decision_category = {
 		cost = 15
 		days_remove = 21
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_Latvian_compliance"
@@ -384,9 +368,7 @@ BAT_forest_brothers_decision_category = {
 		cost = 15
 		days_remove = 21
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_Estonian_compliance"
@@ -412,9 +394,7 @@ BAT_forest_brothers_decision_category = {
 		cost = 15
 		days_remove = 21
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_Latvian_hunting"
@@ -440,9 +420,7 @@ BAT_forest_brothers_decision_category = {
 		cost = 15
 		days_remove = 21
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_Estonian_hunting"
@@ -480,9 +458,7 @@ BAT_forest_brothers_decision_category = {
 		days_remove = 7
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_Zersetzung_decision"
@@ -522,9 +498,7 @@ BAT_forest_brothers_decision_category = {
 		days_remove = 7
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_Banderbekampfung_decision"
@@ -564,12 +538,10 @@ BAT_forest_brothers_decision_category = {
 		days_remove = 21
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_Zerstorungsbataillons_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_Zerstorungsbataillons_decision"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 500
@@ -605,12 +577,10 @@ BAT_forest_brothers_decision_category = {
 		cost = 0
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_defeat_brothers"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_defeat_brothers"
 			country_event = KRBAT.41
 		}
 	}
@@ -642,12 +612,10 @@ BAT_ostwall_decision_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_ostwall_kurland"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_ostwall_kurland"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 1000
@@ -659,7 +627,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_ostwall_kurland"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_ostwall_kurland"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -716,12 +684,10 @@ BAT_ostwall_decision_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_ostwall_livland"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_ostwall_livland"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 1000
@@ -733,7 +699,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_ostwall_livland"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_ostwall_livland"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -792,12 +758,10 @@ BAT_ostwall_decision_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_ostwall_estland"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_ostwall_estland"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 1000
@@ -809,7 +773,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_ostwall_estland"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_ostwall_estland"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -877,12 +841,10 @@ BAT_ostwall_decision_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_ostwall_second_level"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_ostwall_second_level"
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 250
@@ -894,7 +856,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_ostwall_second_level"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_ostwall_second_level"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = artillery_equipment
@@ -986,12 +948,10 @@ BAT_ostwall_decision_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_ostwall_repair_stations"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_ostwall_repair_stations"
 			add_equipment_to_stockpile = {
 				type = motorized_equipment
 				amount = 500
@@ -999,7 +959,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_ostwall_repair_stations"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_ostwall_repair_stations"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
@@ -1044,12 +1004,10 @@ BAT_ostwall_decision_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_ostwall_aa_stations"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_ostwall_aa_stations"
 			add_equipment_to_stockpile = {
 				type = anti_air_equipment
 				amount = 250
@@ -1061,7 +1019,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_ostwall_aa_stations"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_ostwall_aa_stations"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = anti_air_equipment
@@ -1127,12 +1085,10 @@ BAT_ostwall_decision_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_ostwall_third_level"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_ostwall_third_level"
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
 				amount = 250
@@ -1144,7 +1100,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_ostwall_third_level"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_ostwall_third_level"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = anti_tank_equipment
@@ -1235,12 +1191,10 @@ BAT_ostwall_decision_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_ostwall_underground_railroad"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_ostwall_underground_railroad"
 			add_equipment_to_stockpile = {
 				type = support_equipment
 				amount = 600
@@ -1248,7 +1202,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_ostwall_underground_railroad"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_ostwall_underground_railroad"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = support_equipment
@@ -1318,9 +1272,7 @@ BAT_ostwall_decision_category = {
 		days_remove = 30
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		cancel_trigger = {
 			OR = {
@@ -1337,7 +1289,7 @@ BAT_ostwall_decision_category = {
 			}
 		}
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_ostwall_redoubt"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_ostwall_redoubt"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 1000
@@ -1349,7 +1301,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_ostwall_redoubt"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_ostwall_redoubt"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -1424,7 +1376,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_buy_small_arms target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_buy_small_arms target: [From.GetName]"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 500
@@ -1459,7 +1411,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_buy_support_equipment target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_buy_support_equipment target: [From.GetName]"
 			add_equipment_to_stockpile = {
 				type = support_equipment
 				amount = 200
@@ -1494,7 +1446,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_buy_artillery target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_buy_artillery target: [From.GetName]"
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 150
@@ -1529,7 +1481,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_buy_motorised target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_buy_motorised target: [From.GetName]"
 			add_equipment_to_stockpile = {
 				type = motorized_equipment
 				amount = 100
@@ -1565,7 +1517,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_buy_anti_tank target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_buy_anti_tank target: [From.GetName]"
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
 				amount = 100
@@ -1600,7 +1552,7 @@ BAT_ostwall_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_buy_anti_air target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_buy_anti_air target: [From.GetName]"
 			add_equipment_to_stockpile = {
 				type = anti_air_equipment
 				amount = 100
@@ -1635,9 +1587,7 @@ BAT_economic_decision_category = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_libau_mitau_railroad"
@@ -1690,9 +1640,7 @@ BAT_economic_decision_category = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_riga_erlaa_modohn_railroad"
@@ -1752,9 +1700,7 @@ BAT_economic_decision_category = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_reval_petseri_railroad"
@@ -1808,9 +1754,7 @@ BAT_economic_decision_category = {
 		days_remove = 60
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove BAT_tuckum_airport"
@@ -1844,12 +1788,10 @@ BAT_riga_decision_category = {
 
 		cost = 0
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_restore_baltic_hegemony"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_restore_baltic_hegemony"
 			add_political_power = 100
 			add_stability = 0.1
 			set_cosmetic_tag = BAT_rep
@@ -1875,13 +1817,11 @@ BAT_riga_decision_category = {
 		}
 
 		cost = 0
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_spring_awakening_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_spring_awakening_decision"
 			add_timed_idea = {
 				idea = BAT_plan_spring_awakening
 				days = 90
@@ -1927,12 +1867,12 @@ BAT_riga_decision_category = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_attack_estonia target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_attack_estonia target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_attack_estonia target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_attack_estonia target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -1959,12 +1899,10 @@ BAT_transformation_decision_category = {
 		cost = 50
 		days_re_enable = 30
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_transformation_crackdown"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_transformation_crackdown"
 			add_stability = 0.1
 		}
 	}
@@ -1979,12 +1917,10 @@ BAT_transformation_decision_category = {
 		cost = 25
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_eastern_crusade_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_eastern_crusade_decision"
 			add_state_claim = 880
 			if = {
 				limit = { var:219.owner = { tag = SOV } }
@@ -2035,12 +1971,10 @@ BAT_transformation_decision_category = {
 			highlight_state_targets = { state = 880 }
 		}
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_integrate_latgale"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_integrate_latgale"
 			880 = {
 				add_manpower = -30000
 			}
@@ -2080,7 +2014,7 @@ BAT_transformation_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_black_market_small_arms"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_black_market_small_arms"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 1000
@@ -2113,7 +2047,7 @@ BAT_transformation_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_conscript_refugees"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_conscript_refugees"
 			add_manpower = 5000
 		}
 	}
@@ -2143,7 +2077,7 @@ BAT_transformation_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_black_market_artillery"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_black_market_artillery"
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 250
@@ -2187,11 +2121,11 @@ BAT_GER_decision_category = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_liberate_germany target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_liberate_germany target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_liberate_germany target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_liberate_germany target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -2223,12 +2157,10 @@ BAT_GER_decision_category = {
 		cost = 25
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_reclaim_germany"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_reclaim_germany"
 			add_stability = 0.1
 			every_state = {
 				limit = { is_full_germany = yes }
@@ -2338,12 +2270,12 @@ BAT_GER_decision_category = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_GER_attack_syndicalists target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_GER_attack_syndicalists target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_GER_attack_syndicalists target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_GER_attack_syndicalists target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -2392,11 +2324,11 @@ BAT_GER_decision_category = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_GER_invade_russia target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_GER_invade_russia target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_GER_invade_russia target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_GER_invade_russia target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -2443,11 +2375,11 @@ BAT_GER_decision_category = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_GER_invade_austria target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_GER_invade_austria target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_GER_invade_austria target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_GER_invade_austria target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -2487,11 +2419,11 @@ BAT_GER_decision_category = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_GER_invade_easteurope target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_GER_invade_easteurope target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_GER_invade_easteurope target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_GER_invade_easteurope target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -2538,11 +2470,11 @@ BAT_GER_decision_category = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled BAT_GER_invade_neighbours target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel BAT_GER_invade_neighbours target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_GER_invade_neighbours target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_GER_invade_neighbours target: [From.GetName]"
 			FROM = { country_event = kr.political.30 } #warning event
 			setup_decision_attack_AI = yes
 		}
@@ -2599,7 +2531,7 @@ BAT_eastern_vanguard_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_military_mission target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_military_mission target: [From.GetName]"
 			add_command_power = -10
 			set_variable = { BAT_mission_target = FROM }
 			meta_effect = {
@@ -2654,7 +2586,7 @@ BAT_eastern_vanguard_decision_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_military_mission_return target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_military_mission_return target: [From.GetName]"
 			clear_variable = BAT_mission_target
 			meta_effect = {
 				text = { remove_ideas = [IDEA] }
@@ -2684,13 +2616,11 @@ BAT_devolution_decision_category = {
 			check_variable = { BAT_political_capital > 0 }
 		}
 		custom_cost_text = BAT_pp_cost
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_courland_devolve_education"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_courland_devolve_education"
 			subtract_from_variable = { BAT_political_capital = 1 }
 			190 = { BAT_swap_devolution_idea_education = yes }
 		}
@@ -2713,13 +2643,11 @@ BAT_devolution_decision_category = {
 			check_variable = { BAT_political_capital > 0 }
 		}
 		custom_cost_text = BAT_pp_cost
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_courland_devolve_culture"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_courland_devolve_culture"
 			subtract_from_variable = { BAT_political_capital = 1 }
 			190 = { BAT_swap_devolution_idea_culture = yes }
 		}
@@ -2742,13 +2670,11 @@ BAT_devolution_decision_category = {
 			check_variable = { BAT_political_capital > 0 }
 		}
 		custom_cost_text = BAT_pp_cost
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_courland_devolve_economics"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_courland_devolve_economics"
 			subtract_from_variable = { BAT_political_capital = 1 }
 			190 = { BAT_swap_devolution_idea_economics = yes }
 		}
@@ -2771,13 +2697,11 @@ BAT_devolution_decision_category = {
 			check_variable = { BAT_political_capital > 1 }
 		}
 		custom_cost_text = BAT_2_pp_cost
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_livland_devolve_education"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_livland_devolve_education"
 			subtract_from_variable = { BAT_political_capital = 2 }
 			12 = { BAT_swap_devolution_idea_education = yes }
 			191 = { BAT_swap_devolution_idea_education = yes }
@@ -2801,13 +2725,11 @@ BAT_devolution_decision_category = {
 			check_variable = { BAT_political_capital > 1 }
 		}
 		custom_cost_text = BAT_2_pp_cost
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_livland_devolve_culture"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_livland_devolve_culture"
 			subtract_from_variable = { BAT_political_capital = 2 }
 			12 = { BAT_swap_devolution_idea_culture = yes }
 			191 = { BAT_swap_devolution_idea_culture = yes }
@@ -2832,13 +2754,11 @@ BAT_devolution_decision_category = {
 			check_variable = { BAT_political_capital > 1 }
 		}
 		custom_cost_text = BAT_2_pp_cost
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_livland_devolve_economics"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_livland_devolve_economics"
 			subtract_from_variable = { BAT_political_capital = 2 }
 			12 = { BAT_swap_devolution_idea_economics = yes }
 			191 = { BAT_swap_devolution_idea_economics = yes }
@@ -2862,13 +2782,11 @@ BAT_devolution_decision_category = {
 			check_variable = { BAT_political_capital > 0 }
 		}
 		custom_cost_text = BAT_pp_cost
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_estland_devolve_education"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_estland_devolve_education"
 			subtract_from_variable = { BAT_political_capital = 1 }
 			13 = { BAT_swap_devolution_idea_education = yes }
 		}
@@ -2891,13 +2809,11 @@ BAT_devolution_decision_category = {
 			check_variable = { BAT_political_capital > 0 }
 		}
 		custom_cost_text = BAT_pp_cost
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_estland_devolve_culture"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_estland_devolve_culture"
 			subtract_from_variable = { BAT_political_capital = 1 }
 			13 = { BAT_swap_devolution_idea_culture = yes }
 		}
@@ -2920,13 +2836,11 @@ BAT_devolution_decision_category = {
 			check_variable = { BAT_political_capital > 0 }
 		}
 		custom_cost_text = BAT_pp_cost
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_estland_devolve_economics"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_estland_devolve_economics"
 			subtract_from_variable = { BAT_political_capital = 1 }
 			13 = { BAT_swap_devolution_idea_economics = yes }
 		}
@@ -2964,12 +2878,10 @@ political_actions = {
 			highlight_state_targets = { state = 880 }
 		}
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAT_integrate_latgale_dem"
+			log = "[GetDateText]: [Root.GetName]: Decision complete BAT_integrate_latgale_dem"
 		}
 
 		remove_effect = {

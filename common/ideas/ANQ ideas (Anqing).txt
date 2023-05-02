@@ -287,10 +287,21 @@ ideas = {
 			picture = chi_war_of_resistance2
 			allowed = { always = no }
 			modifier = {
-				resistance_damage_to_garrison = 0.25
+				resistance_damage_to_garrison = 0.15
 				stability_factor = -0.05
-				political_power_factor = -0.05
 				conscription_factor = -0.10
+			}
+			targeted_modifier = {
+				tag = LEP
+				compliance_gain = -0.01
+			}
+			targeted_modifier = {
+				tag = CHI
+				compliance_gain = -0.01
+			}
+			targeted_modifier = {
+				tag = SQI
+				compliance_gain = -0.02
 			}
 		}
 
@@ -301,8 +312,19 @@ ideas = {
 			modifier = {
 				resistance_damage_to_garrison = 0.25
 				stability_factor = -0.1
-				political_power_factor = -0.1
 				conscription_factor = -0.10
+			}
+			targeted_modifier = {
+				tag = LEP
+				compliance_gain = -0.02
+			}
+			targeted_modifier = {
+				tag = CHI
+				compliance_gain = -0.02
+			}
+			targeted_modifier = {
+				tag = SQI
+				compliance_gain = -0.01
 			}
 		}
 
@@ -802,7 +824,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 		}
 		ANQ_fengtian_cooperation1 = {
@@ -812,7 +834,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			modifier = {
 				production_speed_infrastructure_factor = 0.05
@@ -826,7 +848,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -848,7 +870,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -870,7 +892,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -892,7 +914,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -914,7 +936,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -936,7 +958,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -960,7 +982,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -986,7 +1008,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -1012,7 +1034,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -1041,7 +1063,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 		}
 		ANQ_fengtian_cooperationNOJAP1 = {
@@ -1052,7 +1074,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
@@ -1066,7 +1088,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = FNG
@@ -1085,7 +1107,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = FNG
@@ -1104,7 +1126,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = FNG
@@ -1123,7 +1145,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = FNG
@@ -1142,7 +1164,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = FNG
@@ -1161,7 +1183,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = FNG
@@ -1181,7 +1203,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = FNG
@@ -1202,7 +1224,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = FNG
@@ -1223,7 +1245,7 @@ ideas = {
 			available = {
 				country_exists = FNG
 				NOT = { has_war_with = FNG }
-				has_country_flag = ANQ_is_profengtian
+				ANQ_is_profengtian = yes
 			}
 			targeted_modifier = {
 				tag = FNG

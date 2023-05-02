@@ -471,7 +471,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			desc = SZC_SZC_guo_xunqi_commander_desc
+			desc = SZC_guo_xunqi_commander_desc
 			traits = {
 				career_officer
 			}
@@ -571,7 +571,7 @@ characters = {
 		name = SZC_luo_zezhou
 		portraits = {
 			army = {
-				small = "gfx/interface/advisors/Generic/Portrait_Asia_Generic_land_new_5.png"
+				small = GFX_Portrait_Asia_Generic_land_new_5_small
 			}
 		}
 		advisor = {

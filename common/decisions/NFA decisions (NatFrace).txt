@@ -86,7 +86,7 @@ NFA_seize_morocco_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_seize_real_morocco target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_seize_real_morocco target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			setup_decision_attack_AI = yes
 		}
@@ -110,6 +110,42 @@ NFA_seize_morocco_decisions = {
 				FROM = {
 					country_event = { id = nfa.116 days = 2 }
 				}
+			}
+		}
+	}
+}
+
+propaganda_efforts = {
+	NFA_mobilise_population_for_war = {
+		icon = GFX_decision_hol_radio_oranje
+		allowed = { original_tag = NFA }
+		ai_will_do = {
+			factor = 150
+			modifier = {
+				factor = 0
+				has_war_support > 0.75
+			}
+		}
+		cost = 50
+		visible = {
+			has_completed_focus = NATFRA_Indestructible_Bonds
+			NOT = { 28 = { is_owned_and_controlled_by = NFA } }
+		}
+		available = { has_completed_focus = NATFRA_Re_Conscription }
+
+		days_remove = 90
+		days_re_enable = 90
+
+		modifier = {
+			war_support_weekly = 0.02
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_mobilise_population_for_war"
+			if = {
+				limit = { NOT = { has_completed_focus = NATFRA_Prepare_For_War } }
+				custom_effect_tooltip = until_we_complete_PFW_tt
+				add_stability = -0.03
 			}
 		}
 	}
@@ -190,9 +226,7 @@ NFA_fight_for_influence_cat = {
 		allowed = {
 			original_tag = NFA
 		}
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 		cost = 0
 		visible = {
 			has_active_mission = Mordacq_takes_to_the_waves
@@ -260,9 +294,7 @@ NFA_fight_for_influence_cat = {
 			original_tag = NFA
 		}
 		cost = 0
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		visible = {
 			has_active_mission = Mordacq_parade
@@ -360,9 +392,7 @@ NFA_fight_for_influence_cat = {
 			original_tag = NFA
 		}
 		cost = 0
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		visible = {
 			has_active_mission = Mordacqs_Speech
@@ -455,9 +485,7 @@ NFA_fight_for_influence_cat = {
 			original_tag = NFA
 		}
 		cost = 0
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		visible = {
 			has_active_mission = Mordacq_In_The_Barracks
@@ -514,7 +542,7 @@ NFA_fight_for_influence_cat = {
 			production_speed_buildings_factor = 0.05
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision Invest_Construction"
+			log = "[GetDateText]: [Root.GetName]: Decision complete Invest_Construction"
 			custom_effect_tooltip = Petain_gains_influence_tt
 			hidden_effect = {
 				add_to_variable = {
@@ -568,7 +596,7 @@ NFA_fight_for_influence_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision Invest_Arms_Factory"
+			log = "[GetDateText]: [Root.GetName]: Decision complete Invest_Arms_Factory"
 			custom_effect_tooltip = Petain_gains_influence_tt
 			hidden_effect = {
 				add_to_variable = {
@@ -629,7 +657,7 @@ NFA_fight_for_influence_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision Support_Loyal_Business"
+			log = "[GetDateText]: [Root.GetName]: Decision complete Support_Loyal_Business"
 			custom_effect_tooltip = Petain_gains_influence_tt
 			hidden_effect = {
 				add_to_variable = {
@@ -690,7 +718,7 @@ NFA_fight_for_influence_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision Back_Newspaper"
+			log = "[GetDateText]: [Root.GetName]: Decision complete Back_Newspaper"
 			custom_effect_tooltip = Petain_gains_influence_tt
 			hidden_effect = {
 				add_to_variable = {
@@ -748,7 +776,7 @@ NFA_fight_for_influence_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Call_For_Moral_Order"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Call_For_Moral_Order"
 			custom_effect_tooltip = NFA_reduced_corruption_tt
 			hidden_effect = {
 				set_country_flag = NFA_reduce_corruption
@@ -800,7 +828,7 @@ NFA_fight_for_influence_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Make_Corruption_Crime"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Make_Corruption_Crime"
 			custom_effect_tooltip = NFA_reduced_corruption_tt
 			hidden_effect = {
 				set_country_flag = NFA_reduce_corruption
@@ -852,7 +880,7 @@ NFA_fight_for_influence_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Scapegoats"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Scapegoats"
 			custom_effect_tooltip = NFA_reduced_corruption_tt
 			hidden_effect = {
 				set_country_flag = NFA_reduce_corruption
@@ -891,13 +919,11 @@ NFA_decision_AF_trials_cat = {
 		fire_only_once = yes
 		days_remove = 50
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Public_Humiliation"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Public_Humiliation"
 			country_event = nfa.312
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NFA_Public_Humiliation"
@@ -924,13 +950,11 @@ NFA_decision_AF_trials_cat = {
 		fire_only_once = yes
 		days_remove = 50
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Arrest_Republican_Leaders"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Arrest_Republican_Leaders"
 			country_event = nfa.313
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NFA_Arrest_Republican_Leaders"
@@ -957,13 +981,11 @@ NFA_decision_AF_trials_cat = {
 		fire_only_once = yes
 		days_remove = 50
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Cleanse_the_Police"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Cleanse_the_Police"
 			country_event = nfa.314
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NFA_Cleanse_the_Police"
@@ -990,13 +1012,11 @@ NFA_decision_AF_trials_cat = {
 		fire_only_once = yes
 		days_remove = 50
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Purge_the_Military"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Purge_the_Military"
 			country_event = nfa.315
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NFA_Purge_the_Military"
@@ -1023,13 +1043,11 @@ NFA_decision_AF_trials_cat = {
 		fire_only_once = yes
 		days_remove = 50
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Those_Who_Slither"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Those_Who_Slither"
 			country_event = nfa.316
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NFA_Those_Who_Slither"
@@ -1097,12 +1115,12 @@ NFA_reclaim_metropole_cat = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_La_Lutte_Finale target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_La_Lutte_Finale target: [From.GetName]"
 			clear_decision_attack_AI = yes
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_La_Lutte_Finale target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_La_Lutte_Finale target: [From.GetName]"
 			setup_decision_attack_AI = yes
 			hidden_effect = {
 				FROM = { country_event = nfa.110 } #warning event
@@ -1119,7 +1137,7 @@ NFA_reclaim_metropole_cat = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NFA_La_Lutte_Finale target: [From.GetName]"
-			log = "KR_Event_Logging;ENTENTE ENTERS 2WK;[GetDateText];[ROOT.GetName];[FROM.GetName]"
+			log = "KR_Event_Logging;ENTENTE ENTERS 2WK;[GetDateText]"
 			clear_decision_attack_AI = yes
 			set_global_flag = entente_reclamation_wars_threat
 			declare_war_on = { target = FROM type = annex_everything }
@@ -1132,9 +1150,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_reunion_fever = {
 		icon = generic_form_nation
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			FRA = { surrender_progress > 0.20 }
 		}
@@ -1171,16 +1187,14 @@ NFA_reclaim_metropole_cat = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_reunion_fever"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_reunion_fever"
 			hidden_effect = { add_command_power = -5 }
 		}
 	}
 
 	NFA_Bolster_Paris = {
 		icon = generic_army_support
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -1202,7 +1216,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 16 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Paris"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Paris"
 			16 = { #Paris
 				add_compliance = 5
 				add_resistance_target = {
@@ -1218,9 +1232,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_mobilize_Paris = {
 		icon = generic_prepare_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			OR = {
@@ -1249,7 +1261,7 @@ NFA_reclaim_metropole_cat = {
 		days_remove = 15
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_mobilize_Paris"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_mobilize_Paris"
 			hidden_effect = {
 				add_command_power = -30
 				add_political_power = -15
@@ -1292,9 +1304,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Marseille = {
 		icon = generic_army_support
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -1309,7 +1319,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 21 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Marseille"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Marseille"
 			21 = { #Provence
 				add_compliance = 5
 				add_resistance_target = {
@@ -1331,9 +1341,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_mobilize_Provence = {
 		icon = generic_prepare_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			controls_state = 459
@@ -1356,7 +1364,7 @@ NFA_reclaim_metropole_cat = {
 		custom_cost_text = CP_20_PP_10
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_mobilize_Provence"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_mobilize_Provence"
 			hidden_effect = {
 				add_command_power = -20
 				add_political_power = -10
@@ -1400,9 +1408,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Occitanie = {
 		icon = generic_nationalism
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -1425,7 +1431,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 31 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Occitanie"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Occitanie"
 			31 = { #Garonne
 				add_compliance = 5
 				add_resistance_target = {
@@ -1465,9 +1471,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Poitou_Limo_railway = {
 		icon = generic_ignite_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			OR = {
@@ -1493,7 +1497,7 @@ NFA_reclaim_metropole_cat = {
 		custom_cost_text = 200_infantry_equipment_1
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Poitou_Limo_railway"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Poitou_Limo_railway"
 			custom_effect_tooltip = NFA_Poitou_Limo_Sabotage_tt
 			hidden_effect = {
 				add_equipment_to_stockpile = { type = infantry_equipment amount = -200 }
@@ -1515,9 +1519,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Aquitaine = {
 		icon = generic_army_support
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			OR = {
@@ -1529,14 +1531,14 @@ NFA_reclaim_metropole_cat = {
 		cost = 30
 		available = {
 			controls_state = 19 #NFA controls Aquitaine
-			controls_state = 779 #NFA controls Béarn
+			controls_state = 779 #NFA controls Labourd
 			controls_state = 984 #NFA controls Pyrenees
 		}
 		highlight_states = {
 			highlight_state_targets = { state = 19 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Aquitaine"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Aquitaine"
 			19 = { #Aquitaine
 				add_compliance = 5
 				add_resistance_target = {
@@ -1546,7 +1548,7 @@ NFA_reclaim_metropole_cat = {
 				}
 				hidden_effect = { set_garrison_strength = 1.0 }
 			}
-			779 = { #Béarn
+			779 = { #Labourd
 				add_compliance = 5
 				add_resistance_target = {
 					amount = -10
@@ -1576,9 +1578,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_mobilize_Aquitaine = {
 		icon = generic_prepare_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			OR = {
@@ -1590,7 +1590,7 @@ NFA_reclaim_metropole_cat = {
 		}
 		available = {
 			controls_state = 19 #NFA controls Aquitaine
-			controls_state = 779 #NFA controls Béarn
+			controls_state = 779 #NFA controls Labourd
 			controls_state = 984 #NFA controls Pyrenees
 		}
 		highlight_states = {
@@ -1608,7 +1608,7 @@ NFA_reclaim_metropole_cat = {
 		days_remove = 15
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_mobilize_Aquitaine"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_mobilize_Aquitaine"
 			add_war_support = 0.03
 			hidden_effect = {
 				add_command_power = -20
@@ -1646,9 +1646,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Poitou_Limousin = {
 		icon = generic_nationalism
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -1669,7 +1667,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 23 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Poitou_Limousin"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Poitou_Limousin"
 			23 = { #Poitou
 				add_compliance = 5
 				add_resistance_target = {
@@ -1694,9 +1692,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Auvergne_Lyon = {
 		icon = generic_army_support
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -1716,7 +1712,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 20 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Auvergne_Lyon"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Auvergne_Lyon"
 			20 = { #Lyonnais
 				add_compliance = 5
 				add_resistance_target = {
@@ -1741,9 +1737,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Rhone_Alp = {
 		icon = generic_nationalism
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -1763,7 +1757,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 763 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Rhone_Alp"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Rhone_Alp"
 			32 = { #Rhone
 				add_compliance = 5
 				add_resistance_target = {
@@ -1788,9 +1782,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_mobilize_Lyon = {
 		icon = generic_prepare_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			OR = {
@@ -1820,7 +1812,7 @@ NFA_reclaim_metropole_cat = {
 		days_remove = 15
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_mobilize_Lyon"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_mobilize_Lyon"
 			add_war_support = 0.03
 			hidden_effect = {
 				add_command_power = -30
@@ -1866,9 +1858,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Dijon_Lyon_railway = {
 		icon = generic_ignite_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			controls_state = 21
@@ -1890,7 +1880,7 @@ NFA_reclaim_metropole_cat = {
 		custom_cost_text = 200_infantry_equipment_1
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Dijon_Lyon_railway"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Dijon_Lyon_railway"
 			custom_effect_tooltip = NFA_Dijon_Lyon_Sabotage_tt
 			hidden_effect = {
 				add_equipment_to_stockpile = { type = infantry_equipment amount = -200 }
@@ -1906,9 +1896,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Loire = {
 		icon = generic_nationalism
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -1928,7 +1916,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 30 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Loire"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Loire"
 			30 = { #Maine
 				add_compliance = 5
 				add_resistance_target = {
@@ -1953,9 +1941,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_mobilize_Loire = {
 		icon = generic_prepare_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			controls_state = 459
 		}
@@ -1987,7 +1973,7 @@ NFA_reclaim_metropole_cat = {
 		days_remove = 15
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_mobilize_Loire"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_mobilize_Loire"
 			hidden_effect = {
 				add_command_power = -30
 				add_political_power = -15
@@ -2032,9 +2018,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Brittany = {
 		icon = generic_army_support
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -2054,7 +2038,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 983 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Brittany"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Brittany"
 			14 = { #Upper Brittany
 				add_compliance = 5
 				add_resistance_target = {
@@ -2079,9 +2063,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_mobilize_Brittany = {
 		icon = generic_prepare_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			OR = {
@@ -2111,7 +2093,7 @@ NFA_reclaim_metropole_cat = {
 		days_remove = 15
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_mobilize_Brittany"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_mobilize_Brittany"
 			hidden_effect = {
 				add_command_power = -20
 				add_political_power = -10
@@ -2148,9 +2130,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Normandy = {
 		icon = generic_army_support
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -2173,7 +2153,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 15 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Normandy"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Normandy"
 			15 = { #Normandy
 				add_compliance = 5
 				add_resistance_target = {
@@ -2189,9 +2169,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_mobilize_Normandy = {
 		icon = generic_prepare_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			OR = {
@@ -2221,7 +2199,7 @@ NFA_reclaim_metropole_cat = {
 		days_remove = 15
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_mobilize_Normandy"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_mobilize_Normandy"
 			hidden_effect = {
 				add_command_power = -20
 				add_political_power = -10
@@ -2258,9 +2236,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Lorraine = {
 		icon = generic_nationalism
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -2280,7 +2256,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 785 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Lorraine"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Lorraine"
 			785 = { #Lorraine
 				add_compliance = 5
 				add_resistance_target = {
@@ -2305,9 +2281,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_Bolster_Picardy = {
 		icon = generic_army_support
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		allowed = {
 			original_tag = NFA
 		}
@@ -2329,7 +2303,7 @@ NFA_reclaim_metropole_cat = {
 			highlight_state_targets = { state = 980 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bolster_Picardy"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bolster_Picardy"
 			24 = { #Picardy
 				add_compliance = 5
 				add_resistance_target = {
@@ -2363,9 +2337,7 @@ NFA_reclaim_metropole_cat = {
 
 	NFA_mobilize_Picardy = {
 		icon = generic_prepare_civil_war
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 		visible = {
 			has_war_with = FRA
 			OR = {
@@ -2398,7 +2370,7 @@ NFA_reclaim_metropole_cat = {
 		days_remove = 15
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_mobilize_Picardy"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_mobilize_Picardy"
 			hidden_effect = {
 				add_command_power = -20
 				add_political_power = -10
@@ -2454,12 +2426,10 @@ NFA_rebuild_legitimacy_cat = {
 		days_remove = 60
 		days_re_enable = 65
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 400 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Small_Propaganda"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Small_Propaganda"
 			custom_effect_tooltip = NFA_Small_Propaganda_tt
 			set_country_flag = nfa_global_comply
 			hidden_effect = {
@@ -2517,12 +2487,10 @@ NFA_rebuild_legitimacy_cat = {
 		days_remove = 60
 		days_re_enable = 65
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Large_Scale_Effort"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Large_Scale_Effort"
 			custom_effect_tooltip = NFA_Large_Scale_Effort_tt
 			set_country_flag = nfa_global_comply
 			hidden_effect = {
@@ -2582,12 +2550,10 @@ NFA_rebuild_legitimacy_cat = {
 		cost = 10
 		days_re_enable = 40
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_Paris"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_Paris"
 			set_country_flag = NFA_Focus_Paris_cf
 			country_event = nfa.161 #Work on reducing resistance or increasing compliance in Paris
 		}
@@ -2610,7 +2576,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Paris_Focus_Resist_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Paris_Focus_Resist_Mission"
 			clr_country_flag = NFA_Focus_Paris_cf
 		}
 
@@ -2646,7 +2612,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Paris_Focus_Comply_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Paris_Focus_Comply_Mission"
 			clr_country_flag = NFA_Focus_Paris_cf
 		}
 
@@ -2690,12 +2656,10 @@ NFA_rebuild_legitimacy_cat = {
 		cost = 10
 		days_re_enable = 40
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_Provence"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_Provence"
 			set_country_flag = NFA_Focus_Provence_cf
 			country_event = nfa.162 #Work on reducing resistance or increasing compliance in Provence
 		}
@@ -2718,7 +2682,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Provence_Focus_Resist_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Provence_Focus_Resist_Mission"
 			clr_country_flag = NFA_Focus_Provence_cf
 		}
 
@@ -2754,7 +2718,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Provence_Focus_Comply_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Provence_Focus_Comply_Mission"
 			clr_country_flag = NFA_Focus_Provence_cf
 		}
 
@@ -2798,12 +2762,10 @@ NFA_rebuild_legitimacy_cat = {
 		cost = 10
 		days_re_enable = 40
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_Lyonnais"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_Lyonnais"
 			country_event = nfa.163 #Work on reducing resistance or increasing compliance in Lyonnais
 			set_country_flag = NFA_Focus_Lyonnais_cf
 		}
@@ -2826,7 +2788,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Lyonnais_Focus_Resist_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Lyonnais_Focus_Resist_Mission"
 			clr_country_flag = NFA_Focus_Lyonnais_cf
 		}
 
@@ -2862,7 +2824,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Lyonnais_Focus_Comply_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Lyonnais_Focus_Comply_Mission"
 			clr_country_flag = NFA_Focus_Lyonnais_cf
 		}
 
@@ -2906,12 +2868,10 @@ NFA_rebuild_legitimacy_cat = {
 		cost = 10
 		days_re_enable = 40
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_Bordeaux"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_Bordeaux"
 			set_country_flag = NFA_Focus_Bordeaux_cf
 			country_event = nfa.164 #Work on reducing resistance or increasing compliance in Bordeaux
 		}
@@ -2934,7 +2894,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Bordeaux_Focus_Resist_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Bordeaux_Focus_Resist_Mission"
 			clr_country_flag = NFA_Focus_Bordeaux_cf
 		}
 
@@ -2970,7 +2930,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Bordeaux_Focus_Comply_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Bordeaux_Focus_Comply_Mission"
 			clr_country_flag = NFA_Focus_Bordeaux_cf
 		}
 
@@ -3014,12 +2974,10 @@ NFA_rebuild_legitimacy_cat = {
 		cost = 10
 		days_re_enable = 40
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_Lille"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_Lille"
 			set_country_flag = NFA_Focus_Lille_cf
 			country_event = nfa.165 #Work on reducing resistance or increasing compliance in Lille
 		}
@@ -3042,7 +3000,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Lille_Focus_Resist_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Lille_Focus_Resist_Mission"
 			clr_country_flag = NFA_Focus_Lille_cf
 		}
 
@@ -3078,7 +3036,7 @@ NFA_rebuild_legitimacy_cat = {
 		days_mission_timeout = 45
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled NFA_Lille_Focus_Comply_Mission"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel NFA_Lille_Focus_Comply_Mission"
 			clr_country_flag = NFA_Focus_Lille_cf
 		}
 
@@ -3120,12 +3078,10 @@ NFA_rebuild_legitimacy_cat = {
 
 		cost = 0
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bring_Brittany_Home"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bring_Brittany_Home"
 			BRI = { country_event = nfa.629 }
 			NFA = { country_event = nfa.629 }
 		}
@@ -3166,12 +3122,10 @@ NFA_rebuild_legitimacy_cat = {
 
 		cost = 25
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Bring_Belgian_Land_Home"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Bring_Belgian_Land_Home"
 			if = {
 				limit = {
 					BEL = {
@@ -3203,8 +3157,17 @@ NFA_rebuild_legitimacy_cat = {
 		available = {
 			has_political_power > 0
 			has_full_control_of_state = FROM
-			FROM = { compliance > 80 }
-			FROM = { resistance < 10 }
+			OR = {
+				AND = {
+					FROM = { compliance > 80 }
+					FROM = { resistance < 10 }
+				}
+				AND = {
+					is_ai = yes
+					FROM = { compliance > 70 }
+					FROM = { resistance < 30 }
+				}
+			}
 		}
 
 		visible = {
@@ -3221,12 +3184,10 @@ NFA_rebuild_legitimacy_cat = {
 		on_map_mode = map_only
 		state_target = yes
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Metropole target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Metropole target: [From.GetName]"
 			FROM = { set_state_flag = currently_being_cored }
 			NFA_dynamic_metropole_coring_cost = yes
 		}
@@ -3354,9 +3315,7 @@ NFA_Integration_decisions = {
 			political_power_cost = 0.15
 		}
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NFA_Integrate_State target: [From.GetName]"
@@ -3412,9 +3371,7 @@ NFA_Integration_decisions = {
 			political_power_cost = 0.15
 		}
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove NFA_Integrate_Overseas_State target: [From.GetName]"
@@ -4125,9 +4082,7 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			513 = {
 				is_owned_by = ROOT
@@ -4140,7 +4095,7 @@ NFA_fate_of_french_africa_cat = {
 			NOT = { has_country_flag = nfa_africa_civ_mission_in_progress }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_Algeria"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_Algeria"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			513 = {
 				add_state_modifier = {
@@ -4180,9 +4135,7 @@ NFA_fate_of_french_africa_cat = {
 		allowed = { always = no }
 		cost = 10
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 		available = { #Sufficiently compliant/non-resisting local population
 			513 = {
 				is_controlled_by = ROOT
@@ -4194,7 +4147,7 @@ NFA_fate_of_french_africa_cat = {
 			highlight_state_targets = { state = 513 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Algeria"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Algeria"
 			513 = {
 				add_core_of = NFA
 				NFA_remove_resistance_modifiers = yes
@@ -4213,9 +4166,7 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			458 = {
 				is_owned_by = ROOT
@@ -4233,7 +4184,7 @@ NFA_fate_of_french_africa_cat = {
 			NOT = { has_country_flag = nfa_africa_civ_mission_in_progress }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_Tunisia"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_Tunisia"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			458 = {
 				add_state_modifier = {
@@ -4289,9 +4240,7 @@ NFA_fate_of_french_africa_cat = {
 		allowed = { always = no }
 		cost = 25
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 		available = { #Sufficiently compliant/non-resisting local population
 			458 = {
 				is_controlled_by = ROOT
@@ -4308,7 +4257,7 @@ NFA_fate_of_french_africa_cat = {
 			highlight_state_targets = { state = 458 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Tunisia"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Tunisia"
 			custom_effect_tooltip = NFA_coring_tunis_tt
 			hidden_effect = {
 				458 = {
@@ -4339,9 +4288,7 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			806 = {
 				is_owned_by = ROOT
@@ -4354,7 +4301,7 @@ NFA_fate_of_french_africa_cat = {
 			NOT = { has_country_flag = nfa_africa_civ_mission_in_progress }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_Guinea"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_Guinea"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			806 = {
 				add_state_modifier = {
@@ -4394,9 +4341,7 @@ NFA_fate_of_french_africa_cat = {
 		allowed = { always = no }
 		cost = 20
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 		visible = {
 			owns_state = 806
 		}
@@ -4411,7 +4356,7 @@ NFA_fate_of_french_africa_cat = {
 			highlight_state_targets = { state = 806 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Guinea"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Guinea"
 			806 = {
 				add_core_of = NFA
 				NFA_remove_resistance_modifiers = yes
@@ -4430,9 +4375,7 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			557 = {
 				is_owned_by = ROOT
@@ -4445,7 +4388,7 @@ NFA_fate_of_french_africa_cat = {
 			NOT = { has_country_flag = nfa_africa_civ_mission_in_progress }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_Mauritania"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_Mauritania"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			557 = {
 				add_state_modifier = {
@@ -4485,9 +4428,7 @@ NFA_fate_of_french_africa_cat = {
 		allowed = { always = no }
 		cost = 30
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 		visible = {
 			owns_state = 557
 		}
@@ -4503,7 +4444,7 @@ NFA_fate_of_french_africa_cat = {
 			highlight_state_targets = { state = 557 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Mauritania"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Mauritania"
 			557 = {
 				add_core_of = NFA
 				NFA_remove_resistance_modifiers = yes
@@ -4522,26 +4463,37 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			556 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			1095 = {
 				is_owned_by = ROOT
 				NOT = { is_core_of = ROOT }
 			}
 		}
 		available = {
 			controls_state = 556
+			controls_state = 1095
 			political_power_daily > 0.25
 			NOT = {
 				has_country_flag = nfa_africa_civ_mission_in_progress
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_French_Sudan"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_French_Sudan"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			556 = {
+				add_state_modifier = {
+					modifier = {
+						compliance_gain = 0.20 #Boost to compliance to help core faster
+						resistance_decay = -0.3
+					}
+				}
+			}
+			1095 = {
 				add_state_modifier = {
 					modifier = {
 						compliance_gain = 0.20 #Boost to compliance to help core faster
@@ -4570,6 +4522,14 @@ NFA_fate_of_french_africa_cat = {
 						}
 					}
 				}
+				1095 = {
+					add_state_modifier = {
+						modifier = {
+							compliance_gain = -0.20 #Turn off the compliance boost
+							resistance_decay = 0.3
+						}
+					}
+				}
 			}
 		}
 	}
@@ -4579,11 +4539,10 @@ NFA_fate_of_french_africa_cat = {
 		allowed = { always = no }
 		cost = 30
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 		visible = {
 			owns_state = 556
+			owns_state = 1095
 		}
 		available = { #Sufficiently compliant/non-resisting local population
 			556 = {
@@ -4591,13 +4550,30 @@ NFA_fate_of_french_africa_cat = {
 				compliance > 70
 				resistance < 10
 			}
+			1095 = {
+				is_controlled_by = ROOT
+				compliance > 70
+				resistance < 10
+			}
 		}
 		highlight_states = {
-			highlight_state_targets = { state = 556 }
+			highlight_state_targets = {
+				state = 556
+				state = 1095
+			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_French_Sudan"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_French_Sudan"
 			556 = {
+				add_core_of = NFA
+				NFA_remove_resistance_modifiers = yes
+				add_state_modifier = {
+					modifier = {
+						recruitable_population_factor = -0.65
+					}
+				}
+			}
+			1095 = {
 				add_core_of = NFA
 				NFA_remove_resistance_modifiers = yes
 				add_state_modifier = {
@@ -4615,9 +4591,7 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			807 = {
 				is_owned_by = ROOT
@@ -4630,7 +4604,7 @@ NFA_fate_of_french_africa_cat = {
 			NOT = { has_country_flag = nfa_africa_civ_mission_in_progress }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_Ivory_Coast"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_Ivory_Coast"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			807 = {
 				add_state_modifier = {
@@ -4670,9 +4644,7 @@ NFA_fate_of_french_africa_cat = {
 		allowed = { always = no }
 		cost = 25
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 		visible = {
 			owns_state = 807
 		}
@@ -4687,7 +4659,7 @@ NFA_fate_of_french_africa_cat = {
 			highlight_state_targets = { state = 807 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Ivory_Coast"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Ivory_Coast"
 			hidden_effect = {
 				807 = {
 					add_core_of = NFA
@@ -4708,9 +4680,7 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			808 = {
 				is_owned_by = ROOT
@@ -4725,7 +4695,7 @@ NFA_fate_of_french_africa_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_Upper_Volta"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_Upper_Volta"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			808 = {
 				add_state_modifier = {
@@ -4765,9 +4735,7 @@ NFA_fate_of_french_africa_cat = {
 		allowed = { always = no }
 		cost = 30
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 		visible = {
 			owns_state = 808
 		}
@@ -4782,7 +4750,7 @@ NFA_fate_of_french_africa_cat = {
 			highlight_state_targets = { state = 808 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Upper_Volta"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Upper_Volta"
 			808 = {
 				add_core_of = NFA
 				NFA_remove_resistance_modifiers = yes
@@ -4801,9 +4769,7 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			809 = {
 				is_owned_by = ROOT
@@ -4818,7 +4784,7 @@ NFA_fate_of_french_africa_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_Niger"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_Niger"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			809 = {
 				add_state_modifier = {
@@ -4858,9 +4824,7 @@ NFA_fate_of_french_africa_cat = {
 		allowed = { always = no }
 		cost = 30
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 		visible = {
 			owns_state = 809
 		}
@@ -4875,7 +4839,7 @@ NFA_fate_of_french_africa_cat = {
 			highlight_state_targets = { state = 809 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Niger"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Niger"
 			809 = {
 				add_core_of = NFA
 				NFA_remove_resistance_modifiers = yes
@@ -4894,9 +4858,7 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			515 = {
 				is_owned_by = ROOT
@@ -4911,7 +4873,7 @@ NFA_fate_of_french_africa_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_Chad"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_Chad"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			515 = {
 				add_state_modifier = {
@@ -4951,9 +4913,7 @@ NFA_fate_of_french_africa_cat = {
 		allowed = { always = no }
 		cost = 30
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 		visible = {
 			owns_state = 515
 		}
@@ -4967,7 +4927,7 @@ NFA_fate_of_french_africa_cat = {
 			highlight_state_targets = { state = 515 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Chad"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Chad"
 			515 = {
 				add_core_of = NFA
 				NFA_remove_resistance_modifiers = yes
@@ -4986,9 +4946,7 @@ NFA_fate_of_french_africa_cat = {
 		icon = generic_form_nation
 		allowed = { always = no }
 		cost = 30
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 200 }
 		visible = {
 			876 = {
 				is_owned_by = ROOT
@@ -5003,7 +4961,7 @@ NFA_fate_of_french_africa_cat = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Focus_On_Dahomey"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Focus_On_Dahomey"
 			set_country_flag = nfa_africa_civ_mission_in_progress
 			876 = {
 				add_state_modifier = {
@@ -5074,12 +5032,10 @@ NFA_fate_of_french_africa_cat = {
 			political_power_gain = -0.15
 		}
 
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 400 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Integrate_Dahomey"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Integrate_Dahomey"
 			if = {
 				limit = { has_subject = DAH }
 				set_variable = { NFA_Integrate_Dahomey_days_remove = 200 }
@@ -5148,9 +5104,7 @@ NFA_transahara_cat = {
 
 		days_remove = 125
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove Transahara_Phase_One"
@@ -5162,6 +5116,7 @@ NFA_transahara_cat = {
 					instant_build = yes
 				}
 			}
+			country_event = nfa.257
 			unlock_decision_tooltip = Transahara_Phase_Two
 		}
 	}
@@ -5193,9 +5148,7 @@ NFA_transahara_cat = {
 
 		days_remove = 125
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove Transahara_Phase_Two"
@@ -5208,6 +5161,7 @@ NFA_transahara_cat = {
 					instant_build = yes
 				}
 			}
+			country_event = nfa.258
 			unlock_decision_tooltip = Transahara_Phase_Three
 		}
 	}
@@ -5216,18 +5170,18 @@ NFA_transahara_cat = {
 		icon = GFX_decision_train
 		fixed_random_seed = no
 		highlight_states = {
-			highlight_state_targets = { state = 556 }
+			highlight_state_targets = { state = 1095 }
 		}
 		allowed = {
 			original_tag = NFA
 		}
 		cost = 20
 		visible = {
-			owns_state = 556
+			owns_state = 1095
 		}
 		available = {
 			has_country_flag = NFA_Transahara_Phase_Two_Done_cf
-			controls_state = 556
+			controls_state = 1095
 		}
 		fire_only_once = yes
 
@@ -5239,9 +5193,7 @@ NFA_transahara_cat = {
 
 		days_remove = 125
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove Transahara_Phase_Three"
@@ -5250,13 +5202,14 @@ NFA_transahara_cat = {
 			}
 			clr_country_flag = NFA_Transahara_Phase_Two_Done_cf
 			set_country_flag = NFA_Transahara_Phase_Three_Done_cf
-			556 = {
+			1095 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
+			country_event = nfa.259
 			unlock_decision_tooltip = Transahara_Phase_Four
 		}
 	}
@@ -5265,7 +5218,10 @@ NFA_transahara_cat = {
 		icon = GFX_decision_train
 		fixed_random_seed = no
 		highlight_states = {
-			highlight_state_targets = { state = 556 }
+			highlight_state_targets = {
+				state = 556
+				state = 1095
+			}
 		}
 		allowed = {
 			original_tag = NFA
@@ -5273,10 +5229,12 @@ NFA_transahara_cat = {
 		cost = 25
 		visible = {
 			owns_state = 556
+			owns_state = 1095
 		}
 		available = {
 			has_country_flag = NFA_Transahara_Phase_Three_Done_cf
 			controls_state = 556
+			controls_state = 1095
 		}
 		fire_only_once = yes
 
@@ -5288,9 +5246,7 @@ NFA_transahara_cat = {
 
 		days_remove = 125
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove Transahara_Phase_Four"
@@ -5299,6 +5255,7 @@ NFA_transahara_cat = {
 			clr_country_flag = nfa_transahara_almost_cf
 			set_global_flag = nfa_transahara_railway_finished_cf
 			add_political_power = 100
+			country_event = nfa.260
 			custom_effect_tooltip = nfa_transsaharan_rails_tt
 			clr_global_flag = TRANSSAHARIAN_ROUTE_DISABLED
 			556 = {
@@ -5313,6 +5270,9 @@ NFA_transahara_cat = {
 				increase_state_category_by_one_level = yes
 			}
 			556 = {
+				increase_state_category_by_one_level = yes
+			}
+			1095 = {
 				increase_state_category_by_one_level = yes
 			}
 			808 = {
@@ -5365,11 +5325,9 @@ NFA_transahara_cat = {
 		}
 		cost = NFA_Invite_Investors_cost?15
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 150
-		}
+		ai_will_do = { factor = 150 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Invite_Investors"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Invite_Investors"
 			clear_variable = NFA_Invite_Investors_cost
 			if = {
 				limit = {
@@ -5396,12 +5354,10 @@ NFA_transahara_cat = {
 		}
 		cost = 20
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 75
-		}
+		ai_will_do = { factor = 75 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_Cheap_Work_1"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_Cheap_Work_1"
 			NFA_Reduce_Transahara_1 = yes
 			hidden_effect = {
 				country_event = { id = nfa.252 days = 45 random_days = 100 } # Workers Run Away
@@ -5421,14 +5377,12 @@ NFA_colonial_rebellions = {
 			owns_state = FROM.capital
 		}
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		target_non_existing = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision NFA_crush_resistance target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete NFA_crush_resistance target: [From.GetName]"
 			clr_country_flag = NFA_rebelled_@FROM
 			NFA_disable_revolt_decision_category = yes
 			every_owned_state = {

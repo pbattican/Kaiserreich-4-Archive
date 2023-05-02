@@ -27,11 +27,9 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = UKR_oleksander_shumsky_second_in_command
-			traits = { KR_ambitious_union_boss_sic second_in_command_trait }
+			traits = { KR_ambitious_union_boss_sic }
 			cost = 0
-			removal_cost = -1
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
+			can_be_fired = no
 		}
 	}
 	UKR_volodymyr_vynnychenko = {
@@ -140,11 +138,9 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = UKR_pavlo_skoropadskyi_second_in_command
-			traits = { KR_old_general_sic second_in_command_trait }
+			traits = { KR_old_general_sic }
 			cost = 0
-			removal_cost = -1
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
+			can_be_fired = no
 		}
 		field_marshal = {
 			traits = { old_guard cavalry_officer organizer thorough_planner }
@@ -336,8 +332,8 @@ characters = {
 		name = UKR_andriy_pokrovsky
 		portraits = {
 			army = {
-				large = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_1.png"
-				small = "gfx/interface/advisors/Generic/Portrait_Europe_Generic_navy_new_1.png"
+				large = GFX_Portrait_Europe_Generic_navy_new_1
+				small = GFX_Portrait_Europe_Generic_navy_new_1_small
 			}
 		}
 		navy_leader = {
@@ -353,8 +349,8 @@ characters = {
 		name = UKR_sviatoslav_shramchenko
 		portraits = {
 			army = {
-				large = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_4.png"
-				small = "gfx/interface/advisors/Generic/Portrait_Europe_Generic_navy_new_4.png"
+				large = GFX_Portrait_Europe_Generic_navy_new_4
+				small = GFX_Portrait_Europe_Generic_navy_new_4_small
 			}
 		}
 		navy_leader = {
@@ -364,6 +360,24 @@ characters = {
 			defense_skill = 2
 			maneuvering_skill = 1
 			coordination_skill = 2
+		}
+	}
+	UKR_yurii_svirskyi = {
+		name = UKR_yurii_svirskyi
+		portraits = {
+			army = {
+				large = "gfx/leaders/UKR/Portrait_UKR_Yurii_Svirskyi.png"
+				small = "gfx/interface/advisors/UKR/UKR_yurii_svirskyi.png"
+			}
+		}
+		navy_leader = {
+			desc = UKR_yurii_svirskyi_desc
+			traits = { superior_tactician }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
 		}
 	}
 
@@ -604,11 +618,9 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = UKR_andrii_livytskyi_second_in_command
-			traits = { KR_reformist_socialist_sic second_in_command_trait }
+			traits = { KR_reformist_socialist_sic }
 			cost = 0
-			removal_cost = -1
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
+			can_be_fired = no
 		}
 	}
 

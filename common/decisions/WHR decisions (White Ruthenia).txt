@@ -15,9 +15,7 @@ political_actions = {
 		cost = 15
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_reclaim_vilnya"
@@ -42,9 +40,7 @@ political_actions = {
 		cost = 15
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_reclaim_bialystok"
@@ -66,324 +62,13 @@ political_actions = {
 		cost = 15
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_reclaim_homiel"
 			add_state_claim = 93 #Brest
 			add_state_claim = 241 #Gomel
 			add_state_claim = 997 #Polesia
-		}
-	}
-	WHR_integrate_state_easy = {
-		name = integrate_state
-		icon = eng_trade_unions_demand
-
-		allowed = { tag = WHR }
-
-		available = {
-			FROM = {
-				if = {
-					limit = { has_resistance = yes }
-					compliance > 40
-				}
-			}
-		}
-
-		visible = {
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		cost = WHR_integrate_state_easy_cost?50
-		days_remove = WHR_integrate_state_easy_speed?90
-		cancel_if_not_visible = yes
-
-		state_target = yes
-		targets = { 241 243 755 }
-		target_trigger = {
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled WHR_integrate_state_easy target: [From.GetName]"
-			country_event = whrmisc.22
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_integrate_state_easy target: [From.GetName]"
-			hidden_effect = { remove_state_claim = FROM }
-			add_state_core = FROM
-		}
-	}
-	WHR_integrate_state_medium = {
-		name = integrate_state
-		icon = eng_trade_unions_demand
-
-		allowed = { tag = WHR }
-
-		available = {
-			FROM = {
-				if = {
-					limit = { has_resistance = yes }
-					compliance > 40
-				}
-			}
-		}
-
-		visible = {
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		cost = WHR_integrate_state_medium_cost?75
-		days_remove = WHR_integrate_state_medium_speed?120
-		cancel_if_not_visible = yes
-
-		state_target = yes
-		targets = { 96 97 997 }
-		target_trigger = {
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled WHR_integrate_state_medium target: [From.GetName]"
-			country_event = whrmisc.22
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_integrate_state_medium target: [From.GetName]"
-			hidden_effect = { remove_state_claim = FROM }
-			add_state_core = FROM
-		}
-	}
-	WHR_integrate_state_hard = {
-		name = integrate_state
-		icon = eng_trade_unions_demand
-
-		allowed = { tag = WHR }
-
-		available = {
-			FROM = {
-				if = {
-					limit = { has_resistance = yes }
-					compliance > 40
-				}
-			}
-		}
-
-		visible = {
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		cost = WHR_integrate_state_hard_cost?100
-		days_remove = WHR_integrate_state_hard_speed?150
-		cancel_if_not_visible = yes
-
-		state_target = yes
-		targets = { 93 242 }
-		target_trigger = {
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled WHR_integrate_state_hard target: [From.GetName]"
-			country_event = whrmisc.22
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_integrate_state_hard target: [From.GetName]"
-			hidden_effect = { remove_state_claim = FROM }
-			add_state_core = FROM
-		}
-	}
-	WHR_rebuild_local_administration = {
-		icon = generic_nationalism
-
-		allowed = { tag = WHR }
-
-		available = {
-			political_power_daily > 0.19
-			FROM = {
-				has_resistance = yes
-				compliance < 40
-			}
-		}
-
-		visible = {
-			has_elected_government = yes
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		cost = 25
-		days_remove = 30
-		days_re_enable = 40
-		cancel_if_not_visible = yes
-
-		modifier = {
-			political_power_gain = -0.20
-		}
-
-		state_target = yes
-		targets = { 93 96 97 241 242 243 755 997 }
-		target_root_trigger = {
-			has_completed_focus = WHR_National_Awakening
-		}
-		target_trigger = {
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_rebuild_local_administration target: [From.GetName]"
-			FROM = {
-				add_state_modifier = {
-					modifier = {
-						compliance_gain = 0.20 #boost to compliance to help core faster
-					}
-				}
-			}
-		}
-
-		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled WHR_rebuild_local_administration target: [From.GetName]"
-			country_event = whrmisc.20
-			hidden_effect = {
-				FROM = {
-					add_state_modifier = {
-						modifier = {
-							compliance_gain = -0.20 #Turn off the compliance boost
-						}
-					}
-				}
-			}
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_rebuild_local_administration target: [From.GetName]"
-			hidden_effect = {
-				FROM = {
-					add_state_modifier = {
-						modifier = {
-							compliance_gain = -0.20 #Turn off the compliance boost
-						}
-					}
-				}
-			}
-		}
-	}
-	WHR_strengthen_military_administration = {
-		icon = generic_military
-
-		allowed = { tag = WHR }
-
-		available = {
-			FROM = {
-				has_resistance = yes
-				compliance < 40
-			}
-		}
-
-		visible = {
-			has_authoritarian_government = yes
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		cost = 25
-		days_remove = 30
-		days_re_enable = 40
-		cancel_if_not_visible = yes
-
-		state_target = yes
-		targets = { 93 96 97 241 242 243 755 997 }
-		target_trigger = {
-			FROM = {
-				is_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-		}
-		target_root_trigger = {
-			has_authoritarian_government = yes
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_strengthen_military_administration target: [From.GetName]"
-			FROM = {
-				add_state_modifier = {
-					modifier = {
-						compliance_gain = 0.10 #boost to compliance to help core faster
-					}
-				}
-			}
-		}
-
-		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled WHR_strengthen_military_administration target: [From.GetName]"
-			country_event = whrmisc.21
-			FROM = {
-				add_state_modifier = {
-					modifier = {
-						compliance_gain = -0.10 #Turn off the compliance boost
-					}
-				}
-			}
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_strengthen_military_administration target: [From.GetName]"
-			FROM = {
-				add_state_modifier = {
-					modifier = {
-						compliance_gain = -0.10 #Turn off the compliance boost
-					}
-				}
-			}
 		}
 	}
 	WHR_secede_from_RP = {
@@ -401,15 +86,17 @@ political_actions = {
 				NOT = { country_exists = GER }
 				GER = { has_capitulated = yes }
 			}
+			OR = {
+				is_subject_of = GER
+				is_subject = no
+			}
 			has_capitulated = no
 		}
 
 		cost = 50
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_secede_from_RP"
@@ -444,12 +131,10 @@ political_actions = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled WHR_establish_LIT_autonomy"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel WHR_establish_LIT_autonomy"
 			#event notifying the failure
 		}
 
@@ -504,9 +189,7 @@ political_actions = {
 		cost = 50
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_form_litbel"
@@ -536,9 +219,7 @@ political_actions = {
 		cost = 15
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_equal_RP_membership target: [From.GetName]"
@@ -580,12 +261,10 @@ political_actions = {
 		cost = 75
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision RUS_secret_deal_with_belarus target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_secret_deal_with_belarus target: [From.GetName]"
 			FROM = { country_event = whrpol.50 }
 		}
 	}
@@ -614,7 +293,7 @@ WHR_land_reform = { #Land Reform time
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_secular_curriculum"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_secular_curriculum"
 			set_country_flag = BSDP_Secular_Curriculum_selected
 			add_to_variable = { var = WHR_Land_Reform_Success value = 10 }
 			subtract_from_variable = { var = WHR_Land_Reform_Popularity value = 10 }
@@ -648,7 +327,7 @@ WHR_land_reform = { #Land Reform time
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_religious_curriculum"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_religious_curriculum"
 			set_country_flag = BSDP_Religious_Curriculum_selected
 			subtract_from_variable = { var = WHR_Land_Reform_Success value = 10 }
 			add_to_variable = { var = WHR_Land_Reform_Popularity value = 10 }
@@ -682,7 +361,7 @@ WHR_land_reform = { #Land Reform time
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Compulsory_Union_Membership"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Compulsory_Union_Membership"
 			set_country_flag = BSDP_Unions_Compulsory
 			add_to_variable = { var = WHR_Land_Reform_Success value = 20 }
 			subtract_from_variable = { var = WHR_Land_Reform_Popularity value = 20 }
@@ -717,7 +396,7 @@ WHR_land_reform = { #Land Reform time
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Voluntary_Union_Membership"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Voluntary_Union_Membership"
 			set_country_flag = BSDP_Unions_Voluntary
 			subtract_from_variable = { var = WHR_Land_Reform_Success value = 20 }
 			add_to_variable = { var = WHR_Land_Reform_Popularity value = 20 }
@@ -752,7 +431,7 @@ WHR_land_reform = { #Land Reform time
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Ban_Christian_Unions"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Ban_Christian_Unions"
 			set_country_flag = BSDP_Unions_Secular
 			add_to_variable = { var = WHR_Land_Reform_Success value = 20 }
 			subtract_from_variable = { var = WHR_Land_Reform_Popularity value = 20 }
@@ -786,7 +465,7 @@ WHR_land_reform = { #Land Reform time
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Allow_Christian_Unions"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Allow_Christian_Unions"
 			set_country_flag = BSDP_Unions_Christian
 			subtract_from_variable = { var = WHR_Land_Reform_Success value = 20 }
 			add_to_variable = { var = WHR_Land_Reform_Popularity value = 20 }
@@ -820,7 +499,7 @@ WHR_land_reform = { #Land Reform time
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Integrate_the_Bunds"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Integrate_the_Bunds"
 			set_country_flag = BSDP_Bunds_Integrate
 			add_to_variable = { var = WHR_Land_Reform_Success value = 10 }
 			subtract_from_variable = { var = WHR_Land_Reform_Popularity value = 10 }
@@ -851,7 +530,7 @@ WHR_land_reform = { #Land Reform time
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Work_with_the_Bunds"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Work_with_the_Bunds"
 			set_country_flag = BSDP_Bunds_Cooperate
 			subtract_from_variable = { var = WHR_Land_Reform_Success value = 10 }
 			add_to_variable = { var = WHR_Land_Reform_Popularity value = 10 }
@@ -866,9 +545,7 @@ WHR_land_reform = { #Land Reform time
 		days_re_enable = 49
 		days_remove = 14
 
-		ai_will_do = {
-			factor = 250
-		}
+		ai_will_do = { factor = 250 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_Solve_Land_Disputes"
@@ -1004,7 +681,7 @@ WHR_Civil_War = { #Coup/Civil War
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_german_intervention"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_german_intervention"
 			add_political_power = 25
 		}
 		timeout_effect = {
@@ -1036,7 +713,7 @@ WHR_Civil_War = { #Coup/Civil War
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Mogilev_Assault"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Mogilev_Assault"
 			set_country_flag = WHR_ongoing_assault
 		}
 
@@ -1074,7 +751,7 @@ WHR_Civil_War = { #Coup/Civil War
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Braslaw_Assault"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Braslaw_Assault"
 			set_country_flag = WHR_ongoing_assault
 		}
 
@@ -1113,7 +790,7 @@ WHR_Civil_War = { #Coup/Civil War
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Pinsk_Assault"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Pinsk_Assault"
 			set_country_flag = WHR_ongoing_assault
 		}
 
@@ -1152,7 +829,7 @@ WHR_Civil_War = { #Coup/Civil War
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Bobruisk_Assault"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Bobruisk_Assault"
 			set_country_flag = WHR_ongoing_assault
 		}
 
@@ -1191,7 +868,7 @@ WHR_Civil_War = { #Coup/Civil War
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_Mozyr_Assault"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_Mozyr_Assault"
 			set_country_flag = WHR_ongoing_assault
 		}
 
@@ -1241,16 +918,14 @@ WHR_Civil_War = { #Coup/Civil War
 WHR_industrialization = { #Industrialize WHR
 	WHR_Industrialize_Braslaw = {
 		icon = generic_factory
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			207 = { is_owned_and_controlled_by = ROOT }
 		}
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 207 }
 		}
@@ -1269,16 +944,14 @@ WHR_industrialization = { #Industrialize WHR
 	}
 	WHR_Industrialize_Mogilev = {
 		icon = steel
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			1087 = { is_owned_and_controlled_by = ROOT }
 		}
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 1087 }
 		}
@@ -1302,16 +975,14 @@ WHR_industrialization = { #Industrialize WHR
 	}
 	WHR_Industrialize_Mozyr = {
 		icon = generic_factory
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			194 = { is_owned_and_controlled_by = ROOT }
 		}
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 194 }
 		}
@@ -1330,16 +1001,14 @@ WHR_industrialization = { #Industrialize WHR
 	}
 	WHR_Industrialize_Mozyr_2 = {
 		icon = oil
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			194 = { is_owned_and_controlled_by = ROOT }
 		}
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 194 }
 		}
@@ -1362,16 +1031,14 @@ WHR_industrialization = { #Industrialize WHR
 	}
 	WHR_Industrialize_Pinsk = {
 		icon = electrify
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			95 = { is_owned_and_controlled_by = ROOT }
 		}
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 95 }
 		}
@@ -1395,16 +1062,14 @@ WHR_industrialization = { #Industrialize WHR
 	}
 	WHR_Industrialize_Novogrudok = {
 		icon = generic_construction
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			204 = { is_owned_and_controlled_by = ROOT }
 		}
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 204 }
 		}
@@ -1423,7 +1088,7 @@ WHR_industrialization = { #Industrialize WHR
 	}
 	WHR_iron_prospecting = {
 		icon = steel
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			204 = { is_owned_and_controlled_by = ROOT }
 			1087 = { is_owned_and_controlled_by = ROOT }
@@ -1431,9 +1096,7 @@ WHR_industrialization = { #Industrialize WHR
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 204 state = 1087 }
 		}
@@ -1460,16 +1123,14 @@ WHR_industrialization = { #Industrialize WHR
 	}
 	WHR_Industrialize_Minsk = {
 		icon = electrify
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			206 = { is_owned_and_controlled_by = ROOT }
 		}
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 206 }
 		}
@@ -1493,7 +1154,7 @@ WHR_industrialization = { #Industrialize WHR
 	}
 	WHR_Empower_the_Bund_Unions = {
 		icon = bul_appoint_members_zveno
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			206 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -1503,9 +1164,7 @@ WHR_industrialization = { #Industrialize WHR
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 206 }
 		}
@@ -1528,7 +1187,7 @@ WHR_industrialization = { #Industrialize WHR
 	}
 	WHR_Make_Farmers_into_Workers = {
 		icon = generic_agriculture
-		allowed = {	always = no }  # Activated by scripted effect
+		allowed = { always = no }  # Activated by scripted effect
 		available = {
 			206 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -1538,9 +1197,7 @@ WHR_industrialization = { #Industrialize WHR
 		cost = 75
 		days_remove = 120
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		highlight_states = {
 			highlight_state_targets = { state = 206 }
 		}
@@ -1561,6 +1218,122 @@ WHR_industrialization = { #Industrialize WHR
 	}
 }
 WHR_arms_import = {#army focus tree decisions
+	WHR_dnipro_line = {
+		icon = GFX_decision_fortress
+		allowed = { always = no }
+		available = { has_full_control_of_state = 1087 }
+		visible = { owns_state = 1087 }
+
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+		modifier = { consumer_goods_factor = 0.05 }
+
+		ai_will_do = { factor = 25 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel WHR_dnipro_line"
+			hidden_effect = { add_political_power = 50 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_dnipro_line"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_dnipro_line"
+			1087 = {
+				add_building_construction = {
+					type = bunker
+					province = 3331
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9289
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3378
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6373
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6319
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	WHR_dvina_line = {
+		icon = GFX_decision_fortress
+		allowed = { always = no }
+		available = {
+			has_full_control_of_state = 207
+			has_full_control_of_state = 1087
+		}
+		visible = {
+			owns_state = 207
+			owns_state = 1087
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+		modifier = { consumer_goods_factor = 0.05 }
+
+		ai_will_do = { factor = 25 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel WHR_dvina_line"
+			hidden_effect = { add_political_power = 40 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_dvina_line"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_dvina_line"
+			1087 = {
+				add_building_construction = {
+					type = bunker
+					province = 6371
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9241
+					level = 1
+					instant_build = yes
+				}
+			}
+			207 = {
+				add_building_construction = {
+					type = bunker
+					province = 233
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 358
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
 	WHR_import_small_arms = {
 		icon = generic_prepare_civil_war
 		allowed = { always = no }
@@ -1589,7 +1362,7 @@ WHR_arms_import = {#army focus tree decisions
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_import_small_arms target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_import_small_arms target: [From.GetName]"
 			FROM = { country_event = whrmisc.4 }
 			custom_effect_tooltip = WHR_small_arms_import_tt
 			hidden_effect = {
@@ -1628,7 +1401,7 @@ WHR_arms_import = {#army focus tree decisions
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_import_artillery target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_import_artillery target: [From.GetName]"
 			FROM = { country_event = whrmisc.4 }
 			custom_effect_tooltip = WHR_artillery_import_tt
 			hidden_effect = {
@@ -1659,11 +1432,9 @@ WHR_arms_import = {#army focus tree decisions
 		}
 		days_remove = 30
 		fire_only_once = yes
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_import_planes target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_import_planes target: [From.GetName]"
 			FROM = { country_event = whrmisc.4 }
 			custom_effect_tooltip = WHR_fighter_import_tt
 			hidden_effect = {
@@ -1702,7 +1473,7 @@ WHR_arms_import = {#army focus tree decisions
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_import_support_equipment target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_import_support_equipment target: [From.GetName]"
 			FROM = { country_event = whrmisc.4 }
 			custom_effect_tooltip = WHR_support_equipment_import_tt
 			hidden_effect = {
@@ -1741,7 +1512,7 @@ WHR_arms_import = {#army focus tree decisions
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision WHR_import_motorised target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete WHR_import_motorised target: [From.GetName]"
 			FROM = { country_event = whrmisc.4 }
 			custom_effect_tooltip = WHR_motorised_equipment_import_tt
 			hidden_effect = {

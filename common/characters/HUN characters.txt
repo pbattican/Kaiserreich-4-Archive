@@ -41,15 +41,23 @@ characters = {
 			ideology = social_liberal_subtype
 		}
 	}
+	HUN_zoltan_tildy = {
+		name = HUN_zoltan_tildy
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HUN/Portrait_HUN_Zoltan_Tildy.png"
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+		}
+	}
 	HUN_istvan_bethlen = {
 		name = HUN_istvan_bethlen
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/HUN/Portrait_HUN_Istvan_Bethlen.png"
 			}
-		}
-		country_leader = {
-			ideology = social_conservative_subtype
 		}
 		country_leader = {
 			ideology = authoritarian_democrat_subtype
@@ -546,11 +554,9 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = HUN_kalman_daranyi_de_pusztaszentgyorgyi_second_in_command
-			traits = { KR_silent_workhorse_sic second_in_command_trait }
+			traits = { KR_silent_workhorse_sic }
 			cost = 0
-			removal_cost = -1
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
+			can_be_fired = no
 		}
 	}
 	HUN_gusztav_gratz = {
@@ -563,11 +569,9 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = HUN_gusztav_gratz_second_in_command
-			traits = { KR_silent_workhorse_sic second_in_command_trait }
+			traits = { KR_silent_workhorse_sic }
 			cost = 0
-			removal_cost = -1
-			on_add = { second_in_command_on_add = yes }
-			on_remove = { second_in_command_on_remove = yes }
+			can_be_fired = no
 		}
 	}
 

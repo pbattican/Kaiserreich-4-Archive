@@ -23,9 +23,7 @@ focus_tree = {
 		x = 0
 		y = 0
 		cost = 0
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
@@ -50,9 +48,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_continue_council_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_democratic_government = yes
 		}
@@ -72,9 +68,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_continue_council_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_democratic_government = yes
 		}
@@ -96,9 +90,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_continue_council_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_democratic_government = yes
 		}
@@ -118,9 +110,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_continue_council_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_democratic_government = yes
 		}
@@ -146,9 +136,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = URG_continue_council_rule
 		cost = 0
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
@@ -173,9 +161,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_restore_presidentialism
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		allow_branch = {
 			OR = {
 				has_government = radical_socialist
@@ -210,9 +196,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_restore_presidentialism
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			OR = {
 				has_government = radical_socialist
@@ -235,9 +219,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_restore_presidentialism
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			OR = {
 				has_government = radical_socialist
@@ -272,9 +254,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_restore_presidentialism
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			OR = {
 				has_government = radical_socialist
@@ -306,9 +286,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_continue_council_rule
 		cost = 2
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_liberal
 		}
@@ -336,9 +314,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = URG_continue_council_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_liberal
 		}
@@ -374,9 +350,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = URG_continue_council_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_liberal
 		}
@@ -396,9 +370,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = URG_continue_council_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_liberal
 		}
@@ -419,9 +391,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_restore_presidentialism
 		cost = 0
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
@@ -446,9 +416,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_new_elections
 		cost = 2
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_democrat
 		}
@@ -467,9 +435,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_colorado_in_power
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_democrat
 		}
@@ -489,9 +455,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_colorado_in_power
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_democrat
 		}
@@ -514,9 +478,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_colorado_in_power
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_democrat
 		}
@@ -538,9 +500,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_new_elections
 		cost = 2
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_conservative
 		}
@@ -559,9 +519,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_nacional_in_power
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_conservative
 		}
@@ -581,9 +539,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_nacional_in_power
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_conservative
 		}
@@ -605,9 +561,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_nacional_in_power
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = social_conservative
 		}
@@ -630,9 +584,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_begin_presidents_policy
 		cost = 2
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = radical_socialist
 			is_subject = no
@@ -660,9 +612,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_socialists_in_power
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = radical_socialist
 		}
@@ -684,9 +634,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_socialists_in_power
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = radical_socialist
 		}
@@ -706,9 +654,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_socialists_in_power
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = radical_socialist
 		}
@@ -730,9 +676,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_begin_presidents_policy
 		cost = 0
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -754,9 +698,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -780,9 +722,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -802,9 +742,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -824,9 +762,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -848,9 +784,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -882,9 +816,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -908,9 +840,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -930,9 +860,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -953,9 +881,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -976,9 +902,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -1006,9 +930,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = URG_terra_rule
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -1033,9 +955,7 @@ focus_tree = {
 		x = 21
 		y = 0
 		cost = 25
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		cancelable = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus URG_big_dam"
@@ -1051,9 +971,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_big_dam
 		cost = 0
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
@@ -1102,9 +1020,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_presidents_decision
 		cost = 8
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		available = {
 			OR = {
 				has_democratic_government = yes
@@ -1133,9 +1049,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_presidents_decision
 		cost = 8
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		available = {
 			OR = {
 				has_democratic_government = yes
@@ -1171,9 +1085,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_end_welfare_state
 		cost = 8
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		available = {
 			OR = {
 				has_democratic_government = yes
@@ -1200,9 +1112,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_shrink_government_involvement
 		cost = 8
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		available = {
 			OR = {
 				has_democratic_government = yes
@@ -1234,9 +1144,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_presidents_decision
 		cost = 8
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		available = {
 			OR = {
 				has_democratic_government = yes
@@ -1265,9 +1173,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_reform_welfare_state
 		cost = 8
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		available = {
 			OR = {
 				has_democratic_government = yes
@@ -1299,9 +1205,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_reform_welfare_state
 		cost = 8
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		available = {
 			OR = {
 				has_democratic_government = yes
@@ -1318,6 +1222,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus URG_farmer_subsidies"
 			URG_reform = yes
+			300 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1327,10 +1239,8 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = URG_dealing_with_black_monday
-		cost = 10
-		ai_will_do = {
-			factor = 40
-		}
+		cost = 8
+		ai_will_do = { factor = 40 }
 		prerequisite = {
 			focus = URG_dealing_with_black_monday
 		}
@@ -1348,10 +1258,8 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = URG_council_policy_decision
-		cost = 10
-		ai_will_do = {
-			factor = 40
-		}
+		cost = 8
+		ai_will_do = { factor = 40 }
 		available = {
 			has_democratic_government = yes
 		}
@@ -1361,14 +1269,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus URG_gib_smole_business_money"
 			300 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -1381,10 +1284,8 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = URG_council_policy_decision
-		cost = 10
-		ai_will_do = {
-			factor = 40
-		}
+		cost = 8
+		ai_will_do = { factor = 40 }
 		available = {
 			has_democratic_government = yes
 		}
@@ -1402,10 +1303,8 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = URG_council_policy_decision
-		cost = 10
-		ai_will_do = {
-			factor = 40
-		}
+		cost = 8
+		ai_will_do = { factor = 40 }
 		available = {
 			has_democratic_government = yes
 		}
@@ -1426,10 +1325,8 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = URG_implement_decided_tax
-		cost = 10
-		ai_will_do = {
-			factor = 40
-		}
+		cost = 8
+		ai_will_do = { factor = 40 }
 		available = {
 			has_democratic_government = yes
 		}
@@ -1447,10 +1344,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = URG_implement_decided_tax
-		cost = 10
-		ai_will_do = {
-			factor = 40
-		}
+		cost = 8
+		ai_will_do = { factor = 40 }
 		available = {
 			has_democratic_government = yes
 		}
@@ -1472,9 +1367,7 @@ focus_tree = {
 		y = 6
 		relative_position_id = URG_dealing_with_black_monday
 		cost = 8
-		ai_will_do = {
-			factor = 40
-		}
+		ai_will_do = { factor = 40 }
 		available = {
 			OR = {
 				has_democratic_government = yes
@@ -1566,6 +1459,7 @@ focus_tree = {
 			}
 			add_stability = 0.10
 			add_research_slot_until_five = yes
+			activate_targeted_decision = { target = 300 decision = URG_arms_industry_investments }
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -1579,15 +1473,14 @@ focus_tree = {
 		available = {
 			has_completed_focus = URG_end_black_monday
 		}
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = URG_big_dam
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus URG_an_agricultural_economy"
 			add_ideas = URG_agriculture_1
+			activate_targeted_decision = { target = 300 decision = URG_improve_agriculture_dec }
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 	}
@@ -1598,9 +1491,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_an_agricultural_economy
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = URG_an_agricultural_economy
 		}
@@ -1617,9 +1508,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_an_agricultural_economy
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = URG_an_agricultural_economy
 		}
@@ -1638,6 +1527,7 @@ focus_tree = {
 				add_ideas = URG_export_idea
 			}
 			add_political_power = 50
+			activate_targeted_decision = { target = 300 decision = URG_improve_cattle_ranches_dec }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1648,9 +1538,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_an_agricultural_economy
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = URG_an_agricultural_economy
 		}
@@ -1667,9 +1555,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_an_agricultural_economy
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = URG_chaos_in_argentina
 		}
@@ -1687,9 +1573,8 @@ focus_tree = {
 				}
 			}
 			build_railway = {
+				path = { 10362 12496 1613 1626 4604 4589 }
 				level = 1
-				start_province = 10362
-				target_province = 1626
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1701,9 +1586,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_an_agricultural_economy
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = URG_education
 		}
@@ -1725,9 +1608,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_an_agricultural_economy
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = URG_increase_cattle_product_exports
 		}
@@ -1750,9 +1631,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_an_agricultural_economy
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = URG_develop_countryside
 		}
@@ -1774,6 +1653,7 @@ focus_tree = {
 				add_ideas = URG_export_idea
 			}
 			add_stability = 0.02
+			activate_targeted_decision = { target = 300 decision = URG_improve_resource_extraction_dec }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1784,9 +1664,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_increase_export
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		mutually_exclusive = {
 			focus = URG_maintain_agriculture
 		}
@@ -1812,9 +1690,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_increase_export
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		mutually_exclusive = {
 			focus = URG_industrialisation_plans
 		}
@@ -1837,9 +1713,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_increase_export
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_maintain_agriculture
 			focus = URG_industrialisation_plans
@@ -1893,9 +1767,7 @@ focus_tree = {
 		relative_position_id = URG_chaos_in_argentina
 		cost = 8
 		bypass_if_unavailable = yes
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_chaos_in_argentina
 		}
@@ -1965,9 +1837,7 @@ focus_tree = {
 				tooltip = URG_brazil_hostile
 			}
 		}
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_lessons_of_civil_war
 		}
@@ -2018,9 +1888,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_lessons_of_civil_war
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		available = {
 			custom_trigger_tooltip = {
 				BRA = {
@@ -2073,9 +1941,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_mission_to_rio
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		mutually_exclusive = {
 			focus = URG_new_equipment
 		}
@@ -2096,9 +1962,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_centralise_high_command
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_centralise_high_command
 		}
@@ -2120,9 +1984,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_centralise_high_command
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_centralise_high_command
 		}
@@ -2148,9 +2010,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_centralise_high_command
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_learning_from_weltkrieg
 		}
@@ -2179,9 +2039,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_centralise_high_command
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_engineering_and_entrenchment
 		}
@@ -2212,9 +2070,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_centralise_high_command
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_engineering_and_entrenchment
 		}
@@ -2245,9 +2101,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_mission_to_rio
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		mutually_exclusive = {
 			focus = URG_centralise_high_command
 		}
@@ -2267,9 +2121,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_new_equipment
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_new_equipment
 		}
@@ -2309,9 +2161,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_new_equipment
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_new_equipment
 		}
@@ -2366,9 +2216,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_new_equipment
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_new_equipment
 		}
@@ -2423,9 +2271,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_new_equipment
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_artillery_training_refinement
 		}
@@ -2459,9 +2305,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_subsidise_local_munitions_facilities
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_subsidise_local_munitions_facilities
 		}
@@ -2481,9 +2325,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_subsidise_local_munitions_facilities
 		cost = 8
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 		prerequisite = {
 			focus = URG_establish_regular_drill_protocol
 			focus = URG_subsidise_local_munitions_facilities
@@ -2501,9 +2343,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_Libertad_o_Muerte
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus URG_air_corps"
 			air_experience = 25
@@ -2517,9 +2357,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_air_corps
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_air_corps
 		}
@@ -2541,9 +2379,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_air_corps
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_air_corps
 		}
@@ -2559,9 +2395,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_buy_fighters
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		mutually_exclusive = {
 			focus = URG_independent_air_force
 		}
@@ -2585,9 +2419,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_buy_fighters
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		mutually_exclusive = {
 			focus = URG_air_not_independent
 		}
@@ -2611,9 +2443,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = URG_montevideo_air_academy
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_montevideo_air_academy
 			focus = URG_air_not_independent
@@ -2631,9 +2461,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = URG_buy_fighters
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_air_not_independent
 			focus = URG_independent_air_force
@@ -2656,9 +2484,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = URG_air_corps
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus URG_more_river_boats"
 			add_ideas = URG_river_boats
@@ -2671,9 +2497,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_more_river_boats
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_more_river_boats
 		}
@@ -2696,9 +2520,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_coastal_fort
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_coastal_fort
 		}
@@ -2715,9 +2537,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_independent_air_force
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_buy_fighters
 		}
@@ -2741,9 +2561,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_navy
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_navy
 		}
@@ -2757,6 +2575,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			activate_targeted_decision = { target = 300 decision = URG_dockyards_dec }
 		}
 	}
 	focus = {
@@ -2766,9 +2585,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_navy
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_navy
 		}
@@ -2789,9 +2606,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_beeg_port
 		cost = 8
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 		prerequisite = {
 			focus = URG_naval_bombers
 		}

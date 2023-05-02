@@ -93,8 +93,8 @@ characters = {
 		name = MNT_pavle_durisic
 		portraits = {
 			army = {
-				large = "gfx/leaders/Generic/Portrait_Balkan_Generic_land_new_3.png"
-				small = "gfx/interface/advisors/Generic/Portrait_Balkan_Generic_land_new_3.png"
+				large = GFX_Portrait_Balkan_Generic_land_new_3
+				small = GFX_Portrait_Balkan_Generic_land_new_3_small
 			}
 		}
 		advisor = {
@@ -117,8 +117,8 @@ characters = {
 		name = MNT_mitar_martinovic
 		portraits = {
 			army = {
-				large = "gfx/leaders/Generic/Portrait_Balkan_Generic_land_new_4.png"
-				small = "gfx/interface/advisors/Generic/Portrait_Balkan_Generic_land_new_4.png"
+				large = GFX_Portrait_Balkan_Generic_land_new_4
+				small = GFX_Portrait_Balkan_Generic_land_new_4_small
 			}
 		}
 		advisor = {
@@ -299,20 +299,6 @@ characters = {
 				not_already_hired_except_as = political_advisor
 			}
 			traits = { KR_armaments_organiser }
-		}
-	}
-	MNT_arso_jovanovic = {
-		name = MNT_arso_jovanovic
-		portraits = {
-			army = {
-				small = "gfx/interface/advisors/MNT/MNT_arso_jovanovic.png"
-			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = MNT_arso_jovanovic
-			traits = { KR_army_chief_defensive_1 }
-			cost = 50
 		}
 	}
 	MNT_bajo_stanisic = {

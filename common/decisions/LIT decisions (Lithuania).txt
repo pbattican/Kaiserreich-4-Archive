@@ -14,9 +14,7 @@ LIT_economic_projects_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_a_minor_port"
@@ -50,9 +48,7 @@ LIT_economic_projects_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_invest_in_marijampole"
@@ -87,9 +83,7 @@ LIT_economic_projects_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_samogitia_highway"
@@ -131,9 +125,7 @@ LIT_economic_projects_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_improve_siauliai_infrastructure"
@@ -161,9 +153,7 @@ LIT_economic_projects_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_southern_highway"
@@ -206,9 +196,7 @@ LIT_economic_projects_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_bialystok_labour_initiative"
@@ -234,9 +222,7 @@ LIT_economic_projects_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_invest_in_vawkavysk"
@@ -274,18 +260,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_monument_to_emilia_plater"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_monument_to_emilia_plater"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_monument_to_emilia_plater"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_monument_to_emilia_plater"
 			set_country_flag = LIT_ongoing_project
 		}
 
@@ -318,18 +302,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_knygesiai_memorial"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_knygesiai_memorial"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_knygesiai_memorial"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_knygesiai_memorial"
 			country_event = LIT.58
 			set_country_flag = LIT_ongoing_project
 		}
@@ -363,18 +345,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_church_of_saint_joseph_the_betrothed"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_church_of_saint_joseph_the_betrothed"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_church_of_saint_joseph_the_betrothed"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_church_of_saint_joseph_the_betrothed"
 			set_country_flag = LIT_ongoing_project
 		}
 
@@ -407,18 +387,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_year_of_1918"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_year_of_1918"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_year_of_1918"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_year_of_1918"
 			set_country_flag = LIT_ongoing_project
 		}
 
@@ -455,18 +433,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_kings_model_town"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_kings_model_town"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_kings_model_town"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_kings_model_town"
 			set_country_flag = LIT_ongoing_project
 		}
 
@@ -499,18 +475,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_memorial_to_wladyslaw_syrokomla"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_memorial_to_wladyslaw_syrokomla"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_memorial_to_wladyslaw_syrokomla"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_memorial_to_wladyslaw_syrokomla"
 			country_event = LIT.74
 			set_country_flag = LIT_ongoing_project
 		}
@@ -543,18 +517,16 @@ LIT_architect_king_decisions = {
 		days_remove = 30
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_palace_of_the_grand_dukes"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_palace_of_the_grand_dukes"
 			add_political_power = 25
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_palace_of_the_grand_dukes"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_palace_of_the_grand_dukes"
 			set_country_flag = LIT_ongoing_project
 		}
 
@@ -595,18 +567,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_plumbing_and_electrification"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_plumbing_and_electrification"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_plumbing_and_electrification"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_plumbing_and_electrification"
 			set_country_flag = LIT_ongoing_project
 		}
 
@@ -633,18 +603,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_living_quarters"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_living_quarters"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_living_quarters"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_living_quarters"
 			set_country_flag = LIT_ongoing_project
 		}
 
@@ -671,18 +639,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_embassy_quarters"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_embassy_quarters"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_embassy_quarters"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_embassy_quarters"
 			set_country_flag = LIT_ongoing_project
 		}
 
@@ -710,18 +676,16 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_vilnius_cathedral"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_vilnius_cathedral"
 			add_political_power = 50
 			clr_country_flag = LIT_ongoing_project
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_vilnius_cathedral"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_vilnius_cathedral"
 			set_country_flag = LIT_ongoing_project
 		}
 
@@ -752,12 +716,10 @@ LIT_architect_king_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_inaugurate_the_palace"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_inaugurate_the_palace"
 			add_political_power = 75
 			clr_country_flag = LIT_ongoing_project
 		}
@@ -828,7 +790,7 @@ LIT_LAF_insurgency_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_LAF_guerilla_activity"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_LAF_guerilla_activity"
 			add_stability = 0.15
 			if = {
 				limit = { LIT_king_assassinated = no }
@@ -952,12 +914,10 @@ LIT_LAF_insurgency_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_secure_maceinas_cooperation"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_secure_maceinas_cooperation"
 			add_political_power = 40
 		}
 
@@ -978,12 +938,10 @@ LIT_LAF_insurgency_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_capture_alantas"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_capture_alantas"
 			add_political_power = 40
 		}
 
@@ -1018,12 +976,12 @@ LIT_LAF_insurgency_decisions = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_counterinsurgency_raids"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_counterinsurgency_raids"
 			add_command_power = 20
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_counterinsurgency_raids"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_counterinsurgency_raids"
 			hidden_effect = { add_command_power = -20 }
 		}
 
@@ -1068,12 +1026,12 @@ LIT_LAF_insurgency_decisions = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_sweep_the_countryside"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_sweep_the_countryside"
 			add_command_power = 40
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_sweep_the_countryside"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_sweep_the_countryside"
 			hidden_effect = { add_command_power = -40 }
 		}
 
@@ -1114,12 +1072,12 @@ LIT_LAF_insurgency_decisions = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_erode_nationalist_support"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_erode_nationalist_support"
 			add_command_power = 40
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_erode_nationalist_support"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_erode_nationalist_support"
 			hidden_effect = { add_command_power = -40 }
 		}
 
@@ -1157,12 +1115,12 @@ LIT_LAF_insurgency_decisions = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_demoralisation_campaign"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_demoralisation_campaign"
 			add_command_power = 80
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_demoralisation_campaign"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_demoralisation_campaign"
 			hidden_effect = { add_command_power = -80 }
 		}
 
@@ -1201,12 +1159,12 @@ LIT_LAF_insurgency_decisions = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_enact_federal_police_act"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_enact_federal_police_act"
 			add_command_power = 80
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_enact_federal_police_act"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_enact_federal_police_act"
 			hidden_effect = { add_command_power = -80 }
 		}
 
@@ -1232,17 +1190,15 @@ LIT_LAF_insurgency_decisions = {
 		days_re_enable = 5
 		fire_only_once = no
 
-		ai_will_do = {
-			base = 50
-		}
+		ai_will_do = { base = 50 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_Plech_indiscriminate_arrests"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_Plech_indiscriminate_arrests"
 			add_command_power = 20
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_Plech_indiscriminate_arrests"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_Plech_indiscriminate_arrests"
 			hidden_effect = { add_command_power = -20 }
 		}
 
@@ -1265,17 +1221,15 @@ LIT_LAF_insurgency_decisions = {
 		fire_only_once = no
 		days_re_enable = 5
 
-		ai_will_do = {
-			base = 50
-		}
+		ai_will_do = { base = 50 }
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_Plech_intensify_military_presence"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_Plech_intensify_military_presence"
 			add_command_power = 25
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_Plech_intensify_military_presence"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_Plech_intensify_military_presence"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -1297,16 +1251,14 @@ LIT_LAF_insurgency_decisions = {
 		days_remove = 30
 		fire_only_once = yes
 
-		ai_will_do = {
-			base = 50
-		}
+		ai_will_do = { base = 50 }
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_Naruto_rural_outreach"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_Naruto_rural_outreach"
 			add_political_power = 50
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_Naruto_rural_outreach"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_Naruto_rural_outreach"
 		}
 
 		remove_effect = {
@@ -1324,16 +1276,14 @@ LIT_LAF_insurgency_decisions = {
 		days_re_enable = 5
 		fire_only_once = no
 
-		ai_will_do = {
-			base = 50
-		}
+		ai_will_do = { base = 50 }
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_Naruto_economic_assistance"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_Naruto_economic_assistance"
 			add_political_power = 50
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_Naruto_economic_assistance"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_Naruto_economic_assistance"
 		}
 
 		remove_effect = {
@@ -1355,11 +1305,9 @@ LIT_LAF_insurgency_decisions = {
 		days_remove = 30
 		fire_only_once = yes
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancelled LIT_Naruto_arm_polish"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel LIT_Naruto_arm_polish"
 			custom_effect_tooltip = 200_infantry_equipment_1
 			hidden_effect = {
 				add_equipment_to_stockpile = {
@@ -1370,7 +1318,7 @@ LIT_LAF_insurgency_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_Naruto_arm_polish"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_Naruto_arm_polish"
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -1478,12 +1426,10 @@ LIT_tears_among_the_left_decisions = {
 		days_remove = 30
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_start_the_revolution"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_start_the_revolution"
 			add_ai_strategy = {
 				type = spare_unit_factor
 				value = -100
@@ -1575,9 +1521,7 @@ LIT_tears_among_the_left_decisions = {
 		days_remove = 120
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 0 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_internationale_propaganda"
@@ -1599,9 +1543,7 @@ LIT_tears_among_the_left_decisions = {
 		days_remove = 120
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 0 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_commit_to_the_reichspakt"
@@ -1616,9 +1558,7 @@ LIT_tears_among_the_left_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		modifier = {
 			production_factory_max_efficiency_factor = 0.05
@@ -1642,9 +1582,7 @@ LIT_tears_among_the_left_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		modifier = {
 			stability_weekly = 0.005
@@ -1697,7 +1635,7 @@ LIT_tears_among_the_left_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_make_peace_with_santara"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_make_peace_with_santara"
 			add_stability = -0.05
 			remove_mission = LIT_rightwing_complaints
 			set_temp_variable = { LIT_radicalism_change = -25 }
@@ -1723,7 +1661,7 @@ LIT_tears_among_the_left_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_break_up_santara"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_break_up_santara"
 			add_stability = -0.15
 			remove_mission = LIT_rightwing_complaints
 			add_popularity = {
@@ -1772,12 +1710,10 @@ LIT_tears_among_the_left_decisions = {
 		cost = 25
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 20
-		}
+		ai_will_do = { factor = 20 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_appease_the_radicals"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_appease_the_radicals"
 			add_stability = -0.05
 			remove_mission = LIT_leftwing_complaints
 			set_temp_variable = { LIT_radicalism_change = 25 }
@@ -1807,7 +1743,7 @@ LIT_tears_among_the_left_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_crack_down_on_syndicalism"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_crack_down_on_syndicalism"
 			add_stability = -0.15
 			remove_mission = LIT_leftwing_complaints
 			add_popularity = {
@@ -1833,12 +1769,10 @@ LIT_tears_among_the_left_decisions = {
 		cost = 50
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_define_the_party_programme"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_define_the_party_programme"
 			country_event = LIT.221
 		}
 	}
@@ -1849,12 +1783,10 @@ LIT_tears_among_the_left_decisions = {
 		cost = 50
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_subordinate_the_army"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_subordinate_the_army"
 			country_event = LIT.222
 		}
 	}
@@ -1868,62 +1800,18 @@ LIT_tears_among_the_left_decisions = {
 		cost = 50
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_appoint_vincas_vitkauskas"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_appoint_vincas_vitkauskas"
 			add_command_power = 15
+			LIT_vincas_vitkauskas = {
+				promote_leader = yes
+				set_character_flag = LIT_vitkauskas_mhc_unlocked
+			}
 			custom_effect_tooltip = tooltip_white_line
-			LIT_vincas_vitkauskas = { promote_leader = yes }
-			add_advisor_role = {
-				character = LIT_vincas_vitkauskas
-				advisor = {
-					slot = high_command
-					idea_token = LIT_vincas_vitkauskas_high_command
-					ledger = army
-					available = {
-						not_already_hired_except_as = high_command
-					}
-					traits = { KR_MHC_army_regrouping_2 }
-					cost = 100
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = { has_idea = LIT_vincas_vitkauskas_army_chief }
-					LIT_vincas_vitkauskas = { remove_army_chief_role = yes }
-					add_advisor_role = {
-						character = LIT_vincas_vitkauskas
-						advisor = {
-							slot = army_chief
-							idea_token = LIT_vincas_vitkauskas_army_chief
-							available = {
-								not_already_hired_except_as = army_chief
-							}
-							traits = { KR_army_chief_reform_2 }
-							cost = 100
-						}
-						activate = yes
-					}
-				}
-				else = {
-					LIT_vincas_vitkauskas = { remove_army_chief_role = yes }
-					add_advisor_role = {
-						character = LIT_vincas_vitkauskas
-						advisor = {
-							slot = army_chief
-							idea_token = LIT_vincas_vitkauskas_army_chief
-							available = {
-								not_already_hired_except_as = army_chief
-							}
-							traits = { KR_army_chief_reform_2 }
-							cost = 100
-						}
-					}
-				}
-			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = LIT_vincas_vitkauskas_high_command
 		}
 	}
 }
@@ -1937,9 +1825,7 @@ LIT_optimal_system_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_encourage_free_debate"
@@ -1955,9 +1841,7 @@ LIT_optimal_system_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_promote_political_corporations"
@@ -1973,9 +1857,7 @@ LIT_optimal_system_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_liberalise_the_press"
@@ -1995,9 +1877,7 @@ LIT_optimal_system_decisions = {
 			industrial_capacity_factory = -0.10
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_pass_labour_safety_laws"
@@ -2017,9 +1897,7 @@ LIT_optimal_system_decisions = {
 			consumer_goods_factor = 0.05
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_establish_cooperatives"
@@ -2039,9 +1917,7 @@ LIT_optimal_system_decisions = {
 			stability_factor = -0.10
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_wealth_redistribution_taxes"
@@ -2057,9 +1933,7 @@ LIT_optimal_system_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_compromise_with_the_bund"
@@ -2075,9 +1949,7 @@ LIT_optimal_system_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_form_northern_polish_corporate_federations"
@@ -2092,9 +1964,7 @@ LIT_optimal_system_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_form_southern_polish_corporate_federations"
@@ -2109,9 +1979,7 @@ LIT_optimal_system_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_form_belarusian_corporate_federations"
@@ -2126,9 +1994,7 @@ LIT_optimal_system_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_form_litvak_corporate_federations"
@@ -2146,9 +2012,7 @@ LIT_centralisation_decisions = {
 		days_remove = 120
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		modifier = {
 			political_power_cost = 0.1
@@ -2179,9 +2043,7 @@ LIT_centralisation_decisions = {
 			political_power_cost = 0.1
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_solidify_control_in_the_north"
@@ -2204,9 +2066,7 @@ LIT_centralisation_decisions = {
 			political_power_cost = 0.1
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_solidify_control_of_sudovia"
@@ -2229,9 +2089,7 @@ LIT_centralisation_decisions = {
 			political_power_cost = 0.1
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_secure_kaunas"
@@ -2254,9 +2112,7 @@ LIT_centralisation_decisions = {
 			political_power_cost = 0.1
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_secure_vilnius"
@@ -2279,9 +2135,7 @@ LIT_centralisation_decisions = {
 			political_power_cost = 0.1
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_secure_gardinas"
@@ -2311,12 +2165,10 @@ LIT_centralisation_decisions = {
 			political_power_cost = 0.1
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_abolish_valkaviskas_autonomy"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_abolish_valkaviskas_autonomy"
 			add_stability = -0.05
 			hidden_effect = {
 				country_event = { id = LIT.169 days = 60 }
@@ -2347,12 +2199,10 @@ LIT_centralisation_decisions = {
 			political_power_cost = 0.1
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_abolish_bialystok_autonomy"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_abolish_bialystok_autonomy"
 			add_stability = -0.05
 			hidden_effect = {
 				country_event = { id = LIT.180 days = 20 }
@@ -2375,9 +2225,7 @@ LIT_LitBel_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_LitBel_lastouski_speech"
@@ -2394,9 +2242,7 @@ LIT_LitBel_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_LitBel_bund"
@@ -2415,9 +2261,7 @@ LIT_LitBel_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_LitBel_negotiations"
@@ -2436,11 +2280,9 @@ LIT_LitBel_category = {
 		fire_only_once = yes
 		cancel_if_not_visible = yes
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_LitBel_formation"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_LitBel_formation"
 			WHR = { country_event = whrpol.32 }
 			clr_country_flag = WHR_bunds_met
 			clr_country_flag = WHR_LitBel_negotiations_done
@@ -2457,15 +2299,13 @@ LIT_Naru_Swiss = { #Swiss
 		fire_only_once = yes
 		days_remove = 45
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		modifier = {
 			political_power_gain = -0.1
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_swiss_1"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_swiss_1"
 		}
 
 		remove_effect = {
@@ -2483,12 +2323,10 @@ LIT_Naru_Swiss = { #Swiss
 		fire_only_once = yes
 		days_remove = 30
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_swiss_2"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_swiss_2"
 		}
 
 		remove_effect = {
@@ -2507,12 +2345,10 @@ LIT_Naru_Swiss = { #Swiss
 		fire_only_once = yes
 		days_remove = 30
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_swiss_5"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_swiss_5"
 			hidden_effect = { add_command_power = -20 }
 		}
 
@@ -2529,12 +2365,10 @@ LIT_Naru_Swiss = { #Swiss
 		fire_only_once = yes
 		days_remove = 60
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_swiss_6"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_swiss_6"
 		}
 
 		remove_effect = {
@@ -2580,12 +2414,10 @@ LIT_Naru_Swiss = { #Swiss
 		fire_only_once = yes
 		days_remove = 60
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_swiss_7"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_swiss_7"
 			hidden_effect = { add_command_power = -20 }
 		}
 
@@ -2604,12 +2436,10 @@ LIT_Naru_Swiss = { #Swiss
 		fire_only_once = yes
 		days_remove = 7
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_swiss_8"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_swiss_8"
 		}
 
 		remove_effect = {
@@ -2650,7 +2480,7 @@ foreign_politics = {
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision LIT_Last_Stand"
+			log = "[GetDateText]: [Root.GetName]: Decision complete LIT_Last_Stand"
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
 				LAT = { add_to_faction = LIT }
@@ -2663,38 +2493,6 @@ foreign_politics = {
 }
 
 political_actions = {
-	LIT_integrate_memel = {
-		icon = GFX_decision_infiltrate_state
-		allowed = {
-			original_tag = LIT
-		}
-		available = {
-			owns_state = 188
-		}
-		visible = {
-			188 = { NOT = { is_core_of = LIT } }
-			NOT = { is_in_faction_with = GER }
-		}
-
-		highlight_states = {
-			highlight_state_targets = { state = 188 }
-		}
-
-		cost = 50
-		days_remove = 90
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_integrate_memel"
-			188 = {
-				add_core_of = LIT
-			}
-		}
-	}
 	LIT_form_litbel = {
 		name = WHR_form_litbel
 		icon = generic_nationalism
@@ -2708,9 +2506,7 @@ political_actions = {
 		cost = 100
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove LIT_form_litbel"
@@ -2720,7 +2516,7 @@ political_actions = {
 			}
 			if = {
 				limit = { has_cosmetic_tag = LIT_monarchy }
-				set_cosmetic_tag = LIT_LITBEL_monarchy
+				set_cosmetic_tag = LIT_LITBEL_MONARCHY
 			}
 			else = {
 				set_cosmetic_tag = LIT_LITBEL

@@ -30,8 +30,7 @@ create_totalist_english_government = {
 		national_populist = 0
 	}
 	hidden_effect = {
-		clear_sic_slot = yes
-		activate_advisor = ENG_j_t_murphy_sic
+		activate_advisor = ENG_jt_murphy_sic
 	}
 }
 create_syndicalist_english_government = {
@@ -55,12 +54,31 @@ create_syndicalist_english_government = {
 		national_populist = 0
 	}
 	hidden_effect = {
-		clear_sic_slot = yes
 		activate_advisor = ENG_george_hardy_sic
 	}
 }
 
 ### Great Britain / England ###
+
+create_GBP_cores = {
+	ENG = {
+		every_core_state = {
+			limit = {
+				NOT = {
+					AND = {
+						is_core_of = SCO
+						has_variable = GBP_no_scotland
+					}
+					AND = {
+						is_core_of = WLS
+						has_variable = GBP_no_wales
+					}
+				}
+			}
+			add_core_of = GBP
+		}
+	}
+}
 
 create_leftist_democratic_english_government = {
 	set_politics = {
@@ -191,6 +209,12 @@ create_english_monarchy = {
 }
 
 ### Scotland ###
+create_SCO_cores = {
+	every_state = {
+		limit = { region = 3 } #Scotland
+		add_core_of = SCO
+	}
+}
 
 create_totalist_scottish_government = {
 	set_politics = {
@@ -211,7 +235,6 @@ create_totalist_scottish_government = {
 		paternal_autocrat = 3
 		national_populist = 0
 	}
-	clear_sic_slot = yes
 	activate_advisor = SCO_tom_bell_sic
 	remove_ideas = SCO_fledgling_state
 }
@@ -234,7 +257,6 @@ create_syndicalist_scottish_government = {
 		paternal_autocrat = 0
 		national_populist = 0
 	}
-	clear_sic_slot = yes
 	activate_advisor = SCO_david_kirkwood_sic
 	remove_ideas = SCO_fledgling_state
 }
@@ -257,7 +279,6 @@ create_radical_socialist_scottish_government = {
 		paternal_autocrat = 9
 		national_populist = 0
 	}
-	clear_sic_slot = yes
 	activate_advisor = SCO_george_buchanan_sic
 	remove_ideas = SCO_fledgling_state
 }
@@ -307,6 +328,10 @@ create_snp_right = {
 }
 
 ### Wales ###
+create_WLS_cores = {
+	122 = { add_core_of = WLS } #South Wales
+	957 = { add_core_of = WLS } #North Wales
+}
 
 create_totalist_welsh_government = {
 	set_politics = {
@@ -327,7 +352,6 @@ create_totalist_welsh_government = {
 		paternal_autocrat = 1
 		national_populist = 0
 	}
-	clear_sic_slot = yes
 	activate_advisor = WLS_huw_t_edwards_sic
 }
 create_syndicalist_welsh_government = {
@@ -349,7 +373,6 @@ create_syndicalist_welsh_government = {
 		paternal_autocrat = 7
 		national_populist = 0
 	}
-	clear_sic_slot = yes
 	activate_advisor = WLS_huw_t_edwards_sic
 }
 create_radical_socialist_welsh_government = {
@@ -371,7 +394,6 @@ create_radical_socialist_welsh_government = {
 		paternal_autocrat = 0
 		national_populist = 0
 	}
-	clear_sic_slot = yes
 	activate_advisor = WLS_huw_t_edwards_sic
 }
 create_welsh_interim_government = {
@@ -393,7 +415,6 @@ create_welsh_interim_government = {
 		paternal_autocrat = 16
 		national_populist = 0
 	}
-	clear_sic_slot = yes
 	activate_advisor = WLS_huw_t_edwards_sic
 }
 
