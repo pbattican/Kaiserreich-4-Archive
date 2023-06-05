@@ -46,8 +46,6 @@ add_ideas = {
 	limited_conscription
 	KUM_legacy_masqud
 	KUM_keeping_peace
-
-	unequal_treaties_lesser
 }
 china_add_poor_army = yes
 
@@ -79,5 +77,15 @@ recruit_character = KUM_zhang_chunxi
 activate_advisor = KUM_khans_court_sic
 
 ### Character Setup ###
-KUM_nasir_shah = { set_variable = { china_alignment = token:manchu_qing } }
-KUM_bashir_shah = { set_variable = { china_alignment = token:manchu_qing } }
+KUM_nasir_shah = {
+	set_character_flag = is_monarch
+	set_variable = { china_alignment = token:manchu_qing }
+}
+KUM_bashir_shah = {
+	set_character_flag = is_monarch
+	set_variable = { china_alignment = token:manchu_qing }
+}
+KUM_yulbars_khan = {
+	set_character_flag = is_monarch
+	set_variable = { china_alignment = token:manchu_qing }
+}

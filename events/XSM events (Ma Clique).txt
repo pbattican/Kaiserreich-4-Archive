@@ -1375,38 +1375,29 @@ country_event = { #Mas lose
 
 country_event = { # Ma survives the Northwest war, starting Gansu conflict
 	id = mac.208
-	immediate = {
-		log = "KR_Event_Logging;MA SURVIVES NORTHWESTERN WAR;[GetDateText]"
-	}
 	title = mac.208.t
 	desc = mac.208.d
 	picture = GFX_report_event_CHI_china_abandoned
 
-	fire_only_once = yes
+	is_triggered_only = yes
 
 	trigger = {
-		tag = XSM
+		exists = yes
 		has_capitulated = no
-		has_global_flag = northwest_conflict_begun
-		NOT = {
-			has_war_with = TIB
-			has_war_with = MON
-		}
+		NOT = { has_war_with = TIB }
+		NOT = { has_war_with = MON }
 		OR = {
-			has_global_flag = northwest_conflict_begun
-			NOT = {
-				country_exists = TIB
-				country_exists = MON
-			}
+			is_subject = no
+			china_is_governorate = yes
 		}
 	}
+
 	option = {
 		log = "[GetLogInfo]: event mac.208 option mac.208.a"
 		name = mac.208.a
+		custom_effect_tooltip = XSM_gansu_struggle_begin_tooltip
 		hidden_effect = {
-			custom_effect_tooltip = XSM_gansu_struggle_begin_tooltip
-			set_global_flag = northwest_conflict_ended
-			XSM = { country_event = { id = mac.209 days = 30 } }
+			country_event = { id = mac.209 days = 30 }
 		}
 	}
 }
@@ -1730,6 +1721,7 @@ country_event = { # The Ma families is swayed by Ma Hongkui's display
 
 news_event = {# Northwest war
 	id = mac.224
+	immediate = { log = "[GetLogInfo]: event mac.224" }
 	title = mac.224.t
 	desc = mac.224.d
 	picture = GFX_news_event_SIK_western_china
@@ -1747,7 +1739,6 @@ news_event = {# Northwest war
 	}
 
 	option = { #Interesting
-		log = "[GetLogInfo]: event mac.224 option mac.224.a"
 		name = mac.224.a
 	}
 }
@@ -2000,8 +1991,8 @@ country_event = { #Hui Victory in the Northwest? (MON)
 
 country_event = { #Hui Victory in the Northwest? (TIB)
 	id = mac.229
-	title = mac.228.t
-	desc = mac.228.d
+	title = mac.229.t
+	desc = mac.229.d
 	picture = GFX_report_event_TIB_army
 
 	trigger = {
@@ -2017,8 +2008,8 @@ country_event = { #Hui Victory in the Northwest? (TIB)
 	fire_only_once = yes
 
 	option = {
-		log = "[GetLogInfo]: event mac.229 option mac.228.a"
-		name = mac.228.a #Offer terms to FROM
+		log = "[GetLogInfo]: event mac.229 option mac.229.a"
+		name = mac.229.a #Offer terms to FROM
 		if = {
 			limit = { NOT = { MON = { has_war_with = XSM } } }
 			log = "KR_Event_Logging;MA WINS NORTHWESTERN WAR;[GetDateText]"
@@ -2027,8 +2018,8 @@ country_event = { #Hui Victory in the Northwest? (TIB)
 	}
 
 	option = {
-		log = "[GetLogInfo]: event mac.229 option mac.228.b"
-		name = mac.228.b #We seek total victory!
+		log = "[GetLogInfo]: event mac.229 option mac.229.b"
+		name = mac.229.b #We seek total victory!
 		ai_chance = { base = 0 }
 		add_stability = -0.10
 		add_war_support = -0.10
@@ -2038,15 +2029,7 @@ country_event = { #Hui Victory in the Northwest? (TIB)
 country_event = { #FROM offers terms
 	id = mac.230
 	title = mac.230.t
-
-	desc = {
-		text = mac.230.d.MON
-		trigger = { NOT = { FROM = { original_tag = TIB } } }
-	}
-	desc = {
-		text = mac.230.d.TIB
-		trigger = { FROM = { original_tag = TIB } }
-	}
+	desc = mac.230.d
 
 	picture = GFX_report_event_TIB_german_mission_tibet
 
@@ -2056,11 +2039,15 @@ country_event = { #FROM offers terms
 		log = "[GetLogInfo]: event mac.230 option mac.230.a"
 		name = mac.230.a #Yes, let's end this
 		add_political_power = -50
-		every_owned_state = {
-			limit = { is_core_of = XSM }
-			transfer_state_to = FROM
+		FROM = {
+			every_owned_state = {
+				limit = {
+					any_country_with_core = { is_ally_with = ROOT }
+				}
+				transfer_state_to = ROOT
+			}
+			white_peace_with_ROOT = yes
 		}
-		FROM = { white_peace_with_ROOT = yes }
 	}
 
 	option = {

@@ -72,7 +72,7 @@ guiTypes = {
 			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
-			web_link = "https://kaiserreich.wikia.com" #KR: changed link
+			web_link = "https://github.com/Kaiserreich/Kaiserreich-4-Bug-Reports#readme" #KR: changed link
 		}
 
 		buttonType = {

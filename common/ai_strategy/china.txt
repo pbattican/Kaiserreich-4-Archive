@@ -49,12 +49,7 @@ china_ignore_army_incompetence = {
 
 	ai_strategy = {
 		type = template_prio
-		id = armor
-		value = -1000
-	}
-	ai_strategy = {
-		type = template_prio
-		id = infantry
+		id = armor_role
 		value = -1000
 	}
 	ai_strategy = {
@@ -65,11 +60,6 @@ china_ignore_army_incompetence = {
 	ai_strategy = {
 		type = template_prio
 		id = mountaineer
-		value = -1000
-	}
-	ai_strategy = {
-		type = template_prio
-		id = suppression
 		value = -1000
 	}
 }
@@ -335,11 +325,6 @@ china_warlords_support_united_front = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		target = asia
-		value = -100
-	}
 	ai_strategy = {
 		type = force_defend_ally_borders
 		target = asia

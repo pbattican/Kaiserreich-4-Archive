@@ -41,6 +41,7 @@
  SOV_Join_The_Internationale: "Join the Internationale"
  SOV_Join_The_Internationale_desc: "Rather than having all of us try to stand up to the German imperialists on our own we should join hands with our comrades in Britain, France, Italy and beyond."
  SOV_Protect_The_Baltics: "Protect [FROM.GetNameDef]"
+ SOV_Protect_Ukraine: "Treaty of Friendship with [FROM.GetNameDef]"
 
  RUS_invited_country: "We have already invited this country to our faction"
 
@@ -395,7 +396,7 @@
  russoc.124.t: "Socialist primaries"
  russoc.124.d: "The Russian socialist party must today choose its representative to lead the country in the upcoming election. On the one hand Rykov, the moderate who wants to form an alliance with the Democrats. On the other side Bukharin who wants to continue the lineage of Lenin."
  russoc.124.a: "Rykov is the wisest choice."
- russoc.124.b: "Bukharine will pursue the Bolsheviks'legacy ."
+ russoc.124.b: "Bukharin will pursue the Bolsheviks' legacy."
 
 ### Traits ###
  INT_russian_exile_trait: "Russian Exile"

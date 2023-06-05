@@ -32,7 +32,6 @@ uses_all_generic_companies = {
 		original_tag = CMR
 		original_tag = COG
 		original_tag = COS
-		original_tag = CVG
 		original_tag = CYP
 		original_tag = DAH
 		original_tag = PRE
@@ -149,6 +148,50 @@ uses_all_generic_companies = {
 		original_tag = YUC
 		original_tag = ZAM
 		original_tag = ZAN
+	}
+}
+
+tag_has_country_intro = {
+	OR = {
+	   ### PERMANENT MAJORS
+		original_tag = USA
+		original_tag = IMP
+		original_tag = NFA
+		original_tag = FRA
+		original_tag = ENG
+		original_tag = GER
+		original_tag = AUS
+		original_tag = RUS
+		original_tag = TUR
+		original_tag = JAP
+	   ### OTHER TAGS
+		## EUROPE ##
+		original_tag = ALB
+		original_tag = BEL
+		original_tag = IRE
+		original_tag = FIN
+		original_tag = UKR
+		## AMERICA ##
+		original_tag = BOL
+		original_tag = CHL
+		original_tag = CUB
+		original_tag = DOM
+		original_tag = ECU
+		original_tag = FOP
+		original_tag = PRU
+		original_tag = URG
+		original_tag = WIF
+		## ASIA ##
+		original_tag = DEI
+		original_tag = FNG
+		original_tag = GEA
+		original_tag = LEP
+		original_tag = QIE
+		original_tag = SIA
+		original_tag = SQI
+		original_tag = YUN
+		### AFRICA ###
+		original_tag = MAF
 	}
 }
 

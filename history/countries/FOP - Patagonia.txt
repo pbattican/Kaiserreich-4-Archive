@@ -101,7 +101,6 @@ set_popularities = {
 }
 
 #FOP unique events
-country_event = { id = fopintro.1 days = 1 }
 country_event = { id = fop.6 days = 60 }                 # Guillermo Mac Hannaford idea
 country_event = { id = fop.104 days = 600 random_hours = 576 } # Author event
 country_event = { id = fop.39 months = 13 }              # Immigration events
@@ -166,8 +165,12 @@ recruit_character = FOP_geronimo_arnedo_alvarez
 recruit_character = FOP_diego_abad_de_santillan
 recruit_character = FOP_antonio_de_tomaso
 recruit_character = FOP_gregorio_bermann
+
 # Military advisors
 # Air and naval specialists as well as a lot of civilian ones are transferred from ARG during trial event (fop.230)
+
+### Character Setup ###
+FOP_jacques_antoine_bernard = { set_character_flag = is_monarch }
 
 every_character = {
 	limit = {

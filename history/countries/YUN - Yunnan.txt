@@ -72,7 +72,6 @@ add_ideas = {
 }
 china_add_poor_army = yes
 
-country_event = { id = yun.1 days = 1 }
 country_event = { id = yun.335 months = 53 }
 
 ### Leaders ###
@@ -137,6 +136,7 @@ YUN_zhu_peide = {
 YUN_zhu_de = {
 	set_variable = { china_alignment = token:left_kuomintang }
 	set_character_flag = CHI_original_unit_leader
+	retire = yes
 }
 YUN_zhang_bojun = {
 	set_variable = { china_alignment = token:left_kuomintang }

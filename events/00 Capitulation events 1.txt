@@ -19,6 +19,7 @@ country_event = {
 		tag = GER
 		surrender_progress > 0.8
 		is_in_faction = yes
+		is_subject = no
 		NOT = {
 			any_allied_country = {
 				is_major = yes
@@ -276,13 +277,13 @@ country_event = {
 	desc = {
 		text = capt.9.d.siam
 		trigger = {
-			FROM = { tag = SIA }
+			FROM = { original_tag = SIA }
 		}
 	}
 	desc = {
 		text = capt.9.d.japan
 		trigger = {
-			FROM = { tag = JAP }
+			NOT = { FROM = { original_tag = SIA } }
 		}
 	}
 
@@ -292,9 +293,7 @@ country_event = {
 		log = "[GetLogInfo]: event capt.9 option capt.9.a"
 		name = capt.9.a
 		if = {
-			limit = {
-				FROM = { tag = SIA }
-			}
+			limit = { FROM = { original_tag = SIA } }
 			every_owned_state = {
 				limit = {
 					NOT = {
@@ -304,27 +303,23 @@ country_event = {
 						region = 216 #Lingnan
 					}
 				}
-				GEX = {
-					transfer_state = PREV
-				}
+				GEX = { transfer_state = PREV }
 			}
-			FROM = { white_peace_with_ROOT = yes }
 		}
-		else = {
-			if = {
-				limit = { is_subject = yes }
-				overlord = {
-					set_autonomy = {
-						target = ROOT
-						autonomy_state = autonomy_free
-					}
+		if = {
+			limit = { is_subject = yes }
+			overlord = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_free
 				}
 			}
-			leave_faction = yes
-			if = {
-				limit = { is_ai = no }
-				GEX = { change_tag_from = ROOT }
-			}
+		}
+		leave_faction = yes
+		FROM = { GEX = { white_peace_with_PREV = yes } }
+		if = {
+			limit = { is_ai = no }
+			GEX = { change_tag_from = ROOT }
 		}
 	}
 }
@@ -767,14 +762,25 @@ country_event = { # GER: peace with INT?
 	trigger = {
 		original_tag = GER
 		has_war_with = INT
+		surrender_progress < 0.20
 		is_faction_leader = yes
 		INT = {
+			surrender_progress < 0.20
+			is_faction_leader = yes
 			OR = {
 				original_tag = ENG
 				is_in_europe = no
 			}
-			is_faction_leader = yes
-			surrender_progress < 0.20
+			NOT = {
+				any_allied_country = {
+					is_in_europe = yes
+					is_major = yes
+					has_capitulated = no
+					NOT = { original_tag = ENG }
+					NOT = { original_tag = ICE }
+					NOT = { original_tag = IRE }
+				}
+			}
 		}
 		OR = {
 			NOT = { has_war_with = RUS }
@@ -834,18 +840,6 @@ country_event = { # INT: Germany offers peace
 				factor = 0
 				any_allied_country = { is_ai = no }
 			}
-			modifier = {
-				factor = 2.5
-				NOT = {
-					any_allied_country = {
-						is_in_europe = yes
-						has_capitulated = no
-						NOT = { original_tag = ENG }
-						NOT = { original_tag = ICE }
-						NOT = { original_tag = IRE }
-					}
-				}
-			}
 		}
 		every_other_country = {
 			limit = {
@@ -903,15 +897,6 @@ country_event = { # INT: Germany offers peace
 			modifier = {
 				factor = 0
 				NOT = { any_allied_country = { is_ai = no } }
-				NOT = {
-					any_allied_country = {
-						is_in_europe = yes
-						has_capitulated = no
-						NOT = { original_tag = ENG }
-						NOT = { original_tag = ICE }
-						NOT = { original_tag = IRE }
-					}
-				}
 			}
 		}
 		FROM = { country_event = { id = capt.33 days = 1 } }
@@ -998,6 +983,7 @@ country_event = { # Country considers peace with INT
 
 news_event = { # Treaty of London
 	id = capt.35
+	immediate = { log = "[GetLogInfo]: event capt.35" }
 	title = capt.35.t
 
 	desc = {
@@ -1028,7 +1014,6 @@ news_event = { # Treaty of London
 	}
 
 	option = {
-		log = "[GetLogInfo]: event capt.35 option capt.35.a"
 		name = capt.35.a
 	}
 }

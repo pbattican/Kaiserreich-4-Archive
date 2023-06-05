@@ -1,0 +1,254 @@
+defined_text = {
+	name = GetCountryIntroBackground
+   ### PERMANENT MAJORS ###
+	text = {
+		trigger = { original_tag = USA }
+		localization_key = "GFX_USA_intro"
+	}
+	text = {
+		trigger = { original_tag = IMP }
+		localization_key = "GFX_IMP_intro"
+	}
+	text = {
+		trigger = { original_tag = NFA }
+		localization_key = "GFX_NFA_intro"
+	}
+	text = {
+		trigger = { original_tag = FRA }
+		localization_key = "GFX_FRA_intro"
+	}
+	text = {
+		trigger = { original_tag = ENG }
+		localization_key = "GFX_ENG_intro"
+	}
+	text = {
+		trigger = { original_tag = GER }
+		localization_key = "GFX_GER_intro"
+	}
+	text = {
+		trigger = { original_tag = AUS }
+		localization_key = "GFX_AUS_intro"
+	}
+	text = {
+		trigger = { original_tag = RUS }
+		localization_key = "GFX_RUS_intro"
+	}
+	text = {
+		trigger = { original_tag = TUR }
+		localization_key = "GFX_TUR_intro"
+	}
+	text = {
+		trigger = { original_tag = JAP }
+		localization_key = "GFX_JAP_intro"
+	}
+
+   ### OTHER TAGS ###
+	#text = {
+	#	trigger = { original_tag = ALB }
+	#	localization_key = "GFX_ALB_intro"
+	#}
+	#text = {
+	#	trigger = { original_tag = BEL }
+	#	localization_key = "GFX_BEL_intro"
+	#}
+	#text = {
+	# 	trigger = { original_tag = BOL }
+	# 	localization_key = "GFX_BOL_intro"
+	#}
+	#text = {
+	# 	trigger = { original_tag = CHL }
+	# 	localization_key = "GFX_CHL_intro"
+	#}
+	text = {
+		trigger = { original_tag = DEI }
+		localization_key = "GFX_DEI_intro"
+	}
+	#text = {
+	#	trigger = { original_tag = ECU }
+	#	localization_key = "GFX_ECU_intro"
+	#}
+	#text = {
+	# 	trigger = { original_tag = FOP }
+	# 	localization_key = "GFX_FOP_intro"
+	#}
+	text = {
+		trigger = { original_tag = GEA }
+		localization_key = "GFX_GEA_intro"
+	}
+	text = {
+		trigger = { original_tag = IRE }
+		localization_key = "GFX_IRE_intro"
+	}
+	text = {
+		trigger = { original_tag = SIA }
+		localization_key = "GFX_SIA_intro"
+	}
+	text = {
+		trigger = { original_tag = UKR }
+		localization_key = "GFX_UKR_intro"
+	}
+	#text = {
+	#	trigger = { original_tag = URG }
+	#	localization_key = "GFX_URG_intro"
+	#}
+	#text = {
+	#	trigger = { original_tag = PRU }
+	#	localization_key = "GFX_PRU_intro"
+	#}
+	#text = {
+	#	trigger = { original_tag = YUN }
+	#	localization_key = "GFX_YUN_intro"
+	#}
+
+	text = {
+		localization_key = "GFX_KR_default_intro"
+	}
+}
+
+defined_text = {
+	name = GetCountryIntro
+
+   ### PERMANENT MAJORS ###
+	text = {
+		trigger = { original_tag = USA }
+		localization_key = ustates.1.d
+	}
+	text = {
+		trigger = { original_tag = IMP }
+		localization_key = canada.1.d
+	}
+	text = {
+		trigger = { original_tag = NFA }
+		localization_key = nfa.1.d
+	}
+	text = {
+		trigger = { original_tag = FRA }
+		localization_key = comfrance.1.d
+	}
+	text = {
+		trigger = { original_tag = ENG }
+		localization_key = uob.0.d
+	}
+	text = {
+		trigger = { original_tag = GER }
+		localization_key = gerdom.1.d
+	}
+	text = {
+		trigger = { original_tag = AUS }
+		localization_key = austria.1.d
+	}
+	text = {
+		trigger = { original_tag = RUS }
+		localization_key = russia.1.d
+	}
+	text = {
+		trigger = { original_tag = TUR }
+		localization_key = ott.1.d
+	}
+	text = {
+		trigger = { original_tag = JAP }
+		localization_key = japdom.1.d
+	}
+
+   ### OTHER TAGS ###
+	## EUROPE ##
+	text = {
+		trigger = { original_tag = ALB }
+		localization_key = albania.1.d
+	}
+	text = {
+		trigger = { original_tag = BEL }
+		localization_key = bel.94.d
+	}
+	text = {
+		trigger = { original_tag = IRE }
+		localization_key = ireland.2.d
+	}
+	text = {
+		trigger = { original_tag = FIN }
+		localization_key = finland.1.d
+	}
+	text = {
+		trigger = { original_tag = UKR }
+		localization_key = ukraine.1.d
+	}
+
+	## AMERICA ##
+	text = {
+		trigger = { original_tag = BOL }
+		localization_key = bol.1.d
+	}
+	text = {
+		trigger = { original_tag = CHL }
+		localization_key = chl.101.d
+	}
+	text = {
+		trigger = { original_tag = CUB }
+		localization_key = cuba.0.d
+	}
+	text = {
+		trigger = { original_tag = DOM }
+		localization_key = domrep.0.d
+	}
+	text = {
+		trigger = { original_tag = ECU }
+		localization_key = ecu.0.d
+	}
+	text = {
+		trigger = { original_tag = FOP }
+		localization_key = fopintro.1.d
+	}
+	text = {
+		trigger = { original_tag = PRU }
+		localization_key = pru.1.d
+	}
+	text = {
+		trigger = { original_tag = URG }
+		localization_key = urg.1.d
+	}
+	text = {
+		trigger = { original_tag = WIF }
+		localization_key = wifpol.1.d
+	}
+
+	## ASIA ##
+	text = {
+		trigger = { original_tag = DEI }
+		localization_key = dei.1.d
+	}
+	text = {
+		trigger = { original_tag = FNG }
+		localization_key = fengtian.151.d
+	}
+	text = {
+		trigger = { original_tag = GEA }
+		localization_key = Ostasien.0.d
+	}
+	text = {
+		trigger = { original_tag = LEP }
+		localization_key = lep.1.d
+	}
+	text = {
+		trigger = { original_tag = QIE }
+		localization_key = qiedom.1.d
+	}
+	text = {
+		trigger = { original_tag = SIA }
+		localization_key = siam.1.d_introscreen
+	}
+	text = {
+		trigger = { original_tag = SQI }
+		localization_key = shandong.1.d
+	}
+	text = {
+		trigger = { original_tag = YUN }
+		localization_key = yun.1.d
+	}
+
+	## AFRICA ##
+	text = {
+		trigger = { original_tag = MAF }
+		localization_key = mittel.000.d
+	}
+}
+

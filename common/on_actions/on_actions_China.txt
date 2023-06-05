@@ -9,6 +9,7 @@ on_actions = {
 				#integration setup
 				LEC = { enable_coring_at_fifty_compliance = yes }
 				TAI = { enable_coring_at_fifty_compliance = yes }
+
 				if = {
 					limit = { original_tag = SIK }
 					for_each_scope_loop = {
@@ -39,6 +40,13 @@ on_actions = {
 				}
 				KUM = {
 					SIK = { enable_coring_at_fifty_compliance = yes }
+				}
+			}
+			every_state = {
+				limit = { is_core_china = yes }
+				for_each_scope_loop = {
+					array = global.china_tags_array
+					PREV = { enable_state_integration_50_compliance = yes }
 				}
 			}
 
@@ -759,6 +767,48 @@ on_actions = {
 				limit = { tag = FNG }
 				JAP = { country_event = { id = fengtian.136 hours = 8 } }
 			}
+			else_if = {
+				limit = { original_tag = TAI }
+				if = {
+					limit = {
+						OR = {
+							will_have_totalist_government = yes
+							will_have_syndicalist_government = yes
+						}
+					}
+					activate_advisor = TAI_jian_ji_sic
+				}
+				else_if = {
+					limit = {
+						OR = {
+							will_have_radical_socialist_government = yes
+							will_have_social_democrat_government = yes
+						}
+					}
+					activate_advisor = TAI_cai_peihuo_sic
+				}
+				else_if = {
+					limit = {
+						OR = {
+							will_have_social_liberal_government = yes
+							will_have_market_liberal_government = yes
+						}
+					}
+					activate_advisor = TAI_liao_wenyi_sic
+				}
+				else_if = {
+					limit = {
+						OR = {
+							will_have_social_conservative_government = yes
+							will_have_authoritarian_democrat_government = yes
+						}
+					}
+					activate_advisor = TAI_chen_fengyuan_sic
+				}
+				else = {
+					activate_advisor = TAI_lan_gaochuan_sic
+				}
+			}
 		}
 	}
 
@@ -937,10 +987,13 @@ on_actions = {
 			# Right KMT GXC getting YUN KMT generals
 			if = {
 				limit = {
-					tag = GXC
-					owns_state = 325
+					china_is_aligned_with_kmt = yes
+					FROM = {
+						original_tag = YUN
+						exists = no #== was annexed
+					}
 				}
-				country_event = lngkmt.23
+				country_event = { id = lngkmt.23 days = 2 }
 			}
 
 			### LEP war system events
@@ -960,6 +1013,24 @@ on_actions = {
 				ANQ = {
 					set_country_flag = ANQ_lep_beat_chi #This flag was unset by the original designer, hopefully it's now working as intended.
 				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						tag = XSM
+						FROM = { tag = XSM }
+					}
+					has_global_flag = northwest_conflict_begun
+					NOT = {
+						has_global_flag = northwest_conflict_ended
+						TIB = { has_war_with = XSM }
+						MON = { has_war_with = XSM }
+					}
+				}
+				set_global_flag = northwest_conflict_ended
+				TIB = { country_event = { id = tib.2 days = 370 } }
+				XSM = { country_event = { id = mac.208 days = 3 } }
 			}
 		}
 	}
