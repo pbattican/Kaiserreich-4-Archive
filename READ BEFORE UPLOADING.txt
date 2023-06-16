@@ -1,0 +1,16 @@
+#############################
+### READ BEFORE UPLOADING ###
+#############################
+
+Before uploading the mod to any public place (the steam workshop for example), make sure the following following files and folders AREN'T present in the upload folder
+If they are present, you will reveal people's emails address to anyone who downloads the mod
+Note that some of the folders are hidden, so you might not see them if you don't have hidden folders set to shown in windows
+
+Files/folders to NOT upload:
+
+.git (hidden folder)
+.github (folder)
+.vscode (folder)
+.gitignore (file)
+.gitattributes (file)
+READ BEFORE UPLOADING (this file)
