@@ -384,7 +384,10 @@ political_actions = {
 
 	MAF_take_mittelafrikan_navy = {
 		icon = generic_naval
-		allowed = { tag = GER }
+		allowed = {
+			tag = GER
+			has_capitulated = no
+		}
 		available = {
 			has_war = no
 			MAF = { has_war = no }
